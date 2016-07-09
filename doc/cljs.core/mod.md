@@ -15,7 +15,7 @@ Truncates toward negative infinity.
 ## Related
 cljs.core/rem
 
-## Example#8165e8
+## Examples
 
 ```clj
 (mod -5 3)

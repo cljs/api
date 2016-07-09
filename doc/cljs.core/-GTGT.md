@@ -40,7 +40,7 @@ cljs.core/->
 ## TODO
 add threading macro animations link here
 
-## Example#1dc72c
+## Examples
 
 Sequence transformation functions often take a sequence as the last argument,
 thus the thread-last macro is commonly used with them.  Here we compute the sum

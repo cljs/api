@@ -13,7 +13,7 @@ Equivalent to `delete obj[key]` in JavaScript.
 ## Related
 cljs.core/dissoc
 
-## Example#5b24ea
+## Examples
 
 ```clj
 (def a #js {:foo 1 :bar 2})

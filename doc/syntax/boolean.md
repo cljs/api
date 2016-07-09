@@ -13,7 +13,7 @@ false
 Special symbols representing the boolean literals `true` and `false`.
 Both evaluate to themselves.
 
-## Example#1afc59
+## Examples
 
 ```clj
 true

@@ -37,7 +37,7 @@ Dots can also be included in symbols for direct JS property access, see [doc:syn
 cljs.core/symbol
 cljs.core/symbol?
 
-## Example#cd60a5
+## Examples
 
 The following has two symbols, `def` and `a`:
 

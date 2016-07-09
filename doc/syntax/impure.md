@@ -23,7 +23,7 @@ Some impure functions which use this convention:
 ## Related
 syntax/predicate
 
-## Example#c1dbc0
+## Examples
 
 The following causes a side-effect in the state of `a`:
 

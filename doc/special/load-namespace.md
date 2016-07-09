@@ -24,7 +24,7 @@ This example doesn't work.  Why?
 (clojure.set/intersection #{2 3} #{3 4})
 ```
 
-## Example#0b1a1d
+## Examples
 
 ```clj
 (load-namespace 'clojure.set)

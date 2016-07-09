@@ -13,7 +13,7 @@ more complete removal than the `comment` macro which yields nil.
 syntax/comment
 cljs.core/comment
 
-## Example#f36d7a
+## Examples
 
 ```clj
 {:foo #_bar 2}

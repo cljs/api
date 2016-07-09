@@ -13,7 +13,7 @@ Equivalent to `''+s` in JavaScript.
 ## Related
 cljs.core/str
 
-## Example#e92009
+## Examples
 
 ```clj
 (js-str 23)

@@ -31,7 +31,7 @@ cljs.core/fn
 cljs.core/defn
 cljs.core/partial
 
-## Example#6a87de
+## Examples
 
 ```clj
 (map #(* 2 %) [1 2 3])

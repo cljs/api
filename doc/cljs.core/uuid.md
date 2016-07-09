@@ -15,7 +15,7 @@ To create a UUID literal (parsed and validated at compile time), use [doc:syntax
 cljs.core/random-uuid
 syntax/uuid-literal
 
-## Example#d6491d
+## Examples
 
 ```clj
 (uuid "00000000-0000-0000-0000-000000000000")

@@ -26,7 +26,7 @@ doesn't seem to be working:
 ;; nil
 ```
 
-## Example#e81eb3
+## Examples
 
 ```clj
 (in-ns 'foo.core)

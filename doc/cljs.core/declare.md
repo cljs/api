@@ -13,7 +13,7 @@ Uses `def` to establish symbols of `names` with no bindings.
 
 Useful for making forward declarations.
 
-## Example#5a2dc2
+## Examples
 
 ```clj
 a

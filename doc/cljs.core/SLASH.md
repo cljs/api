@@ -15,7 +15,7 @@ divided by all of the denominators.
 cljs.core/*
 cljs.core/quot
 
-## Example#824bb7
+## Examples
 
 ```clj
 (/ 6 3)

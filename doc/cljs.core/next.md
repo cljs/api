@@ -15,7 +15,7 @@ cljs.core/rest
 cljs.core/first
 cljs.core/fnext
 
-## Example#7db59a
+## Examples
 
 ```clj
 (next [1 2 3])

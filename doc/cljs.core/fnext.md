@@ -12,7 +12,7 @@ Same as `(first (next coll))`
 cljs.core/ffirst
 cljs.core/second
 
-## Example#92383f
+## Examples
 
 ```clj
 (fnext [1 2 3])

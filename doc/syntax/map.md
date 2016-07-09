@@ -17,7 +17,7 @@ cljs.core/array-map
 cljs.core/sorted-map
 cljs.core/sorted-map-by
 
-## Example#4696ad
+## Examples
 
 ```clj
 {:foo 1 :bar 2}

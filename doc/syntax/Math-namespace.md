@@ -18,7 +18,7 @@ A special namespace for direct access to the native JavaScript [Math library].
 ## Related
 syntax/js-namespace
 
-## Example#9cfeb0
+## Examples
 
 Math constants:
 

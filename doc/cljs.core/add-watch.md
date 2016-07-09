@@ -18,7 +18,7 @@ watch function.
 ## Related
 cljs.core/remove-watch
 
-## Example#2f2fe0
+## Examples
 
 ```clj
 (def a (atom {}))

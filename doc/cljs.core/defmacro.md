@@ -36,7 +36,7 @@ evaluation, depending on the compiler version:
 
 Please see the examples section below for a more concrete look.
 
-## Example#8040c8
+## Examples
 
 Here is a `str->int` macro that works for either ClojureScript compiler
 version.  It simply expands to a `js/parseInt` call:

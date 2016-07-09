@@ -21,7 +21,7 @@ cljs.core/->>
 cljs.core/cond->>
 cljs.core/cond
 
-## Example#f08338
+## Examples
 
 ```clj
 (def a 12)

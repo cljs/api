@@ -12,7 +12,7 @@ Bitwise "and".  Same as `x & y` in JavaScript.
 ## Related
 cljs.core/bit-or
 
-## Example#3c0470
+## Examples
 
 Bits can be entered using radix notation:
 

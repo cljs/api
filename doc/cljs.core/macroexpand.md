@@ -10,7 +10,7 @@ subsequent result is _not_ a macro call.  NOTE: nested forms are _not_ expanded.
 
 See [doc:cljs.core/macroexpand-1] if you only wish to expand a form once.
 
-## Example#b773af
+## Examples
 
 See how [doc:cljs.core/when] expands to [doc:special/if]:
 

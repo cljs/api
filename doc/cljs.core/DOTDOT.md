@@ -19,7 +19,7 @@ special/.
 cljs.core/->
 cljs.core/doto
 
-## Example#500658
+## Examples
 
 ```js
 // JavaScript

@@ -28,7 +28,7 @@ cljs.core/number?
 cljs.core/integer?
 cljs.core/int
 
-## Example#f96060
+## Examples
 
 ```clj
 123

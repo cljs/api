@@ -35,7 +35,7 @@ add multi-line example. Why do these have the same output of nil?:
 (re-seq #"(?m)a.*b" "a\nb")
 (re-seq #"a.*b" "a\nb")
 
-## Example#dacf80
+## Examples
 
 ```clj
 #"foo"

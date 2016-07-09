@@ -47,7 +47,7 @@ Compiler will also add metadata:
 - `:source`
 - `:arglists`
 
-## Example#a5f898
+## Examples
 
 ```clj
 (def a)

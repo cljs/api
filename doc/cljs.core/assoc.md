@@ -25,7 +25,7 @@ cljs.core/assoc-in
 cljs.core/dissoc
 cljs.core/merge
 
-## Example#2fa7e0
+## Examples
 
 ```clj
 (def my-map {:foo 1})
@@ -43,8 +43,6 @@ cljs.core/merge
 (assoc my-map :foo)
 ;;=> WARNING: Wrong number of args (2) passed to cljs.core/assoc
 ```
-
-## Example#c06eac
 
 ```clj
 (def my-vec [1 2 3])

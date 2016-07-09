@@ -13,7 +13,7 @@ It can also use `idx` to get the current index.
 ## Related
 cljs.core/reduce
 
-## Example#20a389
+## Examples
 
 ```clj
 (def a #js [1 2 3])

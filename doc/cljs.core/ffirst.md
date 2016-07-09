@@ -13,7 +13,7 @@ cljs.core/first
 cljs.core/fnext
 cljs.core/nfirst
 
-## Example#575ba2
+## Examples
 
 ```clj
 (ffirst [[1 2] [3 4] [5 6]])

@@ -14,7 +14,7 @@ Allows the reader to evaluate the following form.
 This feature is carried from tools.reader is not intended for use in ClojureScript,
 though it works for basic forms not using symbols.
 
-## Example#ef1acd
+## Examples
 
 ```clj
 #=123

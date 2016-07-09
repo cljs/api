@@ -17,7 +17,7 @@ and is a fundamental building block of the language. All other conditionals in
 ClojureScript are based on `if`s notion of truthiness (ie: anything other than
 false or nil).
 
-## Example#e591ff
+## Examples
 
 ```clj
 (def v [1 2])

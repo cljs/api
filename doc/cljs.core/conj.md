@@ -21,7 +21,7 @@ type.
 
 `(conj nil item)` returns `(item)`.
 
-## Example#8c2a84
+## Examples
 
 Append a vector:
 

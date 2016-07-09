@@ -17,7 +17,7 @@ Returns the sum of nums.
 cljs.core/*
 cljs.core/-
 
-## Example#650668
+## Examples
 
 ```clj
 (+)

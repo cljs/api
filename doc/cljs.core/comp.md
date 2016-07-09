@@ -19,7 +19,7 @@ the next left function, and so on.
 cljs.core/partial
 cljs.core/juxt
 
-## Example#5d3250
+## Examples
 
 ```clj
 (def f (comp str inc +))

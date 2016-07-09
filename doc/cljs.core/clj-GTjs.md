@@ -20,7 +20,7 @@ Recursively transforms ClojureScript values to JavaScript.
 ## Related
 cljs.core/js->clj
 
-## Example#2b1057
+## Examples
 
 ```clj
 (clj->js {:foo 1 :bar 2})

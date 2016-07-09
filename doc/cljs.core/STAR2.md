@@ -15,7 +15,7 @@ cljs.core/*1
 cljs.core/*3
 cljs.core/*e
 
-## Example#208d41
+## Examples
 
 ```clj
 (+ 1 2 3 4)

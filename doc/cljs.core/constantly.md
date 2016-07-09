@@ -7,7 +7,7 @@ cljs.core/constantly
 ## Description
 Returns a function that takes any number of arguments and always returns `x`.
 
-## Example#9d5c25
+## Examples
 
 ```clj
 (def ten (constantly 10))

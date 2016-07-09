@@ -18,7 +18,7 @@ To test for NaN, use the native JavaScript [`js/isNaN`] or the safer [`js/Number
 syntax/Infinity
 syntax/nil
 
-## Example#9661ba
+## Examples
 
 ```clj
 NaN

@@ -43,7 +43,7 @@ of the compiler.  See [doc:cljs.core/defmacro] for details.
 ## Related
 syntax/cond-splicing
 
-## Example#eec90f
+## Examples
 
 ```clj
 #?(:clj "Clojure" :cljs "ClojureScript")

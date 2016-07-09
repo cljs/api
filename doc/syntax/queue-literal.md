@@ -32,7 +32,7 @@ syntax/vector
 syntax/map
 syntax/set
 
-## Example#f81c50
+## Examples
 
 ```clj
 #queue []

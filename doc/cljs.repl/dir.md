@@ -12,7 +12,7 @@ Prints a sorted directory of public vars in a namespace `ns`.
 cljs.repl/find-doc
 cljs.repl/apropos
 
-## Example#9bf2b0
+## Examples
 
 ```clj
 (require 'clojure.set)

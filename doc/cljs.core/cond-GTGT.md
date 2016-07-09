@@ -15,7 +15,7 @@ through each form for which the corresponding test expression is true.
 Note that, unlike `cond` branching, `cond->>` threading does not short circuit
 after the first true test expression.
 
-## Example#e07a05
+## Examples
 
 ```clj
 (def filter? true)

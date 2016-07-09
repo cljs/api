@@ -29,7 +29,7 @@ compatibility.  They are represented as single character JavaScript strings.
 syntax/string
 cljs.core/str
 
-## Example#495a47
+## Examples
 
 ```clj
 \c

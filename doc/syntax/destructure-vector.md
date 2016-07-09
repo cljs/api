@@ -49,7 +49,7 @@ maps][doc:syntax/destructure-map].
 ## Related
 syntax/destructure-map
 
-## Example#acab87
+## Examples
 
 Use destructure vectors in function parameters:
 
@@ -60,8 +60,6 @@ Use destructure vectors in function parameters:
 (foo [1 2] 3)
 ;;=> 6
 ```
-
-## Example#fa4e05
 
 Destructure vectors can be nested:
 

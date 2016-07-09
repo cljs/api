@@ -40,7 +40,7 @@ cljs.core/->>
 ## TODO
 add threading macro animations link here
 
-## Example#19b460
+## Examples
 
 The first is arguably a bit more cumbersome to read than the second:
 
@@ -55,8 +55,6 @@ The first is arguably a bit more cumbersome to read than the second:
     first)
 ;;=> "X"
 ```
-## Example#78ad8f
-
 It can also be useful for pulling values out of deeply-nested
 data structures:
 
@@ -84,8 +82,6 @@ Same as above, but with more nesting:
 ;;=> "Creve Coeur"
 ```
 
-## Example#5fe621
-
 It can also help with arithmetic:
 
 ```clj
@@ -100,4 +96,3 @@ Same as above, but with more nesting:
 (- (/ (+ c 3) 2) 1)
 ;;=> 3
 ```
-

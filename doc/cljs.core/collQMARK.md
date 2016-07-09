@@ -15,7 +15,7 @@ cljs.core/seq?
 cljs.core/list?
 cljs.core/sequential?
 
-## Example#d30884
+## Examples
 
 ```clj
 (coll? [1 2 3])

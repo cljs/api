@@ -41,7 +41,7 @@ unevaluated, where they _may_ be evaluated internally.
 syntax/vector
 syntax/quote
 
-## Example#cd26b0
+## Examples
 
 The following is a list that is evaluated to create var `a`:
 

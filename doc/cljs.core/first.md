@@ -18,7 +18,7 @@ cljs.core/second
 cljs.core/take
 cljs.core/ffirst
 
-## Example#40e413
+## Examples
 
 ```clj
 (first [1 2 3])

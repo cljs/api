@@ -23,7 +23,7 @@ cljs.core/reset!
 cljs.core/set-validator!
 cljs.core/get-validator
 
-## Example#e6a38a
+## Examples
 
 ```clj
 (def a (atom 1))

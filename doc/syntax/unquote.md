@@ -17,7 +17,7 @@ Forces evaluation of the following form.
 syntax/syntax-quote
 syntax/unquote-splicing
 
-## Example#1ff51e
+## Examples
 
 ```clj
 (def foo 1)

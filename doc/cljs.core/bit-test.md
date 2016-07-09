@@ -8,7 +8,7 @@ cljs.core/bit-test
 
 Test bit at index `n`. Returns `true` if 1, and `false` if 0. Same as `(x & (1 << y)) != 0` in JavaScript.
 
-## Example#f64664
+## Examples
 
 Bits can be entered using radix notation:
 

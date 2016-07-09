@@ -12,7 +12,7 @@ Clear bit at index `n`.  Same as `x & ~(1 << y)` in JavaScript.
 cljs.core/bit-set
 cljs.core/bit-flip
 
-## Example#0f6748
+## Examples
 
 Bits can be entered using radix notation:
 

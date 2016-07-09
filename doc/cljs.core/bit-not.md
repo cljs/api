@@ -8,7 +8,7 @@ cljs.core/bit-not
 
 Bitwise complement.  Same as `~x` in JavaScript.
 
-## Example#d4c5e3
+## Examples
 
 Bits can be entered using radix notation:
 

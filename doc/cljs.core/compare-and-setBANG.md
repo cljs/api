@@ -11,7 +11,7 @@ value of the atom is identical to `oldval`.
 
 Returns true if set happened, false otherwise.
 
-## Example#1fa306
+## Examples
 
 ```clj
 (def a (atom "abc"))

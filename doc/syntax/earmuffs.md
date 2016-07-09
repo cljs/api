@@ -33,7 +33,7 @@ The following emits a warning in Clojure.  We should provide the same in Clojure
 ;;     change the name.
 ```
 
-## Example#91cf10
+## Examples
 
 ```clj
 (def ^:dynamic *foo* 1)

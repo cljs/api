@@ -16,7 +16,7 @@ Commas are used when printing maps in the REPL:
 {:foo 1, :bar 2, :bar 3}
 ```
 
-## Example#68e4a0
+## Examples
 
 ```clj
 [1, 2, 3, 4]

@@ -17,7 +17,7 @@ Accesses the var attached to the given symbol.
 ## Related
 special/var
 
-## Example#673ef6
+## Examples
 
 Access the metadata of a var:
 

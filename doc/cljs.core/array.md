@@ -15,7 +15,7 @@ cljs.core/aclone
 cljs.core/make-array
 cljs.core/clj->js
 
-## Example#3a546d
+## Examples
 
 ```clj
 (array 1 2 3)
@@ -27,8 +27,6 @@ cljs.core/clj->js
 #js [1 2 3]
 ;;=> #js [1 2 3]
 ```
-
-## Example#cca945
 
 When creating nested JavaScript arrays, you can opt to use `clj->js` instead:
 

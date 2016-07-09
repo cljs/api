@@ -19,7 +19,7 @@ keyword `:else` (a keyword always evaluates to logical true).
 
 `(cond)` returns nil.
 
-## Example#0cc9ac
+## Examples
 
 ```
 (def a 42)

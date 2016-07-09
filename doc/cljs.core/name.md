@@ -13,7 +13,7 @@ Equivalent to [doc:cljs.core/identity] for strings.
 ## Related
 cljs.core/namespace
 
-## Example#363fb7
+## Examples
 
 With namespaces:
 

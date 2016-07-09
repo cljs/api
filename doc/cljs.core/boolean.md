@@ -12,7 +12,7 @@ truthiness condition used by `if` expressions.
 ## Related
 special/if
 
-## Example#9edf3a
+## Examples
 
 ```clj
 (boolean 1)

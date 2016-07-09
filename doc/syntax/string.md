@@ -26,7 +26,7 @@ escape characters:
 ## Related
 cljs.core/str
 
-## Example#eb97ac
+## Examples
 
 ```clj
 "foo"

@@ -9,7 +9,7 @@ cljs.core/js-invoke
 Invoke JavaScript object `obj` method via string `s`. Needed when the string is
 not a valid unquoted property name.
 
-## Example#373cce
+## Examples
 
 If we have a JavaScript object with an unusual property name:
 

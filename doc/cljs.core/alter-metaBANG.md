@@ -14,7 +14,7 @@ Metadata of vars cannot be altered since they are statically determined at compi
 cljs.core/with-meta
 cljs.core/vary-meta
 
-## Example#8378a0
+## Examples
 
 Metadata of symbols and collections can be altered:
 

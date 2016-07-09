@@ -19,7 +19,7 @@ cljs.core/==
 cljs.core/not=
 cljs.core/identical?
 
-## Example#edffb6
+## Examples
 
 ```clj
 (= 1)
@@ -37,8 +37,6 @@ cljs.core/identical?
 (= 1 1 2)
 ;;=> false
 ```
-
-## Example#a2d064
 
 Sequences are considered equal in value if they have the same elements:
 
@@ -58,8 +56,6 @@ But you cannot compare JavaScript arrays until you convert them to sequences:
 (= (seq a) (seq b))
 ;;=> true
 ```
-
-## Example#6c8424
 
 It is natural to compare deeply nested collections since value equality checks
 are cheap in ClojureScript:

@@ -11,7 +11,7 @@ For interop, it returns the length of a JavaScript array or string.
 ## Related
 cljs.core/count
 
-## Example#26f79f
+## Examples
 
 ```clj
 (def a #js [1 2 3])

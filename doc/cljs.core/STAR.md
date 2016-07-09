@@ -17,7 +17,7 @@ Returns the product of nums.
 cljs.core/+
 cljs.core//
 
-## Example#bc4a1f
+## Examples
 
 ```clj
 ;; there is an implicit 1

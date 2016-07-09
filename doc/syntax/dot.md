@@ -17,7 +17,7 @@ Dots can be used inside symbols. Its meaning depends on its position in the symb
 syntax/symbol
 syntax/namespace
 
-## Example#61a0a1
+## Examples
 
 For interop:
 

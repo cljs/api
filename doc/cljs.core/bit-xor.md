@@ -13,7 +13,7 @@ Bitwise "exclusive or". Same as `x ^ y` in JavaScript.
 cljs.core/bit-and
 cljs.core/bit-or
 
-## Example#3ccd99
+## Examples
 
 Bits can be entered using radix notation:
 

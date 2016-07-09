@@ -44,7 +44,7 @@ ClojureScript supports the following tagged literals:
 ## Related
 syntax/dispatch
 
-## Example#e84f6a
+## Examples
 
 (Tagged literals are printed as themselves, just like core syntax literals.)
 

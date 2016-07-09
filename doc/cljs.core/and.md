@@ -21,7 +21,7 @@ of the other arguments, otherwise it returns the value of the last argument.
 cljs.core/or
 special/if
 
-## Example#a39a73
+## Examples
 
 ```clj
 (and)
@@ -42,8 +42,6 @@ special/if
 (and false false)
 ;;=> false
 ```
-
-## Example#766638
 
 `nil` and `false` are the only falsy values and everything else is truthy:
 

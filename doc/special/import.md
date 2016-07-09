@@ -15,7 +15,7 @@ Only usable from a REPL.
 
 Import Google Closure classes.
 
-## Example#03acc0
+## Examples
 
 ```clj
 (import 'goog.math.Long

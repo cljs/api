@@ -13,7 +13,7 @@ requires that the symbol resolve to a Var defined in a namespace for which the
 ## Related
 cljs.repl/doc
 
-## Example#94c94c
+## Examples
 
 ```clj
 (source comment)

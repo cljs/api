@@ -14,7 +14,7 @@ previous one, false otherwise.
 ## Related
 cljs.core/<
 
-## Example#adb3fd
+## Examples
 
 ```clj
 (<= 1 2)

@@ -18,7 +18,7 @@ evaluated before the vars are bound to their new values.
 ## Related
 cljs.core/let
 
-## Example#7dd17f
+## Examples
 
 ```clj
 (def ^:dynamic *foo* 1)

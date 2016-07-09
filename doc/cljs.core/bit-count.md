@@ -8,7 +8,7 @@ cljs.core/bit-count
 
 Counts the number of bits set in `x`.
 
-## Example#35c78c
+## Examples
 
 Bits can be entered using radix notation:
 

@@ -11,7 +11,7 @@ Bitwise shift left `n` bits.  Same as `x << n` in JavaScript.
 ## Related
 cljs.core/bit-shift-right
 
-## Example#67c34a
+## Examples
 
 Bits can be entered using radix notation:
 

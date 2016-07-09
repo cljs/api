@@ -11,7 +11,7 @@ Same as `(next (first coll))`.
 ## Related
 cljs.core/next
 
-## Example#60b8a4
+## Examples
 
 ```clj
 (nfirst [[1 2 3] [4 5]])

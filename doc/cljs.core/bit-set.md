@@ -11,7 +11,7 @@ Set bit at index `n`.  Same as `x | (1 << y)` in JavaScript.
 ## Related
 cljs.core/bit-clear
 
-## Example#6a8a49
+## Examples
 
 Bits can be entered using radix notation:
 

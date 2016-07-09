@@ -13,7 +13,7 @@ Equivalent to `x % y` in JavaScript.
 ## Related
 cljs.core/mod
 
-## Example#75fa6d
+## Examples
 
 ```clj
 (js-mod -5 3)

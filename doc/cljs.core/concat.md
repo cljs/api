@@ -12,7 +12,7 @@ cljs.core/concat
 Returns a lazy sequence representing the concatenation of the elements in the
 supplied collections.
 
-## Example#dcc019
+## Examples
 
 ```clj
 (concat (list 1 2 3) (list 4 5 6))

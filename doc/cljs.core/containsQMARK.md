@@ -19,7 +19,7 @@ used for this purpose:
 (some #{value} coll)
 ```
 
-## Example#2991f0
+## Examples
 
 Sets and Maps provide key lookups, so `contains?` works as expected:
 

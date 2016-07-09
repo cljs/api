@@ -33,7 +33,7 @@ The test-constants need not be all of the same type.
 cljs.core/cond
 cljs.core/condp
 
-## Example#09a90c
+## Examples
 
 ```clj
 (def a 1)

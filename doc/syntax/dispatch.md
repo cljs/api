@@ -35,7 +35,7 @@ syntax/ignore
 syntax/tagged-literal
 syntax/cond
 
-## Example#0a1f4c
+## Examples
 
 The dispatch macro is not usable on its own.  Rather, it dispatches to other
 syntax forms.

@@ -15,7 +15,7 @@ Returns a new map that does not contain a mapping for key(s).
 Has no effect on the map type (hashed/sorted).
 
 
-## Example#fd6ae9
+## Examples
 
 ```clj
 (dissoc {:key "value" :key2 "value2"} :key)

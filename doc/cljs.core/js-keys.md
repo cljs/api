@@ -11,7 +11,7 @@ Returns the keys for the JavaScript object `obj`.
 ## Related
 cljs.core/keys
 
-## Example#5dd933
+## Examples
 
 ```clj
 (js-keys #js {:foo 1 :bar 2})

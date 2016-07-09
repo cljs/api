@@ -17,7 +17,7 @@ cljs.core/first
 cljs.core/pop
 cljs.core/conj
 
-## Example#4abc4c
+## Examples
 
 With vectors:
 
@@ -34,8 +34,6 @@ With vectors:
 (peek [])
 ;;=> nil
 ```
-
-## Example#d50bd0
 
 With lists:
 

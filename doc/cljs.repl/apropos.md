@@ -13,7 +13,7 @@ public definitions in all currently-loaded namespaces that match the
 ## Related
 cljs.repl/find-doc
 
-## Example#aceda4
+## Examples
 
 ```clj
 (apropos "some")

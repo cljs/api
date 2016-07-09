@@ -23,7 +23,7 @@ syntax/quote
 syntax/unquote
 syntax/unquote-splicing
 
-## Example#bffbdf
+## Examples
 
 ```clj
 `foo

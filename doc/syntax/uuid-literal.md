@@ -26,7 +26,7 @@ To create a UUID from an evaluated expression, use [doc:cljs.core/uuid].
 cljs.core/uuid
 cljs.core/random-uuid
 
-## Example#12c0f0
+## Examples
 
 ```clj
 #uuid "00000000-0000-0000-0000-000000000000"

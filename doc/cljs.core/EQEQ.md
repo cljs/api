@@ -20,7 +20,7 @@ Behavior on non-number arguments is undefined.
 cljs.core/=
 cljs.core/identical?
 
-## Example#5ac342
+## Examples
 
 ```clj
 (== 1 1)

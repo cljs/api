@@ -17,7 +17,7 @@ cljs.core/rest
 cljs.core/butlast
 cljs.core/take-last
 
-## Example#eb0836
+## Examples
 
 ```clj
 (last [1 2 3])

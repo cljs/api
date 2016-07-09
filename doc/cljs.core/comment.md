@@ -14,7 +14,7 @@ different functions during development.  Specific expressions within the
 
 You can also use `;` to "comment out" code until the end of a line.
 
-## Example#482fd7
+## Examples
 
 ```clj
 (comment 123)

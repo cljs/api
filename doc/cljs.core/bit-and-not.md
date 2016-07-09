@@ -13,7 +13,7 @@ Bitwise "and" `x` with bitwise "not" `y`.  Same as `x & ~y` in JavaScript.
 cljs.core/bit-and
 cljs.core/bit-not
 
-## Example#16f35d
+## Examples
 
 Bits can be entered using radix notation:
 

@@ -15,7 +15,7 @@ cljs.core/assoc
 cljs.core/hash-map
 cljs.core/sorted-map
 
-## Example#198026
+## Examples
 
 ```clj
 (array-map :a 10)

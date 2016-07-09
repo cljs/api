@@ -16,7 +16,7 @@ cljs.core/first
 cljs.core/drop
 cljs.core/pop
 
-## Example#0869af
+## Examples
 
 ```clj
 (rest [1 2 3])

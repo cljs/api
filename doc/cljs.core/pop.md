@@ -15,7 +15,7 @@ cljs.core/peek
 cljs.core/rest
 cljs.core/conj
 
-## Example#6bd9f7
+## Examples
 
 With vectors:
 
@@ -32,8 +32,6 @@ With vectors:
 (pop [])
 ;; Error: Can't pop empty vector
 ```
-
-## Example#81221f
 
 With lists:
 

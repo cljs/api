@@ -13,7 +13,7 @@ Equivalent to `key in obj` in JavaScript.
 ## Related
 cljs.core/contains?
 
-## Example#a45b18
+## Examples
 
 ```clj
 (def a #js {:foo 1 :bar 2})

@@ -10,7 +10,7 @@ cljs.core/min
 
 Returns the least number argument.
 
-## Example#ab2de5
+## Examples
 
 ```clj
 (min 1 2 3 4)

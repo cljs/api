@@ -13,7 +13,7 @@ Returns an object of the same type and value as `obj`, with
 cljs.core/alter-meta!
 cljs.core/with-meta
 
-## Example#8cca62
+## Examples
 
 ```clj
 (def a ^:foo [1 2 3])

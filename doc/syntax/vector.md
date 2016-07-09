@@ -31,7 +31,7 @@ See [doc:cljs.core/PersistentVector] for data structure details.
 cljs.core/vector
 cljs.core/vec
 
-## Example#18e143
+## Examples
 
 ```clj
 [1 2 3]

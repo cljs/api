@@ -12,7 +12,7 @@ logical true.  Exception will include `message` if given.
 
 Returns `nil`.
 
-## Example#1dc16f
+## Examples
 
 ```clj
 (assert true)

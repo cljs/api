@@ -10,7 +10,7 @@ _not_ expanded.
 
 See [doc:cljs.core/macroexpand] if you wish to repeatedly expand a form.
 
-## Example#1bc6af
+## Examples
 
 See how `(-> 2 inc)` is progressively expanded:
 

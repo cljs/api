@@ -21,7 +21,7 @@ The IEEE 754 Floating Point representations of infinity.
 syntax/number
 syntax/NaN
 
-## Example#463fd4
+## Examples
 
 ```clj
 Infinity

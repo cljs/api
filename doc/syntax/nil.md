@@ -13,7 +13,7 @@ causing exceptions.
 
 Expressions evaluate to `nil` if there is no value to return.
 
-## Example#17b92a
+## Examples
 
 ```clj
 nil

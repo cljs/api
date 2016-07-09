@@ -76,7 +76,7 @@ vectors][doc:syntax/destructure-vector].
 ## Related
 syntax/destructure-vector
 
-## Example#0d56ee
+## Examples
 
 Use in place of function arguments:
 
@@ -88,8 +88,6 @@ Use in place of function arguments:
 (print-point {:x 1, :y 2, :z 3})
 ;; 1 2 3
 ```
-
-## Example#7a51df
 
 A non-vector sequence can be destructured as a map:
 

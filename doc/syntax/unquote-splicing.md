@@ -18,7 +18,7 @@ parent form.
 syntax/syntax-quote
 syntax/unquote
 
-## Example#e6f73d
+## Examples
 
 ```clj
 (def foo '[a b c])

@@ -16,7 +16,7 @@ cljs.core/hash-set
 cljs.core/sorted-set
 cljs.core/sorted-set-by
 
-## Example#f11ab6
+## Examples
 
 ```clj
 #{1 2 3}

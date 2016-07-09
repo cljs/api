@@ -16,7 +16,7 @@ cljs.core/assoc
 cljs.core/update-in
 cljs.core/get-in
 
-## Example#e76f20
+## Examples
 
 ```clj
 (def users [{:name "James" :age 26}

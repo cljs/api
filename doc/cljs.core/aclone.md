@@ -13,7 +13,7 @@ JavaScript array, which is a shallow copy, not a deep copy.
 cljs.core/array
 cljs.core/make-array
 
-## Example#422c4e
+## Examples
 
 ```clj
 (def a #js [1 2 3])

@@ -10,7 +10,7 @@ open.  Equivalent to `debugger;` in JavaScript.
 Check to see if this is allowed as the last expression of a function.
 I think `return debugger;` is not valid JS and will cause an error.
 
-## Example#87f2fa
+## Examples
 
 ```clj
 (defn foo []

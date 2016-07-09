@@ -27,7 +27,7 @@ cljs.core/some->>
 ## TODO
 add threading macro animations link here
 
-## Example#5e7eef
+## Examples
 
 ```clj
 (as-> [1 2 3 4] x

@@ -13,7 +13,7 @@ syntax/ignore
 cljs.core/comment
 syntax/shebang
 
-## Example#ab62d2
+## Examples
 
 Add comments to code:
 

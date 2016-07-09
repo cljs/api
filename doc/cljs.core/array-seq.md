@@ -9,7 +9,7 @@ cljs.core/array-seq
 
 Creates a `seq` from a JavaScript array, starting at index `i` if given.
 
-## Example#9ef6de
+## Examples
 
 ```clj
 (array-seq #js [1 2 3])

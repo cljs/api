@@ -27,7 +27,7 @@ cljs.core/with-meta
 cljs.core/vary-meta
 cljs.core/alter-meta!
 
-## Example#5b8fec
+## Examples
 
 Attach metadata to a collection:
 

@@ -10,7 +10,7 @@ cljs.core/distinct?
 
 Returns true if no two of the arguments are `=`
 
-## Example#b32799
+## Examples
 
 ```clj
 (distinct? 1)

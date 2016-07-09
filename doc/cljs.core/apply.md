@@ -16,7 +16,7 @@ arguments to `args`.
 ## Related
 cljs.core/map
 
-## Example#174052
+## Examples
 
 ```clj
 (max 1 2 3)

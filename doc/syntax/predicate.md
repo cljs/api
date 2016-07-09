@@ -26,7 +26,7 @@ It is sometimes used to name boolean values as well, not just predicate function
 ## Related
 syntax/impure
 
-## Example#5a85c7
+## Examples
 
 Create a `divisible?` predicate:
 

@@ -9,7 +9,7 @@ cljs.core/char
 Converts a number `x` to a character using `String.fromCharCode(x)` from
 JavaScript.
 
-## Example#4e1a56
+## Examples
 
 ```clj
 (char 81)

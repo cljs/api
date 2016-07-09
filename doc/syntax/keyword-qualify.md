@@ -23,7 +23,7 @@ syntax/keyword
 cljs.core/keyword
 cljs.core/keyword?
 
-## Example#b0a135
+## Examples
 
 If we are in the `user` namespace:
 

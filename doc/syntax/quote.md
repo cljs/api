@@ -13,7 +13,7 @@ Prevent the evaluation of the following form.
 ## Related
 special/quote
 
-## Example#0d2c26
+## Examples
 
 ```clj
 'foo

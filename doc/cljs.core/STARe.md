@@ -15,7 +15,7 @@ cljs.core/*1
 cljs.core/*2
 cljs.core/*3
 
-## Example#bea858
+## Examples
 
 ```clj
 (defn cause-error []

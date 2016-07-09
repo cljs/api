@@ -55,7 +55,7 @@ use the following sugar:
 cljs.core/..
 cljs.core/aget
 
-## Example#22ccbb
+## Examples
 
 We can access the JavaScript properties of a string:
 
@@ -92,8 +92,6 @@ m.replace("H", "");
 (.replace m "H" "")
 ;;=> "ello World"
 ```
-
-## Example#7c5e58
 
 Create a JavaScript object `o`:
 

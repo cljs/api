@@ -14,7 +14,7 @@ one, false otherwise.
 ## Related
 cljs.core/<=
 
-## Example#02e6d3
+## Examples
 
 ```clj
 (< 1 2)

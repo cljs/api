@@ -15,7 +15,7 @@ Uses `IComparable` if available and `google.array.defaultCompare` for objects of
 the same type. nil is treated as a special case and is always less than any
 other object.
 
-## Example#e13fa0
+## Examples
 
 ```clj
 (compare 10 12)

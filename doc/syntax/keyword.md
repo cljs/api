@@ -25,7 +25,7 @@ syntax/keyword-qualify
 cljs.core/keyword
 cljs.core/keyword?
 
-## Example#e5fdbe
+## Examples
 
 ```clj
 :foo
@@ -34,8 +34,6 @@ cljs.core/keyword?
 :a/foo
 ;;=> :a/foo
 ```
-
-## Example#9765fe
 
 A keyword is also callable for retrieving values from a map:
 

@@ -19,7 +19,7 @@ case, you can just use the `:include-macros` or `:refer-macros` flag of the
 ## Related
 special/require
 
-## Example#e34cf4
+## Examples
 
 ```clj
 (require-macros '[cljs.core.async.macros :refer [go]])

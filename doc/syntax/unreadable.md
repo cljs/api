@@ -22,7 +22,7 @@ its value.
 Oftentimes, evaluating JavaScript objects in a REPL will print the result
 of its `.toString` method inside the unreadable form `#<>`.
 
-## Example#e0a6cd
+## Examples
 
 Unreadable forms will throw an exception when read:
 

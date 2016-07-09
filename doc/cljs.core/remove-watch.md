@@ -12,7 +12,7 @@ have originally been set by `add-watch`.
 ## Related
 cljs.core/add-watch
 
-## Example#70044a
+## Examples
 
 ```clj
 (def a (atom {}))

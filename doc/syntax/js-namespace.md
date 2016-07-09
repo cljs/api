@@ -19,7 +19,7 @@ special/.
 cljs.core/aget
 cljs.core/aset
 
-## Example#06f234
+## Examples
 
 The following examples are run from a browser REPL.
 

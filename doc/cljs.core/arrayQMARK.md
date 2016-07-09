@@ -11,7 +11,7 @@ Returns true if `x` is a JavaScript array, false otherwise.
 ## Related
 cljs.core/object?
 
-## Example#39913c
+## Examples
 
 ```clj
 (array? #js [1 2 3])

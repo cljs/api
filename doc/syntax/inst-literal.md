@@ -28,7 +28,7 @@ Append `Z` to denote UTC, or `-hh:mm` to denote exact UTC offset.
 cljs.core/time
 syntax/tagged-literal
 
-## Example#47d8ee
+## Examples
 
 ```clj
 #inst "1985-04-12"

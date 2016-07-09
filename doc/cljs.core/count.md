@@ -12,7 +12,7 @@ Returns the number of items in `x`.
 
 `(count nil)` returns 0.
 
-## Example#96e470
+## Examples
 
 ```clj
 (count [1 2 3])

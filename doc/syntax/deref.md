@@ -19,7 +19,7 @@ cljs.core/deref
 cljs.core/atom
 cljs.core/delay
 
-## Example#08f886
+## Examples
 
 ```clj
 (def a (atom 1))

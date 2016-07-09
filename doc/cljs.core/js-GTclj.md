@@ -21,7 +21,7 @@ recommended for parsing large amounts of JSON data.
 ## Related
 cljs.core/clj->js
 
-## Example#61d263
+## Examples
 
 Parse a JSON string:
 

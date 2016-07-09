@@ -10,7 +10,7 @@ Returns [doc:syntax/nil] if not present.
 ## Related
 cljs.core/name
 
-## Example#5bd3b4
+## Examples
 
 With namespaces:
 

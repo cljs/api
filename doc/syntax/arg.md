@@ -17,7 +17,7 @@ Only usable inside [doc:syntax/function].
 ## Related
 syntax/function
 
-## Example#d17825
+## Examples
 
 ```clj
 (map #(* 2 %) [1 2 3])

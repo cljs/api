@@ -13,7 +13,7 @@ metadata.
 cljs.core/alter-meta!
 cljs.core/vary-meta
 
-## Example#f189d4
+## Examples
 
 ```clj
 (def a ^:foo [1 2 3])

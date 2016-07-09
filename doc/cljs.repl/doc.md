@@ -13,7 +13,7 @@ cljs.repl/find-doc
 cljs.core/meta
 special/var
 
-## Example#4d2768
+## Examples
 
 ```clj
 (doc map)

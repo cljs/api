@@ -12,7 +12,7 @@ contains a match for `re-string-or-pattern`.
 ## Related
 cljs.repl/doc
 
-## Example#50ec43
+## Examples
 
 ```clj
 (find-doc "some")

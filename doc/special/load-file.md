@@ -13,7 +13,7 @@ Only usable from a REPL.
 
 Load file at `filename`, then compiles and evaluates its code.
 
-## Example#0903c5
+## Examples
 
 ```clj
 (load-file "path/to/foo.cljs")

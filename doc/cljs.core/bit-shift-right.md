@@ -12,7 +12,7 @@ Bitwise shift right `n` bits.  Same as `x >> n` in JavaScript.
 cljs.core/bit-shift-left
 cljs.core/unsigned-bit-shift-right
 
-## Example#5b75af
+## Examples
 
 Bits can be entered using radix notation:
 

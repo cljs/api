@@ -42,7 +42,7 @@ A flag is a keyword. Recognized flags:
 ## Related
 special/require-macros
 
-## Example#ab0355
+## Examples
 
 ```clj
 (require '[clojure/string :as string])

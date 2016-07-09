@@ -22,7 +22,7 @@ Like [doc:syntax/cond], except:
 ## Related
 syntax/cond
 
-## Example#9d0020
+## Examples
 
 ```clj
 '(def #?@(:cljs [a 1]

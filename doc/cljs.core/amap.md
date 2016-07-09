@@ -14,15 +14,13 @@ index.
 ## Related
 cljs.core/map
 
-## Example#3a7471
+## Examples
 
 ```clj
 (def a #js [1 2 3])
 (amap a i ret (* 10 (aget a i)))
 ;;=> #js [10 20 30]
 ```
-
-## Example#0f57af
 
 You can also use `ret` inside the mapped expression if you want to use the
 current result:

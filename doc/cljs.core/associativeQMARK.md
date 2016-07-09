@@ -10,7 +10,7 @@ Returns true if `coll` implements the `IAssociative` protocol, false otherwise.
 
 Maps and vectors are associative.
 
-## Example#29a37f
+## Examples
 
 ```clj
 (associative? [1 2 3])

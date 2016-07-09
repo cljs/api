@@ -15,7 +15,7 @@ syntax/js-literal
 cljs.core/array
 cljs.core/clj->js
 
-## Example#657cd7
+## Examples
 
 ```clj
 (js-obj "foo" 1 "bar" 2)

@@ -20,7 +20,7 @@ Returns coll.
 cljs.core/transient
 cljs.core/persistent!
 
-## Example#7d1e6b
+## Examples
 
 ```clj
 (def tcoll (transient! {}))

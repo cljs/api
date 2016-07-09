@@ -21,7 +21,7 @@ cljs.core/js-obj
 cljs.core/array
 cljs.core/clj->js
 
-## Example#05e121
+## Examples
 
 ```clj
 #js {:foo 1 bar 2}

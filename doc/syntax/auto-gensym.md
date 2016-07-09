@@ -29,7 +29,7 @@ Namespace-qualified symbols `foo/bar#` are not replaced.
 cljs.core/gensym
 syntax/syntax-quote
 
-## Example#432cda
+## Examples
 
 ```clj
 `foo#
@@ -42,8 +42,6 @@ Namespace-qualified symbols are left alone.
 `foo/bar#
 ;;=> foo/bar#
 ```
-
-## Example#cd51e7
 
 Create safe local bindings:
 
