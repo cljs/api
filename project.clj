@@ -7,8 +7,6 @@
                  [me.raynes/fs "1.4.6"]
                  [narkisr/clansi "1.2.0"]
                  [fipp "0.6.1"]
-                 [org.clojure/java.jdbc "0.3.7"]
-                 [org.xerial/sqlite-jdbc "3.8.10.1"]
                  [ccfontes/fuzzy-matcher "0.0.1"]
                  [clj-time "0.9.0"]
                  [clojure-watch "0.1.11"]]
