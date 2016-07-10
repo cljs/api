@@ -76,6 +76,11 @@
               :md-biblio #{"cljs.core/foo"} ;; doclinks used in the markdown bodies
               :see-also ["cljs.core/foo" "cljs.core/bar"]
 
+              ;; sometimes a namespace can exist for the both the library
+              ;; and compiler.  we may need separate docs for them.
+              :summary-compiler "... summary in markdown ..."
+              :details-compiler "... details in markdown ..."
+
               ;; the full name where this symbol moved to (example cljs.core/try -> special/try)
               :moved "cljs.core/another-name"
 
