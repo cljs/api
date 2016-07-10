@@ -1,2 +1,4 @@
-## Name
-cljs.core/IReduce
+---
+name: cljs.core/IReduce
+---
+

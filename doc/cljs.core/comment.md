@@ -1,8 +1,10 @@
-## Name
-cljs.core/comment
+---
+name: cljs.core/comment
+---
 
 ## Signature
 [& body]
+
 
 ## Description
 
@@ -13,6 +15,7 @@ different functions during development.  Specific expressions within the
 `comment` can then be selected and evaluated from some editors.
 
 You can also use `;` to "comment out" code until the end of a line.
+
 
 ## Examples
 

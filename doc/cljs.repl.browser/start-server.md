@@ -1,5 +1,5 @@
-## Name
-cljs.repl.browser/start-server
+---
+name: cljs.repl.browser/start-server
+moved: cljs.repl.server/start
+---
 
-## Moved
-cljs.repl.server/start

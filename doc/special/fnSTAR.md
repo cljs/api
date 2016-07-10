@@ -1,2 +1,4 @@
-## Name
-special/fn*
+---
+name: special/fn*
+---
+

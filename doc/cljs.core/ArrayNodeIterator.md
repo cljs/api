@@ -1,2 +1,4 @@
-## Name
-cljs.core/ArrayNodeIterator
+---
+name: cljs.core/ArrayNodeIterator
+---
+

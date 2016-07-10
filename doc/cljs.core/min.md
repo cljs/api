@@ -1,14 +1,20 @@
-## Name
-cljs.core/min
+---
+name: cljs.core/min
+related:
+  - cljs.core/max
+  - cljs.core/min-key
+---
 
 ## Signature
 [x]
 [x y]
 [x y & more]
 
+
 ## Description
 
 Returns the least number argument.
+
 
 ## Examples
 
@@ -23,7 +29,3 @@ Apply it to a collection:
 (apply min [1 2 3 4])
 ;; => 1
 ```
-
-## Related
-cljs.core/max
-cljs.core/min-key

@@ -1,14 +1,17 @@
-## Name
-cljs.core/js-debugger
+---
+name: cljs.core/js-debugger
+---
 
 ## Description
 
 Creates breakpoint that will stop the debugger if the browser's devtools are
 open.  Equivalent to `debugger;` in JavaScript.
 
+
 ## TODO
 Check to see if this is allowed as the last expression of a function.
 I think `return debugger;` is not valid JS and will cause an error.
+
 
 ## Examples
 

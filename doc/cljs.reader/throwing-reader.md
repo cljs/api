@@ -1,2 +1,4 @@
-## Name
-cljs.reader/throwing-reader
+---
+name: cljs.reader/throwing-reader
+---
+

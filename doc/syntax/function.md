@@ -1,11 +1,16 @@
-## Name
-syntax/function
-
-## Display
-#() function
+---
+name: syntax/function
+display: "#() function"
+related:
+  - syntax/arg
+  - cljs.core/fn
+  - cljs.core/defn
+  - cljs.core/partial
+---
 
 ## Usage
 #(...)
+
 
 ## Description
 
@@ -25,11 +30,6 @@ reason that `(1)` does evaluate to `1`.
 `#()` forms cannot be nested, since this would create an ambiguity between the
 automatically assigned `%` argument names.
 
-## Related
-syntax/arg
-cljs.core/fn
-cljs.core/defn
-cljs.core/partial
 
 ## Examples
 

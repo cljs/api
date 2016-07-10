@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/cat
+---
+name: cljs.spec.impl.gen/cat
+---
+

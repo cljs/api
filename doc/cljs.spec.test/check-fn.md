@@ -1,2 +1,4 @@
-## Name
-cljs.spec.test/check-fn
+---
+name: cljs.spec.test/check-fn
+---
+

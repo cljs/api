@@ -1,2 +1,4 @@
-## Name
-cljs.repl.rhino/goog-require
+---
+name: cljs.repl.rhino/goog-require
+---
+

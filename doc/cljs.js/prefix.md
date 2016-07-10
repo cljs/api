@@ -1,2 +1,4 @@
-## Name
-cljs.js/prefix
+---
+name: cljs.js/prefix
+---
+

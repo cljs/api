@@ -1,2 +1,4 @@
-## Name
-cljs.core/EmptyList
+---
+name: cljs.core/EmptyList
+---
+

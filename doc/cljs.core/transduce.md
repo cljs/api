@@ -1,2 +1,4 @@
-## Name
-cljs.core/transduce
+---
+name: cljs.core/transduce
+---
+

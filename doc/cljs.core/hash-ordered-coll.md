@@ -1,2 +1,4 @@
-## Name
-cljs.core/hash-ordered-coll
+---
+name: cljs.core/hash-ordered-coll
+---
+

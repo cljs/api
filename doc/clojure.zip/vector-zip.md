@@ -1,2 +1,4 @@
-## Name
-clojure.zip/vector-zip
+---
+name: clojure.zip/vector-zip
+---
+

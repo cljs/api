@@ -1,2 +1,4 @@
-## Name
-cljs.core/Vector
+---
+name: cljs.core/Vector
+---
+

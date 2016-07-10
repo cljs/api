@@ -1,11 +1,16 @@
-## Name
-syntax/queue-literal
-
-## Display
-#queue literal
+---
+name: syntax/queue-literal
+display: "#queue literal"
+related:
+  - syntax/list
+  - syntax/vector
+  - syntax/map
+  - syntax/set
+---
 
 ## Usage
 #queue [...]
+
 
 ## Description
 
@@ -15,6 +20,7 @@ Queues are the only core collection type that requires a tagged literal to
 create, while the other collections have built-in delimiters `()` `[]` `{}` `#{}`.
 
 See [doc:cljs.core/PersistentQueue] for data structure details.
+
 
 ## Notes
 
@@ -26,11 +32,6 @@ Some pending-related Clojure issues:
 [CLJ-976]:http://dev.clojure.org/jira/browse/CLJ-976
 [CLJ-1078]:http://dev.clojure.org/jira/browse/CLJ-1078
 
-## Related
-syntax/list
-syntax/vector
-syntax/map
-syntax/set
 
 ## Examples
 

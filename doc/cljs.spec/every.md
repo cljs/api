@@ -1,2 +1,4 @@
-## Name
-cljs.spec/every
+---
+name: cljs.spec/every
+---
+

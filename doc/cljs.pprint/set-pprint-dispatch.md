@@ -1,2 +1,4 @@
-## Name
-cljs.pprint/set-pprint-dispatch
+---
+name: cljs.pprint/set-pprint-dispatch
+---
+

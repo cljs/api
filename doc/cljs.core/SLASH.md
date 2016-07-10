@@ -1,19 +1,21 @@
-## Name
-cljs.core//
+---
+name: cljs.core//
+related:
+  - cljs.core/*
+  - cljs.core/quot
+---
 
 ## Signature
 [x]
 [x y]
 [x y & more]
 
+
 ## Description
 
 If no denominators are supplied, returns 1/numerator, else returns numerator
 divided by all of the denominators.
 
-## Related
-cljs.core/*
-cljs.core/quot
 
 ## Examples
 

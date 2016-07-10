@@ -1,13 +1,14 @@
-## Name
-cljs.core/int
+---
+name: cljs.core/int
+related:
+  - cljs.core/char
+  - cljs.core/integer?
+---
 
 ## Signature
 [x]
 
+
 ## Description
 
 Coerces `x` to an integer by stripping decimal places.
-
-## Related
-cljs.core/char
-cljs.core/integer?

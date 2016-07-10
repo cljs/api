@@ -1,2 +1,4 @@
-## Name
-cljs.core/char?
+---
+name: cljs.core/char?
+---
+

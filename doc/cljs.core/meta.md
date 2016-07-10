@@ -1,2 +1,4 @@
-## Name
-cljs.core/meta
+---
+name: cljs.core/meta
+---
+

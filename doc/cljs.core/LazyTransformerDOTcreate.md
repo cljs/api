@@ -1,2 +1,4 @@
-## Name
-cljs.core/LazyTransformer.create
+---
+name: cljs.core/LazyTransformer.create
+---
+

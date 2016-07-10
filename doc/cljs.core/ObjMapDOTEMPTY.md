@@ -1,2 +1,4 @@
-## Name
-cljs.core/ObjMap.EMPTY
+---
+name: cljs.core/ObjMap.EMPTY
+---
+

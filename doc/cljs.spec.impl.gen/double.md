@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/double
+---
+name: cljs.spec.impl.gen/double
+---
+

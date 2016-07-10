@@ -1,8 +1,12 @@
-## Name
-cljs.core/add-watch
+---
+name: cljs.core/add-watch
+related:
+  - cljs.core/remove-watch
+---
 
 ## Signature
 [a key f]
+
 
 ## Description
 
@@ -15,8 +19,6 @@ new state.
 `key` should be a keyword and can be used with `remove-watch` to remove the
 watch function.
 
-## Related
-cljs.core/remove-watch
 
 ## Examples
 

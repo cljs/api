@@ -1,2 +1,4 @@
-## Name
-cljs.core/PersistentQueue.EMPTY
+---
+name: cljs.core/PersistentQueue.EMPTY
+---
+

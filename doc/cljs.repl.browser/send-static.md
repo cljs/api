@@ -1,2 +1,4 @@
-## Name
-cljs.repl.browser/send-static
+---
+name: cljs.repl.browser/send-static
+---
+

@@ -1,13 +1,16 @@
-## Name
-cljs.core/char
+---
+name: cljs.core/char
+---
 
 ## Signature
 [x]
+
 
 ## Description
 
 Converts a number `x` to a character using `String.fromCharCode(x)` from
 JavaScript.
+
 
 ## Examples
 

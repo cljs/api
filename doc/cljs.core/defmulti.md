@@ -1,2 +1,4 @@
-## Name
-cljs.core/defmulti
+---
+name: cljs.core/defmulti
+---
+

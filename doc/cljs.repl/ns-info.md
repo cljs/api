@@ -1,2 +1,4 @@
-## Name
-cljs.repl/ns-info
+---
+name: cljs.repl/ns-info
+---
+

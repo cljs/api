@@ -1,2 +1,4 @@
-## Name
-cljs.compiler.api/emit
+---
+name: cljs.compiler.api/emit
+---
+

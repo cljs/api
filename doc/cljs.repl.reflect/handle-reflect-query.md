@@ -1,2 +1,4 @@
-## Name
-cljs.repl.reflect/handle-reflect-query
+---
+name: cljs.repl.reflect/handle-reflect-query
+---
+

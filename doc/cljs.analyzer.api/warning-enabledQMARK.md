@@ -1,2 +1,4 @@
-## Name
-cljs.analyzer.api/warning-enabled?
+---
+name: cljs.analyzer.api/warning-enabled?
+---
+

@@ -1,2 +1,4 @@
-## Name
-special/defrecord*
+---
+name: special/defrecord*
+---
+

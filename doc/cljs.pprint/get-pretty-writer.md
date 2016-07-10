@@ -1,2 +1,4 @@
-## Name
-cljs.pprint/get-pretty-writer
+---
+name: cljs.pprint/get-pretty-writer
+---
+

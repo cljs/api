@@ -1,2 +1,4 @@
-## Name
-cljs.reader/validate-unicode-escape
+---
+name: cljs.reader/validate-unicode-escape
+---
+

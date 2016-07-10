@@ -1,2 +1,4 @@
-## Name
-cljs.spec/valid?
+---
+name: cljs.spec/valid?
+---
+

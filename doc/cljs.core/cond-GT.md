@@ -1,8 +1,15 @@
-## Name
-cljs.core/cond->
+---
+name: cljs.core/cond->
+related:
+  - cljs.core/->
+  - cljs.core/->>
+  - cljs.core/cond->>
+  - cljs.core/cond
+---
 
 ## Signature
 [expr & clauses]
+
 
 ## Description
 
@@ -12,11 +19,6 @@ through each form for which the corresponding test expression is true.
 Note that, unlike `cond` branching, `cond->` threading does not short circuit
 after the first true test expression.
 
-## Related
-cljs.core/->
-cljs.core/->>
-cljs.core/cond->>
-cljs.core/cond
 
 ## Examples
 

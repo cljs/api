@@ -1,2 +1,4 @@
-## Name
-clojure.core.reducers/mapcat
+---
+name: clojure.core.reducers/mapcat
+---
+

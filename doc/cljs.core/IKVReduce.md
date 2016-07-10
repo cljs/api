@@ -1,2 +1,4 @@
-## Name
-cljs.core/IKVReduce
+---
+name: cljs.core/IKVReduce
+---
+

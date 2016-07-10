@@ -1,2 +1,4 @@
-## Name
-cljs.core/INamed
+---
+name: cljs.core/INamed
+---
+

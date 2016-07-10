@@ -1,5 +1,6 @@
-## Name
-cljs.core/volatile?
+---
+name: cljs.core/volatile?
+related:
+  - cljs.core/volatile!
+---
 
-## Related
-cljs.core/volatile!

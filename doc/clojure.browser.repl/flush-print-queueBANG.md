@@ -1,2 +1,4 @@
-## Name
-clojure.browser.repl/flush-print-queue!
+---
+name: clojure.browser.repl/flush-print-queue!
+---
+

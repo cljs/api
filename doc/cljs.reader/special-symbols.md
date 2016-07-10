@@ -1,2 +1,4 @@
-## Name
-cljs.reader/special-symbols
+---
+name: cljs.reader/special-symbols
+---
+

@@ -1,9 +1,15 @@
-## Name
-cljs.core/keep
+---
+name: cljs.core/keep
+related:
+  - cljs.core/keep-indexed
+  - cljs.core/map
+  - cljs.core/filter
+---
 
 ## Signature
 [f]
 [f coll]
+
 
 ## Description
 
@@ -13,8 +19,3 @@ false return values will be included.
 `f` must be free of side-effects.
 
 Returns a transducer when no collection is provided.
-
-## Related
-cljs.core/keep-indexed
-cljs.core/map
-cljs.core/filter

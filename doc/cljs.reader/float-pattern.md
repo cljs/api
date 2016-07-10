@@ -1,2 +1,4 @@
-## Name
-cljs.reader/float-pattern
+---
+name: cljs.reader/float-pattern
+---
+

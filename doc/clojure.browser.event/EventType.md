@@ -1,5 +1,5 @@
-## Name
-clojure.browser.event/EventType
+---
+name: clojure.browser.event/EventType
+moved: clojure.browser.event/IEventType
+---
 
-## Moved
-clojure.browser.event/IEventType

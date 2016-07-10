@@ -1,2 +1,4 @@
-## Name
-cljs.core/IndexedSeq
+---
+name: cljs.core/IndexedSeq
+---
+

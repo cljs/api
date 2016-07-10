@@ -1,2 +1,4 @@
-## Name
-cljs.core/clone
+---
+name: cljs.core/clone
+---
+

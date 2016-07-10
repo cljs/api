@@ -1,2 +1,4 @@
-## Name
-cljs.repl/print-doc
+---
+name: cljs.repl/print-doc
+---
+

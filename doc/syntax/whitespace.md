@@ -1,8 +1,9 @@
-## Name
-syntax/whitespace
-
-## Display
-whitespace
+---
+name: syntax/whitespace
+display: "whitespace"
+related:
+  - syntax/comma
+---
 
 ## Description
 
@@ -29,6 +30,3 @@ A [comma][doc:syntax/comma] is considered whitespace:
 [1, 2, 3]
 {:foo 1, :bar 2}
 ```
-
-## Related
-syntax/comma

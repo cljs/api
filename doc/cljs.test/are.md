@@ -1,2 +1,4 @@
-## Name
-cljs.test/are
+---
+name: cljs.test/are
+---
+

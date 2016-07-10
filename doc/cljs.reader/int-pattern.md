@@ -1,2 +1,4 @@
-## Name
-cljs.reader/int-pattern
+---
+name: cljs.reader/int-pattern
+---
+

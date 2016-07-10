@@ -1,2 +1,4 @@
-## Name
-cljs.analyzer.api/get-options
+---
+name: cljs.analyzer.api/get-options
+---
+

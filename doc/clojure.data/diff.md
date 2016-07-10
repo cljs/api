@@ -1,2 +1,4 @@
-## Name
-clojure.data/diff
+---
+name: clojure.data/diff
+---
+

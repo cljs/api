@@ -1,2 +1,4 @@
-## Name
-cljs.spec/regex?
+---
+name: cljs.spec/regex?
+---
+

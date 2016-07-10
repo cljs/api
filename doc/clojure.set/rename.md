@@ -1,2 +1,4 @@
-## Name
-clojure.set/rename
+---
+name: clojure.set/rename
+---
+

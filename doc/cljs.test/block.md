@@ -1,2 +1,4 @@
-## Name
-cljs.test/block
+---
+name: cljs.test/block
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/PersistentVector.fromArray
+---
+name: cljs.core/PersistentVector.fromArray
+---
+

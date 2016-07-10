@@ -1,2 +1,4 @@
-## Name
-cljs.core/IWithMeta
+---
+name: cljs.core/IWithMeta
+---
+

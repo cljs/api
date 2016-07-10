@@ -1,16 +1,18 @@
-## Name
-cljs.core/bit-and
+---
+name: cljs.core/bit-and
+related:
+  - cljs.core/bit-or
+---
 
 ## Signature
 [x y]
 [x y & more]
 
+
 ## Description
 
 Bitwise "and".  Same as `x & y` in JavaScript.
 
-## Related
-cljs.core/bit-or
 
 ## Examples
 
@@ -28,4 +30,3 @@ Same numbers in decimal:
 (bit-and 12 10)
 ;;=> 8
 ```
-

@@ -1,2 +1,4 @@
-## Name
-cljs.repl.node/setup
+---
+name: cljs.repl.node/setup
+---
+

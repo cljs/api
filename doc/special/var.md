@@ -1,2 +1,4 @@
-## Name
-special/var
+---
+name: special/var
+---
+

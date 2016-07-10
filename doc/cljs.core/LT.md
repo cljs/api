@@ -1,18 +1,20 @@
-## Name
-cljs.core/<
+---
+name: cljs.core/<
+related:
+  - cljs.core/<=
+---
 
 ## Signature
 [x]
 [x y]
 [x y & more]
 
+
 ## Description
 
 Returns true if each successive number argument is greater than the previous
 one, false otherwise.
 
-## Related
-cljs.core/<=
 
 ## Examples
 

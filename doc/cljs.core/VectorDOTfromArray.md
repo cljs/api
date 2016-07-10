@@ -1,2 +1,4 @@
-## Name
-cljs.core/Vector.fromArray
+---
+name: cljs.core/Vector.fromArray
+---
+

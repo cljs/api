@@ -1,2 +1,4 @@
-## Name
-cljs.core/pr-str*
+---
+name: cljs.core/pr-str*
+---
+

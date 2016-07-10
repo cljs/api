@@ -1,11 +1,13 @@
-## Name
-syntax/destructure-vector
-
-## Display
-destructure []
+---
+name: syntax/destructure-vector
+display: "destructure []"
+related:
+  - syntax/destructure-map
+---
 
 ## Usage
 [arg1 arg2 & args :as name]
+
 
 ## Description
 
@@ -46,8 +48,6 @@ following forms:
 Destructure vectors can be nested, even in place of names in [destructure
 maps][doc:syntax/destructure-map].
 
-## Related
-syntax/destructure-map
 
 ## Examples
 
@@ -69,4 +69,3 @@ Destructure vectors can be nested:
   (println a b c))
 ;; 1 2 3
 ```
-

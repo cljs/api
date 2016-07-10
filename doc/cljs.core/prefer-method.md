@@ -1,2 +1,4 @@
-## Name
-cljs.core/prefer-method
+---
+name: cljs.core/prefer-method
+---
+

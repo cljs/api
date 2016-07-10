@@ -1,2 +1,4 @@
-## Name
-clojure.browser.dom/remove-children
+---
+name: clojure.browser.dom/remove-children
+---
+

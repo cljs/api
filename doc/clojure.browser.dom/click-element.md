@@ -1,2 +1,4 @@
-## Name
-clojure.browser.dom/click-element
+---
+name: clojure.browser.dom/click-element
+---
+

@@ -1,16 +1,17 @@
-## Name
-clojure.string/split
+---
+name: clojure.string/split
+related:
+  - cljs.core/subs
+  - clojure.string/replace
+  - clojure.string/split-lines
+---
 
 ## Signature
 [s re]
 [s re limit]
 
+
 ## Description
 
 Splits string on a regular expression. Optional argument limit is the maximum
 number of splits. Not lazy. Returns vector of the splits.
-
-## Related
-cljs.core/subs
-clojure.string/replace
-clojure.string/split-lines

@@ -1,2 +1,4 @@
-## Name
-cljs.core/array-chunk
+---
+name: cljs.core/array-chunk
+---
+

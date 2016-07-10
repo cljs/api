@@ -1,2 +1,4 @@
-## Name
-cljs.core/sequence
+---
+name: cljs.core/sequence
+---
+

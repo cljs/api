@@ -1,2 +1,4 @@
-## Name
-cljs.build.api/src-file->goog-require
+---
+name: cljs.build.api/src-file->goog-require
+---
+

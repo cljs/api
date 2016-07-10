@@ -1,2 +1,4 @@
-## Name
-cljs.analyzer.api/resolve
+---
+name: cljs.analyzer.api/resolve
+---
+

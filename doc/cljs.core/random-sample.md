@@ -1,2 +1,4 @@
-## Name
-cljs.core/random-sample
+---
+name: cljs.core/random-sample
+---
+

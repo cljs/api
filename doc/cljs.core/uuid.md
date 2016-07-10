@@ -1,5 +1,9 @@
-## Name
-cljs.core/uuid
+---
+name: cljs.core/uuid
+related:
+  - cljs.core/random-uuid
+  - syntax/uuid-literal
+---
 
 ## Description
 
@@ -11,9 +15,6 @@ number of hex digits.  No validation is performed.
 
 To create a UUID literal (parsed and validated at compile time), use [doc:syntax/uuid-literal].
 
-## Related
-cljs.core/random-uuid
-syntax/uuid-literal
 
 ## Examples
 

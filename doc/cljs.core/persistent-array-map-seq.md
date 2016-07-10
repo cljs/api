@@ -1,2 +1,4 @@
-## Name
-cljs.core/persistent-array-map-seq
+---
+name: cljs.core/persistent-array-map-seq
+---
+

@@ -1,15 +1,17 @@
-## Name
-cljs.core/array?
+---
+name: cljs.core/array?
+related:
+  - cljs.core/object?
+---
 
 ## Signature
 [x]
+
 
 ## Description
 
 Returns true if `x` is a JavaScript array, false otherwise.
 
-## Related
-cljs.core/object?
 
 ## Examples
 

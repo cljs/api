@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/quick-check
+---
+name: cljs.spec.impl.gen/quick-check
+---
+

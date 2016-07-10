@@ -1,9 +1,14 @@
-## Name
-cljs.core/sort-by
+---
+name: cljs.core/sort-by
+related:
+  - cljs.core/sort
+  - cljs.core/compare
+---
 
 ## Signature
 [keyfn coll]
 [keyfn comp coll]
+
 
 ## Description
 
@@ -13,7 +18,3 @@ determined by comparing `(keyfn item)`.
 `comp` can be boolean-valued comparison function, or a -/0/+ valued comparator.
 
 `comp` defaults to `compare`.
-
-## Related
-cljs.core/sort
-cljs.core/compare

@@ -1,2 +1,4 @@
-## Name
-cljs.build.api/goog-dep-string
+---
+name: cljs.build.api/goog-dep-string
+---
+

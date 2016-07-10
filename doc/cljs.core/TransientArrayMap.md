@@ -1,2 +1,4 @@
-## Name
-cljs.core/TransientArrayMap
+---
+name: cljs.core/TransientArrayMap
+---
+

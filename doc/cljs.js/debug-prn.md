@@ -1,2 +1,4 @@
-## Name
-cljs.js/debug-prn
+---
+name: cljs.js/debug-prn
+---
+

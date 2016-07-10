@@ -1,2 +1,4 @@
-## Name
-cljs.core/bytes
+---
+name: cljs.core/bytes
+---
+

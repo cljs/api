@@ -1,14 +1,19 @@
-## Name
-syntax/meta
-
-## Display
-^ meta
+---
+name: syntax/meta
+display: "^ meta"
+related:
+  - cljs.core/meta
+  - cljs.core/with-meta
+  - cljs.core/vary-meta
+  - cljs.core/alter-meta!
+---
 
 ## Usage
 ^{...}
 ^:foo
 ^"foo"
 ^foo
+
 
 ## Description
 
@@ -21,11 +26,6 @@ Metadata will assume the following transformations depending on its type:
 - string `^"foo"` => `^{:tag "foo"}`
 - symbol `^foo` => `^{:tag <value of foo>}`
 
-## Related
-cljs.core/meta
-cljs.core/with-meta
-cljs.core/vary-meta
-cljs.core/alter-meta!
 
 ## Examples
 

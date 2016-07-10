@@ -1,2 +1,4 @@
-## Name
-cljs.core/IWriter
+---
+name: cljs.core/IWriter
+---
+

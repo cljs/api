@@ -1,13 +1,16 @@
-## Name
-syntax/Infinity
-
-## Display
-Infinity
+---
+name: syntax/Infinity
+display: "Infinity"
+related:
+  - syntax/number
+  - syntax/NaN
+---
 
 ## Usage
 Infinity
 -Infinity
 +Infinity
+
 
 ## Description
 
@@ -17,9 +20,6 @@ The IEEE 754 Floating Point representations of infinity.
 
 `-Infinity` = negative infinity
 
-## Related
-syntax/number
-syntax/NaN
 
 ## Examples
 

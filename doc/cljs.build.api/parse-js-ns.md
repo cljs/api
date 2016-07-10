@@ -1,2 +1,4 @@
-## Name
-cljs.build.api/parse-js-ns
+---
+name: cljs.build.api/parse-js-ns
+---
+

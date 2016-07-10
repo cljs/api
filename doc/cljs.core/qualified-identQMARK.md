@@ -1,2 +1,4 @@
-## Name
-cljs.core/qualified-ident?
+---
+name: cljs.core/qualified-ident?
+---
+

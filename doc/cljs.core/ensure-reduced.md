@@ -1,2 +1,4 @@
-## Name
-cljs.core/ensure-reduced
+---
+name: cljs.core/ensure-reduced
+---
+

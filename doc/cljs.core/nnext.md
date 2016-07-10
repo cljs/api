@@ -1,12 +1,13 @@
-## Name
-cljs.core/nnext
+---
+name: cljs.core/nnext
+related:
+  - cljs.core/next
+---
 
 ## Signature
 [coll]
 
+
 ## Description
 
 Same as `(next (next coll))`.
-
-## Related
-cljs.core/next

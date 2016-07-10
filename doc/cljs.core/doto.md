@@ -1,2 +1,4 @@
-## Name
-cljs.core/doto
+---
+name: cljs.core/doto
+---
+

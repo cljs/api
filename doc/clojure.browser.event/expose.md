@@ -1,2 +1,4 @@
-## Name
-clojure.browser.event/expose
+---
+name: clojure.browser.event/expose
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/HashCollisionNode
+---
+name: cljs.core/HashCollisionNode
+---
+

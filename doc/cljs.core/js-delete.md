@@ -1,8 +1,12 @@
-## Name
-cljs.core/js-delete
+---
+name: cljs.core/js-delete
+related:
+  - cljs.core/dissoc
+---
 
 ## Signature
 [obj key]
+
 
 ## Description
 
@@ -10,8 +14,6 @@ Deletes property `key` in JavaScript object `obj`.
 
 Equivalent to `delete obj[key]` in JavaScript.
 
-## Related
-cljs.core/dissoc
 
 ## Examples
 

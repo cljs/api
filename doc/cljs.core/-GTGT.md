@@ -1,11 +1,13 @@
-## Name
-cljs.core/->>
-
-## Known As
-thread last
+---
+name: cljs.core/->>
+known as: thread last
+related:
+  - cljs.core/->
+---
 
 ## Signature
 [x & forms]
+
 
 ## Description
 
@@ -31,11 +33,10 @@ in second form, etc.
       <td><pre>
 (x y z (d (a b c x)))</pre></td></tr></tbody></table>
 
-## Related
-cljs.core/->
 
 ## TODO
 add threading macro animations link here
+
 
 ## Examples
 

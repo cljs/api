@@ -1,2 +1,4 @@
-## Name
-cljs.spec/fn-specs
+---
+name: cljs.spec/fn-specs
+---
+

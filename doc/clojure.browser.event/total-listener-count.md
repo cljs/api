@@ -1,2 +1,4 @@
-## Name
-clojure.browser.event/total-listener-count
+---
+name: clojure.browser.event/total-listener-count
+---
+

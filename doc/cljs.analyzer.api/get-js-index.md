@@ -1,2 +1,4 @@
-## Name
-cljs.analyzer.api/get-js-index
+---
+name: cljs.analyzer.api/get-js-index
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/MetaFn
+---
+name: cljs.core/MetaFn
+---
+

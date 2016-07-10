@@ -1,2 +1,4 @@
-## Name
-cljs.core/m3-hash-unencoded-chars
+---
+name: cljs.core/m3-hash-unencoded-chars
+---
+

@@ -1,2 +1,4 @@
-## Name
-clojure.browser.repl/connect
+---
+name: clojure.browser.repl/connect
+---
+

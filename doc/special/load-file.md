@@ -1,14 +1,17 @@
-## Name
-special/load-file
+---
+name: special/load-file
+---
 
 ## Signature
 [filename]
+
 
 ## Description
 
 Only usable from a REPL.
 
 Load file at `filename`, then compiles and evaluates its code.
+
 
 ## Examples
 

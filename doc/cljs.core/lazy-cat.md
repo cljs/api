@@ -1,8 +1,13 @@
-## Name
-cljs.core/lazy-cat
+---
+name: cljs.core/lazy-cat
+related:
+  - cljs.core/lazy-seq
+  - cljs.core/concat
+---
 
 ## Signature
 [& colls]
+
 
 ## Description
 
@@ -22,7 +27,3 @@ needed.
 (concat (lazy-seq x)
         (lazy-seq y)
         (lazy-seq z))</pre></td></tr></tbody></table>
-
-## Related
-cljs.core/lazy-seq
-cljs.core/concat

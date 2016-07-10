@@ -1,12 +1,16 @@
-## Name
-syntax/keyword-qualify
-
-## Display
-:: keyword
+---
+name: syntax/keyword-qualify
+display: ":: keyword"
+related:
+  - syntax/keyword
+  - cljs.core/keyword
+  - cljs.core/keyword?
+---
 
 ## Usage
 ::foo
 ::foo/bar
+
 
 ## Description
 
@@ -18,10 +22,6 @@ The namespace will resolve to either of the following:
 - full namespace if the given one is an alias
 - reader error if given namespace doesn't exist
 
-## Related
-syntax/keyword
-cljs.core/keyword
-cljs.core/keyword?
 
 ## Examples
 

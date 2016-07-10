@@ -1,2 +1,4 @@
-## Name
-cljs.spec/registry
+---
+name: cljs.spec/registry
+---
+

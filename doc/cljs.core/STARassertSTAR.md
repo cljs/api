@@ -1,2 +1,4 @@
-## Name
-cljs.core/*assert*
+---
+name: cljs.core/*assert*
+---
+

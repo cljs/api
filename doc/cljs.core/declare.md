@@ -1,14 +1,19 @@
-## Name
-cljs.core/declare
+---
+name: cljs.core/declare
+related:
+  - special/def
+---
 
 ## Signature
 [& names]
+
 
 ## Description
 
 Uses `def` to establish symbols of `names` with no bindings.
 
 Useful for making forward declarations.
+
 
 ## Examples
 
@@ -20,6 +25,3 @@ a
 a
 ;;=> nil
 ```
-
-## Related
-special/def

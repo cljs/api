@@ -1,8 +1,13 @@
-## Name
-cljs.core/comp
+---
+name: cljs.core/comp
+related:
+  - cljs.core/partial
+  - cljs.core/juxt
+---
 
 ## Signature
 [& fns]
+
 
 ## Description
 
@@ -15,9 +20,6 @@ the next left function, and so on.
 
 `((comp a b c) x y)` = `(a (b (c x y)))`
 
-## Related
-cljs.core/partial
-cljs.core/juxt
 
 ## Examples
 

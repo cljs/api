@@ -1,2 +1,4 @@
-## Name
-cljs.core/hash-keyword
+---
+name: cljs.core/hash-keyword
+---
+

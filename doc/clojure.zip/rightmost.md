@@ -1,2 +1,4 @@
-## Name
-clojure.zip/rightmost
+---
+name: clojure.zip/rightmost
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/nat-int?
+---
+name: cljs.core/nat-int?
+---
+

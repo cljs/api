@@ -1,17 +1,16 @@
-## Name
-syntax/comment
-
-## Display
-; comment
+---
+name: syntax/comment
+display: "; comment"
+related:
+  - syntax/ignore
+  - cljs.core/comment
+  - syntax/shebang
+---
 
 ## Description
 
 "Comments out" everything after `;` on the current line.
 
-## Related
-syntax/ignore
-cljs.core/comment
-syntax/shebang
 
 ## Examples
 

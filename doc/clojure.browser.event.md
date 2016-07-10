@@ -1,5 +1,6 @@
-## Name
-clojure.browser.event
+---
+name: clojure.browser.event
+---
 
 ## Caption
 browser event library, wrapping [goog.events](http://www.closurecheatsheet.com/events)

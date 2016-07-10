@@ -1,2 +1,4 @@
-## Name
-cljs.core/pr-sequential
+---
+name: cljs.core/pr-sequential
+---
+

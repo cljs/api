@@ -1,8 +1,12 @@
-## Name
-syntax/syntax-quote
-
-## Display
-` syntax quote
+---
+name: syntax/syntax-quote
+display: "` syntax quote"
+related:
+  - syntax/auto-gensym
+  - syntax/quote
+  - syntax/unquote
+  - syntax/unquote-splicing
+---
 
 ## Description
 
@@ -17,11 +21,6 @@ resolving them in the current context.
 Any non-namespaced symbols ending with `#` are replaced with unique symbols.
 See [doc:syntax/auto-gensym].
 
-## Related
-syntax/auto-gensym
-syntax/quote
-syntax/unquote
-syntax/unquote-splicing
 
 ## Examples
 

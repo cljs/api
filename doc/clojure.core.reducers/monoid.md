@@ -1,2 +1,4 @@
-## Name
-clojure.core.reducers/monoid
+---
+name: clojure.core.reducers/monoid
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.repl.rhino/wrap-fn
+---
+name: cljs.repl.rhino/wrap-fn
+---
+

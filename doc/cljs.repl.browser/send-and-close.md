@@ -1,5 +1,5 @@
-## Name
-cljs.repl.browser/send-and-close
+---
+name: cljs.repl.browser/send-and-close
+moved: cljs.repl.server/send-and-close
+---
 
-## Moved
-cljs.repl.server/send-and-close

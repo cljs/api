@@ -1,8 +1,13 @@
-## Name
-syntax/number
-
-## Display
-number literal
+---
+name: syntax/number
+display: "number literal"
+related:
+  - syntax/Infinity
+  - syntax/NaN
+  - cljs.core/number?
+  - cljs.core/integer?
+  - cljs.core/int
+---
 
 ## Description
 
@@ -21,12 +26,6 @@ a custom base.
 - binary `2r0110`
 - arbitrary `NrXXX` where `(<= 2 N 36)` and `X` is in `[0-9,A-Z]`
 
-## Related
-syntax/Infinity
-syntax/NaN
-cljs.core/number?
-cljs.core/integer?
-cljs.core/int
 
 ## Examples
 

@@ -1,2 +1,4 @@
-## Name
-clojure.core.reducers/filter
+---
+name: clojure.core.reducers/filter
+---
+

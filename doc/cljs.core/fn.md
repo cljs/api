@@ -1,9 +1,14 @@
-## Name
-cljs.core/fn
+---
+name: cljs.core/fn
+related:
+  - cljs.core/defn
+  - cljs.core/defn-
+---
 
 ## Signature
 [name? [params*] prepost-map? body]
 [name? ([params*] prepost-map? body)+]
+
 
 ## Description
 
@@ -27,9 +32,6 @@ arguments to the function are mapped to symbols in `params*` and are available
 in `body`. The value of the last expression in `body` is the return value of
 calling the function.
 
-## Related
-cljs.core/defn
-cljs.core/defn-
 
 ## TODO
 

@@ -1,2 +1,4 @@
-## Name
-cljs.core/ident?
+---
+name: cljs.core/ident?
+---
+

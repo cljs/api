@@ -1,2 +1,4 @@
-## Name
-cljs.spec/*coll-check-limit*
+---
+name: cljs.spec/*coll-check-limit*
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/tagged-literal?
+---
+name: cljs.core/tagged-literal?
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.spec/coll-checker
+---
+name: cljs.spec/coll-checker
+---
+

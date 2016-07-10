@@ -1,2 +1,4 @@
-## Name
-cljs.core/find-ns-obj
+---
+name: cljs.core/find-ns-obj
+---
+

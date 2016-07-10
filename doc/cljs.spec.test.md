@@ -1,2 +1,4 @@
-## Name
-cljs.spec.test
+---
+name: cljs.spec.test
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/print-map
+---
+name: cljs.core/print-map
+---
+

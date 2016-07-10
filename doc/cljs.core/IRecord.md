@@ -1,2 +1,4 @@
-## Name
-cljs.core/IRecord
+---
+name: cljs.core/IRecord
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/ISequential
+---
+name: cljs.core/ISequential
+---
+

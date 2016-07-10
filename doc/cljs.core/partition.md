@@ -1,10 +1,16 @@
-## Name
-cljs.core/partition
+---
+name: cljs.core/partition
+related:
+  - cljs.core/partition-all
+  - cljs.core/split-at
+  - cljs.core/partition-by
+---
 
 ## Signature
 [n coll]
 [n step coll]
 [n step pad coll]
+
 
 ## Description
 
@@ -18,10 +24,6 @@ complete the last partition up to `n` items.
 Returns a partition with less than `n` items if there are not enough padding
 elements.
 
-## Related
-cljs.core/partition-all
-cljs.core/split-at
-cljs.core/partition-by
 
 ## TODO
 

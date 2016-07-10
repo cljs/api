@@ -1,2 +1,4 @@
-## Name
-cljs.repl.rhino/rhino-setup
+---
+name: cljs.repl.rhino/rhino-setup
+---
+

@@ -1,2 +1,4 @@
-## Name
-clojure.zip/node
+---
+name: clojure.zip/node
+---
+

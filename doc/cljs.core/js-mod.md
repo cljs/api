@@ -1,5 +1,8 @@
-## Name
-cljs.core/js-mod
+---
+name: cljs.core/js-mod
+related:
+  - cljs.core/mod
+---
 
 ## Description
 
@@ -10,8 +13,6 @@ Returns `NaN` when `d` is 0 (divide by 0 error).
 
 Equivalent to `x % y` in JavaScript.
 
-## Related
-cljs.core/mod
 
 ## Examples
 

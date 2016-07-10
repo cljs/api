@@ -1,8 +1,12 @@
-## Name
-cljs.core/areduce
+---
+name: cljs.core/areduce
+related:
+  - cljs.core/reduce
+---
 
 ## Signature
 [a idx ret init expr]
+
 
 ## Description
 
@@ -10,8 +14,6 @@ For quickly reducing an expression `expr` across a JavaScript array `a`.  The
 expression can use `ret` as the current result, which is initialized to `init`.
 It can also use `idx` to get the current index.
 
-## Related
-cljs.core/reduce
 
 ## Examples
 

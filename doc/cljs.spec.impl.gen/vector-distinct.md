@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/vector-distinct
+---
+name: cljs.spec.impl.gen/vector-distinct
+---
+

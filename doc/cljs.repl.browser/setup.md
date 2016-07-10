@@ -1,2 +1,4 @@
-## Name
-cljs.repl.browser/setup
+---
+name: cljs.repl.browser/setup
+---
+

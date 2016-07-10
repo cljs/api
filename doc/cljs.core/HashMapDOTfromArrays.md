@@ -1,2 +1,4 @@
-## Name
-cljs.core/HashMap.fromArrays
+---
+name: cljs.core/HashMap.fromArrays
+---
+

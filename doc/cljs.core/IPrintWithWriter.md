@@ -1,2 +1,4 @@
-## Name
-cljs.core/IPrintWithWriter
+---
+name: cljs.core/IPrintWithWriter
+---
+

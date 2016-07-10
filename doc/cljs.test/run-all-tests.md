@@ -1,2 +1,4 @@
-## Name
-cljs.test/run-all-tests
+---
+name: cljs.test/run-all-tests
+---
+

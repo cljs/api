@@ -1,2 +1,4 @@
-## Name
-cljs.core/bounded-count
+---
+name: cljs.core/bounded-count
+---
+

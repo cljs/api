@@ -1,2 +1,4 @@
-## Name
-cljs.spec/speced-vars*
+---
+name: cljs.spec/speced-vars*
+---
+

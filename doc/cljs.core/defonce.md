@@ -1,2 +1,4 @@
-## Name
-cljs.core/defonce
+---
+name: cljs.core/defonce
+---
+

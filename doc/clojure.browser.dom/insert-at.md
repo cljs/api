@@ -1,2 +1,4 @@
-## Name
-clojure.browser.dom/insert-at
+---
+name: clojure.browser.dom/insert-at
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/ISeq
+---
+name: cljs.core/ISeq
+---
+

@@ -1,11 +1,15 @@
-## Name
-cljs.core/mapv
+---
+name: cljs.core/mapv
+related:
+  - cljs.core/map
+---
 
 ## Signature
 [f coll]
 [f c1 c2]
 [f c1 c2 c3]
 [f c1 c2 c3 & colls]
+
 
 ## Description
 
@@ -15,6 +19,3 @@ coll, until any one of the colls is exhausted. Any remaining items in other
 colls are ignored.
 
 Function `f` should accept number-of-colls arguments.
-
-## Related
-cljs.core/map

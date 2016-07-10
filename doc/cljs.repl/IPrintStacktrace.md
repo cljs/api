@@ -1,2 +1,4 @@
-## Name
-cljs.repl/IPrintStacktrace
+---
+name: cljs.repl/IPrintStacktrace
+---
+

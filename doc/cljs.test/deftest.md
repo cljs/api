@@ -1,2 +1,4 @@
-## Name
-cljs.test/deftest
+---
+name: cljs.test/deftest
+---
+

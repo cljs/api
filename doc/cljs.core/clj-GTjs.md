@@ -1,8 +1,12 @@
-## Name
-cljs.core/clj->js
+---
+name: cljs.core/clj->js
+related:
+  - cljs.core/js->clj
+---
 
 ## Signature
 [x]
+
 
 ## Description
 
@@ -17,8 +21,6 @@ Recursively transforms ClojureScript values to JavaScript.
 | Symbol        | `bar`  | String     | `"bar"` |
 | Map           | `{}`   | Object     | `{}`    |
 
-## Related
-cljs.core/js->clj
 
 ## Examples
 

@@ -1,2 +1,4 @@
-## Name
-cljs.pprint/getf
+---
+name: cljs.pprint/getf
+---
+

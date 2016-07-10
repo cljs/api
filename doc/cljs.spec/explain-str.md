@@ -1,2 +1,4 @@
-## Name
-cljs.spec/explain-str
+---
+name: cljs.spec/explain-str
+---
+

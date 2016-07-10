@@ -1,2 +1,4 @@
-## Name
-cljs.reader/dispatch-macros
+---
+name: cljs.reader/dispatch-macros
+---
+

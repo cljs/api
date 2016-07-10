@@ -1,2 +1,4 @@
-## Name
-cljs.core/simple-benchmark
+---
+name: cljs.core/simple-benchmark
+---
+

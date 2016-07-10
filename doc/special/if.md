@@ -1,8 +1,15 @@
-## Name
-special/if
+---
+name: special/if
+related:
+  - cljs.core/cond
+  - cljs.core/when
+  - cljs.core/if-let
+  - cljs.core/if-not
+---
 
 ## Signature
 [test then else?]
+
 
 ## Description
 
@@ -13,6 +20,7 @@ If `test` is not false or nil, `then` is evaluated and returned. Otherwise,
 and is a fundamental building block of the language. All other conditionals in
 ClojureScript are based on `if`s notion of truthiness (ie: anything other than
 false or nil).
+
 
 ## Examples
 
@@ -26,9 +34,3 @@ false or nil).
   (if (empty? v) "empty!" "filled!"))
 ;;=> "This vector is filled!"
 ```
-
-## Related
-cljs.core/cond
-cljs.core/when
-cljs.core/if-let
-cljs.core/if-not

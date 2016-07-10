@@ -1,9 +1,14 @@
-## Name
-cljs.core/doall
+---
+name: cljs.core/doall
+related:
+  - cljs.core/dorun
+  - cljs.core/doseq
+---
 
 ## Signature
 [coll]
 [n coll]
+
 
 ## Description
 
@@ -13,9 +18,6 @@ sequence produced via functions that have side effects.
 `doall` walks through the successive `next`s of the sequence, returning the head
 and causing the entire sequence to reside in memory at one time.
 
-## Related
-cljs.core/dorun
-cljs.core/doseq
 
 ## TODO
 

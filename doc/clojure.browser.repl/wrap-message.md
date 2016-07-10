@@ -1,2 +1,4 @@
-## Name
-clojure.browser.repl/wrap-message
+---
+name: clojure.browser.repl/wrap-message
+---
+

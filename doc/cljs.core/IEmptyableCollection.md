@@ -1,2 +1,4 @@
-## Name
-cljs.core/IEmptyableCollection
+---
+name: cljs.core/IEmptyableCollection
+---
+

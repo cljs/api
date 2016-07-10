@@ -1,11 +1,14 @@
-## Name
-cljs.repl
+---
+name: cljs.repl
+---
 
 ## Caption for Library
 macros auto-imported into a ClojureScript REPL
 
+
 ## Caption for Compiler
 interactive ClojureScript REPL (Read Eval Print Loop)
+
 
 ## Description for Library
 

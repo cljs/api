@@ -1,5 +1,5 @@
-## Name
-cljs.repl.browser/server-state
+---
+name: cljs.repl.browser/server-state
+moved: cljs.repl.server/state
+---
 
-## Moved
-cljs.repl.server/state

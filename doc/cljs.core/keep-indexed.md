@@ -1,9 +1,14 @@
-## Name
-cljs.core/keep-indexed
+---
+name: cljs.core/keep-indexed
+related:
+  - cljs.core/map-indexed
+  - cljs.core/keep
+---
 
 ## Signature
 [f]
 [f coll]
+
 
 ## Description
 
@@ -13,7 +18,3 @@ means false return values will be included.
 `f` must be free of side-effects.
 
 Returns a stateful transducer when no collection is provided.
-
-## Related
-cljs.core/map-indexed
-cljs.core/keep

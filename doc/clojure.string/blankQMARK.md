@@ -1,11 +1,11 @@
-## Name
-clojure.string/blank?
+---
+name: clojure.string/blank?
+---
 
 ## Signature
 [s]
 
+
 ## Description
 
 True if `s` is nil, empty, or contains only whitespace.
-
-## Related

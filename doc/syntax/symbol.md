@@ -1,12 +1,15 @@
-## Name
-syntax/symbol
-
-## Display
-symbol literal
+---
+name: syntax/symbol
+display: "symbol literal"
+related:
+  - cljs.core/symbol
+  - cljs.core/symbol?
+---
 
 ## Usage
 foo
 foo/bar
+
 
 ## Description
 
@@ -33,9 +36,6 @@ Dots can also be included in symbols for direct JS property access, see [doc:syn
 
 - `js/console.log` => the `console.log` JavaScript function
 
-## Related
-cljs.core/symbol
-cljs.core/symbol?
 
 ## Examples
 
@@ -62,4 +62,3 @@ To signify an unevaluated symbol, precede it with a quote:
 'a
 ;;=> a
 ```
-

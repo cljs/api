@@ -1,2 +1,4 @@
-## Name
-cljs.core/NodeSeq
+---
+name: cljs.core/NodeSeq
+---
+

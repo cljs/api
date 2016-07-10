@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/fmap
+---
+name: cljs.spec.impl.gen/fmap
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/key-test
+---
+name: cljs.core/key-test
+---
+

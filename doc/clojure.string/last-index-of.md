@@ -1,2 +1,4 @@
-## Name
-clojure.string/last-index-of
+---
+name: clojure.string/last-index-of
+---
+

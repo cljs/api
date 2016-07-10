@@ -1,2 +1,4 @@
-## Name
-clojure.zip/end?
+---
+name: clojure.zip/end?
+---
+

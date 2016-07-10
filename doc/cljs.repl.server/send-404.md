@@ -1,2 +1,4 @@
-## Name
-cljs.repl.server/send-404
+---
+name: cljs.repl.server/send-404
+---
+

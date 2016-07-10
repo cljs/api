@@ -1,17 +1,24 @@
-## Name
-syntax/boolean
-
-## Display
-boolean literal
+---
+name: syntax/boolean
+display: "boolean literal"
+related:
+  - cljs.core/boolean
+  - special/if
+  - cljs.core/not
+  - cljs.core/true?
+  - cljs.core/false?
+---
 
 ## Usage
 true
 false
 
+
 ## Description
 
 Special symbols representing the boolean literals `true` and `false`.
 Both evaluate to themselves.
+
 
 ## Examples
 
@@ -22,11 +29,3 @@ true
 false
 ;;=> false
 ```
-
-## Related
-cljs.core/boolean
-special/if
-cljs.core/not
-cljs.core/true?
-cljs.core/false?
-

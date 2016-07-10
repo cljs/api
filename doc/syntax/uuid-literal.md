@@ -1,11 +1,14 @@
-## Name
-syntax/uuid-literal
-
-## Display
-#uuid literal
+---
+name: syntax/uuid-literal
+display: "#uuid literal"
+related:
+  - cljs.core/uuid
+  - cljs.core/random-uuid
+---
 
 ## Usage
 #uuid "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+
 
 ## Description
 
@@ -22,9 +25,6 @@ To create a UUID from an evaluated expression, use [doc:cljs.core/uuid].
 
 [edn]:https://github.com/edn-format/edn
 
-## Related
-cljs.core/uuid
-cljs.core/random-uuid
 
 ## Examples
 

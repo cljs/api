@@ -1,2 +1,4 @@
-## Name
-cljs.core/IReversible
+---
+name: cljs.core/IReversible
+---
+

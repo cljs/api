@@ -1,5 +1,9 @@
-## Name
-cljs.core/update-in
+---
+name: cljs.core/update-in
+related:
+  - cljs.core/assoc-in
+  - cljs.core/get-in
+---
 
 ## Signature
 [m [k & ks] f]
@@ -8,6 +12,7 @@ cljs.core/update-in
 [m [k & ks] f a b c]
 [m [k & ks] f a b c & args]
 
+
 ## Description
 
 "Updates" a value in a nested associative structure, where `ks` is a sequence of
@@ -15,7 +20,3 @@ keys and `f` is a function that will take the old value and any supplied
 arguments and return the new value. Returns a new nested structure.
 
 If any levels do not exist, hash-maps will be created.
-
-## Related
-cljs.core/assoc-in
-cljs.core/get-in

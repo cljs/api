@@ -1,2 +1,4 @@
-## Name
-cljs.core/m3-hash-int
+---
+name: cljs.core/m3-hash-int
+---
+

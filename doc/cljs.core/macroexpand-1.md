@@ -1,5 +1,9 @@
-## Name
-cljs.core/macroexpand-1
+---
+name: cljs.core/macroexpand-1
+related:
+  - cljs.core/macroexpand
+  - cljs.core/defmacro
+---
 
 ## Description
 
@@ -9,6 +13,7 @@ If the given quoted form is a macro call, expand it once. NOTE: subforms are
 _not_ expanded.
 
 See [doc:cljs.core/macroexpand] if you wish to repeatedly expand a form.
+
 
 ## Examples
 
@@ -31,7 +36,3 @@ Notice how the nested `inc` form is not expanded:
 (macroexpand-1 '(inc (inc 2)))
 ;;=> (cljs.core/+ (inc 2) 1)
 ```
-
-## Related
-cljs.core/macroexpand
-cljs.core/defmacro

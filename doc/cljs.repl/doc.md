@@ -1,17 +1,19 @@
-## Name
-cljs.repl/doc
+---
+name: cljs.repl/doc
+related:
+  - cljs.repl/find-doc
+  - cljs.core/meta
+  - special/var
+---
 
 ## Signature
 [name]
+
 
 ## Description
 
 Prints documentation for the var or special form with the name `name`.
 
-## Related
-cljs.repl/find-doc
-cljs.core/meta
-special/var
 
 ## Examples
 

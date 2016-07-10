@@ -1,11 +1,16 @@
-## Name
-syntax/regex
-
-## Display
-#"" regex
+---
+name: syntax/regex
+display: "#\"\" regex"
+related:
+  - cljs.core/re-pattern
+  - cljs.core/re-find
+  - cljs.core/re-seq
+  - cljs.core/re-matches
+---
 
 ## Usage
 #"..."
+
 
 ## Description
 
@@ -23,17 +28,13 @@ An inline modifier can be included at the beginning of the regex:
 
 Global matches (i.e. multiple matches per line) can be achieved using `re-seq`.
 
-## Related
-cljs.core/re-pattern
-cljs.core/re-find
-cljs.core/re-seq
-cljs.core/re-matches
 
 ## TODO
 add multi-line example. Why do these have the same output of nil?:
 
 (re-seq #"(?m)a.*b" "a\nb")
 (re-seq #"a.*b" "a\nb")
+
 
 ## Examples
 

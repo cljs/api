@@ -1,5 +1,6 @@
-## Name
-cljs.repl.browser
+---
+name: cljs.repl.browser
+---
 
 ## Caption
 browser-connected REPL

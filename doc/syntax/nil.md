@@ -1,8 +1,7 @@
-## Name
-syntax/nil
-
-## Display
-nil
+---
+name: syntax/nil
+display: "nil"
+---
 
 ## Description
 
@@ -12,6 +11,7 @@ It is common for operations to safely handle `nil` without
 causing exceptions.
 
 Expressions evaluate to `nil` if there is no value to return.
+
 
 ## Examples
 

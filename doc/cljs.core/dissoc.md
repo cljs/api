@@ -1,10 +1,16 @@
-## Name
-cljs.core/dissoc
+---
+name: cljs.core/dissoc
+related:
+  - cljs.core/assoc
+  - cljs.core/disj
+  - cljs.core/select-keys
+---
 
 ## Signature
 [coll]
 [coll k]
 [coll k & ks]
+
 
 ## Description
 
@@ -15,14 +21,10 @@ Returns a new map that does not contain a mapping for key(s).
 Has no effect on the map type (hashed/sorted).
 
 
+
 ## Examples
 
 ```clj
 (dissoc {:key "value" :key2 "value2"} :key)
 ;;=> {:key2 "value2"}
 ```
-
-## Related
-cljs.core/assoc
-cljs.core/disj
-cljs.core/select-keys

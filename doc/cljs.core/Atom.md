@@ -1,2 +1,4 @@
-## Name
-cljs.core/Atom
+---
+name: cljs.core/Atom
+---
+

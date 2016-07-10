@@ -1,5 +1,9 @@
-## Name
-cljs.core/concat
+---
+name: cljs.core/concat
+related:
+  - cljs.core/conj
+  - cljs.core/into
+---
 
 ## Signature
 []
@@ -7,10 +11,12 @@ cljs.core/concat
 [x y]
 [x y & zs]
 
+
 ## Description
 
 Returns a lazy sequence representing the concatenation of the elements in the
 supplied collections.
+
 
 ## Examples
 
@@ -24,7 +30,3 @@ supplied collections.
 (concat [1] [2] [3])
 ;; => (1 2 3)
 ```
-
-## Related
-cljs.core/conj
-cljs.core/into

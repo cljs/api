@@ -1,2 +1,4 @@
-## Name
-cljs.repl.browser/compile-client-js
+---
+name: cljs.repl.browser/compile-client-js
+---
+

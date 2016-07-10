@@ -1,2 +1,4 @@
-## Name
-cljs.core/memfn
+---
+name: cljs.core/memfn
+---
+

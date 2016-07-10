@@ -1,2 +1,4 @@
-## Name
-cljs.core/IEquiv
+---
+name: cljs.core/IEquiv
+---
+

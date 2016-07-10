@@ -1,2 +1,4 @@
-## Name
-cljs.core/HashMap.EMPTY
+---
+name: cljs.core/HashMap.EMPTY
+---
+

@@ -1,8 +1,14 @@
-## Name
-cljs.core/array-map
+---
+name: cljs.core/array-map
+related:
+  - cljs.core/assoc
+  - cljs.core/hash-map
+  - cljs.core/sorted-map
+---
 
 ## Signature
 [& keyvals]
+
 
 ## Description
 
@@ -10,10 +16,6 @@ Returns a new array map (a map implemented with arrays) with the supplied mappin
 
 `keyvals` must be an even number of forms.
 
-## Related
-cljs.core/assoc
-cljs.core/hash-map
-cljs.core/sorted-map
 
 ## Examples
 

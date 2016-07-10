@@ -1,2 +1,4 @@
-## Name
-cljs.spec/MAX_INT
+---
+name: cljs.spec/MAX_INT
+---
+

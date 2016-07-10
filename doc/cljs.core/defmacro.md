@@ -1,5 +1,11 @@
-## Name
-cljs.core/defmacro
+---
+name: cljs.core/defmacro
+related:
+  - syntax/syntax-quote
+  - syntax/unquote
+  - cljs.core/macroexpand
+  - cljs.core/macroexpand-1
+---
 
 ## Description
 
@@ -36,6 +42,7 @@ evaluation, depending on the compiler version:
 
 Please see the examples section below for a more concrete look.
 
+
 ## Examples
 
 Here is a `str->int` macro that works for either ClojureScript compiler
@@ -63,9 +70,3 @@ choose the function appropriate for each compiler's evaluation environment.
   #?(:clj  (Integer/parseInt s)
      :cljs (js/parseInt s)))
 ```
-
-## Related
-syntax/syntax-quote
-syntax/unquote
-cljs.core/macroexpand
-cljs.core/macroexpand-1

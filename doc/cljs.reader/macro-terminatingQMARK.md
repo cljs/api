@@ -1,2 +1,4 @@
-## Name
-cljs.reader/macro-terminating?
+---
+name: cljs.reader/macro-terminating?
+---
+

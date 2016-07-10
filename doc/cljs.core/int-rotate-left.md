@@ -1,2 +1,4 @@
-## Name
-cljs.core/int-rotate-left
+---
+name: cljs.core/int-rotate-left
+---
+

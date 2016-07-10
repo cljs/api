@@ -1,2 +1,4 @@
-## Name
-cljs.core/gensym
+---
+name: cljs.core/gensym
+---
+

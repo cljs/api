@@ -1,9 +1,15 @@
-## Name
-cljs.core/reduce
+---
+name: cljs.core/reduce
+related:
+  - cljs.core/reductions
+  - cljs.core/apply
+  - cljs.core/frequencies
+---
 
 ## Signature
 [f coll]
 [f val coll]
+
 
 ## Description
 
@@ -20,8 +26,3 @@ If `val` is supplied, returns the result of applying `f` to `val` and the first
 item in `coll`, then applying `f` to that result and the 2nd item, etc.
 
 If `coll` contains no items, returns `val` and `f` is not called.
-
-## Related
-cljs.core/reductions
-cljs.core/apply
-cljs.core/frequencies

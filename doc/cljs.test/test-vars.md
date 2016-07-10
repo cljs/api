@@ -1,2 +1,4 @@
-## Name
-cljs.test/test-vars
+---
+name: cljs.test/test-vars
+---
+

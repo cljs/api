@@ -1,2 +1,4 @@
-## Name
-clojure.browser.event/get-listener
+---
+name: clojure.browser.event/get-listener
+---
+

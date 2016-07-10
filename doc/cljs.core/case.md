@@ -1,8 +1,13 @@
-## Name
-cljs.core/case
+---
+name: cljs.core/case
+related:
+  - cljs.core/cond
+  - cljs.core/condp
+---
 
 ## Signature
 [e & clauses]
+
 
 ## Description
 
@@ -26,9 +31,6 @@ composites thereof. Note that since lists are used to group multiple constants
 that map to the same expression, a vector can be used to match a list if needed.
 The test-constants need not be all of the same type.
 
-## Related
-cljs.core/cond
-cljs.core/condp
 
 ## Examples
 

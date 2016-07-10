@@ -1,2 +1,4 @@
-## Name
-cljs.core/symbol-identical?
+---
+name: cljs.core/symbol-identical?
+---
+

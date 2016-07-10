@@ -1,23 +1,23 @@
-## Name
-syntax/js-namespace
-
-## Display
-js/ namespace
+---
+name: syntax/js-namespace
+display: "js/ namespace"
+related:
+  - syntax/Math-namespace
+  - special/.
+  - cljs.core/aget
+  - cljs.core/aset
+---
 
 ## Usage
 js/foo
 js/foo.bar
+
 
 ## Description
 
 A special namespace used for accessing any symbol defined
 in JavaScript's global scope.
 
-## Related
-syntax/Math-namespace
-special/.
-cljs.core/aget
-cljs.core/aset
 
 ## Examples
 

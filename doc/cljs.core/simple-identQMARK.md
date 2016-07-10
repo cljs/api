@@ -1,2 +1,4 @@
-## Name
-cljs.core/simple-ident?
+---
+name: cljs.core/simple-ident?
+---
+

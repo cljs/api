@@ -1,2 +1,4 @@
-## Name
-clojure.browser.net/websocket-connection
+---
+name: clojure.browser.net/websocket-connection
+---
+

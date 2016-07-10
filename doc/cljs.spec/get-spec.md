@@ -1,2 +1,4 @@
-## Name
-cljs.spec/get-spec
+---
+name: cljs.spec/get-spec
+---
+

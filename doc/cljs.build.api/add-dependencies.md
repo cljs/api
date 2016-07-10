@@ -1,2 +1,4 @@
-## Name
-cljs.build.api/add-dependencies
+---
+name: cljs.build.api/add-dependencies
+---
+

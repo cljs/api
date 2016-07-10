@@ -1,2 +1,4 @@
-## Name
-cljs.core/*print-readably*
+---
+name: cljs.core/*print-readably*
+---
+

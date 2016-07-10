@@ -1,2 +1,4 @@
-## Name
-cljs.core/js-inline-comment
+---
+name: cljs.core/js-inline-comment
+---
+

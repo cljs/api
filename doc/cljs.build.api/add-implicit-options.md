@@ -1,2 +1,4 @@
-## Name
-cljs.build.api/add-implicit-options
+---
+name: cljs.build.api/add-implicit-options
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.js/valid-opts?
+---
+name: cljs.js/valid-opts?
+---
+

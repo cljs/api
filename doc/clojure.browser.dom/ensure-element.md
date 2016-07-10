@@ -1,2 +1,4 @@
-## Name
-clojure.browser.dom/ensure-element
+---
+name: clojure.browser.dom/ensure-element
+---
+

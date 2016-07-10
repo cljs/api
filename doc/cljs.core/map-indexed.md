@@ -1,8 +1,13 @@
-## Name
-cljs.core/map-indexed
+---
+name: cljs.core/map-indexed
+related:
+  - cljs.core/map
+  - cljs.core/keep-indexed
+---
 
 ## Signature
 [f coll]
+
 
 ## Description
 
@@ -11,7 +16,3 @@ first item of `coll`, followed by applying `f` to 1 and the second item in
 `coll`, etc, until `coll` is exhausted.
 
 Function `f` should accept 2 arguments, index and item.
-
-## Related
-cljs.core/map
-cljs.core/keep-indexed

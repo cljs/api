@@ -1,2 +1,4 @@
-## Name
-cljs.core/Namespace
+---
+name: cljs.core/Namespace
+---
+

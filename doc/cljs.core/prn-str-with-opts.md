@@ -1,2 +1,4 @@
-## Name
-cljs.core/prn-str-with-opts
+---
+name: cljs.core/prn-str-with-opts
+---
+

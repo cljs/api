@@ -1,2 +1,4 @@
-## Name
-special/recur
+---
+name: special/recur
+---
+

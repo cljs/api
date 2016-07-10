@@ -1,2 +1,4 @@
-## Name
-cljs.core/multi-stepper
+---
+name: cljs.core/multi-stepper
+---
+

@@ -1,11 +1,11 @@
-## Name
-syntax/unreadable
-
-## Display
-#<> unreadable
+---
+name: syntax/unreadable
+display: "#<> unreadable"
+---
 
 ## Usage
 #<...>
+
 
 ## Description
 
@@ -21,6 +21,7 @@ its value.
 
 Oftentimes, evaluating JavaScript objects in a REPL will print the result
 of its `.toString` method inside the unreadable form `#<>`.
+
 
 ## Examples
 

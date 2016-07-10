@@ -1,9 +1,17 @@
-## Name
-cljs.core/subseq
+---
+name: cljs.core/subseq
+related:
+  - cljs.core/rsubseq
+  - cljs.core/sorted-map
+  - cljs.core/sorted-set
+  - cljs.core/sorted-map-by
+  - cljs.core/sorted-set-by
+---
 
 ## Signature
 [sc test key]
 [sc start-test start-key end-test end-key]
+
 
 ## Description
 
@@ -13,10 +21,3 @@ cljs.core/subseq
 
 Returns a sequence of those entries with keys `ek` for which
 `(test (.. sc comparator (compare ek key)) 0)` is true.
-
-## Related
-cljs.core/rsubseq
-cljs.core/sorted-map
-cljs.core/sorted-set
-cljs.core/sorted-map-by
-cljs.core/sorted-set-by

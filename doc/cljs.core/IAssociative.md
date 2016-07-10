@@ -1,2 +1,4 @@
-## Name
-cljs.core/IAssociative
+---
+name: cljs.core/IAssociative
+---
+

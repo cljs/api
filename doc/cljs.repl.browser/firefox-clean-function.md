@@ -1,2 +1,4 @@
-## Name
-cljs.repl.browser/firefox-clean-function
+---
+name: cljs.repl.browser/firefox-clean-function
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/remove-all-methods
+---
+name: cljs.core/remove-all-methods
+---
+

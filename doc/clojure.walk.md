@@ -1,5 +1,6 @@
-## Name
-clojure.walk
+---
+name: clojure.walk
+---
 
 ## Caption
 a generic tree walker for Clojure data structures

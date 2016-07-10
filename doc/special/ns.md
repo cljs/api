@@ -1,8 +1,16 @@
-## Name
-special/ns
+---
+name: special/ns
+related:
+  - special/in-ns
+  - special/load-namespace
+  - special/import
+  - special/require
+  - special/require-macros
+---
 
 ## Signature
 [name & references]
+
 
 ## Description
 
@@ -53,12 +61,6 @@ and libraries into the current namespace.
             :reload-all]))
 ```
 
-## Related
-special/in-ns
-special/load-namespace
-special/import
-special/require
-special/require-macros
 
 ## TODO
 we need to write a comprehensive namespace tutorial and link to it here

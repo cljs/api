@@ -1,2 +1,4 @@
-## Name
-cljs.compiler.api/with-core-cljs
+---
+name: cljs.compiler.api/with-core-cljs
+---
+

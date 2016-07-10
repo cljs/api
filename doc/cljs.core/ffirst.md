@@ -1,17 +1,19 @@
-## Name
-cljs.core/ffirst
+---
+name: cljs.core/ffirst
+related:
+  - cljs.core/first
+  - cljs.core/fnext
+  - cljs.core/nfirst
+---
 
 ## Signature
 [coll]
+
 
 ## Description
 
 Same as `(first (first coll))`.
 
-## Related
-cljs.core/first
-cljs.core/fnext
-cljs.core/nfirst
 
 ## Examples
 

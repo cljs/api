@@ -1,2 +1,4 @@
-## Name
-cljs.test/join-fixtures
+---
+name: cljs.test/join-fixtures
+---
+

@@ -1,2 +1,4 @@
-## Name
-clojure.core.reducers/Cat
+---
+name: clojure.core.reducers/Cat
+---
+

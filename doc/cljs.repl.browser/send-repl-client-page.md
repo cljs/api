@@ -1,2 +1,4 @@
-## Name
-cljs.repl.browser/send-repl-client-page
+---
+name: cljs.repl.browser/send-repl-client-page
+---
+

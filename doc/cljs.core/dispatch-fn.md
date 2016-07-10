@@ -1,2 +1,4 @@
-## Name
-cljs.core/dispatch-fn
+---
+name: cljs.core/dispatch-fn
+---
+

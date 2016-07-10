@@ -1,12 +1,15 @@
-## Name
-cljs.core/bit-test
+---
+name: cljs.core/bit-test
+---
 
 ## Signature
 [x n]
 
+
 ## Description
 
 Test bit at index `n`. Returns `true` if 1, and `false` if 0. Same as `(x & (1 << y)) != 0` in JavaScript.
+
 
 ## Examples
 

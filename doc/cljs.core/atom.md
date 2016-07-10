@@ -1,9 +1,17 @@
-## Name
-cljs.core/atom
+---
+name: cljs.core/atom
+related:
+  - cljs.core/atom
+  - cljs.core/swap!
+  - cljs.core/reset!
+  - cljs.core/set-validator!
+  - cljs.core/get-validator
+---
 
 ## Signature
 [x]
 [x opts]
+
 
 ## Description
 
@@ -16,12 +24,6 @@ Creates and returns an atom with an initial value of `x`.
 `:validator` should be a validator function for the atom. See `set-validator!`
 for more information.
 
-## Related
-cljs.core/atom
-cljs.core/swap!
-cljs.core/reset!
-cljs.core/set-validator!
-cljs.core/get-validator
 
 ## Examples
 

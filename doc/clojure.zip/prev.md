@@ -1,2 +1,4 @@
-## Name
-clojure.zip/prev
+---
+name: clojure.zip/prev
+---
+

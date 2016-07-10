@@ -1,2 +1,4 @@
-## Name
-cljs.core/Fn
+---
+name: cljs.core/Fn
+---
+

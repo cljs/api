@@ -1,11 +1,16 @@
-## Name
-cljs.core/swap!
+---
+name: cljs.core/swap!
+related:
+  - cljs.core/atom
+  - cljs.core/reset!
+---
 
 ## Signature
 [a f]
 [a f x]
 [a f x y]
 [a f x y & more]
+
 
 ## Description
 
@@ -16,7 +21,3 @@ Note that `f` may be called multiple times, and thus should be free of side
 effects.
 
 Returns the value that was swapped in.
-
-## Related
-cljs.core/atom
-cljs.core/reset!

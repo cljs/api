@@ -1,5 +1,9 @@
-## Name
-cljs.core/partial
+---
+name: cljs.core/partial
+related:
+  - cljs.core/comp
+  - cljs.core/juxt
+---
 
 ## Signature
 [f]
@@ -7,6 +11,7 @@ cljs.core/partial
 [f arg1 arg2]
 [f arg1 arg2 arg3]
 [f arg1 arg2 arg3 & more]
+
 
 ## Description
 
@@ -16,7 +21,3 @@ returned function calls `f` with the original arguments plus the additional
 arguments.
 
 `((partial f a b) c d)` => `(f a b c d)`
-
-## Related
-cljs.core/comp
-cljs.core/juxt

@@ -1,2 +1,4 @@
-## Name
-cljs.core/seqable?
+---
+name: cljs.core/seqable?
+---
+

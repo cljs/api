@@ -1,12 +1,12 @@
-## Name
-clojure.string/capitalize
+---
+name: clojure.string/capitalize
+---
 
 ## Signature
 [s]
+
 
 ## Description
 
 Converts first character of the string to upper-case, all other characters to
 lower-case.
-
-## Related

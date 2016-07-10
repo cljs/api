@@ -1,13 +1,14 @@
-## Name
-cljs.core/list
+---
+name: cljs.core/list
+related:
+  - cljs.core/vector
+  - cljs.core/list?
+---
 
 ## Signature
 [& items]
 
+
 ## Description
 
 Creates a new list containing `items`.
-
-## Related
-cljs.core/vector
-cljs.core/list?

@@ -1,2 +1,4 @@
-## Name
-cljs.analyzer.api/default-warning-handler
+---
+name: cljs.analyzer.api/default-warning-handler
+---
+

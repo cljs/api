@@ -1,2 +1,4 @@
-## Name
-cljs.core/dissoc!
+---
+name: cljs.core/dissoc!
+---
+

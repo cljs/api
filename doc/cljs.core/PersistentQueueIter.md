@@ -1,2 +1,4 @@
-## Name
-cljs.core/PersistentQueueIter
+---
+name: cljs.core/PersistentQueueIter
+---
+

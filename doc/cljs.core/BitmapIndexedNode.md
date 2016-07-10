@@ -1,2 +1,4 @@
-## Name
-cljs.core/BitmapIndexedNode
+---
+name: cljs.core/BitmapIndexedNode
+---
+

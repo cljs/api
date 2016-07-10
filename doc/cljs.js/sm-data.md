@@ -1,2 +1,4 @@
-## Name
-cljs.js/sm-data
+---
+name: cljs.js/sm-data
+---
+

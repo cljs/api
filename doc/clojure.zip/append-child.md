@@ -1,2 +1,4 @@
-## Name
-clojure.zip/append-child
+---
+name: clojure.zip/append-child
+---
+

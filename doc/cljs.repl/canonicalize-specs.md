@@ -1,2 +1,4 @@
-## Name
-cljs.repl/canonicalize-specs
+---
+name: cljs.repl/canonicalize-specs
+---
+

@@ -1,8 +1,10 @@
-## Name
-syntax/dot
-
-## Display
-. dot
+---
+name: syntax/dot
+display: ". dot"
+related:
+  - syntax/symbol
+  - syntax/namespace
+---
 
 ## Description
 
@@ -13,9 +15,6 @@ Dots can be used inside symbols. Its meaning depends on its position in the symb
 - `(ns foo.bar)` and `foo.bar/baz` means that `foo.bar` is a nested namespace.
 - `foo/bar.baz` or `bar.baz` means `bar.baz` is nested JS property access (__not allowed in clojure__).
 
-## Related
-syntax/symbol
-syntax/namespace
 
 ## Examples
 

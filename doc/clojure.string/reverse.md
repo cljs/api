@@ -1,11 +1,11 @@
-## Name
-clojure.string/reverse
+---
+name: clojure.string/reverse
+---
 
 ## Signature
 [s]
 
+
 ## Description
 
 Returns `s` with its characters reversed.
-
-## Related

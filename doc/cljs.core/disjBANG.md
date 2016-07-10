@@ -1,2 +1,4 @@
-## Name
-cljs.core/disj!
+---
+name: cljs.core/disj!
+---
+

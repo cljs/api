@@ -1,2 +1,4 @@
-## Name
-cljs.core/reduced?
+---
+name: cljs.core/reduced?
+---
+

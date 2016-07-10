@@ -1,2 +1,4 @@
-## Name
-cljs.core/with-out-str
+---
+name: cljs.core/with-out-str
+---
+

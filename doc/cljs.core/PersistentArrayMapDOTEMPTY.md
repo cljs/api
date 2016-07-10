@@ -1,2 +1,4 @@
-## Name
-cljs.core/PersistentArrayMap.EMPTY
+---
+name: cljs.core/PersistentArrayMap.EMPTY
+---
+

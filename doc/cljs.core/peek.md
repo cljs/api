@@ -1,8 +1,14 @@
-## Name
-cljs.core/peek
+---
+name: cljs.core/peek
+related:
+  - cljs.core/first
+  - cljs.core/pop
+  - cljs.core/conj
+---
 
 ## Signature
 [coll]
+
 
 ## Description
 
@@ -12,10 +18,6 @@ Returns the last element of a vector, and much more efficient than using `last`.
 
 Returns nil if `coll` is empty.
 
-## Related
-cljs.core/first
-cljs.core/pop
-cljs.core/conj
 
 ## Examples
 

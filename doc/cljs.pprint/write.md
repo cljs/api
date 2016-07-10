@@ -1,2 +1,4 @@
-## Name
-cljs.pprint/write
+---
+name: cljs.pprint/write
+---
+

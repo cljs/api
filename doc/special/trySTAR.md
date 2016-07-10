@@ -1,5 +1,5 @@
-## Name
-special/try*
+---
+name: special/try*
+moved: special/try
+---
 
-## Moved
-special/try

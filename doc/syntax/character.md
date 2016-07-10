@@ -1,8 +1,10 @@
-## Name
-syntax/character
-
-## Display
-\ character
+---
+name: syntax/character
+display: "\\ character"
+related:
+  - syntax/string
+  - cljs.core/str
+---
 
 ## Description
 
@@ -25,9 +27,6 @@ compatibility.  They are represented as single character JavaScript strings.
 | `\backspace`        | `"\b"`   |
 | `\return`           | `"\r"`   |
 
-## Related
-syntax/string
-cljs.core/str
 
 ## Examples
 

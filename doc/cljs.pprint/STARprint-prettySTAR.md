@@ -1,2 +1,4 @@
-## Name
-cljs.pprint/*print-pretty*
+---
+name: cljs.pprint/*print-pretty*
+---
+

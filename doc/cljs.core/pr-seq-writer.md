@@ -1,2 +1,4 @@
-## Name
-cljs.core/pr-seq-writer
+---
+name: cljs.core/pr-seq-writer
+---
+

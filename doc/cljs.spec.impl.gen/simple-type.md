@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/simple-type
+---
+name: cljs.spec.impl.gen/simple-type
+---
+

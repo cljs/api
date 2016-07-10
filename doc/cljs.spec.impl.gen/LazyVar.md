@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/LazyVar
+---
+name: cljs.spec.impl.gen/LazyVar
+---
+

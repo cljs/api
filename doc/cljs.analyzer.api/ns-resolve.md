@@ -1,2 +1,4 @@
-## Name
-cljs.analyzer.api/ns-resolve
+---
+name: cljs.analyzer.api/ns-resolve
+---
+

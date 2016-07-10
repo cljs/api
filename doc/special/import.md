@@ -1,8 +1,10 @@
-## Name
-special/import
+---
+name: special/import
+---
 
 ## Signature
 [& import-symbols-or-lists]
+
 
 ## Description
 
@@ -11,6 +13,7 @@ import-list => (closure-namespace constructor-name-symbols*)
 Only usable from a REPL.
 
 Import Google Closure classes.
+
 
 ## Examples
 

@@ -1,16 +1,18 @@
-## Name
-cljs.core/bit-clear
+---
+name: cljs.core/bit-clear
+related:
+  - cljs.core/bit-set
+  - cljs.core/bit-flip
+---
 
 ## Signature
 [x n]
+
 
 ## Description
 
 Clear bit at index `n`.  Same as `x & ~(1 << y)` in JavaScript.
 
-## Related
-cljs.core/bit-set
-cljs.core/bit-flip
 
 ## Examples
 

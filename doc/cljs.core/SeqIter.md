@@ -1,2 +1,4 @@
-## Name
-cljs.core/SeqIter
+---
+name: cljs.core/SeqIter
+---
+

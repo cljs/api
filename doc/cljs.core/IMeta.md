@@ -1,2 +1,4 @@
-## Name
-cljs.core/IMeta
+---
+name: cljs.core/IMeta
+---
+

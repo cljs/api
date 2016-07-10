@@ -1,5 +1,9 @@
-## Name
-cljs.core/+
+---
+name: cljs.core/+
+related:
+  - cljs.core/*
+  - cljs.core/-
+---
 
 ## Signature
 []
@@ -7,15 +11,13 @@ cljs.core/+
 [x y]
 [x y & more]
 
+
 ## Description
 
 Returns the sum of nums.
 
 `(+)` returns 0.
 
-## Related
-cljs.core/*
-cljs.core/-
 
 ## Examples
 

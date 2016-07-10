@@ -1,2 +1,4 @@
-## Name
-cljs.repl/*cljs-verbose*
+---
+name: cljs.repl/*cljs-verbose*
+---
+

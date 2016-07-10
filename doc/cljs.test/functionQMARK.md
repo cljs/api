@@ -1,2 +1,4 @@
-## Name
-cljs.test/function?
+---
+name: cljs.test/function?
+---
+

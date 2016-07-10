@@ -1,2 +1,4 @@
-## Name
-cljs.repl/print-mapped-stacktrace
+---
+name: cljs.repl/print-mapped-stacktrace
+---
+

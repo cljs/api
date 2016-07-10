@@ -1,9 +1,13 @@
-## Name
-cljs.core/remove
+---
+name: cljs.core/remove
+related:
+  - cljs.core/filter
+---
 
 ## Signature
 [pred]
 [pred coll]
+
 
 ## Description
 
@@ -13,6 +17,3 @@ false.
 `pred` must be free of side-effects.
 
 Returns a transducer when no collection is provided.
-
-## Related
-cljs.core/filter

@@ -1,2 +1,4 @@
-## Name
-cljs.core/IFn
+---
+name: cljs.core/IFn
+---
+

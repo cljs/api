@@ -1,2 +1,4 @@
-## Name
-cljs.compiler.api/cljs-files-in
+---
+name: cljs.compiler.api/cljs-files-in
+---
+

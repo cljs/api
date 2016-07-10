@@ -1,5 +1,5 @@
-## Name
-cljs.repl.browser/read-post
+---
+name: cljs.repl.browser/read-post
+moved: cljs.repl.server/read-post
+---
 
-## Moved
-cljs.repl.server/read-post

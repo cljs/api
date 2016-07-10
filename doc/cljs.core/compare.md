@@ -1,8 +1,14 @@
-## Name
-cljs.core/compare
+---
+name: cljs.core/compare
+related:
+  - cljs.core/sort-by
+  - cljs.core/sorted-set-by
+  - cljs.core/sorted-map-by
+---
 
 ## Signature
 [x y]
+
 
 ## Description
 
@@ -14,6 +20,7 @@ Returns a negative number, zero, or a positive number when `x` is logically
 Uses `IComparable` if available and `google.array.defaultCompare` for objects of
 the same type. nil is treated as a special case and is always less than any
 other object.
+
 
 ## Examples
 
@@ -33,8 +40,3 @@ other object.
 (compare 10 (list 1 2 3))
 ;; Error: compare on non-nil objects of different types
 ```
-
-## Related
-cljs.core/sort-by
-cljs.core/sorted-set-by
-cljs.core/sorted-map-by

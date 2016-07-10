@@ -1,2 +1,4 @@
-## Name
-cljs.pprint/IPrettyFlush
+---
+name: cljs.pprint/IPrettyFlush
+---
+

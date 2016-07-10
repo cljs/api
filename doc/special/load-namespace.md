@@ -1,8 +1,10 @@
-## Name
-special/load-namespace
+---
+name: special/load-namespace
+---
 
 ## Signature
 [name]
+
 
 ## Description
 
@@ -12,6 +14,7 @@ Load a namespace and all of its dependencies into the evaluation environment.
 The environment is responsible for ensuring that each namespace is loaded once
 and only once.
 
+
 ## TODO
 
 This example doesn't work.  Why?
@@ -20,6 +23,7 @@ This example doesn't work.  Why?
 (load-namespace 'clojure.set)
 (clojure.set/intersection #{2 3} #{3 4})
 ```
+
 
 ## Examples
 

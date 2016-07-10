@@ -1,11 +1,13 @@
-## Name
-syntax/tagged-literal
-
-## Display
-# tagged literal
+---
+name: syntax/tagged-literal
+display: "# tagged literal"
+related:
+  - syntax/dispatch
+---
 
 ## Usage
 #foo ...
+
 
 ## Description
 
@@ -41,8 +43,6 @@ ClojureScript supports the following tagged literals:
 - [doc:syntax/js-literal]
 - [doc:syntax/queue-literal]
 
-## Related
-syntax/dispatch
 
 ## Examples
 

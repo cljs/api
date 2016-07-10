@@ -1,2 +1,4 @@
-## Name
-clojure.string/index-of
+---
+name: clojure.string/index-of
+---
+

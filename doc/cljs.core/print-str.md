@@ -1,2 +1,4 @@
-## Name
-cljs.core/print-str
+---
+name: cljs.core/print-str
+---
+

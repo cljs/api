@@ -1,16 +1,17 @@
-## Name
-cljs.core/drop-last
+---
+name: cljs.core/drop-last
+related:
+  - cljs.core/drop
+  - cljs.core/drop-while
+---
 
 ## Signature
 [s]
 [n s]
+
 
 ## Description
 
 Return a lazy sequence of all but the last `n` items in `s`.
 
 `n` defaults to 1.
-
-## Related
-cljs.core/drop
-cljs.core/drop-while

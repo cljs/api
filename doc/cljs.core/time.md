@@ -1,2 +1,4 @@
-## Name
-cljs.core/time
+---
+name: cljs.core/time
+---
+

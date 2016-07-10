@@ -1,2 +1,4 @@
-## Name
-cljs.core/deftype
+---
+name: cljs.core/deftype
+---
+

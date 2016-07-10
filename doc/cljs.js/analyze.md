@@ -1,2 +1,4 @@
-## Name
-cljs.js/analyze
+---
+name: cljs.js/analyze
+---
+

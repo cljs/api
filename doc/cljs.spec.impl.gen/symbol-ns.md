@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/symbol-ns
+---
+name: cljs.spec.impl.gen/symbol-ns
+---
+

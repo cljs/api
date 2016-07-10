@@ -1,14 +1,17 @@
-## Name
-syntax/inst-literal
-
-## Display
-#inst literal
+---
+name: syntax/inst-literal
+display: "#inst literal"
+related:
+  - cljs.core/time
+  - syntax/tagged-literal
+---
 
 ## Usage
 #inst "yyyy-mm-dd"
 #inst "yyyy-mm-ddThh:mm:ss"
 #inst "yyyy-mm-ddThh:mm:ssZ"
 #inst "yyyy-mm-ddThh:mm:ss-hh:mm"
+
 
 ## Description
 
@@ -24,9 +27,6 @@ Append `Z` to denote UTC, or `-hh:mm` to denote exact UTC offset.
 [Date]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 [RFC-3339]:http://www.ietf.org/rfc/rfc3339.txt
 
-## Related
-cljs.core/time
-syntax/tagged-literal
 
 ## Examples
 

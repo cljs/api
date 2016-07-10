@@ -1,2 +1,4 @@
-## Name
-cljs.reader/PushbackReader
+---
+name: cljs.reader/PushbackReader
+---
+

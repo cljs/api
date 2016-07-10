@@ -1,2 +1,4 @@
-## Name
-cljs.core/spread
+---
+name: cljs.core/spread
+---
+

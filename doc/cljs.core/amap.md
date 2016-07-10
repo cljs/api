@@ -1,8 +1,12 @@
-## Name
-cljs.core/amap
+---
+name: cljs.core/amap
+related:
+  - cljs.core/map
+---
 
 ## Signature
 [a idx ret expr]
+
 
 ## Description
 
@@ -11,8 +15,6 @@ across a JavaScript array `a`.  The expression can use `ret` as the current
 result, which is initialized to `a`.  It can also use `idx` to get the current
 index.
 
-## Related
-cljs.core/map
 
 ## Examples
 
@@ -33,4 +35,3 @@ current result:
                  (* 10 (aget a i))))
 ;;=> #js [10 30 60]
 ```
-

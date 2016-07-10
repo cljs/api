@@ -1,2 +1,4 @@
-## Name
-cljs.spec/alt
+---
+name: cljs.spec/alt
+---
+

@@ -1,11 +1,16 @@
-## Name
-cljs.core/juxt
+---
+name: cljs.core/juxt
+related:
+  - cljs.core/partial
+  - cljs.core/comp
+---
 
 ## Signature
 [f]
 [f g]
 [f g h]
 [f g h & fs]
+
 
 ## Description
 
@@ -17,7 +22,3 @@ containing the result of applying each function to the arguments (left-to-
 right).
 
 `((juxt a b c) x)` => `[(a x) (b x) (c x)]`
-
-## Related
-cljs.core/partial
-cljs.core/comp

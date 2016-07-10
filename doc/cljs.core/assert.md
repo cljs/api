@@ -1,9 +1,11 @@
-## Name
-cljs.core/assert
+---
+name: cljs.core/assert
+---
 
 ## Signature
 [expr]
 [expr message]
+
 
 ## Description
 
@@ -11,6 +13,7 @@ Evaluates expression `expr` and throws an exception if it does not evaluate to
 logical true.  Exception will include `message` if given.
 
 Returns `nil`.
+
 
 ## Examples
 
@@ -25,4 +28,3 @@ Returns `nil`.
 ;;=> Uncaught Error: Assert failed: 1 is not 2
 ;;   (= 1 2)
 ```
-

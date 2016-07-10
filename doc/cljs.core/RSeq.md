@@ -1,2 +1,4 @@
-## Name
-cljs.core/RSeq
+---
+name: cljs.core/RSeq
+---
+

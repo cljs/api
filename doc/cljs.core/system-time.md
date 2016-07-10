@@ -1,2 +1,4 @@
-## Name
-cljs.core/system-time
+---
+name: cljs.core/system-time
+---
+

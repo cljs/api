@@ -1,2 +1,4 @@
-## Name
-cljs.repl.browser/parse-stacktrace
+---
+name: cljs.repl.browser/parse-stacktrace
+---
+

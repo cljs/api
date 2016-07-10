@@ -1,2 +1,4 @@
-## Name
-cljs.core/*clojurescript-version*
+---
+name: cljs.core/*clojurescript-version*
+---
+

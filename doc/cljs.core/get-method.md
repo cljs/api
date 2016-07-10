@@ -1,2 +1,4 @@
-## Name
-cljs.core/get-method
+---
+name: cljs.core/get-method
+---
+

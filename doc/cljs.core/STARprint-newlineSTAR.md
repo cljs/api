@@ -1,2 +1,4 @@
-## Name
-cljs.core/*print-newline*
+---
+name: cljs.core/*print-newline*
+---
+

@@ -1,2 +1,4 @@
-## Name
-clojure.zip/next
+---
+name: clojure.zip/next
+---
+

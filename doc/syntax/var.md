@@ -1,12 +1,14 @@
-## Name
-syntax/var
-
-## Display
-#' var
+---
+name: syntax/var
+display: "#' var"
+related:
+  - special/var
+---
 
 ## Usage
 #'foo
 #'foo/bar
+
 
 ## Description
 
@@ -14,8 +16,6 @@ syntax/var
 
 Accesses the var attached to the given symbol.
 
-## Related
-special/var
 
 ## Examples
 

@@ -1,17 +1,19 @@
-## Name
-cljs.core/aclone
+---
+name: cljs.core/aclone
+related:
+  - cljs.core/array
+  - cljs.core/make-array
+---
 
 ## Signature
 [arr]
+
 
 ## Description
 
 Creates a clone of the given JavaScript array `arr`.  The result is a new
 JavaScript array, which is a shallow copy, not a deep copy.
 
-## Related
-cljs.core/array
-cljs.core/make-array
 
 ## Examples
 

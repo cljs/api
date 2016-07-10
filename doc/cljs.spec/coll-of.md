@@ -1,2 +1,4 @@
-## Name
-cljs.spec/coll-of
+---
+name: cljs.spec/coll-of
+---
+

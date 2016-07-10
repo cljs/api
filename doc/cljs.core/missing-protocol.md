@@ -1,2 +1,4 @@
-## Name
-cljs.core/missing-protocol
+---
+name: cljs.core/missing-protocol
+---
+

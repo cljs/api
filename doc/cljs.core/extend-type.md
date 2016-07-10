@@ -1,8 +1,12 @@
-## Name
-cljs.core/extend-type
+---
+name: cljs.core/extend-type
+related:
+  - cljs.core/extend-protocol
+---
 
 ## Signature
 [type-sym & impls]
+
 
 ## Description
 
@@ -27,6 +31,3 @@ type symbols are associated with type strings deduced by [`goog/typeOf`]:
 implementations for protocols.
 
 [`goog/typeOf`]:http://google.github.io/closure-library/api/namespace_goog.html#typeOf
-
-## Related
-cljs.core/extend-protocol

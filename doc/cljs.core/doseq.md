@@ -1,8 +1,15 @@
-## Name
-cljs.core/doseq
+---
+name: cljs.core/doseq
+related:
+  - cljs.core/doall
+  - cljs.core/dorun
+  - cljs.core/for
+  - cljs.core/dotimes
+---
 
 ## Signature
 [seq-exprs & body]
+
 
 ## Description
 
@@ -11,11 +18,6 @@ filtering as provided by `for`. Does not retain the head of the sequence.
 
 Returns nil.
 
-## Related
-cljs.core/doall
-cljs.core/dorun
-cljs.core/for
-cljs.core/dotimes
 
 ## TODO
 

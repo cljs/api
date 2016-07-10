@@ -1,13 +1,13 @@
-## Name
-clojure.string/trim-newline
+---
+name: clojure.string/trim-newline
+---
 
 ## Signature
 [s]
+
 
 ## Description
 
 Removes all trailing newline `\n` or return `\r` characters from string.
 
 Similar to Perl's chomp.
-
-## Related

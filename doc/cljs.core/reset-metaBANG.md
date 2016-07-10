@@ -1,2 +1,4 @@
-## Name
-cljs.core/reset-meta!
+---
+name: cljs.core/reset-meta!
+---
+

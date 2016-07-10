@@ -1,15 +1,17 @@
-## Name
-cljs.core/identity
+---
+name: cljs.core/identity
+related:
+  - cljs.core/nil?
+---
 
 ## Signature
 [x]
+
 
 ## Description
 
 Returns its argument.
 
-## Related
-cljs.core/nil?
 
 ## TODO
 

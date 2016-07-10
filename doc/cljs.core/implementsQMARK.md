@@ -1,2 +1,4 @@
-## Name
-cljs.core/implements?
+---
+name: cljs.core/implements?
+---
+

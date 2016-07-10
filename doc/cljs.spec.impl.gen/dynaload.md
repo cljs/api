@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/dynaload
+---
+name: cljs.spec.impl.gen/dynaload
+---
+

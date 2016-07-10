@@ -1,9 +1,15 @@
-## Name
-cljs.core/replace
+---
+name: cljs.core/replace
+related:
+  - cljs.core/map
+  - clojure.walk/prewalk-replace
+  - clojure.walk/postwalk-replace
+---
 
 ## Signature
 [smap]
 [smap coll]
+
 
 ## Description
 
@@ -12,8 +18,3 @@ a vector/seq with any elements `=` to a key in `smap` replaced with the
 corresponding val in `smap`.
 
 Returns a transducer when `coll` is not provided.
-
-## Related
-cljs.core/map
-clojure.walk/prewalk-replace
-clojure.walk/postwalk-replace

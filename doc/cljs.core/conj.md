@@ -1,14 +1,19 @@
-## Name
-cljs.core/conj
-
-## Known As
-conjoin
+---
+name: cljs.core/conj
+known as: conjoin
+related:
+  - cljs.core/cons
+  - cljs.core/into
+  - cljs.core/peek
+  - cljs.core/pop
+---
 
 ## Signature
 []
 [coll]
 [coll x]
 [coll x & xs]
+
 
 ## Description
 
@@ -20,6 +25,7 @@ The "addition" may happen at different "places" depending on the collection
 type.
 
 `(conj nil item)` returns `(item)`.
+
 
 ## Examples
 
@@ -54,11 +60,6 @@ Add to set:
 ;;=> #{"a" "b" "c" "d"}
 ```
 
-## Related
-cljs.core/cons
-cljs.core/into
-cljs.core/peek
-cljs.core/pop
 
 ## TODO
 should add a table here of how things are "added" to different collection types

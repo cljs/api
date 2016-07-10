@@ -1,8 +1,13 @@
-## Name
-cljs.core/contains?
+---
+name: cljs.core/contains?
+related:
+  - cljs.core/some
+  - cljs.core/get
+---
 
 ## Signature
 [coll k]
+
 
 ## Description
 
@@ -18,6 +23,7 @@ used for this purpose:
 ```clj
 (some #{value} coll)
 ```
+
 
 ## Examples
 
@@ -56,7 +62,3 @@ Lists and Sequences do not provide lookups, so `contains?` will not work:
 (contains? (range 3) 1)
 ;;=> false
 ```
-
-## Related
-cljs.core/some
-cljs.core/get

@@ -1,2 +1,4 @@
-## Name
-cljs.core/Cons
+---
+name: cljs.core/Cons
+---
+

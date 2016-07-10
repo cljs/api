@@ -1,8 +1,13 @@
-## Name
-cljs.core/group-by
+---
+name: cljs.core/group-by
+related:
+  - cljs.core/partition-by
+  - cljs.core/frequencies
+---
 
 ## Signature
 [f coll]
+
 
 ## Description
 
@@ -11,7 +16,3 @@ each element.
 
 The value at each key will be a vector of the corresponding elements in the
 order they appeared in `coll`.
-
-## Related
-cljs.core/partition-by
-cljs.core/frequencies

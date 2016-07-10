@@ -1,8 +1,9 @@
-## Name
-syntax/quote
-
-## Display
-' quote
+---
+name: syntax/quote
+display: "' quote"
+related:
+  - special/quote
+---
 
 ## Description
 
@@ -10,8 +11,6 @@ syntax/quote
 
 Prevent the evaluation of the following form.
 
-## Related
-special/quote
 
 ## Examples
 

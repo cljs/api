@@ -1,11 +1,13 @@
-## Name
-syntax/destructure-map
-
-## Display
-destructure {}
+---
+name: syntax/destructure-map
+display: "destructure {}"
+related:
+  - syntax/destructure-vector
+---
 
 ## Usage
 {:keys [] :strs [] :syms [] :or {} :as name}
+
 
 ## Description
 
@@ -73,8 +75,6 @@ following forms:
 Destructure maps can be nested, even in place of names in [destructure
 vectors][doc:syntax/destructure-vector].
 
-## Related
-syntax/destructure-vector
 
 ## Examples
 

@@ -1,16 +1,18 @@
-## Name
-cljs.core/bit-shift-right
+---
+name: cljs.core/bit-shift-right
+related:
+  - cljs.core/bit-shift-left
+  - cljs.core/unsigned-bit-shift-right
+---
 
 ## Signature
 [x n]
+
 
 ## Description
 
 Bitwise shift right `n` bits.  Same as `x >> n` in JavaScript.
 
-## Related
-cljs.core/bit-shift-left
-cljs.core/unsigned-bit-shift-right
 
 ## Examples
 
@@ -28,4 +30,3 @@ Same numbers in decimal:
 (bit-shift-right 10 1)
 ;;=> 5
 ```
-

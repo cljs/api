@@ -1,2 +1,4 @@
-## Name
-special/letfn*
+---
+name: special/letfn*
+---
+

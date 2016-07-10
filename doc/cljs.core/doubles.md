@@ -1,2 +1,4 @@
-## Name
-cljs.core/doubles
+---
+name: cljs.core/doubles
+---
+

@@ -1,8 +1,17 @@
-## Name
-cljs.core/butlast
+---
+name: cljs.core/butlast
+related:
+  - cljs.core/first
+  - cljs.core/rest
+  - cljs.core/last
+  - cljs.core/next
+  - cljs.core/drop-last
+  - cljs.core/take-last
+---
 
 ## Signature
 [s]
+
 
 ## Description
 
@@ -10,13 +19,6 @@ Returns a sequence of all but the last item in `s`.
 
 `butlast` runs in linear time.
 
-## Related
-cljs.core/first
-cljs.core/rest
-cljs.core/last
-cljs.core/next
-cljs.core/drop-last
-cljs.core/take-last
 
 ## Examples
 

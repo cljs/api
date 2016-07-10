@@ -1,11 +1,13 @@
-## Name
-syntax/Math-namespace
-
-## Display
-Math/ namespace
+---
+name: syntax/Math-namespace
+display: "Math/ namespace"
+related:
+  - syntax/js-namespace
+---
 
 ## Usage
 Math/foo
+
 
 ## Description
 
@@ -15,8 +17,6 @@ A special namespace for direct access to the native JavaScript [Math library].
 
 [Math library]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
-## Related
-syntax/js-namespace
 
 ## Examples
 

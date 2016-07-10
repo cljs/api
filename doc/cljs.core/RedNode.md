@@ -1,2 +1,4 @@
-## Name
-cljs.core/RedNode
+---
+name: cljs.core/RedNode
+---
+

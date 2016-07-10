@@ -1,2 +1,4 @@
-## Name
-cljs.core/defrecord
+---
+name: cljs.core/defrecord
+---
+

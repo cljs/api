@@ -1,17 +1,19 @@
-## Name
-cljs.core/bit-xor
+---
+name: cljs.core/bit-xor
+related:
+  - cljs.core/bit-and
+  - cljs.core/bit-or
+---
 
 ## Signature
 [x y]
 [x y & more]
 
+
 ## Description
 
 Bitwise "exclusive or". Same as `x ^ y` in JavaScript.
 
-## Related
-cljs.core/bit-and
-cljs.core/bit-or
 
 ## Examples
 

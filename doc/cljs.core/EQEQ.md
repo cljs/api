@@ -1,10 +1,15 @@
-## Name
-cljs.core/==
+---
+name: cljs.core/==
+related:
+  - cljs.core/=
+  - cljs.core/identical?
+---
 
 ## Signature
 [x]
 [x y]
 [x y & more]
+
 
 ## Description
 
@@ -16,9 +21,6 @@ reason to use the `==` operator in ClojureScript.
 
 Behavior on non-number arguments is undefined.
 
-## Related
-cljs.core/=
-cljs.core/identical?
 
 ## Examples
 
@@ -29,4 +31,3 @@ cljs.core/identical?
 (== 1 2)
 ;;=> false
 ```
-

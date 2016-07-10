@@ -1,2 +1,4 @@
-## Name
-cljs.js/valid-name?
+---
+name: cljs.js/valid-name?
+---
+

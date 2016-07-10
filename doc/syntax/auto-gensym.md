@@ -1,11 +1,14 @@
-## Name
-syntax/auto-gensym
-
-## Display
-# auto-gensym
+---
+name: syntax/auto-gensym
+display: "# auto-gensym"
+related:
+  - cljs.core/gensym
+  - syntax/syntax-quote
+---
 
 ## Usage
 foo#
+
 
 ## Description
 
@@ -25,9 +28,6 @@ be replaced with the same generated symbol.
 
 Namespace-qualified symbols `foo/bar#` are not replaced.
 
-## Related
-cljs.core/gensym
-syntax/syntax-quote
 
 ## Examples
 

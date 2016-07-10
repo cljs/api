@@ -1,2 +1,4 @@
-## Name
-cljs.reader/symbol-pattern
+---
+name: cljs.reader/symbol-pattern
+---
+

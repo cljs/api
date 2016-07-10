@@ -1,2 +1,4 @@
-## Name
-special/let*
+---
+name: special/let*
+---
+

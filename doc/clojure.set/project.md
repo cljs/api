@@ -1,2 +1,4 @@
-## Name
-clojure.set/project
+---
+name: clojure.set/project
+---
+

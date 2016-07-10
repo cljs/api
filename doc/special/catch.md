@@ -1,8 +1,14 @@
-## Name
-special/catch
+---
+name: special/catch
+related:
+  - special/try
+  - special/finally
+  - special/throw
+---
 
 ## Signature
 [exception-type name expr*]
+
 
 ## Description
 
@@ -15,8 +21,3 @@ of the `try` expression.
 
 Since JavaScript allows you to throw anything, `exception-type` can be set to
 `:default` to catch all types of exceptions.
-
-## Related
-special/try
-special/finally
-special/throw

@@ -1,2 +1,4 @@
-## Name
-cljs.reader/*default-data-reader-fn*
+---
+name: cljs.reader/*default-data-reader-fn*
+---
+

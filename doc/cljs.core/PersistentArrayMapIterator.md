@@ -1,2 +1,4 @@
-## Name
-cljs.core/PersistentArrayMapIterator
+---
+name: cljs.core/PersistentArrayMapIterator
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/trampoline
+---
+name: cljs.core/trampoline
+---
+

@@ -1,5 +1,10 @@
-## Name
-clojure.set/union
+---
+name: clojure.set/union
+related:
+  - clojure.set/intersection
+  - clojure.set/difference
+  - clojure.set/superset?
+---
 
 ## Signature
 []
@@ -7,11 +12,7 @@ clojure.set/union
 [s1 s2]
 [s1 s2 & sets]
 
+
 ## Description
 
 Return a set that is the union of the input sets.
-
-## Related
-clojure.set/intersection
-clojure.set/difference
-clojure.set/superset?

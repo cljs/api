@@ -1,2 +1,4 @@
-## Name
-clojure.core.reducers/append!
+---
+name: clojure.core.reducers/append!
+---
+

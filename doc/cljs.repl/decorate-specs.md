@@ -1,2 +1,4 @@
-## Name
-cljs.repl/decorate-specs
+---
+name: cljs.repl/decorate-specs
+---
+

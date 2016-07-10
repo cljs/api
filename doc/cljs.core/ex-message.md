@@ -1,2 +1,4 @@
-## Name
-cljs.core/ex-message
+---
+name: cljs.core/ex-message
+---
+

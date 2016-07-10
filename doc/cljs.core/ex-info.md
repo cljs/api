@@ -1,2 +1,4 @@
-## Name
-cljs.core/ex-info
+---
+name: cljs.core/ex-info
+---
+

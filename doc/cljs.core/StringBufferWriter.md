@@ -1,2 +1,4 @@
-## Name
-cljs.core/StringBufferWriter
+---
+name: cljs.core/StringBufferWriter
+---
+

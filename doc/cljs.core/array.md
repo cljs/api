@@ -1,8 +1,14 @@
-## Name
-cljs.core/array
+---
+name: cljs.core/array
+related:
+  - cljs.core/aclone
+  - cljs.core/make-array
+  - cljs.core/clj->js
+---
 
 ## Signature
 [& args]
+
 
 ## Description
 
@@ -10,10 +16,6 @@ Creates a JavaScript array containing `args`.
 
 The tagged literal `#js [1 2 3]` is equivalent to `(array 1 2 3)`
 
-## Related
-cljs.core/aclone
-cljs.core/make-array
-cljs.core/clj->js
 
 ## Examples
 
@@ -37,4 +39,3 @@ When creating nested JavaScript arrays, you can opt to use `clj->js` instead:
 (clj->js [1 2 [3 4]])
 ;;=> #js [1 2 #js [3 4]]
 ```
-

@@ -1,2 +1,4 @@
-## Name
-cljs.core/INext
+---
+name: cljs.core/INext
+---
+

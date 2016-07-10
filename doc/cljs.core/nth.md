@@ -1,9 +1,16 @@
-## Name
-cljs.core/nth
+---
+name: cljs.core/nth
+related:
+  - cljs.core/first
+  - cljs.core/second
+  - cljs.core/nthnext
+  - cljs.core/get
+---
 
 ## Signature
 [coll n]
 [coll n not-found]
+
 
 ## Description
 
@@ -14,9 +21,3 @@ supplied.
 
 `nth` works for Strings, Arrays, Regex Matchers, Lists, and Sequences. For
 Sequences, `nth` takes O(n) time.
-
-## Related
-cljs.core/first
-cljs.core/second
-cljs.core/nthnext
-cljs.core/get

@@ -1,2 +1,4 @@
-## Name
-cljs.core/IEncodeJS
+---
+name: cljs.core/IEncodeJS
+---
+

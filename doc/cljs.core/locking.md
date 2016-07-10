@@ -1,2 +1,4 @@
-## Name
-cljs.core/locking
+---
+name: cljs.core/locking
+---
+

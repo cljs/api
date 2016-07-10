@@ -1,2 +1,4 @@
-## Name
-cljs.core/Iterator
+---
+name: cljs.core/Iterator
+---
+

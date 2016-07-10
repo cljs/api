@@ -1,2 +1,4 @@
-## Name
-cljs.core/pop!
+---
+name: cljs.core/pop!
+---
+

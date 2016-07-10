@@ -1,5 +1,6 @@
-## Name
-cljs.repl.node
+---
+name: cljs.repl.node
+---
 
 ## Caption
 Node.js REPL

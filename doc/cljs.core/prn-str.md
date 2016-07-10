@@ -1,2 +1,4 @@
-## Name
-cljs.core/prn-str
+---
+name: cljs.core/prn-str
+---
+

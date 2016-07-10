@@ -1,2 +1,4 @@
-## Name
-cljs.core/IStack
+---
+name: cljs.core/IStack
+---
+

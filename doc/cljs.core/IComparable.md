@@ -1,2 +1,4 @@
-## Name
-cljs.core/IComparable
+---
+name: cljs.core/IComparable
+---
+

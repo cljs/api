@@ -1,2 +1,4 @@
-## Name
-cljs.analyzer.api/ns-specs
+---
+name: cljs.analyzer.api/ns-specs
+---
+

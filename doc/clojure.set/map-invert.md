@@ -1,2 +1,4 @@
-## Name
-clojure.set/map-invert
+---
+name: clojure.set/map-invert
+---
+

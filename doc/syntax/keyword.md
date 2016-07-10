@@ -1,12 +1,16 @@
-## Name
-syntax/keyword
-
-## Display
-: keyword
+---
+name: syntax/keyword
+display: ": keyword"
+related:
+  - syntax/keyword-qualify
+  - cljs.core/keyword
+  - cljs.core/keyword?
+---
 
 ## Usage
 :foo
 :foo/bar
+
 
 ## Description
 
@@ -17,13 +21,10 @@ Keywords can have an optional namespace. For example, `:foo/bar`. This is useful
 for functions in a namespace to prevent key collisions on a globally accessible
 map.
 
+
 ## TODO
 when keywords allow number prefixes, make note of the first version when it is allowed
 
-## Related
-syntax/keyword-qualify
-cljs.core/keyword
-cljs.core/keyword?
 
 ## Examples
 

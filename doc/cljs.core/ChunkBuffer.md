@@ -1,2 +1,4 @@
-## Name
-cljs.core/ChunkBuffer
+---
+name: cljs.core/ChunkBuffer
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.spec/every-kv
+---
+name: cljs.spec/every-kv
+---
+

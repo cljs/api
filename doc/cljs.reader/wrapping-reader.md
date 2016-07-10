@@ -1,2 +1,4 @@
-## Name
-cljs.reader/wrapping-reader
+---
+name: cljs.reader/wrapping-reader
+---
+

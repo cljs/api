@@ -1,8 +1,14 @@
-## Name
-special/finally
+---
+name: special/finally
+related:
+  - special/try
+  - special/catch
+  - special/throw
+---
 
 ## Signature
 [expr*]
+
 
 ## Description
 
@@ -10,8 +16,3 @@ special/finally
 
 `finally` clauses are always evaluated for their side effects whether there was
 an error or not, but they are never the return value of a `try` expression.
-
-## Related
-special/try
-special/catch
-special/throw

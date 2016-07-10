@@ -1,2 +1,4 @@
-## Name
-cljs.spec/inst-in-range?
+---
+name: cljs.spec/inst-in-range?
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.repl/skip-if-eol
+---
+name: cljs.repl/skip-if-eol
+---
+

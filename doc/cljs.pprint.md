@@ -1,8 +1,10 @@
-## Name
-cljs.pprint
+---
+name: cljs.pprint
+---
 
 ## Caption
 a pretty-printer for printing data structures
+
 
 ## Description
 

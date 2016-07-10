@@ -1,9 +1,13 @@
-## Name
-cljs.core/js->clj
+---
+name: cljs.core/js->clj
+related:
+  - cljs.core/clj->js
+---
 
 ## Signature
 [x]
 [x & opts]
+
 
 ## Description
 
@@ -18,8 +22,6 @@ recommended for parsing large amounts of JSON data.
 
 [transit.cljs]:http://swannodette.github.io/2014/07/26/transit--clojurescript/
 
-## Related
-cljs.core/clj->js
 
 ## Examples
 
@@ -40,4 +42,3 @@ Convert JSON data `a` to ClojureScript data:
 (js->clj a :keywordize-keys true)
 ;;=> {:foo 1, :bar 2, :baz [1 2 3]}
 ```
-

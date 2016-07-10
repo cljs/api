@@ -1,2 +1,4 @@
-## Name
-cljs.core/set-from-indexed-seq
+---
+name: cljs.core/set-from-indexed-seq
+---
+

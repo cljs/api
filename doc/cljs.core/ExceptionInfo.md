@@ -1,2 +1,4 @@
-## Name
-cljs.core/ExceptionInfo
+---
+name: cljs.core/ExceptionInfo
+---
+

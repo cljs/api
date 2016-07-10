@@ -1,2 +1,4 @@
-## Name
-cljs.core/comparator
+---
+name: cljs.core/comparator
+---
+

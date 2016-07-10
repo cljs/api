@@ -1,2 +1,4 @@
-## Name
-cljs.core/create-ns
+---
+name: cljs.core/create-ns
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/IMap
+---
+name: cljs.core/IMap
+---
+

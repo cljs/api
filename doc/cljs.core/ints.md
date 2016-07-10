@@ -1,2 +1,4 @@
-## Name
-cljs.core/ints
+---
+name: cljs.core/ints
+---
+

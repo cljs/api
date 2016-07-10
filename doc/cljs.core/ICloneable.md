@@ -1,2 +1,4 @@
-## Name
-cljs.core/ICloneable
+---
+name: cljs.core/ICloneable
+---
+

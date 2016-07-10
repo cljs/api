@@ -1,2 +1,4 @@
-## Name
-cljs.core/double
+---
+name: cljs.core/double
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/update
+---
+name: cljs.core/update
+---
+

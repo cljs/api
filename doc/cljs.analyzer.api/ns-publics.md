@@ -1,2 +1,4 @@
-## Name
-cljs.analyzer.api/ns-publics
+---
+name: cljs.analyzer.api/ns-publics
+---
+

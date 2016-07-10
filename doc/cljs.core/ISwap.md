@@ -1,2 +1,4 @@
-## Name
-cljs.core/ISwap
+---
+name: cljs.core/ISwap
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/exists?
+---
+name: cljs.core/exists?
+---
+

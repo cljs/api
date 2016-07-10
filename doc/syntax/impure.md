@@ -1,11 +1,13 @@
-## Name
-syntax/impure
-
-## Display
-! impure
+---
+name: syntax/impure
+display: "! impure"
+related:
+  - syntax/predicate
+---
 
 ## Usage
 foo!
+
 
 ## Description
 
@@ -20,8 +22,6 @@ Some impure functions which use this convention:
 - [doc:cljs.core/conj!]
 - [doc:cljs.core/specify!]
 
-## Related
-syntax/predicate
 
 ## Examples
 

@@ -1,2 +1,4 @@
-## Name
-cljs.core/set-print-err-fn!
+---
+name: cljs.core/set-print-err-fn!
+---
+

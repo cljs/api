@@ -1,2 +1,4 @@
-## Name
-cljs.core/Eduction
+---
+name: cljs.core/Eduction
+---
+

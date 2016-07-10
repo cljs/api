@@ -1,15 +1,21 @@
-## Name
-special/.
+---
+name: special/.
+related:
+  - cljs.core/..
+  - cljs.core/aget
+---
 
 ## Usage
 (.-foo obj)
 (.foo obj)
+
 
 ## Signature
 [o -p]
 [o m]
 [o m 1 2]
 [o (m 1 2)]
+
 
 ## Description
 
@@ -48,9 +54,6 @@ use the following sugar:
   </tbody>
 </table>
 
-## Related
-cljs.core/..
-cljs.core/aget
 
 ## Examples
 

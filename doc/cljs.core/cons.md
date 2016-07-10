@@ -1,12 +1,17 @@
-## Name
-cljs.core/cons
+---
+name: cljs.core/cons
+related:
+  - cljs.core/conj
+---
 
 ## Signature
 [x coll]
 
+
 ## Description
 
 Returns a new sequence where `x` is the first element and `coll` is the rest.
+
 
 ## Examples
 
@@ -23,6 +28,3 @@ Returns a new sequence where `x` is the first element and `coll` is the rest.
 (cons nil nil)
 ;;=> (nil)
 ```
-
-## Related
-cljs.core/conj

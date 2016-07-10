@@ -1,2 +1,4 @@
-## Name
-cljs.test/assert-predicate
+---
+name: cljs.test/assert-predicate
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.js/dump-core
+---
+name: cljs.js/dump-core
+---
+

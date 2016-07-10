@@ -1,2 +1,4 @@
-## Name
-cljs.spec/abbrev
+---
+name: cljs.spec/abbrev
+---
+

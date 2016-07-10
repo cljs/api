@@ -1,2 +1,4 @@
-## Name
-clojure.browser.repl/xpc-connection
+---
+name: clojure.browser.repl/xpc-connection
+---
+

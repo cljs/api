@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/char-alpha
+---
+name: cljs.spec.impl.gen/char-alpha
+---
+

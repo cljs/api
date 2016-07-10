@@ -1,8 +1,17 @@
-## Name
-cljs.core/as->
+---
+name: cljs.core/as->
+related:
+  - cljs.core/->
+  - cljs.core/->>
+  - cljs.core/cond->
+  - cljs.core/cond->>
+  - cljs.core/some->
+  - cljs.core/some->>
+---
 
 ## Signature
 [expr name & forms]
+
 
 ## Description
 
@@ -13,16 +22,10 @@ returning the result of the last form.
 Useful for when you want a threading macro to use different "places" at each
 form.
 
-## Related
-cljs.core/->
-cljs.core/->>
-cljs.core/cond->
-cljs.core/cond->>
-cljs.core/some->
-cljs.core/some->>
 
 ## TODO
 add threading macro animations link here
+
 
 ## Examples
 

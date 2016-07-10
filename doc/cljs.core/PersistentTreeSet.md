@@ -1,2 +1,4 @@
-## Name
-cljs.core/PersistentTreeSet
+---
+name: cljs.core/PersistentTreeSet
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.build.api/inputs
+---
+name: cljs.build.api/inputs
+---
+

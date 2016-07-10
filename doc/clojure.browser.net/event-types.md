@@ -1,2 +1,4 @@
-## Name
-clojure.browser.net/event-types
+---
+name: clojure.browser.net/event-types
+---
+

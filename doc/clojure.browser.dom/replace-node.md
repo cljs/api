@@ -1,2 +1,4 @@
-## Name
-clojure.browser.dom/replace-node
+---
+name: clojure.browser.dom/replace-node
+---
+

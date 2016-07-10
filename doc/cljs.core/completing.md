@@ -1,2 +1,4 @@
-## Name
-cljs.core/completing
+---
+name: cljs.core/completing
+---
+

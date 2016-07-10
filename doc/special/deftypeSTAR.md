@@ -1,2 +1,4 @@
-## Name
-special/deftype*
+---
+name: special/deftype*
+---
+

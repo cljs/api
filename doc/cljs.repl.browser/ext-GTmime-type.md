@@ -1,2 +1,4 @@
-## Name
-cljs.repl.browser/ext->mime-type
+---
+name: cljs.repl.browser/ext->mime-type
+---
+

@@ -1,8 +1,12 @@
-## Name
-cljs.core/name
+---
+name: cljs.core/name
+related:
+  - cljs.core/namespace
+---
 
 ## Signature
 [x]
+
 
 ## Description
 
@@ -10,8 +14,6 @@ Returns the name string of a possibly namespace-qualified keyword or symbol.
 
 Equivalent to [doc:cljs.core/identity] for strings.
 
-## Related
-cljs.core/namespace
 
 ## Examples
 

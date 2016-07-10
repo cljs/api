@@ -1,2 +1,4 @@
-## Name
-cljs.reader/parse-and-validate-timestamp
+---
+name: cljs.reader/parse-and-validate-timestamp
+---
+

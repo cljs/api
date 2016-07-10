@@ -1,2 +1,4 @@
-## Name
-cljs.reader/register-tag-parser!
+---
+name: cljs.reader/register-tag-parser!
+---
+

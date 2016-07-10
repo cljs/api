@@ -1,12 +1,13 @@
-## Name
-cljs.core/keys
+---
+name: cljs.core/keys
+related:
+  - cljs.core/vals
+---
 
 ## Signature
 [hash-map]
 
+
 ## Description
 
 Returns a sequence of the keys in `hash-map`.
-
-## Related
-cljs.core/vals

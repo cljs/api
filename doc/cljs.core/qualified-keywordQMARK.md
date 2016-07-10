@@ -1,2 +1,4 @@
-## Name
-cljs.core/qualified-keyword?
+---
+name: cljs.core/qualified-keyword?
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/flatmap
+---
+name: cljs.core/flatmap
+---
+

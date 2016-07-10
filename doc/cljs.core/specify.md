@@ -1,2 +1,4 @@
-## Name
-cljs.core/specify
+---
+name: cljs.core/specify
+---
+

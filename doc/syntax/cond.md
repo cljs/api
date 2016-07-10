@@ -1,11 +1,13 @@
-## Name
-syntax/cond
-
-## Display
-#? reader conditional
+---
+name: syntax/cond
+display: "#? reader conditional"
+related:
+  - syntax/cond-splicing
+---
 
 ## Usage
 #?(...)
+
 
 ## Description
 
@@ -40,8 +42,6 @@ depending on the ClojureScript compiler version:
 Thus, reader conditionals allow us to account for differences in both versions
 of the compiler.  See [doc:cljs.core/defmacro] for details.
 
-## Related
-syntax/cond-splicing
 
 ## Examples
 

@@ -1,9 +1,11 @@
-## Name
-cljs.core/subs
+---
+name: cljs.core/subs
+---
 
 ## Signature
 [s start]
 [s start end]
+
 
 ## Description
 
@@ -11,6 +13,3 @@ Returns the substring of `s` beginning at `start` inclusive, and ending at `end`
 exclusive.
 
 `end` defaults to the length of the string.
-
-## Related
-

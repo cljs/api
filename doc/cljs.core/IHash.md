@@ -1,2 +1,4 @@
-## Name
-cljs.core/IHash
+---
+name: cljs.core/IHash
+---
+

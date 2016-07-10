@@ -1,2 +1,4 @@
-## Name
-cljs.core/ICounted
+---
+name: cljs.core/ICounted
+---
+

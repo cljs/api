@@ -1,11 +1,14 @@
-## Name
-syntax/vector
-
-## Display
-[] vector
+---
+name: syntax/vector
+display: "[] vector"
+related:
+  - cljs.core/vector
+  - cljs.core/vec
+---
 
 ## Usage
 [...]
+
 
 ## Description
 
@@ -27,9 +30,6 @@ This helps differentiate binding forms from the parentheses of [callable forms][
 
 See [doc:cljs.core/PersistentVector] for data structure details.
 
-## Related
-cljs.core/vector
-cljs.core/vec
 
 ## Examples
 

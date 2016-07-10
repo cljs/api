@@ -1,2 +1,4 @@
-## Name
-cljs.test/compose-fixtures
+---
+name: cljs.test/compose-fixtures
+---
+

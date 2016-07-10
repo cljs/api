@@ -1,2 +1,4 @@
-## Name
-cljs.core/es6-iterable
+---
+name: cljs.core/es6-iterable
+---
+

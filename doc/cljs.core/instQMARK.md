@@ -1,2 +1,4 @@
-## Name
-cljs.core/inst?
+---
+name: cljs.core/inst?
+---
+

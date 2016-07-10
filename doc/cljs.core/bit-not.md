@@ -1,12 +1,15 @@
-## Name
-cljs.core/bit-not
+---
+name: cljs.core/bit-not
+---
 
 ## Signature
 [x]
 
+
 ## Description
 
 Bitwise complement.  Same as `~x` in JavaScript.
+
 
 ## Examples
 
@@ -23,6 +26,7 @@ Same numbers in decimal:
 (bit-not 12)
 ;;=> -13
 ```
+
 
 ## TODO
 

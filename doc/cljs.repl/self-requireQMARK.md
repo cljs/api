@@ -1,2 +1,4 @@
-## Name
-cljs.repl/self-require?
+---
+name: cljs.repl/self-require?
+---
+

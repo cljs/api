@@ -1,5 +1,5 @@
-## Name
-cljs.repl.browser/parse-headers
+---
+name: cljs.repl.browser/parse-headers
+moved: cljs.repl.server/parse-headers
+---
 
-## Moved
-cljs.repl.server/parse-headers

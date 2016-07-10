@@ -1,2 +1,4 @@
-## Name
-cljs.core/uuid?
+---
+name: cljs.core/uuid?
+---
+

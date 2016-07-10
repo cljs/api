@@ -1,2 +1,4 @@
-## Name
-cljs.repl.rhino/stacktrace
+---
+name: cljs.repl.rhino/stacktrace
+---
+

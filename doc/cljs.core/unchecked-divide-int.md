@@ -1,2 +1,4 @@
-## Name
-cljs.core/unchecked-divide-int
+---
+name: cljs.core/unchecked-divide-int
+---
+

@@ -1,6 +1,7 @@
-## Name
-cljs.core/vreset!
+---
+name: cljs.core/vreset!
+related:
+  - cljs.core/vswap!
+  - cljs.core/volatile!
+---
 
-## Related
-cljs.core/vswap!
-cljs.core/volatile!

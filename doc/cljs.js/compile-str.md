@@ -1,2 +1,4 @@
-## Name
-cljs.js/compile-str
+---
+name: cljs.js/compile-str
+---
+

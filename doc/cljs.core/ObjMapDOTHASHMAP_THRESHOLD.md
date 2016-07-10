@@ -1,2 +1,4 @@
-## Name
-cljs.core/ObjMap.HASHMAP_THRESHOLD
+---
+name: cljs.core/ObjMap.HASHMAP_THRESHOLD
+---
+

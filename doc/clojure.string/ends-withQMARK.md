@@ -1,2 +1,4 @@
-## Name
-clojure.string/ends-with?
+---
+name: clojure.string/ends-with?
+---
+

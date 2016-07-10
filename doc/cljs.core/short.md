@@ -1,2 +1,4 @@
-## Name
-cljs.core/short
+---
+name: cljs.core/short
+---
+

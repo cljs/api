@@ -1,8 +1,14 @@
-## Name
-cljs.core/pop
+---
+name: cljs.core/pop
+related:
+  - cljs.core/peek
+  - cljs.core/rest
+  - cljs.core/conj
+---
 
 ## Signature
 [coll]
+
 
 ## Description
 
@@ -10,10 +16,6 @@ For a list, returns a new list without the first item.
 
 For a vector, returns a new vector without the last item.
 
-## Related
-cljs.core/peek
-cljs.core/rest
-cljs.core/conj
 
 ## Examples
 

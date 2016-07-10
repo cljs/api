@@ -1,5 +1,5 @@
-## Name
-cljs.repl.browser/read-get
+---
+name: cljs.repl.browser/read-get
+moved: cljs.repl.server/read-get
+---
 
-## Moved
-cljs.repl.server/read-get

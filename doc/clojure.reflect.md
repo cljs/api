@@ -1,5 +1,6 @@
-## Name
-clojure.reflect
+---
+name: clojure.reflect
+---
 
 ## Caption
 deprecated

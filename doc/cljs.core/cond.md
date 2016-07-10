@@ -1,8 +1,14 @@
-## Name
-cljs.core/cond
+---
+name: cljs.core/cond
+related:
+  - cljs.core/condp
+  - cljs.core/case
+  - special/if
+---
 
 ## Signature
 [& clauses]
+
 
 ## Description
 
@@ -16,6 +22,7 @@ keyword `:else` (a keyword always evaluates to logical true).
 
 `(cond)` returns nil.
 
+
 ## Examples
 
 ```
@@ -27,8 +34,3 @@ keyword `:else` (a keyword always evaluates to logical true).
   :else "a is not a number!")
 ;;=> "a is bigger than 10"
 ```
-
-## Related
-cljs.core/condp
-cljs.core/case
-special/if

@@ -1,2 +1,4 @@
-## Name
-cljs.compiler.api/requires-compilation?
+---
+name: cljs.compiler.api/requires-compilation?
+---
+

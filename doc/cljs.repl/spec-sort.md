@@ -1,2 +1,4 @@
-## Name
-cljs.repl/spec-sort
+---
+name: cljs.repl/spec-sort
+---
+

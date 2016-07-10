@@ -1,11 +1,19 @@
-## Name
-syntax/dispatch
-
-## Display
-# dispatch
+---
+name: syntax/dispatch
+display: "# dispatch"
+related:
+  - syntax/regex
+  - syntax/function
+  - syntax/set
+  - syntax/var
+  - syntax/ignore
+  - syntax/tagged-literal
+  - syntax/cond
+---
 
 ## Usage
 #...
+
 
 ## Description
 
@@ -26,14 +34,6 @@ original forms:
 | [`foo (symbol)`][doc:syntax/symbol]    | [`#foo (tagged literal)`][doc:syntax/tagged-literal] | name-related           |
 | [doc:syntax/predicate]                 | [doc:syntax/cond]                                    | conditional-related    |
 
-## Related
-syntax/regex
-syntax/function
-syntax/set
-syntax/var
-syntax/ignore
-syntax/tagged-literal
-syntax/cond
 
 ## Examples
 

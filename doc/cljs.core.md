@@ -1,8 +1,10 @@
-## Name
-cljs.core
+---
+name: cljs.core
+---
 
 ## Caption
 fundamental library of the ClojureScript language
+
 
 ## Description
 

@@ -1,2 +1,4 @@
-## Name
-cljs.pprint/formatter-out
+---
+name: cljs.pprint/formatter-out
+---
+

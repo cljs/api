@@ -1,2 +1,4 @@
-## Name
-cljs.spec/instrument-all
+---
+name: cljs.spec/instrument-all
+---
+

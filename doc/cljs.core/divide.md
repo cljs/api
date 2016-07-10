@@ -1,2 +1,4 @@
-## Name
-cljs.core/divide
+---
+name: cljs.core/divide
+---
+

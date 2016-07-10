@@ -1,2 +1,4 @@
-## Name
-cljs.core/ChunkedSeq
+---
+name: cljs.core/ChunkedSeq
+---
+

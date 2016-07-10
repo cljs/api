@@ -1,8 +1,12 @@
-## Name
-cljs.core/mod
+---
+name: cljs.core/mod
+related:
+  - cljs.core/rem
+---
 
 ## Signature
 [n d]
+
 
 ## Description
 
@@ -12,8 +16,6 @@ Returns `NaN` when `d` is 0 (divide by 0 error).
 
 Truncates toward negative infinity.
 
-## Related
-cljs.core/rem
 
 ## Examples
 

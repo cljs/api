@@ -1,16 +1,18 @@
-## Name
-cljs.repl/dir
+---
+name: cljs.repl/dir
+related:
+  - cljs.repl/find-doc
+  - cljs.repl/apropos
+---
 
 ## Signature
 [ns]
+
 
 ## Description
 
 Prints a sorted directory of public vars in a namespace `ns`.
 
-## Related
-cljs.repl/find-doc
-cljs.repl/apropos
 
 ## Examples
 

@@ -1,2 +1,4 @@
-## Name
-cljs.core/LazyTransformer.createMulti
+---
+name: cljs.core/LazyTransformer.createMulti
+---
+

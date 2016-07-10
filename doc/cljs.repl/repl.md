@@ -1,2 +1,4 @@
-## Name
-cljs.repl/repl
+---
+name: cljs.repl/repl
+---
+

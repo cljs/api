@@ -1,2 +1,4 @@
-## Name
-cljs.pprint/float?
+---
+name: cljs.pprint/float?
+---
+

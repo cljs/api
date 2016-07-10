@@ -1,2 +1,4 @@
-## Name
-cljs.core/ICollection
+---
+name: cljs.core/ICollection
+---
+

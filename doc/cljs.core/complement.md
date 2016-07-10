@@ -1,13 +1,18 @@
-## Name
-cljs.core/complement
+---
+name: cljs.core/complement
+related:
+  - cljs.core/not
+---
 
 ## Signature
 [f]
+
 
 ## Description
 
 Takes a function `f` and returns a function that takes the same arguments as
 `f`, has the same effects, if any, and returns the opposite truth value.
+
 
 ## Examples
 
@@ -16,6 +21,3 @@ Takes a function `f` and returns a function that takes the same arguments as
 ((complement #(= a %)) 12)
 ;;=> true
 ```
-
-## Related
-cljs.core/not

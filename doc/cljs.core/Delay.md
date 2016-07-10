@@ -1,2 +1,4 @@
-## Name
-cljs.core/Delay
+---
+name: cljs.core/Delay
+---
+

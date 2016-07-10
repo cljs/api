@@ -1,2 +1,4 @@
-## Name
-cljs.core/LazySeq
+---
+name: cljs.core/LazySeq
+---
+

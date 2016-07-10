@@ -1,2 +1,4 @@
-## Name
-clojure.browser.dom/DOMBuilder
+---
+name: clojure.browser.dom/DOMBuilder
+---
+

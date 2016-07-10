@@ -1,2 +1,4 @@
-## Name
-cljs.spec/and
+---
+name: cljs.spec/and
+---
+

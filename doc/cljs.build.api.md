@@ -1,5 +1,6 @@
-## Name
-cljs.build.api
+---
+name: cljs.build.api
+---
 
 ## Caption
 programmatic access to project-building facilities

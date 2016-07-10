@@ -1,2 +1,4 @@
-## Name
-special/case*
+---
+name: special/case*
+---
+

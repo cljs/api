@@ -1,2 +1,4 @@
-## Name
-cljs.core/TransientHashSet
+---
+name: cljs.core/TransientHashSet
+---
+

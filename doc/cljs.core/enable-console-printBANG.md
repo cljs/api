@@ -1,2 +1,4 @@
-## Name
-cljs.core/enable-console-print!
+---
+name: cljs.core/enable-console-print!
+---
+

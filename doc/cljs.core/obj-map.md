@@ -1,2 +1,4 @@
-## Name
-cljs.core/obj-map
+---
+name: cljs.core/obj-map
+---
+

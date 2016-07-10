@@ -1,2 +1,4 @@
-## Name
-cljs.repl/merge-spec
+---
+name: cljs.repl/merge-spec
+---
+

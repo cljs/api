@@ -1,5 +1,8 @@
-## Name
-special/require-macros
+---
+name: special/require-macros
+related:
+  - special/require
+---
 
 ## Description
 
@@ -13,8 +16,6 @@ ClojureScript file in the same directory, which is a common pattern.  In this
 case, you can just use the `:include-macros` or `:refer-macros` flag of the
 `require` form.
 
-## Related
-special/require
 
 ## Examples
 

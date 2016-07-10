@@ -1,5 +1,5 @@
-## Name
-cljs.core/unchecked-substract-int
+---
+name: cljs.core/unchecked-substract-int
+moved: cljs.core/unchecked-subtract-int
+---
 
-## Moved
-cljs.core/unchecked-subtract-int

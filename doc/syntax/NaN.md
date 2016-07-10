@@ -1,8 +1,10 @@
-## Name
-syntax/NaN
-
-## Display
-NaN
+---
+name: syntax/NaN
+display: "NaN"
+related:
+  - syntax/Infinity
+  - syntax/nil
+---
 
 ## Description
 
@@ -14,9 +16,6 @@ To test for NaN, use the native JavaScript [`js/isNaN`] or the safer [`js/Number
 [`js/isNaN`]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN
 [`js/Number.isNaN`]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN
 
-## Related
-syntax/Infinity
-syntax/nil
 
 ## Examples
 

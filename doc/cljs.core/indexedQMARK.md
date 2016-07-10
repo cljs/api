@@ -1,2 +1,4 @@
-## Name
-cljs.core/indexed?
+---
+name: cljs.core/indexed?
+---
+

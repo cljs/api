@@ -1,2 +1,4 @@
-## Name
-cljs.core/*flush-on-newline*
+---
+name: cljs.core/*flush-on-newline*
+---
+

@@ -1,12 +1,16 @@
-## Name
-syntax/js-literal
-
-## Display
-#js literal
+---
+name: syntax/js-literal
+display: "#js literal"
+related:
+  - cljs.core/js-obj
+  - cljs.core/array
+  - cljs.core/clj->js
+---
 
 ## Usage
 #js [...]
 #js {...}
+
 
 ## Description
 
@@ -16,10 +20,6 @@ to a JavaScript object or array, respectively.
 
 This will not implicitly convert nested data into JavaScript objects or arrays.
 
-## Related
-cljs.core/js-obj
-cljs.core/array
-cljs.core/clj->js
 
 ## Examples
 

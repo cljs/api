@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/hash-map
+---
+name: cljs.spec.impl.gen/hash-map
+---
+

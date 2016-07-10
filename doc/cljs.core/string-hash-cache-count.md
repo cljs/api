@@ -1,2 +1,4 @@
-## Name
-cljs.core/string-hash-cache-count
+---
+name: cljs.core/string-hash-cache-count
+---
+

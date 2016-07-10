@@ -1,2 +1,4 @@
-## Name
-cljs.core/mix-collection-hash
+---
+name: cljs.core/mix-collection-hash
+---
+

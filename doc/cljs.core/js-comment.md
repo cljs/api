@@ -1,2 +1,4 @@
-## Name
-cljs.core/js-comment
+---
+name: cljs.core/js-comment
+---
+

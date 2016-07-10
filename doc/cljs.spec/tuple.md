@@ -1,2 +1,4 @@
-## Name
-cljs.spec/tuple
+---
+name: cljs.spec/tuple
+---
+

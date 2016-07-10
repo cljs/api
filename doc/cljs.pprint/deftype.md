@@ -1,2 +1,4 @@
-## Name
-cljs.pprint/deftype
+---
+name: cljs.pprint/deftype
+---
+

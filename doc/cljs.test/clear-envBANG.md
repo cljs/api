@@ -1,2 +1,4 @@
-## Name
-cljs.test/clear-env!
+---
+name: cljs.test/clear-env!
+---
+

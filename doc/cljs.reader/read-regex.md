@@ -1,2 +1,4 @@
-## Name
-cljs.reader/read-regex
+---
+name: cljs.reader/read-regex
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/dedupe
+---
+name: cljs.core/dedupe
+---
+

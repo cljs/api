@@ -1,2 +1,4 @@
-## Name
-cljs.pprint/char-code
+---
+name: cljs.pprint/char-code
+---
+

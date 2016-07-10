@@ -1,15 +1,17 @@
-## Name
-cljs.core/nfirst
+---
+name: cljs.core/nfirst
+related:
+  - cljs.core/next
+---
 
 ## Signature
 [coll]
+
 
 ## Description
 
 Same as `(next (first coll))`.
 
-## Related
-cljs.core/next
 
 ## Examples
 

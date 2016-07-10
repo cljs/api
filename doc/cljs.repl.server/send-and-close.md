@@ -1,2 +1,4 @@
-## Name
-cljs.repl.server/send-and-close
+---
+name: cljs.repl.server/send-and-close
+---
+

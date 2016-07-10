@@ -1,2 +1,4 @@
-## Name
-cljs.core/ns-unmap
+---
+name: cljs.core/ns-unmap
+---
+

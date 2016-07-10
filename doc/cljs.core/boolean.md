@@ -1,16 +1,18 @@
-## Name
-cljs.core/boolean
+---
+name: cljs.core/boolean
+related:
+  - special/if
+---
 
 ## Signature
 [x]
+
 
 ## Description
 
 Return `false` if `x` is false or nil.  Otherwise return `true`.  This is the
 truthiness condition used by `if` expressions.
 
-## Related
-special/if
 
 ## Examples
 

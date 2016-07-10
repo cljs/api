@@ -1,2 +1,4 @@
-## Name
-cljs.build.api/cljs-ns-dependents
+---
+name: cljs.build.api/cljs-ns-dependents
+---
+

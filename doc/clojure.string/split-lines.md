@@ -1,12 +1,13 @@
-## Name
-clojure.string/split-lines
+---
+name: clojure.string/split-lines
+related:
+  - clojure.string/split
+---
 
 ## Signature
 [s]
 
+
 ## Description
 
 Splits `s` on `\n` or `\r\n`.
-
-## Related
-clojure.string/split

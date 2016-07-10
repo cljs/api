@@ -1,2 +1,4 @@
-## Name
-clojure.zip/remove
+---
+name: clojure.zip/remove
+---
+

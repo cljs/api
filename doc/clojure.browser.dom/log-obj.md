@@ -1,2 +1,4 @@
-## Name
-clojure.browser.dom/log-obj
+---
+name: clojure.browser.dom/log-obj
+---
+

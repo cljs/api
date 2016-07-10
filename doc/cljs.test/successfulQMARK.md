@@ -1,2 +1,4 @@
-## Name
-cljs.test/successful?
+---
+name: cljs.test/successful?
+---
+

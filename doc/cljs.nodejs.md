@@ -1,5 +1,6 @@
-## Name
-cljs.nodejs
+---
+name: cljs.nodejs
+---
 
 ## Caption
 nodejs support functions

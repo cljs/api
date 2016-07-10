@@ -1,5 +1,5 @@
-## Name
-cljs.repl.browser/read-headers
+---
+name: cljs.repl.browser/read-headers
+moved: cljs.repl.server/read-headers
+---
 
-## Moved
-cljs.repl.server/read-headers

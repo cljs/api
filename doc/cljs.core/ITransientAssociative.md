@@ -1,2 +1,4 @@
-## Name
-cljs.core/ITransientAssociative
+---
+name: cljs.core/ITransientAssociative
+---
+

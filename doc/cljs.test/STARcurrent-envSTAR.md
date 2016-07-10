@@ -1,2 +1,4 @@
-## Name
-cljs.test/*current-env*
+---
+name: cljs.test/*current-env*
+---
+

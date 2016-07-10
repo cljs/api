@@ -1,2 +1,4 @@
-## Name
-clojure.core.reducers/take-while
+---
+name: clojure.core.reducers/take-while
+---
+

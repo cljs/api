@@ -1,2 +1,4 @@
-## Name
-clojure.browser.repl/bootstrap
+---
+name: clojure.browser.repl/bootstrap
+---
+

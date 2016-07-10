@@ -1,12 +1,16 @@
-## Name
-cljs.core/assoc
-
-## Known As
-associate
+---
+name: cljs.core/assoc
+known as: associate
+related:
+  - cljs.core/assoc-in
+  - cljs.core/dissoc
+  - cljs.core/merge
+---
 
 ## Signature
 [coll k v]
 [coll k v & kvs]
+
 
 ## Description
 
@@ -20,10 +24,6 @@ Has no effect on the map type (hashed/sorted).
 When applied to a vector, returns a new vector that contains value `v` at index
 `k`.
 
-## Related
-cljs.core/assoc-in
-cljs.core/dissoc
-cljs.core/merge
 
 ## Examples
 

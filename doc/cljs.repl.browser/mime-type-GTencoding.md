@@ -1,2 +1,4 @@
-## Name
-cljs.repl.browser/mime-type->encoding
+---
+name: cljs.repl.browser/mime-type->encoding
+---
+

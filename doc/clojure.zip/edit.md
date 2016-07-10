@@ -1,2 +1,4 @@
-## Name
-clojure.zip/edit
+---
+name: clojure.zip/edit
+---
+

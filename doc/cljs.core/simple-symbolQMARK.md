@@ -1,2 +1,4 @@
-## Name
-cljs.core/simple-symbol?
+---
+name: cljs.core/simple-symbol?
+---
+

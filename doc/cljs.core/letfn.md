@@ -1,8 +1,12 @@
-## Name
-cljs.core/letfn
+---
+name: cljs.core/letfn
+related:
+  - cljs.core/let
+---
 
 ## Signature
 [fnspecs & body]
+
 
 ## Description
 
@@ -15,6 +19,3 @@ functions as well as `body`.
 `letfn` is a wrapper over one of ClojureScript's [special forms].
 
 [special forms]:http://clojure.org/special_forms
-
-## Related
-cljs.core/let

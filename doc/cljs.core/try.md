@@ -1,5 +1,5 @@
-## Name
-cljs.core/try
+---
+name: cljs.core/try
+moved: special/try
+---
 
-## Moved
-special/try

@@ -1,2 +1,4 @@
-## Name
-cljs.core/ns-name
+---
+name: cljs.core/ns-name
+---
+

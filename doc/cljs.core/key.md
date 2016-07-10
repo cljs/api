@@ -1,12 +1,13 @@
-## Name
-cljs.core/key
+---
+name: cljs.core/key
+related:
+  - cljs.core/keys
+---
 
 ## Signature
 [map-entry]
 
+
 ## Description
 
 Returns the key of the map entry.
-
-## Related
-cljs.core/keys

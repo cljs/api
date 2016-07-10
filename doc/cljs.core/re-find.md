@@ -1,8 +1,10 @@
-## Name
-cljs.core/re-find
+---
+name: cljs.core/re-find
+---
 
 ## Signature
 [re s]
+
 
 ## Description
 
@@ -10,5 +12,3 @@ Returns the first regex match, if any, of `s` to `re`, using `re.exec(s)`.
 
 Returns a vector, containing first the matching substring, then any capturing
 groups if the regular expression contains capturing groups.
-
-## Related

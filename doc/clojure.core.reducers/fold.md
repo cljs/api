@@ -1,2 +1,4 @@
-## Name
-clojure.core.reducers/fold
+---
+name: clojure.core.reducers/fold
+---
+

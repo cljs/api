@@ -1,2 +1,4 @@
-## Name
-cljs.repl/IParseStacktrace
+---
+name: cljs.repl/IParseStacktrace
+---
+

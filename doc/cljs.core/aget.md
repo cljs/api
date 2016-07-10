@@ -1,9 +1,16 @@
-## Name
-cljs.core/aget
+---
+name: cljs.core/aget
+related:
+  - cljs.core/..
+  - cljs.core/aset
+  - cljs.core/get
+  - cljs.core/nth
+---
 
 ## Signature
 [array i]
 [array i & idxs]
+
 
 ## Description
 
@@ -38,10 +45,3 @@ For JavaScript objects, use [`goog.object/get`] or the multi-arity [`goog.object
 
 [`goog.object/get`]:http://google.github.io/closure-library/api/namespace_goog_object.html#get
 [`goog.object/getValueByKeys`]:http://google.github.io/closure-library/api/namespace_goog_object.html#getValueByKeys
-
-## Related
-cljs.core/..
-cljs.core/aset
-cljs.core/get
-cljs.core/nth
-

@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/any-printable
+---
+name: cljs.spec.impl.gen/any-printable
+---
+

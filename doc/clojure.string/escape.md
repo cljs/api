@@ -1,8 +1,10 @@
-## Name
-clojure.string/escape
+---
+name: clojure.string/escape
+---
 
 ## Signature
 [s cmap]
+
 
 ## Description
 
@@ -11,5 +13,3 @@ Return a new string, using `cmap` to escape each character `ch` from `s` as foll
 If `(cmap ch)` is nil, append ch to the new string.
 
 If `(cmap ch)` is non-nil, append `(str (cmap ch))` instead.
-
-## Related

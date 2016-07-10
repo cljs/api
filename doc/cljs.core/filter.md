@@ -1,9 +1,14 @@
-## Name
-cljs.core/filter
+---
+name: cljs.core/filter
+related:
+  - cljs.core/remove
+  - cljs.core/keep
+---
 
 ## Signature
 [f]
 [f coll]
+
 
 ## Description
 
@@ -13,7 +18,3 @@ false return values will be included.
 `f` must be free of side-effects.
 
 Returns a transducer when no collection is provided.
-
-## Related
-cljs.core/remove
-cljs.core/keep

@@ -1,11 +1,13 @@
-## Name
-syntax/cond-splicing
-
-## Display
-#?@ reader conditional splicing
+---
+name: syntax/cond-splicing
+display: "#?@ reader conditional splicing"
+related:
+  - syntax/cond
+---
 
 ## Usage
 #?@(...)
+
 
 ## Description
 
@@ -19,8 +21,6 @@ Like [doc:syntax/cond], except:
 
 `(def #?@(:cljs [foo 1])` is read as `(def foo 1)`.
 
-## Related
-syntax/cond
 
 ## Examples
 

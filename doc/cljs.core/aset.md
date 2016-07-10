@@ -1,9 +1,15 @@
-## Name
-cljs.core/aset
+---
+name: cljs.core/aset
+related:
+  - cljs.core/aget
+  - special/set!
+  - cljs.core/assoc-in
+---
 
 ## Signature
 [array i val]
 [array idx idx2 & idxv]
+
 
 ## Description
 
@@ -37,8 +43,3 @@ For JavaScript objects, use [`goog.object/set`].
 obj
 ;;=> #js {:foo "bar"}
 ```
-
-## Related
-cljs.core/aget
-special/set!
-cljs.core/assoc-in

@@ -1,2 +1,4 @@
-## Name
-clojure.browser.dom/append
+---
+name: clojure.browser.dom/append
+---
+

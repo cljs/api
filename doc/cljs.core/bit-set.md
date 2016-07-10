@@ -1,15 +1,17 @@
-## Name
-cljs.core/bit-set
+---
+name: cljs.core/bit-set
+related:
+  - cljs.core/bit-clear
+---
 
 ## Signature
 [x n]
+
 
 ## Description
 
 Set bit at index `n`.  Same as `x | (1 << y)` in JavaScript.
 
-## Related
-cljs.core/bit-clear
 
 ## Examples
 
@@ -27,4 +29,3 @@ Same number in decimal:
 (bit-set 12 1)
 ;;=> 14
 ```
-

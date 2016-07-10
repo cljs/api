@@ -1,8 +1,14 @@
-## Name
-cljs.core/for
+---
+name: cljs.core/for
+related:
+  - cljs.core/doseq
+  - cljs.core/doall
+  - special/recur
+---
 
 ## Signature
 [seq-exprs body-expr]
+
 
 ## Description
 
@@ -15,10 +21,6 @@ Collections are iterated in a nested fashion, rightmost fastest, and nested
 coll-exprs can refer to bindings created in prior binding-forms. Supported
 modifiers are: `:let [binding-form expr ...]`, `:while test`, `:when test`.
 
-## Related
-cljs.core/doseq
-cljs.core/doall
-special/recur
 
 ## TODO
 

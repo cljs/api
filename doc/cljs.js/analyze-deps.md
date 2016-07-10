@@ -1,2 +1,4 @@
-## Name
-cljs.js/analyze-deps
+---
+name: cljs.js/analyze-deps
+---
+

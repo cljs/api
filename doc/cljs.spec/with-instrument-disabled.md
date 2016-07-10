@@ -1,2 +1,4 @@
-## Name
-cljs.spec/with-instrument-disabled
+---
+name: cljs.spec/with-instrument-disabled
+---
+

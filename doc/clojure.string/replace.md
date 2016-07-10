@@ -1,8 +1,14 @@
-## Name
-clojure.string/replace
+---
+name: clojure.string/replace
+related:
+  - cljs.core/subs
+  - clojure.string/split
+  - clojure.string/replace-first
+---
 
 ## Signature
 [s match replacement]
+
 
 ## Description
 
@@ -15,8 +21,3 @@ The options for match / replacement are:
 | string | string      |
 | regex  | string      |
 | regex  | function    |
-
-## Related
-cljs.core/subs
-clojure.string/split
-clojure.string/replace-first

@@ -1,12 +1,15 @@
-## Name
-cljs.core/bit-count
+---
+name: cljs.core/bit-count
+---
 
 ## Signature
 [x]
 
+
 ## Description
 
 Counts the number of bits set in `x`.
+
 
 ## Examples
 

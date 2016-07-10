@@ -1,2 +1,4 @@
-## Name
-cljs.core/ranged-iterator
+---
+name: cljs.core/ranged-iterator
+---
+

@@ -1,2 +1,4 @@
-## Name
-clojure.browser.dom/get-value
+---
+name: clojure.browser.dom/get-value
+---
+

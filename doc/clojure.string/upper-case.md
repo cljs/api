@@ -1,11 +1,11 @@
-## Name
-clojure.string/upper-case
+---
+name: clojure.string/upper-case
+---
 
 ## Signature
 [s]
 
+
 ## Description
 
 Converts string to all upper-case.
-
-## Related

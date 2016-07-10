@@ -1,2 +1,4 @@
-## Name
-cljs.build.api/source-on-disk
+---
+name: cljs.build.api/source-on-disk
+---
+

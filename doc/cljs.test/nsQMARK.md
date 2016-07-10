@@ -1,2 +1,4 @@
-## Name
-cljs.test/ns?
+---
+name: cljs.test/ns?
+---
+

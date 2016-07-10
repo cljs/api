@@ -1,2 +1,4 @@
-## Name
-special/loop*
+---
+name: special/loop*
+---
+

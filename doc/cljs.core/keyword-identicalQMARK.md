@@ -1,2 +1,4 @@
-## Name
-cljs.core/keyword-identical?
+---
+name: cljs.core/keyword-identical?
+---
+

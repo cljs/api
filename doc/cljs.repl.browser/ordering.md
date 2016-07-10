@@ -1,2 +1,4 @@
-## Name
-cljs.repl.browser/ordering
+---
+name: cljs.repl.browser/ordering
+---
+

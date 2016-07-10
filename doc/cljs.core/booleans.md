@@ -1,2 +1,4 @@
-## Name
-cljs.core/booleans
+---
+name: cljs.core/booleans
+---
+

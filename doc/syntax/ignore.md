@@ -1,17 +1,16 @@
-## Name
-syntax/ignore
-
-## Display
-#_ ignore
+---
+name: syntax/ignore
+display: "#_ ignore"
+related:
+  - syntax/comment
+  - cljs.core/comment
+---
 
 ## Description
 
 Causes the following form to be completely skipped by the reader.  This is a
 more complete removal than the `comment` macro which yields nil.
 
-## Related
-syntax/comment
-cljs.core/comment
 
 ## Examples
 

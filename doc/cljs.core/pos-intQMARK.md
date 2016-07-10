@@ -1,2 +1,4 @@
-## Name
-cljs.core/pos-int?
+---
+name: cljs.core/pos-int?
+---
+

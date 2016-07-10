@@ -1,14 +1,15 @@
-## Name
-cljs.core/sorted-set-by
+---
+name: cljs.core/sorted-set-by
+related:
+  - cljs.core/sorted-set
+  - cljs.core/sorted-map-by
+  - cljs.core/compare
+---
 
 ## Signature
 [comparator & keys]
 
+
 ## Description
 
 Returns a new sorted set with supplied `keys`, using the supplied `comparator`.
-
-## Related
-cljs.core/sorted-set
-cljs.core/sorted-map-by
-cljs.core/compare

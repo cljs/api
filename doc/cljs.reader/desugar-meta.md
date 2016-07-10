@@ -1,2 +1,4 @@
-## Name
-cljs.reader/desugar-meta
+---
+name: cljs.reader/desugar-meta
+---
+

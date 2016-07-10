@@ -1,2 +1,4 @@
-## Name
-cljs.core/lazy-transformer
+---
+name: cljs.core/lazy-transformer
+---
+

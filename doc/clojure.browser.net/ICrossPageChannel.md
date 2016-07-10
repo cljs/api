@@ -1,2 +1,4 @@
-## Name
-clojure.browser.net/ICrossPageChannel
+---
+name: clojure.browser.net/ICrossPageChannel
+---
+

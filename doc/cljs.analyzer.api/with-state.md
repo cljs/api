@@ -1,2 +1,4 @@
-## Name
-cljs.analyzer.api/with-state
+---
+name: cljs.analyzer.api/with-state
+---
+

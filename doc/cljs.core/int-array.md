@@ -1,2 +1,4 @@
-## Name
-cljs.core/int-array
+---
+name: cljs.core/int-array
+---
+

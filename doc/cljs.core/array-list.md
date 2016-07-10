@@ -1,2 +1,4 @@
-## Name
-cljs.core/array-list
+---
+name: cljs.core/array-list
+---
+

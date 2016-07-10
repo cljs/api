@@ -1,11 +1,13 @@
-## Name
-syntax/earmuffs
-
-## Display
-*earmuffs*
+---
+name: syntax/earmuffs
+display: "*earmuffs*"
+related:
+  - cljs.core/binding
+---
 
 ## Usage
 *foo*
+
 
 ## Description
 
@@ -20,8 +22,6 @@ NOTE: Sometimes, the core library uses the earmuffs convention for non-dynamic
 special global vars (e.g. [doc:cljs.core/*clojurescript-version*],
 [doc:cljs.core/*main-cli-fn*]).
 
-## Related
-cljs.core/binding
 
 ## TODO
 The following emits a warning in Clojure.  We should provide the same in ClojureScript:
@@ -32,6 +32,7 @@ The following emits a warning in Clojure.  We should provide the same in Clojure
 ;;     but its name suggests otherwise. Please either indicate ^:dynamic *foo* or
 ;;     change the name.
 ```
+
 
 ## Examples
 
@@ -51,4 +52,3 @@ The following emits a warning in Clojure.  We should provide the same in Clojure
 (print-foo)
 ;; 1
 ```
-

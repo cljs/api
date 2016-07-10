@@ -1,11 +1,11 @@
-## Name
-syntax
-
-## Display
-Syntax
+---
+name: syntax
+display: "Syntax"
+---
 
 ## Caption
 Syntax forms, literals, conventions and patterns.
+
 
 ## Description
 

@@ -1,5 +1,6 @@
-## Name
-cljs.repl.nashorn
+---
+name: cljs.repl.nashorn
+---
 
 ## Caption
 Nashorn REPL (JS on Java 8)

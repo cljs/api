@@ -1,2 +1,4 @@
-## Name
-cljs.core/Subvec
+---
+name: cljs.core/Subvec
+---
+

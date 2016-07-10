@@ -1,2 +1,4 @@
-## Name
-clojure.browser.event/remove-all
+---
+name: clojure.browser.event/remove-all
+---
+

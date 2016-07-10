@@ -1,2 +1,4 @@
-## Name
-cljs.js/empty-state
+---
+name: cljs.js/empty-state
+---
+

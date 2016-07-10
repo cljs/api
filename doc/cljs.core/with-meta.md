@@ -1,17 +1,19 @@
-## Name
-cljs.core/with-meta
+---
+name: cljs.core/with-meta
+related:
+  - cljs.core/alter-meta!
+  - cljs.core/vary-meta
+---
 
 ## Signature
 [obj m]
+
 
 ## Description
 
 Returns an object of the same type and value as `obj`, with map `m` as its
 metadata.
 
-## Related
-cljs.core/alter-meta!
-cljs.core/vary-meta
 
 ## Examples
 

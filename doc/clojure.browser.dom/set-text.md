@@ -1,2 +1,4 @@
-## Name
-clojure.browser.dom/set-text
+---
+name: clojure.browser.dom/set-text
+---
+

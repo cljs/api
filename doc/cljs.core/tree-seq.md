@@ -1,8 +1,10 @@
-## Name
-cljs.core/tree-seq
+---
+name: cljs.core/tree-seq
+---
 
 ## Signature
 [branch? children root]
+
 
 ## Description
 
@@ -16,5 +18,3 @@ children. `children` will only be called on nodes for which `branch?` returns
 true.
 
 `root` is the root node of the tree.
-
-## Related

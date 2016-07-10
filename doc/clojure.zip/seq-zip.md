@@ -1,2 +1,4 @@
-## Name
-clojure.zip/seq-zip
+---
+name: clojure.zip/seq-zip
+---
+

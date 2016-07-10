@@ -1,2 +1,4 @@
-## Name
-cljs.analyzer.api/remove-ns
+---
+name: cljs.analyzer.api/remove-ns
+---
+

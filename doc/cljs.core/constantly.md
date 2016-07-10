@@ -1,11 +1,16 @@
-## Name
-cljs.core/constantly
+---
+name: cljs.core/constantly
+related:
+  - cljs.core/repeatedly
+---
 
 ## Signature
 [x]
 
+
 ## Description
 Returns a function that takes any number of arguments and always returns `x`.
+
 
 ## Examples
 
@@ -21,6 +26,3 @@ Returns a function that takes any number of arguments and always returns `x`.
 (ten :whatever)
 ;;=> 10
 ```
-
-## Related
-cljs.core/repeatedly

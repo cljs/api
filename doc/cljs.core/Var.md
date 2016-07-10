@@ -1,2 +1,4 @@
-## Name
-cljs.core/Var
+---
+name: cljs.core/Var
+---
+

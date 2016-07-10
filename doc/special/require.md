@@ -1,9 +1,13 @@
-## Name
-special/require
+---
+name: special/require
+related:
+  - special/require-macros
+---
 
 ## Notes
 
 description below taken from `repl-special-doc-map`
+
 
 ## Description
 
@@ -36,8 +40,6 @@ A flag is a keyword. Recognized flags:
   identified libs directly or indirectly load via require or use
 - `:verbose` triggers printing information about each load, alias, and refer
 
-## Related
-special/require-macros
 
 ## Examples
 

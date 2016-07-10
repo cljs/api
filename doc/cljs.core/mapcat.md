@@ -1,9 +1,14 @@
-## Name
-cljs.core/mapcat
+---
+name: cljs.core/mapcat
+related:
+  - cljs.core/map
+  - cljs.core/concat
+---
 
 ## Signature
 [f]
 [f & colls]
+
 
 ## Description
 
@@ -13,7 +18,3 @@ and `colls`.
 Function `f` should return a collection.
 
 Returns a transducer when no collections are provided.
-
-## Related
-cljs.core/map
-cljs.core/concat

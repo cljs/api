@@ -1,2 +1,4 @@
-## Name
-cljs.core/is_proto_
+---
+name: cljs.core/is_proto_
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/string-iter
+---
+name: cljs.core/string-iter
+---
+

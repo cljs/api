@@ -1,16 +1,18 @@
-## Name
-cljs.repl/find-doc
+---
+name: cljs.repl/find-doc
+related:
+  - cljs.repl/doc
+---
 
 ## Signature
 [re-string-or-pattern]
+
 
 ## Description
 
 Prints documentation for any var whose documentation or name
 contains a match for `re-string-or-pattern`.
 
-## Related
-cljs.repl/doc
 
 ## Examples
 

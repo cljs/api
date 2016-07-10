@@ -1,2 +1,4 @@
-## Name
-clojure.core.reducers/flatten
+---
+name: clojure.core.reducers/flatten
+---
+

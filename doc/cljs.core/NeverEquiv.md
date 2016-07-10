@@ -1,2 +1,4 @@
-## Name
-cljs.core/NeverEquiv
+---
+name: cljs.core/NeverEquiv
+---
+

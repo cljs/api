@@ -1,8 +1,13 @@
-## Name
-cljs.core/let
+---
+name: cljs.core/let
+related:
+  - cljs.core/letfn
+  - cljs.core/if-let
+---
 
 ## Signature
 [bindings & body]
+
 
 ## Description
 
@@ -27,7 +32,3 @@ syntax and scope rules.
 
 [mini-language]:http://blog.jayfields.com/2010/07/clojure-destructuring.html
 [special forms]:http://clojure.org/special_forms
-
-## Related
-cljs.core/letfn
-cljs.core/if-let

@@ -1,2 +1,4 @@
-## Name
-clojure.browser.repl/get-ua-product
+---
+name: clojure.browser.repl/get-ua-product
+---
+

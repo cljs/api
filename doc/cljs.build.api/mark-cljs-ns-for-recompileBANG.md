@@ -1,2 +1,4 @@
-## Name
-cljs.build.api/mark-cljs-ns-for-recompile!
+---
+name: cljs.build.api/mark-cljs-ns-for-recompile!
+---
+

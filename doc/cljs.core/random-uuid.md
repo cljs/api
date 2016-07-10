@@ -1,2 +1,4 @@
-## Name
-cljs.core/random-uuid
+---
+name: cljs.core/random-uuid
+---
+

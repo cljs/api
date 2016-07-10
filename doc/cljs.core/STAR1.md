@@ -1,5 +1,10 @@
-## Name
-cljs.core/*1
+---
+name: cljs.core/*1
+related:
+  - cljs.core/*2
+  - cljs.core/*3
+  - cljs.core/*e
+---
 
 ## Description
 
@@ -7,10 +12,6 @@ Only usable from a REPL.
 
 Holds the result of the last expression.
 
-## Related
-cljs.core/*2
-cljs.core/*3
-cljs.core/*e
 
 ## Examples
 

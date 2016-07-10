@@ -1,2 +1,4 @@
-## Name
-cljs.core/ArrayNode
+---
+name: cljs.core/ArrayNode
+---
+

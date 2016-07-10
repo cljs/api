@@ -1,2 +1,4 @@
-## Name
-cljs.core/IDerefWithTimeout
+---
+name: cljs.core/IDerefWithTimeout
+---
+

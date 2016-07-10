@@ -1,2 +1,4 @@
-## Name
-cljs.test/js-filename
+---
+name: cljs.test/js-filename
+---
+

@@ -1,15 +1,17 @@
-## Name
-cljs.core/bit-shift-left
+---
+name: cljs.core/bit-shift-left
+related:
+  - cljs.core/bit-shift-right
+---
 
 ## Signature
 [x n]
+
 
 ## Description
 
 Bitwise shift left `n` bits.  Same as `x << n` in JavaScript.
 
-## Related
-cljs.core/bit-shift-right
 
 ## Examples
 

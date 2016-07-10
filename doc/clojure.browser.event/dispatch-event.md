@@ -1,2 +1,4 @@
-## Name
-clojure.browser.event/dispatch-event
+---
+name: clojure.browser.event/dispatch-event
+---
+

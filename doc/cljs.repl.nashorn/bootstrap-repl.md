@@ -1,2 +1,4 @@
-## Name
-cljs.repl.nashorn/bootstrap-repl
+---
+name: cljs.repl.nashorn/bootstrap-repl
+---
+

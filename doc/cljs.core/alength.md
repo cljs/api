@@ -1,15 +1,17 @@
-## Name
-cljs.core/alength
+---
+name: cljs.core/alength
+related:
+  - cljs.core/count
+---
 
 ## Signature
 [a]
+
 
 ## Description
 
 For interop, it returns the length of a JavaScript array or string.
 
-## Related
-cljs.core/count
 
 ## Examples
 

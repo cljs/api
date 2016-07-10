@@ -1,2 +1,4 @@
-## Name
-cljs.test/IAsyncTest
+---
+name: cljs.test/IAsyncTest
+---
+

@@ -1,11 +1,13 @@
-## Name
-syntax/string
-
-## Display
-"" string
+---
+name: syntax/string
+display: "\"\" string"
+related:
+  - cljs.core/str
+---
 
 ## Usage
 "..."
+
 
 ## Description
 
@@ -23,8 +25,6 @@ escape characters:
 | `\uXXXX`            | XXXX must have 4 digits outside 0xD7FF-0xE000 |
 | `\oXXX`             | XXX is octal between 0 and 0377               |
 
-## Related
-cljs.core/str
 
 ## Examples
 

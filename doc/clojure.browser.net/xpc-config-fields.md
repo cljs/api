@@ -1,2 +1,4 @@
-## Name
-clojure.browser.net/xpc-config-fields
+---
+name: clojure.browser.net/xpc-config-fields
+---
+

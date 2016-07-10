@@ -1,8 +1,14 @@
-## Name
-cljs.core/coll?
+---
+name: cljs.core/coll?
+related:
+  - cljs.core/seq?
+  - cljs.core/list?
+  - cljs.core/sequential?
+---
 
 ## Signature
 [x]
+
 
 ## Description
 
@@ -10,10 +16,6 @@ Returns true if `x` is a collection, false otherwise.
 
 Lists, maps, sets, and vectors are collections.
 
-## Related
-cljs.core/seq?
-cljs.core/list?
-cljs.core/sequential?
 
 ## Examples
 

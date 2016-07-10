@@ -1,2 +1,4 @@
-## Name
-cljs.core/floats
+---
+name: cljs.core/floats
+---
+

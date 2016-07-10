@@ -1,2 +1,4 @@
-## Name
-cljs.repl/special-doc-map
+---
+name: cljs.repl/special-doc-map
+---
+

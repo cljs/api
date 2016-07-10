@@ -1,8 +1,12 @@
-## Name
-cljs.repl/source
+---
+name: cljs.repl/source
+related:
+  - cljs.repl/doc
+---
 
 ## Signature
 [name]
+
 
 ## Description
 
@@ -10,8 +14,6 @@ Prints the source code for the given symbol `name`, if it can find it.  This
 requires that the symbol resolve to a Var defined in a namespace for which the
 .cljs is in the classpath.
 
-## Related
-cljs.repl/doc
 
 ## Examples
 
@@ -25,4 +27,3 @@ cljs.repl/doc
 ;;
 ;;=> nil
 ```
-

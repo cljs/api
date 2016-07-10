@@ -1,2 +1,4 @@
-## Name
-cljs.pprint/*print-suppress-namespaces*
+---
+name: cljs.pprint/*print-suppress-namespaces*
+---
+

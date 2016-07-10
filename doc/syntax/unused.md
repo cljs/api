@@ -1,8 +1,7 @@
-## Name
-syntax/unused
-
-## Display
-_ unused
+---
+name: syntax/unused
+display: "_ unused"
+---
 
 ## Description
 
@@ -42,6 +41,7 @@ value of its last binding, but using it should be strictly avoided to prevent
 confusion.  This is the only encouraged use-case for duplicating parameter
 names.
 
+
 ## Examples
 
 It is common to use `_` to ignore all but the latest value of a changing atom
@@ -57,4 +57,3 @@ inside an [doc:cljs.core/add-watch] callback:
 (reset! a 2)
 ;; 2
 ```
-

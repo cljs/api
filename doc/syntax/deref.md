@@ -1,11 +1,15 @@
-## Name
-syntax/deref
-
-## Display
-@ deref
+---
+name: syntax/deref
+display: "@ deref"
+related:
+  - cljs.core/deref
+  - cljs.core/atom
+  - cljs.core/delay
+---
 
 ## Usage
 @foo
+
 
 ## Description
 
@@ -14,10 +18,6 @@ syntax/deref
 Retrieve the underlying value of a reference.  References can be created by
 [doc:cljs.core/atom] or [doc:cljs.core/delay].
 
-## Related
-cljs.core/deref
-cljs.core/atom
-cljs.core/delay
 
 ## Examples
 

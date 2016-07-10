@@ -1,2 +1,4 @@
-## Name
-cljs.core/IndexedSeqIterator
+---
+name: cljs.core/IndexedSeqIterator
+---
+

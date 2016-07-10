@@ -1,2 +1,4 @@
-## Name
-cljs.core/defprotocol
+---
+name: cljs.core/defprotocol
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/with-redefs
+---
+name: cljs.core/with-redefs
+---
+

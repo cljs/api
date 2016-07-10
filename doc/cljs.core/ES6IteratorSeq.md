@@ -1,2 +1,4 @@
-## Name
-cljs.core/ES6IteratorSeq
+---
+name: cljs.core/ES6IteratorSeq
+---
+

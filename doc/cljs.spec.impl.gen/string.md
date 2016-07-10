@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/string
+---
+name: cljs.spec.impl.gen/string
+---
+

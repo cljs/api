@@ -1,2 +1,4 @@
-## Name
-cljs.core/find-ns
+---
+name: cljs.core/find-ns
+---
+

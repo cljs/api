@@ -1,11 +1,16 @@
-## Name
-cljs.core/every-pred
+---
+name: cljs.core/every-pred
+related:
+  - cljs.core/some-fn
+  - cljs.core/and
+---
 
 ## Signature
 [p]
 [p1 p2]
 [p1 p2 p3]
 [p1 p2 p3 & ps]
+
 
 ## Description
 
@@ -15,7 +20,3 @@ its arguments, else it returns false.
 
 Note that `f` is short-circuiting in that it will stop execution on the first
 argument that triggers a logical false result against the original predicates.
-
-## Related
-cljs.core/some-fn
-cljs.core/and

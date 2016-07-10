@@ -1,12 +1,14 @@
-## Name
-syntax/namespace
-
-## Display
-/ namespace slash
+---
+name: syntax/namespace
+display: "/ namespace slash"
+related:
+  - syntax/dot
+---
 
 ## Usage
 foo/baz
 foo.bar/baz
+
 
 ## Description
 
@@ -22,7 +24,3 @@ notice `/` appearing before `PersistentVector` in Clojure:
 [doc:cljs.core//] is the division function if it is by itself.
 
 See [doc:syntax/dot] for usage of dots on either side of `/`
-
-## Related
-syntax/dot
-

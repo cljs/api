@@ -1,8 +1,10 @@
-## Name
-special/in-ns
+---
+name: special/in-ns
+---
 
 ## Signature
 [name]
+
 
 ## Description
 
@@ -11,6 +13,7 @@ Only usable from a REPL.
 Changes to the namespace `name`, creating it if needed.
 
 Sets `*cljs-ns*` to the namespace `name`.
+
 
 ## TODO
 
@@ -22,6 +25,7 @@ doesn't seem to be working:
 ;; WARNING: Use of undeclared Var cljs.user/*cljs-ns* at line 1 <cljs repl>
 ;; nil
 ```
+
 
 ## Examples
 

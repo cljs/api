@@ -1,2 +1,4 @@
-## Name
-cljs.core/IPending
+---
+name: cljs.core/IPending
+---
+

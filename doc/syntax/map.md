@@ -1,21 +1,21 @@
-## Name
-syntax/map
-
-## Display
-{} map
+---
+name: syntax/map
+display: "{} map"
+related:
+  - cljs.core/hash-map
+  - cljs.core/array-map
+  - cljs.core/sorted-map
+  - cljs.core/sorted-map-by
+---
 
 ## Usage
 {...}
+
 
 ## Description
 
 Creates a map.  Must contain pairs of key-values.  Keys and values can be any type.
 
-## Related
-cljs.core/hash-map
-cljs.core/array-map
-cljs.core/sorted-map
-cljs.core/sorted-map-by
 
 ## Examples
 

@@ -1,8 +1,14 @@
-## Name
-cljs.core/take-last
+---
+name: cljs.core/take-last
+related:
+  - cljs.core/last
+  - cljs.core/butlast
+  - cljs.core/drop-last
+---
 
 ## Signature
 [n coll]
+
 
 ## Description
 
@@ -11,10 +17,6 @@ Returns a sequence of the last `n` items in `coll`.
 Depending on the type of collection, `take-last` may be no faster than linear
 time. For vectors, please use `subvec`.
 
-## Related
-cljs.core/last
-cljs.core/butlast
-cljs.core/drop-last
 
 ## TODO
 

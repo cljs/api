@@ -1,5 +1,6 @@
-## Name
-cljs.core/extend-protocol
+---
+name: cljs.core/extend-protocol
+related:
+  - cljs.core/extend-type
+---
 
-## Related
-cljs.core/extend-type

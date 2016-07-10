@@ -1,8 +1,12 @@
-## Name
-cljs.core/js-in
+---
+name: cljs.core/js-in
+related:
+  - cljs.core/contains?
+---
 
 ## Signature
 [key obj]
+
 
 ## Description
 
@@ -10,8 +14,6 @@ Determines if property `key` is in JavaScript object `obj`.
 
 Equivalent to `key in obj` in JavaScript.
 
-## Related
-cljs.core/contains?
 
 ## Examples
 

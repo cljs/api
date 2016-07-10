@@ -1,2 +1,4 @@
-## Name
-cljs.core/type
+---
+name: cljs.core/type
+---
+

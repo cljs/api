@@ -1,5 +1,12 @@
-## Name
-cljs.core/map
+---
+name: cljs.core/map
+related:
+  - cljs.core/map-indexed
+  - cljs.core/amap
+  - cljs.core/mapcat
+  - cljs.core/keep
+  - cljs.core/juxt
+---
 
 ## Signature
 [f]
@@ -7,6 +14,7 @@ cljs.core/map
 [f c1 c2]
 [f c1 c2 c3]
 [f c1 c2 c3 & colls]
+
 
 ## Description
 
@@ -19,10 +27,3 @@ is exhausted. Any remaining items in other `c`s are ignored. Function `f` should
 accept number-of-`c`s arguments.
 
 Returns a transducer when no collection is provided.
-
-## Related
-cljs.core/map-indexed
-cljs.core/amap
-cljs.core/mapcat
-cljs.core/keep
-cljs.core/juxt

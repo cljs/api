@@ -1,11 +1,11 @@
-## Name
-special
-
-## Display
-Special Forms
+---
+name: special
+display: "Special Forms"
+---
 
 ## Caption
 The core constructs of ClojureScript.
+
 
 ## Description
 

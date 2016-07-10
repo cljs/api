@@ -1,2 +1,4 @@
-## Name
-cljs.core/goog-define
+---
+name: cljs.core/goog-define
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/printf
+---
+name: cljs.core/printf
+---
+

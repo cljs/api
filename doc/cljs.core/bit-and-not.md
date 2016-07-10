@@ -1,17 +1,19 @@
-## Name
-cljs.core/bit-and-not
+---
+name: cljs.core/bit-and-not
+related:
+  - cljs.core/bit-and
+  - cljs.core/bit-not
+---
 
 ## Signature
 [x y]
 [x y & more]
 
+
 ## Description
 
 Bitwise "and" `x` with bitwise "not" `y`.  Same as `x & ~y` in JavaScript.
 
-## Related
-cljs.core/bit-and
-cljs.core/bit-not
 
 ## Examples
 
@@ -36,4 +38,3 @@ Same result using `bit-and` and `bit-not`:
 (bit-and 12 (bit-not 10))
 ;;=> 4
 ```
-

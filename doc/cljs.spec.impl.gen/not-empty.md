@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/not-empty
+---
+name: cljs.spec.impl.gen/not-empty
+---
+

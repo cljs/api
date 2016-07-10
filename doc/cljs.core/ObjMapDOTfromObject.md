@@ -1,2 +1,4 @@
-## Name
-cljs.core/ObjMap.fromObject
+---
+name: cljs.core/ObjMap.fromObject
+---
+

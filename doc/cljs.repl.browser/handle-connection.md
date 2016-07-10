@@ -1,2 +1,4 @@
-## Name
-cljs.repl.browser/handle-connection
+---
+name: cljs.repl.browser/handle-connection
+---
+

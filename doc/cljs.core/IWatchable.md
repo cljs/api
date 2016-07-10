@@ -1,2 +1,4 @@
-## Name
-cljs.core/IWatchable
+---
+name: cljs.core/IWatchable
+---
+

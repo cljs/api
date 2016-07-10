@@ -1,8 +1,14 @@
-## Name
-special/try
+---
+name: special/try
+related:
+  - special/catch
+  - special/finally
+  - special/throw
+---
 
 ## Signature
 [expr* catch-clause* finally-clause?]
+
 
 ## Description
 
@@ -21,8 +27,3 @@ function. Before returning, normally or abnormally, any `finally-clause?`
 expressions will be evaluated for their side effects.
 
 `try` is one of ClojureScript's [special forms](http://clojure.org/special_forms).
-
-## Related
-special/catch
-special/finally
-special/throw

@@ -1,2 +1,4 @@
-## Name
-special/js*
+---
+name: special/js*
+---
+

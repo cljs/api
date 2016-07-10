@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/map
+---
+name: cljs.spec.impl.gen/map
+---
+

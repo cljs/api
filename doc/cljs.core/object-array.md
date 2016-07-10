@@ -1,2 +1,4 @@
-## Name
-cljs.core/object-array
+---
+name: cljs.core/object-array
+---
+

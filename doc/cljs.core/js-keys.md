@@ -1,15 +1,17 @@
-## Name
-cljs.core/js-keys
+---
+name: cljs.core/js-keys
+related:
+  - cljs.core/keys
+---
 
 ## Signature
 [obj]
+
 
 ## Description
 
 Returns the keys for the JavaScript object `obj`.
 
-## Related
-cljs.core/keys
 
 ## Examples
 

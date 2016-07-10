@@ -1,5 +1,5 @@
-## Name
-cljs.pprint/PrettyFlush
+---
+name: cljs.pprint/PrettyFlush
+moved: cljs.pprint/IPrettyFlush
+---
 
-## Moved
-cljs.pprint/IPrettyFlush

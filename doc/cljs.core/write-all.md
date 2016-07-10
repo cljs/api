@@ -1,2 +1,4 @@
-## Name
-cljs.core/write-all
+---
+name: cljs.core/write-all
+---
+

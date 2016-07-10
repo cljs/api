@@ -1,5 +1,6 @@
-## Name
-clojure.string
+---
+name: clojure.string
+---
 
 ## Caption
 string operations

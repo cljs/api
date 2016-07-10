@@ -1,2 +1,4 @@
-## Name
-cljs.analyzer.api/empty-state
+---
+name: cljs.analyzer.api/empty-state
+---
+

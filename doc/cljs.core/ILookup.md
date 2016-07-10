@@ -1,2 +1,4 @@
-## Name
-cljs.core/ILookup
+---
+name: cljs.core/ILookup
+---
+

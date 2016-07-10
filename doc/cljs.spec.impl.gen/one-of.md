@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/one-of
+---
+name: cljs.spec.impl.gen/one-of
+---
+

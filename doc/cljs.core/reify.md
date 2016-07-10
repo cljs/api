@@ -1,2 +1,4 @@
-## Name
-cljs.core/reify
+---
+name: cljs.core/reify
+---
+

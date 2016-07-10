@@ -1,2 +1,4 @@
-## Name
-cljs.core/boolean?
+---
+name: cljs.core/boolean?
+---
+

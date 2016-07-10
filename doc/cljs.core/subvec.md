@@ -1,9 +1,14 @@
-## Name
-cljs.core/subvec
+---
+name: cljs.core/subvec
+related:
+  - cljs.core/vector
+  - cljs.core/vector?
+---
 
 ## Signature
 [v start]
 [v start end]
+
 
 ## Description
 
@@ -14,7 +19,3 @@ If `end` is not supplied, defaults to `(count v)`.
 
 This operation is O(1) and very fast, as the resulting vector shares structure
 with the original and no trimming is done.
-
-## Related
-cljs.core/vector
-cljs.core/vector?

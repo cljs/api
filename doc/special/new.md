@@ -1,2 +1,4 @@
-## Name
-special/new
+---
+name: special/new
+---
+

@@ -1,2 +1,4 @@
-## Name
-cljs.core/*print-fn*
+---
+name: cljs.core/*print-fn*
+---
+

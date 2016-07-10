@@ -1,2 +1,4 @@
-## Name
-cljs.reader/read-symbol
+---
+name: cljs.reader/read-symbol
+---
+

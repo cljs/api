@@ -1,5 +1,5 @@
-## Name
-cljs.repl.browser/stop-server
+---
+name: cljs.repl.browser/stop-server
+moved: cljs.repl.server/stop
+---
 
-## Moved
-cljs.repl.server/stop

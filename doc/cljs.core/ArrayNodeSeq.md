@@ -1,2 +1,4 @@
-## Name
-cljs.core/ArrayNodeSeq
+---
+name: cljs.core/ArrayNodeSeq
+---
+

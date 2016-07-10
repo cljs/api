@@ -1,2 +1,4 @@
-## Name
-cljs.repl/repl-quit-prompt
+---
+name: cljs.repl/repl-quit-prompt
+---
+

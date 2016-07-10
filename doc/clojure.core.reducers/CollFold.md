@@ -1,2 +1,4 @@
-## Name
-clojure.core.reducers/CollFold
+---
+name: clojure.core.reducers/CollFold
+---
+

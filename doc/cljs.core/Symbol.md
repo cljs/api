@@ -1,2 +1,4 @@
-## Name
-cljs.core/Symbol
+---
+name: cljs.core/Symbol
+---
+

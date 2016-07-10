@@ -1,8 +1,10 @@
-## Name
-syntax/unquote
-
-## Display
-~ unquote
+---
+name: syntax/unquote
+display: "~ unquote"
+related:
+  - syntax/syntax-quote
+  - syntax/unquote-splicing
+---
 
 ## Description
 
@@ -13,9 +15,6 @@ Intended for use inside a [doc:syntax/syntax-quote].
 
 Forces evaluation of the following form.
 
-## Related
-syntax/syntax-quote
-syntax/unquote-splicing
 
 ## Examples
 

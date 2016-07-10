@@ -1,2 +1,4 @@
-## Name
-cljs.core/long
+---
+name: cljs.core/long
+---
+

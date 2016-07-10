@@ -1,10 +1,16 @@
-## Name
-cljs.core/=
+---
+name: cljs.core/=
+related:
+  - cljs.core/==
+  - cljs.core/not=
+  - cljs.core/identical?
+---
 
 ## Signature
 [x]
 [x y]
 [x y & more]
+
 
 ## Description
 
@@ -14,10 +20,6 @@ Returns true if the value of `x` equals the value of `y`, false otherwise.
 
 All collections can be tested for value, regardless of "depth".
 
-## Related
-cljs.core/==
-cljs.core/not=
-cljs.core/identical?
 
 ## Examples
 
@@ -83,4 +85,3 @@ ClojureScript collections:
    (js->clj b))
 ;;=> true
 ```
-

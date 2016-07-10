@@ -1,2 +1,4 @@
-## Name
-cljs.core/MultiFn
+---
+name: cljs.core/MultiFn
+---
+

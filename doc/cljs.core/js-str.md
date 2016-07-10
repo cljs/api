@@ -1,8 +1,12 @@
-## Name
-cljs.core/js-str
+---
+name: cljs.core/js-str
+related:
+  - cljs.core/str
+---
 
 ## Signature
 [s]
+
 
 ## Description
 
@@ -10,8 +14,6 @@ Convert `s` to string using JavaScript's coercion behavior.
 
 Equivalent to `''+s` in JavaScript.
 
-## Related
-cljs.core/str
 
 ## Examples
 

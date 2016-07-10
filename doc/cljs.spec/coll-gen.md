@@ -1,2 +1,4 @@
-## Name
-cljs.spec/coll-gen
+---
+name: cljs.spec/coll-gen
+---
+

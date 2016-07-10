@@ -1,11 +1,13 @@
-## Name
-syntax/predicate
-
-## Display
-? predicate
+---
+name: syntax/predicate
+display: "? predicate"
+related:
+  - syntax/impure
+---
 
 ## Usage
 foo?
+
 
 ## Description
 
@@ -23,8 +25,6 @@ Some predicate functions which use this convention:
 
 It is sometimes used to name boolean values as well, not just predicate functions.
 
-## Related
-syntax/impure
 
 ## Examples
 
@@ -43,4 +43,3 @@ Create a `divisible?` predicate:
 (filter #(divisible? 15 %) (range 15))
 ;;=> (1 3 5)
 ```
-

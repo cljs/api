@@ -1,2 +1,4 @@
-## Name
-clojure.browser.net/IConnection
+---
+name: clojure.browser.net/IConnection
+---
+

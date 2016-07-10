@@ -1,11 +1,11 @@
-## Name
-syntax/eval
-
-## Display
-#= eval
+---
+name: syntax/eval
+display: "#= eval"
+---
 
 ## Usage
 #=...
+
 
 ## Description
 
@@ -13,6 +13,7 @@ Allows the reader to evaluate the following form.
 
 This feature is carried from tools.reader is not intended for use in ClojureScript,
 though it works for basic forms not using symbols.
+
 
 ## Examples
 

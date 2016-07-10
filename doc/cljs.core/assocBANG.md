@@ -1,9 +1,14 @@
-## Name
-cljs.core/assoc!
+---
+name: cljs.core/assoc!
+related:
+  - cljs.core/transient
+  - cljs.core/persistent!
+---
 
 ## Signature
 [tcoll key val]
 [tcoll key val & kvs]
+
 
 ## Description
 
@@ -16,9 +21,6 @@ be <= (count vector).
 
 Returns coll.
 
-## Related
-cljs.core/transient
-cljs.core/persistent!
 
 ## Examples
 
@@ -39,4 +41,3 @@ tcoll
 (def a (persistent! tcoll))
 ;;=> {:a 1 :b 2}
 ```
-

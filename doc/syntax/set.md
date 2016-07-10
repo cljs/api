@@ -1,20 +1,20 @@
-## Name
-syntax/set
-
-## Display
-#{} set
+---
+name: syntax/set
+display: "#{} set"
+related:
+  - cljs.core/hash-set
+  - cljs.core/sorted-set
+  - cljs.core/sorted-set-by
+---
 
 ## Usage
 #{...}
+
 
 ## Description
 
 Create a literal set.  Values must be unique.
 
-## Related
-cljs.core/hash-set
-cljs.core/sorted-set
-cljs.core/sorted-set-by
 
 ## Examples
 

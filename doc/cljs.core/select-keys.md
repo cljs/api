@@ -1,11 +1,11 @@
-## Name
-cljs.core/select-keys
+---
+name: cljs.core/select-keys
+---
 
 ## Signature
 [map keys]
 
+
 ## Description
 
 Returns a map containing only those entries in `map` whose key is in `keys`.
-
-## Related

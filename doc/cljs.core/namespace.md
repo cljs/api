@@ -1,5 +1,8 @@
-## Name
-cljs.core/namespace
+---
+name: cljs.core/namespace
+related:
+  - cljs.core/name
+---
 
 ## Description
 
@@ -7,8 +10,6 @@ Returns the namespace string of a possibly namespace-qualified keyword or symbol
 
 Returns [doc:syntax/nil] if not present.
 
-## Related
-cljs.core/name
 
 ## Examples
 

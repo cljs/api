@@ -1,2 +1,4 @@
-## Name
-cljs.core/NS_CACHE
+---
+name: cljs.core/NS_CACHE
+---
+

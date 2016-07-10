@@ -1,5 +1,6 @@
-## Name
-cljs.compiler.api
+---
+name: cljs.compiler.api
+---
 
 ## Caption
 programmatic access to the compiler (emitting JS)

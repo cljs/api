@@ -1,5 +1,8 @@
-## Name
-cljs.core/apply
+---
+name: cljs.core/apply
+related:
+  - cljs.core/map
+---
 
 ## Signature
 [f args]
@@ -8,13 +11,12 @@ cljs.core/apply
 [f x y z args]
 [f a b c d & args]
 
+
 ## Description
 
 Applies function `f` to the argument list formed by prepending intervening
 arguments to `args`.
 
-## Related
-cljs.core/map
 
 ## Examples
 
@@ -28,4 +30,3 @@ cljs.core/map
 (apply max 1 [2 3])
 ;;=> 3
 ```
-

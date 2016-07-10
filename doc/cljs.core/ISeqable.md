@@ -1,2 +1,4 @@
-## Name
-cljs.core/ISeqable
+---
+name: cljs.core/ISeqable
+---
+

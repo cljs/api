@@ -1,14 +1,14 @@
-## Name
-cljs.core/take-nth
+---
+name: cljs.core/take-nth
+---
 
 ## Signature
 [n]
 [n coll]
+
 
 ## Description
 
 Returns a lazy seq of every `n`th item in `coll`.
 
 Returns a stateful transducer when no collection is provided.
-
-## Related

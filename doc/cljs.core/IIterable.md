@@ -1,2 +1,4 @@
-## Name
-cljs.core/IIterable
+---
+name: cljs.core/IIterable
+---
+

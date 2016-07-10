@@ -1,2 +1,4 @@
-## Name
-clojure.browser.dom/set-properties
+---
+name: clojure.browser.dom/set-properties
+---
+

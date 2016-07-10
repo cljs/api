@@ -1,2 +1,4 @@
-## Name
-cljs.core/neg-int?
+---
+name: cljs.core/neg-int?
+---
+

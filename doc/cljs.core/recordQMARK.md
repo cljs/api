@@ -1,2 +1,4 @@
-## Name
-cljs.core/record?
+---
+name: cljs.core/record?
+---
+

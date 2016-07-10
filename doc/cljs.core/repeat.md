@@ -1,18 +1,19 @@
-## Name
-cljs.core/repeat
+---
+name: cljs.core/repeat
+related:
+  - cljs.core/repeatedly
+  - cljs.core/cycle
+  - cljs.core/constantly
+  - cljs.core/dotimes
+---
 
 ## Signature
 [x]
 [n x]
+
 
 ## Description
 
 Returns a lazy sequence of `x`s.
 
 The length of the sequence is infinite, or `n` if provided.
-
-## Related
-cljs.core/repeatedly
-cljs.core/cycle
-cljs.core/constantly
-cljs.core/dotimes

@@ -1,2 +1,4 @@
-## Name
-clojure.set/index
+---
+name: clojure.set/index
+---
+

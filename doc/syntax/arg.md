@@ -1,8 +1,9 @@
-## Name
-syntax/arg
-
-## Display
-% arg
+---
+name: syntax/arg
+display: "% arg"
+related:
+  - syntax/function
+---
 
 ## Description
 
@@ -14,8 +15,6 @@ Only usable inside [doc:syntax/function].
 - `%2`, `%3` and so on for subsequent arguments
 - `%&` for the rest of the arguments after the highest individually referenced argument
 
-## Related
-syntax/function
 
 ## Examples
 

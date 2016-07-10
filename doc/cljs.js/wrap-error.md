@@ -1,2 +1,4 @@
-## Name
-cljs.js/wrap-error
+---
+name: cljs.js/wrap-error
+---
+

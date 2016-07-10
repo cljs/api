@@ -1,10 +1,15 @@
-## Name
-cljs.core/and
+---
+name: cljs.core/and
+related:
+  - cljs.core/or
+  - special/if
+---
 
 ## Signature
 []
 [x]
 [x & next]
+
 
 ## Description
 
@@ -14,9 +19,6 @@ of the other arguments, otherwise it returns the value of the last argument.
 
 `(and)` returns true.
 
-## Related
-cljs.core/or
-special/if
 
 ## Examples
 

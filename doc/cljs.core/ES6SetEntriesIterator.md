@@ -1,2 +1,4 @@
-## Name
-cljs.core/ES6SetEntriesIterator
+---
+name: cljs.core/ES6SetEntriesIterator
+---
+

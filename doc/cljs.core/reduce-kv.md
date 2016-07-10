@@ -1,8 +1,12 @@
-## Name
-cljs.core/reduce-kv
+---
+name: cljs.core/reduce-kv
+related:
+  - cljs.core/reduce
+---
 
 ## Signature
 [f init coll]
+
 
 ## Description
 
@@ -16,6 +20,3 @@ If `coll` contains no entries, returns `init` and `f` is not called.
 
 Note that `reduce-kv` is supported on vectors, where the keys will be the
 ordinals.
-
-## Related
-cljs.core/reduce

@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/tuple
+---
+name: cljs.spec.impl.gen/tuple
+---
+

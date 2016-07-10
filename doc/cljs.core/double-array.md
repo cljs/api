@@ -1,2 +1,4 @@
-## Name
-cljs.core/double-array
+---
+name: cljs.core/double-array
+---
+

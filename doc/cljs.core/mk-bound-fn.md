@@ -1,2 +1,4 @@
-## Name
-cljs.core/mk-bound-fn
+---
+name: cljs.core/mk-bound-fn
+---
+

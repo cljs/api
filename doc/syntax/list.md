@@ -1,11 +1,14 @@
-## Name
-syntax/list
-
-## Display
-() list
+---
+name: syntax/list
+display: "() list"
+related:
+  - syntax/vector
+  - syntax/quote
+---
 
 ## Usage
 (...)
+
 
 ## Description
 
@@ -37,9 +40,6 @@ unevaluated, where they _may_ be evaluated internally.
 
 (See [doc:cljs.core/List] for data structure details.)
 
-## Related
-syntax/vector
-syntax/quote
 
 ## Examples
 

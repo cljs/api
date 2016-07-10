@@ -1,2 +1,4 @@
-## Name
-cljs.core/ex-cause
+---
+name: cljs.core/ex-cause
+---
+

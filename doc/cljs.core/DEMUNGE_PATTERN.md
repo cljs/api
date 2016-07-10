@@ -1,2 +1,4 @@
-## Name
-cljs.core/DEMUNGE_PATTERN
+---
+name: cljs.core/DEMUNGE_PATTERN
+---
+

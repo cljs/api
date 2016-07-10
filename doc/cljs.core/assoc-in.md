@@ -1,8 +1,14 @@
-## Name
-cljs.core/assoc-in
+---
+name: cljs.core/assoc-in
+related:
+  - cljs.core/assoc
+  - cljs.core/update-in
+  - cljs.core/get-in
+---
 
 ## Signature
 [m [k & ks] v]
+
 
 ## Description
 
@@ -11,10 +17,6 @@ of keys and `v` is the new value. Returns a new nested structure.
 
 If any levels do not exist, hash-maps will be created.
 
-## Related
-cljs.core/assoc
-cljs.core/update-in
-cljs.core/get-in
 
 ## Examples
 

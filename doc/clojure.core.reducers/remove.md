@@ -1,2 +1,4 @@
-## Name
-clojure.core.reducers/remove
+---
+name: clojure.core.reducers/remove
+---
+

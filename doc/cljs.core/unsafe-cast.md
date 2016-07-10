@@ -1,2 +1,4 @@
-## Name
-cljs.core/unsafe-cast
+---
+name: cljs.core/unsafe-cast
+---
+

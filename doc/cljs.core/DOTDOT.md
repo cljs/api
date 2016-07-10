@@ -1,9 +1,15 @@
-## Name
-cljs.core/..
+---
+name: cljs.core/..
+related:
+  - special/.
+  - cljs.core/->
+  - cljs.core/doto
+---
 
 ## Signature
 [o form]
 [o form & more]
+
 
 ## Description
 
@@ -11,10 +17,6 @@ For interop, the `..` macro allows method/property chaining on the given JavaScr
 
 It essentially combines the thread-first `->` macro with the `.` operator.
 
-## Related
-special/.
-cljs.core/->
-cljs.core/doto
 
 ## Examples
 

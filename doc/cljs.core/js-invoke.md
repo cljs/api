@@ -1,13 +1,16 @@
-## Name
-cljs.core/js-invoke
+---
+name: cljs.core/js-invoke
+---
 
 ## Signature
 [obj s & args]
+
 
 ## Description
 
 Invoke JavaScript object `obj` method via string `s`. Needed when the string is
 not a valid unquoted property name.
+
 
 ## Examples
 

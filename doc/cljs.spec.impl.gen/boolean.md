@@ -1,2 +1,4 @@
-## Name
-cljs.spec.impl.gen/boolean
+---
+name: cljs.spec.impl.gen/boolean
+---
+

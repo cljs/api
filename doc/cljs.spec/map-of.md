@@ -1,2 +1,4 @@
-## Name
-cljs.spec/map-of
+---
+name: cljs.spec/map-of
+---
+

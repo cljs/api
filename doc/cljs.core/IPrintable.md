@@ -1,2 +1,4 @@
-## Name
-cljs.core/IPrintable
+---
+name: cljs.core/IPrintable
+---
+

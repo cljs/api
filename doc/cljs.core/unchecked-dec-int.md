@@ -1,2 +1,4 @@
-## Name
-cljs.core/unchecked-dec-int
+---
+name: cljs.core/unchecked-dec-int
+---
+

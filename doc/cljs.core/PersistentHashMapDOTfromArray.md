@@ -1,2 +1,4 @@
-## Name
-cljs.core/PersistentHashMap.fromArray
+---
+name: cljs.core/PersistentHashMap.fromArray
+---
+

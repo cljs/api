@@ -1,5 +1,10 @@
-## Name
-cljs.core/*e
+---
+name: cljs.core/*e
+related:
+  - cljs.core/*1
+  - cljs.core/*2
+  - cljs.core/*3
+---
 
 ## Description
 
@@ -7,10 +12,6 @@ Only usable from a REPL.
 
 Holds the result of the last exception.
 
-## Related
-cljs.core/*1
-cljs.core/*2
-cljs.core/*3
 
 ## Examples
 

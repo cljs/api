@@ -1,2 +1,4 @@
-## Name
-cljs.core/force
+---
+name: cljs.core/force
+---
+

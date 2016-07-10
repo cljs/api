@@ -1,13 +1,18 @@
-## Name
-special/def
-
-## Known As
-define
+---
+name: special/def
+known as: define
+related:
+  - cljs.core/defn
+  - cljs.core/fn
+  - cljs.core/defmacro
+  - cljs.core/defmulti
+---
 
 ## Signature
 [symbol]
 [symbol init]
 [symbol doc-string init]
+
 
 ## Description
 
@@ -44,6 +49,7 @@ Compiler will also add metadata:
 - `:source`
 - `:arglists`
 
+
 ## Examples
 
 ```clj
@@ -60,11 +66,6 @@ c
 ;;=> 42
 ```
 
-## Related
-cljs.core/defn
-cljs.core/fn
-cljs.core/defmacro
-cljs.core/defmulti
 
 ## TODO
 

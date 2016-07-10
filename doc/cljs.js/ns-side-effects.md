@@ -1,2 +1,4 @@
-## Name
-cljs.js/ns-side-effects
+---
+name: cljs.js/ns-side-effects
+---
+

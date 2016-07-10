@@ -1,2 +1,4 @@
-## Name
-cljs.core/array-iter
+---
+name: cljs.core/array-iter
+---
+

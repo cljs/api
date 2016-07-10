@@ -1,2 +1,4 @@
-## Name
-clojure.walk/stringify-keys
+---
+name: clojure.walk/stringify-keys
+---
+

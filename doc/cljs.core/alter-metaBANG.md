@@ -1,8 +1,13 @@
-## Name
-cljs.core/alter-meta!
+---
+name: cljs.core/alter-meta!
+related:
+  - cljs.core/with-meta
+  - cljs.core/vary-meta
+---
 
 ## Signature
 [data f & args]
+
 
 ## Description
 
@@ -10,9 +15,6 @@ Alter the metadata of `data` to be `(apply f its-current-meta args)`.
 
 Metadata of vars cannot be altered since they are statically determined at compile-time.
 
-## Related
-cljs.core/with-meta
-cljs.core/vary-meta
 
 ## Examples
 

@@ -1,2 +1,4 @@
-## Name
-cljs.core/bit-shift-right-zero-fill
+---
+name: cljs.core/bit-shift-right-zero-fill
+---
+

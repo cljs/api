@@ -1,2 +1,4 @@
-## Name
-clojure.data/EqualityPartition
+---
+name: clojure.data/EqualityPartition
+---
+

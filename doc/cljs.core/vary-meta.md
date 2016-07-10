@@ -1,17 +1,19 @@
-## Name
-cljs.core/vary-meta
+---
+name: cljs.core/vary-meta
+related:
+  - cljs.core/alter-meta!
+  - cljs.core/with-meta
+---
 
 ## Signature
 [obj f & args]
+
 
 ## Description
 
 Returns an object of the same type and value as `obj`, with
 `(apply f (meta obj) args)` as its metadata.
 
-## Related
-cljs.core/alter-meta!
-cljs.core/with-meta
 
 ## Examples
 

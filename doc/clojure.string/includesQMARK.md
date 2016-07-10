@@ -1,2 +1,4 @@
-## Name
-clojure.string/includes?
+---
+name: clojure.string/includes?
+---
+

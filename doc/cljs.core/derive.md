@@ -1,8 +1,9 @@
-## Name
-cljs.core/derive
+---
+name: cljs.core/derive
+related:
+  - cljs.core/ancestors
+  - cljs.core/descendants
+  - cljs.core/isa?
+  - cljs.core/make-hierarchy
+---
 
-## Related
-cljs.core/ancestors
-cljs.core/descendants
-cljs.core/isa?
-cljs.core/make-hierarchy

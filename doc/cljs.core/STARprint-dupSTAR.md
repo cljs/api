@@ -1,2 +1,4 @@
-## Name
-cljs.core/*print-dup*
+---
+name: cljs.core/*print-dup*
+---
+

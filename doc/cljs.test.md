@@ -1,5 +1,6 @@
-## Name
-cljs.test
+---
+name: cljs.test
+---
 
 ## Caption
 a unit-testing framework

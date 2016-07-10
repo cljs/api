@@ -1,2 +1,4 @@
-## Name
-cljs.core/qualified-symbol?
+---
+name: cljs.core/qualified-symbol?
+---
+

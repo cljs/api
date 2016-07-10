@@ -1,8 +1,10 @@
-## Name
-cljs.core/filterv
+---
+name: cljs.core/filterv
+---
 
 ## Signature
 [pred coll]
+
 
 ## Description
 

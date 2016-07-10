@@ -1,14 +1,19 @@
-## Name
-cljs.core/distinct?
+---
+name: cljs.core/distinct?
+related:
+  - cljs.core/distinct
+---
 
 ## Signature
 [x]
 [x y]
 [x y & more]
 
+
 ## Description
 
 Returns true if no two of the arguments are `=`
+
 
 ## Examples
 
@@ -38,6 +43,3 @@ Apply it a collection:
 (apply distinct? [1 2 1])
 ;;=> false
 ```
-
-## Related
-cljs.core/distinct

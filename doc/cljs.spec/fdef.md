@@ -1,2 +1,4 @@
-## Name
-cljs.spec/fdef
+---
+name: cljs.spec/fdef
+---
+
