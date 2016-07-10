@@ -50,15 +50,14 @@
       (get-in *result* [:symbols docname])
       (get-in *result* [:namespaces ns]))))
 
-(defn add-biblio
-  "Process doclinks in given markdown body."
+(defn md-biblio
+  "Return a set of doclinks found in a given markdown body."
   [md-body]
   (when md-body
-    {:body md-body
-     :biblio (->> md-body
-                  (re-seq doclink-pattern)
-                  (map second)
-                  (set))}))
+    (->> md-body
+         (re-seq doclink-pattern)
+         (map second)
+         (set))))
 
 ;;----------------------------------------------------------------------
 ;; Insert names for unnamed doclinks in a given markdown body.
@@ -95,8 +94,8 @@
 
 (defn resolve-unnamed-doclinks
   "Process doclinks in given markdown body."
-  [data]
-  (when data
-    (update data :body string/replace
-                       unnamed-doclink-pattern
-                       insert-doclink-name)))
+  [md-body]
+  (cond-> md-body
+    md-body (string/replace
+              unnamed-doclink-pattern
+              insert-doclink-name)))

@@ -354,17 +354,18 @@
                          [:examples
                           :known-as
                           :display
-                          :caption
-                          :caption-library
-                          :caption-compiler
-                          :description
-                          :description-library
-                          :description-compiler
+                          :summary
+                          :summary-library
+                          :summary-compiler
+                          :details
+                          :details-library
+                          :details-compiler
                           :signature
                           :usage
                           :related
                           :moved
-                          :tags]))]
+                          :tags
+                          :md-biblio]))]
      (-> item
          (merge data)
          (add-usage))))

@@ -4,10 +4,10 @@
     [cljs-api-gen.util :refer [mapmap]]
     [cljs-api-gen.encode :refer [fullname->ns-name]]
     [cljs-api-gen.state :refer [*result*]]
-    [cljs-api-gen.cljsdoc.doclink :refer [add-biblio
+    [cljs-api-gen.cljsdoc.doclink :refer [md-biblio
                                           resolve-unnamed-doclinks]]
     [clojure.set :refer [rename-keys]]
-    [clojure.string :refer [split-lines trim lower-case replace]]))
+    [clojure.string :refer [split-lines trim lower-case replace join]]))
 
 (defn section-as-list
   "Turn section body text into non-empty trimmed lines vector"
@@ -38,12 +38,29 @@
           (dissoc "name")))
     doc))
 
-(defn transform-doclinks [doc f]
+(def markdown-sections
+  [:summary
+   :summary-library
+   :summary-compiler
+   :details
+   :details-library
+   :details-compiler
+   :examples])
+
+(defn add-doclink-biblio [doc]
   (if (nil? *result*)
     doc
-    (-> doc
-      (update-in [:description] f)
-      (update-in [:examples] f))))
+    (let [md (join "\n" (vals (select-keys doc markdown-sections)))
+          biblio (md-biblio md)]
+      (cond-> doc
+        (seq biblio) (assoc :md-biblio biblio)))))
+
+(defn add-doclink-names [doc]
+  (reduce
+    (fn [doc section]
+      (update doc section resolve-unnamed-doclinks))
+    doc
+    markdown-sections))
 
 (defn transform-doc [doc]
   (-> doc
@@ -51,19 +68,19 @@
       (transform-key "examples" :examples)
       (transform-key "known as" :known-as)
       (transform-key "display" :display)
-      (transform-key "caption" :caption)
-      (transform-key "caption for library" :caption-library)
-      (transform-key "caption for compiler" :caption-compiler)
-      (transform-key "description" :description)
-      (transform-key "description for library" :description-library)
-      (transform-key "description for compiler" :description-compiler)
+      (transform-key "summary" :summary)
+      (transform-key "summary for library" :summary-library)
+      (transform-key "summary for compiler" :summary-compiler)
+      (transform-key "details" :details)
+      (transform-key "details for library" :details-library)
+      (transform-key "details for compiler" :details-compiler)
       (transform-key "signature" :signature section-as-list)
       (transform-key "usage" :usage section-as-list)
       (transform-key "related" :related section-as-list)
       (transform-key "moved" :moved)
       (transform-key "tags" :tags section-as-list)
-      (transform-doclinks add-biblio)))
+      add-doclink-biblio))
 
 (defn post-transform-doc [doc]
   (-> doc
-      (transform-doclinks resolve-unnamed-doclinks)))
+      add-doclink-names))

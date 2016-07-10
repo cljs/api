@@ -46,21 +46,19 @@
    "known as"
    "display"
    "tags"
-   "caption"
-   "caption for library"
-   "caption for compiler"
-   "description"
-   "description for library"
-   "description for compiler"
+   "summary"
+   "summary for library"
+   "summary for compiler"
+   "details"
+   "details for library"
+   "details for compiler"
    "usage"
    "signature"
-   "todo"
-   "notes"
    "examples"
    "related"
-   "docstring"
-   "history"
-   "moved"])
+   "moved"
+   "todo"
+   "notes"])
 
 (defn section-match?
   [name- known]
