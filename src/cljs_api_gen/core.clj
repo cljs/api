@@ -5,7 +5,7 @@
     [me.raynes.fs :refer [mkdir
                           exists?]]
     [cljs-api-gen.config :refer [cache-dir]]
-    [cljs-api-gen.cljsdoc :refer [build-cljsdoc!]]
+    [cljs-api-gen.cljsdoc :refer [build-cljsdoc! lint-cljsdoc!]]
     [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos!
                                     get-published-cljs-tags!
                                     get-published-clj-versions!
@@ -42,6 +42,7 @@
   (prep!)
   (cond
     (= task :cljsdoc) (cljsdoc-task)
+    (= task :lint) (lint-cljsdoc!)
     :else (create-catalog! options))
 
   ;; have to do this because `sh` leaves futures hanging,

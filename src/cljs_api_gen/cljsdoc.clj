@@ -5,10 +5,12 @@
     [cljs-api-gen.cljsdoc.validate :refer [valid-doc?]]
     [cljs-api-gen.cljsdoc.parse :refer [parse-doc]]
     [cljs-api-gen.cljsdoc.transform :refer [transform-doc post-transform-doc]]
+    [cljs-api-gen.cljsdoc.lint :refer [normalize-doc]]
     [cljs-api-gen.state :refer [*result* cljsdoc-map]]
     [cljs-api-gen.util :refer [mapmap]]
     [me.raynes.fs :refer [mkdir list-dir base-name exists? parent directory?]]
-    [clansi.core :refer [style]]))
+    [clansi.core :refer [style]]
+    [clojure.string :as string]))
 
 (defn build-doc
   [file]
@@ -36,6 +38,9 @@
     (cond-> files
       (seq subfiles) (concat subfiles))))
 
+(defn cljsdoc-stub [full-name]
+  (normalize-doc {:full-name full-name}))
+
 (defn create-cljsdoc-stubs!
   [known-symbols]
   (doseq [full-name (sort known-symbols)]
@@ -44,7 +49,7 @@
         (encode/assert-lossless full-name)
         (mkdir (parent filename))
         (println "Creating new cljsdoc stub for" (style full-name :yellow) "at" (style filename :cyan))
-        (spit filename (str "## Name\n" full-name))))))
+        (spit filename (cljsdoc-stub full-name))))))
 
 (defn build-cljsdoc! []
   (println (cond-> (style "\nCompiling " cljsdoc-dir "/ files" :cyan)
@@ -67,3 +72,7 @@
     (println (format-status parsed skipped))
 
     skipped))
+
+(defn lint-cljsdoc! []
+  (doseq [file (cljsdoc-files cljsdoc-dir)]
+    (spit file (normalize-doc (build-doc file)))))
