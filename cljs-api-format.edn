@@ -74,7 +74,7 @@
               :details "... details in markdown ..."
               :examples "... example in markdown ..."
               :md-biblio #{"cljs.core/foo"} ;; doclinks used in the markdown bodies
-              :related ["cljs.core/foo" "cljs.core/bar"]
+              :see-also ["cljs.core/foo" "cljs.core/bar"]
 
               ;; the full name where this symbol moved to (example cljs.core/try -> special/try)
               :moved "cljs.core/another-name"
