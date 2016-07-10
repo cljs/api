@@ -26,18 +26,6 @@
          (dissoc key-))
      doc)))
 
-(defn transform-name [doc]
-  (if-let [body (get doc "name")]
-    (let [[full-name & search-terms] (section-as-list body)
-          [ns- name-] (fullname->ns-name full-name)]
-      (-> doc
-          (assoc :ns ns-
-                 :name name-
-                 :full-name full-name
-                 :search-terms (vec search-terms))
-          (dissoc "name")))
-    doc))
-
 (def markdown-sections
   [:summary
    :summary-library
@@ -64,7 +52,7 @@
 
 (defn transform-doc [doc]
   (-> doc
-      transform-name
+      (transform-key "name" :full-name)
       (transform-key "examples" :examples)
       (transform-key "known as" :known-as)
       (transform-key "display" :display)
