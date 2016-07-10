@@ -355,10 +355,8 @@
                           :known-as
                           :display
                           :summary
-                          :summary-library
                           :summary-compiler
                           :details
-                          :details-library
                           :details-compiler
                           :signature
                           :usage

@@ -28,10 +28,8 @@
 
 (def markdown-sections
   [:summary
-   :summary-library
    :summary-compiler
    :details
-   :details-library
    :details-compiler
    :examples])
 
@@ -57,10 +55,8 @@
       (transform-key "known as" :known-as)
       (transform-key "display" :display)
       (transform-key "summary" :summary)
-      (transform-key "summary for library" :summary-library)
       (transform-key "summary for compiler" :summary-compiler)
       (transform-key "details" :details)
-      (transform-key "details for library" :details-library)
       (transform-key "details for compiler" :details-compiler)
       (transform-key "signature" :signature section-as-list)
       (transform-key "usage" :usage section-as-list)
