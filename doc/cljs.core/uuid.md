@@ -5,7 +5,7 @@ related:
   - syntax/uuid-literal
 ---
 
-## Description
+## Details
 
 Creates a universally unique identifier (UUID) from the given string, using the
 [doc:cljs.core/UUID] type.

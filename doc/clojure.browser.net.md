@@ -2,5 +2,5 @@
 name: clojure.browser.net
 ---
 
-## Caption
+## Summary
 network communication library, wrapping [goog.net](http://www.closurecheatsheet.com/net)

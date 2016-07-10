@@ -8,7 +8,7 @@ name: cljs.core/str
 [x & ys]
 
 
-## Description
+## Details
 
 `(str)` and `(str nil)` return the empty string.
 

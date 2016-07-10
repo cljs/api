@@ -13,7 +13,7 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Returns the first item in `coll` and calls `seq` on its argument.
 

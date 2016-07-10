@@ -9,7 +9,7 @@ related:
 [& fns]
 
 
-## Description
+## Details
 
 Takes a set of functions and returns a function that is the composition
 of those functions.

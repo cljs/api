@@ -12,7 +12,7 @@ related:
 #"..."
 
 
-## Description
+## Details
 
 Signifies a regular expression. Represented as native [JavaScript regular expressions].
 

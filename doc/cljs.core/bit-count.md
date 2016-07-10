@@ -6,7 +6,7 @@ name: cljs.core/bit-count
 [x]
 
 
-## Description
+## Details
 
 Counts the number of bits set in `x`.
 

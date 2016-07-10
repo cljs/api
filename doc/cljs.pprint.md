@@ -2,11 +2,11 @@
 name: cljs.pprint
 ---
 
-## Caption
+## Summary
 a pretty-printer for printing data structures
 
 
-## Description
+## Details
 
 This is a pretty-printer for ClojureScript data structures and code.  Its most salient
 use case is to properly indent data for readable logging.

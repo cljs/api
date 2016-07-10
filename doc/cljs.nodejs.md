@@ -2,5 +2,5 @@
 name: cljs.nodejs
 ---
 
-## Caption
+## Summary
 nodejs support functions

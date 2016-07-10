@@ -10,7 +10,7 @@ related:
 [& keyvals]
 
 
-## Description
+## Details
 
 Returns a new array map (a map implemented with arrays) with the supplied mappings.
 

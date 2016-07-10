@@ -13,6 +13,6 @@ related:
 [s1 s2 & sets]
 
 
-## Description
+## Details
 
 Return a set that is the first set without elements of the remaining sets.

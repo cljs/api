@@ -8,7 +8,7 @@ related:
 [a key]
 
 
-## Description
+## Details
 
 Removes a watch function identified by `key` from atom `a`.  The function must
 have originally been set by `add-watch`.

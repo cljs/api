@@ -8,7 +8,7 @@ related:
 [str-or-pattern]
 
 
-## Description
+## Details
 
 Given a regular expression or stringable thing, return a seq of all
 public definitions in all currently-loaded namespaces that match the

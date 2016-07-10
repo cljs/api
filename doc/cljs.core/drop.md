@@ -13,7 +13,7 @@ related:
 [n coll]
 
 
-## Description
+## Details
 
 Returns a lazy sequence of all but the first `n` items in `coll`.
 

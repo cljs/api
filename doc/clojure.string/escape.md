@@ -6,7 +6,7 @@ name: clojure.string/escape
 [s cmap]
 
 
-## Description
+## Details
 
 Return a new string, using `cmap` to escape each character `ch` from `s` as follows:
 

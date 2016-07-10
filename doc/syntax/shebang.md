@@ -3,7 +3,7 @@ name: syntax/shebang
 display: "#! shebang"
 ---
 
-## Description
+## Details
 
 Equivalent to [doc:syntax/comment].
 

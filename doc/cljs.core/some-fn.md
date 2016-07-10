@@ -13,7 +13,7 @@ related:
 [p1 p2 p3 & ps]
 
 
-## Description
+## Details
 
 Takes a set of predicate functions and returns a function `f` that returns the
 first logical true value returned by one of its composing predicates against any

@@ -3,7 +3,7 @@ name: syntax/comma
 display: ", comma"
 ---
 
-## Description
+## Details
 
 A comma is treated as whitespace when appearing outside a string.
 

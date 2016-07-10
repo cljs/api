@@ -9,7 +9,7 @@ related:
 [pred coll]
 
 
-## Description
+## Details
 
 Returns a lazy sequence of the items in `coll` for which `(pred item)` returns
 false.

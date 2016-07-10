@@ -11,7 +11,7 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Returns the second item in `coll`.
 

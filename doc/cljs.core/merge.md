@@ -9,7 +9,7 @@ related:
 [& maps]
 
 
-## Description
+## Details
 
 Returns a map that consists of the rest of the maps `conj`-ed onto the first.
 

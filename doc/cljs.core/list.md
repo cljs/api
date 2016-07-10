@@ -9,6 +9,6 @@ related:
 [& items]
 
 
-## Description
+## Details
 
 Creates a new list containing `items`.

@@ -9,7 +9,7 @@ related:
 [n d]
 
 
-## Description
+## Details
 
 Returns the remainder of dividing numerator `n` by denominator `d`.
 

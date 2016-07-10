@@ -2,5 +2,5 @@
 name: cljs.test
 ---
 
-## Caption
+## Summary
 a unit-testing framework

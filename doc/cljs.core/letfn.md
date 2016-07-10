@@ -8,7 +8,7 @@ related:
 [fnspecs & body]
 
 
-## Description
+## Details
 
 Takes a vector of function definitions `fnspecs` and binds the functions to
 their names. All of the names are available in all of the definitions of the

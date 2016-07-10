@@ -2,5 +2,5 @@
 name: cljs.analyzer.api
 ---
 
-## Caption
+## Summary
 programmatic access to the analyzer (producing AST)

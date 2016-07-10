@@ -10,7 +10,7 @@ related:
 [& clauses]
 
 
-## Description
+## Details
 
 `clauses` must be an even number of forms, ie: `(cond t1 e1, t2 e2, t3 e3)`.
 Each test `t` is evaluated one at a time. If a test returns logical true, `cond`

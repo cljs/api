@@ -2,5 +2,5 @@
 name: clojure.string
 ---
 
-## Caption
+## Summary
 string operations

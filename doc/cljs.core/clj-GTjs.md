@@ -8,7 +8,7 @@ related:
 [x]
 
 
-## Description
+## Details
 
 Recursively transforms ClojureScript values to JavaScript.
 

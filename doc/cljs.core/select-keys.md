@@ -6,6 +6,6 @@ name: cljs.core/select-keys
 [map keys]
 
 
-## Description
+## Details
 
 Returns a map containing only those entries in `map` whose key is in `keys`.

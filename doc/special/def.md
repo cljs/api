@@ -14,7 +14,7 @@ related:
 [symbol doc-string init]
 
 
-## Description
+## Details
 
 Creates a global variable with the name of `symbol` and a namespace of the
 current namespace.

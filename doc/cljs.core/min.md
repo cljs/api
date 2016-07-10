@@ -11,7 +11,7 @@ related:
 [x y & more]
 
 
-## Description
+## Details
 
 Returns the least number argument.
 

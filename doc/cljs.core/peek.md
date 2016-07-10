@@ -10,7 +10,7 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Returns the first element of a list; same as `first`.
 

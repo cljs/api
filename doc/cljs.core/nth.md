@@ -12,7 +12,7 @@ related:
 [coll n not-found]
 
 
-## Description
+## Details
 
 Returns the value at index `n` or `not-found` if the index is out of bounds.
 

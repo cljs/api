@@ -10,7 +10,7 @@ related:
 [n s]
 
 
-## Description
+## Details
 
 Return a lazy sequence of all but the last `n` items in `s`.
 

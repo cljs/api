@@ -9,7 +9,7 @@ related:
 [comp coll]
 
 
-## Description
+## Details
 
 Returns a sorted sequence of the items in `coll`.
 

@@ -8,7 +8,7 @@ related:
 [f]
 
 
-## Description
+## Details
 
 Takes a function `f` and returns a function that takes the same arguments as
 `f`, has the same effects, if any, and returns the opposite truth value.

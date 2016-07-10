@@ -12,7 +12,7 @@ related:
 #(...)
 
 
-## Description
+## Details
 
 Shorthand for creating an anonymous function:
 

@@ -12,7 +12,7 @@ related:
 [m ks not-found]
 
 
-## Description
+## Details
 
 Returns the value in a nested associative structure, where `ks` is a sequence of
 keys.

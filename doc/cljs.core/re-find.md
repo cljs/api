@@ -6,7 +6,7 @@ name: cljs.core/re-find
 [re s]
 
 
-## Description
+## Details
 
 Returns the first regex match, if any, of `s` to `re`, using `re.exec(s)`.
 

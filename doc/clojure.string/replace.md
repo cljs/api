@@ -10,7 +10,7 @@ related:
 [s match replacement]
 
 
-## Description
+## Details
 
 Replaces all instance of `match` with `replacement` in `s`.
 

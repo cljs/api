@@ -8,6 +8,6 @@ related:
 [x n]
 
 
-## Description
+## Details
 
 Bitwise shift right with zero fill

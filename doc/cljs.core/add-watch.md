@@ -8,7 +8,7 @@ related:
 [a key f]
 
 
-## Description
+## Details
 
 Adds a watch function `f` to atom `a` that will execute when the value of `a`
 changes.

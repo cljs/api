@@ -7,7 +7,7 @@ display: "#= eval"
 #=...
 
 
-## Description
+## Details
 
 Allows the reader to evaluate the following form.
 

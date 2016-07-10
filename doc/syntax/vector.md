@@ -10,7 +10,7 @@ related:
 [...]
 
 
-## Description
+## Details
 
 Creates a vector.  A vector is the most commonly used form for creating literal
 sequences, and supports random-access and inserting at the end via [doc:cljs.core/conj]:

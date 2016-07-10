@@ -6,7 +6,7 @@ name: cljs.core/bit-test
 [x n]
 
 
-## Description
+## Details
 
 Test bit at index `n`. Returns `true` if 1, and `false` if 0. Same as `(x & (1 << y)) != 0` in JavaScript.
 

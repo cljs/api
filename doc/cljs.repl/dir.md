@@ -9,7 +9,7 @@ related:
 [ns]
 
 
-## Description
+## Details
 
 Prints a sorted directory of public vars in a namespace `ns`.
 

@@ -8,7 +8,7 @@ related:
 [type-sym & impls]
 
 
-## Description
+## Details
 
 Extend a [type] to implement one or more [protocols].
 

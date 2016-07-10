@@ -9,6 +9,6 @@ related:
 [aseq]
 
 
-## Description
+## Details
 
 Returns a new JavaScript array from the elements of `aseq`.

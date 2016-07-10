@@ -3,11 +3,11 @@ name: syntax
 display: "Syntax"
 ---
 
-## Caption
+## Summary
 Syntax forms, literals, conventions and patterns.
 
 
-## Description
+## Details
 
 This is an index of ClojureScript's syntax forms, including syntax literals,
 naming conventions, and other syntax patterns.  We hope that you can have any

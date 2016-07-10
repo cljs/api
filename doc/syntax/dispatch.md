@@ -15,7 +15,7 @@ related:
 #...
 
 
-## Description
+## Details
 
 `#` is a prefix character that is called the dispatch macro, because it allows
 the behavior of the reader to be dispatched to another table, indexed by the

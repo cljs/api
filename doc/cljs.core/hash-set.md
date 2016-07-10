@@ -10,7 +10,7 @@ related:
 [& keys]
 
 
-## Description
+## Details
 
 Returns a new hash set with supplied `keys`.
 

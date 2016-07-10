@@ -12,7 +12,7 @@ related:
 {...}
 
 
-## Description
+## Details
 
 Creates a map.  Must contain pairs of key-values.  Keys and values can be any type.
 

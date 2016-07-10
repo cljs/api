@@ -8,7 +8,7 @@ related:
 [x n]
 
 
-## Description
+## Details
 
 Bitwise shift left `n` bits.  Same as `x << n` in JavaScript.
 

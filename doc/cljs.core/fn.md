@@ -10,7 +10,7 @@ related:
 [name? ([params*] prepost-map? body)+]
 
 
-## Description
+## Details
 
 Defines a function.
 

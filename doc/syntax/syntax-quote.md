@@ -8,7 +8,7 @@ related:
   - syntax/unquote-splicing
 ---
 
-## Description
+## Details
 
 (Only intended for use in Clojure macros, which can be used from but not
 written in ClojureScript.)

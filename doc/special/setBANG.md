@@ -9,6 +9,6 @@ related:
 [js-var val]
 
 
-## Description
+## Details
 
 Sets `js-var` to `val` using the JavaScript `=` operator.

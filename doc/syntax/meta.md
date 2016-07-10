@@ -15,7 +15,7 @@ related:
 ^foo
 
 
-## Description
+## Details
 
 Attaches metadata to the following form.  Metadata can only be attached to a
 symbol or collection.

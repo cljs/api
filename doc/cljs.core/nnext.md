@@ -8,6 +8,6 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Same as `(next (next coll))`.

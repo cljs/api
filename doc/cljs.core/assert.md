@@ -7,7 +7,7 @@ name: cljs.core/assert
 [expr message]
 
 
-## Description
+## Details
 
 Evaluates expression `expr` and throws an exception if it does not evaluate to
 logical true.  Exception will include `message` if given.

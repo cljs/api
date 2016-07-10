@@ -10,7 +10,7 @@ related:
 [expr]
 
 
-## Description
+## Details
 
 `expr` is evaluated and thrown, hopefully to be caught by a `try` expression.
 

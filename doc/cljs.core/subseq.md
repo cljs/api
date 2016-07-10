@@ -13,7 +13,7 @@ related:
 [sc start-test start-key end-test end-key]
 
 
-## Description
+## Details
 
 `sc` must be a sorted collection.
 

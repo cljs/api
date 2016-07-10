@@ -6,6 +6,6 @@ name: cljs.core/shuffle
 [coll]
 
 
-## Description
+## Details
 
 Returns a random permutation of `coll`.

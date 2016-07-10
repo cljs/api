@@ -12,7 +12,7 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Returns the last item in `coll` in linear time.
 

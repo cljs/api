@@ -17,7 +17,7 @@ related:
 [o (m 1 2)]
 
 
-## Description
+## Details
 
 For interop, the `.` special form allows access to member properties of the
 given JavaScript object `o`.

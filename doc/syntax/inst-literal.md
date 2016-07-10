@@ -13,7 +13,7 @@ related:
 #inst "yyyy-mm-ddThh:mm:ss-hh:mm"
 
 
-## Description
+## Details
 
 An instant in time, using a [RFC-3339] formatted string. Creates a JavaScript [Date] object.
 

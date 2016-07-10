@@ -10,7 +10,7 @@ related:
 [n]
 
 
-## Description
+## Details
 
 Returns a random floating point number between 0 inclusive and `n` exclusive.
 

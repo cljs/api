@@ -8,7 +8,7 @@ related:
 [obj]
 
 
-## Description
+## Details
 
 Returns the keys for the JavaScript object `obj`.
 

@@ -5,7 +5,7 @@ related:
   - cljs.core/defmacro
 ---
 
-## Description
+## Details
 
 (only intended as a REPL utility)
 

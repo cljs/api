@@ -10,7 +10,7 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Returns a sequence of the items after the first and calls `seq` on its argument.
 

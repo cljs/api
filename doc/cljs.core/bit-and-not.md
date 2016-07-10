@@ -10,7 +10,7 @@ related:
 [x y & more]
 
 
-## Description
+## Details
 
 Bitwise "and" `x` with bitwise "not" `y`.  Same as `x & ~y` in JavaScript.
 

@@ -6,7 +6,7 @@ name: cljs.core/memoize
 [f]
 
 
-## Description
+## Details
 
 Returns a memoized version of a referentially transparent function.
 

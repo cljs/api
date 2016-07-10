@@ -8,6 +8,6 @@ related:
 [f]
 
 
-## Description
+## Details
 
 Returns true if `f` is a function, false otherwise.

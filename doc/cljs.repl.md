@@ -2,15 +2,15 @@
 name: cljs.repl
 ---
 
-## Caption for Library
+## Summary for Library
 macros auto-imported into a ClojureScript REPL
 
 
-## Caption for Compiler
+## Summary for Compiler
 interactive ClojureScript REPL (Read Eval Print Loop)
 
 
-## Description for Library
+## Details for Library
 
 This namespace mainly provides reflection capabilities to assist you in
 exploring code in a REPL.  It comes with macros that are automatically imported

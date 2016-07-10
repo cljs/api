@@ -8,6 +8,6 @@ related:
 [n]
 
 
-## Description
+## Details
 
 Returns a random integer between 0 inclusive and `n` exclusive.

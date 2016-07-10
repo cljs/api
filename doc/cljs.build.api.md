@@ -2,5 +2,5 @@
 name: cljs.build.api
 ---
 
-## Caption
+## Summary
 programmatic access to project-building facilities

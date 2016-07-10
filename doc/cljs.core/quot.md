@@ -9,7 +9,7 @@ related:
 [n d]
 
 
-## Description
+## Details
 
 Returns the quotient of dividing numerator `n` by denominator `d`.
 

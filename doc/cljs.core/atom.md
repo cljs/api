@@ -13,7 +13,7 @@ related:
 [x opts]
 
 
-## Description
+## Details
 
 Creates and returns an atom with an initial value of `x`.
 

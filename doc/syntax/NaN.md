@@ -6,7 +6,7 @@ related:
   - syntax/nil
 ---
 
-## Description
+## Details
 
 The IEEE 754 Floating Point representation of NaN (not a number), an undefined
 or unrepresentable value.

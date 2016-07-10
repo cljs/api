@@ -11,7 +11,7 @@ related:
 [smap coll]
 
 
-## Description
+## Details
 
 Given a map of replacement pairs `smap` and a vector/collection `coll`, returns
 a vector/seq with any elements `=` to a key in `smap` replaced with the

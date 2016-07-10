@@ -8,7 +8,7 @@ related:
 [obj key]
 
 
-## Description
+## Details
 
 Deletes property `key` in JavaScript object `obj`.
 

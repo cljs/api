@@ -3,7 +3,7 @@ name: syntax/nil
 display: "nil"
 ---
 
-## Description
+## Details
 
 `nil` is a representation of nothing.
 

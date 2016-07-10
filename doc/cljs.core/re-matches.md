@@ -6,6 +6,6 @@ name: cljs.core/re-matches
 [re s]
 
 
-## Description
+## Details
 
 Returns the result of `(re-find re s)` if `re` fully matches `s`.

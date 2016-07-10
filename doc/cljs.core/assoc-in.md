@@ -10,7 +10,7 @@ related:
 [m [k & ks] v]
 
 
-## Description
+## Details
 
 Associates a value in a nested associative structure, where `ks` is a sequence
 of keys and `v` is the new value. Returns a new nested structure.

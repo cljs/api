@@ -13,7 +13,7 @@ js/foo
 js/foo.bar
 
 
-## Description
+## Details
 
 A special namespace used for accessing any symbol defined
 in JavaScript's global scope.

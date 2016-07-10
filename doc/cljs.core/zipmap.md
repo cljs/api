@@ -8,7 +8,7 @@ related:
 [keys vals]
 
 
-## Description
+## Details
 
 Returns a map with `keys` mapped to corresponding `vals`.
 

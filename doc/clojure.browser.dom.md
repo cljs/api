@@ -2,5 +2,5 @@
 name: clojure.browser.dom
 ---
 
-## Caption
+## Summary
 browser DOM library, wrapping [goog.dom](http://www.closurecheatsheet.com/dom)

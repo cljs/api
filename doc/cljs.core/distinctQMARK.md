@@ -10,7 +10,7 @@ related:
 [x y & more]
 
 
-## Description
+## Details
 
 Returns true if no two of the arguments are `=`
 

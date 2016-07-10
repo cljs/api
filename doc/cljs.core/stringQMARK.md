@@ -6,6 +6,6 @@ name: cljs.core/string?
 [x]
 
 
-## Description
+## Details
 
 Returns true if `x` is a string, false otherwise.

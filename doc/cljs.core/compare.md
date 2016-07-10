@@ -10,7 +10,7 @@ related:
 [x y]
 
 
-## Description
+## Details
 
 Comparator.
 

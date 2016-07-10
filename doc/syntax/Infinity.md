@@ -12,7 +12,7 @@ Infinity
 +Infinity
 
 
-## Description
+## Details
 
 The IEEE 754 Floating Point representations of infinity.
 

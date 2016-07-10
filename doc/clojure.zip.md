@@ -2,5 +2,5 @@
 name: clojure.zip
 ---
 
-## Caption
+## Summary
 functional hierarchical zipper, w/ navigation/editing/enumeration

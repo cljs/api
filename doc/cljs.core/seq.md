@@ -9,7 +9,7 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Returns a sequence on the collection. If the collection is empty, returns nil.
 

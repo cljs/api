@@ -4,7 +4,7 @@ related:
   - special/require
 ---
 
-## Description
+## Details
 
 Only usable from a REPL.
 

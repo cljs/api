@@ -9,6 +9,6 @@ related:
 [x y]
 
 
-## Description
+## Details
 
 Returns true if `x` and `y` are the same object, false otherwise.

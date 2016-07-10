@@ -6,6 +6,6 @@ name: clojure.string/reverse
 [s]
 
 
-## Description
+## Details
 
 Returns `s` with its characters reversed.

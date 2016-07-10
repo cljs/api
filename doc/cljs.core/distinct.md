@@ -8,6 +8,6 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Returns a lazy sequence of the elements of `coll` with duplicates removed.

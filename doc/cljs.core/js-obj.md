@@ -10,7 +10,7 @@ related:
 [& keyvals]
 
 
-## Description
+## Details
 
 Returns a new JavaScript object using the supplied mappings.
 

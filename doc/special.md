@@ -3,11 +3,11 @@ name: special
 display: "Special Forms"
 ---
 
-## Caption
+## Summary
 The core constructs of ClojureScript.
 
 
-## Description
+## Details
 
 Special Forms are a small collection of symbols which comprise the core
 constructs of ClojureScript, upon which all functions and macros are built.

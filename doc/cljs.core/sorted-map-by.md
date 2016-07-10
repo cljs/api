@@ -11,7 +11,7 @@ related:
 [comparator & keyvals]
 
 
-## Description
+## Details
 
 Returns a new sorted map with supplied mappings, using the supplied comparator
 function.

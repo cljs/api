@@ -12,7 +12,7 @@ related:
 [n x]
 
 
-## Description
+## Details
 
 Returns a lazy sequence of `x`s.
 

@@ -6,6 +6,6 @@ name: clojure.string/blank?
 [s]
 
 
-## Description
+## Details
 
 True if `s` is nil, empty, or contains only whitespace.

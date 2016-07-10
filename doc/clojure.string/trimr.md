@@ -6,6 +6,6 @@ name: clojure.string/trimr
 [s]
 
 
-## Description
+## Details
 
 Removes whitespace from the right side of string.

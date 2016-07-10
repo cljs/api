@@ -6,7 +6,7 @@ related:
   - cljs.core/*e
 ---
 
-## Description
+## Details
 
 Only usable from a REPL.
 

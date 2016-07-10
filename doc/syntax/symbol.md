@@ -11,7 +11,7 @@ foo
 foo/bar
 
 
-## Description
+## Details
 
 A symbol represents a name.  When evaluated, its result will be the value that the symbol
 is bound to.

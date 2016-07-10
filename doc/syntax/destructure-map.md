@@ -9,7 +9,7 @@ related:
 {:keys [] :strs [] :syms [] :or {} :as name}
 
 
-## Description
+## Details
 
 A helpful shorthand for binding names to values inside a map.
 

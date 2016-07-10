@@ -10,7 +10,7 @@ related:
 [seq-exprs body-expr]
 
 
-## Description
+## Details
 
 List comprehension.
 

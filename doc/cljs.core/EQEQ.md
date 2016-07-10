@@ -11,7 +11,7 @@ related:
 [x y & more]
 
 
-## Description
+## Details
 
 This is an equality check for numbers of different types that was carried over from Clojure,
 to allow compatibility when converting code to ClojureScript.

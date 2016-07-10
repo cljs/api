@@ -6,7 +6,7 @@ name: cljs.core/char
 [x]
 
 
-## Description
+## Details
 
 Converts a number `x` to a character using `String.fromCharCode(x)` from
 JavaScript.

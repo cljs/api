@@ -12,7 +12,7 @@ related:
 [name doc-string? attr-map? ([params*] prepost-map? body) + attr-map?]
 
 
-## Description
+## Details
 
 Defines a function.
 

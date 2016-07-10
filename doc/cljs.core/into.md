@@ -9,7 +9,7 @@ related:
 [to xform from]
 
 
-## Description
+## Details
 
 Returns a new collection consisting of `to` with all of the items of `from`
 "added" using `conj`.

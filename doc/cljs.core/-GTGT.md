@@ -9,7 +9,7 @@ related:
 [x & forms]
 
 
-## Description
+## Details
 
 The thread-last macro "threads" an expression through several forms as the last
 item in a list.

@@ -2,5 +2,5 @@
 name: clojure.data
 ---
 
-## Caption
+## Summary
 non-core data functions

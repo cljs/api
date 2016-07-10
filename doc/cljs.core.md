@@ -2,11 +2,11 @@
 name: cljs.core
 ---
 
-## Caption
+## Summary
 fundamental library of the ClojureScript language
 
 
-## Description
+## Details
 
 This is the core library of ClojureScript, which builds on the Special Forms to
 complete the language's fundamental constructs. It also provides a slew of core

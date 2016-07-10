@@ -10,7 +10,7 @@ related:
 [a b]
 
 
-## Description
+## Details
 
 Returns true if `a` is a subset of `b`, false otherwise.
 

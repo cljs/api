@@ -10,7 +10,7 @@ related:
 [exception-type name expr*]
 
 
-## Description
+## Details
 
 `catch` should be used inside of a `try` expression.
 

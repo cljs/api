@@ -9,7 +9,7 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Returns true if `coll` implements the `ISorted` protocol, false otherwise.
 

@@ -10,7 +10,7 @@ related:
 foo#
 
 
-## Description
+## Details
 
 (Only intended for use in a [doc:syntax/syntax-quote].)
 

@@ -9,7 +9,7 @@ related:
 [& keyvals]
 
 
-## Description
+## Details
 
 Returns a new hash map with supplied mappings.
 

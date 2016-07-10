@@ -8,7 +8,7 @@ related:
 [f init coll]
 
 
-## Description
+## Details
 
 Reduces an associative collection.
 

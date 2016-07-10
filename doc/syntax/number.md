@@ -9,7 +9,7 @@ related:
   - cljs.core/int
 ---
 
-## Description
+## Details
 
 ClojureScript numbers are the same as [JavaScript numbers],
 double-precision 64-bit format IEEE 754.

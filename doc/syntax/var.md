@@ -10,7 +10,7 @@ related:
 #'foo/bar
 
 
-## Description
+## Details
 
 `#'foo` is sugar for [`(var foo)`][doc:special/var].
 

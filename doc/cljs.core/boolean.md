@@ -8,7 +8,7 @@ related:
 [x]
 
 
-## Description
+## Details
 
 Return `false` if `x` is false or nil.  Otherwise return `true`.  This is the
 truthiness condition used by `if` expressions.

@@ -12,7 +12,7 @@ related:
 [coll k & ks]
 
 
-## Description
+## Details
 
 dissoc(iate)
 

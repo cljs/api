@@ -9,7 +9,7 @@ related:
 [data f & args]
 
 
-## Description
+## Details
 
 Alter the metadata of `data` to be `(apply f its-current-meta args)`.
 

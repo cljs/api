@@ -9,7 +9,7 @@ related:
 [pred expr & clauses]
 
 
-## Description
+## Details
 
 Takes a binary predicate, an expression, and a set of clauses. There are two
 kinds of clauses:

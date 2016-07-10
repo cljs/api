@@ -8,6 +8,6 @@ related:
 [map-entry]
 
 
-## Description
+## Details
 
 Returns the value in the map entry.

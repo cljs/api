@@ -13,7 +13,7 @@ related:
 [m [k & ks] f a b c & args]
 
 
-## Description
+## Details
 
 "Updates" a value in a nested associative structure, where `ks` is a sequence of
 keys and `f` is a function that will take the old value and any supplied

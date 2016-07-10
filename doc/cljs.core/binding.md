@@ -8,7 +8,7 @@ related:
 [bindings & body]
 
 
-## Description
+## Details
 
 binding => var-symbol init-expr
 

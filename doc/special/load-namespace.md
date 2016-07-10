@@ -6,7 +6,7 @@ name: special/load-namespace
 [name]
 
 
-## Description
+## Details
 
 Only usable from a REPL.
 

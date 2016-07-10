@@ -10,7 +10,7 @@ related:
 [n coll]
 
 
-## Description
+## Details
 
 Forces evaluation of a lazy sequence. Often used to see the effects of a
 sequence produced via functions that have side effects.

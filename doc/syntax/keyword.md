@@ -12,7 +12,7 @@ related:
 :foo/bar
 
 
-## Description
+## Details
 
 A keyword is a string-like datatype that evaluates to itself.  Keywords are often used
 as enums or keys for maps.  Keywords should not start with a number.

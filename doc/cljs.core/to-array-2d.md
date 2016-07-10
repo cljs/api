@@ -8,7 +8,7 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Returns a (potentially-ragged) 2-dimensional JavaScript array containing the
 contents of `coll`.

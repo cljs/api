@@ -10,7 +10,7 @@ related:
 [tcoll key val & kvs]
 
 
-## Description
+## Details
 
 assoc(iate) on transient collection
 

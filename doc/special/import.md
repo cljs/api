@@ -6,7 +6,7 @@ name: special/import
 [& import-symbols-or-lists]
 
 
-## Description
+## Details
 
 import-list => (closure-namespace constructor-name-symbols*)
 

@@ -15,7 +15,7 @@ related:
 [coll x & xs]
 
 
-## Description
+## Details
 
 conj(oin)
 

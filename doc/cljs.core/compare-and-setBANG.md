@@ -10,7 +10,7 @@ related:
 [a oldval newval]
 
 
-## Description
+## Details
 
 Atomically sets the value of atom `a` to `newval` if and only if the current
 value of the atom is identical to `oldval`.

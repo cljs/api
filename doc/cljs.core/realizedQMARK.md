@@ -8,6 +8,6 @@ related:
 [x]
 
 
-## Description
+## Details
 
 Returns true if a value has been produced for a lazy sequence.

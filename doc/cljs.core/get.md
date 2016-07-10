@@ -9,7 +9,7 @@ related:
 [o k not-found]
 
 
-## Description
+## Details
 
 Returns the value mapped to key `k`.
 

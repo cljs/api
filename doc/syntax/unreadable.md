@@ -7,7 +7,7 @@ display: "#<> unreadable"
 #<...>
 
 
-## Description
+## Details
 
 A proper definition for something that cannot be read.
 

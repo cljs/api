@@ -3,7 +3,7 @@ name: syntax/unused
 display: "_ unused"
 ---
 
-## Description
+## Details
 
 `_` is a valid symbol name that indicates an unused or disregarded value.
 This is not enforced by the compiler.

@@ -7,7 +7,7 @@ related:
   - syntax/shebang
 ---
 
-## Description
+## Details
 
 "Comments out" everything after `;` on the current line.
 

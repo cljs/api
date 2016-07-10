@@ -9,6 +9,6 @@ related:
 [a]
 
 
-## Description
+## Details
 
 Returns the validator function for atom `a`.

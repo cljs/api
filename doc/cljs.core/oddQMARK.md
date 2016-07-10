@@ -8,7 +8,7 @@ related:
 [n]
 
 
-## Description
+## Details
 
 Returns true if `n` is an odd number.
 

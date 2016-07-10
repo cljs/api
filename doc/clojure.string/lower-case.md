@@ -6,6 +6,6 @@ name: clojure.string/lower-case
 [s]
 
 
-## Description
+## Details
 
 Converts string to all lower-case.

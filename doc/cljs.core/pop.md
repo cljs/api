@@ -10,7 +10,7 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 For a list, returns a new list without the first item.
 

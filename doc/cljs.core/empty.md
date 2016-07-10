@@ -8,7 +8,7 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Returns an empty collection of the same category as `coll`.
 

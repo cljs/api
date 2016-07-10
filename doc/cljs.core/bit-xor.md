@@ -10,7 +10,7 @@ related:
 [x y & more]
 
 
-## Description
+## Details
 
 Bitwise "exclusive or". Same as `x ^ y` in JavaScript.
 

@@ -8,7 +8,7 @@ related:
 [f]
 
 
-## Description
+## Details
 
 Returns true if `f` implements the `IFn` protocol, false otherwise.
 

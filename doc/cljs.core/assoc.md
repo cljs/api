@@ -12,7 +12,7 @@ related:
 [coll k v & kvs]
 
 
-## Description
+## Details
 
 assoc(iate)
 

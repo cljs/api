@@ -5,7 +5,7 @@ related:
   - syntax/function
 ---
 
-## Description
+## Details
 
 Special vars for accessing implicit function arguments.
 

@@ -6,7 +6,7 @@ related:
   - cljs.core/uuid
 ---
 
-## Description
+## Details
 
 A type representing a universally unique identifier ([UUID]).
 

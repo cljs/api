@@ -12,7 +12,7 @@ related:
 ::foo/bar
 
 
-## Description
+## Details
 
 Keywords starting with `::` will evaluate to regular keywords with a namespace qualification.
 The namespace will resolve to either of the following:

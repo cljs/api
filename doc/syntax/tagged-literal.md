@@ -9,7 +9,7 @@ related:
 #foo ...
 
 
-## Description
+## Details
 
 A tagged literal is a way to tag another core syntax literal to represent a
 single, new literal.

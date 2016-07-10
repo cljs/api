@@ -8,7 +8,7 @@ related:
 [key obj]
 
 
-## Description
+## Details
 
 Determines if property `key` is in JavaScript object `obj`.
 

@@ -9,6 +9,6 @@ related:
 [coll k]
 
 
-## Description
+## Details
 
 Returns the map entry for key `k`, or nil if `k` is not found.

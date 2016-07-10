@@ -14,7 +14,7 @@ true
 false
 
 
-## Description
+## Details
 
 Special symbols representing the boolean literals `true` and `false`.
 Both evaluate to themselves.

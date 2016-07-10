@@ -9,6 +9,6 @@ related:
 [size]
 
 
-## Description
+## Details
 
 Creates an empty JavaScript array of size `size`.

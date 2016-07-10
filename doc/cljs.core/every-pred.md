@@ -12,7 +12,7 @@ related:
 [p1 p2 p3 & ps]
 
 
-## Description
+## Details
 
 Takes a set of predicate functions and returns a function `f` that returns true
 if all of its composing predicates return a logical true value against all of

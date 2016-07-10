@@ -11,7 +11,7 @@ related:
 [f c1 c2 c3 & colls]
 
 
-## Description
+## Details
 
 Returns a vector consisting of the result of applying `f` to the set of first
 items of each coll, followed by applying `f` to the set of second items in each

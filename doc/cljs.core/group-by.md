@@ -9,7 +9,7 @@ related:
 [f coll]
 
 
-## Description
+## Details
 
 Returns a map of the elements of `coll` keyed by the result of running `f` on
 each element.

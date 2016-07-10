@@ -12,7 +12,7 @@ related:
 [[x test] & body]
 
 
-## Description
+## Details
 
 When `test` is logical true, evaluates `body` with the value of `test` bound to
 `x`.

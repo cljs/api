@@ -11,6 +11,6 @@ related:
 [x y & more]
 
 
-## Description
+## Details
 
 Returns the greatest number argument.

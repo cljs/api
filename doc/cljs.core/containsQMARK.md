@@ -9,7 +9,7 @@ related:
 [coll k]
 
 
-## Description
+## Details
 
 Returns true if the `coll` contains the lookup key `k`, otherwise returns false.
 

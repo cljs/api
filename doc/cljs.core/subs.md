@@ -7,7 +7,7 @@ name: cljs.core/subs
 [s start end]
 
 
-## Description
+## Details
 
 Returns the substring of `s` beginning at `start` inclusive, and ending at `end`
 exclusive.

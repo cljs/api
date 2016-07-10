@@ -6,7 +6,7 @@ related:
   - syntax/namespace
 ---
 
-## Description
+## Details
 
 Dots can be used inside symbols. Its meaning depends on its position in the symbol:
 

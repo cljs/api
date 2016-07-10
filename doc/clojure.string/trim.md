@@ -6,6 +6,6 @@ name: clojure.string/trim
 [s]
 
 
-## Description
+## Details
 
 Removes whitespace from both ends of string.

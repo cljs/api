@@ -9,7 +9,7 @@ related:
 Math/foo
 
 
-## Description
+## Details
 
 A special namespace for direct access to the native JavaScript [Math library].
 

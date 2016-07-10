@@ -10,6 +10,6 @@ related:
 [test & body]
 
 
-## Description
+## Details
 
 Evaluates `test`. If logical false, evaluates `body` in an implicit `do`.

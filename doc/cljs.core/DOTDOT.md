@@ -11,7 +11,7 @@ related:
 [o form & more]
 
 
-## Description
+## Details
 
 For interop, the `..` macro allows method/property chaining on the given JavaScript object `o`.
 

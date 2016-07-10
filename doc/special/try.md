@@ -10,7 +10,7 @@ related:
 [expr* catch-clause* finally-clause?]
 
 
-## Description
+## Details
 
 The expressions (`expr*`) are evaluated and, if no exceptions occur, the value
 of the last is returned.

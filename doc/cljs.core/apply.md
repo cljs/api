@@ -12,7 +12,7 @@ related:
 [f a b c d & args]
 
 
-## Description
+## Details
 
 Applies function `f` to the argument list formed by prepending intervening
 arguments to `args`.

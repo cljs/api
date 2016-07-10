@@ -7,7 +7,7 @@ related:
   - cljs.core/macroexpand-1
 ---
 
-## Description
+## Details
 
 Defines a macro, which is essentially a function that runs at compile time.
 Macros can be used to define syntactic constructs which would require

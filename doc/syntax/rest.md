@@ -7,7 +7,7 @@ display: "& rest"
 [... & foo]
 
 
-## Description
+## Details
 
 A concept for binding the rest of the values of some sequence to a name.  See
 [doc:syntax/destructure-vector] or [doc:cljs.core/fn] for exact usage details in their

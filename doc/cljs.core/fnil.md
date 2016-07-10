@@ -8,7 +8,7 @@ name: cljs.core/fnil
 [f x y z]
 
 
-## Description
+## Details
 
 Takes a function `f`, and returns a function that calls `f`, replacing a nil
 first argument to `f` with the supplied value `x`. Higher arity versions can

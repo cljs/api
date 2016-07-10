@@ -2,5 +2,5 @@
 name: clojure.core.reducers
 ---
 
-## Caption
+## Summary
 a library for reduction and parallel folding (parallelism not supported)

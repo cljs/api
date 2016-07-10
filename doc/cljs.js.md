@@ -2,11 +2,11 @@
 name: cljs.js
 ---
 
-## Caption
+## Summary
 compile/analyze ClojureScript code at runtime.
 
 
-## Description
+## Details
 
 This is what is referred to as the "Bootstrapped Compiler", which allows
 you to compile ClojureScript with nothing but ClojureScript.  In other

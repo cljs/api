@@ -8,6 +8,6 @@ related:
 [hash-map]
 
 
-## Description
+## Details
 
 Returns a sequence of the values in `hash-map`.

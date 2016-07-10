@@ -8,6 +8,6 @@ related:
 [[x test] & body]
 
 
-## Description
+## Details
 
 When `test` is not nil, evaluates `body` with `x` bound to the value of `test`.

@@ -6,7 +6,7 @@ name: cljs.core/reversible?
 [coll]
 
 
-## Description
+## Details
 
 Returns true if `coll` implements the `IReversible` protocol, false otherwise.
 

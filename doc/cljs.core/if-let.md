@@ -10,7 +10,7 @@ related:
 [[x test] then else]
 
 
-## Description
+## Details
 
 When `test` is logical true, evaluates `then` with the value of `test` bound to
 `x`. Otherwise, evaluates `else` with no bindings.

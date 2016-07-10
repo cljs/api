@@ -12,7 +12,7 @@ related:
 [n coll]
 
 
-## Description
+## Details
 
 Returns a lazy sequence of the first `n` items in `coll`. Returns all the items
 if there are fewer than `n`.

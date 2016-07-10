@@ -8,7 +8,7 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Returns a random element from a sequential collection `coll`.
 

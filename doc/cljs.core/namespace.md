@@ -4,7 +4,7 @@ related:
   - cljs.core/name
 ---
 
-## Description
+## Details
 
 Returns the namespace string of a possibly namespace-qualified keyword or symbol.
 

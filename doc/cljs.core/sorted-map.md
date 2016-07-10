@@ -13,7 +13,7 @@ related:
 [& keyvals]
 
 
-## Description
+## Details
 
 Returns a new sorted map with supplied mappings.
 

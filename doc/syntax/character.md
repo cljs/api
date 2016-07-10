@@ -6,7 +6,7 @@ related:
   - cljs.core/str
 ---
 
-## Description
+## Details
 
 A single character string.  Carried over from Clojure for
 compatibility.  They are represented as single character JavaScript strings.

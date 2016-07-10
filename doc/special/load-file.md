@@ -6,7 +6,7 @@ name: special/load-file
 [filename]
 
 
-## Description
+## Details
 
 Only usable from a REPL.
 

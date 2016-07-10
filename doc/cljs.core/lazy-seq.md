@@ -11,6 +11,6 @@ related:
 [& body]
 
 
-## Description
+## Details
 
 Returns a new lazy sequence.

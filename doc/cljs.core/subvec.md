@@ -10,7 +10,7 @@ related:
 [v start end]
 
 
-## Description
+## Details
 
 Returns a persistent vector of the items in `v` from `start` inclusive to `end`
 exclusive.

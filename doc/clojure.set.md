@@ -2,5 +2,5 @@
 name: clojure.set
 ---
 
-## Caption
+## Summary
 set operations such as union/intersection

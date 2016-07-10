@@ -11,7 +11,7 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Returns a possibly empty sequence of the items after the first item.
 

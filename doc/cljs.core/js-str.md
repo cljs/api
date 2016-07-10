@@ -8,7 +8,7 @@ related:
 [s]
 
 
-## Description
+## Details
 
 Convert `s` to string using JavaScript's coercion behavior.
 

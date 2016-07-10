@@ -9,7 +9,7 @@ related:
 [a fn]
 
 
-## Description
+## Details
 
 Sets a validator function for atom `a`.
 

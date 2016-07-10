@@ -6,7 +6,7 @@ name: cljs.core/when-first
 [bindings & body]
 
 
-## Description
+## Details
 
 With `bindings` as `x`, `xs`, roughly the same as `(when (seq xs) (let [x (first
 xs)] body))` but `xs` is evaluated only once.

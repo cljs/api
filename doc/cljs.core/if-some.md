@@ -9,7 +9,7 @@ related:
 [[x test] then else]
 
 
-## Description
+## Details
 
 If `test` is not nil, evaluates `then` with `x` bound to the value of `test`. If
 not, yields `else`.

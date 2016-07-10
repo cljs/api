@@ -10,7 +10,7 @@ related:
 [f x]
 
 
-## Description
+## Details
 
 Returns a lazy sequence of `x`, `(f x)`, `(f (f x))` etc.
 

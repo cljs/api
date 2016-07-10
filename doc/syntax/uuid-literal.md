@@ -10,7 +10,7 @@ related:
 #uuid "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
 
-## Description
+## Details
 
 Creates a universally unique identifier (UUID), using the [doc:cljs.core/UUID] type.
 

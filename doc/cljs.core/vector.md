@@ -11,6 +11,6 @@ related:
 [& args]
 
 
-## Description
+## Details
 
 Creates a new vector containing `args`.

@@ -5,7 +5,7 @@ related:
   - special/quote
 ---
 
-## Description
+## Details
 
 `'foo` is sugar for [`(quote foo)`][doc:special/quote].
 

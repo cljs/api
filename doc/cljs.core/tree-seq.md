@@ -6,7 +6,7 @@ name: cljs.core/tree-seq
 [branch? children root]
 
 
-## Description
+## Details
 
 Returns a lazy sequence of the nodes in a tree, via a depth-first walk.
 

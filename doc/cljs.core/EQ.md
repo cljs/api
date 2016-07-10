@@ -12,7 +12,7 @@ related:
 [x y & more]
 
 
-## Description
+## Details
 
 Returns true if the value of `x` equals the value of `y`, false otherwise.
 

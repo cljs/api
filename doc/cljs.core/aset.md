@@ -11,7 +11,7 @@ related:
 [array idx idx2 & idxv]
 
 
-## Description
+## Details
 
 Sets `val` at index `i` in a JavaScript array.
 

@@ -10,7 +10,7 @@ related:
 [a new-value]
 
 
-## Description
+## Details
 
 Sets the value of atom `a` to `new-value` without regard for the current value.
 

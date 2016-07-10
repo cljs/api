@@ -10,7 +10,7 @@ related:
 [test then else]
 
 
-## Description
+## Details
 
 If `test` is false or nil, evaluates and returns `then`. Otherwise, evaluates
 and returns `else`. `else` defaults to nil if not provided.

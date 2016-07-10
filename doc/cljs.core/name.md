@@ -8,7 +8,7 @@ related:
 [x]
 
 
-## Description
+## Details
 
 Returns the name string of a possibly namespace-qualified keyword or symbol.
 

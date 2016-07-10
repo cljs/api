@@ -10,7 +10,7 @@ foo/baz
 foo.bar/baz
 
 
-## Description
+## Details
 
 `/` can appear once inside a symbol. The left side of `/` must always be a namespace.
 The right side completes the reference to the symbol.

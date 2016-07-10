@@ -2,5 +2,5 @@
 name: cljs.repl.browser
 ---
 
-## Caption
+## Summary
 browser-connected REPL

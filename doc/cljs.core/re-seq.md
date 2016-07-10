@@ -12,6 +12,6 @@ related:
 [re s]
 
 
-## Description
+## Details
 
 Returns a lazy sequence of successive matches of regex `re` in string `s`.

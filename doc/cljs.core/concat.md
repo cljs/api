@@ -12,7 +12,7 @@ related:
 [x y & zs]
 
 
-## Description
+## Details
 
 Returns a lazy sequence representing the concatenation of the elements in the
 supplied collections.

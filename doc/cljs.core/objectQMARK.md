@@ -8,6 +8,6 @@ related:
 [x]
 
 
-## Description
+## Details
 
 Returns true if `x` is a JavaScript object, false otherwise.

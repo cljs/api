@@ -10,7 +10,7 @@ related:
 [& args]
 
 
-## Description
+## Details
 
 Creates a JavaScript array containing `args`.
 

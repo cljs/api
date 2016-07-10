@@ -12,7 +12,7 @@ related:
 [x y & more]
 
 
-## Description
+## Details
 
 Returns the product of nums.
 

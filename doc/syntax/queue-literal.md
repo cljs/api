@@ -12,7 +12,7 @@ related:
 #queue [...]
 
 
-## Description
+## Details
 
 Create a persistent queue. The form following `#queue` must be a vector.
 

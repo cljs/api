@@ -9,7 +9,7 @@ related:
 [arr]
 
 
-## Description
+## Details
 
 Creates a clone of the given JavaScript array `arr`.  The result is a new
 JavaScript array, which is a shallow copy, not a deep copy.

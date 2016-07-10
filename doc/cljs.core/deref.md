@@ -8,7 +8,7 @@ related:
 [x]
 
 
-## Description
+## Details
 
 Returns the current value of atom `x`.
 

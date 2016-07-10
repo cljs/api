@@ -9,7 +9,7 @@ related:
 description below taken from `repl-special-doc-map`
 
 
-## Description
+## Details
 
 Only usable from a REPL.
 

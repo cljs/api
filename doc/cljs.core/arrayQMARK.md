@@ -8,7 +8,7 @@ related:
 [x]
 
 
-## Description
+## Details
 
 Returns true if `x` is a JavaScript array, false otherwise.
 

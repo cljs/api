@@ -9,7 +9,7 @@ related:
 #?@(...)
 
 
-## Description
+## Details
 
 (Only allowed in `.cljc` files or the REPL)
 

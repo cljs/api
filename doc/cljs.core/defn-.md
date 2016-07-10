@@ -8,7 +8,7 @@ related:
 [name & decls]
 
 
-## Description
+## Details
 
 Same as `defn`, but adds `{:private true}` metadata to the definition.
 

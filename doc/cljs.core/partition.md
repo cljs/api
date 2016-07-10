@@ -12,7 +12,7 @@ related:
 [n step pad coll]
 
 
-## Description
+## Details
 
 Returns a lazy sequence of lists of `n` items each, at offsets `step` apart.
 

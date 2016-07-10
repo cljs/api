@@ -8,7 +8,7 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Returns true if `coll` has no items - same as `(not (seq coll))`.
 

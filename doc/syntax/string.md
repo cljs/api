@@ -9,7 +9,7 @@ related:
 "..."
 
 
-## Description
+## Details
 
 Create a string.  ClojureScript strings are the same as [JavaScript strings].
 

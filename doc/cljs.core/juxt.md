@@ -12,7 +12,7 @@ related:
 [f g h & fs]
 
 
-## Description
+## Details
 
 Takes a set of functions and returns a function that is the juxtaposition of
 those functions.

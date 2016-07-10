@@ -6,7 +6,7 @@ name: clojure.string/trim-newline
 [s]
 
 
-## Description
+## Details
 
 Removes all trailing newline `\n` or return `\r` characters from string.
 

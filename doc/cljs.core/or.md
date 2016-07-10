@@ -11,7 +11,7 @@ related:
 [x & next]
 
 
-## Description
+## Details
 
 Evaluates arguments one at a time from left to right. If an argument returns
 logical true, `or` returns that value and doesn't evaluate any of the other

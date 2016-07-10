@@ -8,7 +8,7 @@ related:
 [& names]
 
 
-## Description
+## Details
 
 Uses `def` to establish symbols of `names` with no bindings.
 

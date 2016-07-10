@@ -8,7 +8,7 @@ related:
 [x]
 
 
-## Description
+## Details
 
 Returns its argument.
 

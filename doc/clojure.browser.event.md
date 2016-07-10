@@ -2,5 +2,5 @@
 name: clojure.browser.event
 ---
 
-## Caption
+## Summary
 browser event library, wrapping [goog.events](http://www.closurecheatsheet.com/events)

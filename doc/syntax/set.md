@@ -11,7 +11,7 @@ related:
 #{...}
 
 
-## Description
+## Details
 
 Create a literal set.  Values must be unique.
 

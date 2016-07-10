@@ -9,7 +9,7 @@ related:
 *foo*
 
 
-## Description
+## Details
 
 A naming convention for dynamic vars (unenforced).
 

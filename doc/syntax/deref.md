@@ -11,7 +11,7 @@ related:
 @foo
 
 
-## Description
+## Details
 
 `@foo` is sugar for [`(deref foo)`][doc:cljs.core/deref].
 

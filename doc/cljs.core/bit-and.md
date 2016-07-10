@@ -9,7 +9,7 @@ related:
 [x y & more]
 
 
-## Description
+## Details
 
 Bitwise "and".  Same as `x & y` in JavaScript.
 

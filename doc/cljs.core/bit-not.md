@@ -6,7 +6,7 @@ name: cljs.core/bit-not
 [x]
 
 
-## Description
+## Details
 
 Bitwise complement.  Same as `~x` in JavaScript.
 

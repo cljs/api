@@ -11,7 +11,7 @@ related:
 [test then else?]
 
 
-## Description
+## Details
 
 If `test` is not false or nil, `then` is evaluated and returned. Otherwise,
 `else?` is evaluated and returned. `else?` defaults to nil if not provided.

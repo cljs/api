@@ -12,7 +12,7 @@ related:
 [array i & idxs]
 
 
-## Description
+## Details
 
 Returns the value at index `i` of a JavaScript array.
 

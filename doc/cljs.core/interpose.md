@@ -9,6 +9,6 @@ related:
 [sep coll]
 
 
-## Description
+## Details
 
 Returns a lazy seq of the elements of `coll` separated by `sep`.

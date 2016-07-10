@@ -9,7 +9,7 @@ related:
 [bindings & body]
 
 
-## Description
+## Details
 
 Binds expressions to symbols and makes those symbols available only within
 `body`.

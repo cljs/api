@@ -2,5 +2,5 @@
 name: cljs.repl.rhino
 ---
 
-## Caption
+## Summary
 Rhino REPL (JS on Java 6+)

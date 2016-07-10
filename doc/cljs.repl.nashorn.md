@@ -2,5 +2,5 @@
 name: cljs.repl.nashorn
 ---
 
-## Caption
+## Summary
 Nashorn REPL (JS on Java 8)

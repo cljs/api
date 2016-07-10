@@ -11,7 +11,7 @@ related:
 [k x y & more]
 
 
-## Description
+## Details
 
 Returns the `x` for which `(k x)` is greatest.
 

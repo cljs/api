@@ -6,7 +6,7 @@ name: clojure.string/replace-first
 [s match replacement]
 
 
-## Description
+## Details
 
 Replaces the first instance of `match` with `replacement` in `s`.
 

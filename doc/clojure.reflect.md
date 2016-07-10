@@ -2,5 +2,5 @@
 name: clojure.reflect
 ---
 
-## Caption
+## Summary
 deprecated

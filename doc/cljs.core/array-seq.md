@@ -7,7 +7,7 @@ name: cljs.core/array-seq
 [array i]
 
 
-## Description
+## Details
 
 Creates a `seq` from a JavaScript array, starting at index `i` if given.
 

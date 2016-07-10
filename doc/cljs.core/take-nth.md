@@ -7,7 +7,7 @@ name: cljs.core/take-nth
 [n coll]
 
 
-## Description
+## Details
 
 Returns a lazy seq of every `n`th item in `coll`.
 

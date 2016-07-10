@@ -13,7 +13,7 @@ related:
 [f arg1 arg2 arg3 & more]
 
 
-## Description
+## Details
 
 Takes a function `f` and fewer than the normal arguments to `f`. Returns a
 function that takes a variable number of additional arguments. When called, the

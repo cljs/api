@@ -9,7 +9,7 @@ related:
 [x & opts]
 
 
-## Description
+## Details
 
 Recursively transforms JavaScript arrays into ClojureScript vectors, and
 JavaScript objects into ClojureScript maps.

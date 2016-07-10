@@ -12,7 +12,7 @@ related:
 [pred coll]
 
 
-## Description
+## Details
 
 Returns the first logical true value of `(pred x)` for any `x` in `coll`, else
 nil.

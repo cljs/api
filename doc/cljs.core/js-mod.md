@@ -4,7 +4,7 @@ related:
   - cljs.core/mod
 ---
 
-## Description
+## Details
 
 Returns the modulus of dividing numerator `n` by denominator `d`, with JavaScript's
 original behavior for negative numbers.

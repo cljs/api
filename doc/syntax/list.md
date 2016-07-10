@@ -10,7 +10,7 @@ related:
 (...)
 
 
-## Description
+## Details
 
 Creates a list.  The most salient feature of a list is that, when evaluated, it
 is interpreted as a _call_.

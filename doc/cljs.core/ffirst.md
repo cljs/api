@@ -10,7 +10,7 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Same as `(first (first coll))`.
 

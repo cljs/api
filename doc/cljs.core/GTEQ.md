@@ -10,7 +10,7 @@ related:
 [x y & more]
 
 
-## Description
+## Details
 
 Returns true if each successive number argument is less than or equal to the
 previous one, false otherwise.

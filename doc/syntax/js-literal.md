@@ -12,7 +12,7 @@ related:
 #js {...}
 
 
-## Description
+## Details
 
 Create a literal JavaScript object or array.  Data in the form of a map `{}` or
 vector `[]` must follow the `#js` tag, which will be converted at compile-time

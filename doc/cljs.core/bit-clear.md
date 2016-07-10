@@ -9,7 +9,7 @@ related:
 [x n]
 
 
-## Description
+## Details
 
 Clear bit at index `n`.  Same as `x & ~(1 << y)` in JavaScript.
 

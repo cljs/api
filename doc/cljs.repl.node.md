@@ -2,5 +2,5 @@
 name: cljs.repl.node
 ---
 
-## Caption
+## Summary
 Node.js REPL

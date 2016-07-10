@@ -8,7 +8,7 @@ related:
 [a]
 
 
-## Description
+## Details
 
 For interop, it returns the length of a JavaScript array or string.
 

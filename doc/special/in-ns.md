@@ -6,7 +6,7 @@ name: special/in-ns
 [name]
 
 
-## Description
+## Details
 
 Only usable from a REPL.
 

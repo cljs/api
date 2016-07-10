@@ -8,6 +8,6 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Returns nil if `coll` is empty, else returns `coll`.

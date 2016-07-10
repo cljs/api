@@ -9,7 +9,7 @@ related:
 [arg1 arg2 & args :as name]
 
 
-## Description
+## Details
 
 A helpful shorthand for destructuring a sequence into multiple names.
 

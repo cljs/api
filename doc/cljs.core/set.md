@@ -22,6 +22,6 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Returns a set of the distinct elements of `coll`.

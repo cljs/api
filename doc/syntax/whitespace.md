@@ -5,7 +5,7 @@ related:
   - syntax/comma
 ---
 
-## Description
+## Details
 
 The amount of whitespace between syntax forms does not affect syntax
 correctness.  Elements are free to be aligned as desired.

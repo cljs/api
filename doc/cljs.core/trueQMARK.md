@@ -8,6 +8,6 @@ related:
 [x]
 
 
-## Description
+## Details
 
 Returns true if `x` is the value true, false otherwise.

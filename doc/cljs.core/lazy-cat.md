@@ -9,7 +9,7 @@ related:
 [& colls]
 
 
-## Description
+## Details
 
 Expands to code which yields a lazy sequence of the concatenation of the
 supplied collections. Each collections expression is not evaluated until it is

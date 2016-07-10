@@ -9,7 +9,7 @@ related:
 [f coll]
 
 
-## Description
+## Details
 
 Returns a lazy sequence consisting of the result of applying `f` to 0 and the
 first item of `coll`, followed by applying `f` to 1 and the second item in

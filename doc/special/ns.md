@@ -12,7 +12,7 @@ related:
 [name & references]
 
 
-## Description
+## Details
 
 Sets the namespace of the file.
 

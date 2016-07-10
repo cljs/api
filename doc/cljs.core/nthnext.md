@@ -10,7 +10,7 @@ related:
 [coll n]
 
 
-## Description
+## Details
 
 Returns the `n`th `next` of `coll`.
 

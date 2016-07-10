@@ -6,6 +6,6 @@ name: cljs.core/re-pattern
 [s]
 
 
-## Description
+## Details
 
 Returns an instance of RegExp which has compiled the provided string.

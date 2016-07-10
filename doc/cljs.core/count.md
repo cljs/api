@@ -6,7 +6,7 @@ name: cljs.core/count
 [x]
 
 
-## Description
+## Details
 
 Returns the number of items in `x`.
 

@@ -8,7 +8,7 @@ related:
 [x n]
 
 
-## Description
+## Details
 
 Set bit at index `n`.  Same as `x | (1 << y)` in JavaScript.
 

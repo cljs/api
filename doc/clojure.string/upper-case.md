@@ -6,6 +6,6 @@ name: clojure.string/upper-case
 [s]
 
 
-## Description
+## Details
 
 Converts string to all upper-case.

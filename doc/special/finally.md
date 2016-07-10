@@ -10,7 +10,7 @@ related:
 [expr*]
 
 
-## Description
+## Details
 
 `finally` should be the last form inside of a `try` expression. It is optional.
 

@@ -6,7 +6,7 @@ name: cljs.core/comment
 [& body]
 
 
-## Description
+## Details
 
 Ignores all `body` forms (i.e. "commenting out"). Returns nil.
 

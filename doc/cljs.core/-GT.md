@@ -9,7 +9,7 @@ related:
 [x & forms]
 
 
-## Description
+## Details
 
 The thread-first macro "threads" an expression through several forms as the
 second item in a list.

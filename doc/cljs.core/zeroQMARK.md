@@ -9,6 +9,6 @@ related:
 [n]
 
 
-## Description
+## Details
 
 Returns true if `n` is 0, false otherwise.

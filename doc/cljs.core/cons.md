@@ -8,7 +8,7 @@ related:
 [x coll]
 
 
-## Description
+## Details
 
 Returns a new sequence where `x` is the first element and `coll` is the rest.
 

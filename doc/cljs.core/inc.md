@@ -8,6 +8,6 @@ related:
 [x]
 
 
-## Description
+## Details
 
 Returns a number one greater than `x`.

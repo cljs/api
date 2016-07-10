@@ -9,6 +9,6 @@ related:
 [x]
 
 
-## Description
+## Details
 
 Coerces `x` to an integer by stripping decimal places.

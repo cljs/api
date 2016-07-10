@@ -9,6 +9,6 @@ related:
 [x]
 
 
-## Description
+## Details
 
 Returns true if `x` is a map, false otherwise.

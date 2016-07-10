@@ -11,7 +11,7 @@ related:
 [x & next]
 
 
-## Description
+## Details
 
 Evaluates arguments one at a time from left to right. If an argument returns
 logical false (nil or false), `and` returns that value and doesn't evaluate any

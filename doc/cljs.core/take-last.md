@@ -10,7 +10,7 @@ related:
 [n coll]
 
 
-## Description
+## Details
 
 Returns a sequence of the last `n` items in `coll`.
 

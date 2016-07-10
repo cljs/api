@@ -6,7 +6,7 @@ name: cljs.core/filterv
 [pred coll]
 
 
-## Description
+## Details
 
 Returns a vector of the items in `coll` for which `(pred item)` returns true.
 

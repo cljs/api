@@ -8,7 +8,7 @@ related:
 [a idx ret expr]
 
 
-## Description
+## Details
 
 For quickly creating a new JavaScript array by mapping an expression `expr`
 across a JavaScript array `a`.  The expression can use `ret` as the current

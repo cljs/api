@@ -6,7 +6,7 @@ name: cljs.core/associative?
 [coll]
 
 
-## Description
+## Details
 
 Returns true if `coll` implements the `IAssociative` protocol, false otherwise.
 

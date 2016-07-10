@@ -8,7 +8,7 @@ related:
 [n d]
 
 
-## Description
+## Details
 
 Returns the modulus of dividing numerator `n` by denominator `d`.
 

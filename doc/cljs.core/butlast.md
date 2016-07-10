@@ -13,7 +13,7 @@ related:
 [s]
 
 
-## Description
+## Details
 
 Returns a sequence of all but the last item in `s`.
 

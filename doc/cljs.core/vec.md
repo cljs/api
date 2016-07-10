@@ -9,6 +9,6 @@ related:
 [coll]
 
 
-## Description
+## Details
 
 Creates a new vector containing the contents of `coll`

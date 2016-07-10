@@ -9,7 +9,7 @@ related:
 [x n]
 
 
-## Description
+## Details
 
 Bitwise shift right `n` bits.  Same as `x >> n` in JavaScript.
 

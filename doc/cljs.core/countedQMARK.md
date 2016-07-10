@@ -6,7 +6,7 @@ name: cljs.core/counted?
 [x]
 
 
-## Description
+## Details
 
 Returns true if `x` executes `count` in constant time, false otherwise.
 

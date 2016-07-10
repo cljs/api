@@ -8,6 +8,6 @@ related:
 [map-entry]
 
 
-## Description
+## Details
 
 Returns the key of the map entry.

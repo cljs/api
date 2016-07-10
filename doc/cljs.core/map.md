@@ -16,7 +16,7 @@ related:
 [f c1 c2 c3 & colls]
 
 
-## Description
+## Details
 
 Returns a lazy sequence of applying function `f` to every element of `coll`.
 

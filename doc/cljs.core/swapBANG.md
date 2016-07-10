@@ -12,7 +12,7 @@ related:
 [a f x y & more]
 
 
-## Description
+## Details
 
 Atomically swaps the value of atom to be: `(apply f current-value-of-atom
 args)`

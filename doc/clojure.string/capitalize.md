@@ -6,7 +6,7 @@ name: clojure.string/capitalize
 [s]
 
 
-## Description
+## Details
 
 Converts first character of the string to upper-case, all other characters to
 lower-case.

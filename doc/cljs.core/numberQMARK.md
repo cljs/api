@@ -8,6 +8,6 @@ related:
 [n]
 
 
-## Description
+## Details
 
 Returns true if `n` is a number, false otherwise.
