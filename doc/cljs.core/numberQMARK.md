@@ -1,6 +1,6 @@
 ---
 name: cljs.core/number?
-related:
+see also:
   - cljs.core/integer?
 ---
 

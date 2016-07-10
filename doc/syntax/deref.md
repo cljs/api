@@ -1,7 +1,7 @@
 ---
 name: syntax/deref
 display: "@ deref"
-related:
+see also:
   - cljs.core/deref
   - cljs.core/atom
   - cljs.core/delay

@@ -1,6 +1,6 @@
 ---
 name: cljs.repl/find-doc
-related:
+see also:
   - cljs.repl/doc
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/derive
-related:
+see also:
   - cljs.core/ancestors
   - cljs.core/descendants
   - cljs.core/isa?

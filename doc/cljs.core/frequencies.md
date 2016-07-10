@@ -1,6 +1,6 @@
 ---
 name: cljs.core/frequencies
-related:
+see also:
   - cljs.core/group-by
   - cljs.core/distinct
 ---

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/peek
-related:
+see also:
   - cljs.core/first
   - cljs.core/pop
   - cljs.core/conj

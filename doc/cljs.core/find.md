@@ -1,6 +1,6 @@
 ---
 name: cljs.core/find
-related:
+see also:
   - cljs.core/get
   - cljs.core/get-in
 ---

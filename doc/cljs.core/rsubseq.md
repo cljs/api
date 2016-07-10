@@ -1,6 +1,6 @@
 ---
 name: cljs.core/rsubseq
-related:
+see also:
   - cljs.core/subseq
 ---
 

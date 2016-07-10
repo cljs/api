@@ -1,6 +1,6 @@
 ---
 name: cljs.repl/doc
-related:
+see also:
   - cljs.repl/find-doc
   - cljs.core/meta
   - special/var

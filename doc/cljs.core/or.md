@@ -1,6 +1,6 @@
 ---
 name: cljs.core/or
-related:
+see also:
   - cljs.core/and
   - special/if
 ---

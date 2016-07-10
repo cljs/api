@@ -1,6 +1,6 @@
 ---
 name: cljs.core/apply
-related:
+see also:
   - cljs.core/map
 ---
 

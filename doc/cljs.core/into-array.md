@@ -1,6 +1,6 @@
 ---
 name: cljs.core/into-array
-related:
+see also:
   - cljs.core/to-array
   - cljs.core/make-array
 ---

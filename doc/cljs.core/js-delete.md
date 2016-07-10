@@ -1,6 +1,6 @@
 ---
 name: cljs.core/js-delete
-related:
+see also:
   - cljs.core/dissoc
 ---
 

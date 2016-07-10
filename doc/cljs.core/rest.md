@@ -1,6 +1,6 @@
 ---
 name: cljs.core/rest
-related:
+see also:
   - cljs.core/next
   - cljs.core/first
   - cljs.core/drop

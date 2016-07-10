@@ -1,6 +1,6 @@
 ---
 name: cljs.core/nil?
-related:
+see also:
   - cljs.core/true?
   - cljs.core/false?
   - cljs.core/identity

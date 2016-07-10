@@ -1,6 +1,6 @@
 ---
 name: cljs.core/aget
-related:
+see also:
   - cljs.core/..
   - cljs.core/aset
   - cljs.core/get

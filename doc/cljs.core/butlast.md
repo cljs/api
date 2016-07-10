@@ -1,6 +1,6 @@
 ---
 name: cljs.core/butlast
-related:
+see also:
   - cljs.core/first
   - cljs.core/rest
   - cljs.core/last

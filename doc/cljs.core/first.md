@@ -1,6 +1,6 @@
 ---
 name: cljs.core/first
-related:
+see also:
   - cljs.core/rest
   - cljs.core/next
   - cljs.core/nth

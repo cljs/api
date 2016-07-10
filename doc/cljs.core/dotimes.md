@@ -1,6 +1,6 @@
 ---
 name: cljs.core/dotimes
-related:
+see also:
   - cljs.core/repeat
   - cljs.core/for
   - cljs.core/doseq

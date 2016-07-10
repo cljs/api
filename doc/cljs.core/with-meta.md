@@ -1,6 +1,6 @@
 ---
 name: cljs.core/with-meta
-related:
+see also:
   - cljs.core/alter-meta!
   - cljs.core/vary-meta
 ---

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/replace
-related:
+see also:
   - cljs.core/map
   - clojure.walk/prewalk-replace
   - clojure.walk/postwalk-replace

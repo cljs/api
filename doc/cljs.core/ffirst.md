@@ -1,6 +1,6 @@
 ---
 name: cljs.core/ffirst
-related:
+see also:
   - cljs.core/first
   - cljs.core/fnext
   - cljs.core/nfirst

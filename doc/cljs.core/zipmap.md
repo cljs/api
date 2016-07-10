@@ -1,6 +1,6 @@
 ---
 name: cljs.core/zipmap
-related:
+see also:
   - cljs.core/interleave
 ---
 

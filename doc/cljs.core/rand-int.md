@@ -1,6 +1,6 @@
 ---
 name: cljs.core/rand-int
-related:
+see also:
   - cljs.core/rand
 ---
 

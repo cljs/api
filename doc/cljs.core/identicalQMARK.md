@@ -1,6 +1,6 @@
 ---
 name: cljs.core/identical?
-related:
+see also:
   - cljs.core/=
   - cljs.core/==
 ---

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/next
-related:
+see also:
   - cljs.core/rest
   - cljs.core/first
   - cljs.core/fnext

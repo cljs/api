@@ -1,7 +1,7 @@
 ---
 name: syntax/meta
 display: "^ meta"
-related:
+see also:
   - cljs.core/meta
   - cljs.core/with-meta
   - cljs.core/vary-meta

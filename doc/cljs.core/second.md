@@ -1,6 +1,6 @@
 ---
 name: cljs.core/second
-related:
+see also:
   - cljs.core/first
   - cljs.core/nth
   - cljs.core/fnext

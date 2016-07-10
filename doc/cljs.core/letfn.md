@@ -1,6 +1,6 @@
 ---
 name: cljs.core/letfn
-related:
+see also:
   - cljs.core/let
 ---
 

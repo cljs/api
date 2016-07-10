@@ -1,6 +1,6 @@
 ---
 name: cljs.core/make-hierarchy
-related:
+see also:
   - cljs.core/ancestors
   - cljs.core/descendants
   - cljs.core/isa?

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/lazy-cat
-related:
+see also:
   - cljs.core/lazy-seq
   - cljs.core/concat
 ---

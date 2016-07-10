@@ -1,6 +1,6 @@
 ---
 name: cljs.core/object?
-related:
+see also:
   - cljs.core/array?
 ---
 

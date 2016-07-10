@@ -1,6 +1,6 @@
 ---
 name: cljs.core/get
-related:
+see also:
   - cljs.core/get-in
 ---
 

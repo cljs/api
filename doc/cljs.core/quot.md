@@ -1,6 +1,6 @@
 ---
 name: cljs.core/quot
-related:
+see also:
   - cljs.core/rem
   - cljs.core/mod
 ---

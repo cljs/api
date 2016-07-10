@@ -1,6 +1,6 @@
 ---
 name: cljs.core/defn
-related:
+see also:
   - special/def
   - cljs.core/defn-
   - cljs.core/defmacro

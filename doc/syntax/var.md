@@ -1,7 +1,7 @@
 ---
 name: syntax/var
 display: "#' var"
-related:
+see also:
   - special/var
 ---
 

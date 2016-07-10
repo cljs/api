@@ -1,6 +1,6 @@
 ---
 name: cljs.core/atom
-related:
+see also:
   - cljs.core/atom
   - cljs.core/swap!
   - cljs.core/reset!

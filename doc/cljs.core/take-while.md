@@ -1,6 +1,6 @@
 ---
 name: cljs.core/take-while
-related:
+see also:
   - cljs.core/drop-while
   - cljs.core/split-with
 ---

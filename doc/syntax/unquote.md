@@ -1,7 +1,7 @@
 ---
 name: syntax/unquote
 display: "~ unquote"
-related:
+see also:
   - syntax/syntax-quote
   - syntax/unquote-splicing
 ---

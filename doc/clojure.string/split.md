@@ -1,6 +1,6 @@
 ---
 name: clojure.string/split
-related:
+see also:
   - cljs.core/subs
   - clojure.string/replace
   - clojure.string/split-lines

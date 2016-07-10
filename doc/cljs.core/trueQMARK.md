@@ -1,6 +1,6 @@
 ---
 name: cljs.core/true?
-related:
+see also:
   - cljs.core/false?
 ---
 

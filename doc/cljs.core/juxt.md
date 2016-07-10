@@ -1,6 +1,6 @@
 ---
 name: cljs.core/juxt
-related:
+see also:
   - cljs.core/partial
   - cljs.core/comp
 ---

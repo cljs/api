@@ -1,7 +1,7 @@
 ---
 name: syntax/list
 display: "() list"
-related:
+see also:
   - syntax/vector
   - syntax/quote
 ---

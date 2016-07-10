@@ -1,6 +1,6 @@
 ---
 name: cljs.core/defn-
-related:
+see also:
   - cljs.core/defn
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/bit-shift-right
-related:
+see also:
   - cljs.core/bit-shift-left
   - cljs.core/unsigned-bit-shift-right
 ---

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/subvec
-related:
+see also:
   - cljs.core/vector
   - cljs.core/vector?
 ---

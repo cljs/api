@@ -1,6 +1,6 @@
 ---
 name: cljs.core/keep-indexed
-related:
+see also:
   - cljs.core/map-indexed
   - cljs.core/keep
 ---

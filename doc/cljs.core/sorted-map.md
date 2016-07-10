@@ -1,6 +1,6 @@
 ---
 name: cljs.core/sorted-map
-related:
+see also:
   - cljs.core/sorted-map-by
   - cljs.core/subseq
   - cljs.core/rsubseq

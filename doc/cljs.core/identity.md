@@ -1,6 +1,6 @@
 ---
 name: cljs.core/identity
-related:
+see also:
   - cljs.core/nil?
 ---
 

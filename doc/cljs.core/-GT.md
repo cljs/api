@@ -1,7 +1,7 @@
 ---
 name: cljs.core/->
 known as: thread first
-related:
+see also:
   - cljs.core/->>
 ---
 

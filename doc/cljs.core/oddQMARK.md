@@ -1,6 +1,6 @@
 ---
 name: cljs.core/odd?
-related:
+see also:
   - cljs.core/even?
 ---
 

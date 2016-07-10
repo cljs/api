@@ -1,7 +1,7 @@
 ---
 name: syntax/quote
 display: "' quote"
-related:
+see also:
   - special/quote
 ---
 

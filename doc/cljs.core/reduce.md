@@ -1,6 +1,6 @@
 ---
 name: cljs.core/reduce
-related:
+see also:
   - cljs.core/reductions
   - cljs.core/apply
   - cljs.core/frequencies

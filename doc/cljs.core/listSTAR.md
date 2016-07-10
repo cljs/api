@@ -1,6 +1,6 @@
 ---
 name: cljs.core/list*
-related:
+see also:
   - cljs.core/list
 ---
 

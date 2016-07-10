@@ -1,6 +1,6 @@
 ---
 name: cljs.core/isa?
-related:
+see also:
   - cljs.core/ancestors
   - cljs.core/descendants
   - cljs.core/make-hierarchy

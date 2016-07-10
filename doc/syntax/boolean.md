@@ -1,7 +1,7 @@
 ---
 name: syntax/boolean
 display: "boolean literal"
-related:
+see also:
   - cljs.core/boolean
   - special/if
   - cljs.core/not

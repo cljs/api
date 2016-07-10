@@ -1,6 +1,6 @@
 ---
 name: clojure.set/subset?
-related:
+see also:
   - cljs.core/set
   - cljs.core/set?
   - clojure.set/superset?

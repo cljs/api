@@ -1,6 +1,6 @@
 ---
 name: cljs.core/aclone
-related:
+see also:
   - cljs.core/array
   - cljs.core/make-array
 ---

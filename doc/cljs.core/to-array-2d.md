@@ -1,6 +1,6 @@
 ---
 name: cljs.core/to-array-2d
-related:
+see also:
   - cljs.core/to-array
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/while
-related:
+see also:
   - cljs.core/loop
 ---
 

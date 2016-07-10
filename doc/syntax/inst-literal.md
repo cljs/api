@@ -1,7 +1,7 @@
 ---
 name: syntax/inst-literal
 display: "#inst literal"
-related:
+see also:
   - cljs.core/time
   - syntax/tagged-literal
 ---

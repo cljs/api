@@ -1,6 +1,6 @@
 ---
 name: cljs.core/mapv
-related:
+see also:
   - cljs.core/map
 ---
 

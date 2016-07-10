@@ -1,6 +1,6 @@
 ---
 name: cljs.core/uuid
-related:
+see also:
   - cljs.core/random-uuid
   - syntax/uuid-literal
 ---

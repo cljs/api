@@ -1,7 +1,7 @@
 ---
 name: syntax/syntax-quote
 display: "` syntax quote"
-related:
+see also:
   - syntax/auto-gensym
   - syntax/quote
   - syntax/unquote

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/fnext
-related:
+see also:
   - cljs.core/ffirst
   - cljs.core/second
 ---

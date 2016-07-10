@@ -1,6 +1,6 @@
 ---
 name: cljs.core/nfirst
-related:
+see also:
   - cljs.core/next
 ---
 

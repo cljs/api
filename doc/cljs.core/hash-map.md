@@ -1,6 +1,6 @@
 ---
 name: cljs.core/hash-map
-related:
+see also:
   - cljs.core/array-map
   - cljs.core/sorted-map
 ---

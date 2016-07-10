@@ -1,6 +1,6 @@
 ---
 name: cljs.core/set?
-related:
+see also:
   - cljs.core/set
 ---
 

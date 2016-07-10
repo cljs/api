@@ -1,7 +1,7 @@
 ---
 name: syntax/Infinity
 display: "Infinity"
-related:
+see also:
   - syntax/number
   - syntax/NaN
 ---

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/take
-related:
+see also:
   - cljs.core/drop
   - cljs.core/take-while
   - cljs.core/take-last

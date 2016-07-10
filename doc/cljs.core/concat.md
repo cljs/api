@@ -1,6 +1,6 @@
 ---
 name: cljs.core/concat
-related:
+see also:
   - cljs.core/conj
   - cljs.core/into
 ---

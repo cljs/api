@@ -1,6 +1,6 @@
 ---
 name: cljs.core/sort-by
-related:
+see also:
   - cljs.core/sort
   - cljs.core/compare
 ---

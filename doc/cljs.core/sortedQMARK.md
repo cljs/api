@@ -1,6 +1,6 @@
 ---
 name: cljs.core/sorted?
-related:
+see also:
   - cljs.core/sorted-map
   - cljs.core/sorted-set
 ---

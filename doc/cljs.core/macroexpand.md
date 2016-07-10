@@ -1,6 +1,6 @@
 ---
 name: cljs.core/macroexpand
-related:
+see also:
   - cljs.core/macroexpand-1
   - cljs.core/defmacro
 ---

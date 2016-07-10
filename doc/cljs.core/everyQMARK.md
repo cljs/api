@@ -1,6 +1,6 @@
 ---
 name: cljs.core/every?
-related:
+see also:
   - cljs.core/some
   - cljs.core/not-any?
 ---

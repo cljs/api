@@ -1,6 +1,6 @@
 ---
 name: cljs.core/js-str
-related:
+see also:
   - cljs.core/str
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: syntax/destructure-map
 display: "destructure {}"
-related:
+see also:
   - syntax/destructure-vector
 ---
 

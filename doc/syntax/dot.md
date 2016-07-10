@@ -1,7 +1,7 @@
 ---
 name: syntax/dot
 display: ". dot"
-related:
+see also:
   - syntax/symbol
   - syntax/namespace
 ---

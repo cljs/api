@@ -1,6 +1,6 @@
 ---
 name: cljs.core/map
-related:
+see also:
   - cljs.core/map-indexed
   - cljs.core/amap
   - cljs.core/mapcat

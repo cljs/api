@@ -1,6 +1,6 @@
 ---
 name: special/finally
-related:
+see also:
   - special/try
   - special/catch
   - special/throw

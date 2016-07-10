@@ -1,6 +1,6 @@
 ---
 name: special/set!
-related:
+see also:
   - cljs.core/aset
   - cljs.core/reset!
 ---

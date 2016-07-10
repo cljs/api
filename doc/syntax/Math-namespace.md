@@ -1,7 +1,7 @@
 ---
 name: syntax/Math-namespace
 display: "Math/ namespace"
-related:
+see also:
   - syntax/js-namespace
 ---
 

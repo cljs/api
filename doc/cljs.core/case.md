@@ -1,6 +1,6 @@
 ---
 name: cljs.core/case
-related:
+see also:
   - cljs.core/cond
   - cljs.core/condp
 ---

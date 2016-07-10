@@ -1,6 +1,6 @@
 ---
 name: cljs.core/assoc-in
-related:
+see also:
   - cljs.core/assoc
   - cljs.core/update-in
   - cljs.core/get-in

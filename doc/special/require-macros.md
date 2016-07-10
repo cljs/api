@@ -1,6 +1,6 @@
 ---
 name: special/require-macros
-related:
+see also:
   - special/require
 ---
 

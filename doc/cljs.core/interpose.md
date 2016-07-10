@@ -1,6 +1,6 @@
 ---
 name: cljs.core/interpose
-related:
+see also:
   - cljs.core/interleave
   - clojure.string/join
 ---

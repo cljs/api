@@ -1,6 +1,6 @@
 ---
 name: clojure.string/replace
-related:
+see also:
   - cljs.core/subs
   - clojure.string/split
   - clojure.string/replace-first

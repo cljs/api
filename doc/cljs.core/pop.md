@@ -1,6 +1,6 @@
 ---
 name: cljs.core/pop
-related:
+see also:
   - cljs.core/peek
   - cljs.core/rest
   - cljs.core/conj

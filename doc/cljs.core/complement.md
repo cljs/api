@@ -1,6 +1,6 @@
 ---
 name: cljs.core/complement
-related:
+see also:
   - cljs.core/not
 ---
 

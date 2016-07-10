@@ -1,6 +1,6 @@
 ---
 name: cljs.core/last
-related:
+see also:
   - cljs.core/first
   - cljs.core/next
   - cljs.core/rest

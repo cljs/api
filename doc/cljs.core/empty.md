@@ -1,6 +1,6 @@
 ---
 name: cljs.core/empty
-related:
+see also:
   - cljs.core/not-empty
 ---
 

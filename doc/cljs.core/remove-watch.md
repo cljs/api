@@ -1,6 +1,6 @@
 ---
 name: cljs.core/remove-watch
-related:
+see also:
   - cljs.core/add-watch
 ---
 

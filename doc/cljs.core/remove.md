@@ -1,6 +1,6 @@
 ---
 name: cljs.core/remove
-related:
+see also:
   - cljs.core/filter
 ---
 

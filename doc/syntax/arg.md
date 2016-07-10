@@ -1,7 +1,7 @@
 ---
 name: syntax/arg
 display: "% arg"
-related:
+see also:
   - syntax/function
 ---
 

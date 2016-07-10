@@ -1,6 +1,6 @@
 ---
 name: cljs.core/drop-last
-related:
+see also:
   - cljs.core/drop
   - cljs.core/drop-while
 ---

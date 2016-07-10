@@ -1,6 +1,6 @@
 ---
 name: cljs.core/into
-related:
+see also:
   - cljs.core/conj
 ---
 

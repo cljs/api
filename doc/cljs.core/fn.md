@@ -1,6 +1,6 @@
 ---
 name: cljs.core/fn
-related:
+see also:
   - cljs.core/defn
   - cljs.core/defn-
 ---

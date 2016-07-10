@@ -1,6 +1,6 @@
 ---
 name: cljs.core/lazy-seq
-related:
+see also:
   - cljs.core/lazy-cat
   - cljs.core/realized?
   - cljs.core/doall

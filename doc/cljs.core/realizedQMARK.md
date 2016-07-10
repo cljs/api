@@ -1,6 +1,6 @@
 ---
 name: cljs.core/realized?
-related:
+see also:
   - cljs.core/lazy-seq
 ---
 

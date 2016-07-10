@@ -1,6 +1,6 @@
 ---
 name: cljs.core/seq?
-related:
+see also:
   - cljs.core/seq
   - cljs.core/sequential?
   - cljs.core/vector?

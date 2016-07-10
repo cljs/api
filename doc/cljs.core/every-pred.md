@@ -1,6 +1,6 @@
 ---
 name: cljs.core/every-pred
-related:
+see also:
   - cljs.core/some-fn
   - cljs.core/and
 ---

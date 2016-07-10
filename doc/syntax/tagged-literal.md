@@ -1,7 +1,7 @@
 ---
 name: syntax/tagged-literal
 display: "# tagged literal"
-related:
+see also:
   - syntax/dispatch
 ---
 

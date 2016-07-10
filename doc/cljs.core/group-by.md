@@ -1,6 +1,6 @@
 ---
 name: cljs.core/group-by
-related:
+see also:
   - cljs.core/partition-by
   - cljs.core/frequencies
 ---

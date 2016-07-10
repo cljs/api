@@ -1,6 +1,6 @@
 ---
 name: cljs.core/mapcat
-related:
+see also:
   - cljs.core/map
   - cljs.core/concat
 ---

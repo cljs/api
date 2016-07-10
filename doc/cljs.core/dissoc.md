@@ -1,6 +1,6 @@
 ---
 name: cljs.core/dissoc
-related:
+see also:
   - cljs.core/assoc
   - cljs.core/disj
   - cljs.core/select-keys

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/js-obj
-related:
+see also:
   - syntax/js-literal
   - cljs.core/array
   - cljs.core/clj->js

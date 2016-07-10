@@ -1,6 +1,6 @@
 ---
 name: cljs.core/cycle
-related:
+see also:
   - cljs.core/lazy-seq
   - cljs.core/repeatedly
 ---

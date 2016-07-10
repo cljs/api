@@ -1,6 +1,6 @@
 ---
 name: special/ns
-related:
+see also:
   - special/in-ns
   - special/load-namespace
   - special/import

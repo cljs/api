@@ -1,6 +1,6 @@
 ---
 name: special/catch
-related:
+see also:
   - special/try
   - special/finally
   - special/throw

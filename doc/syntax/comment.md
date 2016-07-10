@@ -1,7 +1,7 @@
 ---
 name: syntax/comment
 display: "; comment"
-related:
+see also:
   - syntax/ignore
   - cljs.core/comment
   - syntax/shebang

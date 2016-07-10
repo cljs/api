@@ -1,6 +1,6 @@
 ---
 name: cljs.core/declare
-related:
+see also:
   - special/def
 ---
 

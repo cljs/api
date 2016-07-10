@@ -1,6 +1,6 @@
 ---
 name: cljs.core/range
-related:
+see also:
   - cljs.core/repeat
 ---
 

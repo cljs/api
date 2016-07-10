@@ -1,6 +1,6 @@
 ---
 name: special/throw
-related:
+see also:
   - special/try
   - special/catch
   - special/finally

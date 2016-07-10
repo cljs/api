@@ -1,6 +1,6 @@
 ---
 name: cljs.core/*3
-related:
+see also:
   - cljs.core/*1
   - cljs.core/*2
   - cljs.core/*e

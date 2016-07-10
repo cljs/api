@@ -1,6 +1,6 @@
 ---
 name: cljs.core/vec
-related:
+see also:
   - cljs.core/vector
   - cljs.core/vector?
 ---

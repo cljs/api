@@ -1,7 +1,7 @@
 ---
 name: cljs.core/conj
 known as: conjoin
-related:
+see also:
   - cljs.core/cons
   - cljs.core/into
   - cljs.core/peek

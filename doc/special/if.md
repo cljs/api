@@ -1,6 +1,6 @@
 ---
 name: special/if
-related:
+see also:
   - cljs.core/cond
   - cljs.core/when
   - cljs.core/if-let

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/inc
-related:
+see also:
   - cljs.core/dec
 ---
 

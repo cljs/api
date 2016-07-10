@@ -1,7 +1,7 @@
 ---
 name: syntax/keyword-qualify
 display: ":: keyword"
-related:
+see also:
   - syntax/keyword
   - cljs.core/keyword
   - cljs.core/keyword?

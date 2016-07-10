@@ -1,7 +1,7 @@
 ---
 name: syntax/ignore
 display: "#_ ignore"
-related:
+see also:
   - syntax/comment
   - cljs.core/comment
 ---

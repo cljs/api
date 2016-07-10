@@ -1,6 +1,6 @@
 ---
 name: cljs.core/reductions
-related:
+see also:
   - cljs.core/reduce
 ---
 

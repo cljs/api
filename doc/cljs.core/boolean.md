@@ -1,6 +1,6 @@
 ---
 name: cljs.core/boolean
-related:
+see also:
   - special/if
 ---
 

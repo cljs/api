@@ -1,7 +1,7 @@
 ---
 name: syntax/queue-literal
 display: "#queue literal"
-related:
+see also:
   - syntax/list
   - syntax/vector
   - syntax/map

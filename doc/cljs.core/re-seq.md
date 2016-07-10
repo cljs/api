@@ -1,6 +1,6 @@
 ---
 name: cljs.core/re-seq
-related:
+see also:
   - cljs.core/re-find
   - cljs.core/re-pattern
   - cljs.core/re-matches

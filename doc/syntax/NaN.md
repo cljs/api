@@ -1,7 +1,7 @@
 ---
 name: syntax/NaN
 display: "NaN"
-related:
+see also:
   - syntax/Infinity
   - syntax/nil
 ---

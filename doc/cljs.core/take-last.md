@@ -1,6 +1,6 @@
 ---
 name: cljs.core/take-last
-related:
+see also:
   - cljs.core/last
   - cljs.core/butlast
   - cljs.core/drop-last

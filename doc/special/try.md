@@ -1,6 +1,6 @@
 ---
 name: special/try
-related:
+see also:
   - special/catch
   - special/finally
   - special/throw

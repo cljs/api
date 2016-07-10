@@ -1,6 +1,6 @@
 ---
 name: cljs.core/rem
-related:
+see also:
   - cljs.core/quot
   - cljs.core/mod
 ---

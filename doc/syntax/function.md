@@ -1,7 +1,7 @@
 ---
 name: syntax/function
 display: "#() function"
-related:
+see also:
   - syntax/arg
   - cljs.core/fn
   - cljs.core/defn

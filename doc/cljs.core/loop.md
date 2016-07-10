@@ -1,6 +1,6 @@
 ---
 name: cljs.core/loop
-related:
+see also:
   - special/recur
 ---
 

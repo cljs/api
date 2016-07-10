@@ -1,6 +1,6 @@
 ---
 name: cljs.core/clj->js
-related:
+see also:
   - cljs.core/js->clj
 ---
 

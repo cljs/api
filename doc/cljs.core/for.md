@@ -1,6 +1,6 @@
 ---
 name: cljs.core/for
-related:
+see also:
   - cljs.core/doseq
   - cljs.core/doall
   - special/recur

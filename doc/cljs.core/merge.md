@@ -1,6 +1,6 @@
 ---
 name: cljs.core/merge
-related:
+see also:
   - cljs.core/merge-with
   - cljs.core/hash-map
 ---

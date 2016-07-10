@@ -1,7 +1,7 @@
 ---
 name: syntax/symbol
 display: "symbol literal"
-related:
+see also:
   - cljs.core/symbol
   - cljs.core/symbol?
 ---

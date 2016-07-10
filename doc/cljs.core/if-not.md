@@ -1,6 +1,6 @@
 ---
 name: cljs.core/if-not
-related:
+see also:
   - special/if
   - cljs.core/when-not
 ---

@@ -1,7 +1,7 @@
 ---
 name: syntax/unquote-splicing
 display: "~@ unquote splicing"
-related:
+see also:
   - syntax/syntax-quote
   - syntax/unquote
 ---

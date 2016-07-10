@@ -1,7 +1,7 @@
 ---
 name: syntax/string
 display: "\"\" string"
-related:
+see also:
   - cljs.core/str
 ---
 

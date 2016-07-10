@@ -1,7 +1,7 @@
 ---
 name: syntax/auto-gensym
 display: "# auto-gensym"
-related:
+see also:
   - cljs.core/gensym
   - syntax/syntax-quote
 ---

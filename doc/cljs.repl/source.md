@@ -1,6 +1,6 @@
 ---
 name: cljs.repl/source
-related:
+see also:
   - cljs.repl/doc
 ---
 

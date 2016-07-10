@@ -1,6 +1,6 @@
 ---
 name: cljs.core/partition
-related:
+see also:
   - cljs.core/partition-all
   - cljs.core/split-at
   - cljs.core/partition-by

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/contains?
-related:
+see also:
   - cljs.core/some
   - cljs.core/get
 ---

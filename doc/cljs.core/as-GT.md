@@ -1,6 +1,6 @@
 ---
 name: cljs.core/as->
-related:
+see also:
   - cljs.core/->
   - cljs.core/->>
   - cljs.core/cond->

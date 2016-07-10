@@ -1,6 +1,6 @@
 ---
 name: clojure.set/select
-related:
+see also:
   - cljs.core/filter
 ---
 

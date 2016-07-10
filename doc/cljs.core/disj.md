@@ -1,6 +1,6 @@
 ---
 name: cljs.core/disj
-related:
+see also:
   - cljs.core/dissoc
   - cljs.core/disj!
   - clojure.set/difference

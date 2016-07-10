@@ -1,7 +1,7 @@
 ---
 name: syntax/dispatch
 display: "# dispatch"
-related:
+see also:
   - syntax/regex
   - syntax/function
   - syntax/set

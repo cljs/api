@@ -1,6 +1,6 @@
 ---
 name: clojure.set/intersection
-related:
+see also:
   - clojure.set/union
   - clojure.set/difference
   - clojure.set/superset?

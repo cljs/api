@@ -1,7 +1,7 @@
 ---
 name: syntax/js-namespace
 display: "js/ namespace"
-related:
+see also:
   - syntax/Math-namespace
   - special/.
   - cljs.core/aget

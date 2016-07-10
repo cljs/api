@@ -1,6 +1,6 @@
 ---
 name: clojure.string/split-lines
-related:
+see also:
   - clojure.string/split
 ---
 

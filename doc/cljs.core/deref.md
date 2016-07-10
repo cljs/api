@@ -1,6 +1,6 @@
 ---
 name: cljs.core/deref
-related:
+see also:
   - cljs.core/atom
 ---
 

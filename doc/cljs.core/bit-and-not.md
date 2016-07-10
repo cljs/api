@@ -1,6 +1,6 @@
 ---
 name: cljs.core/bit-and-not
-related:
+see also:
   - cljs.core/bit-and
   - cljs.core/bit-not
 ---

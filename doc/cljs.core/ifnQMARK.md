@@ -1,6 +1,6 @@
 ---
 name: cljs.core/ifn?
-related:
+see also:
   - cljs.core/fn?
 ---
 

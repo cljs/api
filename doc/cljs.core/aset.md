@@ -1,6 +1,6 @@
 ---
 name: cljs.core/aset
-related:
+see also:
   - cljs.core/aget
   - special/set!
   - cljs.core/assoc-in

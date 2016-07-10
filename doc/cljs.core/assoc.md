@@ -1,7 +1,7 @@
 ---
 name: cljs.core/assoc
 known as: associate
-related:
+see also:
   - cljs.core/assoc-in
   - cljs.core/dissoc
   - cljs.core/merge

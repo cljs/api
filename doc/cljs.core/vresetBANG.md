@@ -1,6 +1,6 @@
 ---
 name: cljs.core/vreset!
-related:
+see also:
   - cljs.core/vswap!
   - cljs.core/volatile!
 ---

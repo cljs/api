@@ -1,7 +1,7 @@
 ---
 name: syntax/number
 display: "number literal"
-related:
+see also:
   - syntax/Infinity
   - syntax/NaN
   - cljs.core/number?

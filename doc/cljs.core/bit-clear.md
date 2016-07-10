@@ -1,6 +1,6 @@
 ---
 name: cljs.core/bit-clear
-related:
+see also:
   - cljs.core/bit-set
   - cljs.core/bit-flip
 ---

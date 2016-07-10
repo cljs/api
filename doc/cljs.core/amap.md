@@ -1,6 +1,6 @@
 ---
 name: cljs.core/amap
-related:
+see also:
   - cljs.core/map
 ---
 

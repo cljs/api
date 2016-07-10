@@ -1,6 +1,6 @@
 ---
 name: cljs.core/iterate
-related:
+see also:
   - cljs.core/cycle
   - cljs.core/repeatedly
   - cljs.core/repeat

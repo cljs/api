@@ -1,6 +1,6 @@
 ---
 name: cljs.core/compare-and-set!
-related:
+see also:
   - cljs.core/atom
   - cljs.core/reset!
   - cljs.core/swap!

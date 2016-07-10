@@ -1,6 +1,6 @@
 ---
 name: cljs.core/min-key
-related:
+see also:
   - cljs.core/min
   - cljs.core/max-key
 ---

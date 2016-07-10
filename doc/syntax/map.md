@@ -1,7 +1,7 @@
 ---
 name: syntax/map
 display: "{} map"
-related:
+see also:
   - cljs.core/hash-map
   - cljs.core/array-map
   - cljs.core/sorted-map

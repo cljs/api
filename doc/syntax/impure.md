@@ -1,7 +1,7 @@
 ---
 name: syntax/impure
 display: "! impure"
-related:
+see also:
   - syntax/predicate
 ---
 

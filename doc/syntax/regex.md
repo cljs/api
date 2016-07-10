@@ -1,7 +1,7 @@
 ---
 name: syntax/regex
 display: "#\"\" regex"
-related:
+see also:
   - cljs.core/re-pattern
   - cljs.core/re-find
   - cljs.core/re-seq

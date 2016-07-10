@@ -1,7 +1,7 @@
 ---
 name: syntax/cond-splicing
 display: "#?@ reader conditional splicing"
-related:
+see also:
   - syntax/cond
 ---
 

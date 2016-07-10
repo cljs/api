@@ -1,6 +1,6 @@
 ---
 name: cljs.core/split-with
-related:
+see also:
   - cljs.core/split-at
   - clojure.string/split
   - cljs.core/take-while

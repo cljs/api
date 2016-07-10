@@ -1,7 +1,7 @@
 ---
 name: syntax/set
 display: "#{} set"
-related:
+see also:
   - cljs.core/hash-set
   - cljs.core/sorted-set
   - cljs.core/sorted-set-by

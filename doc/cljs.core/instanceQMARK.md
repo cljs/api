@@ -1,6 +1,6 @@
 ---
 name: cljs.core/instance?
-related:
+see also:
   - cljs.core/type
 ---
 

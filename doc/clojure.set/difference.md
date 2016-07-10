@@ -1,6 +1,6 @@
 ---
 name: clojure.set/difference
-related:
+see also:
   - clojure.set/union
   - clojure.set/intersection
   - clojure.set/superset?

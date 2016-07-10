@@ -1,6 +1,6 @@
 ---
 name: cljs.repl/apropos
-related:
+see also:
   - cljs.repl/find-doc
 ---
 

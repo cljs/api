@@ -1,6 +1,6 @@
 ---
 name: cljs.core/get-validator
-related:
+see also:
   - cljs.core/atom
   - cljs.core/set-validator!
 ---

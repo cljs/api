@@ -1,6 +1,6 @@
 ---
 name: special/.
-related:
+see also:
   - cljs.core/..
   - cljs.core/aget
 ---

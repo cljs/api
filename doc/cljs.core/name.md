@@ -1,6 +1,6 @@
 ---
 name: cljs.core/name
-related:
+see also:
   - cljs.core/namespace
 ---
 

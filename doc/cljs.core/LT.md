@@ -1,6 +1,6 @@
 ---
 name: cljs.core/<
-related:
+see also:
   - cljs.core/<=
 ---
 

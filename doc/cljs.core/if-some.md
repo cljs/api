@@ -1,6 +1,6 @@
 ---
 name: cljs.core/if-some
-related:
+see also:
   - cljs.core/when-some
 ---
 

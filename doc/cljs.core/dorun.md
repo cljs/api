@@ -1,6 +1,6 @@
 ---
 name: cljs.core/dorun
-related:
+see also:
   - cljs.core/doall
 ---
 

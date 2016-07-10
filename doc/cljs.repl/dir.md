@@ -1,6 +1,6 @@
 ---
 name: cljs.repl/dir
-related:
+see also:
   - cljs.repl/find-doc
   - cljs.repl/apropos
 ---

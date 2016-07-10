@@ -1,7 +1,7 @@
 ---
 name: syntax/whitespace
 display: "whitespace"
-related:
+see also:
   - syntax/comma
 ---
 

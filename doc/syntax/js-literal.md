@@ -1,7 +1,7 @@
 ---
 name: syntax/js-literal
 display: "#js literal"
-related:
+see also:
   - cljs.core/js-obj
   - cljs.core/array
   - cljs.core/clj->js

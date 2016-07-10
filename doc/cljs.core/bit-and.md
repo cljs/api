@@ -1,6 +1,6 @@
 ---
 name: cljs.core/bit-and
-related:
+see also:
   - cljs.core/bit-or
 ---
 

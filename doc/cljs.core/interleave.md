@@ -1,6 +1,6 @@
 ---
 name: cljs.core/interleave
-related:
+see also:
   - cljs.core/interpose
   - cljs.core/zipmap
 ---

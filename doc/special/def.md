@@ -1,7 +1,7 @@
 ---
 name: special/def
 known as: define
-related:
+see also:
   - cljs.core/defn
   - cljs.core/fn
   - cljs.core/defmacro

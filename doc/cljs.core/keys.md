@@ -1,6 +1,6 @@
 ---
 name: cljs.core/keys
-related:
+see also:
   - cljs.core/vals
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/extend-protocol
-related:
+see also:
   - cljs.core/extend-type
 ---
 

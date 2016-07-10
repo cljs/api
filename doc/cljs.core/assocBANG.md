@@ -1,6 +1,6 @@
 ---
 name: cljs.core/assoc!
-related:
+see also:
   - cljs.core/transient
   - cljs.core/persistent!
 ---

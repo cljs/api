@@ -1,6 +1,6 @@
 ---
 name: cljs.core/constantly
-related:
+see also:
   - cljs.core/repeatedly
 ---
 

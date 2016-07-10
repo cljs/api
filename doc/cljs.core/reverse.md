@@ -1,6 +1,6 @@
 ---
 name: cljs.core/reverse
-related:
+see also:
   - cljs.core/rseq
 ---
 

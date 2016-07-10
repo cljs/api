@@ -1,7 +1,7 @@
 ---
 name: syntax/predicate
 display: "? predicate"
-related:
+see also:
   - syntax/impure
 ---
 

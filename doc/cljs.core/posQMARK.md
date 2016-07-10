@@ -1,6 +1,6 @@
 ---
 name: cljs.core/pos?
-related:
+see also:
   - cljs.core/neg?
   - cljs.core/zero?
 ---

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/defmacro
-related:
+see also:
   - syntax/syntax-quote
   - syntax/unquote
   - cljs.core/macroexpand

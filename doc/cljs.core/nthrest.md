@@ -1,6 +1,6 @@
 ---
 name: cljs.core/nthrest
-related:
+see also:
   - cljs.core/drop
   - cljs.core/nthnext
   - cljs.core/nth

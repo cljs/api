@@ -1,6 +1,6 @@
 ---
 name: cljs.core/when-let
-related:
+see also:
   - cljs.core/if-let
   - cljs.core/when
   - cljs.core/when-not

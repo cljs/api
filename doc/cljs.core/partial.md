@@ -1,6 +1,6 @@
 ---
 name: cljs.core/partial
-related:
+see also:
   - cljs.core/comp
   - cljs.core/juxt
 ---

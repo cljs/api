@@ -1,6 +1,6 @@
 ---
 name: cljs.core/repeatedly
-related:
+see also:
   - cljs.core/repeat
   - cljs.core/iterate
   - cljs.core/lazy-seq

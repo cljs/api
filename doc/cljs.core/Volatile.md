@@ -1,6 +1,6 @@
 ---
 name: cljs.core/Volatile
-related:
+see also:
   - cljs.core/volatile!
   - cljs.core/volatile?
 ---

@@ -1,7 +1,7 @@
 ---
 name: syntax/character
 display: "\\ character"
-related:
+see also:
   - syntax/string
   - cljs.core/str
 ---

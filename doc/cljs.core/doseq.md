@@ -1,6 +1,6 @@
 ---
 name: cljs.core/doseq
-related:
+see also:
   - cljs.core/doall
   - cljs.core/dorun
   - cljs.core/for

@@ -1,6 +1,6 @@
 ---
 name: cljs.core/hash-set
-related:
+see also:
   - cljs.core/set
   - cljs.core/sorted-set
 ---

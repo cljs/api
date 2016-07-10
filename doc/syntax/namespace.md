@@ -1,7 +1,7 @@
 ---
 name: syntax/namespace
 display: "/ namespace slash"
-related:
+see also:
   - syntax/dot
 ---
 

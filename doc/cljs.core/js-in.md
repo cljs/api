@@ -1,6 +1,6 @@
 ---
 name: cljs.core/js-in
-related:
+see also:
   - cljs.core/contains?
 ---
 

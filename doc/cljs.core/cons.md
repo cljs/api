@@ -1,6 +1,6 @@
 ---
 name: cljs.core/cons
-related:
+see also:
   - cljs.core/conj
 ---
 

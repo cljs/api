@@ -1,6 +1,6 @@
 ---
 name: cljs.core/binding
-related:
+see also:
   - cljs.core/let
 ---
 
