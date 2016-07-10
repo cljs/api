@@ -362,7 +362,7 @@
                           :details-compiler
                           :signature
                           :usage
-                          :related
+                          :see-also
                           :moved
                           :tags
                           :md-biblio]))]

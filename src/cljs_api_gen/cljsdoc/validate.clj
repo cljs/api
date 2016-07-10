@@ -55,7 +55,7 @@
    "usage"
    "signature"
    "examples"
-   "related"
+   "see also"
    "moved"
    "todo"
    "notes"])
@@ -148,17 +148,17 @@
     (str "This file is for an unknown symbol '" full-name "'.")))
 
 ;;--------------------------------------------------------------------------------
-;; Validate Related Symbol
+;; Validate 'See Also' Symbols
 ;;--------------------------------------------------------------------------------
 
-(defn related-missing-error-msg*
+(defn see-also-missing-error-msg*
   [full-name]
   (when-not (doclink-check-pass? full-name)
-    (str "Related symbol '" full-name "' is an unknown symbol.")))
+    (str "'See Also' symbol '" full-name "' is an unknown symbol.")))
 
-(defn related-missing-error-msg
-  [{:keys [related] :as doc}]
-  (let [msgs (keep related-missing-error-msg* related)]
+(defn see-also-missing-error-msg
+  [{:keys [see-also] :as doc}]
+  (let [msgs (keep see-also-missing-error-msg* see-also)]
     (when (seq msgs)
       (join "\n" msgs))))
 
@@ -196,7 +196,7 @@
    unrecognized-sections-error-msg
    signatures-error-msg
    symbol-unknown-error-msg
-   related-missing-error-msg
+   see-also-missing-error-msg
    doclink-missing-error-msg
    filename-error-msg])
 
