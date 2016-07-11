@@ -12,6 +12,7 @@
          [:see-also "see also:"]]
    :required?        #{:full-name :see-also}
    :syntax-required? #{:full-name :see-also :display}
+   :ns-required?     #{:full-name}
    :list?            #{:tags :see-also}})
 
 (def markdown-keys
@@ -42,10 +43,13 @@
   [[key title] m]
   (let [value (get m key)
         list? (:list? frontmatter-keys)
-        required? (if (string/starts-with? (:full-name m) "syntax/")
-                    (:syntax-required? frontmatter-keys)
-                    (:required? frontmatter-keys))]
-    (when (or value (required? key))
+        required?
+        (cond
+          (string/starts-with? (:full-name m) "syntax/") (:syntax-required? frontmatter-keys)
+          (not (string/includes? (:full-name m) "/"))    (:ns-required? frontmatter-keys)
+          :else                                          (:required? frontmatter-keys))]
+    (when (or (not (blank? value))
+              (required? key))
       (cond
         (blank? value)   (str title)
         (list? key)      (str title "\n" (yaml-list value))
@@ -65,7 +69,8 @@
         required? (if (string/includes? (:full-name m) "/")
                     (:required? markdown-keys)
                     (:ns-required? markdown-keys))]
-    (when (or value (required? key))
+    (when (or (not (blank? value))
+              (required? key))
       (cond
         (blank? value)   (str section-start title "\n")
         (list? key)      (str section-start title "\n" (string/join "\n" value) "\n")
