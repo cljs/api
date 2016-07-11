@@ -1,12 +1,12 @@
-(ns cljs-api-gen.cljsdoc
+(ns cljs-api-gen.docfile
   (:require
-    [cljs-api-gen.config :refer [cljsdoc-dir cljsdoc-ext]]
+    [cljs-api-gen.config :refer [docfile-dir docfile-ext]]
     [cljs-api-gen.encode :as encode]
-    [cljs-api-gen.cljsdoc.validate :refer [valid-doc?]]
-    [cljs-api-gen.cljsdoc.parse :refer [parse-doc]]
-    [cljs-api-gen.cljsdoc.transform :refer [transform-doc post-transform-doc]]
-    [cljs-api-gen.cljsdoc.lint :refer [normalize-doc]]
-    [cljs-api-gen.state :refer [*result* cljsdoc-map]]
+    [cljs-api-gen.docfile.validate :refer [valid-doc?]]
+    [cljs-api-gen.docfile.parse :refer [parse-doc]]
+    [cljs-api-gen.docfile.transform :refer [transform-doc post-transform-doc]]
+    [cljs-api-gen.docfile.lint :refer [normalize-doc]]
+    [cljs-api-gen.state :refer [*result* docfile-map]]
     [cljs-api-gen.util :refer [mapmap]]
     [me.raynes.fs :refer [mkdir list-dir base-name exists? parent directory?]]
     [clansi.core :refer [style]]
@@ -26,45 +26,45 @@
     (pos? skipped) (str ", skipped " skipped)
     true (str ".")))
 
-(defn cljsdoc-files [dir]
+(defn docfiles [dir]
   (let [all (list-dir dir)
         files (->> all
                 (remove directory?)
-                (filter #(.endsWith (.getName %) cljsdoc-ext)))
+                (filter #(.endsWith (.getName %) docfile-ext)))
         subfiles (->> all
                       (filter directory?)
-                      (map cljsdoc-files)
+                      (map docfiles)
                       (apply concat))]
     (cond-> files
       (seq subfiles) (concat subfiles))))
 
-(defn cljsdoc-stub [full-name]
+(defn docfile-stub [full-name]
   (normalize-doc {:full-name full-name}))
 
-(defn create-cljsdoc-stubs!
+(defn create-docfile-stubs!
   [known-symbols]
   (doseq [full-name (sort known-symbols)]
-    (let [filename (str cljsdoc-dir "/" (encode/encode-fullname full-name) cljsdoc-ext)]
+    (let [filename (str docfile-dir "/" (encode/encode-fullname full-name) docfile-ext)]
       (when-not (exists? filename)
         (encode/assert-lossless full-name)
         (mkdir (parent filename))
-        (println "Creating new cljsdoc stub for" (style full-name :yellow) "at" (style filename :cyan))
-        (spit filename (cljsdoc-stub full-name))))))
+        (println "Creating new docfile stub for" (style full-name :yellow) "at" (style filename :cyan))
+        (spit filename (docfile-stub full-name))))))
 
-(defn build-cljsdoc! []
-  (println (cond-> (style "\nCompiling " cljsdoc-dir "/ files" :cyan)
+(defn build-docfile! []
+  (println (cond-> (style "\nCompiling " docfile-dir "/ files" :cyan)
              (nil? *result*) (str " (without parsed API info)"))
            "...")
 
-  (let [files (cljsdoc-files cljsdoc-dir)
+  (let [files (docfiles docfile-dir)
         mandocs (keep build-doc files)
         mandoc-map (zipmap (map :full-name mandocs)
                            (map #(dissoc % :empty-sections) mandocs))
         skipped (- (count files) (count mandocs))
         parsed (- (count files) skipped)]
 
-    (reset! cljsdoc-map mandoc-map)
-    (reset! cljsdoc-map (mapmap post-transform-doc @cljsdoc-map))
+    (reset! docfile-map mandoc-map)
+    (reset! docfile-map (mapmap post-transform-doc @docfile-map))
 
     (if (zero? skipped)
       (println (style "Done with no errors." :green))
@@ -73,6 +73,6 @@
 
     skipped))
 
-(defn lint-cljsdoc! []
-  (doseq [file (cljsdoc-files cljsdoc-dir)]
+(defn lint-docfile! []
+  (doseq [file (docfiles docfile-dir)]
     (spit file (normalize-doc (build-doc file)))))

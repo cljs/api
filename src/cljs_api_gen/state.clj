@@ -4,6 +4,6 @@
   "After catalog is done building the result, it stores it here."
   nil)
 
-(def cljsdoc-map
-  "Holds fullname=>cljsdoc data after first-pass"
+(def docfile-map
+  "Holds fullname=>docfile data after first-pass"
   (atom nil))

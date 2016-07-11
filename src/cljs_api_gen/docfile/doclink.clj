@@ -1,6 +1,6 @@
-(ns cljs-api-gen.cljsdoc.doclink
+(ns cljs-api-gen.docfile.doclink
   (:require
-    [cljs-api-gen.state :refer [*result* cljsdoc-map]]
+    [cljs-api-gen.state :refer [*result* docfile-map]]
     [clojure.string :as string]))
 
 ;;; ================ MARKDOWN SYNTAX ==================
@@ -82,7 +82,7 @@
 (defn get-short-display-name
   [docname]
   (let [{:keys [ns name compiler?]} (parse-docname docname)
-        display (get-in @cljsdoc-map [docname :display])]
+        display (get-in @docfile-map [docname :display])]
     (or display name ns)))
 
 (defn insert-doclink-name

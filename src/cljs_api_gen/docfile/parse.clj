@@ -1,4 +1,4 @@
-(ns cljs-api-gen.cljsdoc.parse
+(ns cljs-api-gen.docfile.parse
   (:require
     [clojure.set :refer [difference]]
     [clojure.string :refer [split-lines join lower-case trim]]
@@ -39,7 +39,7 @@
     (str preamble "\n" body)))
 
 (defn parse-doc
-  "Convert cljsdoc content to a map of section title => section body text."
+  "Convert docfile content to a map of section title => section body text."
   [file filename parentdir]
   (let [lines (split-lines (expand-front-matter file))
 

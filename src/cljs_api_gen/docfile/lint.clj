@@ -1,7 +1,7 @@
-(ns cljs-api-gen.cljsdoc.lint
+(ns cljs-api-gen.docfile.lint
   (:require
     [clojure.string :as string]
-    [cljs-api-gen.cljsdoc.parse :refer [section-start]]))
+    [cljs-api-gen.docfile.parse :refer [section-start]]))
 
 (def frontmatter-keys
   {:all [[:full-name "name:"]

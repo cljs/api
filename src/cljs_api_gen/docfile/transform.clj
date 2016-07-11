@@ -1,10 +1,10 @@
-(ns cljs-api-gen.cljsdoc.transform
+(ns cljs-api-gen.docfile.transform
   (:refer-clojure :exclude [replace])
   (:require
     [cljs-api-gen.util :refer [mapmap]]
     [cljs-api-gen.encode :refer [fullname->ns-name]]
     [cljs-api-gen.state :refer [*result*]]
-    [cljs-api-gen.cljsdoc.doclink :refer [md-biblio
+    [cljs-api-gen.docfile.doclink :refer [md-biblio
                                           resolve-unnamed-doclinks]]
     [clojure.set :refer [rename-keys]]
     [clojure.string :refer [split-lines trim lower-case replace join]]))

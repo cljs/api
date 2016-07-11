@@ -3,11 +3,11 @@
     [clojure.string :as string]
     [clojure.set :refer [rename-keys]]
     [clojure.data :refer [diff]]
-    [cljs-api-gen.config :refer [cljsdoc-dir cljsdoc-ext]]
+    [cljs-api-gen.config :refer [docfile-dir docfile-ext]]
     [cljs-api-gen.encode :refer [encode-fullname
                                  encode-name]]
     [cljs-api-gen.util :refer [mapmap filtermap]]
-    [cljs-api-gen.state :refer [cljsdoc-map]]
+    [cljs-api-gen.state :refer [docfile-map]]
     [cljs-api-gen.clojure-api :refer [get-clojure-symbols-not-in-items
                                       clj-equiv]]
     [cljs-api-gen.repo-cljs :refer [*cljs-version*
@@ -82,12 +82,12 @@
     (assoc item :clj-equiv equiv)
     item))
 
-(defn add-cljsdoc-url
+(defn add-edit-url
   [item]
-  (assoc item :cljsdoc-url
-    (str "https://github.com/cljsinfo/cljs-api-docs/blob/master/" cljsdoc-dir "/"
+  (assoc item :edit-url
+    (str "https://github.com/cljsinfo/cljs-api-docs/blob/master/" docfile-dir "/"
          (:full-name-encode item)
-         cljsdoc-ext)))
+         docfile-ext)))
 
 (defn signature->usage
   [sig item]
@@ -132,7 +132,7 @@
       (add-github-links)
       (handle-ns-item)
       (assign-full-names)
-      (add-cljsdoc-url)
+      (add-edit-url)
       (prune-map)
       (add-clj-equiv)))
 
@@ -346,11 +346,11 @@
             :library library-api
             :compiler compiler-api}})))
 
-(defn add-cljsdoc
-  "Merge the given item with its compiled cljsdoc, containing extra doc info."
+(defn add-docfile
+  "Merge the given item with its compiled docfile, containing extra doc info."
   [item]
-  (let [cljsdoc (and cljsdoc-map (@cljsdoc-map (:full-name item)))
-        data (prune-map (select-keys cljsdoc
+  (let [docfile (and docfile-map (@docfile-map (:full-name item)))
+        data (prune-map (select-keys docfile
                          [:examples
                           :known-as
                           :display
@@ -368,9 +368,9 @@
          (merge data)
          (add-usage))))
 
-(defn add-cljsdoc-to-result
+(defn add-docfile-to-result
   [result]
-  (let [update #(mapmap add-cljsdoc %)]
+  (let [update #(mapmap add-docfile %)]
     (-> result
         (update-in [:symbols] update)
         (update-in [:namespaces] update))))

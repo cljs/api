@@ -5,7 +5,7 @@
     [me.raynes.fs :refer [mkdir
                           exists?]]
     [cljs-api-gen.config :refer [cache-dir]]
-    [cljs-api-gen.cljsdoc :refer [build-cljsdoc! lint-cljsdoc!]]
+    [cljs-api-gen.docfile :refer [build-docfile! lint-docfile!]]
     [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos!
                                     get-published-cljs-tags!
                                     get-published-clj-versions!
@@ -30,8 +30,8 @@
   (get-version-apis!)
   (println (style "\n DONE PREPPING " :bg-green)))
 
-(defn cljsdoc-task []
-  (let [num-skipped (build-cljsdoc!)]
+(defn docfile-task []
+  (let [num-skipped (build-docfile!)]
     (when-not (zero? num-skipped)
       (System/exit 1))))
 
@@ -41,8 +41,8 @@
     (reset! new-maven-release new-release))
   (prep!)
   (cond
-    (= task :cljsdoc) (cljsdoc-task)
-    (= task :lint) (lint-cljsdoc!)
+    (= task :docfile) (docfile-task)
+    (= task :lint) (lint-docfile!)
     :else (create-catalog! options))
 
   ;; have to do this because `sh` leaves futures hanging,

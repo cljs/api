@@ -1,9 +1,9 @@
-(ns cljs-api-gen.cljsdoc.validate
+(ns cljs-api-gen.docfile.validate
   (:import
     [java.util.regex Pattern])
   (:require
-    [cljs-api-gen.cljsdoc.doclink :refer [docname?]]
-    [cljs-api-gen.config :refer [cljsdoc-dir cljsdoc-ext]]
+    [cljs-api-gen.docfile.doclink :refer [docname?]]
+    [cljs-api-gen.config :refer [docfile-dir docfile-ext]]
     [cljs-api-gen.read :refer [read-forms-from-str]]
     [cljs-api-gen.encode :refer [encode-fullname
                                  fullname->ns-name]]
@@ -100,7 +100,7 @@
     (let [[ns- name-] (fullname->ns-name full-name)
           actual (cond->> filename
                      name- (str parentdir "/"))
-          expected (str (encode-fullname full-name) cljsdoc-ext)]
+          expected (str (encode-fullname full-name) docfile-ext)]
       (when (not= actual expected)
         (str full-name " should be in " expected ", not " actual)))))
 
@@ -137,7 +137,7 @@
 
 (defn doclink-check-pass?
   "Determines if we should pass the doclink check.
-  (very similar to `symbol-check-pass?`, please see `cljs-api-gen.cljsdoc.doclink` for details)"
+  (very similar to `symbol-check-pass?`, please see `cljs-api-gen.docfile.doclink` for details)"
   [full-name]
   (or (nil? *result*)               ;; ignore if no known symbols supplied
       (docname? full-name)))

@@ -5,8 +5,8 @@
     [clansi.core :refer [style]]
     [clojure.string :refer [join]]
     [me.raynes.fs :refer [exists?]]
-    [cljs-api-gen.cljsdoc :refer [build-cljsdoc!
-                                  create-cljsdoc-stubs!]]
+    [cljs-api-gen.docfile :refer [build-docfile!
+                                  create-docfile-stubs!]]
     [cljs-api-gen.config :refer [cache-dir
                                  edn-parsed-file
                                  edn-result-file]]
@@ -18,7 +18,7 @@
                                     *cljs-date*
                                     *clj-tag*]]
     [cljs-api-gen.result :refer [get-result
-                                 add-cljsdoc-to-result]]
+                                 add-docfile-to-result]]
     [cljs-api-gen.state :refer [*result*]]))
 
 
@@ -125,19 +125,19 @@
     (println)
     (binding [*result* (get-prev-result)]
 
-      ;; create cljsdoc stubs for symbols that don't have them
+      ;; create docfile stubs for symbols that don't have them
       ;; (allowing easier PRs for those wanting to populate them)
-      (create-cljsdoc-stubs! (-> *result* :symbols keys set))
-      (create-cljsdoc-stubs! (-> *result* :namespaces keys set))
+      (create-docfile-stubs! (-> *result* :symbols keys set))
+      (create-docfile-stubs! (-> *result* :namespaces keys set))
 
-      ;; compile cljsdoc files (manual docs)
-      (let [num-skipped (build-cljsdoc!)]
+      ;; compile docfile files (manual docs)
+      (let [num-skipped (build-docfile!)]
         (when-not (zero? num-skipped)
           (System/exit 1)))
 
       ;; create final result
       (println (style "\nMerging manual docs into final result...\n" :magenta))
-      (let [final-result (add-cljsdoc-to-result *result*)
+      (let [final-result (add-docfile-to-result *result*)
             final-file (edn-result-file last-tag)]
           (spit final-file (with-out-str (pprint final-result)))
           (println (style " Success! " :bg-green))
