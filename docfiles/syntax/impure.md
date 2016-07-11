@@ -36,3 +36,9 @@ The following causes a side-effect in the state of `a`:
 
 ## Usage
 foo!
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/conj!]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/conjBANG.md
+[doc:cljs.core/specify!]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/specifyBANG.md
+[doc:cljs.core/swap!]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/swapBANG.md
+[doc:special/set!]:https://github.com/cljs/api/blob/master/docfiles/special/setBANG.md

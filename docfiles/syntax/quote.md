@@ -28,3 +28,6 @@ Prevent the evaluation of the following form.
 '(a b (c d))
 ;;=> (a b (c d))
 ```
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:special/quote]:https://github.com/cljs/api/blob/master/docfiles/special/quote.md

@@ -22,3 +22,6 @@ the first line of the file to have a [shebang line](https://en.wikipedia.org/wik
 123 #! this is ignored
 ;;=> 123
 ```
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/comment]:https://github.com/cljs/api/blob/master/docfiles/syntax/comment.md

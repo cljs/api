@@ -62,3 +62,6 @@ A function that works in Clojure and ClojureScript ([source]):
 
 ## Usage
 #?(...)
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/defmacro]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/defmacro.md

@@ -43,3 +43,9 @@ Create a `divisible?` predicate:
 
 ## Usage
 foo?
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/empty?]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/emptyQMARK.md
+[doc:cljs.core/contains?]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/containsQMARK.md
+[doc:cljs.core/even?]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/evenQMARK.md
+[doc:cljs.core/nil?]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/nilQMARK.md

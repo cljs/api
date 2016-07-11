@@ -50,3 +50,7 @@ Create safe local bindings:
 
 ## Usage
 foo#
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/gensym]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/gensym.md
+[doc:syntax/syntax-quote]:https://github.com/cljs/api/blob/master/docfiles/syntax/syntax-quote.md

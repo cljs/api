@@ -27,3 +27,6 @@ Only usable inside [doc:syntax/function].
 (f 1 2 3 4 5)
 ;; prints: 1 2 (3 4 5)
 ```
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/function]:https://github.com/cljs/api/blob/master/docfiles/syntax/function.md

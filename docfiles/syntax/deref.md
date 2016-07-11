@@ -29,3 +29,8 @@ Retrieve the underlying value of a reference.  References can be created by
 
 ## Usage
 @foo
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/delay]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/delay.md
+[doc:cljs.core/deref]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/deref.md
+[doc:cljs.core/atom]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/atom.md

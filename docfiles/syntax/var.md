@@ -26,3 +26,6 @@ Access the metadata of a var:
 ## Usage
 #'foo
 #'foo/bar
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:special/var]:https://github.com/cljs/api/blob/master/docfiles/special/var.md

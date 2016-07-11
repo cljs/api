@@ -82,3 +82,10 @@ literal UUID:
 
 ## Usage
 #foo ...
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/symbol]:https://github.com/cljs/api/blob/master/docfiles/syntax/symbol.md
+[doc:syntax/inst-literal]:https://github.com/cljs/api/blob/master/docfiles/syntax/inst-literal.md
+[doc:syntax/queue-literal]:https://github.com/cljs/api/blob/master/docfiles/syntax/queue-literal.md
+[doc:syntax/js-literal]:https://github.com/cljs/api/blob/master/docfiles/syntax/js-literal.md
+[doc:syntax/uuid-literal]:https://github.com/cljs/api/blob/master/docfiles/syntax/uuid-literal.md

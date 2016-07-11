@@ -25,3 +25,6 @@ parent form.
 `(~@foo)
 ;;=> (a b c)
 ```
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/syntax-quote]:https://github.com/cljs/api/blob/master/docfiles/syntax/syntax-quote.md

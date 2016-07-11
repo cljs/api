@@ -59,3 +59,8 @@ inside an [doc:cljs.core/add-watch] callback:
 (reset! a 2)
 ;; 2
 ```
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/add-watch]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/add-watch.md
+[doc:cljs.core/let]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/let.md
+[doc:syntax/destructure-vector]:https://github.com/cljs/api/blob/master/docfiles/syntax/destructure-vector.md

@@ -46,3 +46,7 @@ Get as a string:
 
 ## Usage
 #uuid "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/UUID]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/UUID.md
+[doc:cljs.core/uuid]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/uuid.md

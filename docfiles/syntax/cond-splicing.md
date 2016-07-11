@@ -29,3 +29,6 @@ Like [doc:syntax/cond], except:
 
 ## Usage
 #?@(...)
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/cond]:https://github.com/cljs/api/blob/master/docfiles/syntax/cond.md

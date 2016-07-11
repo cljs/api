@@ -100,3 +100,19 @@ Reader Conditional:
 
 ## Usage
 #...
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/symbol]:https://github.com/cljs/api/blob/master/docfiles/syntax/symbol.md
+[doc:syntax/cond]:https://github.com/cljs/api/blob/master/docfiles/syntax/cond.md
+[doc:syntax/string]:https://github.com/cljs/api/blob/master/docfiles/syntax/string.md
+[doc:syntax/quote]:https://github.com/cljs/api/blob/master/docfiles/syntax/quote.md
+[doc:syntax/regex]:https://github.com/cljs/api/blob/master/docfiles/syntax/regex.md
+[doc:syntax/unused]:https://github.com/cljs/api/blob/master/docfiles/syntax/unused.md
+[doc:syntax/set]:https://github.com/cljs/api/blob/master/docfiles/syntax/set.md
+[doc:syntax/tagged-literal]:https://github.com/cljs/api/blob/master/docfiles/syntax/tagged-literal.md
+[doc:syntax/function]:https://github.com/cljs/api/blob/master/docfiles/syntax/function.md
+[doc:syntax/map]:https://github.com/cljs/api/blob/master/docfiles/syntax/map.md
+[doc:syntax/list]:https://github.com/cljs/api/blob/master/docfiles/syntax/list.md
+[doc:syntax/predicate]:https://github.com/cljs/api/blob/master/docfiles/syntax/predicate.md
+[doc:syntax/ignore]:https://github.com/cljs/api/blob/master/docfiles/syntax/ignore.md
+[doc:syntax/var]:https://github.com/cljs/api/blob/master/docfiles/syntax/var.md

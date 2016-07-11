@@ -33,3 +33,7 @@ No validation is performed:
 (uuid "")
 ;;=> #uuid ""
 ```
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/UUID]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/UUID.md
+[doc:syntax/uuid-literal]:https://github.com/cljs/api/blob/master/docfiles/syntax/uuid-literal.md

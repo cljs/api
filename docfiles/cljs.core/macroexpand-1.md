@@ -37,3 +37,6 @@ Notice how the nested `inc` form is not expanded:
 (macroexpand-1 '(inc (inc 2)))
 ;;=> (cljs.core/+ (inc 2) 1)
 ```
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/macroexpand]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/macroexpand.md

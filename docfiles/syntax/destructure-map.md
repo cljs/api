@@ -96,3 +96,6 @@ A non-vector sequence can be destructured as a map:
 
 ## Usage
 {:keys [] :strs [] :syms [] :or {} :as name}
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/destructure-vector]:https://github.com/cljs/api/blob/master/docfiles/syntax/destructure-vector.md

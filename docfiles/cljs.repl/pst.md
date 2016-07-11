@@ -14,3 +14,6 @@ exception, stored implicitly by [doc:cljs.core/*e].
 
 ## Signature
 [e]
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/*e]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/STARe.md

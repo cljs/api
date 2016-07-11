@@ -62,3 +62,6 @@ To signify an unevaluated list, precede it with a quote:
 
 ## Usage
 (...)
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/List]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/List.md

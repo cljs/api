@@ -69,3 +69,6 @@ Destructure vectors can be nested:
 
 ## Usage
 [arg1 arg2 & args :as name]
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/destructure-map]:https://github.com/cljs/api/blob/master/docfiles/syntax/destructure-map.md

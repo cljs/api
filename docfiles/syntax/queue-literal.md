@@ -47,3 +47,6 @@ Some operations:
 
 ## Usage
 #queue [...]
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/PersistentQueue]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/PersistentQueue.md

@@ -34,3 +34,6 @@ A [comma][doc:syntax/comma] is considered whitespace:
 ```
 
 ## Examples
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/comma]:https://github.com/cljs/api/blob/master/docfiles/syntax/comma.md

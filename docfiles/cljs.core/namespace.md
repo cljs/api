@@ -40,3 +40,6 @@ Strings have no concept of a namespace:
 (name "foo/bar")
 ;;=> nil
 ```
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/nil]:https://github.com/cljs/api/blob/master/docfiles/syntax/nil.md

@@ -35,3 +35,6 @@ See [doc:syntax/auto-gensym].
 `(def foo 1)
 ;;=> (def cljs.user/foo 1)
 ```
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/auto-gensym]:https://github.com/cljs/api/blob/master/docfiles/syntax/auto-gensym.md

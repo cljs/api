@@ -62,3 +62,8 @@ To signify an unevaluated symbol, precede it with a quote:
 ## Usage
 foo
 foo/bar
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/js-namespace]:https://github.com/cljs/api/blob/master/docfiles/syntax/js-namespace.md
+[doc:syntax/namespace]:https://github.com/cljs/api/blob/master/docfiles/syntax/namespace.md
+[doc:syntax/dot]:https://github.com/cljs/api/blob/master/docfiles/syntax/dot.md

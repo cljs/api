@@ -65,3 +65,9 @@ c
 [symbol]
 [symbol init]
 [symbol doc-string init]
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/binding]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/binding.md
+[doc:syntax/earmuffs]:https://github.com/cljs/api/blob/master/docfiles/syntax/earmuffs.md
+[doc:cljs.core/case]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/case.md
+[doc:cljs.core/test]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/test.md

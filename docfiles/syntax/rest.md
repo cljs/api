@@ -35,3 +35,7 @@ Binding `c` to the rest of the destructured values:
 
 ## Usage
 [... & foo]
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/fn]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/fn.md
+[doc:syntax/destructure-vector]:https://github.com/cljs/api/blob/master/docfiles/syntax/destructure-vector.md

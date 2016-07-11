@@ -27,3 +27,7 @@ See [doc:syntax/dot] for usage of dots on either side of `/`
 ## Usage
 foo/baz
 foo.bar/baz
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/dot]:https://github.com/cljs/api/blob/master/docfiles/syntax/dot.md
+[doc:cljs.core//]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/SLASH.md

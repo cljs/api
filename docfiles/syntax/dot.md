@@ -77,3 +77,7 @@ cljs.core/PersistentQueue.EMPTY
 (.-EMPTY cljs.core/PersistentQueue)
 ;;=> #queue []
 ```
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:special/.]:https://github.com/cljs/api/blob/master/docfiles/special/DOT.md
+[doc:special/new]:https://github.com/cljs/api/blob/master/docfiles/special/new.md

@@ -37,3 +37,10 @@ See [doc:cljs.core/PersistentVector] for data structure details.
 
 ## Usage
 [...]
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/let]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/let.md
+[doc:cljs.core/conj]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/conj.md
+[doc:cljs.core/PersistentVector]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/PersistentVector.md
+[doc:cljs.core/fn]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/fn.md
+[doc:syntax/list]:https://github.com/cljs/api/blob/master/docfiles/syntax/list.md

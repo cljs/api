@@ -71,3 +71,6 @@ choose the function appropriate for each compiler's evaluation environment.
   #?(:clj  (Integer/parseInt s)
      :cljs (js/parseInt s)))
 ```
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/cond]:https://github.com/cljs/api/blob/master/docfiles/syntax/cond.md

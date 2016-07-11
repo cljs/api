@@ -41,3 +41,8 @@ special global vars (e.g. [doc:cljs.core/*clojurescript-version*],
 
 ## Usage
 *foo*
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/binding]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/binding.md
+[doc:cljs.core/*main-cli-fn*]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/STARmain-cli-fnSTAR.md
+[doc:cljs.core/*clojurescript-version*]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/STARclojurescript-versionSTAR.md
