@@ -1,6 +1,6 @@
 ---
 name: syntax/Math-namespace
-display: "Math/ namespace"
+display as: "Math/ namespace"
 see also:
   - syntax/js-namespace
 ---

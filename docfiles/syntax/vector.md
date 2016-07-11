@@ -1,6 +1,6 @@
 ---
 name: syntax/vector
-display: "[] vector"
+display as: "[] vector"
 see also:
   - cljs.core/vector
   - cljs.core/vec

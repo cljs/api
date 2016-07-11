@@ -1,6 +1,6 @@
 ---
 name: syntax/cond
-display: "#? reader conditional"
+display as: "#? reader conditional"
 see also:
   - syntax/cond-splicing
 ---

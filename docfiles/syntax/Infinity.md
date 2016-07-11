@@ -1,6 +1,6 @@
 ---
 name: syntax/Infinity
-display: "Infinity"
+display as: "Infinity"
 see also:
   - syntax/number
   - syntax/NaN

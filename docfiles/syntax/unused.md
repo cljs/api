@@ -1,6 +1,6 @@
 ---
 name: syntax/unused
-display: "_ unused"
+display as: "_ unused"
 see also:
 ---
 

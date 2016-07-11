@@ -1,6 +1,6 @@
 ---
 name: syntax/impure
-display: "! impure"
+display as: "! impure"
 see also:
   - syntax/predicate
 ---

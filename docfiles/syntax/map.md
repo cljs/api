@@ -1,6 +1,6 @@
 ---
 name: syntax/map
-display: "{} map"
+display as: "{} map"
 see also:
   - cljs.core/hash-map
   - cljs.core/array-map

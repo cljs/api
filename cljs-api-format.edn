@@ -100,9 +100,8 @@
                       "#inst \"yyyy-mm-ddThh:mm:ssZ\""
                       "#inst \"yyyy-mm-ddThh:mm:ss-hh:mm\""]
 
-              ;; alternate display name (if :full-name is a pseudo-symbol that shouldn't be displayed)
-              :display "#queue [] literal" ;; (from syntax/queue-literal)
-                :display "if" ;; (another example, from special/if)
+              ;; for syntax namespace and symbols, we want to display an alias
+              :display-as "#queue [] literal" ;; (from syntax/queue-literal)
 
               ;; what it's usually called
               :known-as "thread first" ;; (from cljs.core/->)

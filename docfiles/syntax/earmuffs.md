@@ -1,6 +1,6 @@
 ---
 name: syntax/earmuffs
-display: "*earmuffs*"
+display as: "*earmuffs*"
 see also:
   - cljs.core/binding
 ---

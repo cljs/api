@@ -44,7 +44,7 @@
 (def recognized-sections
   ["name"
    "known as"
-   "display"
+   "display as"
    "tags"
    "summary"
    "summary for compiler"

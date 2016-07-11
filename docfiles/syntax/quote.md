@@ -1,6 +1,6 @@
 ---
 name: syntax/quote
-display: "' quote"
+display as: "' quote"
 see also:
   - special/quote
 ---

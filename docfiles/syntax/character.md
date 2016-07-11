@@ -1,6 +1,6 @@
 ---
 name: syntax/character
-display: "\\ character"
+display as: "\\ character"
 see also:
   - syntax/string
   - cljs.core/str

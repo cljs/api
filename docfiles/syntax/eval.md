@@ -1,6 +1,6 @@
 ---
 name: syntax/eval
-display: "#= eval"
+display as: "#= eval"
 see also:
 ---
 

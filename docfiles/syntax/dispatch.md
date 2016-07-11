@@ -1,6 +1,6 @@
 ---
 name: syntax/dispatch
-display: "# dispatch"
+display as: "# dispatch"
 see also:
   - syntax/regex
   - syntax/function

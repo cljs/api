@@ -1,6 +1,6 @@
 ---
 name: syntax/string
-display: "\"\" string"
+display as: "\"\" string"
 see also:
   - cljs.core/str
 ---

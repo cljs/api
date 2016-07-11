@@ -1,6 +1,6 @@
 ---
 name: syntax/meta
-display: "^ meta"
+display as: "^ meta"
 see also:
   - cljs.core/meta
   - cljs.core/with-meta

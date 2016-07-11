@@ -1,6 +1,6 @@
 ---
 name: syntax/predicate
-display: "? predicate"
+display as: "? predicate"
 see also:
   - syntax/impure
 ---

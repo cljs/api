@@ -7,12 +7,12 @@
 (def frontmatter-keys
   {:all [[:full-name "name:"]
          [:moved "moved:"]
-         [:display "display:"]
+         [:display-as "display as:"]
          [:known-as "known as:"]
          [:tags "tags:"]
          [:see-also "see also:"]]
    :required?        #{:full-name :see-also}
-   :syntax-required? #{:full-name :see-also :display}
+   :syntax-required? #{:full-name :see-also :display-as}
    :ns-required?     #{:full-name}
    :list?            #{:tags :see-also}})
 
@@ -53,10 +53,10 @@
     (when (or (not (blank? value))
               (required? key))
       (cond
-        (blank? value)   (str title)
-        (list? key)      (str title "\n" (yaml-list value))
-        (= key :display) (str title " " (pr-str value))
-        :else            (str title " " value)))))
+        (blank? value)      (str title)
+        (list? key)         (str title "\n" (yaml-list value))
+        (= key :display-as) (str title " " (pr-str value))
+        :else               (str title " " value)))))
 
 (defn map->frontmatter [m]
   (->> (:all frontmatter-keys)

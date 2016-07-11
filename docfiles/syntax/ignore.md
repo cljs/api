@@ -1,6 +1,6 @@
 ---
 name: syntax/ignore
-display: "#_ ignore"
+display as: "#_ ignore"
 see also:
   - syntax/comment
   - cljs.core/comment

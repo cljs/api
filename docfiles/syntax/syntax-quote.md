@@ -1,6 +1,6 @@
 ---
 name: syntax/syntax-quote
-display: "` syntax quote"
+display as: "` syntax quote"
 see also:
   - syntax/auto-gensym
   - syntax/quote

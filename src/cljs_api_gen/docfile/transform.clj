@@ -50,7 +50,7 @@
       (transform-key "name" :full-name)
       (transform-key "examples" :examples)
       (transform-key "known as" :known-as)
-      (transform-key "display" :display)
+      (transform-key "display as" :display-as)
       (transform-key "summary" :summary)
       (transform-key "summary for compiler" :summary-compiler)
       (transform-key "details" :details)

@@ -1,6 +1,6 @@
 ---
 name: syntax/rest
-display: "& rest"
+display as: "& rest"
 see also:
 ---
 

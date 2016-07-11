@@ -1,6 +1,6 @@
 ---
 name: syntax/function
-display: "#() function"
+display as: "#() function"
 see also:
   - syntax/arg
   - cljs.core/fn

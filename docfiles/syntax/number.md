@@ -1,6 +1,6 @@
 ---
 name: syntax/number
-display: "number literal"
+display as: "number literal"
 see also:
   - syntax/Infinity
   - syntax/NaN

@@ -1,6 +1,6 @@
 ---
 name: syntax/unreadable
-display: "#<> unreadable"
+display as: "#<> unreadable"
 see also:
 ---
 

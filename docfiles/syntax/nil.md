@@ -1,6 +1,6 @@
 ---
 name: syntax/nil
-display: "nil"
+display as: "nil"
 see also:
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: syntax/js-literal
-display: "#js literal"
+display as: "#js literal"
 see also:
   - cljs.core/js-obj
   - cljs.core/array

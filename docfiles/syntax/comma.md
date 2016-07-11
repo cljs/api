@@ -1,6 +1,6 @@
 ---
 name: syntax/comma
-display: ", comma"
+display as: ", comma"
 see also:
 ---
 

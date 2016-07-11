@@ -1,6 +1,6 @@
 ---
 name: syntax/comment
-display: "; comment"
+display as: "; comment"
 see also:
   - syntax/ignore
   - cljs.core/comment

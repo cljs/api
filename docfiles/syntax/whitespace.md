@@ -1,6 +1,6 @@
 ---
 name: syntax/whitespace
-display: "whitespace"
+display as: "whitespace"
 see also:
   - syntax/comma
 ---

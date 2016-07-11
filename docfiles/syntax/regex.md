@@ -1,6 +1,6 @@
 ---
 name: syntax/regex
-display: "#\"\" regex"
+display as: "#\"\" regex"
 see also:
   - cljs.core/re-pattern
   - cljs.core/re-find

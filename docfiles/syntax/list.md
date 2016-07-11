@@ -1,6 +1,6 @@
 ---
 name: syntax/list
-display: "() list"
+display as: "() list"
 see also:
   - syntax/vector
   - syntax/quote

@@ -1,6 +1,6 @@
 ---
 name: syntax/queue-literal
-display: "#queue literal"
+display as: "#queue literal"
 see also:
   - syntax/list
   - syntax/vector

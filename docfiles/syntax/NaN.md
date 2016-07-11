@@ -1,6 +1,6 @@
 ---
 name: syntax/NaN
-display: "NaN"
+display as: "NaN"
 see also:
   - syntax/Infinity
   - syntax/nil

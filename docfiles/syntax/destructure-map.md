@@ -1,6 +1,6 @@
 ---
 name: syntax/destructure-map
-display: "destructure {}"
+display as: "destructure {}"
 see also:
   - syntax/destructure-vector
 ---

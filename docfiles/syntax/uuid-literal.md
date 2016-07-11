@@ -1,6 +1,6 @@
 ---
 name: syntax/uuid-literal
-display: "#uuid literal"
+display as: "#uuid literal"
 see also:
   - cljs.core/uuid
   - cljs.core/random-uuid

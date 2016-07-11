@@ -1,6 +1,6 @@
 ---
 name: syntax/tagged-literal
-display: "# tagged literal"
+display as: "# tagged literal"
 see also:
   - syntax/dispatch
 ---

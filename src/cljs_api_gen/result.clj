@@ -350,7 +350,7 @@
         data (prune-map (select-keys docfile
                          [:examples
                           :known-as
-                          :display
+                          :display-as
                           :summary
                           :summary-compiler
                           :details

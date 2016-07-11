@@ -1,6 +1,6 @@
 ---
 name: special
-display: "Special Forms"
+display as: "Special Forms"
 ---
 
 ## Summary

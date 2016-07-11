@@ -1,6 +1,6 @@
 ---
 name: syntax/var
-display: "#' var"
+display as: "#' var"
 see also:
   - special/var
 ---

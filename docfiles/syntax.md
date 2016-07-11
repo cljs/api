@@ -1,6 +1,6 @@
 ---
 name: syntax
-display: "Syntax"
+display as: "Syntax"
 ---
 
 ## Summary

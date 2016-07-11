@@ -1,6 +1,6 @@
 ---
 name: syntax/symbol
-display: "symbol literal"
+display as: "symbol literal"
 see also:
   - cljs.core/symbol
   - cljs.core/symbol?

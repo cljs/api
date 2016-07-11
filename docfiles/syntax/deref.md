@@ -1,6 +1,6 @@
 ---
 name: syntax/deref
-display: "@ deref"
+display as: "@ deref"
 see also:
   - cljs.core/deref
   - cljs.core/atom

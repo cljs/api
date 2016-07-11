@@ -94,7 +94,7 @@
 (defn get-short-display-name
   [docname]
   (let [{:keys [ns name compiler?]} (parse-docname docname)
-        display (get-in @docfile-map [docname :display])]
+        display (get-in @docfile-map [docname :display-as])]
     (or display name ns)))
 
 (defn insert-doclink-name

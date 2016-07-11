@@ -1,6 +1,6 @@
 ---
 name: syntax/auto-gensym
-display: "# auto-gensym"
+display as: "# auto-gensym"
 see also:
   - cljs.core/gensym
   - syntax/syntax-quote

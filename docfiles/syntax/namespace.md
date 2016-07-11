@@ -1,6 +1,6 @@
 ---
 name: syntax/namespace
-display: "/ namespace slash"
+display as: "/ namespace slash"
 see also:
   - syntax/dot
 ---

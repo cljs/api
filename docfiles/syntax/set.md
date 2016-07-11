@@ -1,6 +1,6 @@
 ---
 name: syntax/set
-display: "#{} set"
+display as: "#{} set"
 see also:
   - cljs.core/hash-set
   - cljs.core/sorted-set

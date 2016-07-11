@@ -1,6 +1,6 @@
 ---
 name: syntax/boolean
-display: "boolean literal"
+display as: "boolean literal"
 see also:
   - cljs.core/boolean
   - special/if

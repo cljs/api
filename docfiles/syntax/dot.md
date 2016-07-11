@@ -1,6 +1,6 @@
 ---
 name: syntax/dot
-display: ". dot"
+display as: ". dot"
 see also:
   - syntax/symbol
   - syntax/namespace

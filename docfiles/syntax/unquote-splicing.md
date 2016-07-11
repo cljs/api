@@ -1,6 +1,6 @@
 ---
 name: syntax/unquote-splicing
-display: "~@ unquote splicing"
+display as: "~@ unquote splicing"
 see also:
   - syntax/syntax-quote
   - syntax/unquote

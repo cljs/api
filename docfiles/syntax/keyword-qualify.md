@@ -1,6 +1,6 @@
 ---
 name: syntax/keyword-qualify
-display: ":: keyword"
+display as: ":: keyword"
 see also:
   - syntax/keyword
   - cljs.core/keyword

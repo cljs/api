@@ -1,6 +1,6 @@
 ---
 name: syntax/arg
-display: "% arg"
+display as: "% arg"
 see also:
   - syntax/function
 ---
