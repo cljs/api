@@ -8,10 +8,13 @@ see also:
   - clojure.string/split
 ---
 
-## Signature
-[re s]
-
+## Summary
 
 ## Details
 
 Returns a lazy sequence of successive matches of regex `re` in string `s`.
+
+## Examples
+
+## Signature
+[re s]

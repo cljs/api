@@ -5,14 +5,17 @@ see also:
   - cljs.core/min-key
 ---
 
-## Signature
-[k x]
-[k x y]
-[k x y & more]
-
+## Summary
 
 ## Details
 
 Returns the `x` for which `(k x)` is greatest.
 
 `(k x)` should return a number.
+
+## Examples
+
+## Signature
+[k x]
+[k x y]
+[k x y & more]

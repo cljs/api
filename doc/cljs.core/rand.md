@@ -5,13 +5,16 @@ see also:
   - cljs.core/rand-nth
 ---
 
-## Signature
-[]
-[n]
-
+## Summary
 
 ## Details
 
 Returns a random floating point number between 0 inclusive and `n` exclusive.
 
 `n` defaults to 1.
+
+## Examples
+
+## Signature
+[]
+[n]

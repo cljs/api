@@ -4,9 +4,7 @@ see also:
   - cljs.core/rem
 ---
 
-## Signature
-[n d]
-
+## Summary
 
 ## Details
 
@@ -15,7 +13,6 @@ Returns the modulus of dividing numerator `n` by denominator `d`.
 Returns `NaN` when `d` is 0 (divide by 0 error).
 
 Truncates toward negative infinity.
-
 
 ## Examples
 
@@ -29,3 +26,6 @@ Truncates toward negative infinity.
 (mod 5 0)
 ;;=> NaN
 ```
+
+## Signature
+[n d]

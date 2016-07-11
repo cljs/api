@@ -7,9 +7,7 @@ see also:
   - cljs.core/delay
 ---
 
-## Usage
-@foo
-
+## Summary
 
 ## Details
 
@@ -17,7 +15,6 @@ see also:
 
 Retrieve the underlying value of a reference.  References can be created by
 [doc:cljs.core/atom] or [doc:cljs.core/delay].
-
 
 ## Examples
 
@@ -29,3 +26,6 @@ Retrieve the underlying value of a reference.  References can be created by
 (deref a)
 ;;=> 1
 ```
+
+## Usage
+@foo

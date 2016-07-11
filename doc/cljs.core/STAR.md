@@ -5,19 +5,13 @@ see also:
   - cljs.core//
 ---
 
-## Signature
-[]
-[x]
-[x y]
-[x y & more]
-
+## Summary
 
 ## Details
 
 Returns the product of nums.
 
 `(*)` returns 1.
-
 
 ## Examples
 
@@ -36,3 +30,9 @@ Returns the product of nums.
 (* 2 3 4)
 ;;=> 24
 ```
+
+## Signature
+[]
+[x]
+[x y]
+[x y & more]

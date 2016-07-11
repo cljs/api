@@ -5,9 +5,7 @@ see also:
   - syntax/cond
 ---
 
-## Usage
-#?@(...)
-
+## Summary
 
 ## Details
 
@@ -21,7 +19,6 @@ Like [doc:syntax/cond], except:
 
 `(def #?@(:cljs [foo 1])` is read as `(def foo 1)`.
 
-
 ## Examples
 
 ```clj
@@ -29,3 +26,6 @@ Like [doc:syntax/cond], except:
           :clj  [b 2]))
 ;;=> (def a 1)
 ```
+
+## Usage
+#?@(...)

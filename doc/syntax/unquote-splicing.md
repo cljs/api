@@ -6,6 +6,8 @@ see also:
   - syntax/unquote
 ---
 
+## Summary
+
 ## Details
 
 (Only intended for use in Clojure macros, which can be used from but not
@@ -15,7 +17,6 @@ Intended for use inside a [doc:syntax/syntax-quote].
 
 Forces evaluation of the following form and expands its children into the
 parent form.
-
 
 ## Examples
 

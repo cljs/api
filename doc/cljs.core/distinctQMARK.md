@@ -4,16 +4,11 @@ see also:
   - cljs.core/distinct
 ---
 
-## Signature
-[x]
-[x y]
-[x y & more]
-
+## Summary
 
 ## Details
 
 Returns true if no two of the arguments are `=`
-
 
 ## Examples
 
@@ -43,3 +38,8 @@ Apply it a collection:
 (apply distinct? [1 2 1])
 ;;=> false
 ```
+
+## Signature
+[x]
+[x y]
+[x y & more]

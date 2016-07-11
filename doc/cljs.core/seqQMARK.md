@@ -10,12 +10,15 @@ see also:
   - cljs.core/set?
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns true if `x` is a sequence, false otherwise.
 
 All collections can be converted into a sequence using `seq`.
+
+## Examples
+
+## Signature
+[x]

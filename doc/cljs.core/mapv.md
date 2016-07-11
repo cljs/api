@@ -4,12 +4,7 @@ see also:
   - cljs.core/map
 ---
 
-## Signature
-[f coll]
-[f c1 c2]
-[f c1 c2 c3]
-[f c1 c2 c3 & colls]
-
+## Summary
 
 ## Details
 
@@ -19,3 +14,11 @@ coll, until any one of the colls is exhausted. Any remaining items in other
 colls are ignored.
 
 Function `f` should accept number-of-colls arguments.
+
+## Examples
+
+## Signature
+[f coll]
+[f c1 c2]
+[f c1 c2 c3]
+[f c1 c2 c3 & colls]

@@ -6,13 +6,16 @@ see also:
   - clojure.set/difference
 ---
 
-## Signature
-[coll]
-[coll k]
-[coll k & ks]
-
+## Summary
 
 ## Details
 
 disj(oin). Returns a new set of the same (hashed/sorted) type, that does not
 contain key(s).
+
+## Examples
+
+## Signature
+[coll]
+[coll k]
+[coll k & ks]

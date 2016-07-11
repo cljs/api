@@ -8,11 +8,14 @@ see also:
   - cljs.core/when-first
 ---
 
-## Signature
-[[x test] & body]
-
+## Summary
 
 ## Details
 
 When `test` is logical true, evaluates `body` with the value of `test` bound to
 `x`.
+
+## Examples
+
+## Signature
+[[x test] & body]

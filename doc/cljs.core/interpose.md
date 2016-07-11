@@ -5,10 +5,13 @@ see also:
   - clojure.string/join
 ---
 
-## Signature
-[sep coll]
-
+## Summary
 
 ## Details
 
 Returns a lazy seq of the elements of `coll` separated by `sep`.
+
+## Examples
+
+## Signature
+[sep coll]

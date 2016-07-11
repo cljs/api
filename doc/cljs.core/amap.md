@@ -4,9 +4,7 @@ see also:
   - cljs.core/map
 ---
 
-## Signature
-[a idx ret expr]
-
+## Summary
 
 ## Details
 
@@ -14,7 +12,6 @@ For quickly creating a new JavaScript array by mapping an expression `expr`
 across a JavaScript array `a`.  The expression can use `ret` as the current
 result, which is initialized to `a`.  It can also use `idx` to get the current
 index.
-
 
 ## Examples
 
@@ -35,3 +32,6 @@ current result:
                  (* 10 (aget a i))))
 ;;=> #js [10 30 60]
 ```
+
+## Signature
+[a idx ret expr]

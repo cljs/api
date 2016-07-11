@@ -1,15 +1,13 @@
 ---
 name: cljs.core/bit-test
+see also:
 ---
 
-## Signature
-[x n]
-
+## Summary
 
 ## Details
 
 Test bit at index `n`. Returns `true` if 1, and `false` if 0. Same as `(x & (1 << y)) != 0` in JavaScript.
-
 
 ## Examples
 
@@ -32,3 +30,6 @@ Same numbers in decimal:
 (bit-test 4 1)
 ;;=> false
 ```
+
+## Signature
+[x n]

@@ -4,6 +4,8 @@ see also:
   - cljs.core/mod
 ---
 
+## Summary
+
 ## Details
 
 Returns the modulus of dividing numerator `n` by denominator `d`, with JavaScript's
@@ -12,7 +14,6 @@ original behavior for negative numbers.
 Returns `NaN` when `d` is 0 (divide by 0 error).
 
 Equivalent to `x % y` in JavaScript.
-
 
 ## Examples
 

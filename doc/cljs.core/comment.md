@@ -1,10 +1,9 @@
 ---
 name: cljs.core/comment
+see also:
 ---
 
-## Signature
-[& body]
-
+## Summary
 
 ## Details
 
@@ -15,7 +14,6 @@ different functions during development.  Specific expressions within the
 `comment` can then be selected and evaluated from some editors.
 
 You can also use `;` to "comment out" code until the end of a line.
-
 
 ## Examples
 
@@ -38,3 +36,6 @@ Inner forms must still be syntactically correct:
 (comment a : b)
 ;; Error: Invalid token :
 ```
+
+## Signature
+[& body]

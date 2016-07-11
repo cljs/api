@@ -11,9 +11,7 @@ see also:
   - syntax/cond
 ---
 
-## Usage
-#...
-
+## Summary
 
 ## Details
 
@@ -33,7 +31,6 @@ original forms:
 | [doc:syntax/unused]                    | [doc:syntax/ignore]                                  | ignore-related         |
 | [`foo (symbol)`][doc:syntax/symbol]    | [`#foo (tagged literal)`][doc:syntax/tagged-literal] | name-related           |
 | [doc:syntax/predicate]                 | [doc:syntax/cond]                                    | conditional-related    |
-
 
 ## Examples
 
@@ -100,3 +97,6 @@ Reader Conditional:
 #?(:clj "Clojure" :cljs "ClojureScript")
 ;;=> "ClojureScript"
 ```
+
+## Usage
+#...

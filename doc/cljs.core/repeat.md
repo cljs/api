@@ -7,13 +7,16 @@ see also:
   - cljs.core/dotimes
 ---
 
-## Signature
-[x]
-[n x]
-
+## Summary
 
 ## Details
 
 Returns a lazy sequence of `x`s.
 
 The length of the sequence is infinite, or `n` if provided.
+
+## Examples
+
+## Signature
+[x]
+[n x]

@@ -4,10 +4,7 @@ see also:
   - cljs.core/filter
 ---
 
-## Signature
-[pred]
-[pred coll]
-
+## Summary
 
 ## Details
 
@@ -17,3 +14,9 @@ false.
 `pred` must be free of side-effects.
 
 Returns a transducer when no collection is provided.
+
+## Examples
+
+## Signature
+[pred]
+[pred coll]

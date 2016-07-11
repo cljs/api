@@ -6,9 +6,7 @@ see also:
   - special/throw
 ---
 
-## Signature
-[expr* catch-clause* finally-clause?]
-
+## Summary
 
 ## Details
 
@@ -27,3 +25,8 @@ function. Before returning, normally or abnormally, any `finally-clause?`
 expressions will be evaluated for their side effects.
 
 `try` is one of ClojureScript's [special forms](http://clojure.org/special_forms).
+
+## Examples
+
+## Signature
+[expr* catch-clause* finally-clause?]

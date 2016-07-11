@@ -1,14 +1,11 @@
 ---
 name: cljs.repl
+see also:
 ---
 
 ## Summary
+
 macros auto-imported into a ClojureScript REPL
-
-
-## Summary for Compiler
-interactive ClojureScript REPL (Read Eval Print Loop)
-
 
 ## Details
 
@@ -18,3 +15,7 @@ into your REPL environment, but you can use them outside of one as well.
 
 These macros allow you to explore code by listing/searching available vars in a
 namespace and viewing a var's documentation or source.
+
+## Summary for Compiler
+
+interactive ClojureScript REPL (Read Eval Print Loop)

@@ -5,12 +5,15 @@ see also:
   - cljs.core/when-not
 ---
 
-## Signature
-[test then]
-[test then else]
-
+## Summary
 
 ## Details
 
 If `test` is false or nil, evaluates and returns `then`. Otherwise, evaluates
 and returns `else`. `else` defaults to nil if not provided.
+
+## Examples
+
+## Signature
+[test then]
+[test then else]

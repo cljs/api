@@ -4,10 +4,13 @@ see also:
   - cljs.core/bit-shift-right
 ---
 
-## Signature
-[x n]
-
+## Summary
 
 ## Details
 
 Bitwise shift right with zero fill
+
+## Examples
+
+## Signature
+[x n]

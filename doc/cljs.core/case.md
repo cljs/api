@@ -5,9 +5,7 @@ see also:
   - cljs.core/condp
 ---
 
-## Signature
-[e & clauses]
-
+## Summary
 
 ## Details
 
@@ -30,7 +28,6 @@ in `case`, including numbers, strings, symbols, keywords, and ClojureScript
 composites thereof. Note that since lists are used to group multiple constants
 that map to the same expression, a vector can be used to match a list if needed.
 The test-constants need not be all of the same type.
-
 
 ## Examples
 
@@ -55,3 +52,6 @@ The test-constants need not be all of the same type.
   1 "one")
 ;; Error: No matching clause: 2
 ```
+
+## Signature
+[e & clauses]

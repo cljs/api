@@ -1,11 +1,15 @@
 ---
 name: clojure.string/trimr
+see also:
 ---
 
-## Signature
-[s]
-
+## Summary
 
 ## Details
 
 Removes whitespace from the right side of string.
+
+## Examples
+
+## Signature
+[s]

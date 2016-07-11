@@ -6,10 +6,13 @@ see also:
   - cljs.core/coll?
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns true if `x` is a list, false otherwise.
+
+## Examples
+
+## Signature
+[x]

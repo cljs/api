@@ -4,10 +4,13 @@ see also:
   - cljs.core/keys
 ---
 
-## Signature
-[hash-map]
-
+## Summary
 
 ## Details
 
 Returns a sequence of the values in `hash-map`.
+
+## Examples
+
+## Signature
+[hash-map]

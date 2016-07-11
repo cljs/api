@@ -4,15 +4,12 @@ see also:
   - cljs.core/add-watch
 ---
 
-## Signature
-[a key]
-
+## Summary
 
 ## Details
 
 Removes a watch function identified by `key` from atom `a`.  The function must
 have originally been set by `add-watch`.
-
 
 ## Examples
 
@@ -34,3 +31,6 @@ have originally been set by `add-watch`.
 (swap! a assoc :foo 3)
 ;;=> nothing will be printed...
 ```
+
+## Signature
+[a key]

@@ -9,16 +9,12 @@ see also:
   - cljs.core/false?
 ---
 
-## Usage
-true
-false
-
+## Summary
 
 ## Details
 
 Special symbols representing the boolean literals `true` and `false`.
 Both evaluate to themselves.
-
 
 ## Examples
 
@@ -29,3 +25,7 @@ true
 false
 ;;=> false
 ```
+
+## Usage
+true
+false

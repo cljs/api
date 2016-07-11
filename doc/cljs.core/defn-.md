@@ -4,9 +4,7 @@ see also:
   - cljs.core/defn
 ---
 
-## Signature
-[name & decls]
-
+## Summary
 
 ## Details
 
@@ -14,3 +12,8 @@ Same as `defn`, but adds `{:private true}` metadata to the definition.
 
 Note: `:private` metadata is not currently enforced by the ClojureScript
 compiler.
+
+## Examples
+
+## Signature
+[name & decls]

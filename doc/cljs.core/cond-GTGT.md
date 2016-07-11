@@ -7,9 +7,7 @@ see also:
   - cljs.core/cond
 ---
 
-## Signature
-[expr & clauses]
-
+## Summary
 
 ## Details
 
@@ -18,7 +16,6 @@ through each form for which the corresponding test expression is true.
 
 Note that, unlike `cond` branching, `cond->>` threading does not short circuit
 after the first true test expression.
-
 
 ## Examples
 
@@ -31,3 +28,6 @@ after the first true test expression.
   sum?    (reduce +))
 ;;=> 6
 ```
+
+## Signature
+[expr & clauses]

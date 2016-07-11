@@ -8,10 +8,7 @@ see also:
   - cljs.core/get-validator
 ---
 
-## Signature
-[x]
-[x opts]
-
+## Summary
 
 ## Details
 
@@ -23,7 +20,6 @@ Creates and returns an atom with an initial value of `x`.
 
 `:validator` should be a validator function for the atom. See `set-validator!`
 for more information.
-
 
 ## Examples
 
@@ -41,3 +37,7 @@ for more information.
 @a
 ;;=> 3
 ```
+
+## Signature
+[x]
+[x opts]

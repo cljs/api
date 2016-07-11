@@ -1,16 +1,14 @@
 ---
 name: cljs.core/char
+see also:
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Converts a number `x` to a character using `String.fromCharCode(x)` from
 JavaScript.
-
 
 ## Examples
 
@@ -24,3 +22,6 @@ JavaScript.
 (char "foo")
 ;; Error: Argument to char must be a character or number
 ```
+
+## Signature
+[x]

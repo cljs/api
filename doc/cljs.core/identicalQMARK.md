@@ -5,10 +5,13 @@ see also:
   - cljs.core/==
 ---
 
-## Signature
-[x y]
-
+## Summary
 
 ## Details
 
 Returns true if `x` and `y` are the same object, false otherwise.
+
+## Examples
+
+## Signature
+[x y]

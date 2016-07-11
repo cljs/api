@@ -1,7 +1,10 @@
 ---
 name: syntax/nil
 display: "nil"
+see also:
 ---
+
+## Summary
 
 ## Details
 
@@ -11,7 +14,6 @@ It is common for operations to safely handle `nil` without
 causing exceptions.
 
 Expressions evaluate to `nil` if there is no value to return.
-
 
 ## Examples
 

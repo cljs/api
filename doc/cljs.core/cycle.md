@@ -5,10 +5,13 @@ see also:
   - cljs.core/repeatedly
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
 Returns an infinite lazy sequence of repetitions of the items in `coll`.
+
+## Examples
+
+## Signature
+[coll]

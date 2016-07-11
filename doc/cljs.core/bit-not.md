@@ -1,15 +1,13 @@
 ---
 name: cljs.core/bit-not
+see also:
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Bitwise complement.  Same as `~x` in JavaScript.
-
 
 ## Examples
 
@@ -27,9 +25,5 @@ Same numbers in decimal:
 ;;=> -13
 ```
 
-
-## TODO
-
-look into how negative numbers are represented in binary (two's complement, but how does this work in JavaScript with floats)
-- http://stackoverflow.com/questions/9939760/how-do-i-convert-an-integer-to-binary-in-javascript
-- http://stackoverflow.com/questions/16155592/negative-numbers-to-binary-string
+## Signature
+[x]

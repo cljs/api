@@ -5,19 +5,13 @@ see also:
   - cljs.core/-
 ---
 
-## Signature
-[]
-[x]
-[x y]
-[x y & more]
-
+## Summary
 
 ## Details
 
 Returns the sum of nums.
 
 `(+)` returns 0.
-
 
 ## Examples
 
@@ -37,3 +31,9 @@ Returns the sum of nums.
 (+ 1 2 3)
 ;;=> 6
 ```
+
+## Signature
+[]
+[x]
+[x y]
+[x y & more]

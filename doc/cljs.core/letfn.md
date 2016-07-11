@@ -4,9 +4,7 @@ see also:
   - cljs.core/let
 ---
 
-## Signature
-[fnspecs & body]
-
+## Summary
 
 ## Details
 
@@ -19,3 +17,8 @@ functions as well as `body`.
 `letfn` is a wrapper over one of ClojureScript's [special forms].
 
 [special forms]:http://clojure.org/special_forms
+
+## Examples
+
+## Signature
+[fnspecs & body]

@@ -4,16 +4,13 @@ see also:
   - cljs.core/namespace
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns the name string of a possibly namespace-qualified keyword or symbol.
 
 Equivalent to [doc:cljs.core/identity] for strings.
-
 
 ## Examples
 
@@ -46,3 +43,6 @@ Strings have no concept of a namespace:
 (name "foo")
 ;;=> "foo"
 ```
+
+## Signature
+[x]

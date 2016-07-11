@@ -6,16 +6,13 @@ see also:
   - cljs.core/sequential?
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns true if `x` is a collection, false otherwise.
 
 Lists, maps, sets, and vectors are collections.
-
 
 ## Examples
 
@@ -45,3 +42,6 @@ Not collections:
 (coll? nil)
 ;;=> false
 ```
+
+## Signature
+[x]

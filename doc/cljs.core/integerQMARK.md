@@ -4,10 +4,13 @@ see also:
   - cljs.core/int
 ---
 
-## Signature
-[n]
-
+## Summary
 
 ## Details
 
 Returns true if `n` is an integer, false otherwise.
+
+## Examples
+
+## Signature
+[n]

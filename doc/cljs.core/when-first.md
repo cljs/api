@@ -1,17 +1,16 @@
 ---
 name: cljs.core/when-first
+see also:
 ---
 
-## Signature
-[bindings & body]
-
+## Summary
 
 ## Details
 
 With `bindings` as `x`, `xs`, roughly the same as `(when (seq xs) (let [x (first
 xs)] body))` but `xs` is evaluated only once.
 
+## Examples
 
-## TODO
-
-This needs better explanation + examples.
+## Signature
+[bindings & body]

@@ -6,16 +6,13 @@ see also:
   - cljs.core/sorted-map
 ---
 
-## Signature
-[& keyvals]
-
+## Summary
 
 ## Details
 
 Returns a new array map (a map implemented with arrays) with the supplied mappings.
 
 `keyvals` must be an even number of forms.
-
 
 ## Examples
 
@@ -26,3 +23,6 @@ Returns a new array map (a map implemented with arrays) with the supplied mappin
 (array-map :a 10 :b 20)
 ;;=> {:a 10 :b 20}
 ```
+
+## Signature
+[& keyvals]

@@ -8,9 +8,7 @@ see also:
   - cljs.core/some-fn
 ---
 
-## Signature
-[pred coll]
-
+## Summary
 
 ## Details
 
@@ -19,3 +17,8 @@ nil.
 
 A common idiom is to use a set as pred, for example this will return `:fred` if
 `:fred` is in the sequence, otherwise nil: `(some #{:fred} coll)`
+
+## Examples
+
+## Signature
+[pred coll]

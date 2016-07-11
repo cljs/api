@@ -9,16 +9,13 @@ see also:
   - cljs.core/take-last
 ---
 
-## Signature
-[s]
-
+## Summary
 
 ## Details
 
 Returns a sequence of all but the last item in `s`.
 
 `butlast` runs in linear time.
-
 
 ## Examples
 
@@ -35,3 +32,6 @@ Returns a sequence of all but the last item in `s`.
 (butlast [])
 ;;=> nil
 ```
+
+## Signature
+[s]

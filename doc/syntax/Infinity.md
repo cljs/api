@@ -6,11 +6,7 @@ see also:
   - syntax/NaN
 ---
 
-## Usage
-Infinity
--Infinity
-+Infinity
-
+## Summary
 
 ## Details
 
@@ -19,7 +15,6 @@ The IEEE 754 Floating Point representations of infinity.
 `Infinity` = `+Infinity` = positive infinity
 
 `-Infinity` = negative infinity
-
 
 ## Examples
 
@@ -56,3 +51,8 @@ js/Infinity
 js/-Infinity
 ;;=> -Infinity
 ```
+
+## Usage
+Infinity
+-Infinity
++Infinity

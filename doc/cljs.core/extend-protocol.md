@@ -4,3 +4,8 @@ see also:
   - cljs.core/extend-type
 ---
 
+## Summary
+
+## Details
+
+## Examples

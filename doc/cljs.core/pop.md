@@ -6,16 +6,13 @@ see also:
   - cljs.core/conj
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
 For a list, returns a new list without the first item.
 
 For a vector, returns a new vector without the last item.
-
 
 ## Examples
 
@@ -50,3 +47,6 @@ With lists:
 (pop '())
 ;; Error: Can't pop empty list
 ```
+
+## Signature
+[coll]

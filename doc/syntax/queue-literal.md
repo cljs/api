@@ -8,9 +8,7 @@ see also:
   - syntax/set
 ---
 
-## Usage
-#queue [...]
-
+## Summary
 
 ## Details
 
@@ -20,18 +18,6 @@ Queues are the only core collection type that requires a tagged literal to
 create, while the other collections have built-in delimiters `()` `[]` `{}` `#{}`.
 
 See [doc:cljs.core/PersistentQueue] for data structure details.
-
-
-## Notes
-
-Some pending-related Clojure issues:
-
-[CLJ-976] adds #queue literal to Clojure
-[CLJ-1078] adds clojure.core/queue and clojure.core/queue? functions (cljs will add if clojure does)
-
-[CLJ-976]:http://dev.clojure.org/jira/browse/CLJ-976
-[CLJ-1078]:http://dev.clojure.org/jira/browse/CLJ-1078
-
 
 ## Examples
 
@@ -58,3 +44,6 @@ Some operations:
 (peek q)
 ;;=> 1
 ```
+
+## Usage
+#queue [...]

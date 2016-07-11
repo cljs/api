@@ -7,9 +7,7 @@ see also:
   - cljs.core/sorted-set-by
 ---
 
-## Signature
-[comparator & keyvals]
-
+## Summary
 
 ## Details
 
@@ -17,3 +15,8 @@ Returns a new sorted map with supplied mappings, using the supplied comparator
 function.
 
 `keyvals` must be an even number of forms.
+
+## Examples
+
+## Signature
+[comparator & keyvals]

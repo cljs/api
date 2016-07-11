@@ -4,12 +4,13 @@ see also:
   - cljs.core/name
 ---
 
+## Summary
+
 ## Details
 
 Returns the namespace string of a possibly namespace-qualified keyword or symbol.
 
 Returns [doc:syntax/nil] if not present.
-
 
 ## Examples
 

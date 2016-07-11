@@ -5,10 +5,7 @@ see also:
   - cljs.core/persistent!
 ---
 
-## Signature
-[tcoll key val]
-[tcoll key val & kvs]
-
+## Summary
 
 ## Details
 
@@ -20,7 +17,6 @@ When applied to a transient vector, sets the val at index.  Note - index must
 be <= (count vector).
 
 Returns coll.
-
 
 ## Examples
 
@@ -41,3 +37,7 @@ tcoll
 (def a (persistent! tcoll))
 ;;=> {:a 1 :b 2}
 ```
+
+## Signature
+[tcoll key val]
+[tcoll key val & kvs]

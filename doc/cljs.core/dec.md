@@ -4,10 +4,13 @@ see also:
   - cljs.core/inc
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns a number one less than `x`.
+
+## Examples
+
+## Signature
+[x]

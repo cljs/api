@@ -1,16 +1,14 @@
 ---
 name: cljs.core/js-invoke
+see also:
 ---
 
-## Signature
-[obj s & args]
-
+## Summary
 
 ## Details
 
 Invoke JavaScript object `obj` method via string `s`. Needed when the string is
 not a valid unquoted property name.
-
 
 ## Examples
 
@@ -29,3 +27,6 @@ We can invoke it from ClojureScript:
 (js-invoke js/obj "my sum" 1 2)
 ;=> 3
 ```
+
+## Signature
+[obj s & args]

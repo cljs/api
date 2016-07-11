@@ -5,9 +5,7 @@ see also:
   - syntax/impure
 ---
 
-## Usage
-foo?
-
+## Summary
 
 ## Details
 
@@ -24,7 +22,6 @@ Some predicate functions which use this convention:
 - [doc:cljs.core/nil?]
 
 It is sometimes used to name boolean values as well, not just predicate functions.
-
 
 ## Examples
 
@@ -43,3 +40,6 @@ Create a `divisible?` predicate:
 (filter #(divisible? 15 %) (range 15))
 ;;=> (1 3 5)
 ```
+
+## Usage
+foo?

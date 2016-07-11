@@ -5,10 +5,7 @@ see also:
   - syntax/dot
 ---
 
-## Usage
-foo/baz
-foo.bar/baz
-
+## Summary
 
 ## Details
 
@@ -24,3 +21,9 @@ notice `/` appearing before `PersistentVector` in Clojure:
 [doc:cljs.core//] is the division function if it is by itself.
 
 See [doc:syntax/dot] for usage of dots on either side of `/`
+
+## Examples
+
+## Usage
+foo/baz
+foo.bar/baz

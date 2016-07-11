@@ -6,12 +6,15 @@ see also:
   - cljs.core/nthrest
 ---
 
-## Signature
-[coll n]
-
+## Summary
 
 ## Details
 
 Returns the `n`th `next` of `coll`.
 
 Returns `(seq coll)` when `n` is 0.
+
+## Examples
+
+## Signature
+[coll n]

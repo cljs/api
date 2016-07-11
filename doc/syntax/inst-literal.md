@@ -6,12 +6,7 @@ see also:
   - syntax/tagged-literal
 ---
 
-## Usage
-#inst "yyyy-mm-dd"
-#inst "yyyy-mm-ddThh:mm:ss"
-#inst "yyyy-mm-ddThh:mm:ssZ"
-#inst "yyyy-mm-ddThh:mm:ss-hh:mm"
-
+## Summary
 
 ## Details
 
@@ -26,7 +21,6 @@ Append `Z` to denote UTC, or `-hh:mm` to denote exact UTC offset.
 
 [Date]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 [RFC-3339]:http://www.ietf.org/rfc/rfc3339.txt
-
 
 ## Examples
 
@@ -58,3 +52,9 @@ extends `js/Date` type with `IEquiv` protocol to allow this.)
 (= a b)
 ;;=> true
 ```
+
+## Usage
+#inst "yyyy-mm-dd"
+#inst "yyyy-mm-ddThh:mm:ss"
+#inst "yyyy-mm-ddThh:mm:ssZ"
+#inst "yyyy-mm-ddThh:mm:ss-hh:mm"

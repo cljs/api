@@ -5,10 +5,13 @@ see also:
   - cljs.core/set-validator!
 ---
 
-## Signature
-[a]
-
+## Summary
 
 ## Details
 
 Returns the validator function for atom `a`.
+
+## Examples
+
+## Signature
+[a]

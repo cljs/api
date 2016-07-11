@@ -6,10 +6,7 @@ see also:
   - cljs.core/frequencies
 ---
 
-## Signature
-[f coll]
-[f val coll]
-
+## Summary
 
 ## Details
 
@@ -26,3 +23,9 @@ If `val` is supplied, returns the result of applying `f` to `val` and the first
 item in `coll`, then applying `f` to that result and the 2nd item, etc.
 
 If `coll` contains no items, returns `val` and `f` is not called.
+
+## Examples
+
+## Signature
+[f coll]
+[f val coll]

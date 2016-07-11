@@ -6,12 +6,7 @@ see also:
   - cljs.core/or
 ---
 
-## Signature
-[p]
-[p1 p2]
-[p1 p2 p3]
-[p1 p2 p3 & ps]
-
+## Summary
 
 ## Details
 
@@ -21,3 +16,11 @@ of its arguments, else it returns logical false.
 
 Note that `f` is short-circuiting in that it will stop execution on the first
 argument that triggers a logical true result against the original predicates.
+
+## Examples
+
+## Signature
+[p]
+[p1 p2]
+[p1 p2 p3]
+[p1 p2 p3 & ps]

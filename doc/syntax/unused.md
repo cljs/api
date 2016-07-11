@@ -1,7 +1,10 @@
 ---
 name: syntax/unused
 display: "_ unused"
+see also:
 ---
+
+## Summary
 
 ## Details
 
@@ -40,7 +43,6 @@ names will shadow those previously occurring.  Thus, `_` actually holds the
 value of its last binding, but using it should be strictly avoided to prevent
 confusion.  This is the only encouraged use-case for duplicating parameter
 names.
-
 
 ## Examples
 

@@ -5,15 +5,12 @@ see also:
   - cljs.core/vary-meta
 ---
 
-## Signature
-[obj m]
-
+## Summary
 
 ## Details
 
 Returns an object of the same type and value as `obj`, with map `m` as its
 metadata.
-
 
 ## Examples
 
@@ -30,3 +27,6 @@ metadata.
 (meta b)
 ;;=> {:bar true}
 ```
+
+## Signature
+[obj m]

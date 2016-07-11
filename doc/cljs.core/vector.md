@@ -7,10 +7,13 @@ see also:
   - cljs.core/into
 ---
 
-## Signature
-[& args]
-
+## Summary
 
 ## Details
 
 Creates a new vector containing `args`.
+
+## Examples
+
+## Signature
+[& args]

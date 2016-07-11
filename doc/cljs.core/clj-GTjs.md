@@ -4,9 +4,7 @@ see also:
   - cljs.core/js->clj
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
@@ -21,7 +19,6 @@ Recursively transforms ClojureScript values to JavaScript.
 | Symbol        | `bar`  | String     | `"bar"` |
 | Map           | `{}`   | Object     | `{}`    |
 
-
 ## Examples
 
 ```clj
@@ -34,3 +31,6 @@ Recursively transforms ClojureScript values to JavaScript.
 (clj->js [1 {:foo "bar"} 4])
 ;;=> #js [1 #js {:foo "bar"} 4]
 ```
+
+## Signature
+[x]

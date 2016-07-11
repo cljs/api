@@ -1,10 +1,9 @@
 ---
 name: clojure.string/replace-first
+see also:
 ---
 
-## Signature
-[s match replacement]
-
+## Summary
 
 ## Details
 
@@ -17,3 +16,8 @@ The options for match / replacement are:
 | string | string      |
 | regex  | string      |
 | regex  | function    |
+
+## Examples
+
+## Signature
+[s match replacement]

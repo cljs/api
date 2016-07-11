@@ -7,14 +7,11 @@ see also:
   - cljs.core/sorted-set-by
 ---
 
-## Usage
-#{...}
-
+## Summary
 
 ## Details
 
 Create a literal set.  Values must be unique.
-
 
 ## Examples
 
@@ -29,3 +26,6 @@ Duplicate values will cause an error:
 #{1 1 2 3}
 ;; Error: Duplicate key: 1
 ```
+
+## Usage
+#{...}

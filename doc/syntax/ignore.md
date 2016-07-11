@@ -6,11 +6,12 @@ see also:
   - cljs.core/comment
 ---
 
+## Summary
+
 ## Details
 
 Causes the following form to be completely skipped by the reader.  This is a
 more complete removal than the `comment` macro which yields nil.
-
 
 ## Examples
 

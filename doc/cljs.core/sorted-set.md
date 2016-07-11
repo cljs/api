@@ -7,10 +7,13 @@ see also:
   - cljs.core/sorted-map
 ---
 
-## Signature
-[& keys]
-
+## Summary
 
 ## Details
 
 Returns a new sorted set with supplied `keys`.
+
+## Examples
+
+## Signature
+[& keys]

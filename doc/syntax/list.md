@@ -6,9 +6,7 @@ see also:
   - syntax/quote
 ---
 
-## Usage
-(...)
-
+## Summary
 
 ## Details
 
@@ -40,7 +38,6 @@ unevaluated, where they _may_ be evaluated internally.
 
 (See [doc:cljs.core/List] for data structure details.)
 
-
 ## Examples
 
 The following is a list that is evaluated to create var `a`:
@@ -62,3 +59,6 @@ To signify an unevaluated list, precede it with a quote:
 '(1 2 3)
 ;;=> (1 2 3)
 ```
+
+## Usage
+(...)

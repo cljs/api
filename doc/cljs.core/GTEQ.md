@@ -4,17 +4,12 @@ see also:
   - cljs.core/>
 ---
 
-## Signature
-[x]
-[x y]
-[x y & more]
-
+## Summary
 
 ## Details
 
 Returns true if each successive number argument is less than or equal to the
 previous one, false otherwise.
-
 
 ## Examples
 
@@ -31,3 +26,8 @@ previous one, false otherwise.
 (>= 6 5 4 3 2)
 ;;=> true
 ```
+
+## Signature
+[x]
+[x y]
+[x y & more]

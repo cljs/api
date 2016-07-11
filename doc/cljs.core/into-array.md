@@ -5,10 +5,13 @@ see also:
   - cljs.core/make-array
 ---
 
-## Signature
-[aseq]
-
+## Summary
 
 ## Details
 
 Returns a new JavaScript array from the elements of `aseq`.
+
+## Examples
+
+## Signature
+[aseq]

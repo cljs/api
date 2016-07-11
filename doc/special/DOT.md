@@ -5,17 +5,7 @@ see also:
   - cljs.core/aget
 ---
 
-## Usage
-(.-foo obj)
-(.foo obj)
-
-
-## Signature
-[o -p]
-[o m]
-[o m 1 2]
-[o (m 1 2)]
-
+## Summary
 
 ## Details
 
@@ -53,7 +43,6 @@ use the following sugar:
     </tr>
   </tbody>
 </table>
-
 
 ## Examples
 
@@ -111,3 +100,13 @@ You can get the value at property `"foo"` with any of the following:
 (aget o "foo")
 ;;=> "bar"
 ```
+
+## Signature
+[o -p]
+[o m]
+[o m 1 2]
+[o (m 1 2)]
+
+## Usage
+(.-foo obj)
+(.foo obj)

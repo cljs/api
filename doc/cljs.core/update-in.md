@@ -5,13 +5,7 @@ see also:
   - cljs.core/get-in
 ---
 
-## Signature
-[m [k & ks] f]
-[m [k & ks] f a]
-[m [k & ks] f a b]
-[m [k & ks] f a b c]
-[m [k & ks] f a b c & args]
-
+## Summary
 
 ## Details
 
@@ -20,3 +14,12 @@ keys and `f` is a function that will take the old value and any supplied
 arguments and return the new value. Returns a new nested structure.
 
 If any levels do not exist, hash-maps will be created.
+
+## Examples
+
+## Signature
+[m [k & ks] f]
+[m [k & ks] f a]
+[m [k & ks] f a b]
+[m [k & ks] f a b c]
+[m [k & ks] f a b c & args]

@@ -4,9 +4,7 @@ see also:
   - cljs.core/let
 ---
 
-## Signature
-[bindings & body]
-
+## Summary
 
 ## Details
 
@@ -18,7 +16,6 @@ re-establishes the bindings that existed before.
 
 The new bindings are made in parallel (unlike `let`); all init-exprs are
 evaluated before the vars are bound to their new values.
-
 
 ## Examples
 
@@ -35,3 +32,6 @@ evaluated before the vars are bound to their new values.
 *foo*
 ;;=> 1
 ```
+
+## Signature
+[bindings & body]

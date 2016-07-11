@@ -4,16 +4,13 @@ see also:
   - cljs.repl/doc
 ---
 
-## Signature
-[name]
-
+## Summary
 
 ## Details
 
 Prints the source code for the given symbol `name`, if it can find it.  This
 requires that the symbol resolve to a Var defined in a namespace for which the
 .cljs is in the classpath.
-
 
 ## Examples
 
@@ -27,3 +24,6 @@ requires that the symbol resolve to a Var defined in a namespace for which the
 ;;
 ;;=> nil
 ```
+
+## Signature
+[name]

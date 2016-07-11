@@ -5,9 +5,7 @@ see also:
   - syntax/destructure-vector
 ---
 
-## Usage
-{:keys [] :strs [] :syms [] :or {} :as name}
-
+## Summary
 
 ## Details
 
@@ -75,7 +73,6 @@ following forms:
 Destructure maps can be nested, even in place of names in [destructure
 vectors][doc:syntax/destructure-vector].
 
-
 ## Examples
 
 Use in place of function arguments:
@@ -96,3 +93,6 @@ A non-vector sequence can be destructured as a map:
   (println a b))
 ;; 1 2
 ```
+
+## Usage
+{:keys [] :strs [] :syms [] :or {} :as name}

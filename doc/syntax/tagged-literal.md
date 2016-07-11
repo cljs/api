@@ -5,9 +5,7 @@ see also:
   - syntax/dispatch
 ---
 
-## Usage
-#foo ...
-
+## Summary
 
 ## Details
 
@@ -42,7 +40,6 @@ ClojureScript supports the following tagged literals:
 - [doc:syntax/uuid-literal]
 - [doc:syntax/js-literal]
 - [doc:syntax/queue-literal]
-
 
 ## Examples
 
@@ -82,3 +79,6 @@ literal UUID:
 #uuid "97bda55b-6175-4c39-9e04-7c0205c709dc"
 ;;=> #uuid "97bda55b-6175-4c39-9e04-7c0205c709dc"
 ```
+
+## Usage
+#foo ...

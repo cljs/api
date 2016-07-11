@@ -5,11 +5,7 @@ see also:
   - cljs.core/identical?
 ---
 
-## Signature
-[x]
-[x y]
-[x y & more]
-
+## Summary
 
 ## Details
 
@@ -21,7 +17,6 @@ reason to use the `==` operator in ClojureScript.
 
 Behavior on non-number arguments is undefined.
 
-
 ## Examples
 
 ```clj
@@ -31,3 +26,8 @@ Behavior on non-number arguments is undefined.
 (== 1 2)
 ;;=> false
 ```
+
+## Signature
+[x]
+[x y]
+[x y & more]

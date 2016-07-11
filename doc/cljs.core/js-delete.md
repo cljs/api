@@ -4,16 +4,13 @@ see also:
   - cljs.core/dissoc
 ---
 
-## Signature
-[obj key]
-
+## Summary
 
 ## Details
 
 Deletes property `key` in JavaScript object `obj`.
 
 Equivalent to `delete obj[key]` in JavaScript.
-
 
 ## Examples
 
@@ -24,3 +21,6 @@ Equivalent to `delete obj[key]` in JavaScript.
 a
 ;;=> #js {:bar 2}
 ```
+
+## Signature
+[obj key]

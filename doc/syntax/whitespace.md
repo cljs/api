@@ -5,6 +5,8 @@ see also:
   - syntax/comma
 ---
 
+## Summary
+
 ## Details
 
 The amount of whitespace between syntax forms does not affect syntax
@@ -30,3 +32,5 @@ A [comma][doc:syntax/comma] is considered whitespace:
 [1, 2, 3]
 {:foo 1, :bar 2}
 ```
+
+## Examples

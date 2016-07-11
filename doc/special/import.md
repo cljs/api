@@ -1,10 +1,9 @@
 ---
 name: special/import
+see also:
 ---
 
-## Signature
-[& import-symbols-or-lists]
-
+## Summary
 
 ## Details
 
@@ -13,7 +12,6 @@ import-list => (closure-namespace constructor-name-symbols*)
 Only usable from a REPL.
 
 Import Google Closure classes.
-
 
 ## Examples
 
@@ -34,3 +32,6 @@ Import Google Closure classes.
 (Integer.fromString "10")
 ;;=> #<10>
 ```
+
+## Signature
+[& import-symbols-or-lists]

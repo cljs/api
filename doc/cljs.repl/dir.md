@@ -5,14 +5,11 @@ see also:
   - cljs.repl/apropos
 ---
 
-## Signature
-[ns]
-
+## Summary
 
 ## Details
 
 Prints a sorted directory of public vars in a namespace `ns`.
-
 
 ## Examples
 
@@ -36,3 +33,6 @@ Prints a sorted directory of public vars in a namespace `ns`.
 ;;
 ;;=> nil
 ```
+
+## Signature
+[ns]

@@ -6,10 +6,7 @@ see also:
   - cljs.core/symbol?
 ---
 
-## Usage
-foo
-foo/bar
-
+## Summary
 
 ## Details
 
@@ -36,7 +33,6 @@ Dots can also be included in symbols for direct JS property access, see [doc:syn
 
 - `js/console.log` => the `console.log` JavaScript function
 
-
 ## Examples
 
 The following has two symbols, `def` and `a`:
@@ -62,3 +58,7 @@ To signify an unevaluated symbol, precede it with a quote:
 'a
 ;;=> a
 ```
+
+## Usage
+foo
+foo/bar

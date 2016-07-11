@@ -5,10 +5,13 @@ see also:
   - cljs.core/vec
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns true if `x` is a vector, false otherwise.
+
+## Examples
+
+## Signature
+[x]

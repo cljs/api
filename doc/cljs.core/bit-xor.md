@@ -5,15 +5,11 @@ see also:
   - cljs.core/bit-or
 ---
 
-## Signature
-[x y]
-[x y & more]
-
+## Summary
 
 ## Details
 
 Bitwise "exclusive or". Same as `x ^ y` in JavaScript.
-
 
 ## Examples
 
@@ -31,3 +27,7 @@ Same numbers in decimal:
 (bit-xor 12 10)
 ;;=> 6
 ```
+
+## Signature
+[x y]
+[x y & more]

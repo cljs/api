@@ -4,9 +4,7 @@ see also:
   - cljs.core/loop
 ---
 
-## Signature
-[test & body]
-
+## Summary
 
 ## Details
 
@@ -14,3 +12,8 @@ Repeatedly executes `body` while `test` expression is true. Presumes some
 side-effect will cause `test` to become false or nil.
 
 Returns nil.
+
+## Examples
+
+## Signature
+[test & body]

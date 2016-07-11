@@ -6,9 +6,7 @@ see also:
   - cljs.core/swap!
 ---
 
-## Signature
-[a oldval newval]
-
+## Summary
 
 ## Details
 
@@ -16,7 +14,6 @@ Atomically sets the value of atom `a` to `newval` if and only if the current
 value of the atom is identical to `oldval`.
 
 Returns true if set happened, false otherwise.
-
 
 ## Examples
 
@@ -35,3 +32,6 @@ Returns true if set happened, false otherwise.
 @a
 ;;=> "def"
 ```
+
+## Signature
+[a oldval newval]

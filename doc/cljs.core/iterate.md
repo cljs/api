@@ -6,12 +6,15 @@ see also:
   - cljs.core/repeat
 ---
 
-## Signature
-[f x]
-
+## Summary
 
 ## Details
 
 Returns a lazy sequence of `x`, `(f x)`, `(f (f x))` etc.
 
 `f` must be free of side-effects.
+
+## Examples
+
+## Signature
+[f x]

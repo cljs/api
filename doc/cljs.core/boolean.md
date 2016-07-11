@@ -4,15 +4,12 @@ see also:
   - special/if
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Return `false` if `x` is false or nil.  Otherwise return `true`.  This is the
 truthiness condition used by `if` expressions.
-
 
 ## Examples
 
@@ -26,3 +23,6 @@ truthiness condition used by `if` expressions.
 (boolean nil)
 ;;=> false
 ```
+
+## Signature
+[x]

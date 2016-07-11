@@ -6,9 +6,7 @@ see also:
   - cljs.core/conj
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
@@ -17,7 +15,6 @@ Returns the first element of a list; same as `first`.
 Returns the last element of a vector, and much more efficient than using `last`.
 
 Returns nil if `coll` is empty.
-
 
 ## Examples
 
@@ -52,3 +49,6 @@ With lists:
 (peek '())
 ;;=> nil
 ```
+
+## Signature
+[coll]

@@ -5,10 +5,7 @@ see also:
   - cljs.core/compare
 ---
 
-## Signature
-[keyfn coll]
-[keyfn comp coll]
-
+## Summary
 
 ## Details
 
@@ -18,3 +15,9 @@ determined by comparing `(keyfn item)`.
 `comp` can be boolean-valued comparison function, or a -/0/+ valued comparator.
 
 `comp` defaults to `compare`.
+
+## Examples
+
+## Signature
+[keyfn coll]
+[keyfn comp coll]

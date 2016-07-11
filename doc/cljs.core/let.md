@@ -5,9 +5,7 @@ see also:
   - cljs.core/if-let
 ---
 
-## Signature
-[bindings & body]
-
+## Summary
 
 ## Details
 
@@ -32,3 +30,8 @@ syntax and scope rules.
 
 [mini-language]:http://blog.jayfields.com/2010/07/clojure-destructuring.html
 [special forms]:http://clojure.org/special_forms
+
+## Examples
+
+## Signature
+[bindings & body]

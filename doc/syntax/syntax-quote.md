@@ -8,6 +8,8 @@ see also:
   - syntax/unquote-splicing
 ---
 
+## Summary
+
 ## Details
 
 (Only intended for use in Clojure macros, which can be used from but not
@@ -20,7 +22,6 @@ resolving them in the current context.
 
 Any non-namespaced symbols ending with `#` are replaced with unique symbols.
 See [doc:syntax/auto-gensym].
-
 
 ## Examples
 

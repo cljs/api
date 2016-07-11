@@ -5,6 +5,8 @@ see also:
   - cljs.core/defmacro
 ---
 
+## Summary
+
 ## Details
 
 (only intended as a REPL utility)
@@ -13,7 +15,6 @@ If the given quoted form is a macro call, expand it once. NOTE: subforms are
 _not_ expanded.
 
 See [doc:cljs.core/macroexpand] if you wish to repeatedly expand a form.
-
 
 ## Examples
 

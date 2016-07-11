@@ -5,14 +5,17 @@ see also:
   - cljs.core/not
 ---
 
-## Signature
-[x]
-[x y]
-[x y & more]
-
+## Summary
 
 ## Details
 
 Returns the opposite of `=`.
 
 Same as `(not (= x y))`
+
+## Examples
+
+## Signature
+[x]
+[x y]
+[x y & more]

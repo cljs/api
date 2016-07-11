@@ -6,11 +6,7 @@ see also:
   - cljs.core/identical?
 ---
 
-## Signature
-[x]
-[x y]
-[x y & more]
-
+## Summary
 
 ## Details
 
@@ -19,7 +15,6 @@ Returns true if the value of `x` equals the value of `y`, false otherwise.
 `=` is a value comparison, not an identity comparison.
 
 All collections can be tested for value, regardless of "depth".
-
 
 ## Examples
 
@@ -85,3 +80,8 @@ ClojureScript collections:
    (js->clj b))
 ;;=> true
 ```
+
+## Signature
+[x]
+[x y]
+[x y & more]

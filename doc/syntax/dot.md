@@ -6,6 +6,8 @@ see also:
   - syntax/namespace
 ---
 
+## Summary
+
 ## Details
 
 Dots can be used inside symbols. Its meaning depends on its position in the symbol:
@@ -14,7 +16,6 @@ Dots can be used inside symbols. Its meaning depends on its position in the symb
 - `foo.` is constructor sugar, meaning [`(new foo)`][doc:special/new].
 - `(ns foo.bar)` and `foo.bar/baz` means that `foo.bar` is a nested namespace.
 - `foo/bar.baz` or `bar.baz` means `bar.baz` is nested JS property access (__not allowed in clojure__).
-
 
 ## Examples
 

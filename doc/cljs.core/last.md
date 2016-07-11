@@ -8,16 +8,13 @@ see also:
   - cljs.core/take-last
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
 Returns the last item in `coll` in linear time.
 
 `peek` is much faster than `last` for a vector.
-
 
 ## Examples
 
@@ -34,3 +31,6 @@ Returns the last item in `coll` in linear time.
 (last [])
 ;;=> nil
 ```
+
+## Signature
+[coll]

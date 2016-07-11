@@ -5,9 +5,7 @@ see also:
   - syntax/cond-splicing
 ---
 
-## Usage
-#?(...)
-
+## Summary
 
 ## Details
 
@@ -42,7 +40,6 @@ depending on the ClojureScript compiler version:
 Thus, reader conditionals allow us to account for differences in both versions
 of the compiler.  See [doc:cljs.core/defmacro] for details.
 
-
 ## Examples
 
 ```clj
@@ -62,3 +59,6 @@ A function that works in Clojure and ClojureScript ([source]):
 (str->int "123")
 ;;=> 123
 ```
+
+## Usage
+#?(...)

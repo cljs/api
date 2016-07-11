@@ -4,16 +4,13 @@ see also:
   - cljs.core/contains?
 ---
 
-## Signature
-[key obj]
-
+## Summary
 
 ## Details
 
 Determines if property `key` is in JavaScript object `obj`.
 
 Equivalent to `key in obj` in JavaScript.
-
 
 ## Examples
 
@@ -33,3 +30,6 @@ Properties inherited from prototype chain are also detected:
 (js-in "toString" a)
 ;;=> true
 ```
+
+## Signature
+[key obj]

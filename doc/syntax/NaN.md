@@ -6,6 +6,8 @@ see also:
   - syntax/nil
 ---
 
+## Summary
+
 ## Details
 
 The IEEE 754 Floating Point representation of NaN (not a number), an undefined
@@ -15,7 +17,6 @@ To test for NaN, use the native JavaScript [`js/isNaN`] or the safer [`js/Number
 
 [`js/isNaN`]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN
 [`js/Number.isNaN`]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN
-
 
 ## Examples
 

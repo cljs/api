@@ -5,9 +5,7 @@ see also:
   - cljs.core/str
 ---
 
-## Usage
-"..."
-
+## Summary
 
 ## Details
 
@@ -24,7 +22,6 @@ escape characters:
 |---------------------|-----------------------------------------------|
 | `\uXXXX`            | XXXX must have 4 digits outside 0xD7FF-0xE000 |
 | `\oXXX`             | XXX is octal between 0 and 0377               |
-
 
 ## Examples
 
@@ -45,3 +42,6 @@ Characters can be escaped:
 ;;   foo
 ;;   bar
 ```
+
+## Usage
+"..."

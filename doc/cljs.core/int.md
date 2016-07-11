@@ -5,10 +5,13 @@ see also:
   - cljs.core/integer?
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Coerces `x` to an integer by stripping decimal places.
+
+## Examples
+
+## Signature
+[x]

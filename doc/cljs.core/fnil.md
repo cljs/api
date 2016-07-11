@@ -1,12 +1,9 @@
 ---
 name: cljs.core/fnil
+see also:
 ---
 
-## Signature
-[f x]
-[f x y]
-[f x y z]
-
+## Summary
 
 ## Details
 
@@ -16,3 +13,10 @@ replace arguments in the second and third positions (`y`, `z`).
 
 Note that the function `f` can take any number of arguments, not just the one(s)
 being nil-patched.
+
+## Examples
+
+## Signature
+[f x]
+[f x y]
+[f x y z]

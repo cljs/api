@@ -4,10 +4,13 @@ see also:
   - cljs.core/dec
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns a number one greater than `x`.
+
+## Examples
+
+## Signature
+[x]

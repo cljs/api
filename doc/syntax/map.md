@@ -8,14 +8,11 @@ see also:
   - cljs.core/sorted-map-by
 ---
 
-## Usage
-{...}
-
+## Summary
 
 ## Details
 
 Creates a map.  Must contain pairs of key-values.  Keys and values can be any type.
-
 
 ## Examples
 
@@ -31,3 +28,6 @@ Use any value as a key:
 (get m [1 2])
 ;;=> 3
 ```
+
+## Usage
+{...}

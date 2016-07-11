@@ -7,10 +7,7 @@ see also:
   - cljs.core/keyword?
 ---
 
-## Usage
-:foo
-:foo/bar
-
+## Summary
 
 ## Details
 
@@ -20,11 +17,6 @@ as enums or keys for maps.  Keywords should not start with a number.
 Keywords can have an optional namespace. For example, `:foo/bar`. This is useful
 for functions in a namespace to prevent key collisions on a globally accessible
 map.
-
-
-## TODO
-when keywords allow number prefixes, make note of the first version when it is allowed
-
 
 ## Examples
 
@@ -49,3 +41,7 @@ A keyword is also callable for retrieving values from a map:
 (map :foo things)
 ;;=> (1 3 5)
 ```
+
+## Usage
+:foo
+:foo/bar

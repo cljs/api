@@ -5,10 +5,7 @@ see also:
   - cljs.core/doseq
 ---
 
-## Signature
-[coll]
-[n coll]
-
+## Summary
 
 ## Details
 
@@ -18,7 +15,8 @@ sequence produced via functions that have side effects.
 `doall` walks through the successive `next`s of the sequence, returning the head
 and causing the entire sequence to reside in memory at one time.
 
+## Examples
 
-## TODO
-
-What does `n` do here? This description needs work and probably an example.
+## Signature
+[coll]
+[n coll]

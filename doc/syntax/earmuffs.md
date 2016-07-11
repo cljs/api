@@ -5,9 +5,7 @@ see also:
   - cljs.core/binding
 ---
 
-## Usage
-*foo*
-
+## Summary
 
 ## Details
 
@@ -21,18 +19,6 @@ Dynamic vars are global vars that you intend to temporarily rebind with
 NOTE: Sometimes, the core library uses the earmuffs convention for non-dynamic
 special global vars (e.g. [doc:cljs.core/*clojurescript-version*],
 [doc:cljs.core/*main-cli-fn*]).
-
-
-## TODO
-The following emits a warning in Clojure.  We should provide the same in ClojureScript:
-
-```clj
-(def *foo* 1)
-;; Warning: *foo* not declared dynamic and thus is not dynamically rebindable,
-;;     but its name suggests otherwise. Please either indicate ^:dynamic *foo* or
-;;     change the name.
-```
-
 
 ## Examples
 
@@ -52,3 +38,6 @@ The following emits a warning in Clojure.  We should provide the same in Clojure
 (print-foo)
 ;; 1
 ```
+
+## Usage
+*foo*

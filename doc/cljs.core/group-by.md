@@ -5,9 +5,7 @@ see also:
   - cljs.core/frequencies
 ---
 
-## Signature
-[f coll]
-
+## Summary
 
 ## Details
 
@@ -16,3 +14,8 @@ each element.
 
 The value at each key will be a vector of the corresponding elements in the
 order they appeared in `coll`.
+
+## Examples
+
+## Signature
+[f coll]

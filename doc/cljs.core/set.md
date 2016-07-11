@@ -18,10 +18,13 @@ see also:
   - clojure.set/map-invert
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
 Returns a set of the distinct elements of `coll`.
+
+## Examples
+
+## Signature
+[coll]

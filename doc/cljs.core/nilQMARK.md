@@ -6,10 +6,13 @@ see also:
   - cljs.core/identity
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns true if `x` is nil, false otherwise.
+
+## Examples
+
+## Signature
+[x]

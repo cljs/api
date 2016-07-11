@@ -5,15 +5,12 @@ see also:
   - cljs.core/make-array
 ---
 
-## Signature
-[arr]
-
+## Summary
 
 ## Details
 
 Creates a clone of the given JavaScript array `arr`.  The result is a new
 JavaScript array, which is a shallow copy, not a deep copy.
-
 
 ## Examples
 
@@ -28,3 +25,6 @@ a
 b
 ;;=> #js [4 2 3]
 ```
+
+## Signature
+[arr]

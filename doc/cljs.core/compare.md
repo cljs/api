@@ -6,9 +6,7 @@ see also:
   - cljs.core/sorted-map-by
 ---
 
-## Signature
-[x y]
-
+## Summary
 
 ## Details
 
@@ -20,7 +18,6 @@ Returns a negative number, zero, or a positive number when `x` is logically
 Uses `IComparable` if available and `google.array.defaultCompare` for objects of
 the same type. nil is treated as a special case and is always less than any
 other object.
-
 
 ## Examples
 
@@ -40,3 +37,6 @@ other object.
 (compare 10 (list 1 2 3))
 ;; Error: compare on non-nil objects of different types
 ```
+
+## Signature
+[x y]

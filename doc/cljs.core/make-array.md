@@ -5,10 +5,13 @@ see also:
   - cljs.core/array
 ---
 
-## Signature
-[size]
-
+## Summary
 
 ## Details
 
 Creates an empty JavaScript array of size `size`.
+
+## Examples
+
+## Signature
+[size]

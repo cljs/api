@@ -5,12 +5,7 @@ see also:
   - cljs.core/comp
 ---
 
-## Signature
-[f]
-[f g]
-[f g h]
-[f g h & fs]
-
+## Summary
 
 ## Details
 
@@ -22,3 +17,11 @@ containing the result of applying each function to the arguments (left-to-
 right).
 
 `((juxt a b c) x)` => `[(a x) (b x) (c x)]`
+
+## Examples
+
+## Signature
+[f]
+[f g]
+[f g h]
+[f g h & fs]

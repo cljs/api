@@ -6,14 +6,11 @@ see also:
   - special/var
 ---
 
-## Signature
-[name]
-
+## Summary
 
 ## Details
 
 Prints documentation for the var or special form with the name `name`.
-
 
 ## Examples
 
@@ -32,3 +29,6 @@ Prints documentation for the var or special form with the name `name`.
 ;;
 ;;=> nil
 ```
+
+## Signature
+[name]

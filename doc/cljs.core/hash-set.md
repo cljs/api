@@ -5,13 +5,16 @@ see also:
   - cljs.core/sorted-set
 ---
 
-## Signature
-[]
-[& keys]
-
+## Summary
 
 ## Details
 
 Returns a new hash set with supplied `keys`.
 
 Any equal keys are handled as if by repeated uses of `conj`.
+
+## Examples
+
+## Signature
+[]
+[& keys]

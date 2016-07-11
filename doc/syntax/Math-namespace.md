@@ -5,9 +5,7 @@ see also:
   - syntax/js-namespace
 ---
 
-## Usage
-Math/foo
-
+## Summary
 
 ## Details
 
@@ -16,7 +14,6 @@ A special namespace for direct access to the native JavaScript [Math library].
 `Math/foo` => `js/Math.foo`
 
 [Math library]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
-
 
 ## Examples
 
@@ -51,3 +48,6 @@ Math functions:
 (Math/pow Math/E (Math/log 1))
 ;;=> 1
 ```
+
+## Usage
+Math/foo

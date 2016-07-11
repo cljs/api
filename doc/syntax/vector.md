@@ -6,9 +6,7 @@ see also:
   - cljs.core/vec
 ---
 
-## Usage
-[...]
-
+## Summary
 
 ## Details
 
@@ -30,10 +28,12 @@ This helps differentiate binding forms from the parentheses of [callable forms][
 
 See [doc:cljs.core/PersistentVector] for data structure details.
 
-
 ## Examples
 
 ```clj
 [1 2 3]
 ;;=> [1 2 3]
 ```
+
+## Usage
+[...]

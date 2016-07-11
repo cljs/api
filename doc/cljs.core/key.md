@@ -4,10 +4,13 @@ see also:
   - cljs.core/keys
 ---
 
-## Signature
-[map-entry]
-
+## Summary
 
 ## Details
 
 Returns the key of the map entry.
+
+## Examples
+
+## Signature
+[map-entry]

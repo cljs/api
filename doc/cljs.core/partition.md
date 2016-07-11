@@ -6,11 +6,7 @@ see also:
   - cljs.core/partition-by
 ---
 
-## Signature
-[n coll]
-[n step coll]
-[n step pad coll]
-
+## Summary
 
 ## Details
 
@@ -24,7 +20,9 @@ complete the last partition up to `n` items.
 Returns a partition with less than `n` items if there are not enough padding
 elements.
 
+## Examples
 
-## TODO
-
-This function really needs an example.
+## Signature
+[n coll]
+[n step coll]
+[n step pad coll]

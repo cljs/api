@@ -4,10 +4,13 @@ see also:
   - clojure.string/split
 ---
 
-## Signature
-[s]
-
+## Summary
 
 ## Details
 
 Splits `s` on `\n` or `\r\n`.
+
+## Examples
+
+## Signature
+[s]

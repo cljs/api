@@ -4,10 +4,13 @@ see also:
   - cljs.core/set
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns true if `x` is a set, false otherwise.
+
+## Examples
+
+## Signature
+[x]

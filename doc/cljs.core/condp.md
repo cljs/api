@@ -5,9 +5,7 @@ see also:
   - special/if
 ---
 
-## Signature
-[pred expr & clauses]
-
+## Summary
 
 ## Details
 
@@ -31,3 +29,8 @@ A single default expression can follow the clauses, and its value will be
 returned if no clause matches.
 
 If no default expression is provided and no clause matches, an Error is thrown.
+
+## Examples
+
+## Signature
+[pred expr & clauses]

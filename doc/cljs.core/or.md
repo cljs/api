@@ -5,11 +5,7 @@ see also:
   - special/if
 ---
 
-## Signature
-[]
-[x]
-[x & next]
-
+## Summary
 
 ## Details
 
@@ -18,7 +14,6 @@ logical true, `or` returns that value and doesn't evaluate any of the other
 arguments, otherwise it returns the value of the last argument.
 
 `(or)` returns nil.
-
 
 ## Examples
 
@@ -60,3 +55,8 @@ arguments, otherwise it returns the value of the last argument.
 (or false "foo")
 ;;=> "foo"
 ```
+
+## Signature
+[]
+[x]
+[x & next]

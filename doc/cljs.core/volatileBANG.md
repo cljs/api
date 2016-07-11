@@ -7,3 +7,8 @@ see also:
   - cljs.core/Volatile
 ---
 
+## Summary
+
+## Details
+
+## Examples

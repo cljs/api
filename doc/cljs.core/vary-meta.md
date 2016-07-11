@@ -5,15 +5,12 @@ see also:
   - cljs.core/with-meta
 ---
 
-## Signature
-[obj f & args]
-
+## Summary
 
 ## Details
 
 Returns an object of the same type and value as `obj`, with
 `(apply f (meta obj) args)` as its metadata.
-
 
 ## Examples
 
@@ -30,3 +27,6 @@ Returns an object of the same type and value as `obj`, with
 (meta b)
 ;;=> {:foo true, :bar true}
 ```
+
+## Signature
+[obj f & args]

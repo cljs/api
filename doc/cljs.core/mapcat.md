@@ -5,10 +5,7 @@ see also:
   - cljs.core/concat
 ---
 
-## Signature
-[f]
-[f & colls]
-
+## Summary
 
 ## Details
 
@@ -18,3 +15,9 @@ and `colls`.
 Function `f` should return a collection.
 
 Returns a transducer when no collections are provided.
+
+## Examples
+
+## Signature
+[f]
+[f & colls]

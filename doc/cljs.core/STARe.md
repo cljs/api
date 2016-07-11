@@ -6,12 +6,13 @@ see also:
   - cljs.core/*3
 ---
 
+## Summary
+
 ## Details
 
 Only usable from a REPL.
 
 Holds the result of the last exception.
-
 
 ## Examples
 

@@ -5,9 +5,7 @@ see also:
   - cljs.core/get-validator
 ---
 
-## Signature
-[a fn]
-
+## Summary
 
 ## Details
 
@@ -21,3 +19,8 @@ If the current value of `a` is unacceptable to `fn` when `set-validator!` is
 called, an Error will be thrown and the validator will not be set.
 
 `(set-validator! my-atom nil)` will remove the validator from `my-atom`.
+
+## Examples
+
+## Signature
+[a fn]

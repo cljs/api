@@ -1,10 +1,11 @@
 ---
 name: cljs.js
+see also:
 ---
 
 ## Summary
-compile/analyze ClojureScript code at runtime.
 
+compile/analyze ClojureScript code at runtime.
 
 ## Details
 

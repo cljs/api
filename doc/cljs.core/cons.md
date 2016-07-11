@@ -4,14 +4,11 @@ see also:
   - cljs.core/conj
 ---
 
-## Signature
-[x coll]
-
+## Summary
 
 ## Details
 
 Returns a new sequence where `x` is the first element and `coll` is the rest.
-
 
 ## Examples
 
@@ -28,3 +25,6 @@ Returns a new sequence where `x` is the first element and `coll` is the rest.
 (cons nil nil)
 ;;=> (nil)
 ```
+
+## Signature
+[x coll]

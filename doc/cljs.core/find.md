@@ -5,10 +5,13 @@ see also:
   - cljs.core/get-in
 ---
 
-## Signature
-[coll k]
-
+## Summary
 
 ## Details
 
 Returns the map entry for key `k`, or nil if `k` is not found.
+
+## Examples
+
+## Signature
+[coll k]

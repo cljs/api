@@ -6,9 +6,7 @@ see also:
   - cljs.core/random-uuid
 ---
 
-## Usage
-#uuid "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-
+## Summary
 
 ## Details
 
@@ -24,7 +22,6 @@ Representing UUIDs with `#uuid` rather than just a plain string has the followin
 To create a UUID from an evaluated expression, use [doc:cljs.core/uuid].
 
 [edn]:https://github.com/edn-format/edn
-
 
 ## Examples
 
@@ -46,3 +43,6 @@ Get as a string:
 (str foo)
 ;;=> "97bda55b-6175-4c39-9e04-7c0205c709dc"
 ```
+
+## Usage
+#uuid "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"

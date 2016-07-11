@@ -5,10 +5,13 @@ see also:
   - cljs.core/sorted-map
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns true if `x` is a map, false otherwise.
+
+## Examples
+
+## Signature
+[x]

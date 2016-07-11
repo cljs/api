@@ -5,12 +5,7 @@ see also:
   - cljs.core/reset!
 ---
 
-## Signature
-[a f]
-[a f x]
-[a f x y]
-[a f x y & more]
-
+## Summary
 
 ## Details
 
@@ -21,3 +16,11 @@ Note that `f` may be called multiple times, and thus should be free of side
 effects.
 
 Returns the value that was swapped in.
+
+## Examples
+
+## Signature
+[a f]
+[a f x]
+[a f x y]
+[a f x y & more]

@@ -5,16 +5,11 @@ see also:
   - cljs.core/min-key
 ---
 
-## Signature
-[x]
-[x y]
-[x y & more]
-
+## Summary
 
 ## Details
 
 Returns the least number argument.
-
 
 ## Examples
 
@@ -29,3 +24,8 @@ Apply it to a collection:
 (apply min [1 2 3 4])
 ;; => 1
 ```
+
+## Signature
+[x]
+[x y]
+[x y & more]

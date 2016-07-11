@@ -4,14 +4,11 @@ see also:
   - cljs.core/count
 ---
 
-## Signature
-[a]
-
+## Summary
 
 ## Details
 
 For interop, it returns the length of a JavaScript array or string.
-
 
 ## Examples
 
@@ -30,3 +27,6 @@ For interop, it returns the length of a JavaScript array or string.
 (count a)
 ;;=> 3
 ```
+
+## Signature
+[a]

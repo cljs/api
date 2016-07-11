@@ -7,10 +7,7 @@ see also:
   - cljs.core/get
 ---
 
-## Signature
-[m ks]
-[m ks not-found]
-
+## Summary
 
 ## Details
 
@@ -18,3 +15,9 @@ Returns the value in a nested associative structure, where `ks` is a sequence of
 keys.
 
 Returns nil if the key is not found, or `not-found` if supplied.
+
+## Examples
+
+## Signature
+[m ks]
+[m ks not-found]

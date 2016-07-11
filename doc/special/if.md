@@ -7,9 +7,7 @@ see also:
   - cljs.core/if-not
 ---
 
-## Signature
-[test then else?]
-
+## Summary
 
 ## Details
 
@@ -20,7 +18,6 @@ If `test` is not false or nil, `then` is evaluated and returned. Otherwise,
 and is a fundamental building block of the language. All other conditionals in
 ClojureScript are based on `if`s notion of truthiness (ie: anything other than
 false or nil).
-
 
 ## Examples
 
@@ -34,3 +31,6 @@ false or nil).
   (if (empty? v) "empty!" "filled!"))
 ;;=> "This vector is filled!"
 ```
+
+## Signature
+[test then else?]

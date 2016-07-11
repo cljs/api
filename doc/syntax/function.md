@@ -8,9 +8,7 @@ see also:
   - cljs.core/partial
 ---
 
-## Usage
-#(...)
-
+## Summary
 
 ## Details
 
@@ -30,7 +28,6 @@ reason that `(1)` does evaluate to `1`.
 `#()` forms cannot be nested, since this would create an ambiguity between the
 automatically assigned `%` argument names.
 
-
 ## Examples
 
 ```clj
@@ -41,3 +38,6 @@ automatically assigned `%` argument names.
 (f 1 2 3 4 5)
 ;; prints: 1 2 (3 4 5)
 ```
+
+## Usage
+#(...)

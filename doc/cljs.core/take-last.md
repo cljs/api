@@ -6,9 +6,7 @@ see also:
   - cljs.core/drop-last
 ---
 
-## Signature
-[n coll]
-
+## Summary
 
 ## Details
 
@@ -17,8 +15,7 @@ Returns a sequence of the last `n` items in `coll`.
 Depending on the type of collection, `take-last` may be no faster than linear
 time. For vectors, please use `subvec`.
 
+## Examples
 
-## TODO
-
-Would be nice to list the O(n) time for all the collection types here instead of
-just saying "it depends".
+## Signature
+[n coll]

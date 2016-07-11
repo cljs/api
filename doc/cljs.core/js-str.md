@@ -4,16 +4,13 @@ see also:
   - cljs.core/str
 ---
 
-## Signature
-[s]
-
+## Summary
 
 ## Details
 
 Convert `s` to string using JavaScript's coercion behavior.
 
 Equivalent to `''+s` in JavaScript.
-
 
 ## Examples
 
@@ -24,3 +21,6 @@ Equivalent to `''+s` in JavaScript.
 (js-str #js {:foo 1})
 ;;=> "[Object object]"
 ```
+
+## Signature
+[s]

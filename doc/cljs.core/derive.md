@@ -7,3 +7,8 @@ see also:
   - cljs.core/make-hierarchy
 ---
 
+## Summary
+
+## Details
+
+## Examples

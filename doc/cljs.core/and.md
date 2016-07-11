@@ -5,11 +5,7 @@ see also:
   - special/if
 ---
 
-## Signature
-[]
-[x]
-[x & next]
-
+## Summary
 
 ## Details
 
@@ -18,7 +14,6 @@ logical false (nil or false), `and` returns that value and doesn't evaluate any
 of the other arguments, otherwise it returns the value of the last argument.
 
 `(and)` returns true.
-
 
 ## Examples
 
@@ -60,3 +55,8 @@ of the other arguments, otherwise it returns the value of the last argument.
 (and false "foo")
 ;;=> false
 ```
+
+## Signature
+[]
+[x]
+[x & next]

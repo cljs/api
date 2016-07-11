@@ -6,6 +6,8 @@ see also:
   - cljs.core/uuid
 ---
 
+## Summary
+
 ## Details
 
 A type representing a universally unique identifier ([UUID]).
@@ -13,3 +15,5 @@ A type representing a universally unique identifier ([UUID]).
 Use [doc:cljs.core/uuid] or [doc:syntax/uuid-literal] to create one.
 
 [UUID]:https://en.wikipedia.org/wiki/Universally_unique_identifier
+
+## Examples

@@ -1,11 +1,15 @@
 ---
 name: cljs.core/shuffle
+see also:
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
 Returns a random permutation of `coll`.
+
+## Examples
+
+## Signature
+[coll]

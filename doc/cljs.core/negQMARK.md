@@ -5,10 +5,13 @@ see also:
   - cljs.core/zero?
 ---
 
-## Signature
-[n]
-
+## Summary
 
 ## Details
 
 Returns true if `n` is less than 0, false otherwise.
+
+## Examples
+
+## Signature
+[n]

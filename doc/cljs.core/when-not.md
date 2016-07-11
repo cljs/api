@@ -6,10 +6,13 @@ see also:
   - special/if
 ---
 
-## Signature
-[test & body]
-
+## Summary
 
 ## Details
 
 Evaluates `test`. If logical false, evaluates `body` in an implicit `do`.
+
+## Examples
+
+## Signature
+[test & body]

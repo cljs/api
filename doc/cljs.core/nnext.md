@@ -4,10 +4,13 @@ see also:
   - cljs.core/next
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
 Same as `(next (next coll))`.
+
+## Examples
+
+## Signature
+[coll]

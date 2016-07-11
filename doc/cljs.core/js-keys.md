@@ -4,14 +4,11 @@ see also:
   - cljs.core/keys
 ---
 
-## Signature
-[obj]
-
+## Summary
 
 ## Details
 
 Returns the keys for the JavaScript object `obj`.
-
 
 ## Examples
 
@@ -19,3 +16,6 @@ Returns the keys for the JavaScript object `obj`.
 (js-keys #js {:foo 1 :bar 2})
 ;;=> #js ["foo" "bar"]
 ```
+
+## Signature
+[obj]

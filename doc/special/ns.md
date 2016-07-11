@@ -8,9 +8,7 @@ see also:
   - special/require-macros
 ---
 
-## Signature
-[name & references]
-
+## Summary
 
 ## Details
 
@@ -61,6 +59,7 @@ and libraries into the current namespace.
             :reload-all]))
 ```
 
+## Examples
 
-## TODO
-we need to write a comprehensive namespace tutorial and link to it here
+## Signature
+[name & references]

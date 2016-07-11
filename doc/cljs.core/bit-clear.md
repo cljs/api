@@ -5,14 +5,11 @@ see also:
   - cljs.core/bit-flip
 ---
 
-## Signature
-[x n]
-
+## Summary
 
 ## Details
 
 Clear bit at index `n`.  Same as `x & ~(1 << y)` in JavaScript.
-
 
 ## Examples
 
@@ -30,3 +27,6 @@ Same numbers in decimal:
 (bit-clear 15 2)
 ;;=> 11
 ```
+
+## Signature
+[x n]

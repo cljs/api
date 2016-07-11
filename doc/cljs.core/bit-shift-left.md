@@ -4,14 +4,11 @@ see also:
   - cljs.core/bit-shift-right
 ---
 
-## Signature
-[x n]
-
+## Summary
 
 ## Details
 
 Bitwise shift left `n` bits.  Same as `x << n` in JavaScript.
-
 
 ## Examples
 
@@ -29,3 +26,6 @@ Same numbers in decimal:
 (bit-shift-left 5 1)
 ;;=> 10
 ```
+
+## Signature
+[x n]

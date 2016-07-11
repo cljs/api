@@ -5,9 +5,7 @@ see also:
   - cljs.core/->
 ---
 
-## Signature
-[x & forms]
-
+## Summary
 
 ## Details
 
@@ -32,11 +30,6 @@ in second form, etc.
   (x y z))</pre></td>
       <td><pre>
 (x y z (d (a b c x)))</pre></td></tr></tbody></table>
-
-
-## TODO
-add threading macro animations link here
-
 
 ## Examples
 
@@ -63,3 +56,6 @@ This expands to:
         (range)))))
 ;;=> 1140
 ```
+
+## Signature
+[x & forms]

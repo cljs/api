@@ -7,10 +7,7 @@ see also:
   - cljs.core/keyword?
 ---
 
-## Usage
-::foo
-::foo/bar
-
+## Summary
 
 ## Details
 
@@ -21,7 +18,6 @@ The namespace will resolve to either of the following:
 - given namespace if it exists
 - full namespace if the given one is an alias
 - reader error if given namespace doesn't exist
-
 
 ## Examples
 
@@ -54,3 +50,7 @@ Non-existing namespaces will throw a reader exception:
 ::foo/bar
 ;; clojure.lang.ExceptionInfo: Invalid token: ::foo/bar {:type :reader-exception, ...
 ```
+
+## Usage
+::foo
+::foo/bar

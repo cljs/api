@@ -8,11 +8,7 @@ see also:
   - cljs.core/defmulti
 ---
 
-## Signature
-[symbol]
-[symbol init]
-[symbol doc-string init]
-
+## Summary
 
 ## Details
 
@@ -49,7 +45,6 @@ Compiler will also add metadata:
 - `:source`
 - `:arglists`
 
-
 ## Examples
 
 ```clj
@@ -66,7 +61,7 @@ c
 ;;=> 42
 ```
 
-
-## TODO
-
-Need to include something about metadata here?
+## Signature
+[symbol]
+[symbol init]
+[symbol doc-string init]

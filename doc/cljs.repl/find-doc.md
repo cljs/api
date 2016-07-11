@@ -4,15 +4,12 @@ see also:
   - cljs.repl/doc
 ---
 
-## Signature
-[re-string-or-pattern]
-
+## Summary
 
 ## Details
 
 Prints documentation for any var whose documentation or name
 contains a match for `re-string-or-pattern`.
-
 
 ## Examples
 
@@ -34,3 +31,6 @@ contains a match for `re-string-or-pattern`.
 ;;
 ;;=> nil
 ```
+
+## Signature
+[re-string-or-pattern]

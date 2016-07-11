@@ -5,10 +5,7 @@ see also:
   - cljs.core/defn-
 ---
 
-## Signature
-[name? [params*] prepost-map? body]
-[name? ([params*] prepost-map? body)+]
-
+## Summary
 
 ## Details
 
@@ -32,8 +29,8 @@ arguments to the function are mapped to symbols in `params*` and are available
 in `body`. The value of the last expression in `body` is the return value of
 calling the function.
 
+## Examples
 
-## TODO
-
-need to provide a link to some function definition examples; we probably need
-a whole page dedicated to fn expressions
+## Signature
+[name? [params*] prepost-map? body]
+[name? ([params*] prepost-map? body)+]

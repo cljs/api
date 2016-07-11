@@ -1,10 +1,11 @@
 ---
 name: cljs.pprint
+see also:
 ---
 
 ## Summary
-a pretty-printer for printing data structures
 
+a pretty-printer for printing data structures
 
 ## Details
 

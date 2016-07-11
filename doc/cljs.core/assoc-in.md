@@ -6,9 +6,7 @@ see also:
   - cljs.core/get-in
 ---
 
-## Signature
-[m [k & ks] v]
-
+## Summary
 
 ## Details
 
@@ -16,7 +14,6 @@ Associates a value in a nested associative structure, where `ks` is a sequence
 of keys and `v` is the new value. Returns a new nested structure.
 
 If any levels do not exist, hash-maps will be created.
-
 
 ## Examples
 
@@ -40,3 +37,6 @@ Insert the password of the second (index 1) user:
 ;;=> [{:name "James", :age 26}
 ;;    {:password "nhoJ", :name "John", :age 43}]
 ```
+
+## Signature
+[m [k & ks] v]

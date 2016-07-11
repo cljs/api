@@ -1,12 +1,9 @@
 ---
 name: cljs.core/str
+see also:
 ---
 
-## Signature
-[]
-[x]
-[x & ys]
-
+## Summary
 
 ## Details
 
@@ -16,3 +13,10 @@ name: cljs.core/str
 
 With more than one argument, returns the concatenation of the `str` values of
 the arguments.
+
+## Examples
+
+## Signature
+[]
+[x]
+[x & ys]

@@ -5,16 +5,13 @@ see also:
   - cljs.core/vary-meta
 ---
 
-## Signature
-[data f & args]
-
+## Summary
 
 ## Details
 
 Alter the metadata of `data` to be `(apply f its-current-meta args)`.
 
 Metadata of vars cannot be altered since they are statically determined at compile-time.
-
 
 ## Examples
 
@@ -41,3 +38,6 @@ Metadata of vars cannot be altered:
 (:bar (meta #'a))
 ;;=> nil
 ```
+
+## Signature
+[data f & args]

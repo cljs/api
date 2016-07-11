@@ -1,11 +1,10 @@
 ---
 name: syntax/unreadable
 display: "#<> unreadable"
+see also:
 ---
 
-## Usage
-#<...>
-
+## Summary
 
 ## Details
 
@@ -21,7 +20,6 @@ its value.
 
 Oftentimes, evaluating JavaScript objects in a REPL will print the result
 of its `.toString` method inside the unreadable form `#<>`.
-
 
 ## Examples
 
@@ -56,3 +54,6 @@ Math/sin
 js/console
 ;;=> #<[object Object]>
 ```
+
+## Usage
+#<...>

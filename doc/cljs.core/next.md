@@ -6,16 +6,13 @@ see also:
   - cljs.core/fnext
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
 Returns a sequence of the items after the first and calls `seq` on its argument.
 
 Returns nil if `coll` is empty.
-
 
 ## Examples
 
@@ -32,3 +29,6 @@ Returns nil if `coll` is empty.
 (next [])
 ;;=> nil
 ```
+
+## Signature
+[coll]

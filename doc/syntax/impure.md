@@ -5,9 +5,7 @@ see also:
   - syntax/predicate
 ---
 
-## Usage
-foo!
-
+## Summary
 
 ## Details
 
@@ -22,7 +20,6 @@ Some impure functions which use this convention:
 - [doc:cljs.core/conj!]
 - [doc:cljs.core/specify!]
 
-
 ## Examples
 
 The following causes a side-effect in the state of `a`:
@@ -36,3 +33,6 @@ The following causes a side-effect in the state of `a`:
 @a
 ;;=> 2
 ```
+
+## Usage
+foo!

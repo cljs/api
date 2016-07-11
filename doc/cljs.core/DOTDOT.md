@@ -6,17 +6,13 @@ see also:
   - cljs.core/doto
 ---
 
-## Signature
-[o form]
-[o form & more]
-
+## Summary
 
 ## Details
 
 For interop, the `..` macro allows method/property chaining on the given JavaScript object `o`.
 
 It essentially combines the thread-first `->` macro with the `.` operator.
-
 
 ## Examples
 
@@ -56,3 +52,7 @@ Compare to the equivalent form using the thread-first `->` macro:
     (.replace "A" "X"))
 ;;=> "X B C D"
 ```
+
+## Signature
+[o form]
+[o form & more]

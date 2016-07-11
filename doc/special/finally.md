@@ -6,9 +6,7 @@ see also:
   - special/throw
 ---
 
-## Signature
-[expr*]
-
+## Summary
 
 ## Details
 
@@ -16,3 +14,8 @@ see also:
 
 `finally` clauses are always evaluated for their side effects whether there was
 an error or not, but they are never the return value of a `try` expression.
+
+## Examples
+
+## Signature
+[expr*]

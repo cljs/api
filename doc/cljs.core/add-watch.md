@@ -4,9 +4,7 @@ see also:
   - cljs.core/remove-watch
 ---
 
-## Signature
-[a key f]
-
+## Summary
 
 ## Details
 
@@ -18,7 +16,6 @@ new state.
 
 `key` should be a keyword and can be used with `remove-watch` to remove the
 watch function.
-
 
 ## Examples
 
@@ -35,3 +32,6 @@ watch function.
 ;; old: {}
 ;; new: {:foo "bar"}
 ```
+
+## Signature
+[a key f]

@@ -8,9 +8,7 @@ see also:
   - cljs.core/re-matches
 ---
 
-## Usage
-#"..."
-
+## Summary
 
 ## Details
 
@@ -27,14 +25,6 @@ An inline modifier can be included at the beginning of the regex:
 |  multi-line        | `#"(?m)f.*o"` | `/f.*o/m`  |
 
 Global matches (i.e. multiple matches per line) can be achieved using `re-seq`.
-
-
-## TODO
-add multi-line example. Why do these have the same output of nil?:
-
-(re-seq #"(?m)a.*b" "a\nb")
-(re-seq #"a.*b" "a\nb")
-
 
 ## Examples
 
@@ -55,3 +45,6 @@ Case-insensitive matching:
 (re-seq #"(?i)foo" "FOO BAR foo bar")
 ;;=> ("FOO" "foo")
 ```
+
+## Usage
+#"..."

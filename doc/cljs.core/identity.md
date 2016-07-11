@@ -4,16 +4,13 @@ see also:
   - cljs.core/nil?
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns its argument.
 
+## Examples
 
-## TODO
-
-Would be nice to provide a quick explanation as to why this function can be
-useful.
+## Signature
+[x]

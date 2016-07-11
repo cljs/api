@@ -5,9 +5,7 @@ see also:
   - syntax/destructure-map
 ---
 
-## Usage
-[arg1 arg2 & args :as name]
-
+## Summary
 
 ## Details
 
@@ -48,7 +46,6 @@ following forms:
 Destructure vectors can be nested, even in place of names in [destructure
 maps][doc:syntax/destructure-map].
 
-
 ## Examples
 
 Use destructure vectors in function parameters:
@@ -69,3 +66,6 @@ Destructure vectors can be nested:
   (println a b c))
 ;; 1 2 3
 ```
+
+## Usage
+[arg1 arg2 & args :as name]

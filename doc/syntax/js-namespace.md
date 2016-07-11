@@ -8,16 +8,12 @@ see also:
   - cljs.core/aset
 ---
 
-## Usage
-js/foo
-js/foo.bar
-
+## Summary
 
 ## Details
 
 A special namespace used for accessing any symbol defined
 in JavaScript's global scope.
-
 
 ## Examples
 
@@ -50,3 +46,7 @@ Create a JavaScript date object:
 (js/Date.)
 ;;=> #inst "2015-07-14T00:25:33.881-00:00"
 ```
+
+## Usage
+js/foo
+js/foo.bar

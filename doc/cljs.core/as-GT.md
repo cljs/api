@@ -9,9 +9,7 @@ see also:
   - cljs.core/some->>
 ---
 
-## Signature
-[expr name & forms]
-
+## Summary
 
 ## Details
 
@@ -22,11 +20,6 @@ returning the result of the last form.
 Useful for when you want a threading macro to use different "places" at each
 form.
 
-
-## TODO
-add threading macro animations link here
-
-
 ## Examples
 
 ```clj
@@ -35,3 +28,6 @@ add threading macro animations link here
   (/ x 2))
 ;;=> 5
 ```
+
+## Signature
+[expr name & forms]

@@ -1,11 +1,15 @@
 ---
 name: cljs.core/string?
+see also:
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns true if `x` is a string, false otherwise.
+
+## Examples
+
+## Signature
+[x]

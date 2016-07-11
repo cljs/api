@@ -4,10 +4,13 @@ see also:
   - cljs.core/empty
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
 Returns nil if `coll` is empty, else returns `coll`.
+
+## Examples
+
+## Signature
+[coll]

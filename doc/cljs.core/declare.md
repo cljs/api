@@ -4,16 +4,13 @@ see also:
   - special/def
 ---
 
-## Signature
-[& names]
-
+## Summary
 
 ## Details
 
 Uses `def` to establish symbols of `names` with no bindings.
 
 Useful for making forward declarations.
-
 
 ## Examples
 
@@ -25,3 +22,6 @@ a
 a
 ;;=> nil
 ```
+
+## Signature
+[& names]

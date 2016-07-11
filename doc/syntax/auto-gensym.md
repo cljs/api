@@ -6,9 +6,7 @@ see also:
   - syntax/syntax-quote
 ---
 
-## Usage
-foo#
-
+## Summary
 
 ## Details
 
@@ -27,7 +25,6 @@ be replaced with the same generated symbol.
 ``(foo# foo#)` => `(foo__138__auto__ foo__138__auto__)`
 
 Namespace-qualified symbols `foo/bar#` are not replaced.
-
 
 ## Examples
 
@@ -50,3 +47,6 @@ Create safe local bindings:
    (+ x# 2))
 ;;=> (cljs.user/let [x__146__auto__ 1] (cljs.user/+ x__146__auto__ 2))
 ```
+
+## Usage
+foo#

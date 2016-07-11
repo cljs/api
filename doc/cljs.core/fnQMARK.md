@@ -4,10 +4,13 @@ see also:
   - cljs.core/ifn?
 ---
 
-## Signature
-[f]
-
+## Summary
 
 ## Details
 
 Returns true if `f` is a function, false otherwise.
+
+## Examples
+
+## Signature
+[f]

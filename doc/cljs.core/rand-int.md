@@ -4,10 +4,13 @@ see also:
   - cljs.core/rand
 ---
 
-## Signature
-[n]
-
+## Summary
 
 ## Details
 
 Returns a random integer between 0 inclusive and `n` exclusive.
+
+## Examples
+
+## Signature
+[n]

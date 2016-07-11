@@ -7,10 +7,7 @@ see also:
   - cljs.core/take-nth
 ---
 
-## Signature
-[n]
-[n coll]
-
+## Summary
 
 ## Details
 
@@ -18,3 +15,9 @@ Returns a lazy sequence of the first `n` items in `coll`. Returns all the items
 if there are fewer than `n`.
 
 Returns a stateful transducer when no collection is provided.
+
+## Examples
+
+## Signature
+[n]
+[n coll]

@@ -7,10 +7,13 @@ see also:
   - cljs.core/drop-while
 ---
 
-## Signature
-[pred coll]
-
+## Summary
 
 ## Details
 
 Returns a vector of `[(take-while pred coll) (drop-while pred coll)]`
+
+## Examples
+
+## Signature
+[pred coll]

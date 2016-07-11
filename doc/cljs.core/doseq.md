@@ -7,9 +7,7 @@ see also:
   - cljs.core/dotimes
 ---
 
-## Signature
-[seq-exprs & body]
-
+## Summary
 
 ## Details
 
@@ -18,7 +16,7 @@ filtering as provided by `for`. Does not retain the head of the sequence.
 
 Returns nil.
 
+## Examples
 
-## TODO
-
-This needs a better explanation and example.
+## Signature
+[seq-exprs & body]

@@ -9,16 +9,13 @@ see also:
   - cljs.core/ffirst
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
 Returns the first item in `coll` and calls `seq` on its argument.
 
 Returns nil when `coll` is nil.
-
 
 ## Examples
 
@@ -29,3 +26,6 @@ Returns nil when `coll` is nil.
 (first [])
 ;;=> nil
 ```
+
+## Signature
+[coll]

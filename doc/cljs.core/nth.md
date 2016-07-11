@@ -7,10 +7,7 @@ see also:
   - cljs.core/get
 ---
 
-## Signature
-[coll n]
-[coll n not-found]
-
+## Summary
 
 ## Details
 
@@ -21,3 +18,9 @@ supplied.
 
 `nth` works for Strings, Arrays, Regex Matchers, Lists, and Sequences. For
 Sequences, `nth` takes O(n) time.
+
+## Examples
+
+## Signature
+[coll n]
+[coll n not-found]

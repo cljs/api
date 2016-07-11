@@ -7,10 +7,7 @@ see also:
   - cljs.core/merge
 ---
 
-## Signature
-[coll k v]
-[coll k v & kvs]
-
+## Summary
 
 ## Details
 
@@ -23,7 +20,6 @@ Has no effect on the map type (hashed/sorted).
 
 When applied to a vector, returns a new vector that contains value `v` at index
 `k`.
-
 
 ## Examples
 
@@ -53,3 +49,7 @@ When applied to a vector, returns a new vector that contains value `v` at index
 (assoc my-vec 3 "foo")
 ;;=> Error: Index 3 out of bounds  [0,0]
 ```
+
+## Signature
+[coll k v]
+[coll k v & kvs]

@@ -7,16 +7,13 @@ see also:
   - cljs.core/pop
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
 Returns a possibly empty sequence of the items after the first item.
 
 Calls `seq` on its argument.
-
 
 ## Examples
 
@@ -33,3 +30,6 @@ Calls `seq` on its argument.
 (rest [])
 ;;=> ()
 ```
+
+## Signature
+[coll]

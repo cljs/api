@@ -1,11 +1,10 @@
 ---
 name: syntax/eval
 display: "#= eval"
+see also:
 ---
 
-## Usage
-#=...
-
+## Summary
 
 ## Details
 
@@ -13,7 +12,6 @@ Allows the reader to evaluate the following form.
 
 This feature is carried from tools.reader is not intended for use in ClojureScript,
 though it works for basic forms not using symbols.
-
 
 ## Examples
 
@@ -38,3 +36,6 @@ The following is the output for the ClojureScript compiler on the JVM:
 #=(clojure.core/+ 1 2)
 ;;=> 3
 ```
+
+## Usage
+#=...

@@ -5,12 +5,13 @@ see also:
   - special/quote
 ---
 
+## Summary
+
 ## Details
 
 `'foo` is sugar for [`(quote foo)`][doc:special/quote].
 
 Prevent the evaluation of the following form.
-
 
 ## Examples
 

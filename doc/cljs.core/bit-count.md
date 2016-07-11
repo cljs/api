@@ -1,15 +1,13 @@
 ---
 name: cljs.core/bit-count
+see also:
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Counts the number of bits set in `x`.
-
 
 ## Examples
 
@@ -26,3 +24,6 @@ Same number in decimal:
 (bit-count 11)
 ;;=> 3
 ```
+
+## Signature
+[x]

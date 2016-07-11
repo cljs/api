@@ -5,14 +5,11 @@ see also:
   - cljs.core/second
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
 Same as `(first (next coll))`
-
 
 ## Examples
 
@@ -29,3 +26,6 @@ Same as `(first (next coll))`
 (fnext [])
 ;;=> nil
 ```
+
+## Signature
+[coll]

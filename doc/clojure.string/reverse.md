@@ -1,11 +1,15 @@
 ---
 name: clojure.string/reverse
+see also:
 ---
 
-## Signature
-[s]
-
+## Summary
 
 ## Details
 
 Returns `s` with its characters reversed.
+
+## Examples
+
+## Signature
+[s]

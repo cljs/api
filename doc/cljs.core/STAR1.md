@@ -6,12 +6,13 @@ see also:
   - cljs.core/*e
 ---
 
+## Summary
+
 ## Details
 
 Only usable from a REPL.
 
 Holds the result of the last expression.
-
 
 ## Examples
 

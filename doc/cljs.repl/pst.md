@@ -1,17 +1,16 @@
 ---
 name: cljs.repl/pst
+see also:
 ---
 
-## Signature
-[e]
-
+## Summary
 
 ## Details
 
 Print Stack Trace for a given exception `e` or the most recent
 exception, stored implicitly by [doc:cljs.core/*e].
 
+## Examples
 
-## TODO
-
-find an example that doesn't result in "no stack trace".
+## Signature
+[e]

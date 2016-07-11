@@ -5,10 +5,13 @@ see also:
   - cljs.core/list?
 ---
 
-## Signature
-[& items]
-
+## Summary
 
 ## Details
 
 Creates a new list containing `items`.
+
+## Examples
+
+## Signature
+[& items]

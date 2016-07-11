@@ -5,6 +5,8 @@ see also:
   - cljs.core/defmacro
 ---
 
+## Summary
+
 ## Details
 
 (only intended as a REPL utility)
@@ -13,7 +15,6 @@ If the given quoted form is a macro call, expand it once, then repeat until a
 subsequent result is _not_ a macro call.  NOTE: nested forms are _not_ expanded.
 
 See [doc:cljs.core/macroexpand-1] if you only wish to expand a form once.
-
 
 ## Examples
 

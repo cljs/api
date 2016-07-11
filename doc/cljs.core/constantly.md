@@ -4,13 +4,11 @@ see also:
   - cljs.core/repeatedly
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
-Returns a function that takes any number of arguments and always returns `x`.
 
+Returns a function that takes any number of arguments and always returns `x`.
 
 ## Examples
 
@@ -26,3 +24,6 @@ Returns a function that takes any number of arguments and always returns `x`.
 (ten :whatever)
 ;;=> 10
 ```
+
+## Signature
+[x]

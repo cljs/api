@@ -4,16 +4,13 @@ see also:
   - special/recur
 ---
 
-## Signature
-[[& bindings] & body-exprs]
-
+## Summary
 
 ## Details
 
 Evaluates the `body-exprs` in a lexical context in which the symbols in
 the binding-forms are bound to their respective init-exprs, just like a `let` form.
 Acts as a `recur` target, which will allow tail-call optimization.
-
 
 ## Examples
 
@@ -31,3 +28,6 @@ Acts as a `recur` target, which will allow tail-call optimization.
 ;;
 ;;=> nil
 ```
+
+## Signature
+[[& bindings] & body-exprs]

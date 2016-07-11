@@ -9,12 +9,15 @@ see also:
   - cljs.core/hash-map
 ---
 
-## Signature
-[& keyvals]
-
+## Summary
 
 ## Details
 
 Returns a new sorted map with supplied mappings.
 
 `keyvals` must be an even number of forms.
+
+## Examples
+
+## Signature
+[& keyvals]

@@ -4,14 +4,11 @@ see also:
   - cljs.core/object?
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns true if `x` is a JavaScript array, false otherwise.
-
 
 ## Examples
 
@@ -25,3 +22,6 @@ Returns true if `x` is a JavaScript array, false otherwise.
 (array? "hi")
 ;;=> false
 ```
+
+## Signature
+[x]

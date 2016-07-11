@@ -6,9 +6,7 @@ see also:
   - special/if
 ---
 
-## Signature
-[& clauses]
-
+## Summary
 
 ## Details
 
@@ -22,7 +20,6 @@ keyword `:else` (a keyword always evaluates to logical true).
 
 `(cond)` returns nil.
 
-
 ## Examples
 
 ```
@@ -34,3 +31,6 @@ keyword `:else` (a keyword always evaluates to logical true).
   :else "a is not a number!")
 ;;=> "a is bigger than 10"
 ```
+
+## Signature
+[& clauses]

@@ -1,7 +1,10 @@
 ---
 name: syntax/comma
 display: ", comma"
+see also:
 ---
+
+## Summary
 
 ## Details
 
@@ -14,7 +17,6 @@ Commas are used when printing maps in the REPL:
 ```clj
 {:foo 1, :bar 2, :bar 3}
 ```
-
 
 ## Examples
 

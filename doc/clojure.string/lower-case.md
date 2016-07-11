@@ -1,11 +1,15 @@
 ---
 name: clojure.string/lower-case
+see also:
 ---
 
-## Signature
-[s]
-
+## Summary
 
 ## Details
 
 Converts string to all lower-case.
+
+## Examples
+
+## Signature
+[s]

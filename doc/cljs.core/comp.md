@@ -5,9 +5,7 @@ see also:
   - cljs.core/juxt
 ---
 
-## Signature
-[& fns]
-
+## Summary
 
 ## Details
 
@@ -20,7 +18,6 @@ the next left function, and so on.
 
 `((comp a b c) x y)` = `(a (b (c x y)))`
 
-
 ## Examples
 
 ```clj
@@ -28,3 +25,6 @@ the next left function, and so on.
 (f 1 2 3)
 ;;=> "7"
 ```
+
+## Signature
+[& fns]

@@ -8,12 +8,7 @@ see also:
   - cljs.core/alter-meta!
 ---
 
-## Usage
-^{...}
-^:foo
-^"foo"
-^foo
-
+## Summary
 
 ## Details
 
@@ -25,7 +20,6 @@ Metadata will assume the following transformations depending on its type:
 - keyword `^:foo` => `^{:foo true}`
 - string `^"foo"` => `^{:tag "foo"}`
 - symbol `^foo` => `^{:tag <value of foo>}`
-
 
 ## Examples
 
@@ -59,3 +53,9 @@ Chain metadata:
 (meta ^:foo ^"foo" [1 2 3])
 ;;=> {:foo true, :tag "foo"}
 ```
+
+## Usage
+^{...}
+^:foo
+^"foo"
+^foo

@@ -4,16 +4,13 @@ see also:
   - cljs.repl/find-doc
 ---
 
-## Signature
-[str-or-pattern]
-
+## Summary
 
 ## Details
 
 Given a regular expression or stringable thing, return a seq of all
 public definitions in all currently-loaded namespaces that match the
 `str-or-pattern`.
-
 
 ## Examples
 
@@ -27,3 +24,6 @@ public definitions in all currently-loaded namespaces that match the
 ;;    cljs.core/some?
 ;;    cljs.core/when-some)
 ```
+
+## Signature
+[str-or-pattern]

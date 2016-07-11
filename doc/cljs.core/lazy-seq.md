@@ -7,10 +7,13 @@ see also:
   - cljs.core/iterate
 ---
 
-## Signature
-[& body]
-
+## Summary
 
 ## Details
 
 Returns a new lazy sequence.
+
+## Examples
+
+## Signature
+[& body]

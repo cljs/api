@@ -7,10 +7,11 @@ see also:
   - syntax/shebang
 ---
 
+## Summary
+
 ## Details
 
 "Comments out" everything after `;` on the current line.
-
 
 ## Examples
 

@@ -4,10 +4,13 @@ see also:
   - cljs.core/filter
 ---
 
-## Signature
-[pred xset]
-
+## Summary
 
 ## Details
 
 Returns a set of the elements for which `pred` is true.
+
+## Examples
+
+## Signature
+[pred xset]

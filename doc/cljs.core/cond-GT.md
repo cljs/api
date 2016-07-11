@@ -7,9 +7,7 @@ see also:
   - cljs.core/cond
 ---
 
-## Signature
-[expr & clauses]
-
+## Summary
 
 ## Details
 
@@ -18,7 +16,6 @@ through each form for which the corresponding test expression is true.
 
 Note that, unlike `cond` branching, `cond->` threading does not short circuit
 after the first true test expression.
-
 
 ## Examples
 
@@ -29,3 +26,6 @@ after the first true test expression.
   (< a 20) (str " and less than 20"))
 ;;=> "12 is greater than 10 and less than 20"
 ```
+
+## Signature
+[expr & clauses]

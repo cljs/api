@@ -6,6 +6,8 @@ see also:
   - syntax/unquote-splicing
 ---
 
+## Summary
+
 ## Details
 
 (Only intended for use in Clojure macros, which can be used from but not
@@ -14,7 +16,6 @@ written in ClojureScript.)
 Intended for use inside a [doc:syntax/syntax-quote].
 
 Forces evaluation of the following form.
-
 
 ## Examples
 

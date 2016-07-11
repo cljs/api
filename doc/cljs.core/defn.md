@@ -7,10 +7,7 @@ see also:
   - cljs.core/fn
 ---
 
-## Signature
-[name doc-string? attr-map? [params*] prepost-map? body]
-[name doc-string? attr-map? ([params*] prepost-map? body) + attr-map?]
-
+## Summary
 
 ## Details
 
@@ -39,3 +36,9 @@ for the function.
 (def foo
   (fn [a b c]
     (\* a b c)))</pre></td></tr></tbody></table>
+
+## Examples
+
+## Signature
+[name doc-string? attr-map? [params*] prepost-map? body]
+[name doc-string? attr-map? ([params*] prepost-map? body) + attr-map?]

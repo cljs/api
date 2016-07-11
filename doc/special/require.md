@@ -4,10 +4,7 @@ see also:
   - special/require-macros
 ---
 
-## Notes
-
-description below taken from `repl-special-doc-map`
-
+## Summary
 
 ## Details
 
@@ -39,7 +36,6 @@ A flag is a keyword. Recognized flags:
 - `:reload-all` implies :reload and also forces loading of all libs that the
   identified libs directly or indirectly load via require or use
 - `:verbose` triggers printing information about each load, alias, and refer
-
 
 ## Examples
 

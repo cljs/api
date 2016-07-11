@@ -5,12 +5,15 @@ see also:
   - cljs.core/sorted-set
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
 Returns true if `coll` implements the `ISorted` protocol, false otherwise.
 
 Sorted maps and sorted sets implement `ISorted`.
+
+## Examples
+
+## Signature
+[coll]

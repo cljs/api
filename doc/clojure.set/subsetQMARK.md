@@ -6,12 +6,15 @@ see also:
   - clojure.set/superset?
 ---
 
-## Signature
-[a b]
-
+## Summary
 
 ## Details
 
 Returns true if `a` is a subset of `b`, false otherwise.
 
 In other words, returns true if all the elements of `a` can be found in `b`.
+
+## Examples
+
+## Signature
+[a b]

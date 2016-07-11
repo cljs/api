@@ -5,18 +5,12 @@ see also:
   - cljs.core/into
 ---
 
-## Signature
-[]
-[x]
-[x y]
-[x y & zs]
-
+## Summary
 
 ## Details
 
 Returns a lazy sequence representing the concatenation of the elements in the
 supplied collections.
-
 
 ## Examples
 
@@ -30,3 +24,9 @@ supplied collections.
 (concat [1] [2] [3])
 ;; => (1 2 3)
 ```
+
+## Signature
+[]
+[x]
+[x y]
+[x y & zs]

@@ -8,12 +8,7 @@ see also:
   - cljs.core/pop
 ---
 
-## Signature
-[]
-[coll]
-[coll x]
-[coll x & xs]
-
+## Summary
 
 ## Details
 
@@ -25,7 +20,6 @@ The "addition" may happen at different "places" depending on the collection
 type.
 
 `(conj nil item)` returns `(item)`.
-
 
 ## Examples
 
@@ -60,6 +54,8 @@ Add to set:
 ;;=> #{"a" "b" "c" "d"}
 ```
 
-
-## TODO
-should add a table here of how things are "added" to different collection types
+## Signature
+[]
+[coll]
+[coll x]
+[coll x & xs]

@@ -8,10 +8,7 @@ see also:
   - cljs.core/sorted-set-by
 ---
 
-## Signature
-[sc test key]
-[sc start-test start-key end-test end-key]
-
+## Summary
 
 ## Details
 
@@ -21,3 +18,9 @@ see also:
 
 Returns a sequence of those entries with keys `ek` for which
 `(test (.. sc comparator (compare ek key)) 0)` is true.
+
+## Examples
+
+## Signature
+[sc test key]
+[sc start-test start-key end-test end-key]

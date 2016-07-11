@@ -5,9 +5,7 @@ see also:
   - cljs.core/concat
 ---
 
-## Signature
-[& colls]
-
+## Summary
 
 ## Details
 
@@ -27,3 +25,8 @@ needed.
 (concat (lazy-seq x)
         (lazy-seq y)
         (lazy-seq z))</pre></td></tr></tbody></table>
+
+## Examples
+
+## Signature
+[& colls]

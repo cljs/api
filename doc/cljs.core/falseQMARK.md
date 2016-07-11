@@ -5,10 +5,13 @@ see also:
   - cljs.core/not
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns true if `x` is the value false, false otherwise.
+
+## Examples
+
+## Signature
+[x]

@@ -8,13 +8,7 @@ see also:
   - cljs.core/juxt
 ---
 
-## Signature
-[f]
-[f coll]
-[f c1 c2]
-[f c1 c2 c3]
-[f c1 c2 c3 & colls]
-
+## Summary
 
 ## Details
 
@@ -27,3 +21,12 @@ is exhausted. Any remaining items in other `c`s are ignored. Function `f` should
 accept number-of-`c`s arguments.
 
 Returns a transducer when no collection is provided.
+
+## Examples
+
+## Signature
+[f]
+[f coll]
+[f c1 c2]
+[f c1 c2 c3]
+[f c1 c2 c3 & colls]

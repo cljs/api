@@ -5,9 +5,7 @@ see also:
   - cljs.core/hash-map
 ---
 
-## Signature
-[& maps]
-
+## Summary
 
 ## Details
 
@@ -15,3 +13,8 @@ Returns a map that consists of the rest of the maps `conj`-ed onto the first.
 
 If a key occurs in more than one map, the mapping from the rightmost map will
 "win".
+
+## Examples
+
+## Signature
+[& maps]

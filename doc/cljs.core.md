@@ -1,10 +1,11 @@
 ---
 name: cljs.core
+see also:
 ---
 
 ## Summary
-fundamental library of the ClojureScript language
 
+fundamental library of the ClojureScript language
 
 ## Details
 

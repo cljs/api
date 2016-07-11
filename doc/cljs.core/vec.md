@@ -5,10 +5,13 @@ see also:
   - cljs.core/vector?
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
 Creates a new vector containing the contents of `coll`
+
+## Examples
+
+## Signature
+[coll]

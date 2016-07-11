@@ -5,15 +5,11 @@ see also:
   - cljs.core/bit-not
 ---
 
-## Signature
-[x y]
-[x y & more]
-
+## Summary
 
 ## Details
 
 Bitwise "and" `x` with bitwise "not" `y`.  Same as `x & ~y` in JavaScript.
-
 
 ## Examples
 
@@ -38,3 +34,7 @@ Same result using `bit-and` and `bit-not`:
 (bit-and 12 (bit-not 10))
 ;;=> 4
 ```
+
+## Signature
+[x y]
+[x y & more]

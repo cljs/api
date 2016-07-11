@@ -5,10 +5,13 @@ see also:
   - cljs.core/false?
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns true if `x` is logical false, false otherwise.
+
+## Examples
+
+## Signature
+[x]

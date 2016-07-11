@@ -6,10 +6,7 @@ see also:
   - cljs.core/filter
 ---
 
-## Signature
-[f]
-[f coll]
-
+## Summary
 
 ## Details
 
@@ -19,3 +16,9 @@ false return values will be included.
 `f` must be free of side-effects.
 
 Returns a transducer when no collection is provided.
+
+## Examples
+
+## Signature
+[f]
+[f coll]

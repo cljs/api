@@ -5,9 +5,7 @@ see also:
   - cljs.core/get
 ---
 
-## Signature
-[coll k]
-
+## Summary
 
 ## Details
 
@@ -23,7 +21,6 @@ used for this purpose:
 ```clj
 (some #{value} coll)
 ```
-
 
 ## Examples
 
@@ -62,3 +59,6 @@ Lists and Sequences do not provide lookups, so `contains?` will not work:
 (contains? (range 3) 1)
 ;;=> false
 ```
+
+## Signature
+[coll k]

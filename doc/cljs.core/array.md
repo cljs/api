@@ -6,16 +6,13 @@ see also:
   - cljs.core/clj->js
 ---
 
-## Signature
-[& args]
-
+## Summary
 
 ## Details
 
 Creates a JavaScript array containing `args`.
 
 The tagged literal `#js [1 2 3]` is equivalent to `(array 1 2 3)`
-
 
 ## Examples
 
@@ -39,3 +36,6 @@ When creating nested JavaScript arrays, you can opt to use `clj->js` instead:
 (clj->js [1 2 [3 4]])
 ;;=> #js [1 2 #js [3 4]]
 ```
+
+## Signature
+[& args]

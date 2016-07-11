@@ -5,9 +5,7 @@ see also:
   - cljs.core/->>
 ---
 
-## Signature
-[x & forms]
-
+## Summary
 
 ## Details
 
@@ -32,11 +30,6 @@ second item in second form, etc.
   (x y z))</pre></td>
       <td><pre>
 (x (d (a x b c)) y z)</pre></td></tr></tbody></table>
-
-
-## TODO
-add threading macro animations link here
-
 
 ## Examples
 
@@ -94,3 +87,6 @@ Same as above, but with more nesting:
 (- (/ (+ c 3) 2) 1)
 ;;=> 3
 ```
+
+## Signature
+[x & forms]

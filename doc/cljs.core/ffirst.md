@@ -6,14 +6,11 @@ see also:
   - cljs.core/nfirst
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
 Same as `(first (first coll))`.
-
 
 ## Examples
 
@@ -21,3 +18,6 @@ Same as `(first (first coll))`.
 (ffirst [[1 2] [3 4] [5 6]])
 ;;=> 1
 ```
+
+## Signature
+[coll]

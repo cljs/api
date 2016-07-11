@@ -6,9 +6,7 @@ see also:
   - special/recur
 ---
 
-## Signature
-[seq-exprs body-expr]
-
+## Summary
 
 ## Details
 
@@ -21,10 +19,7 @@ Collections are iterated in a nested fashion, rightmost fastest, and nested
 coll-exprs can refer to bindings created in prior binding-forms. Supported
 modifiers are: `:let [binding-form expr ...]`, `:while test`, `:when test`.
 
+## Examples
 
-## TODO
-
-This description is completely unreadable to someone new to the
-language and confusing even to someone with moderate experience (ie: me)
-
-Need to simplify and provide an inline example.
+## Signature
+[seq-exprs body-expr]

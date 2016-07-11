@@ -1,11 +1,12 @@
 ---
 name: syntax
 display: "Syntax"
+see also:
 ---
 
 ## Summary
-Syntax forms, literals, conventions and patterns.
 
+Syntax forms, literals, conventions and patterns.
 
 ## Details
 

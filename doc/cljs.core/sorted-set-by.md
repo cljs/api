@@ -6,10 +6,13 @@ see also:
   - cljs.core/compare
 ---
 
-## Signature
-[comparator & keys]
-
+## Summary
 
 ## Details
 
 Returns a new sorted set with supplied `keys`, using the supplied `comparator`.
+
+## Examples
+
+## Signature
+[comparator & keys]

@@ -7,6 +7,8 @@ see also:
   - cljs.core/macroexpand-1
 ---
 
+## Summary
+
 ## Details
 
 Defines a macro, which is essentially a function that runs at compile time.
@@ -41,7 +43,6 @@ evaluation, depending on the compiler version:
 | ClojureScript JS  | ClojureScript                 |
 
 Please see the examples section below for a more concrete look.
-
 
 ## Examples
 

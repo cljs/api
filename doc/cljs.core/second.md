@@ -7,12 +7,15 @@ see also:
   - cljs.core/next
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
 Returns the second item in `coll`.
 
 Same as `(first (next coll))`
+
+## Examples
+
+## Signature
+[coll]

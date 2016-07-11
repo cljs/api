@@ -9,6 +9,8 @@ see also:
   - cljs.core/int
 ---
 
+## Summary
+
 ## Details
 
 ClojureScript numbers are the same as [JavaScript numbers],
@@ -25,7 +27,6 @@ a custom base.
 - octal `0123`
 - binary `2r0110`
 - arbitrary `NrXXX` where `(<= 2 N 36)` and `X` is in `[0-9,A-Z]`
-
 
 ## Examples
 

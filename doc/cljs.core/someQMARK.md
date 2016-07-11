@@ -5,10 +5,13 @@ see also:
   - cljs.core/nil?
 ---
 
-## Signature
-[x]
-
+## Summary
 
 ## Details
 
 Returns true if `x` is not nil, false otherwise.
+
+## Examples
+
+## Signature
+[x]

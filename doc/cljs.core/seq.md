@@ -5,9 +5,7 @@ see also:
   - cljs.core/empty?
 ---
 
-## Signature
-[coll]
-
+## Summary
 
 ## Details
 
@@ -16,3 +14,8 @@ Returns a sequence on the collection. If the collection is empty, returns nil.
 `(seq nil)` returns nil.
 
 `seq` also works on strings.
+
+## Examples
+
+## Signature
+[coll]

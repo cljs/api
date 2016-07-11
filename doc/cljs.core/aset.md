@@ -6,10 +6,7 @@ see also:
   - cljs.core/assoc-in
 ---
 
-## Signature
-[array i val]
-[array idx idx2 & idxv]
-
+## Summary
 
 ## Details
 
@@ -43,3 +40,9 @@ For JavaScript objects, use [`goog.object/set`].
 obj
 ;;=> #js {:foo "bar"}
 ```
+
+## Examples
+
+## Signature
+[array i val]
+[array idx idx2 & idxv]
