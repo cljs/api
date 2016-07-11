@@ -1,6 +1,5 @@
 ---
 name: cljs.core
-see also:
 ---
 
 ## Summary

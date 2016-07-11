@@ -1,6 +1,5 @@
 ---
 name: cljs.nodejs
-see also:
 ---
 
 ## Summary

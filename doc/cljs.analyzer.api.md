@@ -1,6 +1,5 @@
 ---
 name: cljs.analyzer.api
-see also:
 ---
 
 ## Summary

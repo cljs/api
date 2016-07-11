@@ -1,6 +1,5 @@
 ---
 name: cljs.repl.node
-see also:
 ---
 
 ## Summary

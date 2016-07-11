@@ -1,6 +1,5 @@
 ---
 name: clojure.walk
-see also:
 ---
 
 ## Summary

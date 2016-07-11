@@ -1,6 +1,5 @@
 ---
 name: clojure.core.reducers
-see also:
 ---
 
 ## Summary

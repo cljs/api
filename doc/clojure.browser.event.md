@@ -1,6 +1,5 @@
 ---
 name: clojure.browser.event
-see also:
 ---
 
 ## Summary

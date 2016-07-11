@@ -1,6 +1,5 @@
 ---
 name: clojure.string
-see also:
 ---
 
 ## Summary

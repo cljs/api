@@ -1,6 +1,5 @@
 ---
 name: cljs.compiler.api
-see also:
 ---
 
 ## Summary

@@ -1,6 +1,5 @@
 ---
 name: clojure.data
-see also:
 ---
 
 ## Summary

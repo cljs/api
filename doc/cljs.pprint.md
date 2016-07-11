@@ -1,6 +1,5 @@
 ---
 name: cljs.pprint
-see also:
 ---
 
 ## Summary

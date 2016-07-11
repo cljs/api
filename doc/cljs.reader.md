@@ -1,6 +1,5 @@
 ---
 name: cljs.reader
-see also:
 ---
 
 ## Summary

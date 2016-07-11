@@ -1,6 +1,5 @@
 ---
 name: cljs.repl.rhino
-see also:
 ---
 
 ## Summary

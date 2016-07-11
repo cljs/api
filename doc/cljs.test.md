@@ -1,6 +1,5 @@
 ---
 name: cljs.test
-see also:
 ---
 
 ## Summary

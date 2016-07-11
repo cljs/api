@@ -1,6 +1,5 @@
 ---
 name: clojure.browser.repl
-see also:
 ---
 
 ## Summary

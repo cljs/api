@@ -1,6 +1,5 @@
 ---
 name: clojure.browser.net
-see also:
 ---
 
 ## Summary

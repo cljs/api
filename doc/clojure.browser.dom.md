@@ -1,6 +1,5 @@
 ---
 name: clojure.browser.dom
-see also:
 ---
 
 ## Summary

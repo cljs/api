@@ -1,6 +1,5 @@
 ---
 name: clojure.set
-see also:
 ---
 
 ## Summary

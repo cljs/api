@@ -1,6 +1,5 @@
 ---
 name: clojure.zip
-see also:
 ---
 
 ## Summary

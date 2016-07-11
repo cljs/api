@@ -1,6 +1,5 @@
 ---
 name: cljs.repl
-see also:
 ---
 
 ## Summary

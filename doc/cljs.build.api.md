@@ -1,6 +1,5 @@
 ---
 name: cljs.build.api
-see also:
 ---
 
 ## Summary
