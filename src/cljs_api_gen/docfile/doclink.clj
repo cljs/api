@@ -1,6 +1,8 @@
 (ns cljs-api-gen.docfile.doclink
   (:require
     [cljs-api-gen.state :refer [*result* docfile-map]]
+    [cljs-api-gen.encode :refer [encode-name]]
+    [cljs-api-gen.config :refer [docfile-dir docfile-ext]]
     [clojure.string :as string]))
 
 ;;; ================ MARKDOWN SYNTAX ==================
@@ -49,6 +51,16 @@
     (if name
       (get-in *result* [:symbols docname])
       (get-in *result* [:namespaces ns]))))
+
+(defn doclink-url
+  [docname]
+  (let [{:keys [ns name compiler?]} (parse-docname docname)
+        path (if name
+               (str ns "/" (encode-name name))
+               ns)]
+    (str "https://github.com/cljs/api/blob/master/" docfile-dir "/"
+         path
+         docfile-ext)))
 
 (defn md-biblio
   "Return a set of doclinks found in a given markdown body."

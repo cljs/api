@@ -64,7 +64,8 @@
         parsed (- (count files) skipped)]
 
     (reset! docfile-map mandoc-map)
-    (reset! docfile-map (mapmap post-transform-doc @docfile-map))
+    (when *result*
+      (reset! docfile-map (mapmap post-transform-doc @docfile-map)))
 
     (if (zero? skipped)
       (println (style "Done with no errors." :green))

@@ -3,7 +3,6 @@
   (:require
     [cljs-api-gen.util :refer [mapmap]]
     [cljs-api-gen.encode :refer [fullname->ns-name]]
-    [cljs-api-gen.state :refer [*result*]]
     [cljs-api-gen.docfile.doclink :refer [md-biblio
                                           resolve-unnamed-doclinks]]
     [clojure.set :refer [rename-keys]]
@@ -34,12 +33,10 @@
    :examples])
 
 (defn add-doclink-biblio [doc]
-  (if (nil? *result*)
-    doc
-    (let [md (join "\n" (vals (select-keys doc markdown-sections)))
-          biblio (md-biblio md)]
-      (cond-> doc
-        (seq biblio) (assoc :md-biblio biblio)))))
+  (let [md (join "\n" (vals (select-keys doc markdown-sections)))
+        biblio (md-biblio md)]
+    (cond-> doc
+      (seq biblio) (assoc :md-biblio biblio))))
 
 (defn add-doclink-names [doc]
   (reduce

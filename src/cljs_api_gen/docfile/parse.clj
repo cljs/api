@@ -4,13 +4,22 @@
     [clojure.string :refer [split-lines join lower-case trim]]
     [frontmatter.core :as fm]))
 
+(def biblio-line
+  "<!-- AUTO-GENERATED docfile links for github -->")
+
+(defn biblio-line? [line]
+  (.startsWith line biblio-line))
+
 (def section-start "## ")
 
 (defn section-line? [line]
-  (.startsWith line section-start))
+  (or (.startsWith line section-start)
+      (biblio-line? line)))
 
 (defn format-title [title]
-  (-> title (subs (count section-start)) lower-case trim))
+  (if (biblio-line? title)
+    (-> title trim)
+    (-> title (subs (count section-start)) lower-case trim)))
 
 (defn format-section
   "Given title lines and body lines, create a formatted title and body pair.
@@ -49,7 +58,8 @@
                    (drop-while (comp not section-line? first)) ;; ignore lines preceding first section
                    (partition 2) ;; create title/body lines pairs
                    (map format-section)
-                   (remove #(= (second %) ""))) ;; remove empty sections
+                   (remove #(= (second %) "")) ;; remove empty sections
+                   (remove #(biblio-line? (first %)))) ;; remove biblio line
 
         ;; get titles in order
         titles (map first pairs)

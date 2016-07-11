@@ -1,7 +1,8 @@
 (ns cljs-api-gen.docfile.lint
   (:require
     [clojure.string :as string]
-    [cljs-api-gen.docfile.parse :refer [section-start]]))
+    [cljs-api-gen.docfile.parse :refer [section-start biblio-line]]
+    [cljs-api-gen.docfile.doclink :refer [parse-docname doclink-url]]))
 
 (def frontmatter-keys
   {:all [[:full-name "name:"]
@@ -24,7 +25,8 @@
          [:signature "Signature"]
          [:usage "Usage"]
          [:notes "Notes"]
-         [:todo "TODO"]]
+         [:todo "TODO"]
+         [:md-biblio biblio-line]]
    :required?    #{:summary :details :examples}
    :ns-required? #{:summary :details}
    :list?        #{:signature :usage}})
@@ -62,6 +64,9 @@
        (keep identity)
        (string/join "\n")))
 
+(defn biblio-link [docname]
+  (str "[doc:" docname "]:" (doclink-url docname)))
+
 (defn markdown-item
   [[key title] m]
   (let [value (get m key)
@@ -72,9 +77,10 @@
     (when (or (not (blank? value))
               (required? key))
       (cond
-        (blank? value)   (str section-start title "\n")
-        (list? key)      (str section-start title "\n" (string/join "\n" value) "\n")
-        :else            (str section-start title "\n\n" value "\n")))))
+        (= :md-biblio key) (str title "\n" (string/join "\n" (map biblio-link value)) "\n")
+        (blank? value)     (str section-start title "\n")
+        (list? key)        (str section-start title "\n" (string/join "\n" value) "\n")
+        :else              (str section-start title "\n\n" value "\n")))))
 
 (defn map->markdown [m]
   (->> (:all markdown-keys)
