@@ -11,6 +11,3 @@ see also:
 Returns a set of the elements for which `pred` is true.
 
 ## Examples
-
-## Signature
-[pred xset]

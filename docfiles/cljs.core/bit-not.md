@@ -24,6 +24,3 @@ Same numbers in decimal:
 (bit-not 12)
 ;;=> -13
 ```
-
-## Signature
-[x]

@@ -17,6 +17,3 @@ filtering as provided by `for`. Does not retain the head of the sequence.
 Returns nil.
 
 ## Examples
-
-## Signature
-[seq-exprs & body]

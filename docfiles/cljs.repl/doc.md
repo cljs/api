@@ -29,6 +29,3 @@ Prints documentation for the var or special form with the name `name`.
 ;;
 ;;=> nil
 ```
-
-## Signature
-[name]

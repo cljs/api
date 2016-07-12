@@ -52,6 +52,3 @@ The test-constants need not be all of the same type.
   1 "one")
 ;; Error: No matching clause: 2
 ```
-
-## Signature
-[e & clauses]

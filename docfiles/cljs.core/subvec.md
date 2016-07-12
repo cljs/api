@@ -18,7 +18,3 @@ This operation is O(1) and very fast, as the resulting vector shares structure
 with the original and no trimming is done.
 
 ## Examples
-
-## Signature
-[v start]
-[v start end]

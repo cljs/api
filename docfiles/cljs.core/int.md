@@ -12,6 +12,3 @@ see also:
 Coerces `x` to an integer by stripping decimal places.
 
 ## Examples
-
-## Signature
-[x]

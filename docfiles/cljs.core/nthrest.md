@@ -15,6 +15,3 @@ Returns the `nth` rest of `coll`.
 Returns `coll` when `n` is 0.
 
 ## Examples
-
-## Signature
-[coll n]

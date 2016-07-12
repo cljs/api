@@ -28,6 +28,3 @@ form.
   (/ x 2))
 ;;=> 5
 ```
-
-## Signature
-[expr name & forms]

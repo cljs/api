@@ -13,6 +13,3 @@ Returns a vector, containing first the matching substring, then any capturing
 groups if the regular expression contains capturing groups.
 
 ## Examples
-
-## Signature
-[re s]

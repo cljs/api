@@ -11,6 +11,3 @@ see also:
 Returns true if `x` is a JavaScript object, false otherwise.
 
 ## Examples
-
-## Signature
-[x]

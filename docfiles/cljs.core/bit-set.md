@@ -26,6 +26,3 @@ Same number in decimal:
 (bit-set 12 1)
 ;;=> 14
 ```
-
-## Signature
-[x n]

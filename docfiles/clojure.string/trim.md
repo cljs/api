@@ -10,6 +10,3 @@ see also:
 Removes whitespace from both ends of string.
 
 ## Examples
-
-## Signature
-[s]

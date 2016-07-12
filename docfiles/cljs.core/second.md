@@ -16,6 +16,3 @@ Returns the second item in `coll`.
 Same as `(first (next coll))`
 
 ## Examples
-
-## Signature
-[coll]

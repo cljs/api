@@ -17,10 +17,3 @@ arguments.
 `((partial f a b) c d)` => `(f a b c d)`
 
 ## Examples
-
-## Signature
-[f]
-[f arg1]
-[f arg1 arg2]
-[f arg1 arg2 arg3]
-[f arg1 arg2 arg3 & more]

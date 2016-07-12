@@ -15,8 +15,3 @@ With more than one argument, returns the concatenation of the `str` values of
 the arguments.
 
 ## Examples
-
-## Signature
-[]
-[x]
-[x & ys]

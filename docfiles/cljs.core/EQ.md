@@ -80,8 +80,3 @@ ClojureScript collections:
    (js->clj b))
 ;;=> true
 ```
-
-## Signature
-[x]
-[x y]
-[x y & more]

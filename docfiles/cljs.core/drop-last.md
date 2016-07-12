@@ -14,7 +14,3 @@ Return a lazy sequence of all but the last `n` items in `s`.
 `n` defaults to 1.
 
 ## Examples
-
-## Signature
-[s]
-[n s]

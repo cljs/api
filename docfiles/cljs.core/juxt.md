@@ -19,9 +19,3 @@ right).
 `((juxt a b c) x)` => `[(a x) (b x) (c x)]`
 
 ## Examples
-
-## Signature
-[f]
-[f g]
-[f g h]
-[f g h & fs]

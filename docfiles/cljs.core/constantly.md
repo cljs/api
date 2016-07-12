@@ -24,6 +24,3 @@ Returns a function that takes any number of arguments and always returns `x`.
 (ten :whatever)
 ;;=> 10
 ```
-
-## Signature
-[x]

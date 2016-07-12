@@ -23,6 +23,3 @@ truthiness condition used by `if` expressions.
 (boolean nil)
 ;;=> false
 ```
-
-## Signature
-[x]

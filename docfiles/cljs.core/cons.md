@@ -25,6 +25,3 @@ Returns a new sequence where `x` is the first element and `coll` is the rest.
 (cons nil nil)
 ;;=> (nil)
 ```
-
-## Signature
-[x coll]

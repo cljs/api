@@ -47,6 +47,3 @@ With lists:
 (pop '())
 ;; Error: Can't pop empty list
 ```
-
-## Signature
-[coll]

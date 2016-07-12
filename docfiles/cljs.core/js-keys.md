@@ -16,6 +16,3 @@ Returns the keys for the JavaScript object `obj`.
 (js-keys #js {:foo 1 :bar 2})
 ;;=> #js ["foo" "bar"]
 ```
-
-## Signature
-[obj]

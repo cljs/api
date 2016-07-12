@@ -26,6 +26,3 @@ Same numbers in decimal:
 (bit-shift-left 5 1)
 ;;=> 10
 ```
-
-## Signature
-[x n]

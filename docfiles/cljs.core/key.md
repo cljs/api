@@ -11,6 +11,3 @@ see also:
 Returns the key of the map entry.
 
 ## Examples
-
-## Signature
-[map-entry]

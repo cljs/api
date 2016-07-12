@@ -15,6 +15,3 @@ Sets the value of atom `a` to `new-value` without regard for the current value.
 Returns `new-value`.
 
 ## Examples
-
-## Signature
-[a new-value]

@@ -37,6 +37,3 @@ Insert the password of the second (index 1) user:
 ;;=> [{:name "James", :age 26}
 ;;    {:password "nhoJ", :name "John", :age 43}]
 ```
-
-## Signature
-[m [k & ks] v]

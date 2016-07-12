@@ -32,6 +32,3 @@ current result:
                  (* 10 (aget a i))))
 ;;=> #js [10 30 60]
 ```
-
-## Signature
-[a idx ret expr]

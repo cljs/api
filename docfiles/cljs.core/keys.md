@@ -11,6 +11,3 @@ see also:
 Returns a sequence of the keys in `hash-map`.
 
 ## Examples
-
-## Signature
-[hash-map]

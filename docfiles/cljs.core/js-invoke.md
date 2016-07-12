@@ -27,6 +27,3 @@ We can invoke it from ClojureScript:
 (js-invoke js/obj "my sum" 1 2)
 ;=> 3
 ```
-
-## Signature
-[obj s & args]

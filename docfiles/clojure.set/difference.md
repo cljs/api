@@ -14,8 +14,3 @@ see also:
 Return a set that is the first set without elements of the remaining sets.
 
 ## Examples
-
-## Signature
-[s1]
-[s1 s2]
-[s1 s2 & sets]

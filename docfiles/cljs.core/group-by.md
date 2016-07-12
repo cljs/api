@@ -16,6 +16,3 @@ The value at each key will be a vector of the corresponding elements in the
 order they appeared in `coll`.
 
 ## Examples
-
-## Signature
-[f coll]

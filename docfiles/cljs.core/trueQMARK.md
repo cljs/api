@@ -11,6 +11,3 @@ see also:
 Returns true if `x` is the value true, false otherwise.
 
 ## Examples
-
-## Signature
-[x]

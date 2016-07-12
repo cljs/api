@@ -24,9 +24,3 @@ supplied collections.
 (concat [1] [2] [3])
 ;; => (1 2 3)
 ```
-
-## Signature
-[]
-[x]
-[x y]
-[x y & zs]

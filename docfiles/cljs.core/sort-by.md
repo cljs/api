@@ -17,7 +17,3 @@ determined by comparing `(keyfn item)`.
 `comp` defaults to `compare`.
 
 ## Examples
-
-## Signature
-[keyfn coll]
-[keyfn comp coll]

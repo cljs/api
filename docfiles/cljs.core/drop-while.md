@@ -15,7 +15,3 @@ which `(pred item)` returns logical false.
 Returns a stateful transducer when no collection is provided.
 
 ## Examples
-
-## Signature
-[pred]
-[pred coll]

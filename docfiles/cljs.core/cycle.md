@@ -12,6 +12,3 @@ see also:
 Returns an infinite lazy sequence of repetitions of the items in `coll`.
 
 ## Examples
-
-## Signature
-[coll]

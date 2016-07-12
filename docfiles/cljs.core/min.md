@@ -24,8 +24,3 @@ Apply it to a collection:
 (apply min [1 2 3 4])
 ;; => 1
 ```
-
-## Signature
-[x]
-[x y]
-[x y & more]

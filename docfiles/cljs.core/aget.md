@@ -44,7 +44,3 @@ For JavaScript objects, use [`goog.object/get`] or the multi-arity [`goog.object
 [`goog.object/getValueByKeys`]:http://google.github.io/closure-library/api/namespace_goog_object.html#getValueByKeys
 
 ## Examples
-
-## Signature
-[array i]
-[array i & idxs]

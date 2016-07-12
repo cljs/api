@@ -23,10 +23,3 @@ accept number-of-`c`s arguments.
 Returns a transducer when no collection is provided.
 
 ## Examples
-
-## Signature
-[f]
-[f coll]
-[f c1 c2]
-[f c1 c2 c3]
-[f c1 c2 c3 & colls]

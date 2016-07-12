@@ -18,9 +18,3 @@ effects.
 Returns the value that was swapped in.
 
 ## Examples
-
-## Signature
-[a f]
-[a f x]
-[a f x y]
-[a f x y & more]

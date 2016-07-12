@@ -27,8 +27,3 @@ divided by all of the denominators.
 (/ 1 3)
 ;;=> 0.3333333333333333
 ```
-
-## Signature
-[x]
-[x y]
-[x y & more]

@@ -55,8 +55,3 @@ arguments, otherwise it returns the value of the last argument.
 (or false "foo")
 ;;=> "foo"
 ```
-
-## Signature
-[]
-[x]
-[x & next]

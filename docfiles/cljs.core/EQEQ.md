@@ -26,8 +26,3 @@ Behavior on non-number arguments is undefined.
 (== 1 2)
 ;;=> false
 ```
-
-## Signature
-[x]
-[x y]
-[x y & more]

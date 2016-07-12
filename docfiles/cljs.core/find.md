@@ -12,6 +12,3 @@ see also:
 Returns the map entry for key `k`, or nil if `k` is not found.
 
 ## Examples
-
-## Signature
-[coll k]

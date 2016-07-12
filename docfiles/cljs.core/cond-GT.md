@@ -26,6 +26,3 @@ after the first true test expression.
   (< a 20) (str " and less than 20"))
 ;;=> "12 is greater than 10 and less than 20"
 ```
-
-## Signature
-[expr & clauses]

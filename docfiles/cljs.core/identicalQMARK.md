@@ -12,6 +12,3 @@ see also:
 Returns true if `x` and `y` are the same object, false otherwise.
 
 ## Examples
-
-## Signature
-[x y]

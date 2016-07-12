@@ -20,7 +20,3 @@ supplied.
 Sequences, `nth` takes O(n) time.
 
 ## Examples
-
-## Signature
-[coll n]
-[coll n not-found]

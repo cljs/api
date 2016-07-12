@@ -11,6 +11,3 @@ see also:
 Splits `s` on `\n` or `\r\n`.
 
 ## Examples
-
-## Signature
-[s]

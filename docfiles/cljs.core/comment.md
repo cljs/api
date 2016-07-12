@@ -36,6 +36,3 @@ Inner forms must still be syntactically correct:
 (comment a : b)
 ;; Error: Invalid token :
 ```
-
-## Signature
-[& body]

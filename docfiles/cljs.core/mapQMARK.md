@@ -12,6 +12,3 @@ see also:
 Returns true if `x` is a map, false otherwise.
 
 ## Examples
-
-## Signature
-[x]

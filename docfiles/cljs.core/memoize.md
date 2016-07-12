@@ -14,6 +14,3 @@ results in memory. When calls with the same arguments are repeated often, a
 memoized function has higher performance at the expense of higher memory usage.
 
 ## Examples
-
-## Signature
-[f]

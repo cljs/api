@@ -11,6 +11,3 @@ see also:
 Same as `(next (next coll))`.
 
 ## Examples
-
-## Signature
-[coll]

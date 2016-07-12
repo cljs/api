@@ -10,6 +10,3 @@ see also:
 Returns a random permutation of `coll`.
 
 ## Examples
-
-## Signature
-[coll]

@@ -21,6 +21,3 @@ Equivalent to `delete obj[key]` in JavaScript.
 a
 ;;=> #js {:bar 2}
 ```
-
-## Signature
-[obj key]

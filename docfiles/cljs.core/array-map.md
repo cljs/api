@@ -23,6 +23,3 @@ Returns a new array map (a map implemented with arrays) with the supplied mappin
 (array-map :a 10 :b 20)
 ;;=> {:a 10 :b 20}
 ```
-
-## Signature
-[& keyvals]

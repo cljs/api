@@ -24,6 +24,3 @@ public definitions in all currently-loaded namespaces that match the
 ;;    cljs.core/some?
 ;;    cljs.core/when-some)
 ```
-
-## Signature
-[str-or-pattern]

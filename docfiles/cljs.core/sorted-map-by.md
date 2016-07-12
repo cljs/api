@@ -17,6 +17,3 @@ function.
 `keyvals` must be an even number of forms.
 
 ## Examples
-
-## Signature
-[comparator & keyvals]

@@ -37,7 +37,3 @@ tcoll
 (def a (persistent! tcoll))
 ;;=> {:a 1 :b 2}
 ```
-
-## Signature
-[tcoll key val]
-[tcoll key val & kvs]

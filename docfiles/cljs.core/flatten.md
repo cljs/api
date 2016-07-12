@@ -13,6 +13,3 @@ returns their contents as a single, flat sequence.
 `(flatten nil)` returns nil.
 
 ## Examples
-
-## Signature
-[x]

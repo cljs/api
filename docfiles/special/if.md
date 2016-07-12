@@ -31,6 +31,3 @@ false or nil).
   (if (empty? v) "empty!" "filled!"))
 ;;=> "This vector is filled!"
 ```
-
-## Signature
-[test then else?]

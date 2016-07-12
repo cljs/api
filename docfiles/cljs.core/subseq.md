@@ -20,7 +20,3 @@ Returns a sequence of those entries with keys `ek` for which
 `(test (.. sc comparator (compare ek key)) 0)` is true.
 
 ## Examples
-
-## Signature
-[sc test key]
-[sc start-test start-key end-test end-key]

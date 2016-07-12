@@ -23,10 +23,3 @@ arguments to `args`.
 (apply max 1 [2 3])
 ;;=> 3
 ```
-
-## Signature
-[f args]
-[f x args]
-[f x y args]
-[f x y z args]
-[f a b c d & args]

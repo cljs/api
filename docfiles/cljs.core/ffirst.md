@@ -18,6 +18,3 @@ Same as `(first (first coll))`.
 (ffirst [[1 2] [3 4] [5 6]])
 ;;=> 1
 ```
-
-## Signature
-[coll]

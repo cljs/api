@@ -49,6 +49,3 @@ With lists:
 (peek '())
 ;;=> nil
 ```
-
-## Signature
-[coll]

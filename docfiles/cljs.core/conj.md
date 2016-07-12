@@ -53,9 +53,3 @@ Add to set:
 (conj #{"a" "b" "c"} "d")
 ;;=> #{"a" "b" "c" "d"}
 ```
-
-## Signature
-[]
-[coll]
-[coll x]
-[coll x & xs]

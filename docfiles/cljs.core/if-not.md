@@ -13,7 +13,3 @@ If `test` is false or nil, evaluates and returns `then`. Otherwise, evaluates
 and returns `else`. `else` defaults to nil if not provided.
 
 ## Examples
-
-## Signature
-[test then]
-[test then else]

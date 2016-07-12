@@ -18,7 +18,3 @@ Creates a `seq` from a JavaScript array, starting at index `i` if given.
 (array-seq #js [1 2 3] 1)
 ;;=> (2 3)
 ```
-
-## Signature
-[array]
-[array i]

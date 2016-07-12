@@ -14,6 +14,3 @@ If `(cmap ch)` is nil, append ch to the new string.
 If `(cmap ch)` is non-nil, append `(str (cmap ch))` instead.
 
 ## Examples
-
-## Signature
-[s cmap]

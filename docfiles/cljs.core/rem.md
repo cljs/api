@@ -14,6 +14,3 @@ Returns the remainder of dividing numerator `n` by denominator `d`.
 Returns `NaN` when `d` is 0 (divide by 0 error).
 
 ## Examples
-
-## Signature
-[n d]

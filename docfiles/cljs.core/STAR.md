@@ -30,9 +30,3 @@ Returns the product of nums.
 (* 2 3 4)
 ;;=> 24
 ```
-
-## Signature
-[]
-[x]
-[x y]
-[x y & more]

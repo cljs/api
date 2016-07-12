@@ -14,7 +14,3 @@ sequence produced via functions that have side effects.
 `dorun` walks through the successive `next`s of the sequence and returns nil.
 
 ## Examples
-
-## Signature
-[coll]
-[n coll]

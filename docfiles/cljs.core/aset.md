@@ -42,7 +42,3 @@ obj
 ```
 
 ## Examples
-
-## Signature
-[array i val]
-[array idx idx2 & idxv]

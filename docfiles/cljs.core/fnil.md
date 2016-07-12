@@ -15,8 +15,3 @@ Note that the function `f` can take any number of arguments, not just the one(s)
 being nil-patched.
 
 ## Examples
-
-## Signature
-[f x]
-[f x y]
-[f x y z]

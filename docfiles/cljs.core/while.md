@@ -14,6 +14,3 @@ side-effect will cause `test` to become false or nil.
 Returns nil.
 
 ## Examples
-
-## Signature
-[test & body]

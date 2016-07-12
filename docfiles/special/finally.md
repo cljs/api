@@ -16,6 +16,3 @@ see also:
 an error or not, but they are never the return value of a `try` expression.
 
 ## Examples
-
-## Signature
-[expr*]

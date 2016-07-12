@@ -14,7 +14,3 @@ Returns a new collection consisting of `to` with all of the items of `from`
 A transducer may be supplied as `xform`.
 
 ## Examples
-
-## Signature
-[to from]
-[to xform from]

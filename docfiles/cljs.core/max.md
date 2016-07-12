@@ -12,8 +12,3 @@ see also:
 Returns the greatest number argument.
 
 ## Examples
-
-## Signature
-[x]
-[x y]
-[x y & more]

@@ -25,6 +25,3 @@ Same as `(next (first coll))`.
 (nfirst [[] [1 2]])
 ;;=> nil
 ```
-
-## Signature
-[coll]

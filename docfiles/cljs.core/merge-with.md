@@ -15,6 +15,3 @@ right) will be combined with the mapping in the result by calling `(f val-in-
 result val-in-latter)`.
 
 ## Examples
-
-## Signature
-[f & maps]

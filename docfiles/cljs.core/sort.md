@@ -15,7 +15,3 @@ Returns a sorted sequence of the items in `coll`.
 `comp` defaults to `compare`.
 
 ## Examples
-
-## Signature
-[coll]
-[comp coll]

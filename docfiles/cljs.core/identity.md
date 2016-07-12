@@ -11,6 +11,3 @@ see also:
 Returns its argument.
 
 ## Examples
-
-## Signature
-[x]

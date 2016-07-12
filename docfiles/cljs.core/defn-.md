@@ -14,6 +14,3 @@ Note: `:private` metadata is not currently enforced by the ClojureScript
 compiler.
 
 ## Examples
-
-## Signature
-[name & decls]

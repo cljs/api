@@ -26,8 +26,3 @@ one, false otherwise.
 (> 6 5 4 3 2)
 ;;=> true
 ```
-
-## Signature
-[x]
-[x y]
-[x y & more]

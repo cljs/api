@@ -17,7 +17,3 @@ if there are fewer than `n`.
 Returns a stateful transducer when no collection is provided.
 
 ## Examples
-
-## Signature
-[n]
-[n coll]

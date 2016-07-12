@@ -32,6 +32,3 @@ Import Google Closure classes.
 (Integer.fromString "10")
 ;;=> #<10>
 ```
-
-## Signature
-[& import-symbols-or-lists]

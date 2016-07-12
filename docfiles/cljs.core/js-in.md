@@ -30,6 +30,3 @@ Properties inherited from prototype chain are also detected:
 (js-in "toString" a)
 ;;=> true
 ```
-
-## Signature
-[key obj]

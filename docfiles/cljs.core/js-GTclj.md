@@ -38,7 +38,3 @@ Convert JSON data `a` to ClojureScript data:
 (js->clj a :keywordize-keys true)
 ;;=> {:foo 1, :bar 2, :baz [1 2 3]}
 ```
-
-## Signature
-[x]
-[x & opts]

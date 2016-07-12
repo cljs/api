@@ -30,6 +30,3 @@ Calls `seq` on its argument.
 (rest [])
 ;;=> ()
 ```
-
-## Signature
-[coll]

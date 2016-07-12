@@ -11,6 +11,3 @@ see also:
 Returns true if `f` is a function, false otherwise.
 
 ## Examples
-
-## Signature
-[f]

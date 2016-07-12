@@ -15,8 +15,3 @@ with fewer than `n` items at the end.
 Returns a stateful transducer when no collection is provided.
 
 ## Examples
-
-## Signature
-[n]
-[n coll]
-[n step coll]

@@ -14,6 +14,3 @@ see also:
 Returns a new lazy sequence.
 
 ## Examples
-
-## Signature
-[& body]

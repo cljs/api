@@ -25,6 +25,3 @@ see also:
 Returns a set of the distinct elements of `coll`.
 
 ## Examples
-
-## Signature
-[coll]

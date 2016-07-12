@@ -18,6 +18,3 @@ Takes a function `f` and returns a function that takes the same arguments as
 ((complement #(= a %)) 12)
 ;;=> true
 ```
-
-## Signature
-[f]

@@ -16,7 +16,3 @@ value. Returns a lazy sequence of partitions.
 Returns a stateful transducer when no collection is provided.
 
 ## Examples
-
-## Signature
-[f]
-[f coll]

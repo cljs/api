@@ -13,6 +13,3 @@ see also:
 Returns true if `x` is nil, false otherwise.
 
 ## Examples
-
-## Signature
-[x]

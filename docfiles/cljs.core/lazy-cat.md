@@ -27,6 +27,3 @@ needed.
         (lazy-seq z))</pre></td></tr></tbody></table>
 
 ## Examples
-
-## Signature
-[& colls]

@@ -16,6 +16,3 @@ Returns a sequence on the collection. If the collection is empty, returns nil.
 `seq` also works on strings.
 
 ## Examples
-
-## Signature
-[coll]

@@ -22,8 +22,3 @@ Has no effect on the map type (hashed/sorted).
 (dissoc {:key "value" :key2 "value2"} :key)
 ;;=> {:key2 "value2"}
 ```
-
-## Signature
-[coll]
-[coll k]
-[coll k & ks]

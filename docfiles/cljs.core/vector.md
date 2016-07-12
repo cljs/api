@@ -14,6 +14,3 @@ see also:
 Creates a new vector containing `args`.
 
 ## Examples
-
-## Signature
-[& args]

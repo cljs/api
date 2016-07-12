@@ -17,7 +17,3 @@ keys.
 Returns nil if the key is not found, or `not-found` if supplied.
 
 ## Examples
-
-## Signature
-[m ks]
-[m ks not-found]

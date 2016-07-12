@@ -20,6 +20,3 @@ Note that `reduce-kv` is supported on vectors, where the keys will be the
 ordinals.
 
 ## Examples
-
-## Signature
-[f init coll]

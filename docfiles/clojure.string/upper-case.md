@@ -10,6 +10,3 @@ see also:
 Converts string to all upper-case.
 
 ## Examples
-
-## Signature
-[s]

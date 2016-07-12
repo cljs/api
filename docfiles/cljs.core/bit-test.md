@@ -30,6 +30,3 @@ Same numbers in decimal:
 (bit-test 4 1)
 ;;=> false
 ```
-
-## Signature
-[x n]

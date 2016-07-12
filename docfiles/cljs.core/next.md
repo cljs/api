@@ -29,6 +29,3 @@ Returns nil if `coll` is empty.
 (next [])
 ;;=> nil
 ```
-
-## Signature
-[coll]

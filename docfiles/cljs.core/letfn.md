@@ -19,6 +19,3 @@ functions as well as `body`.
 [special forms]:http://clojure.org/special_forms
 
 ## Examples
-
-## Signature
-[fnspecs & body]

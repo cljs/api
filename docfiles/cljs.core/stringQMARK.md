@@ -10,6 +10,3 @@ see also:
 Returns true if `x` is a string, false otherwise.
 
 ## Examples
-
-## Signature
-[x]

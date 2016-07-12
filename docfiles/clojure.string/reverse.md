@@ -10,6 +10,3 @@ see also:
 Returns `s` with its characters reversed.
 
 ## Examples
-
-## Signature
-[s]

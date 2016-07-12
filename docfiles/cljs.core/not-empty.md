@@ -11,6 +11,3 @@ see also:
 Returns nil if `coll` is empty, else returns `coll`.
 
 ## Examples
-
-## Signature
-[coll]

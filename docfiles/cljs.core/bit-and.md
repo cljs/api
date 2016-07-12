@@ -26,7 +26,3 @@ Same numbers in decimal:
 (bit-and 12 10)
 ;;=> 8
 ```
-
-## Signature
-[x y]
-[x y & more]

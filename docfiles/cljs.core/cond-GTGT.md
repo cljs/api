@@ -28,6 +28,3 @@ after the first true test expression.
   sum?    (reduce +))
 ;;=> 6
 ```
-
-## Signature
-[expr & clauses]

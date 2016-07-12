@@ -13,6 +13,3 @@ see also:
 Returns true if `x` is a list, false otherwise.
 
 ## Examples
-
-## Signature
-[x]

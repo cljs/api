@@ -26,6 +26,3 @@ Returns nil when `coll` is nil.
 (first [])
 ;;=> nil
 ```
-
-## Signature
-[coll]

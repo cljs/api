@@ -11,6 +11,3 @@ see also:
 Returns a number one less than `x`.
 
 ## Examples
-
-## Signature
-[x]

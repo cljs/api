@@ -87,6 +87,3 @@ Same as above, but with more nesting:
 (- (/ (+ c 3) 2) 1)
 ;;=> 3
 ```
-
-## Signature
-[x & forms]

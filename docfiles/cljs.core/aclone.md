@@ -25,6 +25,3 @@ a
 b
 ;;=> #js [4 2 3]
 ```
-
-## Signature
-[arr]

@@ -11,6 +11,3 @@ see also:
 Bitwise shift right with zero fill
 
 ## Examples
-
-## Signature
-[x n]

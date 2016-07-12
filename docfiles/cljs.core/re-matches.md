@@ -10,6 +10,3 @@ see also:
 Returns the result of `(re-find re s)` if `re` fully matches `s`.
 
 ## Examples
-
-## Signature
-[re s]

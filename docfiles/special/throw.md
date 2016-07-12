@@ -15,6 +15,3 @@ see also:
 `(throw (js/Error. "Oops!"))`
 
 ## Examples
-
-## Signature
-[expr]

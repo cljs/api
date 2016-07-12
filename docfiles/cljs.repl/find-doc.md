@@ -31,6 +31,3 @@ contains a match for `re-string-or-pattern`.
 ;;
 ;;=> nil
 ```
-
-## Signature
-[re-string-or-pattern]

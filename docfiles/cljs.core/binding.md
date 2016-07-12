@@ -32,6 +32,3 @@ evaluated before the vars are bound to their new values.
 *foo*
 ;;=> 1
 ```
-
-## Signature
-[bindings & body]

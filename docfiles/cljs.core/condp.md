@@ -31,6 +31,3 @@ returned if no clause matches.
 If no default expression is provided and no clause matches, an Error is thrown.
 
 ## Examples
-
-## Signature
-[pred expr & clauses]

@@ -22,6 +22,3 @@ JavaScript.
 (char "foo")
 ;; Error: Argument to char must be a character or number
 ```
-
-## Signature
-[x]

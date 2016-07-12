@@ -22,6 +22,3 @@ a
 a
 ;;=> nil
 ```
-
-## Signature
-[& names]

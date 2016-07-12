@@ -16,6 +16,3 @@ Depending on the type of collection, `take-last` may be no faster than linear
 time. For vectors, please use `subvec`.
 
 ## Examples
-
-## Signature
-[n coll]

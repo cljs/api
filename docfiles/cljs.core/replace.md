@@ -17,7 +17,3 @@ corresponding val in `smap`.
 Returns a transducer when `coll` is not provided.
 
 ## Examples
-
-## Signature
-[smap]
-[smap coll]

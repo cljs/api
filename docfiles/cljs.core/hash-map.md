@@ -14,6 +14,3 @@ Returns a new hash map with supplied mappings.
 `keyvals` must be an even number of forms.
 
 ## Examples
-
-## Signature
-[& keyvals]

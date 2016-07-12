@@ -17,7 +17,3 @@ Function `f` should return a collection.
 Returns a transducer when no collections are provided.
 
 ## Examples
-
-## Signature
-[f]
-[f & colls]

@@ -13,7 +13,3 @@ exclusive.
 `end` defaults to the length of the string.
 
 ## Examples
-
-## Signature
-[s start]
-[s start end]

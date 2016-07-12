@@ -22,6 +22,3 @@ Returns true if `x` is a JavaScript array, false otherwise.
 (array? "hi")
 ;;=> false
 ```
-
-## Signature
-[x]

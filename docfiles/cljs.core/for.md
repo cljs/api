@@ -20,6 +20,3 @@ coll-exprs can refer to bindings created in prior binding-forms. Supported
 modifiers are: `:let [binding-form expr ...]`, `:while test`, `:when test`.
 
 ## Examples
-
-## Signature
-[seq-exprs body-expr]

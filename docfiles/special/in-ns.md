@@ -18,6 +18,3 @@ Sets `*cljs-ns*` to the namespace `name`.
 ```clj
 (in-ns 'foo.core)
 ```
-
-## Signature
-[name]

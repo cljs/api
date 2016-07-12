@@ -14,6 +14,3 @@ see also:
 Returns a new sorted set with supplied `keys`.
 
 ## Examples
-
-## Signature
-[& keys]

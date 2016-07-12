@@ -21,8 +21,3 @@ Returns a partition with less than `n` items if there are not enough padding
 elements.
 
 ## Examples
-
-## Signature
-[n coll]
-[n step coll]
-[n step pad coll]

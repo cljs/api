@@ -16,7 +16,3 @@ sequence produced via functions that have side effects.
 and causing the entire sequence to reside in memory at one time.
 
 ## Examples
-
-## Signature
-[coll]
-[n coll]

@@ -32,8 +32,5 @@ implementations for protocols.
 
 ## Examples
 
-## Signature
-[type-sym & impls]
-
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/deftype]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/deftype.md

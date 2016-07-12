@@ -32,6 +32,3 @@ Returns true if set happened, false otherwise.
 @a
 ;;=> "def"
 ```
-
-## Signature
-[a oldval newval]

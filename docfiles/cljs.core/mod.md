@@ -26,6 +26,3 @@ Truncates toward negative infinity.
 (mod 5 0)
 ;;=> NaN
 ```
-
-## Signature
-[n d]

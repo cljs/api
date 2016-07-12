@@ -15,6 +15,3 @@ If a key occurs in more than one map, the mapping from the rightmost map will
 "win".
 
 ## Examples
-
-## Signature
-[& maps]

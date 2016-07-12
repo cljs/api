@@ -49,7 +49,3 @@ When applied to a vector, returns a new vector that contains value `v` at index
 (assoc my-vec 3 "foo")
 ;;=> Error: Index 3 out of bounds  [0,0]
 ```
-
-## Signature
-[coll k v]
-[coll k v & kvs]

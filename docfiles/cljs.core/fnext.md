@@ -26,6 +26,3 @@ Same as `(first (next coll))`
 (fnext [])
 ;;=> nil
 ```
-
-## Signature
-[coll]

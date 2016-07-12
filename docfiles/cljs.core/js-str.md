@@ -21,6 +21,3 @@ Equivalent to `''+s` in JavaScript.
 (js-str #js {:foo 1})
 ;;=> "[Object object]"
 ```
-
-## Signature
-[s]

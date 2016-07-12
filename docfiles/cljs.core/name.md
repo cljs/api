@@ -44,8 +44,5 @@ Strings have no concept of a namespace:
 ;;=> "foo"
 ```
 
-## Signature
-[x]
-
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/identity]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/identity.md

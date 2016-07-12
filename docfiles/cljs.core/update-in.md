@@ -16,10 +16,3 @@ arguments and return the new value. Returns a new nested structure.
 If any levels do not exist, hash-maps will be created.
 
 ## Examples
-
-## Signature
-[m [k & ks] f]
-[m [k & ks] f a]
-[m [k & ks] f a b]
-[m [k & ks] f a b c]
-[m [k & ks] f a b c & args]

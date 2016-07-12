@@ -27,6 +27,3 @@ Same numbers in decimal:
 (bit-clear 15 2)
 ;;=> 11
 ```
-
-## Signature
-[x n]

@@ -31,6 +31,3 @@ Recursively transforms ClojureScript values to JavaScript.
 (clj->js [1 {:foo "bar"} 4])
 ;;=> #js [1 #js {:foo "bar"} 4]
 ```
-
-## Signature
-[x]

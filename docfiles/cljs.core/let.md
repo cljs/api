@@ -32,6 +32,3 @@ syntax and scope rules.
 [special forms]:http://clojure.org/special_forms
 
 ## Examples
-
-## Signature
-[bindings & body]

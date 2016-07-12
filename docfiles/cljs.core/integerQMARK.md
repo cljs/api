@@ -11,6 +11,3 @@ see also:
 Returns true if `n` is an integer, false otherwise.
 
 ## Examples
-
-## Signature
-[n]

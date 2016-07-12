@@ -31,9 +31,3 @@ Returns the sum of nums.
 (+ 1 2 3)
 ;;=> 6
 ```
-
-## Signature
-[]
-[x]
-[x y]
-[x y & more]

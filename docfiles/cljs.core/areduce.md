@@ -19,6 +19,3 @@ It can also use `idx` to get the current index.
 (areduce a i ret 0 (+ ret (aget a i)))
 ;;=> 6
 ```
-
-## Signature
-[a idx ret init expr]

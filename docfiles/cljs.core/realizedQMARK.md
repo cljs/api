@@ -11,6 +11,3 @@ see also:
 Returns true if a value has been produced for a lazy sequence.
 
 ## Examples
-
-## Signature
-[x]

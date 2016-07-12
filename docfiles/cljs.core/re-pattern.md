@@ -10,6 +10,3 @@ see also:
 Returns an instance of RegExp which has compiled the provided string.
 
 ## Examples
-
-## Signature
-[s]

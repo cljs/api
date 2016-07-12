@@ -42,6 +42,3 @@ Not collections:
 (coll? nil)
 ;;=> false
 ```
-
-## Signature
-[x]

@@ -56,6 +56,3 @@ This expands to:
         (range)))))
 ;;=> 1140
 ```
-
-## Signature
-[x & forms]

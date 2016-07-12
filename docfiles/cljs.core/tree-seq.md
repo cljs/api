@@ -19,6 +19,3 @@ true.
 `root` is the root node of the tree.
 
 ## Examples
-
-## Signature
-[branch? children root]

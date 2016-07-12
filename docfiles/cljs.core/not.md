@@ -12,6 +12,3 @@ see also:
 Returns true if `x` is logical false, false otherwise.
 
 ## Examples
-
-## Signature
-[x]

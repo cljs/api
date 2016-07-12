@@ -11,6 +11,3 @@ see also:
 Returns the value in the map entry.
 
 ## Examples
-
-## Signature
-[map-entry]

@@ -37,6 +37,3 @@ other object.
 (compare 10 (list 1 2 3))
 ;; Error: compare on non-nil objects of different types
 ```
-
-## Signature
-[x y]

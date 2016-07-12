@@ -32,6 +32,3 @@ Returns a sequence of all but the last item in `s`.
 (butlast [])
 ;;=> nil
 ```
-
-## Signature
-[s]

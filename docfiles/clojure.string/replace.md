@@ -21,6 +21,3 @@ The options for match / replacement are:
 | regex  | function    |
 
 ## Examples
-
-## Signature
-[s match replacement]

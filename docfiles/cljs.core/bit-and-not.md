@@ -34,7 +34,3 @@ Same result using `bit-and` and `bit-not`:
 (bit-and 12 (bit-not 10))
 ;;=> 4
 ```
-
-## Signature
-[x y]
-[x y & more]
