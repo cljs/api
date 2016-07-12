@@ -5,11 +5,10 @@ see also:
 
 ## Summary
 
+Determines if the given collection implements [doc:cljs.core/IAssociative]
+(e.g. maps and vectors).
+
 ## Details
-
-Returns true if `coll` implements the `IAssociative` protocol, false otherwise.
-
-Maps and vectors are associative.
 
 ## Examples
 
@@ -26,6 +25,3 @@ Maps and vectors are associative.
 (associative? '(1 2 3))
 ;;=> false
 ```
-
-## Signature
-[coll]

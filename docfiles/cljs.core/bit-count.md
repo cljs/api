@@ -5,9 +5,11 @@ see also:
 
 ## Summary
 
-## Details
+`(bit-count x)`
 
 Counts the number of bits set in `x`.
+
+## Details
 
 ## Examples
 
@@ -24,6 +26,3 @@ Same number in decimal:
 (bit-count 11)
 ;;=> 3
 ```
-
-## Signature
-[x]

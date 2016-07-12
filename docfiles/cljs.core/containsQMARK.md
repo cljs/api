@@ -9,7 +9,7 @@ see also:
 
 ## Details
 
-Returns true if the `coll` contains the lookup key `k`, otherwise returns false.
+Returns true if the `coll` contains the lookup key `v`, otherwise returns false.
 
 Note that for numerically indexed collections like vectors and arrays, this
 tests if the numeric key is within the range of indexes.
@@ -59,6 +59,3 @@ Lists and Sequences do not provide lookups, so `contains?` will not work:
 (contains? (range 3) 1)
 ;;=> false
 ```
-
-## Signature
-[coll k]

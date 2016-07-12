@@ -7,7 +7,7 @@ see also:
 
 ## Details
 
-Returns the number of items in `x`.
+Returns the number of items in `coll`.
 
 `count` works on arrays, lists, maps, sets, strings, and vectors.
 
@@ -31,6 +31,3 @@ Returns the number of items in `x`.
 (count {:key "value" :key2 "value2"})
 ;;=> 2
 ```
-
-## Signature
-[x]

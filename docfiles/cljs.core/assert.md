@@ -5,12 +5,12 @@ see also:
 
 ## Summary
 
-## Details
-
-Evaluates expression `expr` and throws an exception if it does not evaluate to
-logical true.  Exception will include `message` if given.
+`(assert x)` - throw exception if `x` is false  
+`(assert x message)` - include message if assertion fails
 
 Returns `nil`.
+
+## Details
 
 ## Examples
 
@@ -25,7 +25,3 @@ Returns `nil`.
 ;;=> Uncaught Error: Assert failed: 1 is not 2
 ;;   (= 1 2)
 ```
-
-## Signature
-[expr]
-[expr message]

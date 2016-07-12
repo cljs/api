@@ -8,9 +8,11 @@ see also:
 
 ## Summary
 
-## Details
+`(array 1 2 3 ...)`
 
-Creates a JavaScript array containing `args`.
+Creates a JavaScript array containing the given args.
+
+## Details
 
 The tagged literal `#js [1 2 3]` is equivalent to `(array 1 2 3)`
 
@@ -36,6 +38,3 @@ When creating nested JavaScript arrays, you can opt to use `clj->js` instead:
 (clj->js [1 2 [3 4]])
 ;;=> #js [1 2 #js [3 4]]
 ```
-
-## Signature
-[& args]

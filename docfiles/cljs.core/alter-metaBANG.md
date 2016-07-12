@@ -7,9 +7,11 @@ see also:
 
 ## Summary
 
-## Details
+`(alter-meta! data f & args)`
 
 Alter the metadata of `data` to be `(apply f its-current-meta args)`.
+
+## Details
 
 Metadata of vars cannot be altered since they are statically determined at compile-time.
 
@@ -38,6 +40,3 @@ Metadata of vars cannot be altered:
 (:bar (meta #'a))
 ;;=> nil
 ```
-
-## Signature
-[data f & args]

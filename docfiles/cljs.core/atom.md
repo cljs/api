@@ -10,9 +10,10 @@ see also:
 
 ## Summary
 
-## Details
+`(atom x)` - creates atom with initial value of `x`
+`(atom x opts)` - adds metadata or validator to atom
 
-Creates and returns an atom with an initial value of `x`.
+## Details
 
 `opts` is an optional map with optional keys `:meta` and `:validator`.
 
@@ -37,7 +38,3 @@ for more information.
 @a
 ;;=> 3
 ```
-
-## Signature
-[x]
-[x opts]

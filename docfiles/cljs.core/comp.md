@@ -25,6 +25,3 @@ the next left function, and so on.
 (f 1 2 3)
 ;;=> "7"
 ```
-
-## Signature
-[& fns]

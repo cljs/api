@@ -52,7 +52,3 @@ Compare to the equivalent form using the thread-first `->` macro:
     (.replace "A" "X"))
 ;;=> "X B C D"
 ```
-
-## Signature
-[o form]
-[o form & more]

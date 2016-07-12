@@ -38,7 +38,3 @@ for the function.
     (\* a b c)))</pre></td></tr></tbody></table>
 
 ## Examples
-
-## Signature
-[name doc-string? attr-map? [params*] prepost-map? body]
-[name doc-string? attr-map? ([params*] prepost-map? body) + attr-map?]
