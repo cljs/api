@@ -55,7 +55,6 @@
       (transform-key "summary for compiler" :summary-compiler)
       (transform-key "details" :details)
       (transform-key "details for compiler" :details-compiler)
-      (transform-key "signature" :signature section-as-list)
       (transform-key "usage" :usage section-as-list)
       (transform-key "see also" :see-also section-as-list)
       (transform-key "moved" :moved)

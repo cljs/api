@@ -22,14 +22,13 @@
          [:summary-compiler "Summary for Compiler"]
          [:details-compiler "Details for Compiler"]
          [:examples "Examples"]
-         [:signature "Signature"]
          [:usage "Usage"]
          [:notes "Notes"]
          [:todo "TODO"]
          [:md-biblio biblio-line]]
    :required?    #{:summary :details :examples}
    :ns-required? #{:summary :details}
-   :list?        #{:signature :usage}})
+   :list?        #{:usage}})
 
 (defn yaml-list [l]
   (string/join "\n" (map #(str "  - " %) l)))

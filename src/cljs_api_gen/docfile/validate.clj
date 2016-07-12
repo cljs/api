@@ -51,7 +51,6 @@
    "details"
    "details for compiler"
    "usage"
-   "signature"
    "examples"
    "see also"
    "moved"
@@ -101,26 +100,6 @@
           expected (str (encode-fullname full-name) docfile-ext)]
       (when (not= actual expected)
         (str full-name " should be in " expected ", not " actual)))))
-
-;;--------------------------------------------------------------------------------
-;; Validate Signature
-;;--------------------------------------------------------------------------------
-
-(defn signature-error-msg
-  "If signature is not valid, return error message."
-  [sig]
-  (let [forms (try (read-forms-from-str sig) (catch Exception e nil))
-        valid? (and (= 1 (count forms))
-                    (vector? (first forms)))]
-    (when-not valid?
-      (str "signature " (pr-str sig) " must be a single valid vector"))))
-
-(defn signatures-error-msg
-  "If signatures are not valid, return all error messages."
-  [{:keys [signature] :as doc}]
-  (let [msgs (keep signature-error-msg signature)]
-    (when (seq msgs)
-      (join "\n" msgs))))
 
 ;;--------------------------------------------------------------------------------
 ;; Validate Symbol
@@ -192,7 +171,6 @@
   "All error detectors, each producing error messages if problem found."
   [required-sections-error-msg
    unrecognized-sections-error-msg
-   signatures-error-msg
    symbol-unknown-error-msg
    see-also-missing-error-msg
    doclink-missing-error-msg
