@@ -16,6 +16,3 @@ Load file at `filename`, then compiles and evaluates its code.
 ```clj
 (load-file "path/to/foo.cljs")
 ```
-
-## Signature
-[filename]

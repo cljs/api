@@ -60,6 +60,3 @@ and libraries into the current namespace.
 ```
 
 ## Examples
-
-## Signature
-[name & references]

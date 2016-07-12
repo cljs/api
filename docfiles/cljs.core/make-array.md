@@ -12,6 +12,3 @@ see also:
 Creates an empty JavaScript array of size `size`.
 
 ## Examples
-
-## Signature
-[size]

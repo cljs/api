@@ -16,6 +16,3 @@ first item of `coll`, followed by applying `f` to 1 and the second item in
 Function `f` should accept 2 arguments, index and item.
 
 ## Examples
-
-## Signature
-[f coll]

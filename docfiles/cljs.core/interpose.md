@@ -12,6 +12,3 @@ see also:
 Returns a lazy seq of the elements of `coll` separated by `sep`.
 
 ## Examples
-
-## Signature
-[sep coll]

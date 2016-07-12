@@ -12,6 +12,3 @@ see also:
 Returns true if `n` is greater than 0, false otherwise.
 
 ## Examples
-
-## Signature
-[n]

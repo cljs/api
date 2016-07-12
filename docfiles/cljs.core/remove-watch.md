@@ -31,6 +31,3 @@ have originally been set by `add-watch`.
 (swap! a assoc :foo 3)
 ;;=> nothing will be printed...
 ```
-
-## Signature
-[a key]

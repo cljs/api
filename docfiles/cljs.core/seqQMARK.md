@@ -19,6 +19,3 @@ Returns true if `x` is a sequence, false otherwise.
 All collections can be converted into a sequence using `seq`.
 
 ## Examples
-
-## Signature
-[x]

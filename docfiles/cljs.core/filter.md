@@ -17,7 +17,3 @@ false return values will be included.
 Returns a transducer when no collection is provided.
 
 ## Examples
-
-## Signature
-[f]
-[f coll]

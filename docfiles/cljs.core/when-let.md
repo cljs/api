@@ -16,6 +16,3 @@ When `test` is logical true, evaluates `body` with the value of `test` bound to
 `x`.
 
 ## Examples
-
-## Signature
-[[x test] & body]

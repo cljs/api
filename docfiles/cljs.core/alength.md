@@ -27,6 +27,3 @@ For interop, it returns the length of a JavaScript array or string.
 (count a)
 ;;=> 3
 ```
-
-## Signature
-[a]

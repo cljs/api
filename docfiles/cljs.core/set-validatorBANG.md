@@ -21,6 +21,3 @@ called, an Error will be thrown and the validator will not be set.
 `(set-validator! my-atom nil)` will remove the validator from `my-atom`.
 
 ## Examples
-
-## Signature
-[a fn]

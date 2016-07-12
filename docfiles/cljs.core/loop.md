@@ -28,6 +28,3 @@ Acts as a `recur` target, which will allow tail-call optimization.
 ;;
 ;;=> nil
 ```
-
-## Signature
-[[& bindings] & body-exprs]

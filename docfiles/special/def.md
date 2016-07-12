@@ -61,11 +61,6 @@ c
 ;;=> 42
 ```
 
-## Signature
-[symbol]
-[symbol init]
-[symbol doc-string init]
-
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/binding]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/binding.md
 [doc:syntax/earmuffs]:https://github.com/cljs/api/blob/master/docfiles/syntax/earmuffs.md

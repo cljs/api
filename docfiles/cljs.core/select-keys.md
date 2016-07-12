@@ -10,6 +10,3 @@ see also:
 Returns a map containing only those entries in `map` whose key is in `keys`.
 
 ## Examples
-
-## Signature
-[map keys]

@@ -11,6 +11,3 @@ see also:
 Returns true if `o` is an instance of type `t`, false otherwise.
 
 ## Examples
-
-## Signature
-[t o]

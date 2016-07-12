@@ -32,6 +32,3 @@ watch function.
 ;; old: {}
 ;; new: {:foo "bar"}
 ```
-
-## Signature
-[a key f]

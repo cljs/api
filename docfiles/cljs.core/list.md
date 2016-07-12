@@ -12,6 +12,3 @@ see also:
 Creates a new list containing `items`.
 
 ## Examples
-
-## Signature
-[& items]

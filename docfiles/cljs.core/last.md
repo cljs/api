@@ -31,6 +31,3 @@ Returns the last item in `coll` in linear time.
 (last [])
 ;;=> nil
 ```
-
-## Signature
-[coll]

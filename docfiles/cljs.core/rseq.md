@@ -15,6 +15,3 @@ Returns nil if `coll` is empty.
 `coll` must be a vector or a sorted-map.
 
 ## Examples
-
-## Signature
-[coll]

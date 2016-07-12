@@ -12,6 +12,3 @@ see also:
 Sets `js-var` to `val` using the JavaScript `=` operator.
 
 ## Examples
-
-## Signature
-[js-var val]

@@ -20,6 +20,3 @@ Returns a new JavaScript object using the supplied mappings.
 (js-obj "foo" 1 "bar" 2)
 ;;=> #js {:foo 1, :bar 2}
 ```
-
-## Signature
-[& keyvals]

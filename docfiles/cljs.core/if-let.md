@@ -15,7 +15,3 @@ When `test` is logical true, evaluates `then` with the value of `test` bound to
 `else` defaults to nil.
 
 ## Examples
-
-## Signature
-[[x test] then]
-[[x test] then else]

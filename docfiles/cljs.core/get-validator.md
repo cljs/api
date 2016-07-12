@@ -12,6 +12,3 @@ see also:
 Returns the validator function for atom `a`.
 
 ## Examples
-
-## Signature
-[a]

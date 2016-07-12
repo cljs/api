@@ -27,6 +27,3 @@ metadata.
 (meta b)
 ;;=> {:bar true}
 ```
-
-## Signature
-[obj m]

@@ -12,6 +12,3 @@ see also:
 Returns a new JavaScript array from the elements of `aseq`.
 
 ## Examples
-
-## Signature
-[aseq]

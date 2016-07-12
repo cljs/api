@@ -11,6 +11,3 @@ see also:
 When `test` is not nil, evaluates `body` with `x` bound to the value of `test`.
 
 ## Examples
-
-## Signature
-[[x test] & body]

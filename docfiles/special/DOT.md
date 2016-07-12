@@ -101,12 +101,6 @@ You can get the value at property `"foo"` with any of the following:
 ;;=> "bar"
 ```
 
-## Signature
-[o -p]
-[o m]
-[o m 1 2]
-[o (m 1 2)]
-
 ## Usage
 (.-foo obj)
 (.foo obj)

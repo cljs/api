@@ -24,6 +24,3 @@ requires that the symbol resolve to a Var defined in a namespace for which the
 ;;
 ;;=> nil
 ```
-
-## Signature
-[name]

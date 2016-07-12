@@ -27,6 +27,3 @@ Returns an object of the same type and value as `obj`, with
 (meta b)
 ;;=> {:foo true, :bar true}
 ```
-
-## Signature
-[obj f & args]

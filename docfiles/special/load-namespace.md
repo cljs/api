@@ -18,6 +18,3 @@ and only once.
 ```clj
 (load-namespace 'clojure.set)
 ```
-
-## Signature
-[name]

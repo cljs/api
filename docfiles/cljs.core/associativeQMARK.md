@@ -25,3 +25,6 @@ Determines if the given collection implements [doc:cljs.core/IAssociative]
 (associative? '(1 2 3))
 ;;=> false
 ```
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/IAssociative]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/IAssociative.md

@@ -30,7 +30,3 @@ in `body`. The value of the last expression in `body` is the return value of
 calling the function.
 
 ## Examples
-
-## Signature
-[name? [params*] prepost-map? body]
-[name? ([params*] prepost-map? body)+]
