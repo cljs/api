@@ -6,6 +6,11 @@ see also:
 
 ## Summary
 
+Commas are ignored and can be used for assisting readability.
+
+`[1, 2, 3]` => `[1 2 3]`
+`{:a 1, :b 2}` => `{:a 1 :b 2}`
+
 ## Details
 
 A comma is treated as whitespace when appearing outside a string.

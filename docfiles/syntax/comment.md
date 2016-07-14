@@ -9,6 +9,11 @@ see also:
 
 ## Summary
 
+A single line comment.
+
+`; this is a comment`
+`;; two semicolons is also common`
+
 ## Details
 
 "Comments out" everything after `;` on the current line.

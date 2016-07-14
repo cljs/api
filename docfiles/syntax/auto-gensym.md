@@ -8,6 +8,10 @@ see also:
 
 ## Summary
 
+Shorthand for generating unique symbols inside a macro.
+
+`foo#` => `foo__135__auto__`
+
 ## Details
 
 (Only intended for use in a [doc:syntax/syntax-quote].)
@@ -47,9 +51,6 @@ Create safe local bindings:
    (+ x# 2))
 ;;=> (cljs.user/let [x__146__auto__ 1] (cljs.user/+ x__146__auto__ 2))
 ```
-
-## Usage
-foo#
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/gensym]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/gensym.md

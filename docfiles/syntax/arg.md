@@ -7,6 +7,14 @@ see also:
 
 ## Summary
 
+Use `%` as the implicit argument to a [doc:syntax/function], or use the following
+if there are more than one:
+
+`%1` - first arg
+`%2` - second arg
+`%3` - first arg
+`%&` - rest of the args
+
 ## Details
 
 Special vars for accessing implicit function arguments.

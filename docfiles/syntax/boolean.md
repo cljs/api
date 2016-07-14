@@ -11,6 +11,8 @@ see also:
 
 ## Summary
 
+The boolean literals are `true` and `false`.
+
 ## Details
 
 Special symbols representing the boolean literals `true` and `false`.
@@ -25,7 +27,3 @@ true
 false
 ;;=> false
 ```
-
-## Usage
-true
-false

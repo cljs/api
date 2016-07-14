@@ -8,6 +8,14 @@ see also:
 
 ## Summary
 
+A single character string.
+
+`\c` => `"c"`
+`\A` => `"A"`
+`\newline` => `"\n"`
+`\u00a1` => `"¡"`
+`\o256` => `"®"`
+
 ## Details
 
 A single character string.  Carried over from Clojure for
