@@ -7,11 +7,11 @@ see also:
 
 ## Summary
 
-## Details
-
 A naming convention for dynamic vars (unenforced).
 
 `(def ^:dynamic *foo* 1)`
+
+## Details
 
 Dynamic vars are global vars that you intend to temporarily rebind with
 [doc:cljs.core/binding].
@@ -38,9 +38,6 @@ special global vars (e.g. [doc:cljs.core/*clojurescript-version*],
 (print-foo)
 ;; 1
 ```
-
-## Usage
-*foo*
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/binding]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/binding.md

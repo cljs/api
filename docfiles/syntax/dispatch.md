@@ -13,24 +13,24 @@ see also:
 
 ## Summary
 
+As a general pattern, syntax forms prefixed with `#` are related to their
+standalone forms:
+
+| relation               | original                            | with `#` prefix                                      |
+|------------------------|-------------------------------------|------------------------------------------------------|
+| string-related         | [doc:syntax/string]                 | [doc:syntax/regex]                                   |
+| code-related           | [doc:syntax/list]                   | [doc:syntax/function]                                |
+| lookup-related         | [doc:syntax/map]                    | [doc:syntax/set]                                     |
+| quote-related          | [doc:syntax/quote]                  | [doc:syntax/var]                                     |
+| ignore-related         | [doc:syntax/unused]                 | [doc:syntax/ignore]                                  |
+| name-related           | [`foo (symbol)`][doc:syntax/symbol] | [`#foo (tagged literal)`][doc:syntax/tagged-literal] |
+| conditional-related    | [doc:syntax/predicate]              | [doc:syntax/cond]                                    |
+
 ## Details
 
 `#` is a prefix character that is called the dispatch macro, because it allows
 the behavior of the reader to be dispatched to another table, indexed by the
 character following the `#`.
-
-Syntax forms prefixed with `#` are made to bear some similarity to their
-original forms:
-
-| original                           | with `#` prefix                                  | relation               |
-|------------------------------------|--------------------------------------------------|------------------------|
-| [doc:syntax/string]                    | [doc:syntax/regex]                                   | string-related         |
-| [doc:syntax/list]                      | [doc:syntax/function]                                | code-related           |
-| [doc:syntax/map]                       | [doc:syntax/set]                                     | lookup-related         |
-| [doc:syntax/quote]                     | [doc:syntax/var]                                     | quote-related          |
-| [doc:syntax/unused]                    | [doc:syntax/ignore]                                  | ignore-related         |
-| [`foo (symbol)`][doc:syntax/symbol]    | [`#foo (tagged literal)`][doc:syntax/tagged-literal] | name-related           |
-| [doc:syntax/predicate]                 | [doc:syntax/cond]                                    | conditional-related    |
 
 ## Examples
 
@@ -97,9 +97,6 @@ Reader Conditional:
 #?(:clj "Clojure" :cljs "ClojureScript")
 ;;=> "ClojureScript"
 ```
-
-## Usage
-#...
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:syntax/symbol]:https://github.com/cljs/api/blob/master/docfiles/syntax/symbol.md

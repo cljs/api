@@ -10,11 +10,12 @@ see also:
 
 ## Summary
 
+Shorthand for creating an anonymous function. Use [doc:syntax/arg] to refer
+to the arguments.
+
+`#(...)` => `(fn [args] (...))`
+
 ## Details
-
-Shorthand for creating an anonymous function:
-
-`#(...)` = `(fn [args] (...))`
 
 Use the following to access the implicit function arguments:
 
@@ -38,6 +39,3 @@ automatically assigned `%` argument names.
 (f 1 2 3 4 5)
 ;; prints: 1 2 (3 4 5)
 ```
-
-## Usage
-#(...)

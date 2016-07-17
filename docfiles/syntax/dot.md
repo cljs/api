@@ -8,9 +8,20 @@ see also:
 
 ## Summary
 
+Dots can be used inside symbols for JS interop.
+
+`(.foo bar)` => `bar.foo()`
+`(-.foo bar)` => `bar.foo`
+`(foo.)` => `new foo()`
+
+The following are also supported (though not valid in Clojure)
+
+`foo.bar.baz` => `foo.bar.baz`
+`(foo.bar.baz)` => `foo.bar.baz()`
+
 ## Details
 
-Dots can be used inside symbols. Its meaning depends on its position in the symbol:
+A dot's meaning depends on its position in the symbol:
 
 - `.` (by itself), `.-foo`, `.foo` all refer to the interop [`. (special form)`][doc:special/.].
 - `foo.` is constructor sugar, meaning [`(new foo)`][doc:special/new].

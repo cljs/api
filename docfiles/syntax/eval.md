@@ -6,6 +6,8 @@ see also:
 
 ## Summary
 
+The ability to evaluate forms at reader-time should be ignored in ClojureScript.
+
 ## Details
 
 Allows the reader to evaluate the following form.
@@ -36,6 +38,3 @@ The following is the output for the ClojureScript compiler on the JVM:
 #=(clojure.core/+ 1 2)
 ;;=> 3
 ```
-
-## Usage
-#=...

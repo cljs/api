@@ -3,11 +3,6 @@ name: syntax/destructure-map
 display as: "destructure {}"
 see also:
   - syntax/destructure-vector
-search terms:
-  - :strs
-  - :keys
-  - :syms
-  - :as
 ---
 
 ## Summary

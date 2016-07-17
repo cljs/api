@@ -8,6 +8,17 @@ see also:
 
 ## Summary
 
+Ignore the next well-formed expression.
+
+`[1 #_foo 2 3]` => `[1 2 3]`
+
+Also useful for commenting out a multi-line expression:
+
+```
+#_(defn foo [a b]
+    (+ a b))
+```
+
 ## Details
 
 Causes the following form to be completely skipped by the reader.  This is a
@@ -27,4 +38,11 @@ the trailing parentheses:
 (defn foo []
   (println "hello")
   #_(println "world"))
+```
+
+Whitespace is optional:
+
+```clj
+[1 2 #_ foo 3]
+;;=> [1 2 3]
 ```
