@@ -7,6 +7,10 @@ see also:
 
 ## Summary
 
+Use a different expression depending on the compiler (e.g. Clojure vs ClojureScript).
+
+`#?(:clj ... :cljs ...)`
+
 ## Details
 
 (Only allowed in `.cljc` files or the REPL)
@@ -59,9 +63,6 @@ A function that works in Clojure and ClojureScript ([source]):
 (str->int "123")
 ;;=> 123
 ```
-
-## Usage
-#?(...)
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/defmacro]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/defmacro.md

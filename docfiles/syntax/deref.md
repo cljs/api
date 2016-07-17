@@ -9,6 +9,10 @@ see also:
 
 ## Summary
 
+Get the value that a reference is currently referring to.
+
+`@foo` - returns value at `foo`
+
 ## Details
 
 `@foo` is sugar for [`(deref foo)`][doc:cljs.core/deref].
@@ -26,9 +30,6 @@ Retrieve the underlying value of a reference.  References can be created by
 (deref a)
 ;;=> 1
 ```
-
-## Usage
-@foo
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/delay]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/delay.md

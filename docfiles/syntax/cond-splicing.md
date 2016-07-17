@@ -7,6 +7,10 @@ see also:
 
 ## Summary
 
+Like [doc:syntax/cond], except the result is spliced (i.e. `[a b]` => `a b`)
+
+`#?@(:clj [...] :cljs [...])`
+
 ## Details
 
 (Only allowed in `.cljc` files or the REPL)
@@ -26,9 +30,6 @@ Like [doc:syntax/cond], except:
           :clj  [b 2]))
 ;;=> (def a 1)
 ```
-
-## Usage
-#?@(...)
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:syntax/cond]:https://github.com/cljs/api/blob/master/docfiles/syntax/cond.md
