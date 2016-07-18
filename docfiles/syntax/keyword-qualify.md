@@ -9,6 +9,12 @@ see also:
 
 ## Summary
 
+Shorthand for specifying namespaced keywords.  Allows you to use an aliased
+namespace or to have the current one auto-inserted if not specified.
+
+`::foo/bar` => `:aliased-ns/bar`
+`::bar` => `:current-ns/bar`
+
 ## Details
 
 Keywords starting with `::` will evaluate to regular keywords with a namespace qualification.
@@ -50,7 +56,3 @@ Non-existing namespaces will throw a reader exception:
 ::foo/bar
 ;; clojure.lang.ExceptionInfo: Invalid token: ::foo/bar {:type :reader-exception, ...
 ```
-
-## Usage
-::foo
-::foo/bar
