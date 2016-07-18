@@ -8,19 +8,18 @@ see also:
 
 ## Summary
 
-## Details
+Creates a JavaScript [Date] object using [RFC-3339] formatted string.
 
-An instant in time, using a [RFC-3339] formatted string. Creates a JavaScript [Date] object.
-
-The format is `#inst "yyyy-mm-ddThh:mm:ss"`, where:
-
-- `yyyy-mm-dd` = date
-- `hh:mm:ss` = time (optional)
-
-Append `Z` to denote UTC, or `-hh:mm` to denote exact UTC offset.
+`#inst "yyyy-mm-dd"` - date
+`#inst "yyyy-mm-ddThh:mm:ss"` - date and time
+`#inst "yyyy-mm-ddThh:mm:ssZ"` - specify UTC
+`#inst "yyyy-mm-ddThh:mm:ss-hh:mm"` - specify negative time zone offset
+`#inst "yyyy-mm-ddThh:mm:ss+hh:mm"` - specify positive time zone offset
 
 [Date]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 [RFC-3339]:http://www.ietf.org/rfc/rfc3339.txt
+
+## Details
 
 ## Examples
 
@@ -52,9 +51,3 @@ extends `js/Date` type with `IEquiv` protocol to allow this.)
 (= a b)
 ;;=> true
 ```
-
-## Usage
-#inst "yyyy-mm-dd"
-#inst "yyyy-mm-ddThh:mm:ss"
-#inst "yyyy-mm-ddThh:mm:ssZ"
-#inst "yyyy-mm-ddThh:mm:ss-hh:mm"

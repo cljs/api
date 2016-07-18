@@ -8,13 +8,12 @@ see also:
 
 ## Summary
 
+Floating point representation of Infinity.
+
+`Infinity` = `+Infinity`
+`-Infinity`
+
 ## Details
-
-The IEEE 754 Floating Point representations of infinity.
-
-`Infinity` = `+Infinity` = positive infinity
-
-`-Infinity` = negative infinity
 
 ## Examples
 
@@ -51,8 +50,3 @@ js/Infinity
 js/-Infinity
 ;;=> -Infinity
 ```
-
-## Usage
-Infinity
--Infinity
-+Infinity

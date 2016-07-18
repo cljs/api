@@ -10,10 +10,15 @@ see also:
 
 ## Summary
 
+Use a JavaScript variable.
+
+`js/document` - the global document object
+`js/console.log` - the global console log function
+
 ## Details
 
-A special namespace used for accessing any symbol defined
-in JavaScript's global scope.
+Everything after the `js/` namespace is passed through to the compiled
+JavaScript.
 
 ## Examples
 
@@ -46,7 +51,3 @@ Create a JavaScript date object:
 (js/Date.)
 ;;=> #inst "2015-07-14T00:25:33.881-00:00"
 ```
-
-## Usage
-js/foo
-js/foo.bar

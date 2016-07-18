@@ -9,11 +9,15 @@ see also:
 
 ## Summary
 
+Create a JavaScript object or array.
+
+`#js [...]` - JS Array
+`#js {...}` - JS Object (with stringified keys)
+
 ## Details
 
-Create a literal JavaScript object or array.  Data in the form of a map `{}` or
-vector `[]` must follow the `#js` tag, which will be converted at compile-time
-to a JavaScript object or array, respectively.
+Data in the form of a map `{}` or vector `[]` must follow the `#js` tag, which
+will be converted at compile-time to a JavaScript object or array, respectively.
 
 This will not implicitly convert nested data into JavaScript objects or arrays.
 
@@ -37,7 +41,3 @@ For readability, it is sometimes preferable to use `clj->js` rather than nested
 (clj->js {:foo {:bar 1}})
 ;;=> #js {:foo #js {:bar 1}}
 ```
-
-## Usage
-#js [...]
-#js {...}

@@ -7,18 +7,20 @@ see also:
 
 ## Summary
 
+A naming convention sometimes applied to functions that perform mutations.  Examples:
+
+[doc:special/set!]
+[doc:cljs.core/swap!]
+[doc:cljs.core/conj!]
+[doc:cljs.core/specify!]
+
 ## Details
 
-A naming convention for impure functions (unenforced).
+In Clojure, it is used only for things not safe in an STM transaction ([source][stm]),
+which does not apply to ClojureScript because its compilation target, JavaScript,
+is single-threaded.
 
-Impure functions are those that have side-effects on some state.
-
-Some impure functions which use this convention:
-
-- [doc:special/set!]
-- [doc:cljs.core/swap!]
-- [doc:cljs.core/conj!]
-- [doc:cljs.core/specify!]
+[stm]:http://dev.clojure.org/display/community/Library+Coding+Standards
 
 ## Examples
 
@@ -33,9 +35,6 @@ The following causes a side-effect in the state of `a`:
 @a
 ;;=> 2
 ```
-
-## Usage
-foo!
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/conj!]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/conjBANG.md
