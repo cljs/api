@@ -9,10 +9,15 @@ see also:
 
 ## Summary
 
+A keyword starts with a colon and evaluates to itself. It can include an optional
+namespace.
+
+`:foo`
+`:foo/bar`
+
 ## Details
 
-A keyword is a string-like datatype that evaluates to itself.  Keywords are often used
-as enums or keys for maps.  Keywords should not start with a number.
+Keywords are often used as enums or keys for maps.  Keywords should not start with a number.
 
 Keywords can have an optional namespace. For example, `:foo/bar`. This is useful
 for functions in a namespace to prevent key collisions on a globally accessible
@@ -41,7 +46,3 @@ A keyword is also callable for retrieving values from a map:
 (map :foo things)
 ;;=> (1 3 5)
 ```
-
-## Usage
-:foo
-:foo/bar
