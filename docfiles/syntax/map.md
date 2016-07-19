@@ -10,6 +10,12 @@ see also:
 
 ## Summary
 
+A map associates keys with values.
+
+`{:foo 1}`
+`{:foo 1, :bar 2}` - comma is optional
+`{[1 2] "foo"}` - keys and values can be any type (even collections)
+
 ## Details
 
 Creates a map.  Must contain pairs of key-values.  Keys and values can be any type.
@@ -28,6 +34,3 @@ Use any value as a key:
 (get m [1 2])
 ;;=> 3
 ```
-
-## Usage
-{...}

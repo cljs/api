@@ -10,16 +10,14 @@ see also:
 
 ## Summary
 
+Attach metadata to the following symbol or collection.  Use a map to specify
+the metadata, or use shorthand:
+
+`^:foo` => `^{:foo true}`
+`^"foo"` => `^{:tag "foo"}`
+`^foo` => `^{:tag <value of foo>}`
+
 ## Details
-
-Attaches metadata to the following form.  Metadata can only be attached to a
-symbol or collection.
-
-Metadata will assume the following transformations depending on its type:
-
-- keyword `^:foo` => `^{:foo true}`
-- string `^"foo"` => `^{:tag "foo"}`
-- symbol `^foo` => `^{:tag <value of foo>}`
 
 ## Examples
 
@@ -53,9 +51,3 @@ Chain metadata:
 (meta ^:foo ^"foo" [1 2 3])
 ;;=> {:foo true, :tag "foo"}
 ```
-
-## Usage
-^{...}
-^:foo
-^"foo"
-^foo

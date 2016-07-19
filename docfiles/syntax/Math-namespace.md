@@ -7,13 +7,13 @@ see also:
 
 ## Summary
 
-## Details
-
 A special namespace for direct access to the native JavaScript [Math library].
 
-`Math/foo` => `js/Math.foo`
+`Math/PI` => `js/Math.PI`
 
 [Math library]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+
+## Details
 
 ## Examples
 
@@ -48,6 +48,3 @@ Math functions:
 (Math/pow Math/E (Math/log 1))
 ;;=> 1
 ```
-
-## Usage
-Math/foo

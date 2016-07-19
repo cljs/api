@@ -8,10 +8,11 @@ see also:
 
 ## Summary
 
-## Details
+A list is interpreted as a _call_ when evaluated.
 
-Creates a list.  The most salient feature of a list is that, when evaluated, it
-is interpreted as a _call_.
+`(foo 1 2 3)` - call foo with arguments 1, 2, 3
+
+## Details
 
 In most languages, the parenthesis is on the right side of a function when
 calling:
@@ -59,9 +60,6 @@ To signify an unevaluated list, precede it with a quote:
 '(1 2 3)
 ;;=> (1 2 3)
 ```
-
-## Usage
-(...)
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/List]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/List.md
