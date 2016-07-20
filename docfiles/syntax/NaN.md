@@ -8,10 +8,10 @@ see also:
 
 ## Summary
 
-## Details
+Floating point representation of `NaN` (not a number), an undefined or
+unrepresentable number.
 
-The IEEE 754 Floating Point representation of NaN (not a number), an undefined
-or unrepresentable value.
+## Details
 
 To test for NaN, use the native JavaScript [`js/isNaN`] or the safer [`js/Number.isNaN`].
 

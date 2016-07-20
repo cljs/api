@@ -11,22 +11,23 @@ see also:
 
 ## Summary
 
-## Details
+ClojureScript numbers are the same as [JavaScript numbers] (floats).
+Available formats:
 
-ClojureScript numbers are the same as [JavaScript numbers],
-double-precision 64-bit format IEEE 754.
+decimal `123` `1.23`
+exponent `12e3` `1.2e3` `1.2e-3`
+hexadecimal `0x123`
+octal `0123`
+binary `2r0110`
+arbitrary `NrXXX` where `(<= 2 N 36)` and `X` is in `[0-9,A-Z]`
 
 [JavaScript numbers]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#Numbers
 
-Available formats listed below. Decimal points are not allowed when specifying
-a custom base.
+## Details
 
-- decimal `123` `1.23`
-- exponent `12e3` `1.2e3` `1.2e-3`
-- hexadecimal `0x123`
-- octal `0123`
-- binary `2r0110`
-- arbitrary `NrXXX` where `(<= 2 N 36)` and `X` is in `[0-9,A-Z]`
+Numbers are double-precision 64-bit format IEEE 754.
+
+Decimal points are not allowed when specifying a custom base.
 
 ## Examples
 

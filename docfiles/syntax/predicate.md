@@ -7,19 +7,17 @@ see also:
 
 ## Summary
 
+A naming convention for functions returning true or false (unenforced).
+Examples:
+
+[doc:cljs.core/even?]
+[doc:cljs.core/empty?]
+[doc:cljs.core/contains?]
+[doc:cljs.core/nil?]
+
 ## Details
 
-A naming convention for predicate functions (unenforced).
-
-A predicate function is one that returns `true` or `false`, and is presumably
-pure (not having any side-effects on state).
-
-Some predicate functions which use this convention:
-
-- [doc:cljs.core/even?]
-- [doc:cljs.core/empty?]
-- [doc:cljs.core/contains?]
-- [doc:cljs.core/nil?]
+Predicate functions are presumably pure (not having any side-effects on state).
 
 It is sometimes used to name boolean values as well, not just predicate functions.
 
@@ -40,9 +38,6 @@ Create a `divisible?` predicate:
 (filter #(divisible? 15 %) (range 15))
 ;;=> (1 3 5)
 ```
-
-## Usage
-foo?
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/empty?]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/emptyQMARK.md

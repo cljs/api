@@ -6,9 +6,9 @@ see also:
 
 ## Summary
 
-## Details
-
 `nil` is a representation of nothing.
+
+## Details
 
 It is common for operations to safely handle `nil` without
 causing exceptions.
