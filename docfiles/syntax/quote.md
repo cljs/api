@@ -7,7 +7,15 @@ see also:
 
 ## Summary
 
+Return the following form without evaluation, especially for symbols and lists.
+
+`'foo` => `foo`
+`'(foo)` => `(foo)`
+
 ## Details
+
+Quote a form to get its literal value after reading, rather than
+the value created after evaluation.
 
 `'foo` is sugar for [`(quote foo)`][doc:special/quote].
 

@@ -10,9 +10,11 @@ see also:
 
 ## Summary
 
-## Details
+A queue is defined by placing `#queue` before a vector.
 
-Create a persistent queue. The form following `#queue` must be a vector.
+`#queue [...]`
+
+## Details
 
 Queues are the only core collection type that requires a tagged literal to
 create, while the other collections have built-in delimiters `()` `[]` `{}` `#{}`.
@@ -44,9 +46,6 @@ Some operations:
 (peek q)
 ;;=> 1
 ```
-
-## Usage
-#queue [...]
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/PersistentQueue]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/PersistentQueue.md
