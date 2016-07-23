@@ -10,21 +10,19 @@ see also:
 
 ## Summary
 
-## Details
-
-Signifies a regular expression. Represented as native [JavaScript regular expressions].
+Regular expressions compile to native [JavaScript regular expressions].
 
 [JavaScript regular expressions]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
-An inline modifier can be included at the beginning of the regex:
+`#"..."` => js `/.../`
+`#"(?i)..."` => js `/.../i` (case-insensitive)
+`#"(?m)..."` => js `/.../m` (multi-line)
 
-|  modifier          | ClojureScript | JavaScript |
-|--------------------|---------------|------------|
-|  global match      | N/A           | `/foo/g`   |
-|  case-insensitive  | `#"(?i)foo"`  | `/foo/i`   |
-|  multi-line        | `#"(?m)f.*o"` | `/f.*o/m`  |
+## Details
 
-Global matches (i.e. multiple matches per line) can be achieved using `re-seq`.
+The concept of "global match" (i.e. `/.../g` in JavaScript) is not encoded
+in ClojureScript regular expressions.  Instead, use a function like
+[doc:cljs.core/re-seq] to perform global matches.
 
 ## Examples
 
@@ -45,6 +43,3 @@ Case-insensitive matching:
 (re-seq #"(?i)foo" "FOO BAR foo bar")
 ;;=> ("FOO" "foo")
 ```
-
-## Usage
-#"..."
