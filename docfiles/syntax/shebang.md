@@ -6,12 +6,14 @@ see also:
 
 ## Summary
 
+ClojureScript allows [shebang lines] simply by making `#!` equivalent to
+[doc:syntax/comment].
+
+`#!/usr/bin/env planck` - use Planck to execute this file
+
+[shebang lines]:https://en.wikipedia.org/wiki/Shebang_(Unix)
+
 ## Details
-
-Equivalent to [doc:syntax/comment].
-
-This is intended to allow executable ClojureScript files under Unix by allowing
-the first line of the file to have a [shebang line](https://en.wikipedia.org/wiki/Shebang_(Unix)).
 
 ## Examples
 

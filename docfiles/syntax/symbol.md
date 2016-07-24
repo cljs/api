@@ -8,10 +8,12 @@ see also:
 
 ## Summary
 
-## Details
+A symbol is intended as a name for a value.  When evaluated, its result will be
+the value bound to the symbol.
 
-A symbol represents a name.  When evaluated, its result will be the value that the symbol
-is bound to.
+`foo` - evaluates to the value bound to `foo`
+
+## Details
 
 Some naming rules:
 
@@ -58,10 +60,6 @@ To signify an unevaluated symbol, precede it with a quote:
 'a
 ;;=> a
 ```
-
-## Usage
-foo
-foo/bar
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:syntax/js-namespace]:https://github.com/cljs/api/blob/master/docfiles/syntax/js-namespace.md

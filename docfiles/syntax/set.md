@@ -9,9 +9,11 @@ see also:
 
 ## Summary
 
-## Details
+An unordered set of values.  Values must be unique.
 
-Create a literal set.  Values must be unique.
+`#{...}`
+
+## Details
 
 ## Examples
 
@@ -26,6 +28,3 @@ Duplicate values will cause an error:
 #{1 1 2 3}
 ;; Error: Duplicate key: 1
 ```
-
-## Usage
-#{...}

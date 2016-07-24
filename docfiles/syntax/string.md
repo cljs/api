@@ -7,13 +7,21 @@ see also:
 
 ## Summary
 
+A string of characters.
+
+`"single line string"`
+
+```
+"multi
+line
+string"
+```
+
 ## Details
 
-Create a string.  ClojureScript strings are the same as [JavaScript strings].
+ClojureScript strings compile to [JavaScript strings].
 
 [JavaScript strings]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
-
-Strings may span multiple lines.
 
 Standard escape characters such as `\"` are supported, as well as unicode
 escape characters:
@@ -42,6 +50,3 @@ Characters can be escaped:
 ;;   foo
 ;;   bar
 ```
-
-## Usage
-"..."
