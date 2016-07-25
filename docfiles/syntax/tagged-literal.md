@@ -7,39 +7,24 @@ see also:
 
 ## Summary
 
+Some frequently used value types are afforded a "tagged literal" syntax. It is
+similar to a constructor, but this special syntax makes it de/serializable and
+easier to read at the REPL.
+
+Tagged literals start with a `#` followed by a symbol and a literal:
+
+`#js [...]` - [JavaScript array literal](doc:syntax/js-literal)
+`#js {...}` - [JavaScript object literal](doc:syntax/js-literal)
+`#inst "..."` - [JavaScript date literal](doc:syntax/inst-literal)
+`#uuid "..."` - [UUID literal](doc:syntax/uuid-literal)
+`#queue [...]` - [queue literal](doc:syntax/queue-literal)
+
 ## Details
-
-A tagged literal is a way to tag another core syntax literal to represent a
-single, new literal.
-
-- `#foo []`
-- `#foo {}`
-- `#foo "bar"`
-- `#foo 123`
-- ...
-
-If a [symbol][doc:syntax/symbol] is prefixed by `#`, that symbol is considered a
-__tag__ for the following form.  Together they represent a new value.  Real
-examples:
-
-- `#js {:foo 1}`, map -> JavaScript object
-- `#inst "2015-01-12"` string -> Date
-
-In these examples, the values `{:foo 1}` and `"2015-01-12"` are read normally,
-but are further interpretted by their registered tag handlers to produce new
-values: a JavaScript object and Date, respectively.
 
 These tagged literals are the "extensible" part of extensible data notation
 ([edn]), with ClojureScript being a superset of edn.
 
 [edn]:https://github.com/edn-format/edn#tagged-elements
-
-ClojureScript supports the following tagged literals:
-
-- [doc:syntax/inst-literal]
-- [doc:syntax/uuid-literal]
-- [doc:syntax/js-literal]
-- [doc:syntax/queue-literal]
 
 ## Examples
 
@@ -79,9 +64,6 @@ literal UUID:
 #uuid "97bda55b-6175-4c39-9e04-7c0205c709dc"
 ;;=> #uuid "97bda55b-6175-4c39-9e04-7c0205c709dc"
 ```
-
-## Usage
-#foo ...
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:syntax/symbol]:https://github.com/cljs/api/blob/master/docfiles/syntax/symbol.md
