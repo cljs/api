@@ -8,14 +8,11 @@ see also:
 
 ## Summary
 
+Inserts an evaluated form inside of a [doc:syntax/syntax-quote] template.
+
+<code>\`(foo ~x)</code> => `(cljs.user/foo 123)` (if x is 123)
+
 ## Details
-
-(Only intended for use in Clojure macros, which can be used from but not
-written in ClojureScript.)
-
-Intended for use inside a [doc:syntax/syntax-quote].
-
-Forces evaluation of the following form.
 
 ## Examples
 

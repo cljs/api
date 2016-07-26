@@ -8,15 +8,11 @@ see also:
 
 ## Summary
 
-Shorthand for generating unique symbols inside a macro.
+Shorthand for generating unique symbols inside a [doc:syntax/syntax-quote] template.
 
 `foo#` => `foo__135__auto__`
 
 ## Details
-
-(Only intended for use in a [doc:syntax/syntax-quote].)
-
-``foo#` => `foo__135__auto__`
 
 Auto-generates a unique symbol with the given prefix, particularly one that
 will not shadow any existing symbol in its resulting scope.  This is intended

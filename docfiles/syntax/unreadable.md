@@ -6,13 +6,15 @@ see also:
 
 ## Summary
 
-## Details
-
 A proper definition for something that cannot be read.
+
+`#<...>`
 
 When certain values cannot be printed to a REPL using some literal syntax form,
 it wraps a description of its value in a form defined as unreadable, `#<>`.  A
 reader error will be thrown if this value is fed back into the REPL.
+
+## Details
 
 For example, `(atom 42)` will print `#<Atom: 42>` when evaluated in a REPL.
 This communicates a human-readable form that is not intended to be reproduce
