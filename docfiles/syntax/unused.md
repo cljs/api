@@ -6,12 +6,23 @@ see also:
 
 ## Summary
 
+When unused values require a name, it is common to use `_`.
+
+`(fn [_ _ a]))` - ignore first two function arguments
+`(let [[_ a _ b] ...])` - only bind names to 2nd and 4th values of a sequence
+
 ## Details
 
-`_` is a valid symbol name that indicates an unused or disregarded value.
-This is not enforced by the compiler.
+The compiler does not specially treat `_`.  It is a valid symbol, thus it can
+serve as a name for a value.  It is just convention to reserve this name for
+values that are not to be referenced.
 
-For example, create a function whose first two arguments are ignored:
+Multiple `_`'s can be used since duplicate names shadow those that come before.
+Thus, `_` actually holds the value of its last binding.
+
+## Examples
+
+Create a function whose first two arguments are ignored:
 
 ```clj
 (fn [_ _ a]
@@ -37,14 +48,6 @@ Ignore return values of debug statements in a [doc:cljs.core/let] block:
       c (+ b 3)]
   ...)
 ```
-
-Multiple `_`'s can be used in each of the previous examples because duplicate
-names will shadow those previously occurring.  Thus, `_` actually holds the
-value of its last binding, but using it should be strictly avoided to prevent
-confusion.  This is the only encouraged use-case for duplicating parameter
-names.
-
-## Examples
 
 It is common to use `_` to ignore all but the latest value of a changing atom
 inside an [doc:cljs.core/add-watch] callback:
