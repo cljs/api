@@ -56,6 +56,3 @@ Math/sin
 js/console
 ;;=> #<[object Object]>
 ```
-
-## Usage
-#<...>
