@@ -8,11 +8,14 @@ see also:
 
 ## Summary
 
+A universally unique identifier (UUID).  Randomly generate one with [doc:cljs.core/random-uuid].
+
+`#uuid "8-4-4-4-12"` - numbers represent the number of hex digits
+`#uuid "97bda55b-6175-4c39-9e04-7c0205c709dc"` - actual example
+
 ## Details
 
-Creates a universally unique identifier (UUID), using the [doc:cljs.core/UUID] type.
-
-The format is `#uuid "8-4-4-4-12"`, where the numbers represent the number of hex digits.
+Uses the [doc:cljs.core/UUID] type.
 
 Representing UUIDs with `#uuid` rather than just a plain string has the following benefits:
 
@@ -43,9 +46,6 @@ Get as a string:
 (str foo)
 ;;=> "97bda55b-6175-4c39-9e04-7c0205c709dc"
 ```
-
-## Usage
-#uuid "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/UUID]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/UUID.md
