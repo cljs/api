@@ -50,7 +50,6 @@
    "summary for compiler"
    "details"
    "details for compiler"
-   "usage"
    "examples"
    "see also"
    "moved"

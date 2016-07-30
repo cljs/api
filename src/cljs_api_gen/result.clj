@@ -99,8 +99,8 @@
     (str "(" all-args ")")))
 
 (defn add-usage
-  [{:keys [signature usage name] :as item}]
-  (if (and signature (not usage))
+  [{:keys [signature name] :as item}]
+  (if signature
     (assoc item :usage
       (mapv #(signature->usage % item) signature))
     item))
@@ -356,7 +356,6 @@
                           :details
                           :details-compiler
                           :signature
-                          :usage
                           :see-also
                           :moved
                           :tags

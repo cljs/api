@@ -84,21 +84,10 @@
               ;; the full name where this symbol moved to (example cljs.core/try -> special/try)
               :moved "cljs.core/another-name"
 
-              ;; Usage forms.
-              ;; Can be specified explicitly, but if missing, it will be built
-              ;; from the :signature.
-
-              ;; For example, given the :signature ["[foo]" "[foo bar]"],
-              ;; and the :name "my-func", the following :usage will be generated.
+              ;; Given the :signature ["[foo]" "[foo bar]"], ;; and the :name
+              ;; "my-func", the following :usage will be generated.
               :usage ["(my-func foo)"
                       "(my-func foo bar)"]
-
-              ;; Syntax entries do not have :signature because they are not functions.
-              ;; Thus, we explicitly specify :usage (from syntax/inst-literal)
-              :usage ["#inst \"yyyy-mm-dd\""
-                      "#inst \"yyyy-mm-ddThh:mm:ss\""
-                      "#inst \"yyyy-mm-ddThh:mm:ssZ\""
-                      "#inst \"yyyy-mm-ddThh:mm:ss-hh:mm\""]
 
               ;; for syntax namespace and symbols, we want to display an alias
               :display-as "#queue [] literal" ;; (from syntax/queue-literal)

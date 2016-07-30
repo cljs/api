@@ -100,7 +100,3 @@ You can get the value at property `"foo"` with any of the following:
 (aget o "foo")
 ;;=> "bar"
 ```
-
-## Usage
-(.-foo obj)
-(.foo obj)
