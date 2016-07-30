@@ -12,6 +12,7 @@ see also:
 An unordered set of values.  Values must be unique.
 
 `#{...}`
+`#{1 2 3}`
 
 ## Details
 

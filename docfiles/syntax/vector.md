@@ -10,7 +10,8 @@ see also:
 
 A vector is the most commonly used form for creating literal sequences.
 
-`[1 foo 3 4]`
+`[...]`
+`[1 2 3]`
 
 Vectors also serve an important language role to prevent you from interpreting
 sequences as function calls.  Whether it's for literal data or for _binding forms_

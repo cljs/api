@@ -12,6 +12,7 @@ see also:
 
 A map associates keys with values.
 
+`{...}`
 `{:foo 1}`
 `{:foo 1, :bar 2}` - comma is optional
 `{[1 2] "foo"}` - keys and values can be any type (even collections)

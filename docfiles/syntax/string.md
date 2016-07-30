@@ -9,6 +9,7 @@ see also:
 
 A string of characters.
 
+`"..."`
 `"single line string"`
 
 ```
