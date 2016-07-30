@@ -7,31 +7,26 @@ see also:
 
 ## Summary
 
+Any number of whitespace characters can be used between forms.
+Whitespace is optional around delimiters. Commas are considered whitespace.
+The following are equivalent:
+
+`#js [ 1 2 3 ]`
+`#js [1 2 3]`
+`#js [1, 2, 3]`
+`#js[1 2 3]`
+`#js[1,2,3]`
+
+Indentation is two-spaces, not tabs, by convention.
+
 ## Details
 
-The amount of whitespace between syntax forms does not affect syntax
-correctness.  Elements are free to be aligned as desired.
+See indentation conventions [here](https://github.com/bbatsov/clojure-style-guide#source-code-layout--organization).
 
-Indentation is conventionally two spaces, no tab characters.
-[More indentation conventions here](https://github.com/bbatsov/clojure-style-guide#source-code-layout--organization)
+See [Parinfer] if you want the structure of your code to change based on
+indentation.
 
-Whitespace around collection delimiters is not required:
-
-```clj
-(a(b(c)))
-```
-
-```clj
-#js[1 2 3]
-#inst"2015-10-12"
-```
-
-A [comma][doc:syntax/comma] is considered whitespace:
-
-```clj
-[1, 2, 3]
-{:foo 1, :bar 2}
-```
+[Parinfer]:http://shaunlebron.github.io/parinfer
 
 ## Examples
 
