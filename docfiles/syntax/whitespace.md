@@ -7,8 +7,8 @@ see also:
 
 ## Summary
 
-Any number of whitespace characters can be used between forms.
-Whitespace is optional around delimiters. Commas are considered whitespace.
+Any number of whitespace characters can be used between forms, but is
+optional around delimiters. Commas are considered whitespace.
 The following are equivalent:
 
 `#js [ 1 2 3 ]`
