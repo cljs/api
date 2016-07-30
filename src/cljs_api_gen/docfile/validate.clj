@@ -52,6 +52,7 @@
    "details for compiler"
    "examples"
    "see also"
+   "search terms"
    "moved"
    "todo"
    "notes"])

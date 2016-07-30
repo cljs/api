@@ -97,7 +97,13 @@
               :known-as "thread first" ;; (from cljs.core/->)
 
               ;; some special forms are only available in the REPL
-              :repl-only? false}
+              :repl-only? false
+
+              ;; search terms, for example this is useful for syntax/destructure-map
+              :search-terms [":keys"
+                             ":strs"
+                             ":syms"
+                             ":as"]}
 
            ...}
 

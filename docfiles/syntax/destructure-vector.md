@@ -3,6 +3,9 @@ name: syntax/destructure-vector
 display as: "destructure []"
 see also:
   - syntax/destructure-map
+search terms:
+  - ":as"
+  - "&"
 ---
 
 ## Summary

@@ -56,6 +56,7 @@
       (transform-key "details" :details)
       (transform-key "details for compiler" :details-compiler)
       (transform-key "see also" :see-also section-as-list)
+      (transform-key "search terms" :search-terms section-as-list)
       (transform-key "moved" :moved)
       (transform-key "tags" :tags section-as-list)
       add-doclink-biblio))

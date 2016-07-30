@@ -357,6 +357,7 @@
                           :details-compiler
                           :signature
                           :see-also
+                          :search-terms
                           :moved
                           :tags
                           :md-biblio]))]
