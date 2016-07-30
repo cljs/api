@@ -68,7 +68,7 @@
               ;; the URL where a user can go to edit the manual documentation
               :edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/-GT.md"
 
-              ;; manually added docs from doc/ files
+              ;; manually added from md files in docfiles/
 
               :summary "... summary in markdown ..."
               :details "... details in markdown ..."
@@ -84,6 +84,7 @@
               ;; the full name where this symbol moved to (example cljs.core/try -> special/try)
               :moved "cljs.core/another-name"
 
+              ;; (The :signature is auto-parsed, but can be overwritten manually in docfiles)
               ;; Given the :signature ["[foo]" "[foo bar]"], ;; and the :name
               ;; "my-func", the following :usage will be generated.
               :usage ["(my-func foo)"
