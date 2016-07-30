@@ -8,25 +8,25 @@ see also:
 
 ## Summary
 
+A vector is the most commonly used form for creating literal sequences.
+
+`[1 foo 3 4]`
+
+Vectors also serve an important language role to prevent you from interpreting
+sequences as function calls.  Whether it's for literal data or for _binding forms_
+inside [doc:cljs.core/let] and [doc:cljs.core/fn], vectors provide an
+important syntax cue not found in other Lisps.
+
 ## Details
 
-Creates a vector.  A vector is the most commonly used form for creating literal
-sequences, and supports random-access and inserting at the end via [doc:cljs.core/conj]:
+Elements are inserted at the end via [doc:cljs.core/conj], and can be looked up
+via index. See [doc:cljs.core/PersistentVector] for data structure details.
 
-```clj
-(def a [1 2 3 4 5])
-```
-
-Vectors also serve an important language role as the convention for signaling a
-_binding form_, that is, when local names are created and bound to values.
-Examples:
+Vectors are the conventional form for representing _binding forms_, that is,
+when local names are created and bound to values. Examples:
 
 - `[a b]` as function arg bindings in [`(fn [a b] ...)`][doc:cljs.core/fn]
 - `[a 1 b 2]` as let bindings in [`(let [a 1 b 2] ...)`][doc:cljs.core/let]
-
-This helps differentiate binding forms from the parentheses of [callable forms][doc:syntax/list].
-
-See [doc:cljs.core/PersistentVector] for data structure details.
 
 ## Examples
 
@@ -34,9 +34,6 @@ See [doc:cljs.core/PersistentVector] for data structure details.
 [1 2 3]
 ;;=> [1 2 3]
 ```
-
-## Usage
-[...]
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/let]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/let.md
