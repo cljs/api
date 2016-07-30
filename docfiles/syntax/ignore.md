@@ -10,7 +10,7 @@ see also:
 
 Ignore the next well-formed expression.
 
-`[1 #_foo 2 3]` => `[1 2 3]`
+- `[1 #_foo 2 3]` => `[1 2 3]`
 
 Also useful for commenting out a multi-line expression:
 

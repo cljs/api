@@ -9,8 +9,8 @@ see also:
 A concept shared between [doc:syntax/destructure-vector] and [doc:cljs.core/fn]
 for binding the rest of the values of a sequence to a name.
 
-`(fn [... & rest])` - for function arguments
-`(let [[... & rest] ...])` - for sequences
+- `(fn [... & rest])` - for function arguments
+- `(let [[... & rest] ...])` - for sequences
 
 ## Details
 

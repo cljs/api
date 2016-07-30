@@ -10,10 +10,10 @@ see also:
 A naming convention for functions returning true or false (unenforced).
 Examples:
 
-[doc:cljs.core/even?]
-[doc:cljs.core/empty?]
-[doc:cljs.core/contains?]
-[doc:cljs.core/nil?]
+- [doc:cljs.core/even?]
+- [doc:cljs.core/empty?]
+- [doc:cljs.core/contains?]
+- [doc:cljs.core/nil?]
 
 ## Details
 

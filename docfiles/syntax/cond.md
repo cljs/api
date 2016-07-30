@@ -9,7 +9,7 @@ see also:
 
 Use a different expression depending on the compiler (e.g. Clojure vs ClojureScript).
 
-`#?(:clj ... :cljs ...)`
+- `#?(:clj ... :cljs ...)`
 
 ## Details
 

@@ -10,11 +10,11 @@ see also:
 
 A single character string.
 
-`\c` => `"c"`
-`\A` => `"A"`
-`\newline` => `"\n"`
-`\u00a1` => `"¡"`
-`\o256` => `"®"`
+- `\c` => `"c"`
+- `\A` => `"A"`
+- `\newline` => `"\n"`
+- `\u00a1` => `"¡"`
+- `\o256` => `"®"`
 
 ## Details
 

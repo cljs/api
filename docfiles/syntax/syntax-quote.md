@@ -13,10 +13,10 @@ see also:
 A template facility for easier code generation inside macros.  Like [doc:syntax/quote],
 but with more features to help resolve symbols and interpolate values.
 
-<code>\`(foo 123)</code> => `(cljs.user/foo 123)` - symbols become fully-qualified
-<code>\`(foo ~x)</code> => `(cljs.user/foo 123)` - interpolates the value of `x`
-<code>\`(foo ~@y)</code> => `(cljs.user/foo 1 2 3)` - interpolates and splices the sequence of `y`
-<code>\`(foo bar#)</code> => `(cljs.user/foo bar__20418__auto__)` - make symbols ending in `#` unique
+- <code>\`(foo 123)</code> => `(cljs.user/foo 123)` - symbols become fully-qualified
+- <code>\`(foo ~x)</code> => `(cljs.user/foo 123)` - interpolates the value of `x`
+- <code>\`(foo ~@y)</code> => `(cljs.user/foo 1 2 3)` - interpolates and splices the sequence of `y`
+- <code>\`(foo bar#)</code> => `(cljs.user/foo bar__20418__auto__)` - make symbols ending in `#` unique
 
 ## Details
 

@@ -11,8 +11,8 @@ see also:
 
 A single line comment.
 
-`; this is a comment`
-`;; two semicolons is also common`
+- `; this is a comment`
+- `;; two semicolons is also common`
 
 ## Details
 

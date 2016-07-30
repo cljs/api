@@ -10,8 +10,8 @@ see also:
 
 Floating point representation of Infinity.
 
-`Infinity` = `+Infinity`
-`-Infinity`
+- `Infinity` = `+Infinity`
+- `-Infinity`
 
 ## Details
 

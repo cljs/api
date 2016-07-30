@@ -10,9 +10,9 @@ see also:
 To retrieve metadata like where a var was defined, we need to refer to the var
 itself.  It is therefore helpful to be aware of the following subtle differences:
 
-`foo` => returns value bound to foo
-`'foo` => returns the symbol foo (which is just a name)
-`#'foo` => returns the foo var itself (for retrieving metadata like where it was defined)
+- `foo` => returns value bound to foo
+- `'foo` => returns the symbol foo (which is just a name)
+- `#'foo` => returns the foo var itself (for retrieving metadata like where it was defined)
 
 ## Details
 

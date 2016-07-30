@@ -10,8 +10,8 @@ see also:
 
 A universally unique identifier (UUID).  Randomly generate one with [doc:cljs.core/random-uuid].
 
-`#uuid "8-4-4-4-12"` - numbers represent the number of hex digits
-`#uuid "97bda55b-6175-4c39-9e04-7c0205c709dc"` - actual example
+- `#uuid "8-4-4-4-12"` - numbers represent the number of hex digits
+- `#uuid "97bda55b-6175-4c39-9e04-7c0205c709dc"` - actual example
 
 ## Details
 

@@ -13,7 +13,7 @@ see also:
 Shorthand for creating an anonymous function. Use [doc:syntax/arg] to refer
 to the arguments.
 
-`#(...)` => `(fn [args] (...))`
+- `#(...)` => `(fn [args] (...))`
 
 ## Details
 

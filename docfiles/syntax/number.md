@@ -14,12 +14,12 @@ see also:
 ClojureScript numbers are the same as [JavaScript numbers] (floats).
 Available formats:
 
-decimal `123` `1.23`
-exponent `12e3` `1.2e3` `1.2e-3`
-hexadecimal `0x123`
-octal `0123`
-binary `2r0110`
-arbitrary `NrXXX` where `(<= 2 N 36)` and `X` is in `[0-9,A-Z]`
+- decimal `123` `1.23`
+- exponent `12e3` `1.2e3` `1.2e-3`
+- hexadecimal `0x123`
+- octal `0123`
+- binary `2r0110`
+- arbitrary `NrXXX` where `(<= 2 N 36)` and `X` is in `[0-9,A-Z]`
 
 [JavaScript numbers]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#Numbers
 

@@ -10,11 +10,11 @@ see also:
 
 Creates a JavaScript [Date] object using [RFC-3339] formatted string.
 
-`#inst "yyyy-mm-dd"` - date
-`#inst "yyyy-mm-ddThh:mm:ss"` - date and time
-`#inst "yyyy-mm-ddThh:mm:ssZ"` - specify UTC
-`#inst "yyyy-mm-ddThh:mm:ss-hh:mm"` - specify negative time zone offset
-`#inst "yyyy-mm-ddThh:mm:ss+hh:mm"` - specify positive time zone offset
+- `#inst "yyyy-mm-dd"` - date
+- `#inst "yyyy-mm-ddThh:mm:ss"` - date and time
+- `#inst "yyyy-mm-ddThh:mm:ssZ"` - specify UTC
+- `#inst "yyyy-mm-ddThh:mm:ss-hh:mm"` - specify negative time zone offset
+- `#inst "yyyy-mm-ddThh:mm:ss+hh:mm"` - specify positive time zone offset
 
 [Date]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 [RFC-3339]:http://www.ietf.org/rfc/rfc3339.txt

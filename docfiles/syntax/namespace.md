@@ -9,8 +9,8 @@ see also:
 
 The left side of `/` in a keyword or symbol is a namespace.
 
-`foo/bar`
-`:foo/bar`
+- `foo/bar`
+- `:foo/bar`
 
 ## Details
 

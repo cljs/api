@@ -8,7 +8,7 @@ see also:
 
 A proper definition for something that cannot be read.
 
-`#<...>`
+- `#<...>`
 
 When certain values cannot be printed to a REPL using some literal syntax form,
 it wraps a description of its value in a form defined as unreadable, `#<>`.  A

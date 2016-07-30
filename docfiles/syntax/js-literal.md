@@ -11,8 +11,8 @@ see also:
 
 Create a JavaScript object or array.
 
-`#js [...]` - JS Array
-`#js {...}` - JS Object (with stringified keys)
+- `#js [...]` - JS Array
+- `#js {...}` - JS Object (with stringified keys)
 
 ## Details
 

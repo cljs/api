@@ -13,11 +13,11 @@ easier to read at the REPL.
 
 Tagged literals start with a `#` followed by a symbol and a literal:
 
-`#js [...]` - [JavaScript array literal](doc:syntax/js-literal)
-`#js {...}` - [JavaScript object literal](doc:syntax/js-literal)
-`#inst "..."` - [JavaScript date literal](doc:syntax/inst-literal)
-`#uuid "..."` - [UUID literal](doc:syntax/uuid-literal)
-`#queue [...]` - [queue literal](doc:syntax/queue-literal)
+- `#js [...]` - [JavaScript array literal](doc:syntax/js-literal)
+- `#js {...}` - [JavaScript object literal](doc:syntax/js-literal)
+- `#inst "..."` - [JavaScript date literal](doc:syntax/inst-literal)
+- `#uuid "..."` - [UUID literal](doc:syntax/uuid-literal)
+- `#queue [...]` - [queue literal](doc:syntax/queue-literal)
 
 ## Details
 

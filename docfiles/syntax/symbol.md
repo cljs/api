@@ -11,7 +11,7 @@ see also:
 A symbol is intended as a name for a value.  When evaluated, its result will be
 the value bound to the symbol.
 
-`foo` - evaluates to the value bound to `foo`
+- `foo` - evaluates to the value bound to `foo`
 
 ## Details
 

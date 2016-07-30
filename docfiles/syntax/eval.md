@@ -8,6 +8,8 @@ see also:
 
 The ability to evaluate forms at reader-time should be ignored in ClojureScript.
 
+- `#=...`
+
 ## Details
 
 Allows the reader to evaluate the following form.

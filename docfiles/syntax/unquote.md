@@ -10,7 +10,7 @@ see also:
 
 Inserts an evaluated form inside of a [doc:syntax/syntax-quote] template.
 
-<code>\`(foo ~x)</code> => `(cljs.user/foo 123)` (if x is 123)
+- <code>\`(foo ~x)</code> => `(cljs.user/foo 123)` (if x is 123)
 
 ## Details
 

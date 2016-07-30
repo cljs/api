@@ -11,7 +11,7 @@ see also:
 
 Get the value that a reference is currently referring to.
 
-`@foo` - returns value at `foo`
+- `@foo` - returns value at `foo`
 
 ## Details
 

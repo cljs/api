@@ -9,7 +9,7 @@ see also:
 
 A special namespace for direct access to the native JavaScript [Math library].
 
-`Math/PI` => `js/Math.PI`
+- `Math/PI` => `js/Math.PI`
 
 [Math library]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 

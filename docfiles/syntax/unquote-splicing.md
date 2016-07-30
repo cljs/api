@@ -10,7 +10,7 @@ see also:
 
 Like [doc:syntax/unquote], except the result is spliced (i.e. `[a b]` => `a b`)
 
-<code>\`(foo ~@x)</code> => `(cljs.user/foo a b)` (if x is [a b])
+- <code>\`(foo ~@x)</code> => `(cljs.user/foo a b)` (if x is [a b])
 
 ## Details
 

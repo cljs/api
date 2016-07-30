@@ -9,8 +9,8 @@ see also:
 
 Return the following form without evaluation, especially for symbols and lists.
 
-`'foo` => `foo`
-`'(foo)` => `(foo)`
+- `'foo` => `foo`
+- `'(foo)` => `(foo)`
 
 ## Details
 

@@ -12,8 +12,8 @@ see also:
 Shorthand for specifying namespaced keywords.  Allows you to use an aliased
 namespace or to have the current one auto-inserted if not specified.
 
-`::foo/bar` => `:aliased-ns/bar`
-`::bar` => `:current-ns/bar`
+- `::foo/bar` => `:aliased-ns/bar`
+- `::bar` => `:current-ns/bar`
 
 ## Details
 

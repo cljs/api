@@ -9,10 +9,10 @@ see also:
 
 A naming convention sometimes applied to functions that perform mutations.  Examples:
 
-[doc:special/set!]
-[doc:cljs.core/swap!]
-[doc:cljs.core/conj!]
-[doc:cljs.core/specify!]
+- [doc:special/set!]
+- [doc:cljs.core/swap!]
+- [doc:cljs.core/conj!]
+- [doc:cljs.core/specify!]
 
 ## Details
 

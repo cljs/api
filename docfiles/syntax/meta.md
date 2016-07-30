@@ -13,9 +13,9 @@ see also:
 Attach metadata to the following symbol or collection.  Use a map to specify
 the metadata, or use shorthand:
 
-`^:foo` => `^{:foo true}`
-`^"foo"` => `^{:tag "foo"}`
-`^foo` => `^{:tag <value of foo>}`
+- `^:foo` => `^{:foo true}`
+- `^"foo"` => `^{:tag "foo"}`
+- `^foo` => `^{:tag <value of foo>}`
 
 ## Details
 

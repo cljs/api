@@ -10,14 +10,14 @@ see also:
 
 Dots can be used inside symbols for JS interop.
 
-`(.foo bar)` => `bar.foo()`
-`(-.foo bar)` => `bar.foo`
-`(foo.)` => `new foo()`
+- `(.foo bar)` => `bar.foo()`
+- `(-.foo bar)` => `bar.foo`
+- `(foo.)` => `new foo()`
 
 The following are also supported (though not valid in Clojure)
 
-`foo.bar.baz` => `foo.bar.baz`
-`(foo.bar.baz)` => `foo.bar.baz()`
+- `foo.bar.baz` => `foo.bar.baz`
+- `(foo.bar.baz)` => `foo.bar.baz()`
 
 ## Details
 

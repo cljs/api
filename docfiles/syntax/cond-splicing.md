@@ -9,7 +9,7 @@ see also:
 
 Like [doc:syntax/cond], except the result is spliced (i.e. `[a b]` => `a b`)
 
-`#?@(:clj [...] :cljs [...])`
+- `#?@(:clj [...] :cljs [...])`
 
 ## Details
 

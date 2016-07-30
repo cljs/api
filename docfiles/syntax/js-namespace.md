@@ -12,8 +12,8 @@ see also:
 
 Use a JavaScript variable.
 
-`js/document` - the global document object
-`js/console.log` - the global console log function
+- `js/document` - the global document object
+- `js/console.log` - the global console log function
 
 ## Details
 

@@ -8,8 +8,8 @@ see also:
 
 When unused values require a name, it is common to use `_`.
 
-`(fn [_ _ a]))` - ignore first two function arguments
-`(let [[_ a _ b] ...])` - only bind names to 2nd and 4th values of a sequence
+- `(fn [_ _ a]))` - ignore first two function arguments
+- `(let [[_ a _ b] ...])` - only bind names to 2nd and 4th values of a sequence
 
 ## Details
 

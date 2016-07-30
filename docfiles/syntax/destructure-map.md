@@ -10,17 +10,17 @@ see also:
 Shorthand for destructuring a map into multiple names. Allows you to use a
 `{...}` pattern instead of a usual `name` in the following examples:
 
-`(defn [name])` -> `(defn [{...}])`
-`(let [name a-map])` -> `(let [{...} a-map])`
-`(for [name a-sequence-of-maps])` -> `(for [{...} a-sequence-of-maps])`
+- `(defn [name])` -> `(defn [{...}])`
+- `(let [name a-map])` -> `(let [{...} a-map])`
+- `(for [name a-sequence-of-maps])` -> `(for [{...} a-sequence-of-maps])`
 
 Quick pattern reference:
 
-`{name lookup}` - name is bound using the lookup key
-`{:keys [...]}` - names bound using keywords as lookup keys
-`{:strs [...]}` - names bound using strings as lookup keys
-`{:syms [...]}` - names bound using symbols as lookup keys
-`{:as name}` - name is bound to whole value
+- `{name lookup}` - name is bound using the lookup key
+- `{:keys [...]}` - names bound using keywords as lookup keys
+- `{:strs [...]}` - names bound using strings as lookup keys
+- `{:syms [...]}` - names bound using symbols as lookup keys
+- `{:as name}` - name is bound to whole value
 
 ## Details
 

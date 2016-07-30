@@ -12,7 +12,7 @@ see also:
 
 A queue is defined by placing `#queue` before a vector.
 
-`#queue [...]`
+- `#queue [...]`
 
 ## Details
 

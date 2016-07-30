@@ -9,7 +9,7 @@ see also:
 ClojureScript allows [shebang lines] simply by making `#!` equivalent to
 [doc:syntax/comment].
 
-`#!/usr/bin/env planck` - use Planck to execute this file
+- `#!/usr/bin/env planck` - use Planck to execute this file
 
 [shebang lines]:https://en.wikipedia.org/wiki/Shebang_(Unix)
 

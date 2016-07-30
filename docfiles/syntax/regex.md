@@ -14,9 +14,9 @@ Regular expressions compile to native [JavaScript regular expressions].
 
 [JavaScript regular expressions]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
-`#"..."` => js `/.../`
-`#"(?i)..."` => js `/.../i` (case-insensitive)
-`#"(?m)..."` => js `/.../m` (multi-line)
+- `#"..."` => js `/.../`
+- `#"(?i)..."` => js `/.../i` (case-insensitive)
+- `#"(?m)..."` => js `/.../m` (multi-line)
 
 ## Details
 

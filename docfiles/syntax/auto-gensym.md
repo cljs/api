@@ -10,7 +10,7 @@ see also:
 
 Shorthand for generating unique symbols inside a [doc:syntax/syntax-quote] template.
 
-`foo#` => `foo__135__auto__`
+- `foo#` => `foo__135__auto__`
 
 ## Details
 

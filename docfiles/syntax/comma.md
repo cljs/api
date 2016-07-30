@@ -8,8 +8,8 @@ see also:
 
 Commas are ignored and can be used for assisting readability.
 
-`[1, 2, 3]` => `[1 2 3]`
-`{:a 1, :b 2}` => `{:a 1 :b 2}`
+- `[1, 2, 3]` => `[1 2 3]`
+- `{:a 1, :b 2}` => `{:a 1 :b 2}`
 
 ## Details
 

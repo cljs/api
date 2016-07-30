@@ -10,8 +10,8 @@ see also:
 
 A list is interpreted as a _call_ when evaluated.
 
-`(...)`
-`(foo 1 2 3)` - call foo with arguments 1, 2, 3
+- `(...)`
+- `(foo 1 2 3)` - call foo with arguments 1, 2, 3
 
 ## Details
 

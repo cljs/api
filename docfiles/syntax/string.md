@@ -9,8 +9,8 @@ see also:
 
 A string of characters.
 
-`"..."`
-`"single line string"`
+- `"..."`
+- `"single line string"`
 
 ```
 "multi

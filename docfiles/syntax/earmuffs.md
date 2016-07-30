@@ -9,7 +9,7 @@ see also:
 
 A naming convention for dynamic vars (unenforced).
 
-`(def ^:dynamic *foo* 1)`
+- `(def ^:dynamic *foo* 1)`
 
 ## Details
 

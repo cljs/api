@@ -11,11 +11,11 @@ Any number of whitespace characters can be used between forms, but is
 optional around delimiters. Commas are considered whitespace.
 The following are equivalent:
 
-`#js [ 1 2 3 ]`
-`#js [1 2 3]`
-`#js [1, 2, 3]`
-`#js[1 2 3]`
-`#js[1,2,3]`
+- `#js [ 1 2 3 ]`
+- `#js [1 2 3]`
+- `#js [1, 2, 3]`
+- `#js[1 2 3]`
+- `#js[1,2,3]`
 
 Indentation is two-spaces, not tabs, by convention.
 
