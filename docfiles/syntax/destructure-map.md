@@ -94,6 +94,8 @@ following forms:
 Destructure maps can be nested, even in place of names in [destructure
 vectors][doc:syntax/destructure-vector].
 
+Also works for namespaced keys and symbols: <https://github.com/clojure/clojure/blob/master/changes.md#22-map-destructuring-extended-to-support-namespaced-keys>
+
 ## Examples
 
 Use in place of function arguments:
