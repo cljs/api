@@ -6,6 +6,8 @@ see also:
   - cljs.core/array-map
   - cljs.core/sorted-map
   - cljs.core/sorted-map-by
+clojure doc: http://clojure.org/reference/reader#_maps
+edn doc: https://github.com/edn-format/edn#maps
 ---
 
 ## Summary

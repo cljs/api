@@ -2,6 +2,7 @@
 name: syntax/rest
 display as: "& rest"
 see also:
+clojure doc: http://clojure.github.io/clojure/clojure.core-api.html#clojure.core/&
 ---
 
 ## Summary

@@ -3,6 +3,7 @@ name: syntax/quote
 display as: "' quote"
 see also:
   - special/quote
+clojure doc: http://clojure.org/reference/reader#_quote
 ---
 
 ## Summary

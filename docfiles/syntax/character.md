@@ -4,6 +4,8 @@ display as: "\\ character"
 see also:
   - syntax/string
   - cljs.core/str
+clojure doc: http://clojure.org/reference/reader#_literals
+edn doc: https://github.com/edn-format/edn#characters
 ---
 
 ## Summary

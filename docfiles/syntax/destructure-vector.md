@@ -6,6 +6,7 @@ see also:
 search terms:
   - ":as"
   - "&"
+clojure doc: http://clojure.org/reference/special_forms#_vector_binding_destructuring
 ---
 
 ## Summary

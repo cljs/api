@@ -4,6 +4,8 @@ display as: "#_ ignore"
 see also:
   - syntax/comment
   - cljs.core/comment
+clojure doc: http://clojure.org/reference/reader#_dispatch
+edn doc: https://github.com/edn-format/edn#discard
 ---
 
 ## Summary

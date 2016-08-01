@@ -3,6 +3,7 @@ name: syntax/var
 display as: "#' var"
 see also:
   - special/var
+clojure doc: http://clojure.org/reference/reader#_dispatch
 ---
 
 ## Summary

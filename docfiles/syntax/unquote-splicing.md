@@ -4,6 +4,7 @@ display as: "~@ unquote splicing"
 see also:
   - syntax/syntax-quote
   - syntax/unquote
+clojure doc: http://clojure.org/reference/reader#syntax-quote
 ---
 
 ## Summary

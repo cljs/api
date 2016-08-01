@@ -3,6 +3,8 @@ name: syntax/namespace
 display as: "/ namespace slash"
 see also:
   - syntax/dot
+clojure doc: http://clojure.org/reference/reader#_symbols
+edn doc: https://github.com/edn-format/edn#symbols
 ---
 
 ## Summary

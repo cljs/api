@@ -9,6 +9,7 @@ search terms:
   - ":syms"
   - ":as"
   - "&"
+clojure doc: http://clojure.org/reference/special_forms#_map_binding_destructuring
 ---
 
 ## Summary

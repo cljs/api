@@ -6,6 +6,7 @@ see also:
   - cljs.core/with-meta
   - cljs.core/vary-meta
   - cljs.core/alter-meta!
+clojure doc: http://clojure.org/reference/reader#_metadata
 ---
 
 ## Summary

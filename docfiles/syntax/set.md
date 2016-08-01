@@ -5,6 +5,8 @@ see also:
   - cljs.core/hash-set
   - cljs.core/sorted-set
   - cljs.core/sorted-set-by
+clojure doc: http://clojure.org/reference/reader#_sets
+edn doc: https://github.com/edn-format/edn#sets
 ---
 
 ## Summary

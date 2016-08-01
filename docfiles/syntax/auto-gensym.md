@@ -4,6 +4,7 @@ display as: "# auto-gensym"
 see also:
   - cljs.core/gensym
   - syntax/syntax-quote
+clojure doc: http://clojure.org/reference/reader#syntax-quote
 ---
 
 ## Summary

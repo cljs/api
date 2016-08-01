@@ -4,6 +4,8 @@ display as: "[] vector"
 see also:
   - cljs.core/vector
   - cljs.core/vec
+clojure doc: http://clojure.org/reference/reader#_vectors
+edn doc: https://github.com/edn-format/edn#vectors
 ---
 
 ## Summary

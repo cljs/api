@@ -2,6 +2,8 @@
 name: syntax/nil
 display as: "nil"
 see also:
+clojure doc: http://clojure.org/reference/reader#_literals
+edn doc: https://github.com/edn-format/edn#nil
 ---
 
 ## Summary

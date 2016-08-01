@@ -3,6 +3,7 @@ name: syntax/Math-namespace
 display as: "Math/ namespace"
 see also:
   - syntax/js-namespace
+clojure doc: http://clojure.org/reference/java_interop#dot
 ---
 
 ## Summary

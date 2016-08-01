@@ -4,6 +4,8 @@ display as: "#uuid literal"
 see also:
   - cljs.core/uuid
   - cljs.core/random-uuid
+clojure doc: https://github.com/clojure/clojure/blob/master/changes.md#212-uuid-literals
+edn doc: https://github.com/edn-format/edn#uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6
 ---
 
 ## Summary

@@ -5,6 +5,8 @@ see also:
   - syntax/keyword-qualify
   - cljs.core/keyword
   - cljs.core/keyword?
+clojure doc: http://clojure.org/reference/reader#_literals
+edn doc: https://github.com/edn-format/edn#keywords
 ---
 
 ## Summary

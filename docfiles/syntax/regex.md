@@ -6,6 +6,7 @@ see also:
   - cljs.core/re-find
   - cljs.core/re-seq
   - cljs.core/re-matches
+clojure doc: http://clojure.org/reference/reader#_dispatch
 ---
 
 ## Summary

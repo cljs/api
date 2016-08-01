@@ -3,6 +3,7 @@ name: syntax/arg
 display as: "% arg"
 see also:
   - syntax/function
+clojure doc: http://clojure.org/reference/reader#_dispatch
 ---
 
 ## Summary

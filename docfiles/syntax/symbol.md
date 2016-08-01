@@ -4,6 +4,8 @@ display as: "symbol literal"
 see also:
   - cljs.core/symbol
   - cljs.core/symbol?
+clojure doc: http://clojure.org/reference/reader#_symbols
+edn doc: https://github.com/edn-format/edn#symbols
 ---
 
 ## Summary

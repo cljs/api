@@ -3,6 +3,8 @@ name: syntax/string
 display as: "\"\" string"
 see also:
   - cljs.core/str
+clojure doc: http://clojure.org/reference/reader#_literals
+edn doc: https://github.com/edn-format/edn#strings
 ---
 
 ## Summary

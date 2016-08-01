@@ -5,6 +5,7 @@ see also:
   - cljs.core/deref
   - cljs.core/atom
   - cljs.core/delay
+clojure doc: http://clojure.org/reference/reader#_deref
 ---
 
 ## Summary

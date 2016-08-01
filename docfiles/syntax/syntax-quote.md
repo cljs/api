@@ -6,6 +6,7 @@ see also:
   - syntax/quote
   - syntax/unquote
   - syntax/unquote-splicing
+clojure doc: http://clojure.org/reference/reader#syntax-quote
 ---
 
 ## Summary

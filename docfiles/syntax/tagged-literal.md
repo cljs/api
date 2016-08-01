@@ -3,6 +3,8 @@ name: syntax/tagged-literal
 display as: "# tagged literal"
 see also:
   - syntax/dispatch
+clojure doc: http://clojure.org/reference/reader#_tagged_literals
+edn doc: https://github.com/edn-format/edn#tagged-elements
 ---
 
 ## Summary

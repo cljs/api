@@ -3,6 +3,7 @@ name: syntax/impure
 display as: "! impure"
 see also:
   - syntax/predicate
+clojure doc: http://dev.clojure.org/display/community/Library+Coding+Standards
 ---
 
 ## Summary

@@ -13,7 +13,7 @@
     [cljs-api-gen.state :refer [*result*]]
 
     [me.raynes.fs :refer [exists?]]
-    [clojure.string :refer [split split-lines join]]
+    [clojure.string :refer [split split-lines join starts-with?]]
     [clansi.core :refer [style]]
     [fuzzy-matcher.core :as fuzzy]))
 
@@ -55,7 +55,9 @@
    "search terms"
    "moved"
    "todo"
-   "notes"])
+   "notes"
+   "clojure doc"
+   "edn doc"])
 
 (defn section-match?
   [name- known]
@@ -164,6 +166,23 @@
       (join "\n" msgs))))
 
 ;;--------------------------------------------------------------------------------
+;; Syntax Equiv docs
+;;--------------------------------------------------------------------------------
+
+(defn syntax-equiv-error-msg*
+  [key doc]
+  (when (get doc key)
+    (str key " is currently only allowed for syntax entries, since it is autodetermined elsewhere.")))
+
+(defn syntax-equiv-error-msg
+  "Allow only clj-doc and edn-doc for syntax entries."
+  [{:keys [full-name] :as doc}]
+  (when-not (starts-with? full-name "syntax/")
+    (let [msgs (keep #(syntax-equiv-error-msg* % doc) [:clj-doc :edn-doc])]
+      (when (seq msgs)
+        (join "\n" msgs)))))
+
+;;--------------------------------------------------------------------------------
 ;; Validate All
 ;;--------------------------------------------------------------------------------
 
@@ -174,7 +193,8 @@
    symbol-unknown-error-msg
    see-also-missing-error-msg
    doclink-missing-error-msg
-   filename-error-msg])
+   filename-error-msg
+   syntax-equiv-error-msg])
 
 (defn valid-doc? [doc]
   (let [errors (seq (keep #(% doc) error-detectors))

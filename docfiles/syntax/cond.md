@@ -3,6 +3,7 @@ name: syntax/cond
 display as: "#? reader conditional"
 see also:
   - syntax/cond-splicing
+clojure doc: http://clojure.org/reference/reader#_reader_conditionals
 ---
 
 ## Summary

@@ -2,6 +2,7 @@
 name: syntax/shebang
 display as: "#! shebang"
 see also:
+clojure doc: https://github.com/clojure/clojure/blob/clojure-1.9.0-alpha10/src/jvm/clojure/lang/LispReader.java#L115
 ---
 
 ## Summary

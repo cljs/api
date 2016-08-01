@@ -343,6 +343,14 @@
             :library library-api
             :compiler compiler-api}})))
 
+(defn add-syntax-equiv
+  [{:keys [clj-doc edn-doc] :as item}]
+  (cond-> item
+    clj-doc (assoc-in [:syntax-equiv :clj-url] clj-doc)
+    edn-doc (assoc-in [:syntax-equiv :edn-url] edn-doc)
+    clj-doc (dissoc :clj-doc)
+    edn-doc (dissoc :edn-doc)))
+
 (defn add-docfile
   "Merge the given item with its compiled docfile, containing extra doc info."
   [item]
@@ -360,10 +368,13 @@
                           :search-terms
                           :moved
                           :tags
-                          :md-biblio]))]
+                          :md-biblio
+                          :clj-doc
+                          :edn-doc]))]
      (-> item
          (merge data)
-         (add-usage))))
+         (add-usage)
+         (add-syntax-equiv))))
 
 (defn add-docfile-to-result
   [result]

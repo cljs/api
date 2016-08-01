@@ -4,6 +4,8 @@ display as: "() list"
 see also:
   - syntax/vector
   - syntax/quote
+clojure doc: http://clojure.org/reference/reader#_lists
+edn doc: https://github.com/edn-format/edn#lists
 ---
 
 ## Summary

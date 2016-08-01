@@ -3,6 +3,8 @@ name: syntax/whitespace
 display as: "whitespace"
 see also:
   - syntax/comma
+clojure doc: https://github.com/edn-format/edn#general-considerations
+edn doc: https://github.com/edn-format/edn#general-considerations
 ---
 
 ## Summary

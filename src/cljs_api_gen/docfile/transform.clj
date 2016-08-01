@@ -59,6 +59,8 @@
       (transform-key "search terms" :search-terms section-as-list)
       (transform-key "moved" :moved)
       (transform-key "tags" :tags section-as-list)
+      (transform-key "clojure doc" :clj-doc)
+      (transform-key "edn doc" :edn-doc)
       add-doclink-biblio))
 
 (defn post-transform-doc [doc]

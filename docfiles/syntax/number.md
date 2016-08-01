@@ -7,6 +7,8 @@ see also:
   - cljs.core/number?
   - cljs.core/integer?
   - cljs.core/int
+clojure doc: http://clojure.org/reference/reader#_literals
+edn doc: https://github.com/edn-format/edn#integers
 ---
 
 ## Summary

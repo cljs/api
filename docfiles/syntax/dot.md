@@ -4,6 +4,7 @@ display as: ". dot"
 see also:
   - syntax/symbol
   - syntax/namespace
+clojure doc: http://clojure.org/reference/reader#_symbols
 ---
 
 ## Summary

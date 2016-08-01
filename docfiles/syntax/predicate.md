@@ -3,6 +3,7 @@ name: syntax/predicate
 display as: "? predicate"
 see also:
   - syntax/impure
+clojure doc: http://dev.clojure.org/display/community/Library+Coding+Standards
 ---
 
 ## Summary

@@ -6,6 +6,7 @@ see also:
   - cljs.core/fn
   - cljs.core/defn
   - cljs.core/partial
+clojure doc: http://clojure.org/reference/reader#_dispatch
 ---
 
 ## Summary
