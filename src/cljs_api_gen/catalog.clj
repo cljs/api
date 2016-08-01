@@ -16,7 +16,9 @@
                                     with-checkout!
                                     *cljs-tag*
                                     *cljs-date*
-                                    *clj-tag*]]
+                                    *clj-tag*
+                                    master?
+                                    fake-master-tag]]
     [cljs-api-gen.result :refer [get-result
                                  add-docfile-to-result]]
     [cljs-api-gen.state :refer [*result*]]))
@@ -69,9 +71,13 @@
                          (cljs-version->tag version))
                     version)
 
+        ;; Add a plus sign to the last tag so we can signal that we're parsing
+        ;; features not yet published.
+        master-tag (fake-master-tag (last @published-cljs-tags))
+
         tags (case version
-               :latest @published-cljs-tags
-               :master (concat @published-cljs-tags ["master"])
+               ;; (When latest, we also parse master)
+               :latest (concat @published-cljs-tags [master-tag])
                (if-not ((set @published-cljs-tags) version)
                  (do
                    (println (style "Unrecognized version tag" :red) version)
@@ -90,7 +96,8 @@
 
       ;; check if skip-parse? and if this tag's edn-parsed-file already exists
       (let [parsed-file (str cache-dir "/" (edn-parsed-file tag))
-            skip? (and skip-parse?           ;; do we want to skip?
+            skip? (and skip-parse?             ;; do we want to skip?
+                       (not (master? tag))     ;; master could've changed, so don't skip
                        (exists? parsed-file))] ;; can we skip?
 
         (if skip?
@@ -107,7 +114,10 @@
             (reset! skipped-previous? false)
 
             (println "\n\n=========================================================")
-            (println "\nChecked out ClojureScript " (style *cljs-tag* :yellow))
+            (println "\nChecked out ClojureScript "
+              (style
+                (cond-> *cljs-tag* (master? *cljs-tag*) (str " (master)"))
+                :yellow))
             (println "with Clojure:" (style *clj-tag* :yellow))
             (println "published on" (style *cljs-date* :yellow))
 

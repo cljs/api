@@ -17,6 +17,10 @@ syntax, library, and compiler.  We also supplement this data with curated
 descriptions, examples, cross-refs, and associate each ClojureScript form with
 an equivalent Clojure form where appropriate.
 
+CLJS master branch changes are represented with a pseudo-version ending in `+`.
+For example, if `1.9.23` is latest published version, `1.9.23+` will represent
+what is currently in master.
+
 ## License
 
 MIT, Copyright © 2014-2016 Shaun LeBron

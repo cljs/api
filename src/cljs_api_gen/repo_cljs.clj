@@ -5,7 +5,7 @@
     [clojure.data.json :as json]
     [clojure.java.shell :refer [sh]]
     [me.raynes.fs :refer [exists? mkdir base-name]]
-    [clojure.string :refer [trim split split-lines]]
+    [clojure.string :refer [trim split split-lines ends-with?]]
     [cljs-api-gen.config :refer [repos-dir]]
     [clj-time.core :as time]
     [clj-time.coerce :as tc]
@@ -115,32 +115,40 @@
 ;; ClojureScript version utils
 ;;--------------------------------------------------------------------------------
 
+(defn master? [tag-or-version]
+  (ends-with? tag-or-version "+"))
+
+(defn fake-master-tag [x] (str x "+"))
+
 (defn cljs-tag->version
   "cljs revision tag -> version:
 
            TAG         VERSION
   OLD =    rXXXX       0.0-XXXX
-  NEW =    r1.7.XXXX   1.7.XXXX"
+  NEW =    r1.7.XXXX   1.7.XXXX
+  MASTER = r1.7.XXXX+  1.7.XXXX+
+  "
   [tag]
-  (or (#{"master"} tag)
-    (if-let [[_ revision] (re-find #"r(\d+)$" tag)]
+  (when tag
+    (if-let [[_ revision] (re-find #"r(\d+\+?)$" tag)]
       (str "0.0-" revision)
-      (when-let [[_ full] (re-find #"r(\d+\.\d+\.\d+)$" tag)]
+      (when-let [[_ full] (re-find #"r(\d+\.\d+\.\d+\+?)$" tag)]
         full))))
 
 (defn cljs-version->tag
   "cljs version -> revision tag:
 
-          VERSION    TAG
-  OLD =   0.0-XXXX   rXXXX
-  NEW =   1.7.XXXX   r1.7.XXXX"
+           VERSION    TAG
+  OLD =    0.0-XXXX   rXXXX
+  NEW =    1.7.XXXX   r1.7.XXXX
+  MASTER = 1.7.XXXX+  r1.7.XXXX+
+  "
   [version]
-  (or (#{"master"} version)
-    (when version
-      (when-let [[_ major-minor revision] (re-find #"(\d+\.\d+)[.-](\d+)" version)]
-        (if (= "0.0" major-minor)
-          (str "r" revision)
-          (str "r" major-minor "." revision))))))
+  (when version
+    (when-let [[_ major-minor revision] (re-find #"(\d+\.\d+)[.-](\d+\+?)" version)]
+      (if (= "0.0" major-minor)
+        (str "r" revision)
+        (str "r" major-minor "." revision)))))
 
 (def cljs-tag->pub
   "cljs tag -> maven published info {:order _ :date _}"
@@ -150,7 +158,7 @@
   "cljs tag -> sortable number"
   [tag]
   (when tag
-    (if (= "master" tag)
+    (if (master? tag)
       ;; some large constant denoting that the master is ahead of all previous versions
       1e10
       (:order (@cljs-tag->pub tag)))))
@@ -168,7 +176,7 @@
    (let [versions (cons version others)
          ->num (fn [v]
                  (if (string? v)
-                   (if (or (= "master" v)
+                   (if (or (master? v)
                            (.startsWith v "r"))
                      (cljs-tag->num v)
                      (cljs-version->num v))
@@ -298,8 +306,10 @@
 
 (defn cljs-tag->dep-releases
   [cljs-tag]
-  (let [bootstrap (:out (sh "git" "show" (str cljs-tag ":script/bootstrap")
-                            :dir (str repos-dir "/clojurescript")))
+  (let [bootstrap (:out (sh "git" "show"
+                          (str (if (master? cljs-tag) "master" cljs-tag)
+                               ":script/bootstrap")
+                          :dir (str repos-dir "/clojurescript")))
         clojure
         (cond
           (cljs-cmp >= cljs-tag "0.0-1847") (second (re-find #"(?m)^CLOJURE_RELEASE=\"(.*)\"" bootstrap))
@@ -332,7 +342,7 @@
 
 (defn checkout-repo!
   [repo tag]
-  (sh "git" "checkout" tag :dir (str repos-dir "/" repo)))
+  (sh "git" "checkout" (if (master? tag) "master" tag) :dir (str repos-dir "/" repo)))
 
 (defmacro with-checkout!
   [cljs-tag & body]
