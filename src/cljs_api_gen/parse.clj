@@ -38,6 +38,11 @@
 ;; which is used by cljs.repl. (the env namespace has to exist)
 (create-ns 'spec)
 
+;; HACK: We need to create this so 'tools.reader' doesn't crash on `::s/...`
+;; which is used by cljs.spec.test. (the env namespace has to exist)
+(create-ns 's)
+(create-ns 'stc)
+
 ;; current namespace and repo that we are parsing.
 (def ^:dynamic *cur-ns*)
 (def ^:dynamic *cur-repo*)
