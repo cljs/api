@@ -110,6 +110,7 @@
   (-> x
       (select-keys [:ns
                     :pseudo-ns?
+                    :repl-only?
                     :name
                     :docstring
                     :author
