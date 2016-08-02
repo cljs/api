@@ -81,7 +81,7 @@
               :summary-compiler "... summary in markdown ..."
               :details-compiler "... details in markdown ..."
 
-              ;; the full name where this symbol moved to (example cljs.core/try -> special/try)
+              ;; the full name where this symbol moved to
               :moved "cljs.core/another-name"
 
               ;; (The :signature is auto-parsed, but can be overwritten manually in docfiles)
