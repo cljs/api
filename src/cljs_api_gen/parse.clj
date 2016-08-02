@@ -86,8 +86,7 @@
     "cljs.core"             :custom
     "cljs.test"             :custom
     "cljs.repl"             :custom
-    "cljs.spec.impl.gen"    :custom
-    "special"               :custom} ;; <-- pseudo-namespace for special forms
+    "cljs.spec.impl.gen"    :custom}
 
    :compiler
    {"cljs.analyzer.api"     :normal
@@ -940,13 +939,9 @@
     (concat (parse-extra-macros-from-clj)
             com-parsed
             lib-parsed
-            (get-core-type-members type-names))))
-
-;; pseudo-namespace since special forms don't have a namespace
-(defmethod parse-ns ["special" :library] [ns- api]
-  (concat [(pseudo-ns-item ns-)]
-          (parse-special-items ns-)
-          (parse-repl-special-items ns-)))
+            (get-core-type-members type-names)
+            (parse-special-items ns-)
+            (parse-repl-special-items ns-))))
 
 (defmethod parse-ns ["syntax" :syntax] [ns- api]
   (let [syntaxes (binding [*cur-ns* ns-]
@@ -1015,9 +1010,7 @@
   "`catch` and `finally` are handled inside the `try` special form.
   We cannot parse them, so we add them manually."
   [parsed]
-  (let [try-ns-name (cond
-                      (cljs-cmp >= "0.0-1933") {:ns "special" :name "try"}
-                      :else                    {:ns "cljs.core" :name "try"})
+  (let [try-ns-name {:ns "cljs.core" :name "try"}
         try-form (first (filter #(= (select-keys % [:ns :name]) try-ns-name) parsed))
         get-sigs (fn [name-]
                    ;; parse docstring for signature of `catch` and `finally`:
@@ -1036,7 +1029,7 @@
                (assoc
                  (select-keys try-form
                               [:docstring :source])
-                 :ns "special"
+                 :ns "cljs.core"
                  :type "special form"
                  :name name-
                  :signature (get-sigs name-)))

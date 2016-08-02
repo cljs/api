@@ -113,8 +113,7 @@
    "cljs.repl"   "clojure.repl"
    "cljs.spec"   "clojure.spec"
    "cljs.spec.test" "clojure.spec.test"
-   "cljs.spec.impl.gen" "clojure.spec.gen"
-   "special"     "clojure.core"})
+   "cljs.spec.impl.gen" "clojure.spec.gen"})
 
 
 (def cljs-full-name->clj
