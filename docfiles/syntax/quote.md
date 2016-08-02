@@ -2,7 +2,7 @@
 name: syntax/quote
 display as: "' quote"
 see also:
-  - special/quote
+  - cljs.core/quote
 clojure doc: http://clojure.org/reference/reader#_quote
 ---
 
@@ -18,7 +18,7 @@ Return the following form without evaluation, especially for symbols and lists.
 Quote a form to get its literal value after reading, rather than
 the value created after evaluation.
 
-`'foo` is sugar for [`(quote foo)`][doc:special/quote].
+`'foo` is sugar for [`(quote foo)`][doc:cljs.core/quote].
 
 Prevent the evaluation of the following form.
 
@@ -39,4 +39,4 @@ Prevent the evaluation of the following form.
 ```
 
 <!-- AUTO-GENERATED docfile links for github -->
-[doc:special/quote]:https://github.com/cljs/api/blob/master/docfiles/special/quote.md
+[doc:cljs.core/quote]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/quote.md

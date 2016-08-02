@@ -1,5 +1,5 @@
 ---
-name: special/js*
+name: cljs.core/letfn*
 see also:
 ---
 

@@ -3,7 +3,7 @@ name: syntax/js-namespace
 display as: "js/ namespace"
 see also:
   - syntax/Math-namespace
-  - special/.
+  - cljs.core/.
   - cljs.core/aget
   - cljs.core/aset
 ---

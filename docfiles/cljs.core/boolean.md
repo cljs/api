@@ -1,7 +1,7 @@
 ---
 name: cljs.core/boolean
 see also:
-  - special/if
+  - cljs.core/if
 ---
 
 ## Summary

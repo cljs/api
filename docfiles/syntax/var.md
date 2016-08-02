@@ -2,7 +2,7 @@
 name: syntax/var
 display as: "#' var"
 see also:
-  - special/var
+  - cljs.core/var
 clojure doc: http://clojure.org/reference/reader#_dispatch
 ---
 
@@ -17,7 +17,7 @@ itself.  It is therefore helpful to be aware of the following subtle differences
 
 ## Details
 
-`#'foo` is sugar for [`(var foo)`][doc:special/var].
+`#'foo` is sugar for [`(var foo)`][doc:cljs.core/var].
 
 Mainly used in conjunction with [doc:cljs.core/meta].
 
@@ -44,4 +44,4 @@ Deref a var for a roundabout way to retrieve its value:
 ```
 
 <!-- AUTO-GENERATED docfile links for github -->
-[doc:special/var]:https://github.com/cljs/api/blob/master/docfiles/special/var.md
+[doc:cljs.core/var]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/var.md

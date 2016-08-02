@@ -1,5 +1,5 @@
 ---
-name: special/var
+name: cljs.core/case*
 see also:
 ---
 

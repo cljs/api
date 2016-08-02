@@ -1,5 +1,5 @@
 ---
-name: special/def
+name: cljs.core/def
 known as: define
 see also:
   - cljs.core/defn

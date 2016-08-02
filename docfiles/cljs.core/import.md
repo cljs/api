@@ -1,5 +1,5 @@
 ---
-name: special/import
+name: cljs.core/import
 see also:
 ---
 

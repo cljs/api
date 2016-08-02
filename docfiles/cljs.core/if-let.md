@@ -2,7 +2,7 @@
 name: cljs.core/if-let
 see also:
   - cljs.core/when-let
-  - special/if
+  - cljs.core/if
 ---
 
 ## Summary

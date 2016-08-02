@@ -1,5 +1,5 @@
 ---
-name: special/set!
+name: cljs.core/set!
 see also:
   - cljs.core/aset
   - cljs.core/reset!

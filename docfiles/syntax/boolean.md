@@ -3,7 +3,7 @@ name: syntax/boolean
 display as: "boolean literal"
 see also:
   - cljs.core/boolean
-  - special/if
+  - cljs.core/if
   - cljs.core/not
   - cljs.core/true?
   - cljs.core/false?

@@ -1,5 +1,5 @@
 ---
-name: special/recur
+name: cljs.core/var
 see also:
 ---
 

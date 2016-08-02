@@ -3,7 +3,7 @@ name: cljs.core/for
 see also:
   - cljs.core/doseq
   - cljs.core/doall
-  - special/recur
+  - cljs.core/recur
 ---
 
 ## Summary

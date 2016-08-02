@@ -1,7 +1,7 @@
 ---
 name: cljs.core/loop
 see also:
-  - special/recur
+  - cljs.core/recur
 ---
 
 ## Summary

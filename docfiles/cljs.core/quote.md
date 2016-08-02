@@ -1,5 +1,5 @@
 ---
-name: special/letfn*
+name: cljs.core/quote
 see also:
 ---
 

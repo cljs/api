@@ -2,7 +2,7 @@
 name: cljs.core/aset
 see also:
   - cljs.core/aget
-  - special/set!
+  - cljs.core/set!
   - cljs.core/assoc-in
 ---
 

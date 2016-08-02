@@ -1,5 +1,5 @@
 ---
-name: special/quote
+name: cljs.core/let*
 see also:
 ---
 

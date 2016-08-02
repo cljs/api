@@ -4,7 +4,7 @@ see also:
   - cljs.core/if-let
   - cljs.core/when
   - cljs.core/when-not
-  - special/if
+  - cljs.core/if
   - cljs.core/when-first
 ---
 

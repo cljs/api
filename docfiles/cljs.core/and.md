@@ -2,7 +2,7 @@
 name: cljs.core/and
 see also:
   - cljs.core/or
-  - special/if
+  - cljs.core/if
 ---
 
 ## Summary

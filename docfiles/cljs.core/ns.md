@@ -1,11 +1,11 @@
 ---
-name: special/ns
+name: cljs.core/ns
 see also:
-  - special/in-ns
-  - special/load-namespace
-  - special/import
-  - special/require
-  - special/require-macros
+  - cljs.core/in-ns
+  - cljs.core/load-namespace
+  - cljs.core/import
+  - cljs.core/require
+  - cljs.core/require-macros
 ---
 
 ## Summary

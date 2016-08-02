@@ -1,5 +1,5 @@
 ---
-name: special/in-ns
+name: cljs.core/in-ns
 see also:
 ---
 

@@ -3,7 +3,7 @@ name: cljs.core/cond
 see also:
   - cljs.core/condp
   - cljs.core/case
-  - special/if
+  - cljs.core/if
 ---
 
 ## Summary

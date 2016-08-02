@@ -1,5 +1,5 @@
 ---
-name: special/loop*
+name: cljs.core/try*
 see also:
 ---
 

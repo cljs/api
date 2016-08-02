@@ -1,5 +1,5 @@
 ---
-name: special/if
+name: cljs.core/if
 see also:
   - cljs.core/cond
   - cljs.core/when

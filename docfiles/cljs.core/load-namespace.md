@@ -1,5 +1,5 @@
 ---
-name: special/load-namespace
+name: cljs.core/load-namespace
 see also:
 ---
 

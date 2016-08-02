@@ -3,7 +3,7 @@ name: cljs.repl/doc
 see also:
   - cljs.repl/find-doc
   - cljs.core/meta
-  - special/var
+  - cljs.core/var
 ---
 
 ## Summary

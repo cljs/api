@@ -1,5 +1,5 @@
 ---
-name: special/fn*
+name: cljs.core/defrecord*
 see also:
 ---
 

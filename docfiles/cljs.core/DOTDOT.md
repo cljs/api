@@ -1,7 +1,7 @@
 ---
 name: cljs.core/..
 see also:
-  - special/.
+  - cljs.core/.
   - cljs.core/->
   - cljs.core/doto
 ---

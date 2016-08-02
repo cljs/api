@@ -1,7 +1,7 @@
 ---
 name: cljs.core/declare
 see also:
-  - special/def
+  - cljs.core/def
 ---
 
 ## Summary

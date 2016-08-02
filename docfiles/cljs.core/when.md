@@ -3,7 +3,7 @@ name: cljs.core/when
 see also:
   - cljs.core/when-not
   - cljs.core/when-let
-  - special/if
+  - cljs.core/if
 ---
 
 ## Summary

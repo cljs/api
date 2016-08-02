@@ -24,8 +24,8 @@ The following are also supported (though not valid in Clojure)
 
 A dot's meaning depends on its position in the symbol:
 
-- `.` (by itself), `.-foo`, `.foo` all refer to the interop [`. (special form)`][doc:special/.].
-- `foo.` is constructor sugar, meaning [`(new foo)`][doc:special/new].
+- `.` (by itself), `.-foo`, `.foo` all refer to the interop [`. (special form)`][doc:cljs.core/.].
+- `foo.` is constructor sugar, meaning [`(new foo)`][doc:cljs.core/new].
 - `(ns foo.bar)` and `foo.bar/baz` means that `foo.bar` is a nested namespace.
 - `foo/bar.baz` or `bar.baz` means `bar.baz` is nested JS property access (__not allowed in clojure__).
 
@@ -91,5 +91,5 @@ cljs.core/PersistentQueue.EMPTY
 ```
 
 <!-- AUTO-GENERATED docfile links for github -->
-[doc:special/.]:https://github.com/cljs/api/blob/master/docfiles/special/DOT.md
-[doc:special/new]:https://github.com/cljs/api/blob/master/docfiles/special/new.md
+[doc:cljs.core/.]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/DOT.md
+[doc:cljs.core/new]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/new.md

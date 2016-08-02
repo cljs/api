@@ -1,7 +1,7 @@
 ---
 name: cljs.core/defn
 see also:
-  - special/def
+  - cljs.core/def
   - cljs.core/defn-
   - cljs.core/defmacro
   - cljs.core/fn

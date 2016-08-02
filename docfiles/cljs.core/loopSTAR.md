@@ -1,5 +1,5 @@
 ---
-name: special/deftype*
+name: cljs.core/loop*
 see also:
 ---
 

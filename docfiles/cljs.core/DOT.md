@@ -1,5 +1,5 @@
 ---
-name: special/.
+name: cljs.core/.
 see also:
   - cljs.core/..
   - cljs.core/aget

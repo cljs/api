@@ -10,7 +10,7 @@ clojure doc: http://dev.clojure.org/display/community/Library+Coding+Standards
 
 A naming convention sometimes applied to functions that perform mutations.  Examples:
 
-- [doc:special/set!]
+- [doc:cljs.core/set!]
 - [doc:cljs.core/swap!]
 - [doc:cljs.core/conj!]
 - [doc:cljs.core/specify!]
@@ -41,4 +41,4 @@ The following causes a side-effect in the state of `a`:
 [doc:cljs.core/conj!]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/conjBANG.md
 [doc:cljs.core/specify!]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/specifyBANG.md
 [doc:cljs.core/swap!]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/swapBANG.md
-[doc:special/set!]:https://github.com/cljs/api/blob/master/docfiles/special/setBANG.md
+[doc:cljs.core/set!]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/setBANG.md

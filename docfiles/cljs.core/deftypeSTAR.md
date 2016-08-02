@@ -1,5 +1,5 @@
 ---
-name: special/new
+name: cljs.core/deftype*
 see also:
 ---
 

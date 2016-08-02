@@ -1,5 +1,5 @@
 ---
-name: special/let*
+name: cljs.core/recur
 see also:
 ---
 

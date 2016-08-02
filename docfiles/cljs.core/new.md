@@ -1,6 +1,5 @@
 ---
-name: special/try*
-moved: special/try
+name: cljs.core/new
 see also:
 ---
 

@@ -1,9 +1,9 @@
 ---
-name: special/catch
+name: cljs.core/catch
 see also:
-  - special/try
-  - special/finally
-  - special/throw
+  - cljs.core/try
+  - cljs.core/finally
+  - cljs.core/throw
 ---
 
 ## Summary

@@ -1,5 +1,5 @@
 ---
-name: special/load-file
+name: cljs.core/load-file
 see also:
 ---
 

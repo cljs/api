@@ -1,5 +1,5 @@
 ---
-name: special/do
+name: cljs.core/fn*
 see also:
 ---
 

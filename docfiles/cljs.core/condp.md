@@ -2,7 +2,7 @@
 name: cljs.core/condp
 see also:
   - cljs.core/cond
-  - special/if
+  - cljs.core/if
 ---
 
 ## Summary

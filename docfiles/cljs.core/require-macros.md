@@ -1,7 +1,7 @@
 ---
-name: special/require-macros
+name: cljs.core/require-macros
 see also:
-  - special/require
+  - cljs.core/require
 ---
 
 ## Summary

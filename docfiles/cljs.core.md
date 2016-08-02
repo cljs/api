@@ -8,10 +8,9 @@ fundamental library of the ClojureScript language
 
 ## Details
 
-This is the core library of ClojureScript, which builds on the Special Forms to
-complete the language's fundamental constructs. It also provides a slew of core
-operations for managing state, creating/manipulating/querying data structures,
-interop with JS, many predicates, etc.
+This is the core library of ClojureScript, providing core operations for
+managing state, creating/manipulating/querying data structures, interop with
+JS, many predicates, etc.
 
 ###### Some side notes:
 
