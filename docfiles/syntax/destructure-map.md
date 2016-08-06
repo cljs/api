@@ -18,8 +18,8 @@ Shorthand for destructuring a map into multiple names. Allows you to use a
 `{...}` pattern instead of a usual `name` in the following examples:
 
 - `(defn [name])` -> `(defn [{...}])`
-- `(let [name a-map])` -> `(let [{...} a-map])`
-- `(for [name a-sequence-of-maps])` -> `(for [{...} a-sequence-of-maps])`
+- `(let [name map])` -> `(let [{...} map])`
+- `(for [name maps])` -> `(for [{...} maps])`
 
 Quick pattern reference:
 

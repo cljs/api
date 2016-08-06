@@ -15,8 +15,8 @@ Shorthand for destructuring a sequence into multiple names. Allows you to use a
 `[...]` pattern instead of a usual `name` in the following examples:
 
 - `(defn [name])` -> `(defn [[...]])`
-- `(let [name a-sequence])` -> `(let [[...] a-sequence])`
-- `(for [name a-sequence-of-sequences])` -> `(for [[...] a-sequence-of-sequences])`
+- `(let [name sequence])` -> `(let [[...] sequence])`
+- `(for [name sequences])` -> `(for [[...] sequences])`
 
 Quick pattern reference:
 
