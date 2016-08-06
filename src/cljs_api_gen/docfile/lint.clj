@@ -9,12 +9,16 @@
          [:moved "moved:"]
          [:display-as "display as:"]
          [:known-as "known as:"]
+         [:clj-doc "clojure doc:"]
+         [:edn-doc "edn doc:"]
          [:tags "tags:"]
-         [:see-also "see also:"]]
+         [:see-also "see also:"]
+         [:search-terms "search terms:"]]
    :required?        #{:full-name :see-also}
    :syntax-required? #{:full-name :see-also :display-as}
    :ns-required?     #{:full-name}
-   :list?            #{:tags :see-also}})
+   :list?            #{:tags :see-also :search-terms}
+   :quotes?          #{:display-as :search-terms}})
 
 (def markdown-keys
   {:all [[:summary "Summary"]
@@ -30,8 +34,8 @@
    :ns-required? #{:summary :details}
    :list?        #{:usage}})
 
-(defn yaml-list [l]
-  (string/join "\n" (map #(str "  - " %) l)))
+(defn yaml-list [l quote?]
+  (string/join "\n" (map #(str "  - " (cond-> % quote? pr-str)) l)))
 
 (defn blank? [x]
   (cond
@@ -44,6 +48,7 @@
   [[key title] m]
   (let [value (get m key)
         list? (:list? frontmatter-keys)
+        quotes? (:quotes? frontmatter-keys)
         required?
         (cond
           (string/starts-with? (:full-name m) "syntax/") (:syntax-required? frontmatter-keys)
@@ -53,8 +58,8 @@
               (required? key))
       (cond
         (blank? value)      (str title)
-        (list? key)         (str title "\n" (yaml-list value))
-        (= key :display-as) (str title " " (pr-str value))
+        (list? key)         (str title "\n" (yaml-list value (quotes? key)))
+        (quotes? key)       (str title " " (pr-str value))
         :else               (str title " " value)))))
 
 (defn map->frontmatter [m]

@@ -5,7 +5,8 @@
     [clansi.core :refer [style]]
     [clojure.string :refer [join]]
     [me.raynes.fs :refer [exists?]]
-    [cljs-api-gen.docfile :refer [build-docfile!
+    [cljs-api-gen.docfile :refer [build-docfiles!
+                                  lint-docfiles!
                                   create-docfile-stubs!]]
     [cljs-api-gen.config :refer [cache-dir
                                  edn-parsed-file
@@ -141,9 +142,12 @@
       (create-docfile-stubs! (-> *result* :namespaces keys set))
 
       ;; compile docfile files (manual docs)
-      (let [num-skipped (build-docfile!)]
+      (let [num-skipped (build-docfiles!)]
         (when-not (zero? num-skipped)
           (System/exit 1)))
+
+      ;; lint the docfiles
+      (lint-docfiles!)
 
       ;; create final result
       (println (style "\nMerging manual docs into final result...\n" :magenta))

@@ -51,8 +51,8 @@
         (println "Creating new docfile stub for" (style full-name :yellow) "at" (style filename :cyan))
         (spit filename (docfile-stub full-name))))))
 
-(defn build-docfile! []
-  (println (cond-> (style "\nCompiling " docfile-dir "/ files" :cyan)
+(defn build-docfiles! []
+  (println (cond-> (style (str "\nCompiling " docfile-dir "/ files") :cyan)
              (nil? *result*) (str " (without parsed API info)"))
            "...")
 
@@ -74,6 +74,7 @@
 
     skipped))
 
-(defn lint-docfile! []
+(defn lint-docfiles! []
+  (println (style (str "\nLinting " docfile-dir "/ files") :cyan))
   (doseq [file (docfiles docfile-dir)]
     (spit file (normalize-doc (build-doc file)))))

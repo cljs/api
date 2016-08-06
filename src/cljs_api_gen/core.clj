@@ -5,7 +5,7 @@
     [me.raynes.fs :refer [mkdir
                           exists?]]
     [cljs-api-gen.config :refer [cache-dir]]
-    [cljs-api-gen.docfile :refer [build-docfile! lint-docfile!]]
+    [cljs-api-gen.docfile :refer [build-docfiles! lint-docfiles!]]
     [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos!
                                     get-published-cljs-tags!
                                     get-published-clj-versions!
@@ -31,7 +31,7 @@
   (println (style "\n DONE PREPPING " :bg-green)))
 
 (defn docfile-task []
-  (let [num-skipped (build-docfile!)]
+  (let [num-skipped (build-docfiles!)]
     (when-not (zero? num-skipped)
       (System/exit 1))))
 
@@ -42,7 +42,7 @@
   (prep!)
   (cond
     (= task :docfile) (docfile-task)
-    (= task :lint) (lint-docfile!)
+    (= task :lint) (lint-docfiles!)
     :else (create-catalog! options))
 
   ;; have to do this because `sh` leaves futures hanging,
