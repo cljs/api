@@ -1,9 +1,9 @@
 ---
 name: syntax/cond-splicing
 display as: "#?@ reader conditional splicing"
+clojure doc: http://clojure.org/reference/reader#_reader_conditionals
 see also:
   - syntax/cond
-clojure doc: http://clojure.org/reference/reader#_reader_conditionals
 ---
 
 ## Summary

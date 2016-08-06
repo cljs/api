@@ -1,10 +1,10 @@
 ---
 name: syntax/auto-gensym
 display as: "# auto-gensym"
+clojure doc: http://clojure.org/reference/reader#syntax-quote
 see also:
   - cljs.core/gensym
   - syntax/syntax-quote
-clojure doc: http://clojure.org/reference/reader#syntax-quote
 ---
 
 ## Summary

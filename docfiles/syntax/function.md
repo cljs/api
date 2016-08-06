@@ -1,12 +1,12 @@
 ---
 name: syntax/function
 display as: "#() function"
+clojure doc: http://clojure.org/reference/reader#_dispatch
 see also:
   - syntax/arg
   - cljs.core/fn
   - cljs.core/defn
   - cljs.core/partial
-clojure doc: http://clojure.org/reference/reader#_dispatch
 ---
 
 ## Summary
@@ -40,3 +40,6 @@ automatically assigned `%` argument names.
 (f 1 2 3 4 5)
 ;; prints: 1 2 (3 4 5)
 ```
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/arg]:https://github.com/cljs/api/blob/master/docfiles/syntax/arg.md

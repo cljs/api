@@ -1,12 +1,12 @@
 ---
 name: syntax/regex
 display as: "#\"\" regex"
+clojure doc: http://clojure.org/reference/reader#_dispatch
 see also:
   - cljs.core/re-pattern
   - cljs.core/re-find
   - cljs.core/re-seq
   - cljs.core/re-matches
-clojure doc: http://clojure.org/reference/reader#_dispatch
 ---
 
 ## Summary
@@ -44,3 +44,6 @@ Case-insensitive matching:
 (re-seq #"(?i)foo" "FOO BAR foo bar")
 ;;=> ("FOO" "foo")
 ```
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/re-seq]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/re-seq.md

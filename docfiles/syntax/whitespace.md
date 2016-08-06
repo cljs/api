@@ -1,10 +1,10 @@
 ---
 name: syntax/whitespace
 display as: "whitespace"
-see also:
-  - syntax/comma
 clojure doc: https://github.com/edn-format/edn#general-considerations
 edn doc: https://github.com/edn-format/edn#general-considerations
+see also:
+  - syntax/comma
 ---
 
 ## Summary
@@ -31,6 +31,3 @@ indentation.
 [Parinfer]:http://shaunlebron.github.io/parinfer
 
 ## Examples
-
-<!-- AUTO-GENERATED docfile links for github -->
-[doc:syntax/comma]:https://github.com/cljs/api/blob/master/docfiles/syntax/comma.md

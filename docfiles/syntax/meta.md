@@ -1,12 +1,12 @@
 ---
 name: syntax/meta
 display as: "^ meta"
+clojure doc: http://clojure.org/reference/reader#_metadata
 see also:
   - cljs.core/meta
   - cljs.core/with-meta
   - cljs.core/vary-meta
   - cljs.core/alter-meta!
-clojure doc: http://clojure.org/reference/reader#_metadata
 ---
 
 ## Summary

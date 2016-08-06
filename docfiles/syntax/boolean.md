@@ -1,14 +1,14 @@
 ---
 name: syntax/boolean
 display as: "boolean literal"
+clojure doc: http://clojure.org/reference/reader#_literals
+edn doc: https://github.com/edn-format/edn#booleans
 see also:
   - cljs.core/boolean
   - cljs.core/if
   - cljs.core/not
   - cljs.core/true?
   - cljs.core/false?
-clojure doc: http://clojure.org/reference/reader#_literals
-edn doc: https://github.com/edn-format/edn#booleans
 ---
 
 ## Summary

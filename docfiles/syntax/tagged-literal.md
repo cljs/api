@@ -1,10 +1,10 @@
 ---
 name: syntax/tagged-literal
 display as: "# tagged literal"
-see also:
-  - syntax/dispatch
 clojure doc: http://clojure.org/reference/reader#_tagged_literals
 edn doc: https://github.com/edn-format/edn#tagged-elements
+see also:
+  - syntax/dispatch
 ---
 
 ## Summary
@@ -66,10 +66,3 @@ literal UUID:
 #uuid "97bda55b-6175-4c39-9e04-7c0205c709dc"
 ;;=> #uuid "97bda55b-6175-4c39-9e04-7c0205c709dc"
 ```
-
-<!-- AUTO-GENERATED docfile links for github -->
-[doc:syntax/symbol]:https://github.com/cljs/api/blob/master/docfiles/syntax/symbol.md
-[doc:syntax/inst-literal]:https://github.com/cljs/api/blob/master/docfiles/syntax/inst-literal.md
-[doc:syntax/queue-literal]:https://github.com/cljs/api/blob/master/docfiles/syntax/queue-literal.md
-[doc:syntax/js-literal]:https://github.com/cljs/api/blob/master/docfiles/syntax/js-literal.md
-[doc:syntax/uuid-literal]:https://github.com/cljs/api/blob/master/docfiles/syntax/uuid-literal.md

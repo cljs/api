@@ -1,10 +1,10 @@
 ---
 name: syntax/unquote
 display as: "~ unquote"
+clojure doc: http://clojure.org/reference/reader#syntax-quote
 see also:
   - syntax/syntax-quote
   - syntax/unquote-splicing
-clojure doc: http://clojure.org/reference/reader#syntax-quote
 ---
 
 ## Summary

@@ -1,6 +1,8 @@
 ---
 name: syntax/dispatch
 display as: "# dispatch"
+clojure doc: http://clojure.org/reference/reader#_dispatch
+edn doc: https://github.com/edn-format/edn#-dispatch-character
 see also:
   - syntax/regex
   - syntax/function
@@ -9,8 +11,6 @@ see also:
   - syntax/ignore
   - syntax/tagged-literal
   - syntax/cond
-clojure doc: http://clojure.org/reference/reader#_dispatch
-edn doc: https://github.com/edn-format/edn#-dispatch-character
 ---
 
 ## Summary

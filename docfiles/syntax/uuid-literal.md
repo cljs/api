@@ -1,11 +1,11 @@
 ---
 name: syntax/uuid-literal
 display as: "#uuid literal"
+clojure doc: https://github.com/clojure/clojure/blob/master/changes.md#212-uuid-literals
+edn doc: https://github.com/edn-format/edn#uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6
 see also:
   - cljs.core/uuid
   - cljs.core/random-uuid
-clojure doc: https://github.com/clojure/clojure/blob/master/changes.md#212-uuid-literals
-edn doc: https://github.com/edn-format/edn#uuid-f81d4fae-7dec-11d0-a765-00a0c91e6bf6
 ---
 
 ## Summary
@@ -51,4 +51,5 @@ Get as a string:
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/UUID]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/UUID.md
+[doc:cljs.core/random-uuid]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/random-uuid.md
 [doc:cljs.core/uuid]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/uuid.md

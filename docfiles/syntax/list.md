@@ -1,11 +1,11 @@
 ---
 name: syntax/list
 display as: "() list"
+clojure doc: http://clojure.org/reference/reader#_lists
+edn doc: https://github.com/edn-format/edn#lists
 see also:
   - syntax/vector
   - syntax/quote
-clojure doc: http://clojure.org/reference/reader#_lists
-edn doc: https://github.com/edn-format/edn#lists
 ---
 
 ## Summary

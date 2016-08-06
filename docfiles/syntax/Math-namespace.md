@@ -1,9 +1,9 @@
 ---
 name: syntax/Math-namespace
 display as: "Math/ namespace"
+clojure doc: http://clojure.org/reference/java_interop#dot
 see also:
   - syntax/js-namespace
-clojure doc: http://clojure.org/reference/java_interop#dot
 ---
 
 ## Summary

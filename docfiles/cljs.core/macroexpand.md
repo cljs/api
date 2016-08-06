@@ -42,5 +42,5 @@ Notice how the nested `inc` form is not expanded:
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/when]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/when.md
-[doc:cljs.core/macroexpand-1]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/macroexpand-1.md
 [doc:cljs.core/if]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/if.md
+[doc:cljs.core/macroexpand-1]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/macroexpand-1.md

@@ -1,9 +1,9 @@
 ---
 name: syntax/earmuffs
 display as: "*earmuffs*"
+clojure doc: http://dev.clojure.org/display/community/Library+Coding+Standards
 see also:
   - cljs.core/binding
-clojure doc: http://dev.clojure.org/display/community/Library+Coding+Standards
 ---
 
 ## Summary

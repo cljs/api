@@ -1,9 +1,9 @@
 ---
 name: syntax/quote
 display as: "' quote"
+clojure doc: http://clojure.org/reference/reader#_quote
 see also:
   - cljs.core/quote
-clojure doc: http://clojure.org/reference/reader#_quote
 ---
 
 ## Summary

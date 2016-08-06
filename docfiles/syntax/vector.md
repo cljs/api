@@ -1,11 +1,11 @@
 ---
 name: syntax/vector
 display as: "[] vector"
+clojure doc: http://clojure.org/reference/reader#_vectors
+edn doc: https://github.com/edn-format/edn#vectors
 see also:
   - cljs.core/vector
   - cljs.core/vec
-clojure doc: http://clojure.org/reference/reader#_vectors
-edn doc: https://github.com/edn-format/edn#vectors
 ---
 
 ## Summary
@@ -43,4 +43,3 @@ when local names are created and bound to values. Examples:
 [doc:cljs.core/conj]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/conj.md
 [doc:cljs.core/PersistentVector]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/PersistentVector.md
 [doc:cljs.core/fn]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/fn.md
-[doc:syntax/list]:https://github.com/cljs/api/blob/master/docfiles/syntax/list.md

@@ -1,9 +1,9 @@
 ---
 name: syntax/predicate
 display as: "? predicate"
+clojure doc: http://dev.clojure.org/display/community/Library+Coding+Standards
 see also:
   - syntax/impure
-clojure doc: http://dev.clojure.org/display/community/Library+Coding+Standards
 ---
 
 ## Summary

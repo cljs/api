@@ -1,10 +1,10 @@
 ---
 name: syntax/unquote-splicing
 display as: "~@ unquote splicing"
+clojure doc: http://clojure.org/reference/reader#syntax-quote
 see also:
   - syntax/syntax-quote
   - syntax/unquote
-clojure doc: http://clojure.org/reference/reader#syntax-quote
 ---
 
 ## Summary
@@ -24,4 +24,4 @@ Like [doc:syntax/unquote], except the result is spliced (i.e. `[a b]` => `a b`)
 ```
 
 <!-- AUTO-GENERATED docfile links for github -->
-[doc:syntax/syntax-quote]:https://github.com/cljs/api/blob/master/docfiles/syntax/syntax-quote.md
+[doc:syntax/unquote]:https://github.com/cljs/api/blob/master/docfiles/syntax/unquote.md

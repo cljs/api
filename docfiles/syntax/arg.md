@@ -1,9 +1,9 @@
 ---
 name: syntax/arg
 display as: "% arg"
+clojure doc: http://clojure.org/reference/reader#_dispatch
 see also:
   - syntax/function
-clojure doc: http://clojure.org/reference/reader#_dispatch
 ---
 
 ## Summary

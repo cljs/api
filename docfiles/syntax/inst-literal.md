@@ -1,11 +1,11 @@
 ---
 name: syntax/inst-literal
 display as: "#inst literal"
+clojure doc: https://github.com/clojure/clojure/blob/master/changes.md#211-instant-literals
+edn doc: https://github.com/edn-format/edn#inst-rfc-3339-format
 see also:
   - cljs.core/time
   - syntax/tagged-literal
-clojure doc: https://github.com/clojure/clojure/blob/master/changes.md#211-instant-literals
-edn doc: https://github.com/edn-format/edn#inst-rfc-3339-format
 ---
 
 ## Summary

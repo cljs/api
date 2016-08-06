@@ -1,12 +1,12 @@
 ---
 name: syntax/syntax-quote
 display as: "` syntax quote"
+clojure doc: http://clojure.org/reference/reader#syntax-quote
 see also:
   - syntax/auto-gensym
   - syntax/quote
   - syntax/unquote
   - syntax/unquote-splicing
-clojure doc: http://clojure.org/reference/reader#syntax-quote
 ---
 
 ## Summary
@@ -46,4 +46,6 @@ Like [doc:syntax/quote], but with important differences:
 ```
 
 <!-- AUTO-GENERATED docfile links for github -->
+[doc:syntax/quote]:https://github.com/cljs/api/blob/master/docfiles/syntax/quote.md
 [doc:syntax/auto-gensym]:https://github.com/cljs/api/blob/master/docfiles/syntax/auto-gensym.md
+[doc:syntax/unquote]:https://github.com/cljs/api/blob/master/docfiles/syntax/unquote.md

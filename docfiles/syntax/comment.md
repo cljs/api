@@ -1,12 +1,12 @@
 ---
 name: syntax/comment
 display as: "; comment"
+clojure doc: http://clojure.org/reference/reader#_comment
+edn doc: https://github.com/edn-format/edn#comments
 see also:
   - syntax/ignore
   - cljs.core/comment
   - syntax/shebang
-clojure doc: http://clojure.org/reference/reader#_comment
-edn doc: https://github.com/edn-format/edn#comments
 ---
 
 ## Summary

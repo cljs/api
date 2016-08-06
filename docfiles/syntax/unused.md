@@ -1,8 +1,8 @@
 ---
 name: syntax/unused
 display as: "_ unused"
-see also:
 clojure doc: http://clojure.org/guides/faq#underscore
+see also:
 ---
 
 ## Summary

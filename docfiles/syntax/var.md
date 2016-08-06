@@ -1,9 +1,9 @@
 ---
 name: syntax/var
 display as: "#' var"
+clojure doc: http://clojure.org/reference/reader#_dispatch
 see also:
   - cljs.core/var
-clojure doc: http://clojure.org/reference/reader#_dispatch
 ---
 
 ## Summary
@@ -45,3 +45,4 @@ Deref a var for a roundabout way to retrieve its value:
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/var]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/var.md
+[doc:cljs.core/meta]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/meta.md

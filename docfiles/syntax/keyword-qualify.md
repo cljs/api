@@ -1,11 +1,11 @@
 ---
 name: syntax/keyword-qualify
 display as: ":: keyword"
+clojure doc: http://clojure.org/reference/reader#_literals
 see also:
   - syntax/keyword
   - cljs.core/keyword
   - cljs.core/keyword?
-clojure doc: http://clojure.org/reference/reader#_literals
 ---
 
 ## Summary

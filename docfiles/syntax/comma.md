@@ -1,9 +1,9 @@
 ---
 name: syntax/comma
 display as: ", comma"
-see also:
 clojure doc: http://clojure.org/reference/reader#_maps
 edn doc: https://github.com/edn-format/edn#general-considerations
+see also:
 ---
 
 ## Summary

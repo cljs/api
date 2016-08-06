@@ -1,8 +1,8 @@
 ---
 name: syntax/ns-map-alias
 display as: "#:: namespaced map"
-see also:
 clojure doc: http://clojure.org/reference/reader#_map_namespace_syntax
+see also:
 ---
 
 ## Summary

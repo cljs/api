@@ -1,14 +1,14 @@
 ---
 name: syntax/number
 display as: "number literal"
+clojure doc: http://clojure.org/reference/reader#_literals
+edn doc: https://github.com/edn-format/edn#integers
 see also:
   - syntax/Infinity
   - syntax/NaN
   - cljs.core/number?
   - cljs.core/integer?
   - cljs.core/int
-clojure doc: http://clojure.org/reference/reader#_literals
-edn doc: https://github.com/edn-format/edn#integers
 ---
 
 ## Summary

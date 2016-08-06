@@ -1,12 +1,12 @@
 ---
 name: syntax/destructure-vector
 display as: "destructure []"
+clojure doc: http://clojure.org/reference/special_forms#_vector_binding_destructuring
 see also:
   - syntax/destructure-map
 search terms:
   - ":as"
   - "&"
-clojure doc: http://clojure.org/reference/special_forms#_vector_binding_destructuring
 ---
 
 ## Summary

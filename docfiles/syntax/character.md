@@ -1,11 +1,11 @@
 ---
 name: syntax/character
 display as: "\\ character"
+clojure doc: http://clojure.org/reference/reader#_literals
+edn doc: https://github.com/edn-format/edn#characters
 see also:
   - syntax/string
   - cljs.core/str
-clojure doc: http://clojure.org/reference/reader#_literals
-edn doc: https://github.com/edn-format/edn#characters
 ---
 
 ## Summary

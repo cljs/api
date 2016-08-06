@@ -1,6 +1,7 @@
 ---
 name: syntax/destructure-map
 display as: "destructure {}"
+clojure doc: http://clojure.org/reference/special_forms#_map_binding_destructuring
 see also:
   - syntax/destructure-vector
 search terms:
@@ -9,7 +10,6 @@ search terms:
   - ":syms"
   - ":as"
   - "&"
-clojure doc: http://clojure.org/reference/special_forms#_map_binding_destructuring
 ---
 
 ## Summary

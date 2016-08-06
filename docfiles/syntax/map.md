@@ -1,13 +1,13 @@
 ---
 name: syntax/map
 display as: "{} map"
+clojure doc: http://clojure.org/reference/reader#_maps
+edn doc: https://github.com/edn-format/edn#maps
 see also:
   - cljs.core/hash-map
   - cljs.core/array-map
   - cljs.core/sorted-map
   - cljs.core/sorted-map-by
-clojure doc: http://clojure.org/reference/reader#_maps
-edn doc: https://github.com/edn-format/edn#maps
 ---
 
 ## Summary

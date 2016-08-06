@@ -1,9 +1,9 @@
 ---
 name: syntax/impure
 display as: "! impure"
+clojure doc: http://dev.clojure.org/display/community/Library+Coding+Standards
 see also:
   - syntax/predicate
-clojure doc: http://dev.clojure.org/display/community/Library+Coding+Standards
 ---
 
 ## Summary
