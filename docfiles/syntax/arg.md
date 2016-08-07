@@ -18,14 +18,6 @@ if there are more than one:
 
 ## Details
 
-Special vars for accessing implicit function arguments.
-
-Only usable inside [doc:syntax/function].
-
-- `%` or `%1` for first argument.
-- `%2`, `%3` and so on for subsequent arguments
-- `%&` for the rest of the arguments after the highest individually referenced argument
-
 ## Examples
 
 ```clj
