@@ -20497,7 +20497,6 @@
                                           :lines [769 788],
                                           :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-beta3/src/main/clojure/clojure/tools/reader.clj#L769-L788"}),
                          :summary "Use `%` as the implicit argument to a [`#() function`][doc:syntax/function], or use the following\nif there are more than one:\n\n- `%1` - first arg\n- `%2` - second arg\n- `%3` - first arg\n- `%&` - rest of the args",
-                         :details "Special vars for accessing implicit function arguments.\n\nOnly usable inside [`#() function`][doc:syntax/function].\n\n- `%` or `%1` for first argument.\n- `%2`, `%3` and so on for subsequent arguments\n- `%&` for the rest of the arguments after the highest individually referenced argument",
                          :examples "```clj\n(map #(* 2 %) [1 2 3])\n;;=> (2 4 6)\n\n(def f #(println %1 %2 %&))\n(f 1 2 3 4 5)\n;; prints: 1 2 (3 4 5)\n```",
                          :full-name "syntax/arg",
                          :see-also ["syntax/function"]},
@@ -21468,6 +21467,10 @@
                                               "cljs.core/make-array"],
                                    :docstring "Returns an array with components set to the values in aseq. Optional type\nargument accepted for compatibility with Clojure."},
            "syntax/tagged-literal" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/syntax/tagged-literal.md",
+                                    :md-biblio #{"syntax/inst-literal"
+                                                 "syntax/queue-literal"
+                                                 "syntax/js-literal"
+                                                 "syntax/uuid-literal"},
                                     :syntax-equiv {:edn-url "https://github.com/edn-format/edn#tagged-elements",
                                                    :clj-url "http://clojure.org/reference/reader#_tagged_literals"},
                                     :display-as "# tagged literal",
@@ -21484,7 +21487,7 @@
                                                      :filename "src/main/clojure/clojure/tools/reader.clj",
                                                      :lines [838 851],
                                                      :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-beta3/src/main/clojure/clojure/tools/reader.clj#L838-L851"}),
-                                    :summary "Some frequently used value types are afforded a \"tagged literal\" syntax. It is\nsimilar to a constructor, but this special syntax makes it de/serializable and\neasier to read at the REPL.\n\nTagged literals start with a `#` followed by a symbol and a literal:\n\n- `#js [...]` - [JavaScript array literal](doc:syntax/js-literal)\n- `#js {...}` - [JavaScript object literal](doc:syntax/js-literal)\n- `#inst \"...\"` - [JavaScript date literal](doc:syntax/inst-literal)\n- `#uuid \"...\"` - [UUID literal](doc:syntax/uuid-literal)\n- `#queue [...]` - [queue literal](doc:syntax/queue-literal)",
+                                    :summary "Some frequently used value types are afforded a \"tagged literal\" syntax. It is\nsimilar to a constructor, but this special syntax makes it de/serializable and\neasier to read at the REPL.\n\nTagged literals start with a `#` followed by a symbol and a literal:\n\n- `#js [...]` - [JavaScript array literal][doc:syntax/js-literal]\n- `#js {...}` - [JavaScript object literal][doc:syntax/js-literal]\n- `#inst \"...\"` - [JavaScript date literal][doc:syntax/inst-literal]\n- `#uuid \"...\"` - [UUID literal][doc:syntax/uuid-literal]\n- `#queue [...]` - [queue literal][doc:syntax/queue-literal]",
                                     :details "These tagged literals are the \"extensible\" part of extensible data notation\n([edn]), with ClojureScript being a superset of edn.\n\n[edn]:https://github.com/edn-format/edn#tagged-elements",
                                     :examples "(Tagged literals are printed as themselves, just like core syntax literals.)\n\nliteral JavaScript object:\n\n```clj\n#js {:foo 1}\n;;=> #js {:foo 1}\n\n(def foo 1)\n#js {:foo foo}\n;;=> #js {:foo 1}\n```\n\nliteral queue:\n\n```clj\n#queue [1 2 3]\n;;=> #queue [1 2 3]\n\n(conj #queue [1 2 3] 4)\n;;=> #queue [1 2 3 4]\n```\n\nliteral instant of time (date):\n\n```clj\n#inst \"2014-10-13\"\n;;=> #inst \"2014-10-13T00:00:00.000-00:00\"\n```\n\nliteral UUID:\n\n```clj\n#uuid \"97bda55b-6175-4c39-9e04-7c0205c709dc\"\n;;=> #uuid \"97bda55b-6175-4c39-9e04-7c0205c709dc\"\n```",
                                     :full-name "syntax/tagged-literal",
