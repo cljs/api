@@ -1,6 +1,6 @@
 ---
 name: syntax/ns-map
-display as: "#: namespaced map"
+display as: "#:{} namespaced map"
 clojure doc: http://clojure.org/reference/reader#_map_namespace_syntax
 see also:
 ---
