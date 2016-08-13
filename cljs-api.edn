@@ -3005,8 +3005,8 @@
                                       :repo "clojurescript",
                                       :tag "r1.9.198+",
                                       :filename "src/main/clojure/cljs/analyzer.cljc",
-                                      :lines [1583 1585],
-                                      :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1583-L1585"},
+                                      :lines [1589 1591],
+                                      :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1589-L1591"},
                              :full-name "cljs.core/let*",
                              :history [["+" "0.0-927"]]},
            "cljs.core/remove-method" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/remove-method.md",
@@ -5573,8 +5573,8 @@
                                      :repo "clojurescript",
                                      :tag "r1.9.198+",
                                      :filename "src/main/clojure/cljs/analyzer.cljc",
-                                     :lines [1020 1026],
-                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1020-L1026"},
+                                     :lines [1026 1032],
+                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1026-L1032"},
                             :usage ["(var symbol)"],
                             :full-name "cljs.core/var",
                             :docstring "The symbol must resolve to a var, and the Var object\nitself (not its value) is returned. The reader macro #'x expands to (var x)."},
@@ -5929,8 +5929,8 @@
                                        :repo "clojurescript",
                                        :tag "r1.9.198+",
                                        :filename "src/main/clojure/cljs/analyzer.cljc",
-                                       :lines [1587 1589],
-                                       :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1587-L1589"},
+                                       :lines [1593 1595],
+                                       :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1593-L1595"},
                               :full-name "cljs.core/loop*",
                               :history [["+" "0.0-927"]]},
            "cljs.core/vector-seq" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/vector-seq.md",
@@ -6460,8 +6460,8 @@
                                     :repo "clojurescript",
                                     :tag "r1.9.198+",
                                     :filename "src/main/clojure/cljs/analyzer.cljc",
-                                    :lines [1028 1040],
-                                    :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1028-L1040"},
+                                    :lines [1034 1046],
+                                    :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1034-L1046"},
                            :usage ["(if test then else?)"],
                            :details "If `test` is not false or nil, `then` is evaluated and returned. Otherwise,\n`else?` is evaluated and returned. `else?` defaults to nil if not provided.\n\n`if` is one of ClojureScript's [special forms](http://clojure.org/special_forms)\nand is a fundamental building block of the language. All other conditionals in\nClojureScript are based on `if`s notion of truthiness (ie: anything other than\nfalse or nil).",
                            :examples "```clj\n(def v [1 2])\n\n(if (empty? v) \"empty!\" \"filled!\")\n;;=> \"filled!\"\n\n(str \"This vector is \"\n  (if (empty? v) \"empty!\" \"filled!\"))\n;;=> \"This vector is filled!\"\n```",
@@ -8528,8 +8528,8 @@
                                    :repo "clojurescript",
                                    :tag "r1.9.198+",
                                    :filename "src/main/clojure/cljs/analyzer.cljc",
-                                   :lines [2378 2380],
-                                   :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L2378-L2380"},
+                                   :lines [2384 2386],
+                                   :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L2384-L2386"},
                           :usage ["(. .instanceMethod instance args*)"
                                   "(. .-instanceField instance)"],
                           :details "For interop, the `.` special form allows access to member properties of the\ngiven JavaScript object `o`.\n\nIf the second operand is a symbol preceded with a hyphen as in `-p`, the\nexpression will result in the value of the property named `p`.\n\nIf the second operand is a symbol that is not preceded with a hyphen as in `m`,\nthe expression will evaluate to a call of the method named `m`.  Any additional\noperands will be passed as arguments to the method.\n\nThe __preferred, idiomatic__ way to access members of a JavaScript object is to\nuse the following sugar:\n\n<table class=\"code-tbl-9bef6\">\n  <thead>\n    <tr>\n      <th>Sugar</th>\n      <th>Expands To</th></tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><pre>(.-p o)</pre></td>\n      <td><pre>(. o -p)</pre></td>\n    </tr>\n    <tr>\n      <td><pre>(.m o)</pre></td>\n      <td><pre>(. o m)</pre></td>\n    </tr>\n    <tr>\n      <td><pre>(.m o 1 2)</pre></td>\n      <td><pre>(. o m 1 2)</pre></td>\n    </tr>\n  </tbody>\n</table>",
@@ -9194,8 +9194,8 @@
                                          :repo "clojurescript",
                                          :tag "r1.9.198+",
                                          :filename "src/main/clojure/cljs/analyzer.cljc",
-                                         :lines [1069 1128],
-                                         :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1069-L1128"},
+                                         :lines [1075 1134],
+                                         :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1075-L1134"},
                                 :usage ["(finally expr*)"],
                                 :details "`finally` should be the last form inside of a `try` expression. It is optional.\n\n`finally` clauses are always evaluated for their side effects whether there was\nan error or not, but they are never the return value of a `try` expression.",
                                 :full-name "cljs.core/finally",
@@ -12137,8 +12137,8 @@
                                     :repo "clojurescript",
                                     :tag "r1.9.198+",
                                     :filename "src/main/clojure/cljs/analyzer.cljc",
-                                    :lines [2135 2242],
-                                    :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L2135-L2242"},
+                                    :lines [2141 2248],
+                                    :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L2141-L2248"},
                            :usage ["(ns name docstring? attr-map? references*)"],
                            :details "Sets the namespace of the file.\n\n`ns` must be the first form in a `.cljs` file and there can only be one `ns`\ndeclaration per file. Namespaces must match the file name of their respective\n`.cljs` files, with the exception that dashes in namespaces become underscores\nin filenames. Thus, `(ns foo.bar-biz.baz)` should be the first form in file\n`foo/bar_biz/baz.cljs`.\n\n`references` can be zero or more forms used to import other namespaces, symbols,\nand libraries into the current namespace.\n\n```clj\n(ns example.core\n\n  ;; for excluding clojure symbols\n  (:refer-clojure :exclude [])\n\n  ;; for importing goog classes and enums\n  (:import\n    lib.ns\n    [lib.ns Ctor*])\n\n  (:require-macros\n    [lib.ns :refer []\n            :as alias\n            :reload\n            :reload-all])\n\n  (:require\n    [lib.ns :refer []\n            :refer-macros []\n            :include-macros true|false\n            :as alias\n            :reload\n            :reload-all])\n\n  (:use\n    [lib.ns :only []\n            :reload\n            :reload-all])\n\n  (:use-macros\n    [lib.ns :only []\n            :reload\n            :reload-all]))\n```",
                            :full-name "cljs.core/ns",
@@ -12147,7 +12147,7 @@
                                       "cljs.core/import"
                                       "cljs.core/require"
                                       "cljs.core/require-macros"],
-                           :docstring "You must currently use the ns form only with the following caveats\n\n  * You must use the :only form of :use\n  * :require supports :as, :refer, and :rename\n    - all options can be skipped\n    - in this case a symbol can be used as a libspec directly\n      - that is, (:require lib.foo) and (:require [lib.foo]) are both\n        supported and mean the same thing\n    - :rename specifies a map from referred var names to different\n      symbols (and can be used to prevent clashes)\n    - prefix lists are not supported\n  * The only option for :refer-clojure is :exclude\n  * :import is available for importing Google Closure classes\n    - ClojureScript types and records should be brought in with :use\n      or :require :refer, not :import ed\n  * Macros must be defined in a different compilation stage than the one\n    from where they are consumed. One way to achieve this is to define\n    them in one namespace and use them from another. They are referenced\n    via the :require-macros / :use-macros options to ns\n    - :require-macros and :use-macros support the same forms that\n      :require and :use do\n\nImplicit macro loading: If a namespace is required or used, and that\nnamespace itself requires or uses macros from its own namespace, then\nthe macros will be implicitly required or used using the same\nspecifications. Furthermore, in this case, macro vars may be included\nin a :refer or :only spec. This oftentimes leads to simplified library\nusage, such that the consuming namespace need not be concerned about\nexplicitly distinguishing between whether certain vars are functions\nor macros. For example:\n\n(ns testme.core (:require [cljs.test :as test :refer [test-var deftest]]))\n\nwill result in test/is resolving properly, along with the test-var\nfunction and the deftest macro being available unqualified.\n\nInline macro specification: As a convenience, :require can be given\neither :include-macros true or :refer-macros [syms...]. Both desugar\ninto forms which explicitly load the matching Clojure file containing\nmacros. (This works independently of whether the namespace being\nrequired internally requires or uses its own macros.) For example:\n\n(ns testme.core\n(:require [foo.core :as foo :refer [foo-fn] :include-macros true]\n          [woz.core :as woz :refer [woz-fn] :refer-macros [app jx]]))\n\nis sugar for\n\n(ns testme.core\n(:require [foo.core :as foo :refer [foo-fn]]\n          [woz.core :as woz :refer [woz-fn]])\n(:require-macros [foo.core :as foo]\n                 [woz.core :as woz :refer [app jx]]))\n\nAuto-aliasing clojure namespaces: If a non-existing clojure.* namespace\nis required or used and a matching cljs.* namespace exists, the cljs.*\nnamespace will be loaded and an alias will be automatically established\nfrom the clojure.* namespace to the cljs.* namespace. For example:\n\n(ns testme.core (:require [clojure.test]))\n\nwill be automatically converted to\n\n(ns testme.core (:require [cljs.test :as clojure.test]))"},
+                           :docstring "You must currently use the ns form only with the following caveats\n\n  * You must use the :only form of :use\n  * :require supports :as, :refer, and :rename\n    - all options can be skipped\n    - in this case a symbol can be used as a libspec directly\n      - that is, (:require lib.foo) and (:require [lib.foo]) are both\n        supported and mean the same thing\n    - :rename specifies a map from referred var names to different\n      symbols (and can be used to prevent clashes)\n    - prefix lists are not supported\n  * The only options for :refer-clojure are :exclude and :rename\n  * :import is available for importing Google Closure classes\n    - ClojureScript types and records should be brought in with :use\n      or :require :refer, not :import ed\n  * Macros must be defined in a different compilation stage than the one\n    from where they are consumed. One way to achieve this is to define\n    them in one namespace and use them from another. They are referenced\n    via the :require-macros / :use-macros options to ns\n    - :require-macros and :use-macros support the same forms that\n      :require and :use do\n\nImplicit macro loading: If a namespace is required or used, and that\nnamespace itself requires or uses macros from its own namespace, then\nthe macros will be implicitly required or used using the same\nspecifications. Furthermore, in this case, macro vars may be included\nin a :refer or :only spec. This oftentimes leads to simplified library\nusage, such that the consuming namespace need not be concerned about\nexplicitly distinguishing between whether certain vars are functions\nor macros. For example:\n\n(ns testme.core (:require [cljs.test :as test :refer [test-var deftest]]))\n\nwill result in test/is resolving properly, along with the test-var\nfunction and the deftest macro being available unqualified.\n\nInline macro specification: As a convenience, :require can be given\neither :include-macros true or :refer-macros [syms...]. Both desugar\ninto forms which explicitly load the matching Clojure file containing\nmacros. (This works independently of whether the namespace being\nrequired internally requires or uses its own macros.) For example:\n\n(ns testme.core\n(:require [foo.core :as foo :refer [foo-fn] :include-macros true]\n          [woz.core :as woz :refer [woz-fn] :refer-macros [app jx]]))\n\nis sugar for\n\n(ns testme.core\n(:require [foo.core :as foo :refer [foo-fn]]\n          [woz.core :as woz :refer [woz-fn]])\n(:require-macros [foo.core :as foo]\n                 [woz.core :as woz :refer [app jx]]))\n\nAuto-aliasing clojure namespaces: If a non-existing clojure.* namespace\nis required or used and a matching cljs.* namespace exists, the cljs.*\nnamespace will be loaded and an alias will be automatically established\nfrom the clojure.* namespace to the cljs.* namespace. For example:\n\n(ns testme.core (:require [clojure.test]))\n\nwill be automatically converted to\n\n(ns testme.core (:require [cljs.test :as clojure.test]))"},
            "cljs.core/if-not" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/if-not.md",
                                :ns "cljs.core",
                                :name "if-not",
@@ -13793,8 +13793,8 @@
                                     :repo "clojurescript",
                                     :tag "r1.9.198+",
                                     :filename "src/main/clojure/cljs/analyzer.cljc",
-                                    :lines [1471 1492],
-                                    :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1471-L1492"},
+                                    :lines [1477 1498],
+                                    :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1477-L1498"},
                            :usage ["(do exprs*)"],
                            :full-name "cljs.core/do",
                            :docstring "Evaluates the expressions in order and returns the value of\nthe last. If no expressions are supplied, returns nil."},
@@ -13985,8 +13985,8 @@
                                        :repo "clojurescript",
                                        :tag "r1.9.198+",
                                        :filename "src/main/clojure/cljs/analyzer.cljc",
-                                       :lines [1042 1060],
-                                       :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1042-L1060"},
+                                       :lines [1048 1066],
+                                       :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1048-L1066"},
                               :full-name "cljs.core/case*",
                               :history [["+" "0.0-2227"]]},
            "cljs.core/js-debugger" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/js-debugger.md",
@@ -14656,6 +14656,28 @@
                                                          :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/cljs/cljs/core.cljs#L836-L848"},
                                                 :usage ["(m3-hash-unencoded-chars in)"],
                                                 :full-name "cljs.core/m3-hash-unencoded-chars"},
+           "syntax/true" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/syntax/true.md",
+                          :syntax-equiv {:edn-url "https://github.com/edn-format/edn#booleans",
+                                         :clj-url "http://clojure.org/reference/reader#_literals"},
+                          :display-as "true",
+                          :ns "syntax",
+                          :name "true",
+                          :name-encode "true",
+                          :history [["+" "0.0-1853"]],
+                          :type "special symbol",
+                          :full-name-encode "syntax/true",
+                          :extra-sources ({:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (starting-line-col-info rdr)]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   (let [[end-line end-column] (ending-line-col-info rdr)]\n                     {:line line\n                      :column column\n                      :end-line end-line\n                      :end-column end-column})))))\n            (reader-error rdr \"Invalid token: \" token))))))",
+                                           :title "Reader code",
+                                           :repo "tools.reader",
+                                           :tag "tools.reader-1.0.0-beta3",
+                                           :filename "src/main/clojure/clojure/tools/reader.clj",
+                                           :lines [305 331],
+                                           :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-beta3/src/main/clojure/clojure/tools/reader.clj#L305-L331"}),
+                          :summary "The boolean literal for true.",
+                          :full-name "syntax/true",
+                          :see-also ["syntax/false"
+                                     "cljs.core/true?"
+                                     "cljs.core/boolean"]},
            "cljs.core/es6-iterator-seq" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/es6-iterator-seq.md",
                                          :ns "cljs.core",
                                          :name "es6-iterator-seq",
@@ -19303,8 +19325,8 @@
                                      :repo "clojurescript",
                                      :tag "r1.9.198+",
                                      :filename "src/main/clojure/cljs/analyzer.cljc",
-                                     :lines [1610 1636],
-                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1610-L1636"},
+                                     :lines [1616 1642],
+                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1616-L1642"},
                             :usage ["(new Constructor. args*)"
                                     "(new Constructor args*)"],
                             :full-name "cljs.core/new",
@@ -19324,8 +19346,8 @@
                                      :repo "clojurescript",
                                      :tag "r1.9.198+",
                                      :filename "src/main/clojure/cljs/analyzer.cljc",
-                                     :lines [1069 1128],
-                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1069-L1128"},
+                                     :lines [1075 1134],
+                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1075-L1134"},
                             :usage ["(try expr* catch-clause* finally-clause?)"],
                             :details "The expressions (`expr*`) are evaluated and, if no exceptions occur, the value\nof the last is returned.\n\nIf an exception occurs and catch clauses (`catch-clause*`) are provided, each is\nexamined in turn and the first for which the thrown exception is an instance of\nthe named class is considered a matching catch clause. If there is a matching\ncatch clause, its expressions are evaluated in a context in which name is bound\nto the thrown exception, and the value of the last is the return value of the\nfunction.\n\nIf there is no matching catch clause, the exception propagates out of the\nfunction. Before returning, normally or abnormally, any `finally-clause?`\nexpressions will be evaluated for their side effects.\n\n`try` is one of ClojureScript's [special forms](http://clojure.org/special_forms).",
                             :full-name "cljs.core/try",
@@ -19741,8 +19763,8 @@
                                         :repo "clojurescript",
                                         :tag "r1.9.198+",
                                         :filename "src/main/clojure/cljs/analyzer.cljc",
-                                        :lines [1421 1463],
-                                        :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1421-L1463"},
+                                        :lines [1427 1469],
+                                        :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1427-L1469"},
                                :full-name "cljs.core/letfn*",
                                :history [["+" "0.0-1236"]]},
            "cljs.core/random-uuid" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/random-uuid.md",
@@ -20009,8 +20031,8 @@
                                             :repo "clojurescript",
                                             :tag "r1.9.198+",
                                             :filename "src/main/clojure/cljs/analyzer.cljc",
-                                            :lines [2281 2283],
-                                            :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L2281-L2283"},
+                                            :lines [2287 2289],
+                                            :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L2287-L2289"},
                                    :full-name "cljs.core/defrecord*",
                                    :history [["+" "0.0-927"]]},
            "cljs.core/*print-newline*" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/STARprint-newlineSTAR.md",
@@ -20916,6 +20938,28 @@
                                 :full-name "cljs.core/bit-set",
                                 :see-also ["cljs.core/bit-clear"],
                                 :docstring "Set bit at index n"},
+           "syntax/false" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/syntax/false.md",
+                           :syntax-equiv {:edn-url "https://github.com/edn-format/edn#booleans",
+                                          :clj-url "http://clojure.org/reference/reader#_literals"},
+                           :display-as "false",
+                           :ns "syntax",
+                           :name "false",
+                           :name-encode "false",
+                           :history [["+" "0.0-1853"]],
+                           :type "special symbol",
+                           :full-name-encode "syntax/false",
+                           :extra-sources ({:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (starting-line-col-info rdr)]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   (let [[end-line end-column] (ending-line-col-info rdr)]\n                     {:line line\n                      :column column\n                      :end-line end-line\n                      :end-column end-column})))))\n            (reader-error rdr \"Invalid token: \" token))))))",
+                                            :title "Reader code",
+                                            :repo "tools.reader",
+                                            :tag "tools.reader-1.0.0-beta3",
+                                            :filename "src/main/clojure/clojure/tools/reader.clj",
+                                            :lines [305 331],
+                                            :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-beta3/src/main/clojure/clojure/tools/reader.clj#L305-L331"}),
+                           :summary "The boolean literal for false.",
+                           :full-name "syntax/false",
+                           :see-also ["syntax/true"
+                                      "cljs.core/false?"
+                                      "cljs.core/boolean"]},
            "cljs.core/clj->js" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/clj-GTjs.md",
                                 :ns "cljs.core",
                                 :name "clj->js",
@@ -22769,8 +22813,8 @@
                                        :repo "clojurescript",
                                        :tag "r1.9.198+",
                                        :filename "src/main/clojure/cljs/analyzer.cljc",
-                                       :lines [1069 1128],
-                                       :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1069-L1128"},
+                                       :lines [1075 1134],
+                                       :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1075-L1134"},
                               :usage ["(catch classname name expr*)"],
                               :details "`catch` should be used inside of a `try` expression.\n\n`exception-type` should be the type of exception thrown (usually `js/Error` or\n`js/Object`). When there is a match, the thrown exception will be bound to\n`name` inside of `expr*` and `expr*` will be evaluated and returned as the value\nof the `try` expression.\n\nSince JavaScript allows you to throw anything, `exception-type` can be set to\n`:default` to catch all types of exceptions.",
                               :full-name "cljs.core/catch",
@@ -22833,8 +22877,8 @@
                                           :repo "clojurescript",
                                           :tag "r1.9.198+",
                                           :filename "src/main/clojure/cljs/analyzer.cljc",
-                                          :lines [2277 2279],
-                                          :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L2277-L2279"},
+                                          :lines [2283 2285],
+                                          :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L2283-L2285"},
                                  :full-name "cljs.core/deftype*",
                                  :history [["+" "0.0-927"]]},
            "cljs.repl/repl-special-doc-map" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.repl/repl-special-doc-map.md",
@@ -22937,8 +22981,8 @@
                                         :repo "clojurescript",
                                         :tag "r1.9.198+",
                                         :filename "src/main/cljs/cljs/js.cljs",
-                                        :lines [851 895],
-                                        :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/cljs/cljs/js.cljs#L851-L895"},
+                                        :lines [853 897],
+                                        :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/cljs/cljs/js.cljs#L853-L897"},
                                :usage ["(eval-str state source cb)"
                                        "(eval-str state source name cb)"
                                        "(eval-str state source name opts cb)"],
@@ -24489,8 +24533,8 @@
                                     :repo "clojurescript",
                                     :tag "r1.9.198+",
                                     :filename "src/main/cljs/cljs/js.cljs",
-                                    :lines [637 667],
-                                    :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/cljs/cljs/js.cljs#L637-L667"},
+                                    :lines [639 669],
+                                    :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/cljs/cljs/js.cljs#L639-L669"},
                            :usage ["(eval state form cb)"
                                    "(eval state form opts cb)"],
                            :full-name "cljs.js/eval",
@@ -24577,8 +24621,8 @@
                                       :repo "clojurescript",
                                       :tag "r1.9.198+",
                                       :filename "src/main/clojure/cljs/analyzer.cljc",
-                                      :lines [1638 1678],
-                                      :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1638-L1678"},
+                                      :lines [1644 1684],
+                                      :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1644-L1684"},
                              :usage ["(set! var-symbol expr)"
                                      "(set! (.- instance-expr instanceFieldName-symbol) expr)"],
                              :details "Sets `js-var` to `val` using the JavaScript `=` operator.",
@@ -24940,7 +24984,7 @@
                                         :name-encode "special-doc-map",
                                         :type "var",
                                         :full-name-encode "cljs.repl/special-doc-map",
-                                        :source {:code "(def special-doc-map\n  '{. {:forms [(.instanceMethod instance args*)\n               (.-instanceField instance)]\n       :doc \"The instance member form works for methods and fields.\n  They all expand into calls to the dot operator at macroexpansion time.\"}\n    ns {:forms [(name docstring? attr-map? references*)]\n        :doc \"You must currently use the ns form only with the following caveats\n\n    * You must use the :only form of :use\n    * :require supports :as, :refer, and :rename\n      - all options can be skipped\n      - in this case a symbol can be used as a libspec directly\n        - that is, (:require lib.foo) and (:require [lib.foo]) are both\n          supported and mean the same thing\n      - :rename specifies a map from referred var names to different\n        symbols (and can be used to prevent clashes)\n      - prefix lists are not supported\n    * The only option for :refer-clojure is :exclude\n    * :import is available for importing Google Closure classes\n      - ClojureScript types and records should be brought in with :use\n        or :require :refer, not :import ed\n    * Macros must be defined in a different compilation stage than the one\n      from where they are consumed. One way to achieve this is to define\n      them in one namespace and use them from another. They are referenced\n      via the :require-macros / :use-macros options to ns\n      - :require-macros and :use-macros support the same forms that\n        :require and :use do\n\n  Implicit macro loading: If a namespace is required or used, and that\n  namespace itself requires or uses macros from its own namespace, then\n  the macros will be implicitly required or used using the same\n  specifications. Furthermore, in this case, macro vars may be included\n  in a :refer or :only spec. This oftentimes leads to simplified library\n  usage, such that the consuming namespace need not be concerned about\n  explicitly distinguishing between whether certain vars are functions\n  or macros. For example:\n\n  (ns testme.core (:require [cljs.test :as test :refer [test-var deftest]]))\n\n  will result in test/is resolving properly, along with the test-var\n  function and the deftest macro being available unqualified.\n\n  Inline macro specification: As a convenience, :require can be given\n  either :include-macros true or :refer-macros [syms...]. Both desugar\n  into forms which explicitly load the matching Clojure file containing\n  macros. (This works independently of whether the namespace being\n  required internally requires or uses its own macros.) For example:\n\n  (ns testme.core\n  (:require [foo.core :as foo :refer [foo-fn] :include-macros true]\n            [woz.core :as woz :refer [woz-fn] :refer-macros [app jx]]))\n\n  is sugar for\n\n  (ns testme.core\n  (:require [foo.core :as foo :refer [foo-fn]]\n            [woz.core :as woz :refer [woz-fn]])\n  (:require-macros [foo.core :as foo]\n                   [woz.core :as woz :refer [app jx]]))\n\n  Auto-aliasing clojure namespaces: If a non-existing clojure.* namespace\n  is required or used and a matching cljs.* namespace exists, the cljs.*\n  namespace will be loaded and an alias will be automatically established\n  from the clojure.* namespace to the cljs.* namespace. For example:\n\n  (ns testme.core (:require [clojure.test]))\n\n  will be automatically converted to\n\n  (ns testme.core (:require [cljs.test :as clojure.test]))\"}\n    def {:forms [(def symbol doc-string? init?)]\n         :doc \"Creates and interns a global var with the name\n  of symbol in the current namespace (*ns*) or locates such a var if\n  it already exists.  If init is supplied, it is evaluated, and the\n  root binding of the var is set to the resulting value.  If init is\n  not supplied, the root binding of the var is unaffected.\"}\n    do {:forms [(do exprs*)]\n        :doc \"Evaluates the expressions in order and returns the value of\n  the last. If no expressions are supplied, returns nil.\"}\n    if {:forms [(if test then else?)]\n        :doc \"Evaluates test. If not the singular values nil or false,\n  evaluates and yields then, otherwise, evaluates and yields else. If\n  else is not supplied it defaults to nil.\"}\n    new {:forms [(Constructor. args*) (new Constructor args*)]\n         :url \"java_interop#new\"\n         :doc \"The args, if any, are evaluated from left to right, and\n  passed to the JavaScript constructor. The constructed object is\n  returned.\"}\n    quote {:forms [(quote form)]\n           :doc \"Yields the unevaluated form.\"}\n    recur {:forms [(recur exprs*)]\n           :doc \"Evaluates the exprs in order, then, in parallel, rebinds\n  the bindings of the recursion point to the values of the exprs.\n  Execution then jumps back to the recursion point, a loop or fn method.\"}\n    set! {:forms[(set! var-symbol expr)\n                 (set! (.- instance-expr instanceFieldName-symbol) expr)]\n          :url \"vars#set\"\n          :doc \"Used to set vars and JavaScript object fields\"}\n    throw {:forms [(throw expr)]\n           :doc \"The expr is evaluated and thrown.\"}\n    try {:forms [(try expr* catch-clause* finally-clause?)]\n         :doc \"catch-clause => (catch classname name expr*)\n  finally-clause => (finally expr*)\n  Catches and handles JavaScript exceptions.\"}\n    var {:forms [(var symbol)]\n         :doc \"The symbol must resolve to a var, and the Var object\nitself (not its value) is returned. The reader macro #'x expands to (var x).\"}})",
+                                        :source {:code "(def special-doc-map\n  '{. {:forms [(.instanceMethod instance args*)\n               (.-instanceField instance)]\n       :doc \"The instance member form works for methods and fields.\n  They all expand into calls to the dot operator at macroexpansion time.\"}\n    ns {:forms [(name docstring? attr-map? references*)]\n        :doc \"You must currently use the ns form only with the following caveats\n\n    * You must use the :only form of :use\n    * :require supports :as, :refer, and :rename\n      - all options can be skipped\n      - in this case a symbol can be used as a libspec directly\n        - that is, (:require lib.foo) and (:require [lib.foo]) are both\n          supported and mean the same thing\n      - :rename specifies a map from referred var names to different\n        symbols (and can be used to prevent clashes)\n      - prefix lists are not supported\n    * The only options for :refer-clojure are :exclude and :rename\n    * :import is available for importing Google Closure classes\n      - ClojureScript types and records should be brought in with :use\n        or :require :refer, not :import ed\n    * Macros must be defined in a different compilation stage than the one\n      from where they are consumed. One way to achieve this is to define\n      them in one namespace and use them from another. They are referenced\n      via the :require-macros / :use-macros options to ns\n      - :require-macros and :use-macros support the same forms that\n        :require and :use do\n\n  Implicit macro loading: If a namespace is required or used, and that\n  namespace itself requires or uses macros from its own namespace, then\n  the macros will be implicitly required or used using the same\n  specifications. Furthermore, in this case, macro vars may be included\n  in a :refer or :only spec. This oftentimes leads to simplified library\n  usage, such that the consuming namespace need not be concerned about\n  explicitly distinguishing between whether certain vars are functions\n  or macros. For example:\n\n  (ns testme.core (:require [cljs.test :as test :refer [test-var deftest]]))\n\n  will result in test/is resolving properly, along with the test-var\n  function and the deftest macro being available unqualified.\n\n  Inline macro specification: As a convenience, :require can be given\n  either :include-macros true or :refer-macros [syms...]. Both desugar\n  into forms which explicitly load the matching Clojure file containing\n  macros. (This works independently of whether the namespace being\n  required internally requires or uses its own macros.) For example:\n\n  (ns testme.core\n  (:require [foo.core :as foo :refer [foo-fn] :include-macros true]\n            [woz.core :as woz :refer [woz-fn] :refer-macros [app jx]]))\n\n  is sugar for\n\n  (ns testme.core\n  (:require [foo.core :as foo :refer [foo-fn]]\n            [woz.core :as woz :refer [woz-fn]])\n  (:require-macros [foo.core :as foo]\n                   [woz.core :as woz :refer [app jx]]))\n\n  Auto-aliasing clojure namespaces: If a non-existing clojure.* namespace\n  is required or used and a matching cljs.* namespace exists, the cljs.*\n  namespace will be loaded and an alias will be automatically established\n  from the clojure.* namespace to the cljs.* namespace. For example:\n\n  (ns testme.core (:require [clojure.test]))\n\n  will be automatically converted to\n\n  (ns testme.core (:require [cljs.test :as clojure.test]))\"}\n    def {:forms [(def symbol doc-string? init?)]\n         :doc \"Creates and interns a global var with the name\n  of symbol in the current namespace (*ns*) or locates such a var if\n  it already exists.  If init is supplied, it is evaluated, and the\n  root binding of the var is set to the resulting value.  If init is\n  not supplied, the root binding of the var is unaffected.\"}\n    do {:forms [(do exprs*)]\n        :doc \"Evaluates the expressions in order and returns the value of\n  the last. If no expressions are supplied, returns nil.\"}\n    if {:forms [(if test then else?)]\n        :doc \"Evaluates test. If not the singular values nil or false,\n  evaluates and yields then, otherwise, evaluates and yields else. If\n  else is not supplied it defaults to nil.\"}\n    new {:forms [(Constructor. args*) (new Constructor args*)]\n         :url \"java_interop#new\"\n         :doc \"The args, if any, are evaluated from left to right, and\n  passed to the JavaScript constructor. The constructed object is\n  returned.\"}\n    quote {:forms [(quote form)]\n           :doc \"Yields the unevaluated form.\"}\n    recur {:forms [(recur exprs*)]\n           :doc \"Evaluates the exprs in order, then, in parallel, rebinds\n  the bindings of the recursion point to the values of the exprs.\n  Execution then jumps back to the recursion point, a loop or fn method.\"}\n    set! {:forms[(set! var-symbol expr)\n                 (set! (.- instance-expr instanceFieldName-symbol) expr)]\n          :url \"vars#set\"\n          :doc \"Used to set vars and JavaScript object fields\"}\n    throw {:forms [(throw expr)]\n           :doc \"The expr is evaluated and thrown.\"}\n    try {:forms [(try expr* catch-clause* finally-clause?)]\n         :doc \"catch-clause => (catch classname name expr*)\n  finally-clause => (finally expr*)\n  Catches and handles JavaScript exceptions.\"}\n    var {:forms [(var symbol)]\n         :doc \"The symbol must resolve to a var, and the Var object\nitself (not its value) is returned. The reader macro #'x expands to (var x).\"}})",
                                                  :title "Source code",
                                                  :repo "clojurescript",
                                                  :tag "r1.9.198+",
@@ -25240,8 +25284,8 @@
                                        :repo "clojurescript",
                                        :tag "r1.9.198+",
                                        :filename "src/main/clojure/cljs/analyzer.cljc",
-                                       :lines [1062 1067],
-                                       :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1062-L1067"},
+                                       :lines [1068 1073],
+                                       :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1068-L1073"},
                               :usage ["(throw expr)"],
                               :details "`expr` is evaluated and thrown, hopefully to be caught by a `try` expression.\n\n`(throw (js/Error. \"Oops!\"))`",
                               :full-name "cljs.core/throw",
@@ -25446,8 +25490,8 @@
                                        :repo "clojurescript",
                                        :tag "r1.9.198+",
                                        :filename "src/main/clojure/cljs/analyzer.cljc",
-                                       :lines [1591 1604],
-                                       :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1591-L1604"},
+                                       :lines [1597 1610],
+                                       :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1597-L1610"},
                               :usage ["(recur exprs*)"],
                               :full-name "cljs.core/recur",
                               :docstring "Evaluates the exprs in order, then, in parallel, rebinds\nthe bindings of the recursion point to the values of the exprs.\nExecution then jumps back to the recursion point, a loop or fn method."},
@@ -25827,8 +25871,8 @@
                                      :repo "clojurescript",
                                      :tag "r1.9.198+",
                                      :filename "src/main/clojure/cljs/analyzer.cljc",
-                                     :lines [1348 1419],
-                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1348-L1419"},
+                                     :lines [1354 1425],
+                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1354-L1425"},
                             :full-name "cljs.core/fn*",
                             :history [["+" "0.0-927"]]},
            "cljs.core/IUUID" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/IUUID.md",
@@ -27335,8 +27379,8 @@
                                            :repo "clojurescript",
                                            :tag "r1.9.198+",
                                            :filename "src/main/cljs/cljs/js.cljs",
-                                           :lines [726 764],
-                                           :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/cljs/cljs/js.cljs#L726-L764"},
+                                           :lines [728 766],
+                                           :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/cljs/cljs/js.cljs#L728-L766"},
                                   :usage ["(compile-str state source cb)"
                                           "(compile-str state source name cb)"
                                           "(compile-str state source name opts cb)"],
@@ -28543,8 +28587,8 @@
                                        :repo "clojurescript",
                                        :tag "r1.9.198+",
                                        :filename "src/main/clojure/cljs/analyzer.cljc",
-                                       :lines [1606 1608],
-                                       :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1606-L1608"},
+                                       :lines [1612 1614],
+                                       :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1612-L1614"},
                               :usage ["(quote form)"],
                               :full-name "cljs.core/quote",
                               :docstring "Yields the unevaluated form."},
@@ -28732,8 +28776,8 @@
                                            :repo "clojurescript",
                                            :tag "r1.9.198+",
                                            :filename "src/main/cljs/cljs/js.cljs",
-                                           :lines [557 596],
-                                           :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/cljs/cljs/js.cljs#L557-L596"},
+                                           :lines [559 598],
+                                           :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/cljs/cljs/js.cljs#L559-L598"},
                                   :usage ["(analyze-str state source cb)"
                                           "(analyze-str state source name cb)"
                                           "(analyze-str state source name opts cb)"],
@@ -28794,8 +28838,8 @@
                                      :repo "clojurescript",
                                      :tag "r1.9.198+",
                                      :filename "src/main/clojure/cljs/analyzer.cljc",
-                                     :lines [2459 2476],
-                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L2459-L2476"},
+                                     :lines [2465 2482],
+                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L2465-L2482"},
                             :full-name "cljs.core/js*",
                             :history [["+" "0.0-927"]]},
            "cljs.build.api/source-on-disk" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.build.api/source-on-disk.md",
@@ -30818,8 +30862,8 @@
                                      :repo "clojurescript",
                                      :tag "r1.9.198+",
                                      :filename "src/main/clojure/cljs/analyzer.cljc",
-                                     :lines [1133 1264],
-                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1133-L1264"},
+                                     :lines [1139 1270],
+                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/clojure/cljs/analyzer.cljc#L1139-L1270"},
                             :usage ["(def symbol doc-string? init?)"],
                             :details "Creates a global variable with the name of `symbol` and a namespace of the\ncurrent namespace.\n\nIf `init` is supplied, it is evaluated and the result is assigned to `symbol`.\n\n`doc-string` is an optional documentation string.\n\n`def` is one of ClojureScript's [special forms](http://clojure.org/special_forms)\nand is used by many macros to define common elements (ie: `defn`, `defmacro`,\netc).\n\nSupported metadata:\n\n- `^:private boolean` - make non-accessible from other namespaces\n- `^:dynamic boolean` - make [dynamically bindable][doc:cljs.core/binding] (usually named with [`*earmuffs*`][doc:syntax/earmuffs])\n- `^:const boolean` - prevents redef and allows it to be used in [`case`][doc:cljs.core/case].\n- `^:jsdoc [\"\"]` - vector of JSDoc Tags for [Google Closure][closure-jsdoc] or [standard][other-jsdoc].\n- `^:test (fn [] (assert ...))` - allows function to be tested with [`test`][doc:cljs.core/test].\n- `^:doc \"\"` - doc-string (prefer the use of the `(def symbol doc-string init)`)\n\n[closure-jsdoc]:https://developers.google.com/closure/compiler/docs/js-for-compiler?hl=en#tags\n[other-jsdoc]:http://usejsdoc.org/#block-tags\n\nCompiler will also add metadata:\n\n- `:ns`\n- `:name`\n- `:file`\n- `:line`, `:end-line`\n- `:column`, `:end-column`\n- `:source`\n- `:arglists`",
                             :examples "```clj\n(def a)\na\n;;=> nil\n\n(def b 42)\nb\n;;=> 42\n\n(def c \"an optional docstring\" 42)\nc\n;;=> 42\n```",
@@ -32651,32 +32695,6 @@
                                                :usage ["(replace-node old-node new-node)"],
                                                :full-name "clojure.browser.dom/replace-node",
                                                :docstring "Replace old-node with new-node. old-node can be an element or a\nkeyword which is the id of the node to replace.  new-node can be an\nelement or an html string."},
-           "syntax/boolean" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/syntax/boolean.md",
-                             :syntax-equiv {:edn-url "https://github.com/edn-format/edn#booleans",
-                                            :clj-url "http://clojure.org/reference/reader#_literals"},
-                             :display-as "boolean literal",
-                             :ns "syntax",
-                             :name "boolean",
-                             :name-encode "boolean",
-                             :history [["+" "0.0-1853"]],
-                             :type "special symbol",
-                             :full-name-encode "syntax/boolean",
-                             :extra-sources ({:code "(defn- read-symbol\n  [rdr initch]\n  (let [[line column] (starting-line-col-info rdr)]\n    (when-let [token (read-token rdr initch)]\n      (case token\n\n        ;; special symbols\n        \"nil\" nil\n        \"true\" true\n        \"false\" false\n        \"/\" '/\n        \"NaN\" Double/NaN\n        \"-Infinity\" Double/NEGATIVE_INFINITY\n        (\"Infinity\" \"+Infinity\") Double/POSITIVE_INFINITY\n\n        (or (when-let [p (parse-symbol token)]\n              (with-meta (symbol (p 0) (p 1))\n                (when line\n                  (merge\n                   (when-let [file (get-file-name rdr)]\n                     {:file file})\n                   (let [[end-line end-column] (ending-line-col-info rdr)]\n                     {:line line\n                      :column column\n                      :end-line end-line\n                      :end-column end-column})))))\n            (reader-error rdr \"Invalid token: \" token))))))",
-                                              :title "Reader code",
-                                              :repo "tools.reader",
-                                              :tag "tools.reader-1.0.0-beta3",
-                                              :filename "src/main/clojure/clojure/tools/reader.clj",
-                                              :lines [305 331],
-                                              :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-beta3/src/main/clojure/clojure/tools/reader.clj#L305-L331"}),
-                             :summary "The boolean literals are `true` and `false`.",
-                             :details "Special symbols representing the boolean literals `true` and `false`.\nBoth evaluate to themselves.",
-                             :examples "```clj\ntrue\n;;=> true\n\nfalse\n;;=> false\n```",
-                             :full-name "syntax/boolean",
-                             :see-also ["cljs.core/boolean"
-                                        "cljs.core/if"
-                                        "cljs.core/not"
-                                        "cljs.core/true?"
-                                        "cljs.core/false?"]},
            "cljs.core/TaggedLiteral" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/TaggedLiteral.md",
                                       :ns "cljs.core",
                                       :name "TaggedLiteral",
@@ -33359,10 +33377,12 @@
                                                "syntax/regex"
                                                "syntax/eval"
                                                "syntax/unquote-splicing"
+                                               "syntax/true"
                                                "syntax/keyword"
                                                "syntax/character"
                                                "syntax/unreadable"
                                                "syntax/arg"
+                                               "syntax/false"
                                                "syntax/set"
                                                "syntax/tagged-literal"
                                                "syntax/syntax-quote"
@@ -33377,8 +33397,7 @@
                                                "syntax/unquote"
                                                "syntax/NaN"
                                                "syntax/ignore"
-                                               "syntax/var"
-                                               "syntax/boolean"}},
+                                               "syntax/var"}},
                           "0.0-2197" {},
                           "0.0-3291" {},
                           "0.0-2075" {},
@@ -33526,12 +33545,14 @@
                                 "syntax/unused"
                                 "syntax/unquote-splicing"
                                 "syntax/cond-splicing"
+                                "syntax/true"
                                 "syntax/rest"
                                 "syntax/keyword"
                                 "syntax/character"
                                 "syntax/unreadable"
                                 "syntax/auto-gensym"
                                 "syntax/arg"
+                                "syntax/false"
                                 "syntax/set"
                                 "syntax/tagged-literal"
                                 "syntax/destructure-map"
@@ -33555,8 +33576,7 @@
                                 "syntax/ignore"
                                 "syntax/destructure-vector"
                                 "syntax/ns-map"
-                                "syntax/var"
-                                "syntax/boolean"},
+                                "syntax/var"},
                 :namespace-names #{"syntax"}},
        :library {:changes {"0.0-2030" {},
                            "0.0-2067" {},
