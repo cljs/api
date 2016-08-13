@@ -8,7 +8,8 @@ see also:
 
 ## Summary
 
-`nil` is a representation of nothing.
+`nil` is a representation of nothing.  It's underlying representation is
+JavaScript's `null`, and is equal JavaScript's `undefined` when compared.
 
 ## Details
 
