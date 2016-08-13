@@ -1362,6 +1362,7 @@
                  "clojure.core/create-struct"
                  "clojure.data/diff-similar"
                  "clojure.core/*in*"
+                 "clojure.spec/assert"
                  "clojure.main/demunge"
                  "clojure.core.protocols/kv-reduce"
                  "clojure.core/release-pending-sends"
@@ -1376,6 +1377,7 @@
                  "clojure.java.io/file"
                  "clojure.lang/FnLoaderThunk"
                  "clojure.test/*load-tests*"
+                 "clojure.spec/check-asserts"
                  "clojure.core/->Vec"
                  "clojure.test/deftest-"
                  "clojure.inspector/inspect-tree"
@@ -1401,7 +1403,6 @@
                  "clojure.core/agent-errors"
                  "clojure.main/repl-caught"
                  "clojure.core/printf"
-                 "clojure.spec/instrument-all"
                  "clojure.core/ArrayChunk"
                  "clojure.core/load-string"
                  "clojure.lang/LispReader"
@@ -1413,11 +1414,11 @@
                  "clojure.lang/RestFn"
                  "clojure.lang/Compiler"
                  "clojure.lang/IProxy"
-                 "clojure.spec/long-in-range?"
                  "clojure.core/send"
                  "clojure.core/ref-history-count"
                  "clojure.core/iterator-seq"
                  "clojure.lang/WarnBoxedMath"
+                 "clojure.spec/check-asserts?"
                  "clojure.lang/PersistentStructMap"
                  "clojure.reflect/map->Field"
                  "clojure.core/find-var"
@@ -1457,7 +1458,6 @@
                  "clojure.core/await"
                  "clojure.core/supers"
                  "clojure.reflect/Field"
-                 "clojure.spec/unstrument-ns"
                  "clojure.core/vector-of"
                  "clojure.core/Throwable->map"
                  "clojure.core/accessor"
@@ -1476,7 +1476,6 @@
                  "clojure.core/sync"
                  "clojure.lang/IReference"
                  "clojure.java.javadoc/javadoc"
-                 "clojure.spec/instrument-ns"
                  "clojure.reflect/->AsmReflector"
                  "clojure.core/ref-set"
                  "clojure.reflect/->Method"
@@ -1485,6 +1484,7 @@
                  "clojure.test.tap/with-tap-output"
                  "clojure.java.io/copy"
                  "clojure.core/*data-readers*"
+                 "clojure.spec/*compile-asserts*"
                  "clojure.lang/Intrinsics"
                  "clojure.test.junit/with-junit-output"
                  "clojure.lang/Compile"
@@ -1516,7 +1516,6 @@
                  "clojure.lang/ReaderConditional"
                  "clojure.core/with-local-vars"
                  "clojure.core/agent"
-                 "clojure.spec/with-instrument-disabled"
                  "clojure.core/bean"
                  "clojure.core/aset-float"
                  "clojure.core/*file*"
@@ -1546,11 +1545,10 @@
                  "clojure.test.tap/print-tap-diagnostic"
                  "clojure.core/find-keyword"
                  "clojure.core/bound-fn*"
+                 "clojure.core/StackTraceElement->vec"
                  "clojure.reflect/Constructor"
                  "clojure.test/*stack-trace-depth*"
-                 "clojure.spec/long-in"
                  "clojure.reflect/resolve-class"
-                 "clojure.spec/coll-gen"
                  "clojure.edn/read"
                  "clojure.java.io/as-file"
                  "clojure.core/ns-aliases"
@@ -1566,6 +1564,7 @@
                  "clojure.core/aset-int"
                  "clojure.edn/read-string"
                  "clojure.stacktrace/print-throwable"
+                 "clojure.spec/assert*"
                  "clojure.reflect/map->Method"
                  "clojure.main/repl-prompt"
                  "clojure.core.server/repl-read"
@@ -1620,7 +1619,6 @@
                  "clojure.lang/AFn"
                  "clojure.java.io/IOFactory"
                  "clojure.lang/Iterate"
-                 "clojure.spec/unstrument-all"
                  "clojure.reflect/Method"
                  "clojure.core/float-array"
                  "clojure.core/thread-bound?"
@@ -1633,7 +1631,6 @@
                  "clojure.java.io/output-stream"
                  "clojure.test/inc-report-counter"
                  "clojure.java.io/delete-file"
-                 "clojure.spec/fn-specs"
                  "clojure.core/compile"
                  "clojure.repl/stack-element-str"
                  "clojure.core/->VecSeq"
@@ -1643,34 +1640,28 @@
                  "clojure.core/xml-seq"
                  "clojure.test/with-test-out"
                  "clojure.core/file-seq"
-                 "clojure.spec.test/run-tests"
                  "clojure.core/short-array"
                  "clojure.core/future-done?"
                  "clojure.core.reducers/->Cat"
                  "clojure.core/get-thread-bindings"
                  "clojure.stacktrace/e"
                  "clojure.lang/MapEquivalence"
-                 "clojure.core/pos-long?"
                  "clojure.lang/DynamicClassLoader"
                  "clojure.core/struct"
                  "clojure.repl/set-break-handler!"
                  "clojure.core/double?"
-                 "clojure.core/neg-long?"
                  "clojure.core/&"
                  "clojure.instant/read-instant-date"
                  "clojure.java.javadoc/add-remote-javadoc"
-                 "clojure.spec/unstrument"
                  "clojure.reflect/map->Constructor"
                  "clojure.test.tap/print-tap-pass"
                  "clojure.main/root-cause"
                  "clojure.core/extenders"
-                 "clojure.spec.test/run-all-tests"
                  "clojure.core/construct-proxy"
                  "clojure.core/intern"
                  "clojure.core/error-mode"
                  "clojure.core.server/stop-server"
                  "clojure.lang/MethodImplCache"
-                 "clojure.spec.test/check-var"
                  "clojure.core/all-ns"
                  "clojure.walk/macroexpand-all"
                  "clojure.lang/EdnReader"
@@ -1680,7 +1671,6 @@
                  "clojure.core/line-seq"
                  "clojure.lang/Ref"
                  "clojure.core/enumeration-seq"
-                 "clojure.core/long?"
                  "clojure.core/bigdec"
                  "clojure.java.javadoc/add-local-javadoc"
                  "clojure.lang/ProxyHandler"
@@ -1697,7 +1687,6 @@
                  "clojure.lang/ArraySeq"
                  "clojure.lang/Cycle"
                  "clojure.core/definline"
-                 "clojure.spec/instrument"
                  "clojure.core/namespace-munge"
                  "clojure.core/bigdec?"
                  "clojure.lang/IReduceInit"
@@ -1708,7 +1697,6 @@
                  "clojure.lang/IExceptionInfo"
                  "clojure.core/dosync"
                  "clojure.lang/LongRange"
-                 "clojure.core/nat-long?"
                  "clojure.core/*'"
                  "clojure.core/seque"
                  "clojure.lang/LockingTransaction"
@@ -1719,7 +1707,6 @@
                  "clojure.core/await-for"
                  "clojure.test.tap/print-tap-plan"
                  "clojure.core/*command-line-args*"
-                 "clojure.spec/coll-checker"
                  "clojure.java.browse/browse-url"
                  "clojure.core/monitor-exit"
                  "clojure.core/re-matcher"
@@ -1746,6 +1733,7 @@
                  "clojure.lang/Settable"
                  "clojure.lang/Script"
                  "clojure.core/*compiler-options*"
+                 "clojure.spec.gen/bytes"
                  "clojure.core/denominator"
                  "clojure.main/skip-if-eol"
                  "clojure.core/dec'"
@@ -3488,6 +3476,8 @@
                                :name-encode "int-in",
                                :history [["+" "1.9.75"]],
                                :type "macro",
+                               :clj-equiv {:full-name "clojure.spec/int-in",
+                                           :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/int-in"},
                                :full-name-encode "cljs.spec/int-in",
                                :source {:code "(defmacro int-in\n  [start end]\n  `(spec (and c/int? #(cljs.spec/int-in-range? ~start ~end %))\n     :gen #(gen/large-integer* {:min ~start :max (dec ~end)})))",
                                         :title "Source code",
@@ -4337,6 +4327,8 @@
                                  :name-encode "pos-intQMARK",
                                  :history [["+" "1.9.75"]],
                                  :type "function",
+                                 :clj-equiv {:full-name "clojure.core/pos-int?",
+                                             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/pos-int?"},
                                  :full-name-encode "cljs.core/pos-intQMARK",
                                  :source {:code "(defn ^boolean pos-int?\n  [x]\n  (cond\n    (integer? x) (pos? x)\n\n    (instance? goog.math.Integer x)\n    (and (not (.isNegative x))\n         (not (.isZero x)))\n\n    (instance? goog.math.Long x)\n    (and (not (.isNegative x))\n         (not (.isZero x)))\n\n    :else false))",
                                           :title "Source code",
@@ -4587,8 +4579,6 @@
                                    :history [["+" "1.9.14"]
                                              ["-" "1.9.183"]],
                                    :type "macro",
-                                   :clj-equiv {:full-name "clojure.spec/unstrument",
-                                               :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/unstrument"},
                                    :full-name-encode "cljs.spec/unstrument",
                                    :source {:code "(defmacro unstrument\n  [v]\n  (let [v   (if-not (seq? v) (list 'var v) v)\n        sym (second v)]\n    `(do\n       (when-let [raw# (cljs.spec/unstrument* ~v)]\n         (set! ~sym raw#))\n       ~v)))",
                                             :title "Source code",
@@ -4837,6 +4827,8 @@
                                            :name-encode "abbrev-result",
                                            :history [["+" "1.9.183"]],
                                            :type "function",
+                                           :clj-equiv {:full-name "clojure.spec.test/abbrev-result",
+                                                       :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.test/abbrev-result"},
                                            :full-name-encode "cljs.spec.test/abbrev-result",
                                            :source {:code "(defn abbrev-result\n  [x]\n  (if (:failure x)\n    (-> (dissoc x ::stc/ret)\n      (update :spec s/describe)\n      (update :failure unwrap-failure))\n    (dissoc x :spec ::stc/ret)))",
                                                     :title "Source code",
@@ -5874,6 +5866,8 @@
                                                  :history [["+"
                                                             "1.9.183"]],
                                                  :type "function",
+                                                 :clj-equiv {:full-name "clojure.spec.test/instrumentable-syms",
+                                                             :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.test/instrumentable-syms"},
                                                  :full-name-encode "cljs.spec.test/instrumentable-syms",
                                                  :source {:code "(defn instrumentable-syms\n  ([] (instrumentable-syms nil))\n  ([opts]\n   (assert (every? ident? (keys (:gen opts))) \"instrument :gen expects ident keys\")\n   (reduce into #{} [(filter fn-spec-name? (keys (s/registry)))\n                     (keys (:spec opts))\n                     (:stub opts)\n                     (keys (:replace opts))])))",
                                                           :title "Source code",
@@ -6867,6 +6861,8 @@
                                       :name-encode "int-in-rangeQMARK",
                                       :history [["+" "1.9.75"]],
                                       :type "function",
+                                      :clj-equiv {:full-name "clojure.spec/int-in-range?",
+                                                  :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/int-in-range?"},
                                       :full-name-encode "cljs.spec/int-in-rangeQMARK",
                                       :source {:code "(defn int-in-range?\n  [start end val]\n  (cond\n    (integer? val) (c/and (<= start val) (< val end))\n\n    (instance? goog.math.Long val)\n    (c/and (.lessThanOrEqual start val)\n           (.lessThan val end))\n\n    (instance? goog.math.Integer val)\n    (c/and (.lessThanOrEqual start val)\n           (.lessThan val end))\n\n    :else false))",
                                                :title "Source code",
@@ -9359,8 +9355,6 @@
                                       :history [["+" "1.9.14"]
                                                 ["-" "1.9.183"]],
                                       :type "macro",
-                                      :clj-equiv {:full-name "clojure.spec/instrument-ns",
-                                                  :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/instrument-ns"},
                                       :full-name-encode "cljs.spec/instrument-ns",
                                       :source {:code "(defmacro instrument-ns\n  [& ns-syms]\n  `(do\n     ~@(map #(list 'cljs.spec/instrument %) (speced-vars* ns-syms))))",
                                                :title "Source code",
@@ -12493,6 +12487,8 @@
                                                       :history [["+"
                                                                  "1.9.183"]],
                                                       :type "macro",
+                                                      :clj-equiv {:full-name "clojure.spec.test/with-instrument-disabled",
+                                                                  :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.test/with-instrument-disabled"},
                                                       :full-name-encode "cljs.spec.test/with-instrument-disabled",
                                                       :source {:code "(defmacro with-instrument-disabled\n  [& body]\n  `(binding [cljs.spec.test/*instrument-enabled* nil]\n     ~@body))",
                                                                :title "Source code",
@@ -13006,6 +13002,8 @@
                                     :name-encode "exercise-fn",
                                     :history [["+" "1.9.183"]],
                                     :type "macro",
+                                    :clj-equiv {:full-name "clojure.spec/exercise-fn",
+                                                :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/exercise-fn"},
                                     :full-name-encode "cljs.spec/exercise-fn",
                                     :source {:code "(defmacro exercise-fn\n  ([sym]\n   `(exercise-fn ~sym 10))\n  ([sym n]\n   `(exercise-fn ~sym ~n nil))\n  ([sym n fspec]\n   `(let [fspec# ~(if-not fspec\n                    `(cljs.spec/get-spec '~(:name (resolve &env sym)))\n                    fspec)\n          f#     ~sym]\n      (for [args# (gen/sample (gen (:args fspec#)) ~n)]\n        [args# (apply f# args#)]))))",
                                              :title "Source code",
@@ -13161,6 +13159,8 @@
                                         :name-encode "instrument",
                                         :history [["+" "1.9.183"]],
                                         :type "macro",
+                                        :clj-equiv {:full-name "clojure.spec.test/instrument",
+                                                    :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.test/instrument"},
                                         :full-name-encode "cljs.spec.test/instrument",
                                         :source {:code "(defmacro instrument\n  ([]\n   `(instrument '[~@(#?(:clj  s/speced-vars\n                        :cljs cljs.spec$macros/speced-vars))]))\n  ([xs]\n   `(instrument ~xs nil))\n  ([sym-or-syms opts]\n   (let [sym-or-syms (eval sym-or-syms)\n         opts-sym    (gensym \"opts\")]\n     `(let [~opts-sym ~opts]\n        (reduce\n          (fn [ret# [_# f#]]\n            (let [sym# (f#)]\n              (cond-> ret# sym# (conj sym#))))\n          []\n          (->> (zipmap\n                 (collectionize '~sym-or-syms)\n                 [~@(map\n                      (fn [sym]\n                        `(fn [] (instrument-1 '~sym ~opts-sym)))\n                      (collectionize sym-or-syms))])\n            (filter #((instrumentable-syms ~opts-sym) (first %)))\n            (distinct-by first)))))))",
                                                  :title "Source code",
@@ -13805,6 +13805,8 @@
                                  :name-encode "get-spec",
                                  :history [["+" "1.9.75"]],
                                  :type "function",
+                                 :clj-equiv {:full-name "clojure.spec/get-spec",
+                                             :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/get-spec"},
                                  :full-name-encode "cljs.spec/get-spec",
                                  :source {:code "(defn get-spec\n  [k]\n  (get (registry) (if (keyword? k) k (->sym k))))",
                                           :title "Source code",
@@ -15323,8 +15325,6 @@
                                            :history [["+" "1.9.14"]
                                                      ["-" "1.9.183"]],
                                            :type "macro",
-                                           :clj-equiv {:full-name "clojure.spec.test/run-all-tests",
-                                                       :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.test/run-all-tests"},
                                            :full-name-encode "cljs.spec.test/run-all-tests",
                                            :source {:code "(defmacro run-all-tests\n  []\n  `(cljs.spec.test/run-var-tests #?(:clj  ~(spec/speced-vars*)\n                                    :cljs ~(cljs.spec$macros/speced-vars*))))",
                                                     :title "Source code",
@@ -15844,6 +15844,8 @@
                                             :name-encode "checkable-syms",
                                             :history [["+" "1.9.183"]],
                                             :type "macro",
+                                            :clj-equiv {:full-name "clojure.spec.test/checkable-syms",
+                                                        :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.test/checkable-syms"},
                                             :full-name-encode "cljs.spec.test/checkable-syms",
                                             :source {:code "(defmacro checkable-syms\n  ([]\n   `(checkable-syms nil))\n  ([opts]\n   `(let [opts# ~opts]\n      (validate-check-opts opts#)\n      (reduce conj #{}\n        '[~@(filter fn-spec-name? (keys @s/registry-ref))\n          ~@(keys (:spec opts))]))))",
                                                      :title "Source code",
@@ -16343,6 +16345,8 @@
                               :name-encode "every",
                               :history [["+" "1.9.85"]],
                               :type "macro",
+                              :clj-equiv {:full-name "clojure.spec/every",
+                                          :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/every"},
                               :full-name-encode "cljs.spec/every",
                               :source {:code "(defmacro every\n  [pred & {:keys [into kind count max-count min-count distinct gen-max gen-into gen] :as opts}]\n  (let [nopts (-> opts (dissoc :gen) (assoc :cljs.spec/kind-form `'~(res &env (:kind opts))))]\n    `(cljs.spec/every-impl '~pred ~pred ~nopts ~gen)))",
                                        :title "Source code",
@@ -16441,6 +16445,8 @@
                                                :history [["+"
                                                           "1.9.183"]],
                                                :type "function",
+                                               :clj-equiv {:full-name "clojure.spec.test/summarize-results",
+                                                           :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.test/summarize-results"},
                                                :full-name-encode "cljs.spec.test/summarize-results",
                                                :source {:code "(defn summarize-results\n  ([check-results] (summarize-results check-results abbrev-result))\n  ([check-results summary-result]\n   (reduce\n     (fn [summary result]\n       (pp/pprint (summary-result result))\n       (-> summary\n         (update :total inc)\n         (update (result-type result) (fnil inc 0))))\n     {:total 0}\n     check-results)))",
                                                         :title "Source code",
@@ -16599,6 +16605,8 @@
                                  :name-encode "every-kv",
                                  :history [["+" "1.9.85"]],
                                  :type "macro",
+                                 :clj-equiv {:full-name "clojure.spec/every-kv",
+                                             :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/every-kv"},
                                  :full-name-encode "cljs.spec/every-kv",
                                  :source {:code "(defmacro every-kv\n  [kpred vpred & opts]\n  `(every (tuple ~kpred ~vpred) :cljs.spec/kfn (fn [i# v#] (nth v# 0)) :into {} ~@opts))",
                                           :title "Source code",
@@ -19501,6 +19509,8 @@
                                       :name-encode "bounded-count",
                                       :history [["+" "1.9.85"]],
                                       :type "function",
+                                      :clj-equiv {:full-name "clojure.core/bounded-count",
+                                                  :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/bounded-count"},
                                       :full-name-encode "cljs.core/bounded-count",
                                       :source {:code "(defn bounded-count\n  [n coll]\n  (if (counted? coll)\n    (count coll)\n    (loop [i 0 s (seq coll)]\n      (if (and (not (nil? s)) (< i n))\n        (recur (inc i) (next s))\n        i))))",
                                                :title "Source code",
@@ -19840,7 +19850,10 @@
                                            :ns "cljs.spec",
                                            :name "*coll-error-limit*",
                                            :name-encode "STARcoll-error-limitSTAR",
+                                           :history [["+" "1.9.85"]],
                                            :type "dynamic var",
+                                           :clj-equiv {:full-name "clojure.spec/*coll-error-limit*",
+                                                       :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/*coll-error-limit*"},
                                            :full-name-encode "cljs.spec/STARcoll-error-limitSTAR",
                                            :source {:code "(def ^:dynamic *coll-error-limit*\n  \"The number of errors reported by explain in a collection spec'ed with 'every'\"\n  20)",
                                                     :title "Source code",
@@ -19849,8 +19862,7 @@
                                                     :filename "src/main/cljs/cljs/spec.cljs",
                                                     :lines [35 37],
                                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.198+/src/main/cljs/cljs/spec.cljs#L35-L37"},
-                                           :full-name "cljs.spec/*coll-error-limit*",
-                                           :history [["+" "1.9.85"]]},
+                                           :full-name "cljs.spec/*coll-error-limit*"},
            "cljs.core/min" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/min.md",
                             :return-type number,
                             :ns "cljs.core",
@@ -19981,8 +19993,6 @@
                                        :history [["+" "1.9.14"]
                                                  ["-" "1.9.183"]],
                                        :type "macro",
-                                       :clj-equiv {:full-name "clojure.spec/instrument-all",
-                                                   :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/instrument-all"},
                                        :full-name-encode "cljs.spec/instrument-all",
                                        :source {:code "(defmacro instrument-all\n  []\n  `(do\n     ~@(map #(list 'cljs.spec/instrument %) (speced-vars*))))",
                                                 :title "Source code",
@@ -20409,8 +20419,6 @@
                                    :history [["+" "1.9.14"]
                                              ["-" "1.9.183"]],
                                    :type "macro",
-                                   :clj-equiv {:full-name "clojure.spec/instrument",
-                                               :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/instrument"},
                                    :full-name-encode "cljs.spec/instrument",
                                    :source {:code "(defmacro instrument\n  [v]\n  (let [v   (if-not (seq? v) (list 'var v) v)\n        sym (second v)]\n    `(do\n       (when-let [checked# (cljs.spec/instrument* ~v)]\n         (set! ~sym checked#))\n       ~v)))",
                                             :title "Source code",
@@ -21995,6 +22003,8 @@
                                         :name-encode "unstrument",
                                         :history [["+" "1.9.183"]],
                                         :type "macro",
+                                        :clj-equiv {:full-name "clojure.spec.test/unstrument",
+                                                    :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.test/unstrument"},
                                         :full-name-encode "cljs.spec.test/unstrument",
                                         :source {:code "(defmacro unstrument\n  ([]\n   `(unstrument '[~@(deref instrumented-vars)]))\n  ([sym-or-syms]\n   (let [sym-or-syms (eval sym-or-syms)]\n     `(reduce\n        (fn [ret# f#]\n          (let [sym# (f#)]\n            (cond-> ret# sym# (conj sym#))))\n        []\n        [~@(->> (collectionize sym-or-syms)\n             (map\n               (fn [sym]\n                 (when (symbol? sym)\n                   `(fn []\n                      (unstrument-1 '~sym)))))\n             (remove nil?))]))))",
                                                  :title "Source code",
@@ -22050,6 +22060,8 @@
                                                  :history [["+"
                                                             "1.9.85"]],
                                                  :type "function",
+                                                 :clj-equiv {:full-name "clojure.spec.gen/vector-distinct",
+                                                             :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.gen/vector-distinct"},
                                                  :full-name-encode "cljs.spec.impl.gen/vector-distinct",
                                                  :source {:code "(lazy-combinators hash-map list map not-empty set vector vector-distinct fmap elements\n  bind choose one-of such-that tuple sample return\n  large-integer*)",
                                                           :title "Source code",
@@ -23491,8 +23503,6 @@
                                       :history [["+" "1.9.14"]
                                                 ["-" "1.9.183"]],
                                       :type "macro",
-                                      :clj-equiv {:full-name "clojure.spec/unstrument-ns",
-                                                  :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/unstrument-ns"},
                                       :full-name-encode "cljs.spec/unstrument-ns",
                                       :source {:code "(defmacro unstrument-ns\n  [& ns-syms]\n  `(do\n     ~@(map #(list 'cljs.spec/unstrument %) (speced-vars* ns-syms))))",
                                                :title "Source code",
@@ -23598,7 +23608,7 @@
                                           :filename "src/main/clojure/clojure/tools/reader.clj",
                                           :lines [305 331],
                                           :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-beta3/src/main/clojure/clojure/tools/reader.clj#L305-L331"}),
-                         :summary "`nil` is a representation of nothing.",
+                         :summary "`nil` is a representation of nothing.  It's underlying representation is\nJavaScript's `null`, and is equal JavaScript's `undefined` when compared.",
                          :details "It is common for operations to safely handle `nil` without\ncausing exceptions.\n\nExpressions evaluate to `nil` if there is no value to return.",
                          :examples "```clj\nnil\n;;=> nil\n```\n\n`nil` can sometimes mean \"not found\":\n\n```clj\n(:foo {})\n;;=> nil\n```\n\n`nil` can also mean that the operation didn't make sense:\n\n```clj\n(:foo nil)\n;;=> nil\n```",
                          :full-name "syntax/nil"},
@@ -24194,8 +24204,6 @@
                                  :history [["+" "1.9.14"]
                                            ["-" "1.9.183"]],
                                  :type "function",
-                                 :clj-equiv {:full-name "clojure.spec/coll-gen",
-                                             :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/coll-gen"},
                                  :full-name-encode "cljs.spec/coll-gen",
                                  :source {:code "(defn coll-gen\n  [pred init-coll]\n  (let [init (empty init-coll)]\n    (fn []\n      (gen/fmap\n        #(if (vector? init) % (into init %))\n        (gen/vector (gen pred))))))",
                                           :title "Source code",
@@ -24410,6 +24418,8 @@
                               :name-encode "merge",
                               :history [["+" "1.9.183"]],
                               :type "macro",
+                              :clj-equiv {:full-name "clojure.spec/merge",
+                                          :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/merge"},
                               :full-name-encode "cljs.spec/merge",
                               :source {:code "(defmacro merge\n  [& pred-forms]\n  `(cljs.spec/merge-spec-impl '~(mapv #(res &env %) pred-forms) ~(vec pred-forms) nil))",
                                        :title "Source code",
@@ -24592,6 +24602,8 @@
                                    :name-encode "check",
                                    :history [["+" "1.9.183"]],
                                    :type "macro",
+                                   :clj-equiv {:full-name "clojure.spec.test/check",
+                                               :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.test/check"},
                                    :full-name-encode "cljs.spec.test/check",
                                    :source {:code "(defmacro check\n  ([]\n   `(check '~(checkable-syms*)))\n  ([sym-or-syms]\n   `(check ~sym-or-syms nil))\n  ([sym-or-syms opts]\n   (let [sym-or-syms (eval sym-or-syms)\n         opts-sym    (gensym \"opts\")]\n     `(let [~opts-sym ~opts]\n        [~@(->> (collectionize sym-or-syms)\n             (filter (checkable-syms* opts))\n             (map\n               (fn [sym]\n                 (do `(check-1 '~sym nil nil ~opts-sym)))))]))))",
                                             :title "Source code",
@@ -24747,6 +24759,8 @@
                                                  :history [["+"
                                                             "1.9.183"]],
                                                  :type "macro",
+                                                 :clj-equiv {:full-name "clojure.spec.test/enumerate-namespace",
+                                                             :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.test/enumerate-namespace"},
                                                  :full-name-encode "cljs.spec.test/enumerate-namespace",
                                                  :source {:code "(defmacro enumerate-namespace\n  [[quote ns-sym-or-syms]]\n  (let [xs (into #{}\n             (mapcat (fn [ns-sym]\n                       (->> (vals (ana-api/ns-interns ns-sym))\n                         (filter #(not (:macro %)))\n                         (map :name)\n                         (map\n                           (fn [name-sym]\n                             (symbol (name ns-sym) (name name-sym)))))))\n             (collectionize ns-sym-or-syms))]\n    `(quote ~xs)))",
                                                           :title "Source code",
@@ -25702,8 +25716,6 @@
                                        :history [["+" "1.9.14"]
                                                  ["-" "1.9.183"]],
                                        :type "function",
-                                       :clj-equiv {:full-name "clojure.spec.test/check-var",
-                                                   :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.test/check-var"},
                                        :full-name-encode "cljs.spec.test/check-var",
                                        :source {:code "(defn check-var\n  [v & opts]\n  (let [fnspec (spec/get-spec v)]\n    (if (:args fnspec)\n      (apply check-fn @v fnspec opts)\n      (throw (js/Error. (str  \"No :args spec for \" v))))))",
                                                 :title "Source code",
@@ -26342,8 +26354,6 @@
                                      :history [["+" "1.9.14"]
                                                ["-" "1.9.183"]],
                                      :type "function",
-                                     :clj-equiv {:full-name "clojure.spec/coll-checker",
-                                                 :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/coll-checker"},
                                      :full-name-encode "cljs.spec/coll-checker",
                                      :source {:code "(defn coll-checker\n  [pred]\n  (let [check? #(valid? pred %)]\n    (fn [coll]\n      (c/or (nil? coll)\n            (c/and\n              (coll? coll)\n              (every? check? (take *coll-check-limit* coll)))))))",
                                               :title "Source code",
@@ -26743,8 +26753,6 @@
                                                            ["-"
                                                             "1.9.183"]],
                                                  :type "macro",
-                                                 :clj-equiv {:full-name "clojure.spec/with-instrument-disabled",
-                                                             :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/with-instrument-disabled"},
                                                  :full-name-encode "cljs.spec/with-instrument-disabled",
                                                  :source {:code "(defmacro with-instrument-disabled\n  [& body]\n  `(binding [cljs.spec/*instrument-enabled* nil]\n     ~@body))",
                                                           :title "Source code",
@@ -26813,6 +26821,8 @@
                                  :name-encode "neg-intQMARK",
                                  :history [["+" "1.9.75"]],
                                  :type "function",
+                                 :clj-equiv {:full-name "clojure.core/neg-int?",
+                                             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/neg-int?"},
                                  :full-name-encode "cljs.core/neg-intQMARK",
                                  :source {:code "(defn ^boolean neg-int?\n  [x]\n  (cond\n    (integer? x) (neg? x)\n\n    (instance? goog.math.Integer x)\n    (.isNegative x)\n\n    (instance? goog.math.Long x)\n    (.isNegative x)\n\n    :else false))",
                                           :title "Source code",
@@ -27043,6 +27053,8 @@
                              :name-encode "anyQMARK",
                              :history [["+" "1.9.183"]],
                              :type "function",
+                             :clj-equiv {:full-name "clojure.core/any?",
+                                         :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/any?"},
                              :full-name-encode "cljs.core/anyQMARK",
                              :source {:code "(defn ^boolean any?\n  [x] true)",
                                       :title "Source code",
@@ -27460,6 +27472,8 @@
                              :name-encode "intQMARK",
                              :history [["+" "1.9.75"]],
                              :type "function",
+                             :clj-equiv {:full-name "clojure.core/int?",
+                                         :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/int?"},
                              :full-name-encode "cljs.core/intQMARK",
                              :source {:code "(defn ^boolean int?\n  [x]\n  (or (integer? x)\n      (instance? goog.math.Integer x)\n      (instance? goog.math.Long x)))",
                                       :title "Source code",
@@ -27714,6 +27728,8 @@
                                  :name-encode "nat-intQMARK",
                                  :history [["+" "1.9.75"]],
                                  :type "function",
+                                 :clj-equiv {:full-name "clojure.core/nat-int?",
+                                             :url "http://clojure.github.io/clojure/branch-master/clojure.core-api.html#clojure.core/nat-int?"},
                                  :full-name-encode "cljs.core/nat-intQMARK",
                                  :source {:code "(defn ^boolean nat-int?\n  [x]\n  (cond\n    (integer? x)\n    (or (not (neg? x)) (zero? x))\n\n    (instance? goog.math.Integer x)\n    (or (not (.isNegative x)) (.isZero x))\n\n    (instance? goog.math.Long x)\n    (or (not (.isNegative x)) (.isZero x))\n\n    :else false))",
                                           :title "Source code",
@@ -27890,8 +27906,6 @@
                                  :history [["+" "1.9.14"]
                                            ["-" "1.9.75"]],
                                  :type "function",
-                                 :clj-equiv {:full-name "clojure.spec/fn-specs",
-                                             :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/fn-specs"},
                                  :full-name-encode "cljs.spec/fn-specs",
                                  :source {:code "(defn fn-specs\n  [v]\n  (let [s (->sym v)\n        reg (registry)]\n    (reduce\n      (fn [m role]\n        (assoc m role (get reg (fn-spec-sym s role))))\n      {}\n      fn-spec-roles)))",
                                           :title "Source code",
@@ -28812,8 +28826,6 @@
                                        :history [["+" "1.9.14"]
                                                  ["-" "1.9.183"]],
                                        :type "macro",
-                                       :clj-equiv {:full-name "clojure.spec/unstrument-all",
-                                                   :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/unstrument-all"},
                                        :full-name-encode "cljs.spec/unstrument-all",
                                        :source {:code "(defmacro unstrument-all\n  []\n  `(do\n     ~@(map #(list 'cljs.spec/unstrument %) (speced-vars*))))",
                                                 :title "Source code",
@@ -29605,8 +29617,6 @@
                                        :history [["+" "1.9.14"]
                                                  ["-" "1.9.183"]],
                                        :type "macro",
-                                       :clj-equiv {:full-name "clojure.spec.test/run-tests",
-                                                   :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.test/run-tests"},
                                        :full-name-encode "cljs.spec.test/run-tests",
                                        :source {:code "(defmacro run-tests\n  ([]\n   `(cljs.spec.test/run-tests '~ana/*cljs-ns*))\n  ([& ns-syms]\n   `(cljs.spec.test/run-var-tests\n      (->> #?(:clj  ~(spec/speced-vars* ns-syms)\n              :cljs ~(cljs.spec$macros/speced-vars* ns-syms))\n        (filter (fn [v#] (:args (cljs.spec/get-spec v#))))))))",
                                                 :title "Source code",
@@ -32080,6 +32090,8 @@
                                     :name-encode "explain-out",
                                     :history [["+" "1.9.75"]],
                                     :type "function",
+                                    :clj-equiv {:full-name "clojure.spec/explain-out",
+                                                :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/explain-out"},
                                     :full-name-encode "cljs.spec/explain-out",
                                     :source {:code "(defn explain-out\n  [ed]\n  (if ed\n    (print\n      (with-out-str\n        ;;(prn {:ed ed})\n        (doseq [{:keys [path pred val reason via in] :as prob} (::problems ed)]\n          (when-not (empty? in)\n            (print \"In:\" (pr-str in) \"\"))\n          (print \"val: \")\n          (pr val)\n          (print \" fails\")\n          (when-not (empty? via)\n            (print \" spec:\" (pr-str (last via))))\n          (when-not (empty? path)\n            (print \" at:\" (pr-str path)))\n          (print \" predicate: \")\n          (pr (abbrev pred))\n          (when reason (print \", \" reason))\n          (doseq [[k v] prob]\n            (when-not (#{:path :pred :val :reason :via :in} k)\n              (print \"\\n\\t\" (pr-str k) \" \")\n              (pr v)))\n          (newline))\n        (doseq [[k v] ed]\n          (when-not (#{::problems} k)\n            (print (pr-str k) \" \")\n            (pr v)\n            (newline)))))\n    (println \"Success!\")))",
                                              :title "Source code",
@@ -32218,8 +32230,6 @@
                                     :name-encode "speced-vars",
                                     :history [["+" "1.9.14"]],
                                     :type "function",
-                                    :clj-equiv {:full-name "clojure.spec/speced-vars",
-                                                :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec/speced-vars"},
                                     :full-name-encode "cljs.spec/speced-vars",
                                     :source {:code "(defn speced-vars []\n  @_speced_vars)",
                                              :title "Source code",
