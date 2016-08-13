@@ -57,7 +57,8 @@
    {:id "ns-map-alias"                    :parent "ns-map"    :clj-added "1.9.0-alpha10"}
 
    ;; special symbols
-   {:id "boolean"  :type "special symbol"}
+   {:id "true"     :type "special symbol"}
+   {:id "false"    :type "special symbol"}
    {:id "nil"      :type "special symbol"}
    {:id "NaN"      :type "special symbol"}
    {:id "Infinity" :type "special symbol"}
