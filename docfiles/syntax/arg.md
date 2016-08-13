@@ -13,7 +13,7 @@ if there are more than one:
 
 - `%1` - first arg
 - `%2` - second arg
-- `%3` - first arg
+- `%3` - third arg
 - `%&` - rest of the args
 
 ## Details
