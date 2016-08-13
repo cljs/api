@@ -23608,7 +23608,7 @@
                                           :filename "src/main/clojure/clojure/tools/reader.clj",
                                           :lines [305 331],
                                           :url "https://github.com/clojure/tools.reader/blob/tools.reader-1.0.0-beta3/src/main/clojure/clojure/tools/reader.clj#L305-L331"}),
-                         :summary "`nil` is a representation of nothing.  It's underlying representation is\nJavaScript's `null`, and is equal JavaScript's `undefined` when compared.",
+                         :summary "`nil` is a representation of nothing.  Its underlying representation is\nJavaScript's `null`, and is equal JavaScript's `undefined` when compared.",
                          :details "It is common for operations to safely handle `nil` without\ncausing exceptions.\n\nExpressions evaluate to `nil` if there is no value to return.",
                          :examples "```clj\nnil\n;;=> nil\n```\n\n`nil` can sometimes mean \"not found\":\n\n```clj\n(:foo {})\n;;=> nil\n```\n\n`nil` can also mean that the operation didn't make sense:\n\n```clj\n(:foo nil)\n;;=> nil\n```",
                          :full-name "syntax/nil"},
