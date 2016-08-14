@@ -78,6 +78,10 @@
   [repo]
   (trim (:out (sh "git" "describe" "--abbrev=0" "--tags" "master" :dir (str repos-dir "/" repo)))))
 
+(defn get-master-tag
+  [repo]
+  (trim (:out (sh "git" "describe" "--tags" "master" :dir (str repos-dir "/" repo)))))
+
 (defn get-github-file-link
   ([repo path] (get-github-file-link repo path nil))
   ([repo path [start-line end-line]]
