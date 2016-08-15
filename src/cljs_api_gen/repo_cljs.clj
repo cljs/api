@@ -120,24 +120,26 @@
 ;;--------------------------------------------------------------------------------
 
 (defn master? [tag-or-version]
-  (ends-with? tag-or-version "+"))
+  (re-find #"-\d+-g.*$" tag-or-version))
 
 (defn fake-master-tag [x] (str x "+"))
 
 (defn cljs-tag->version
   "cljs revision tag -> version:
 
-           TAG         VERSION
-  OLD =    rXXXX       0.0-XXXX
-  NEW =    r1.7.XXXX   1.7.XXXX
-  MASTER = r1.7.XXXX+  1.7.XXXX+
+           TAG                 VERSION
+  OLD =    rXXXX               0.0-XXXX
+  NEW =    r1.7.XXXX           1.7.XXXX
+  MASTER = r1.7.XXXX-XX-gXXXX  1.7.XXXX+
   "
   [tag]
   (when tag
-    (if-let [[_ revision] (re-find #"r(\d+\+?)$" tag)]
+    (if-let [[_ revision] (re-find #"^r(\d+)$" tag)]
       (str "0.0-" revision)
-      (when-let [[_ full] (re-find #"r(\d+\.\d+\.\d+\+?)$" tag)]
-        full))))
+      (when-let [[_ full master-commits] (re-find #"^r(\d+\.\d+\.\d+)" tag)]
+        (if (master? tag)
+          (str full "+")
+          full)))))
 
 (defn cljs-version->tag
   "cljs version -> revision tag:
@@ -145,11 +147,16 @@
            VERSION    TAG
   OLD =    0.0-XXXX   rXXXX
   NEW =    1.7.XXXX   r1.7.XXXX
-  MASTER = 1.7.XXXX+  r1.7.XXXX+
+  MASTER = 1.7.XXXX+  <ERROR>
   "
   [version]
   (when version
-    (when-let [[_ major-minor revision] (re-find #"(\d+\.\d+)[.-](\d+\+?)" version)]
+    (when-let [[_ major-minor revision master-signal] (re-find #"^(\d+\.\d+)[.-](\d+)(\+)?" version)]
+      (when master-signal
+        (println
+          (style "Cannot convert master-version to a tag." :red)
+          "(fake master version is lossy)")
+        (System/exit 1))
       (if (= "0.0" major-minor)
         (str "r" revision)
         (str "r" major-minor "." revision)))))
@@ -311,8 +318,7 @@
 (defn cljs-tag->dep-releases
   [cljs-tag]
   (let [bootstrap (:out (sh "git" "show"
-                          (str (if (master? cljs-tag) "master" cljs-tag)
-                               ":script/bootstrap")
+                          (str cljs-tag ":script/bootstrap")
                           :dir (str repos-dir "/clojurescript")))
         clojure
         (cond
@@ -346,7 +352,7 @@
 
 (defn checkout-repo!
   [repo tag]
-  (sh "git" "checkout" (if (master? tag) "master" tag) :dir (str repos-dir "/" repo)))
+  (sh "git" "checkout" tag :dir (str repos-dir "/" repo)))
 
 (defmacro with-checkout!
   [cljs-tag & body]
