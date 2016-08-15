@@ -647,7 +647,7 @@
                                  :gclosure-lib "0.0-20140718-946a7d39",
                                  :gclosure-com "20140625"},
                      "1.9.198+" {:tag "r1.9.198-11-gbc7f1d4",
-                                 :date nil,
+                                 :date "2016-08-14",
                                  :clj-version "1.9.0-alpha7",
                                  :clj-tag "clojure-1.9.0-alpha7",
                                  :treader-version "1.0.0-beta3",
