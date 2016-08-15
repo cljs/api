@@ -82,6 +82,14 @@
   [repo]
   (trim (:out (sh "git" "describe" "--tags" "master" :dir (str repos-dir "/" repo)))))
 
+(defn get-commit-date
+  [repo tag]
+  (-> (sh "git" "show" "-s" "--format=%ci" tag :dir (str repos-dir "/" repo))
+      (:out)
+      (trim)
+      (split #"\s+")
+      (first)))
+
 (defn get-github-file-link
   ([repo path] (get-github-file-link repo path nil))
   ([repo path [start-line end-line]]
@@ -369,7 +377,8 @@
        (checkout-repo! "tools.reader" treader-tag#))
 
      (binding [*cljs-tag*     ~cljs-tag
-               *cljs-date*    (:date (@cljs-tag->pub ~cljs-tag))
+               *cljs-date*    (or (:date (@cljs-tag->pub ~cljs-tag))
+                                  (get-commit-date "clojurescript" ~cljs-tag))
                *cljs-version* (cljs-tag->version ~cljs-tag)
 
                *clj-tag*      clj-tag#
