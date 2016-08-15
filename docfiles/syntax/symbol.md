@@ -10,8 +10,8 @@ see also:
 
 ## Summary
 
-A symbol is intended as a name for a value.  When evaluated, its result will be
-the value bound to the symbol.
+A symbol is used as a name for a var.  When evaluated, its result will be
+the value bound to the var.
 
 - `foo` - evaluates to the value bound to `foo`
 
