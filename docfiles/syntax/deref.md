@@ -10,29 +10,60 @@ see also:
 
 ## Summary
 
-Get the value that a reference is currently referring to.
+Get the value that a reference is currently referring to.  A "reference" can
+be a [doc:cljs.core/atom], [doc:cljs.core/delay], or [doc:cljs.core/var].
 
-- `@foo` - returns value at `foo`
+- `@foo` - returns value at reference `foo`
 
 ## Details
 
 `@foo` is sugar for [`(deref foo)`][doc:cljs.core/deref].
 
-Retrieve the underlying value of a reference.  References can be created by
-[doc:cljs.core/atom] or [doc:cljs.core/delay].
-
 ## Examples
+
+An [doc:cljs.core/atom] is a mutable reference to an immutable value.
 
 ```clj
 (def a (atom 1))
 @a
 ;;=> 1
 
-(deref a)
+(reset! a 2)
+@a
+;;=> 2
+```
+
+A [doc:cljs.core/delay] will evaluate by executing the given expression
+the first time it is dereferenced.
+
+```clj
+(def a (delay (do (println "delayed.") 1)))
+@a
+;; prints:
+;;  delayed.
+;;=> 1
+
+@a
+;;=> 1
+```
+
+A [doc:cljs.core/var] is a
+
+```clj
+(def ^{:doc "my var"} a 1)
+(:doc (meta #'a))
+;;=> "my var"
+
+(deref (var a))
+;;=> 1
+
+;; combining shorthand forms instead
+@#'a
 ;;=> 1
 ```
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:cljs.core/delay]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/delay.md
+[doc:cljs.core/var]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/var.md
 [doc:cljs.core/deref]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/deref.md
 [doc:cljs.core/atom]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/atom.md
