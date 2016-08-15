@@ -14,7 +14,7 @@ see also:
 A keyword starts with a colon and evaluates to itself. It can include an optional
 namespace.
 
-- `:foo`
+- `:bar`
 - `:foo/bar`
 
 ## Details

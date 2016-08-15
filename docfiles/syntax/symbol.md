@@ -13,7 +13,9 @@ see also:
 A symbol is used as a name for a var.  When evaluated, its result will be
 the value bound to the var.
 
-- `foo` - evaluates to the value bound to `foo`
+- `bar` - evaluates to the value bound to `bar`
+- `foo/bar` - evaluates to the value bound to a var outside the current namespace.
+  The namespace `foo` can be an aliased or literal namespace.
 
 ## Details
 
