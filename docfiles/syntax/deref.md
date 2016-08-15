@@ -47,7 +47,9 @@ the first time it is dereferenced.
 ;;=> 1
 ```
 
-A [doc:cljs.core/var] is a
+Evaluating a symbol naturally dereferences the value of a [doc:cljs.core/var].
+But a var reference can be dereferenced as a roundabout way to obtain its value.
+(Var references are mainly used to retrieve metadata on that var).
 
 ```clj
 (def ^{:doc "my var"} a 1)
