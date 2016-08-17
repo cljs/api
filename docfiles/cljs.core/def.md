@@ -25,12 +25,13 @@ etc).
 
 Supported metadata:
 
-- `^:private boolean` - make non-accessible from other namespaces
-- `^:dynamic boolean` - make [dynamically bindable][doc:cljs.core/binding] (usually named with [doc:syntax/earmuffs])
-- `^:const boolean` - prevents redef and allows it to be used in [doc:cljs.core/case].
-- `^:jsdoc [""]` - vector of JSDoc Tags for [Google Closure][closure-jsdoc] or [standard][other-jsdoc].
-- `^:test (fn [] (assert ...))` - allows function to be tested with [doc:cljs.core/test].
-- `^:doc ""` - doc-string (prefer the use of the `(def symbol doc-string init)`)
+- `^{:private boolean}` - make non-accessible from other namespaces
+- `^{:dynamic boolean}` - make [dynamically bindable][doc:cljs.core/binding] (usually named with [doc:syntax/earmuffs])
+- `^{:const boolean}` - prevents redef and allows it to be used in [doc:cljs.core/case].
+- `^{:jsdoc ["..."]}` - vector of JSDoc Tags for [Google Closure][closure-jsdoc] or [standard][other-jsdoc].
+- `^{:test (fn [] (assert ...))}` - allows function to be tested with [doc:cljs.core/test].
+- `^{:doc "..."}` - doc-string (prefer the use of the `(def symbol doc-string init)`)
+- `^{:export boolean}` - make this var publicly accessible from JS, using `goog.exportSymbol`
 
 [closure-jsdoc]:https://developers.google.com/closure/compiler/docs/js-for-compiler?hl=en#tags
 [other-jsdoc]:http://usejsdoc.org/#block-tags
