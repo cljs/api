@@ -26,35 +26,45 @@ and libraries into the current namespace.
 ```clj
 (ns example.core
 
-  ;; for excluding clojure symbols
-  (:refer-clojure :exclude [])
+  ;; for excluding or renaming clojure symbols
+  (:refer-clojure
+    :exclude []
+    :rename {})
 
   ;; for importing goog classes and enums
   (:import
     lib.ns
-    [lib.ns Ctor*])
-
-  (:require-macros
-    [lib.ns :refer []
-            :as alias
-            :reload
-            :reload-all])
+    (lib.ns Ctor*))
 
   (:require
+    lib.ns
     [lib.ns :refer []
             :refer-macros []
+            :rename {}
             :include-macros true|false
             :as alias
             :reload
             :reload-all])
 
   (:use
+    lib.ns
     [lib.ns :only []
+            :rename {}
+            :reload
+            :reload-all])
+
+  (:require-macros
+    lib.ns
+    [lib.ns :refer []
+            :rename {}
+            :as alias
             :reload
             :reload-all])
 
   (:use-macros
+    lib.ns
     [lib.ns :only []
+            :rename {}
             :reload
             :reload-all]))
 ```
