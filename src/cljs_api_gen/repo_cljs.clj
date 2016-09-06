@@ -4,6 +4,7 @@
     [clojure.data :refer [diff]]
     [clojure.data.json :as json]
     [clojure.java.shell :refer [sh]]
+    [clojure.xml :as xml]
     [me.raynes.fs :refer [exists? mkdir base-name]]
     [clojure.string :refer [trim split split-lines ends-with?]]
     [cljs-api-gen.config :refer [repos-dir]]
@@ -323,11 +324,46 @@
 ;; Checkout
 ;;--------------------------------------------------------------------------------
 
+(defn pom-deps
+  "Create a map of keywordized artifactId to map like:
+    {:clojure
+      {:groupId \"org.clojure\", :artifactId \"clojure\", :version\"1.8.0\"}
+     ...}"
+  [cljs-tag]
+  (let [result (sh "git" "show"
+                 (str cljs-tag ":pom.template.xml")
+                 :dir (str repos-dir "/clojurescript"))]
+    (when (zero? (:exit result))
+      (let [xml (xml/parse (java.io.ByteArrayInputStream. (.getBytes (:out result))))
+            parse-dep (fn
+                        ;; "Convert to map like
+                        ;;   {:groupId \"org.clojure\", :artifactId \"clojure\", :version\"1.8.0\"}"
+                        [{:keys [content]}]
+                        (zipmap (map :tag content)
+                                (map (comp first :content) content)))
+            deps (->> xml
+                      (:content)
+                      (filter #(= :dependencies (:tag %)))
+                      (first)
+                      (:content)
+                      (map parse-dep))]
+        (zipmap (map (comp keyword :artifactId) deps) deps)))))
+
+(defn verify-pom-dep-match!
+  [dep bootstrap pom]
+  (when-not (= bootstrap pom)
+    (println)
+    (println dep "versions differ:")
+    (println " boostrap:" bootstrap)
+    (println "      pom:" pom)))
+
 (defn cljs-tag->dep-releases
   [cljs-tag]
   (let [bootstrap (:out (sh "git" "show"
                           (str cljs-tag ":script/bootstrap")
                           :dir (str repos-dir "/clojurescript")))
+        pom (pom-deps cljs-tag)
+
         clojure
         (cond
           (cljs-cmp >= cljs-tag "0.0-1847") (second (re-find #"(?m)^CLOJURE_RELEASE=\"(.*)\"" bootstrap))
@@ -350,6 +386,10 @@
           (cljs-cmp >= cljs-tag "0.0-1853") (second (re-find #"tools\.reader-(.*).jar" bootstrap))
           :else                             nil)] ;; `clojure.lang/LispReader` used instead of tools.reader
 
+    ;(verify-pom-dep-match! "clojure" clojure (:version (:clojure pom)))
+    ;(verify-pom-dep-match! "tools.reader" treader (:version (:tools.reader pom)))
+    ;(verify-pom-dep-match! "closure compiler" gclosure-com (:version (:closure-compiler-unshaded pom)))
+    ;(verify-pom-dep-match! "closure library" gclosure-lib (:version (:google-closure-library pom)))
 
     {:clj-version clojure
      :clj-tag (str "clojure-" clojure)
