@@ -4,7 +4,7 @@ name: cljs.core
 
 ## Summary
 
-fundamental library of the ClojureScript language
+core library
 
 ## Details
 
