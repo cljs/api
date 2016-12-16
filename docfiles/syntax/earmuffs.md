@@ -26,7 +26,7 @@ special global vars (e.g. [doc:cljs.core/*clojurescript-version*],
 ```clj
 (def ^:dynamic *foo* 1)
 
-(def print-foo []
+(defn print-foo []
   (println *foo*))
 
 (print-foo)
