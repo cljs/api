@@ -722,9 +722,13 @@
   [form]
   (when (and (list? form)
              (= (take 2 form) '(def *cljs-data-readers*)))
-    (->> (nth form 2)
-         (map (fn [[k v]] [(second k) v])) ;; (quote x) -> x for keys
-         (into {}))))
+    (let [tag-map (cond
+                    (cljs-cmp <= "1.9.293") (nth form 2)
+                    :else (let [[_merge _custom tag-map] (nth form 2)]
+                            tag-map))]
+      (->> tag-map
+           (map (fn [[k v]] [(second k) v])) ;; (quote x) -> x for keys
+           (into {})))))
 
 (defn parse-tagged-literals
   []
