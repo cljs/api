@@ -24,7 +24,7 @@ This will not implicitly convert nested data into JavaScript objects or arrays.
 ## Examples
 
 ```clj
-#js {:foo 1 bar 2}
+#js {:foo 1 :bar 2}
 ;;=> #js {:foo 1, :bar 2}
 
 #js [1 2 3]
