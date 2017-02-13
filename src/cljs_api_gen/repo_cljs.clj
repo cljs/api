@@ -349,14 +349,6 @@
                       (map parse-dep))]
         (zipmap (map (comp keyword :artifactId) deps) deps)))))
 
-(defn verify-pom-dep-match!
-  [dep bootstrap pom]
-  (when-not (= bootstrap pom)
-    (println)
-    (println dep "versions differ:")
-    (println " boostrap:" bootstrap)
-    (println "      pom:" pom)))
-
 (defn cljs-tag->dep-releases
   [cljs-tag]
   (let [bootstrap (:out (sh "git" "show"
@@ -364,32 +356,40 @@
                           :dir (str repos-dir "/clojurescript")))
         pom (pom-deps cljs-tag)
 
+        ;; Versions listed in `bootstrap` are for development, presumably for David
+        ;; to help test future dependency versions against the compiler.
+        ;; Versions listed in `pom` are actual dependency versions, which we favor
+        ;; here unless not found (as in earlier cljs versions).
+
         clojure
-        (cond
-          (cljs-cmp >= cljs-tag "0.0-1847") (second (re-find #"(?m)^CLOJURE_RELEASE=\"(.*)\"" bootstrap))
-          :else                             (second (re-find #"(?m)^unzip .*clojure-(.*)\.zip" bootstrap)))
+        (or
+          (-> pom :clojure :version)
+          (cond
+            (cljs-cmp >= cljs-tag "0.0-1847") (second (re-find #"(?m)^CLOJURE_RELEASE=\"(.*)\"" bootstrap))
+            :else                             (second (re-find #"(?m)^unzip .*clojure-(.*)\.zip" bootstrap))))
 
         gclosure-com
-        (cond
-          (cljs-cmp >= cljs-tag "0.0-2629") (second (re-find #"(?m)^CLOSURE_RELEASE=\"(.*)\"" bootstrap))
-          :else                             nil)
+        (or
+          (-> pom :closure-compiler-unshaded :version)
+          (cond
+            (cljs-cmp >= cljs-tag "0.0-2629") (second (re-find #"(?m)^CLOSURE_RELEASE=\"(.*)\"" bootstrap))
+            :else                             nil))
 
         gclosure-lib
-        (cond
-          (cljs-cmp >= cljs-tag "0.0-1847") (second (re-find #"(?m)^GCLOSURE_LIB_RELEASE=\"(.*)\"" bootstrap))
-          (cljs-cmp >= cljs-tag "0.0-1798") (second (re-find #"google-closure-library-(.*)\.jar" bootstrap))
-          :else                             (second (re-find #"closure-library-(.*)\.zip" bootstrap)))
+        (or
+          (:version (:google-closure-library pom))
+          (cond
+            (cljs-cmp >= cljs-tag "0.0-1847") (second (re-find #"(?m)^GCLOSURE_LIB_RELEASE=\"(.*)\"" bootstrap))
+            (cljs-cmp >= cljs-tag "0.0-1798") (second (re-find #"google-closure-library-(.*)\.jar" bootstrap))
+            :else                             (second (re-find #"closure-library-(.*)\.zip" bootstrap))))
 
         treader
-        (cond
-          (cljs-cmp >= cljs-tag "0.0-1859") (second (re-find #"(?m)^TREADER_RELEASE=\"(.*)\"" bootstrap))
-          (cljs-cmp >= cljs-tag "0.0-1853") (second (re-find #"tools\.reader-(.*).jar" bootstrap))
-          :else                             nil)] ;; `clojure.lang/LispReader` used instead of tools.reader
-
-    ;(verify-pom-dep-match! "clojure" clojure (:version (:clojure pom)))
-    ;(verify-pom-dep-match! "tools.reader" treader (:version (:tools.reader pom)))
-    ;(verify-pom-dep-match! "closure compiler" gclosure-com (:version (:closure-compiler-unshaded pom)))
-    ;(verify-pom-dep-match! "closure library" gclosure-lib (:version (:google-closure-library pom)))
+        (or
+          (:version (:tools.reader pom))
+          (cond
+            (cljs-cmp >= cljs-tag "0.0-1859") (second (re-find #"(?m)^TREADER_RELEASE=\"(.*)\"" bootstrap))
+            (cljs-cmp >= cljs-tag "0.0-1853") (second (re-find #"tools\.reader-(.*).jar" bootstrap))
+            :else                             nil))] ;; `clojure.lang/LispReader` used instead of tools.reader
 
     {:clj-version clojure
      :clj-tag (str "clojure-" clojure)

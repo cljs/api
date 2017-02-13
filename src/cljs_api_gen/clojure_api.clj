@@ -4,19 +4,18 @@
     [clojure.set :refer [difference]]
     [cljs-api-gen.config :refer [cache-dir]]
     [cljs-api-gen.encode :refer [fullname->ns-name]]
-    [cljs-api-gen.repo-cljs :refer [*cljs-tag* *clj-tag* ls-files clj-tag->api-key]]
+    [cljs-api-gen.repo-cljs :refer [*cljs-tag* *clj-tag* ls-files clj-tag->api-key cljs-cmp]]
     [cljs-api-gen.syntax :refer [syntax-map]]
     [me.raynes.fs :refer [exists? base-name]]))
 
 (defn get-equiv-clj-tag
-  "At ClojureScript 1.9.14, the bundled Clojure version was still 1.8, but
-  cljs.spec was ported from clojure.spec in Clojure 1.9 alpha.  Thus, we must
-  consider that the equivalent (clj-equiv) Clojure API version may be different
-  from *clj-tag*."
+  "ClojureScript 1.9.X still uses Clojure 1.8.0 for stability, but implements
+  Clojure 1.9.0 API symbols. To successfully map these equivalent symbols,
+  we find them in the latest Clojure 1.9.0 release, not Clojure 1.8.0."
   []
-  (let [tags {"r1.9.14" "clojure-1.9.0-alpha4"}]
-    (or (tags *cljs-tag*)
-        *clj-tag*)))
+  (if (cljs-cmp >= *cljs-tag* "r1.9.14")
+    "clojure-1.9.0-alpha14" ;; FIXME: replace with latest as it is updated
+    *clj-tag*))
 
 ;;--------------------------------------------------------------------------------
 ;; Official Clojure API
