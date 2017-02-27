@@ -4924,9 +4924,7 @@
                                :name "js-str",
                                :signature ["[s]"],
                                :name-encode "js-str",
-                               :history [["+" "0.0-2341"]
-                                         ["-" "1.9.493"]
-                                         ["+" "1.9.494"]],
+                               :history [["+" "0.0-2341"]],
                                :type "macro",
                                :full-name-encode "cljs.core/js-str",
                                :source {:code "(core/defmacro js-str [s]\n  (core/list 'js* \"''+~{}\" s))",
@@ -9355,9 +9353,7 @@
                                      :name "es6-iterable",
                                      :signature ["[ty]"],
                                      :name-encode "es6-iterable",
-                                     :history [["+" "0.0-2411"]
-                                               ["-" "1.9.493"]
-                                               ["+" "1.9.494"]],
+                                     :history [["+" "0.0-2411"]],
                                      :type "macro",
                                      :full-name-encode "cljs.core/es6-iterable",
                                      :source {:code "(core/defmacro es6-iterable [ty]\n  `(aset (.-prototype ~ty) cljs.core/ITER_SYMBOL\n     (fn []\n       (this-as this#\n         (cljs.core/es6-iterator this#)))))",
@@ -11761,9 +11757,7 @@
                               :name "js-in",
                               :signature ["[key obj]"],
                               :name-encode "js-in",
-                              :history [["+" "0.0-2411"]
-                                        ["-" "1.9.493"]
-                                        ["+" "1.9.494"]],
+                              :history [["+" "0.0-2411"]],
                               :type "macro",
                               :full-name-encode "cljs.core/js-in",
                               :source {:code "(core/defmacro js-in [key obj]\n  (core/list 'js* \"~{} in ~{}\" key obj))",
@@ -14334,9 +14328,7 @@
                                     :name "js-debugger",
                                     :signature ["[]"],
                                     :name-encode "js-debugger",
-                                    :history [["+" "0.0-2496"]
-                                              ["-" "1.9.493"]
-                                              ["+" "1.9.494"]],
+                                    :history [["+" "0.0-2496"]],
                                     :type "macro",
                                     :full-name-encode "cljs.core/js-debugger",
                                     :source {:code "(core/defmacro js-debugger\n  []\n  (core/list 'do\n             (core/list 'js* \"debugger\")\n             nil))",
@@ -15980,9 +15972,7 @@
                                    :name "js-comment",
                                    :signature ["[comment]"],
                                    :name-encode "js-comment",
-                                   :history [["+" "1.7.107"]
-                                             ["-" "1.9.493"]
-                                             ["+" "1.9.494"]],
+                                   :history [["+" "1.7.107"]],
                                    :type "macro",
                                    :full-name-encode "cljs.core/js-comment",
                                    :source {:code "(core/defmacro js-comment\n  [comment]\n  (core/let [[x & ys] (string/split comment #\"\\n\")]\n    (core/list 'js*\n      (core/str\n        \"\\n/**\\n\"\n        (core/str \" * \" x \"\\n\")\n        (core/->> ys\n          (map #(core/str \" * \" (string/replace % #\"^   \" \"\") \"\\n\"))\n          (reduce core/str \"\"))\n        \" */\\n\"))))",
@@ -17729,9 +17719,7 @@
                                           :name "js-inline-comment",
                                           :signature ["[comment]"],
                                           :name-encode "js-inline-comment",
-                                          :history [["+" "1.7.107"]
-                                                    ["-" "1.9.493"]
-                                                    ["+" "1.9.494"]],
+                                          :history [["+" "1.7.107"]],
                                           :type "macro",
                                           :full-name-encode "cljs.core/js-inline-comment",
                                           :source {:code "(core/defmacro js-inline-comment\n  [comment]\n  (core/list 'js* (core/str \"/**\" comment \"*/\")))",
@@ -18989,9 +18977,7 @@
                                        :name "copy-arguments",
                                        :signature ["[dest]"],
                                        :name-encode "copy-arguments",
-                                       :history [["+" "1.7.10"]
-                                                 ["-" "1.9.493"]
-                                                 ["+" "1.9.494"]],
+                                       :history [["+" "1.7.10"]],
                                        :type "macro",
                                        :full-name-encode "cljs.core/copy-arguments",
                                        :source {:code "(core/defmacro copy-arguments [dest]\n  `(let [len# (alength (js-arguments))]\n     (loop [i# 0]\n       (when (< i# len#)\n         (.push ~dest (aget (js-arguments) i#))\n         (recur (inc i#))))))",
@@ -19539,9 +19525,7 @@
                                     :name "unsafe-cast",
                                     :signature ["[t x]"],
                                     :name-encode "unsafe-cast",
-                                    :history [["+" "1.7.107"]
-                                              ["-" "1.9.493"]
-                                              ["+" "1.9.494"]],
+                                    :history [["+" "1.7.107"]],
                                     :type "macro",
                                     :full-name-encode "cljs.core/unsafe-cast",
                                     :source {:code "(core/defmacro unsafe-cast\n  [t x]\n  (core/let [cast-expr (core/str \"~{} = /** @type {\" t \"} */ (~{})\")]\n    (core/list 'js* cast-expr x x)))",
@@ -26204,9 +26188,7 @@
                                      :name "gen-apply-to",
                                      :signature ["[]"],
                                      :name-encode "gen-apply-to",
-                                     :history [["+" "0.0-1211"]
-                                               ["-" "1.9.493"]
-                                               ["+" "1.9.494"]],
+                                     :history [["+" "0.0-1211"]],
                                      :type "macro",
                                      :full-name-encode "cljs.core/gen-apply-to",
                                      :source {:code "(core/defmacro gen-apply-to []\n  `(do\n     (set! ~'*unchecked-if* true)\n     (defn ~'apply-to [~'f ~'argc ~'args]\n       (let [~'args (seq ~'args)]\n         (if (zero? ~'argc)\n           (~'f)\n           ~(gen-apply-to-helper))))\n     (set! ~'*unchecked-if* false)))",
@@ -34779,20 +34761,11 @@
                                                 "cljs.core/PersistentVector.fromArray"
                                                 "cljs.core/PersistentVector"
                                                 "cljs.core/PersistentVector.EMPTY"}},
-                           "1.9.494" {:added #{"cljs.core/js-str"
-                                               "cljs.core/js-arguments"
+                           "1.9.494" {:added #{"cljs.core/js-arguments"
                                                "cljs.core/coercive-boolean"
                                                "cljs.core/coercive-not"
-                                               "cljs.core/es6-iterable"
-                                               "cljs.core/js-in"
                                                "cljs.core/coercive-not="
-                                               "cljs.core/js-debugger"
-                                               "cljs.core/js-comment"
-                                               "cljs.core/js-inline-comment"
-                                               "cljs.core/copy-arguments"
-                                               "cljs.core/unsafe-cast"
-                                               "cljs.core/coercive-="
-                                               "cljs.core/gen-apply-to"}},
+                                               "cljs.core/coercive-="}},
                            "0.0-1913" {},
                            "0.0-2069" {},
                            "0.0-2814" {:added #{"cljs.test/test-vars-block"
