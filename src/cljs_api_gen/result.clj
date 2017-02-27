@@ -195,10 +195,11 @@
        ;; dangling defmethods probably means its defmulti is private
        (filtermap #(not= "method" (:type %)))))
 
-(def dont-mark-change
+(def ignored-change
   "Fix symbol history noise if a symbol was accidentally removed or added in
    the given versions.  Will still be listed in [:library :changes] structure though."
-  {;; These symbols were accidentally made private and then made public in 1.9.494
+  {;; These symbols were accidentally made private in 1.4.493 then fixed in 1.9.494
+   ;; so we want to ignore the resulting removal and addition, respectively.
    "cljs.core/copy-arguments" #{"1.9.493" "1.9.494"}
    "cljs.core/es6-iterable" #{"1.9.493" "1.9.494"}
    "cljs.core/gen-apply-to" #{"1.9.493" "1.9.494"}
