@@ -195,18 +195,35 @@
        ;; dangling defmethods probably means its defmulti is private
        (filtermap #(not= "method" (:type %)))))
 
+(def dont-mark-change
+  "Fix symbol history noise if a symbol was accidentally removed or added in
+   the given versions.  Will still be listed in [:library :changes] structure though."
+  {;; These symbols were accidentally made private and then made public in 1.9.494
+   "cljs.core/copy-arguments" #{"1.9.493" "1.9.494"}
+   "cljs.core/es6-iterable" #{"1.9.493" "1.9.494"}
+   "cljs.core/gen-apply-to" #{"1.9.493" "1.9.494"}
+   "cljs.core/js-comment" #{"1.9.493" "1.9.494"}
+   "cljs.core/js-debugger" #{"1.9.493" "1.9.494"}
+   "cljs.core/js-in" #{"1.9.493" "1.9.494"}
+   "cljs.core/js-inline-comment" #{"1.9.493" "1.9.494"}
+   "cljs.core/js-str" #{"1.9.493" "1.9.494"}
+   "cljs.core/unsafe-cast" #{"1.9.493" "1.9.494"}})
 
 (defn mark-removed
   [prev-item prev-hist prev-version]
-  (-> (update-in prev-item [:history] conj ["-" *cljs-version*])
-      (assoc :removed {:in *cljs-version*
-                       :last-seen prev-version})))
+  (if (contains? (ignored-change (:full-name prev-item)) *cljs-version*)
+    prev-item
+    (-> (update-in prev-item [:history] conj ["-" *cljs-version*])
+        (assoc :removed {:in *cljs-version*
+                         :last-seen prev-version}))))
 
 (defn mark-added
   [curr-item prev-hist prev-version]
-  (let [prev-hist (or prev-hist [])]
-    (-> (assoc curr-item :history (conj prev-hist ["+" *cljs-version*]))
-        (dissoc :removed))))
+  (if (contains? (ignored-change (:full-name curr-item)) *cljs-version*)
+    curr-item
+    (let [prev-hist (or prev-hist [])]
+      (-> (assoc curr-item :history (conj prev-hist ["+" *cljs-version*]))
+          (dissoc :removed)))))
 
 (defn make-api-result
   "Create API data for the given api-type.
