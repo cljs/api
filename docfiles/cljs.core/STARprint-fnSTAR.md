@@ -8,8 +8,8 @@ see also:
 ## Summary
 
 A var representing the function used to print output, which may differ
-between runtime environments.  Use [doc:cljs.core/enable-console-print!] to
-print to console.
+between runtime environments. Use [doc:cljs.core/enable-console-print!] to
+set it to print to console/stdout.
 
 ```clj
 (enable-console-print!)

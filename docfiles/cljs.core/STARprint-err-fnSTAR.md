@@ -8,7 +8,8 @@ see also:
 ## Summary
 
 A var representing the function used to print error output, which may differ
-between runtime environments.
+between runtime environments. Use [doc:cljs.core/enable-console-print!] to
+set it to print to console/stderr, then bind as follows:
 
 ```clj
 (enable-console-print!)
@@ -32,3 +33,6 @@ allowing you to print things to stderr using the print function.
 ```
 
 ## Examples
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/enable-console-print!]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/enable-console-printBANG.md
