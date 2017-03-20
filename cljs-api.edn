@@ -18720,7 +18720,7 @@
                                     :filename "src/main/cljs/cljs/core.cljs",
                                     :lines [177 179],
                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.495-13-g197ff2e/src/main/cljs/cljs/core.cljs#L177-L179"},
-                           :details "Only usable from a REPL.\n\nHolds the result of the third to last expression.",
+                           :summary "Holds the result of the third to last REPL expression.",
                            :examples "```clj\n(+ 1 2 3 4)\n;;=> 10\n\n(+ 4 8)\n;;=> 12\n\n(+ 1 2)\n;;=> 3\n\n*3\n;;=> 10\n\n(inc *3)\n;;=> 11\n```\n\nNote that a standalone evaluation of `*1`, `*2`, `*3`, or `*e` is not a part of\nremembered history:\n\n```clj\n:first\n;;=> :first\n\n:second\n;;=> :second\n\n:third\n;;=> :third\n\n*3\n;;=> :first\n\n*2\n;;=> :second\n\n*1\n;;=> :third\n```",
                            :full-name "cljs.core/*3",
                            :see-also ["cljs.core/*1"
@@ -24792,7 +24792,7 @@
                                     :filename "src/main/cljs/cljs/core.cljs",
                                     :lines [169 171],
                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.495-13-g197ff2e/src/main/cljs/cljs/core.cljs#L169-L171"},
-                           :details "Only usable from a REPL.\n\nHolds the result of the last expression.",
+                           :summary "Holds the result of the last REPL expression.",
                            :examples "```clj\n(+ 1 2 3 4)\n;;=> 10\n\n*1\n;;=> 10\n\n(inc *1)\n;;=> 11\n```\n\nNote that a standalone evaluation of `*1`, `*2`, `*3`, or `*e` is not a part of\nremembered history:\n\n```clj\n:first\n;;=> :first\n\n:second\n;;=> :second\n\n:third\n;;=> :third\n\n*3\n;;=> :first\n\n*2\n;;=> :second\n\n*1\n;;=> :third\n```",
                            :full-name "cljs.core/*1",
                            :see-also ["cljs.core/*2"
@@ -25751,7 +25751,7 @@
                                     :filename "src/main/cljs/cljs/core.cljs",
                                     :lines [181 183],
                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.495-13-g197ff2e/src/main/cljs/cljs/core.cljs#L181-L183"},
-                           :details "Only usable from a REPL.\n\nHolds the result of the last exception.",
+                           :summary "Holds the result of the last exception.  REPL only",
                            :examples "```clj\n(defn cause-error []\n  (throw \"Error: something went wrong\"))\n\n(cause-error)\n;; Error: something went wrong\n\n*e\n;;=> \"Error: something went wrong\"\n```",
                            :full-name "cljs.core/*e",
                            :see-also ["cljs.core/*1"
@@ -30961,7 +30961,7 @@
                                     :filename "src/main/cljs/cljs/core.cljs",
                                     :lines [173 175],
                                     :url "https://github.com/clojure/clojurescript/blob/r1.9.495-13-g197ff2e/src/main/cljs/cljs/core.cljs#L173-L175"},
-                           :details "Only usable from a REPL.\n\nHolds the result of the second to last expression.",
+                           :summary "Holds the result of the second to last REPL expression.",
                            :examples "```clj\n(+ 1 2 3 4)\n;;=> 10\n\n(+ 4 8)\n;;=> 12\n\n*2\n;;=> 10\n\n(inc *2)\n;;=> 11\n```\n\nNote that a standalone evaluation of `*1`, `*2`, `*3`, or `*e` is not a part of\nremembered history:\n\n```clj\n:first\n;;=> :first\n\n:second\n;;=> :second\n\n:third\n;;=> :third\n\n*3\n;;=> :first\n\n*2\n;;=> :second\n\n*1\n;;=> :third\n```",
                            :full-name "cljs.core/*2",
                            :see-also ["cljs.core/*1"
