@@ -33,3 +33,6 @@ All printed collections are abridged:
 ;;
 ;;=> nil
 ```
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/range]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/range.md

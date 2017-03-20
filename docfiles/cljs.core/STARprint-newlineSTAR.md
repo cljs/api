@@ -12,3 +12,8 @@ already appended by JavaScript console.
 ## Details
 
 ## Examples
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/enable-console-print!]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/enable-console-printBANG.md
+[doc:cljs.core/prn]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/prn.md
+[doc:cljs.core/println]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/println.md

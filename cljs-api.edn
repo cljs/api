@@ -10576,6 +10576,8 @@
                                                :filename "src/main/cljs/cljs/core.cljs",
                                                :lines [130 141],
                                                :url "https://github.com/clojure/clojurescript/blob/r1.9.495-13-g197ff2e/src/main/cljs/cljs/core.cljs#L130-L141"},
+                                      :summary "Descend only `n` levels deep when printing a nested object. Defaults to `nil`\nindicating no limit.  A `#` is printed for objects at level `n`.",
+                                      :examples "```clj\n(binding [*print-level* 2]\n  (println {:a {:b {:c nil}}}))\n;; Prints:\n;; {:a {:b #}}\n;;\n;;=> nil\n\n(binding [*print-level* 1]\n  (println {:a {:b {:c nil}}}))\n;; Prints:\n;; {:a #}\n;;\n;;=> nil\n```",
                                       :full-name "cljs.core/*print-level*",
                                       :docstring "*print-level* controls how many levels deep the printer will\nprint nested objects. If it is bound to logical false, there is no\nlimit. Otherwise, it must be bound to an integer indicating the maximum\nlevel to print. Each argument to print is at level 0; if an argument is a\ncollection, its items are at level 1; and so on. If an object is a\ncollection and is at a level greater than or equal to the value bound to\n*print-level*, the printer prints '#' to represent it. The root binding\nis nil indicating no limit."},
            "cljs.repl/*repl-opts*" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.repl/STARrepl-optsSTAR.md",
@@ -11375,6 +11377,8 @@
                                                         :lines [110
                                                                 116],
                                                         :url "https://github.com/clojure/clojurescript/blob/r1.9.495-13-g197ff2e/src/main/cljs/cljs/core.cljs#L110-L116"},
+                                               :summary "Determines if maps are printed as namespace maps when all keys\nhave the same namespace.  Defaults to false.",
+                                               :examples "```clj\n(println {:user/a 1, :user/b 2})\n;; Prints:\n;; {:user/a 1, :user/b 2}\n\n(binding [*print-namespace-maps* true]\n  (println {:user/a 1, :user/b 2}))\n;; Prints:\n;; #:user{:a 1, :b 2}\n```",
                                                :full-name "cljs.core/*print-namespace-maps*",
                                                :docstring "*print-namespace-maps* controls whether the printer will print\nnamespace map literal syntax.\n\nDefaults to false, but the REPL binds it to true."},
            "cljs.test/file-and-line" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.test/file-and-line.md",
@@ -11531,6 +11535,8 @@
                                               :filename "src/main/cljs/cljs/core.cljs",
                                               :lines [94 100],
                                               :url "https://github.com/clojure/clojurescript/blob/r1.9.495-13-g197ff2e/src/main/cljs/cljs/core.cljs#L94-L100"},
+                                     :summary "Determines if metadata should be included when printing an object. Defaults to false.",
+                                     :examples "```clj\n(println ^:foo {:a 1})\n;; Prints:\n;; {:a 1}\n\n(binding [*print-meta* true]\n  (println ^:foo {:a 1}))\n;; Prints:\n;; ^{:foo true} {:a 1}\n```",
                                      :full-name "cljs.core/*print-meta*",
                                      :docstring "If set to logical true, when printing an object, its metadata will also\nbe printed in a form that can be read back by the reader.\n\nDefaults to false."},
            "cljs.reader/read-dispatch" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.reader/read-dispatch.md",
@@ -16419,6 +16425,7 @@
                                                       :usage ["(create-client-js-file opts file-path)"],
                                                       :full-name "cljs.repl.browser/create-client-js-file"},
            "cljs.core/*print-length*" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/STARprint-lengthSTAR.md",
+                                       :md-biblio #{"cljs.core/range"},
                                        :ns "cljs.core",
                                        :name "*print-length*",
                                        :name-encode "STARprint-lengthSTAR",
@@ -16434,6 +16441,8 @@
                                                 :filename "src/main/cljs/cljs/core.cljs",
                                                 :lines [118 128],
                                                 :url "https://github.com/clojure/clojurescript/blob/r1.9.495-13-g197ff2e/src/main/cljs/cljs/core.cljs#L118-L128"},
+                                       :summary "Limits the number of items in each collection to print.  Defaults to `nil` indicating\nno limit.  A `...` is printed for items not shown.",
+                                       :examples "[`range`][doc:cljs.core/range] is an infinite sequence, but can be safely printed using `*print-length*`:\n\n```clj\n(binding [*print-length* 5]\n  (println (range)))\n;; Prints:\n;; (0 1 2 3 4 ...)\n;;\n;;=> nil\n```\n\nAll printed collections are abridged:\n\n```clj\n(binding [*print-length* 5]\n  (println {:a (range) :b (range)}))\n;; Prints:\n;; {:a (0 1 2 3 4 ...) :b (0 1 2 3 4 ...)}\n;;\n;;=> nil\n```",
                                        :full-name "cljs.core/*print-length*",
                                        :docstring "*print-length* controls how many items of each collection the\nprinter will print. If it is bound to logical false, there is no\nlimit. Otherwise, it must be bound to an integer indicating the maximum\nnumber of items of each collection to print. If a collection contains\nmore items, the printer will print items up to the limit followed by\n'...' to represent the remaining items. The root binding is nil\nindicating no limit."},
            "cljs.spec/fdef" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.spec/fdef.md",
@@ -20191,6 +20200,14 @@
                                         "cljs.core/fnext"],
                              :docstring "Returns a seq of the items after the first. Calls seq on its\nargument.  If there are no more items, returns nil"},
            "cljs.core/*print-readably*" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/STARprint-readablySTAR.md",
+                                         :md-biblio #{"cljs.core/pr"
+                                                      "cljs.core/prn"
+                                                      "cljs.core/pr-str"
+                                                      "cljs.core/print"
+                                                      "cljs.core/println-str"
+                                                      "cljs.core/println"
+                                                      "cljs.core/print-str"
+                                                      "cljs.core/prn-str"},
                                          :ns "cljs.core",
                                          :name "*print-readably*",
                                          :name-encode "STARprint-readablySTAR",
@@ -20206,6 +20223,7 @@
                                                   :filename "src/main/cljs/cljs/core.cljs",
                                                   :lines [86 92],
                                                   :url "https://github.com/clojure/clojurescript/blob/r1.9.495-13-g197ff2e/src/main/cljs/cljs/core.cljs#L86-L92"},
+                                         :summary "Determines if strings are printed with quotes and escape characters. \"Readably\"\nmeans the printed string can be copy-pasted back into the reader to produce the\nsame value.\n\nDo not use directly.  Use the following functions instead:\n\n| `*print-readably*` | true                    | false                       |\n|:-------------------|:------------------------|:----------------------------|\n|                    | [`pr`][doc:cljs.core/pr]      | [`print`][doc:cljs.core/print]       |\n|                    | [`pr-str`][doc:cljs.core/pr-str]  | [`print-str`][doc:cljs.core/print-str]   |\n|                    | [`prn`][doc:cljs.core/prn]     | [`println`][doc:cljs.core/println]     |\n|                    | [`prn-str`][doc:cljs.core/prn-str] | [`println-str`][doc:cljs.core/println-str] |",
                                          :full-name "cljs.core/*print-readably*",
                                          :docstring "When set to logical false, strings and characters will be printed with\nnon-alphanumeric characters converted to the appropriate escape sequences.\n\nDefaults to true"},
            "cljs.repl.node/read-response" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.repl.node/read-response.md",
@@ -20631,6 +20649,9 @@
                                             :url "https://github.com/clojure/clojurescript/blob/r1.9.495-13-g197ff2e/src/main/clojure/cljs/analyzer.cljc#L2556-L2558"},
                                    :full-name "cljs.core/defrecord*"},
            "cljs.core/*print-newline*" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/STARprint-newlineSTAR.md",
+                                        :md-biblio #{"cljs.core/enable-console-print!"
+                                                     "cljs.core/prn"
+                                                     "cljs.core/println"},
                                         :ns "cljs.core",
                                         :name "*print-newline*",
                                         :name-encode "STARprint-newlineSTAR",
@@ -20644,6 +20665,7 @@
                                                  :filename "src/main/cljs/cljs/core.cljs",
                                                  :lines [79 84],
                                                  :url "https://github.com/clojure/clojurescript/blob/r1.9.495-13-g197ff2e/src/main/cljs/cljs/core.cljs#L79-L84"},
+                                        :summary "Set to false by [`enable-console-print!`][doc:cljs.core/enable-console-print!] to prevent\n[`println`][doc:cljs.core/println] and [`prn`][doc:cljs.core/prn] from duplicating the newline\nalready appended by JavaScript console.",
                                         :full-name "cljs.core/*print-newline*",
                                         :docstring "When set to logical false will drop newlines from printing calls.\nThis is to work around the implicit newlines emitted by standard JavaScript\nconsole objects."},
            "cljs.core/long" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/long.md",

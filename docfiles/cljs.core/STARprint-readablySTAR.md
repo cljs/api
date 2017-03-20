@@ -21,3 +21,13 @@ Do not use directly.  Use the following functions instead:
 ## Details
 
 ## Examples
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/pr]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/pr.md
+[doc:cljs.core/prn]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/prn.md
+[doc:cljs.core/pr-str]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/pr-str.md
+[doc:cljs.core/print]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/print.md
+[doc:cljs.core/println-str]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/println-str.md
+[doc:cljs.core/println]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/println.md
+[doc:cljs.core/print-str]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/print-str.md
+[doc:cljs.core/prn-str]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/prn-str.md
