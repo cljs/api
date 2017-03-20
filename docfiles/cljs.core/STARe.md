@@ -8,11 +8,9 @@ see also:
 
 ## Summary
 
+Holds the result of the last exception.  REPL only
+
 ## Details
-
-Only usable from a REPL.
-
-Holds the result of the last exception.
 
 ## Examples
 

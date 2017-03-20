@@ -8,11 +8,9 @@ see also:
 
 ## Summary
 
+Holds the result of the third to last REPL expression.
+
 ## Details
-
-Only usable from a REPL.
-
-Holds the result of the third to last expression.
 
 ## Examples
 
