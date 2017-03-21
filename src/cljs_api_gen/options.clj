@@ -52,7 +52,7 @@
    :watch-error-fn {:added "1.9.454"}
    ;; TODO: :npm-deps {:added ""}
 
-   ;; Compiler Options (Undocumented)
+   ;; undocumented
    :dump-core {:added "1.7.10"}
    :ups-externs {:added "0.0-993"}
    :ups-foreign-libs {:added "0.0-993"}
@@ -63,28 +63,28 @@
    :infer-externs {:added "1.9.456"}
    :closure-generate-exports {:added "1.9.473"}
    :emit-constants {:added "0.0-2014"}
-   :use-only-custom-externs {:added "0.0-971"}
+   :use-only-custom-externs {:added "0.0-971"}})
 
-   ;; REPL Options
-   :analyze-path {:added "0.0-1552"}
+(def repl-options
+  {:analyze-path {:added "0.0-1552"}
    :def-emits-var {:added "1.7.10"}
    :repl-requires {:added "0.0-3115"}
    :repl-verbose {:added "0.0-2719"}
    :watch {:added "0.0-2850"}
 
-   ;; REPL Options (undocumented)
+   ;; undocumented
    :bind-err {:added "0.0-3148"}
    :caught {:added "0.0-2911"}
-   :compiler-env nil
-   :eval nil
-   :flush nil
-   :init nil
-   :need-prompt nil
-   :print nil
-   :print-no-newline nil
-   :prompt nil
-   :quit-prompt nil
-   :read nil
-   :reader nil
+   :compiler-env {:added "0.0-3148"}
+   :eval {:added "0.0-2911"}
+   :flush {:added "0.0-2911"}
+   :init {:added "0.0-2911"}
+   :need-prompt {:added "0.0-2911"}
+   :print {:added "0.0-2911"}
+   :print-no-newline {:added "0.0-2911"}
+   :prompt {:added "0.0-2911"}
+   :quit-prompt {:added "0.0-3148"}
+   :read {:added "0.0-2911"}
+   :reader {:added "0.0-2911"}
    :source-map-inline {:added "0.0-2911"}
-   :wrap nil})
+   :wrap {:added "0.0-2985"}})
