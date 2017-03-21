@@ -18,7 +18,8 @@
                                     *clj-version*
                                     *treader-version*
                                     *treader-tag*
-                                    cljs-cmp]]
+                                    cljs-cmp
+                                    ensure-cljs-published!]]
     [cljs-api-gen.syntax :refer [syntax
                                  char-map
                                  dchar-map
@@ -1049,15 +1050,17 @@
 
 (defn option-present?
   [[id {:keys [added]}]]
+  (ensure-cljs-published! added)
   (cljs-cmp >= added))
 
 (defn add-options
   [parsed ns- options]
   (binding [*cur-ns* ns-]
-    (concat parsed
-      (->> options
-           (filter option-present?)
-           (map base-option-item)))))
+    (doall
+      (concat parsed
+        (->> options
+             (filter option-present?)
+             (map base-option-item))))))
 
 ;;------------------------------------------------------------
 ;; Main
@@ -1075,6 +1078,6 @@
   {:syntax   (parse-all* :syntax)
    :library  (-> (parse-all* :library)
                  (add-catch-finally))
-   :compiler (-> (parse-all* :compiler))})
-                 ;; (add-options "compiler-options" compiler-options)
-                 ;; (add-options "repl-options" repl-options))})
+   :compiler (-> (parse-all* :compiler)
+                 (add-options "compiler-options" compiler-options)
+                 (add-options "repl-options" repl-options))})

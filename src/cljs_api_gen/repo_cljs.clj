@@ -183,6 +183,12 @@
       1e10
       (:order (@cljs-tag->pub tag)))))
 
+(defn ensure-cljs-published!
+  [v]
+  (let [tag (cond-> v (not (.startsWith v "r")) cljs-version->tag)]
+    (when-not (@cljs-tag->pub tag)
+      (throw (Exception. (str "the cljs tag " tag " is not published"))))))
+
 (defn cljs-version->num
   "cljs version -> sortable number"
   [version]

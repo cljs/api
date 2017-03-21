@@ -49,7 +49,7 @@
    :optimize-constants {:added "0.0-1877"}
    :parallel-build {:added "1.7.189"}
    :watch-fn {:added "0.0-3030"}
-   :watch-error-fn {:added "1.9.454"}
+   :watch-error-fn {:added "1.9.456"}
    ;; TODO: :npm-deps {:added ""}
 
    ;; undocumented
@@ -59,7 +59,7 @@
    :ups-libs {:added "0.0-993"}
    :warning-handlers {:added "1.7.10"}
    :browser-repl {:added "1.9.183"}
-   :cache-analysis-format {:added "1.9.454"}
+   :cache-analysis-format {:added "1.9.456"}
    :infer-externs {:added "1.9.456"}
    :closure-generate-exports {:added "1.9.473"}
    :emit-constants {:added "0.0-2014"}
