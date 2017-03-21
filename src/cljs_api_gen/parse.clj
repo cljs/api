@@ -23,8 +23,9 @@
                                  char-map
                                  dchar-map
                                  syntax-map
-                                 clj-syntax]]))
-
+                                 clj-syntax]]
+    [cljs-api-gen.options :refer [compiler-options
+                                  repl-options]]))
 
 ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
 ;; which is used by cljs.core. (the ana namespace has to exist)
@@ -1007,7 +1008,7 @@
   (parse-ns* ns- "clojurescript" :compiler))
 
 ;;------------------------------------------------------------
-;; Main
+;; Extras
 ;;------------------------------------------------------------
 
 (defn add-catch-finally
@@ -1040,6 +1041,28 @@
         extras (map make ["catch" "finally"])]
     (concat parsed extras)))
 
+(defn base-option-item
+  [[id]]
+  {:name (name id)
+   :ns *cur-ns*
+   :type "option"})
+
+(defn option-present?
+  [[id {:keys [added]}]]
+  (cljs-cmp >= added))
+
+(defn add-options
+  [parsed ns- options]
+  (binding [*cur-ns* ns-]
+    (concat parsed
+      (->> options
+           (filter option-present?)
+           (map base-option-item)))))
+
+;;------------------------------------------------------------
+;; Main
+;;------------------------------------------------------------
+
 (defn parse-all*
   [api]
   (->> (get namespaces api)
@@ -1050,5 +1073,8 @@
 (defn parse-all
   []
   {:syntax   (parse-all* :syntax)
-   :library  (add-catch-finally (parse-all* :library))
-   :compiler (parse-all* :compiler)})
+   :library  (-> (parse-all* :library)
+                 (add-catch-finally))
+   :compiler (-> (parse-all* :compiler))})
+                 ;; (add-options "compiler-options" compiler-options)
+                 ;; (add-options "repl-options" repl-options))})
