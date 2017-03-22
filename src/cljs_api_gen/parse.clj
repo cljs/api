@@ -84,7 +84,6 @@
     "cljs.js"               :normal
     "cljs.spec"             :normal
     "cljs.spec.test"        :normal
-
     "cljs.core"             :custom
     "cljs.test"             :custom
     "cljs.repl"             :custom
@@ -100,8 +99,11 @@
     "cljs.repl.reflect"     :normal
     "cljs.repl.rhino"       :normal
     "cljs.repl.server"      :normal
+    "cljs.repl.nashorn"     :custom
 
-    "cljs.repl.nashorn"     :custom}})
+    ;; pseudo-namespaces for options
+    "compiler-options"      :custom
+    "repl-options"          :custom}})
 
 
 ;;--------------------------------------------------------------------------------
@@ -918,6 +920,27 @@
       (list 'defn sym doc '[& args]))))
 
 ;;------------------------------------------------------------
+;; Compiler and REPL options
+;;------------------------------------------------------------
+
+(defn base-option-item
+  [[id]]
+  {:name (name id)
+   :ns *cur-ns*
+   :type "option"})
+
+(defn option-present?
+  [[id {:keys [added]}]]
+  (ensure-cljs-published! added)
+  (cljs-cmp >= added))
+
+(defn option-items
+  [options]
+  (->> options
+       (filter option-present?)
+       (map base-option-item)))
+
+;;------------------------------------------------------------
 ;; Top-level namespace parsing
 ;; (with custom corrections)
 ;;------------------------------------------------------------
@@ -1002,6 +1025,14 @@
         (doall (map #(parse-lazy-combinator combs-form %) combs))
         (doall (map #(parse-lazy-prim prims-form %) prims))))))
 
+(defmethod parse-ns ["compiler-options" :compiler] [ns- api]
+  (binding [*cur-ns* ns-]
+    (doall (cons (pseudo-ns-item ns-) (option-items compiler-options)))))
+
+(defmethod parse-ns ["repl-options" :compiler] [ns- api]
+  (binding [*cur-ns* ns-]
+    (doall (cons (pseudo-ns-item ns-) (option-items repl-options)))))
+
 (defmethod parse-ns [:default :library] [ns- api]
   (parse-ns* ns- "clojurescript" :library))
 
@@ -1009,7 +1040,7 @@
   (parse-ns* ns- "clojurescript" :compiler))
 
 ;;------------------------------------------------------------
-;; Extras
+;; Main
 ;;------------------------------------------------------------
 
 (defn add-catch-finally
@@ -1042,30 +1073,6 @@
         extras (map make ["catch" "finally"])]
     (concat parsed extras)))
 
-(defn base-option-item
-  [[id]]
-  {:name (name id)
-   :ns *cur-ns*
-   :type "option"})
-
-(defn option-present?
-  [[id {:keys [added]}]]
-  (ensure-cljs-published! added)
-  (cljs-cmp >= added))
-
-(defn add-options
-  [parsed ns- options]
-  (binding [*cur-ns* ns-]
-    (doall
-      (concat parsed
-        (->> options
-             (filter option-present?)
-             (map base-option-item))))))
-
-;;------------------------------------------------------------
-;; Main
-;;------------------------------------------------------------
-
 (defn parse-all*
   [api]
   (->> (get namespaces api)
@@ -1076,8 +1083,5 @@
 (defn parse-all
   []
   {:syntax   (parse-all* :syntax)
-   :library  (-> (parse-all* :library)
-                 (add-catch-finally))
-   :compiler (-> (parse-all* :compiler)
-                 (add-options "compiler-options" compiler-options)
-                 (add-options "repl-options" repl-options))})
+   :library  (add-catch-finally (parse-all* :library))
+   :compiler (parse-all* :compiler)})
