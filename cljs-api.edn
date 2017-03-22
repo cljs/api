@@ -34693,6 +34693,14 @@
                                     :clj-equiv {:full-name "clojure.spec.gen",
                                                 :url "http://clojure.github.io/clojure/branch-master/clojure.spec-api.html#clojure.spec.gen"},
                                     :history [["+" "1.9.14"]]},
+              "repl-options" {:pseudo-ns? true,
+                              :edit-url "https://github.com/cljs/api/blob/master/docfiles/repl-options.md",
+                              :ns "repl-options",
+                              :type "namespace",
+                              :full-name-encode "repl-options",
+                              :full-name "repl-options",
+                              :history [["+" "0.0-927"]],
+                              :display-as "REPL Options"},
               "cljs.core" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core.md",
                            :ns "cljs.core",
                            :history [["+" "0.0-927"]],
@@ -34778,6 +34786,14 @@
                                        :summary "a library for reduction and parallel folding (parallelism not supported)",
                                        :full-name "clojure.core.reducers",
                                        :docstring "A library for reduction and parallel folding. Alpha and subject\n      to change.  Note that fold and its derivatives require\n      jsr166y.jar for fork/join support. See Clojure's pom.xml for the\n      dependency info."},
+              "compiler-options" {:pseudo-ns? true,
+                                  :edit-url "https://github.com/cljs/api/blob/master/docfiles/compiler-options.md",
+                                  :ns "compiler-options",
+                                  :type "namespace",
+                                  :full-name-encode "compiler-options",
+                                  :full-name "compiler-options",
+                                  :history [["+" "0.0-927"]],
+                                  :display-as "Compiler Options"},
               "clojure.browser.repl" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/clojure.browser.repl.md",
                                       :ns "clojure.browser.repl",
                                       :history [["+" "0.0-927"]],
@@ -38455,4 +38471,6 @@
                                      "cljs.repl.nashorn"
                                      "cljs.build.api"
                                      "cljs.repl"
-                                     "cljs.analyzer.api"}}}}
+                                     "repl-options"
+                                     "cljs.analyzer.api"
+                                     "compiler-options"}}}}
