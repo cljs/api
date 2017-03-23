@@ -111,6 +111,9 @@
       (mapv #(signature->usage % item) signature))
     item))
 
+;; FIXME:
+;; Make this a pre-transform step when merging manual docs onto final result
+;; so we can update the way this is calculated without running a full re-parse.
 (defn transform-item
   [x]
   (-> x
