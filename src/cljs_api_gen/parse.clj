@@ -64,7 +64,11 @@
   "api -> namespaces, and namespace -> parse type"
 
   {:syntax
-   {"syntax"                :custom} ;; <-- pseudo-namespace for syntax forms
+   {"syntax"                :custom} ;; pseudo-namespace for syntax forms
+
+   :options
+   {"compiler-options"      :custom ;; pseudo-namespaces for options
+    "repl-options"          :custom}
 
    :library
    {"cljs.pprint"           :normal
@@ -99,11 +103,8 @@
     "cljs.repl.reflect"     :normal
     "cljs.repl.rhino"       :normal
     "cljs.repl.server"      :normal
-    "cljs.repl.nashorn"     :custom
 
-    ;; pseudo-namespaces for options
-    "compiler-options"      :custom
-    "repl-options"          :custom}})
+    "cljs.repl.nashorn"     :custom}})
 
 
 ;;--------------------------------------------------------------------------------
@@ -1025,11 +1026,11 @@
         (doall (map #(parse-lazy-combinator combs-form %) combs))
         (doall (map #(parse-lazy-prim prims-form %) prims))))))
 
-(defmethod parse-ns ["compiler-options" :compiler] [ns- api]
+(defmethod parse-ns ["compiler-options" :options] [ns- api]
   (binding [*cur-ns* ns-]
     (doall (cons (pseudo-ns-item ns-) (option-items compiler-options)))))
 
-(defmethod parse-ns ["repl-options" :compiler] [ns- api]
+(defmethod parse-ns ["repl-options" :options] [ns- api]
   (binding [*cur-ns* ns-]
     (doall (cons (pseudo-ns-item ns-) (option-items repl-options)))))
 
@@ -1084,4 +1085,5 @@
   []
   {:syntax   (parse-all* :syntax)
    :library  (add-catch-finally (parse-all* :library))
-   :compiler (parse-all* :compiler)})
+   :compiler (parse-all* :compiler)
+   :options  (parse-all* :options)})

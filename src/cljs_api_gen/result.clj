@@ -307,6 +307,9 @@
          syntax-items (transform-items (:syntax parsed))
          syntax-api (make-api-result syntax-items :syntax prev-result)
 
+         options-items (transform-items (:options parsed))
+         options-api (make-api-result options-items :options prev-result)
+
          lib-items (transform-items (:library parsed))
          library-api (make-api-result lib-items :library prev-result)
 
@@ -323,8 +326,8 @@
          ;;       This should be okay for the cljs.repl since their histories should be the same.
          ;;       Supporting the general case will require creating separate symbol references
          ;;       for each API, which I don't want to do.
-         symbols (apply merge (map :symbols [syntax-api library-api compiler-api]))
-         namespaces (apply merge (map :namespaces [syntax-api library-api compiler-api]))
+         symbols (apply merge (map :symbols [syntax-api options-api library-api compiler-api]))
+         namespaces (apply merge (map :namespaces [syntax-api options-api library-api compiler-api]))
 
          strip-data #(-> %
                          (assoc :symbol-names (-> % :symbols keys set))
@@ -333,6 +336,7 @@
                          (dissoc :namespaces))
 
          syntax-api   (strip-data syntax-api)
+         options-api   (strip-data options-api)
          library-api  (strip-data library-api)
          compiler-api (strip-data compiler-api)
 
@@ -359,6 +363,7 @@
       :namespaces namespaces
 
       :api {:syntax syntax-api
+            :options options-api
             :library library-api
             :compiler compiler-api}})))
 
