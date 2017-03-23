@@ -76,6 +76,12 @@
       :full-name-encode full-encoded
       :name-encode name-encoded)))
 
+(defn assign-display-name
+  [item]
+  (cond-> item
+    (= (:type item) "option")
+    (assoc :display-as (str ":" (:name item)))))
+
 (defn add-clj-equiv
   [item]
   (if-let [equiv (clj-equiv item)]
@@ -130,6 +136,7 @@
       (add-github-links)
       (handle-ns-item)
       (assign-full-names)
+      (assign-display-name)
       (add-edit-url)
       (prune-map)
       (add-clj-equiv)))
