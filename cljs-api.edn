@@ -35076,6 +35076,273 @@
                                 "syntax/ns-map"
                                 "syntax/var"},
                 :namespace-names #{"syntax"}},
+       :options {:changes {"0.0-2030" {},
+                           "0.0-2067" {},
+                           "0.0-2134" {},
+                           "0.0-2322" {},
+                           "0.0-1803" {},
+                           "0.0-2371" {},
+                           "0.0-2307" {},
+                           "0.0-3148" {:added #{"repl-options/bind-err"
+                                                "repl-options/quit-prompt"
+                                                "repl-options/compiler-env"}},
+                           "0.0-1886" {},
+                           "0.0-2138" {},
+                           "0.0-2505" {:added #{"compiler-options/source-map-timestamp"}},
+                           "0.0-2311" {},
+                           "1.9.92" {},
+                           "0.0-2740" {},
+                           "0.0-2725" {},
+                           "1.9.211" {},
+                           "0.0-2127" {:added #{"compiler-options/preamble"}},
+                           "0.0-2843" {},
+                           "0.0-2280" {},
+                           "1.7.166" {},
+                           "0.0-2199" {},
+                           "0.0-2120" {:added #{"compiler-options/closure-warnings"
+                                                "compiler-options/closure-defines"}},
+                           "1.9.93" {},
+                           "1.9.495" {},
+                           "0.0-1878" {},
+                           "0.0-1236" {},
+                           "0.0-2060" {:added #{"compiler-options/source-map-path"}},
+                           "0.0-3178" {},
+                           "0.0-3126" {},
+                           "0.0-1424" {:added #{"compiler-options/static-fns"}},
+                           "0.0-2342" {},
+                           "0.0-3169" {},
+                           "1.8.34" {},
+                           "0.0-1885" {},
+                           "1.9.227" {},
+                           "0.0-1535" {},
+                           "1.9.90" {:added #{"compiler-options/source-map-asset-path"}},
+                           "0.0-1859" {},
+                           "0.0-3308" {},
+                           "1.8.51" {},
+                           "0.0-3190" {},
+                           "0.0-2755" {},
+                           "0.0-1853" {},
+                           "0.0-2197" {:added #{"compiler-options/hashbang"
+                                                "compiler-options/language-out"
+                                                "compiler-options/language-in"}},
+                           "1.9.225" {},
+                           "0.0-3291" {},
+                           "0.0-2075" {},
+                           "1.7.28" {},
+                           "0.0-2277" {},
+                           "1.9.89" {},
+                           "0.0-2301" {},
+                           "0.0-1909" {},
+                           "0.0-3115" {:added #{"repl-options/repl-requires"}},
+                           "0.0-3195" {},
+                           "1.9.35" {},
+                           "0.0-3153" {},
+                           "1.9.226" {},
+                           "0.0-3119" {},
+                           "1.9.85" {:added #{"compiler-options/preloads"}},
+                           "0.0-2723" {},
+                           "1.9.75" {},
+                           "1.9.229" {},
+                           "0.0-2727" {:added #{"compiler-options/asset-path"}},
+                           "1.9.495+" {},
+                           "0.0-3255" {},
+                           "0.0-1552" {:added #{"repl-options/analyze-path"}},
+                           "0.0-2080" {},
+                           "0.0-2234" {},
+                           "0.0-2644" {},
+                           "1.8.40" {},
+                           "0.0-3191" {},
+                           "0.0-2268" {},
+                           "0.0-3269" {},
+                           "0.0-2511" {:added #{"compiler-options/cache-analysis"}},
+                           "0.0-1806" {},
+                           "0.0-3030" {:added #{"compiler-options/watch-fn"}},
+                           "0.0-2341" {},
+                           "1.9.36" {},
+                           "0.0-3058" {},
+                           "1.9.216" {},
+                           "1.7.58" {},
+                           "0.0-2629" {:added #{"compiler-options/compiler-stats"}},
+                           "0.0-2719" {:added #{"repl-options/repl-verbose"}},
+                           "0.0-2816" {},
+                           "1.7.228" {},
+                           "0.0-2227" {:added #{"compiler-options/pseudo-names"}},
+                           "0.0-1576" {},
+                           "0.0-3297" {},
+                           "0.0-1844" {},
+                           "1.9.493" {},
+                           "0.0-1586" {},
+                           "0.0-3123" {},
+                           "1.7.107" {},
+                           "0.0-2498" {},
+                           "1.7.48" {},
+                           "0.0-3117" {},
+                           "0.0-2850" {:added #{"repl-options/watch"}},
+                           "0.0-1443" {:added #{"compiler-options/warnings"}},
+                           "0.0-1006" {},
+                           "1.9.494" {},
+                           "0.0-1913" {},
+                           "0.0-2069" {},
+                           "0.0-2814" {:added #{"compiler-options/recompile-dependents"
+                                                "compiler-options/closure-extra-annotations"}},
+                           "0.0-2655" {},
+                           "1.7.145" {},
+                           "0.0-1513" {:added #{"compiler-options/output-wrapper"}},
+                           "0.0-1503" {},
+                           "0.0-1933" {},
+                           "1.9.14" {},
+                           "0.0-1895" {},
+                           "0.0-971" {:added #{"compiler-options/verbose"
+                                               "compiler-options/libs"
+                                               "compiler-options/optimizations"
+                                               "compiler-options/pretty-print"
+                                               "compiler-options/target"
+                                               "compiler-options/use-only-custom-externs"
+                                               "compiler-options/main"
+                                               "compiler-options/output-dir"
+                                               "compiler-options/print-input-delimiter"
+                                               "compiler-options/foreign-libs"
+                                               "compiler-options/externs"
+                                               "compiler-options/output-to"}},
+                           "0.0-2027" {},
+                           "0.0-1978" {},
+                           "0.0-1843" {},
+                           "0.0-2758" {},
+                           "0.0-2913" {},
+                           "0.0-1835" {},
+                           "0.0-3264" {},
+                           "0.0-3149" {},
+                           "1.9.198" {},
+                           "0.0-1450" {},
+                           "0.0-2173" {},
+                           "0.0-3208" {},
+                           "0.0-3263" {},
+                           "1.9.473" {:added #{"compiler-options/closure-generate-exports"}},
+                           "1.7.170" {},
+                           "0.0-1798" {:added #{"compiler-options/source-map"}},
+                           "0.0-1877" {:added #{"compiler-options/optimize-constants"}},
+                           "0.0-1211" {},
+                           "0.0-1449" {},
+                           "0.0-2911" {:added #{"repl-options/reader"
+                                                "repl-options/init"
+                                                "repl-options/read"
+                                                "repl-options/flush"
+                                                "repl-options/eval"
+                                                "compiler-options/modules"
+                                                "repl-options/caught"
+                                                "repl-options/need-prompt"
+                                                "repl-options/print-no-newline"
+                                                "repl-options/print"
+                                                "repl-options/prompt"
+                                                "repl-options/source-map-inline"}},
+                           "0.0-993" {:added #{"compiler-options/ups-foreign-libs"
+                                               "compiler-options/ups-libs"
+                                               "compiler-options/ups-externs"}},
+                           "0.0-1011" {},
+                           "0.0-2356" {},
+                           "1.7.122" {},
+                           "0.0-3211" {},
+                           "0.0-3053" {},
+                           "0.0-2985" {:added #{"repl-options/wrap"}},
+                           "1.9.183" {:added #{"compiler-options/browser-repl"}},
+                           "0.0-2156" {:added #{"compiler-options/elide-asserts"}},
+                           "0.0-1847" {},
+                           "1.9.293" {},
+                           "1.7.189" {:added #{"compiler-options/parallel-build"}},
+                           "0.0-2496" {},
+                           "0.0-3196" {},
+                           "0.0-927" {},
+                           "0.0-1934" {},
+                           "1.9.76" {},
+                           "0.0-3165" {},
+                           "0.0-2202" {},
+                           "0.0-1820" {},
+                           "1.9.456" {:added #{"compiler-options/infer-externs"
+                                               "compiler-options/watch-error-fn"
+                                               "compiler-options/cache-analysis-format"}},
+                           "0.0-2261" {},
+                           "0.0-2024" {},
+                           "1.9.88" {},
+                           "1.7.10" {:added #{"compiler-options/dump-core"
+                                              "repl-options/def-emits-var"
+                                              "compiler-options/warning-handlers"}},
+                           "0.0-1889" {},
+                           "0.0-2657" {},
+                           "0.0-1896" {},
+                           "0.0-2014" {:added #{"compiler-options/emit-constants"}},
+                           "0.0-2411" {:added #{"compiler-options/anon-fn-naming-policy"}},
+                           "0.0-2665" {},
+                           "0.0-2760" {}},
+                 :symbol-names #{"compiler-options/preloads"
+                                 "repl-options/reader"
+                                 "compiler-options/infer-externs"
+                                 "compiler-options/watch-error-fn"
+                                 "repl-options/init"
+                                 "compiler-options/verbose"
+                                 "compiler-options/browser-repl"
+                                 "compiler-options/libs"
+                                 "repl-options/read"
+                                 "compiler-options/pseudo-names"
+                                 "repl-options/bind-err"
+                                 "compiler-options/optimizations"
+                                 "compiler-options/static-fns"
+                                 "compiler-options/pretty-print"
+                                 "repl-options/flush"
+                                 "compiler-options/watch-fn"
+                                 "compiler-options/target"
+                                 "repl-options/watch"
+                                 "compiler-options/dump-core"
+                                 "compiler-options/parallel-build"
+                                 "compiler-options/asset-path"
+                                 "repl-options/eval"
+                                 "compiler-options/preamble"
+                                 "compiler-options/closure-warnings"
+                                 "compiler-options/modules"
+                                 "compiler-options/ups-foreign-libs"
+                                 "compiler-options/use-only-custom-externs"
+                                 "compiler-options/recompile-dependents"
+                                 "repl-options/caught"
+                                 "compiler-options/emit-constants"
+                                 "repl-options/need-prompt"
+                                 "compiler-options/hashbang"
+                                 "compiler-options/warnings"
+                                 "compiler-options/main"
+                                 "repl-options/print-no-newline"
+                                 "compiler-options/output-dir"
+                                 "compiler-options/source-map"
+                                 "repl-options/repl-requires"
+                                 "repl-options/quit-prompt"
+                                 "compiler-options/anon-fn-naming-policy"
+                                 "compiler-options/optimize-constants"
+                                 "repl-options/analyze-path"
+                                 "compiler-options/source-map-path"
+                                 "compiler-options/print-input-delimiter"
+                                 "repl-options/def-emits-var"
+                                 "compiler-options/closure-defines"
+                                 "compiler-options/ups-libs"
+                                 "repl-options/print"
+                                 "compiler-options/foreign-libs"
+                                 "compiler-options/source-map-asset-path"
+                                 "repl-options/compiler-env"
+                                 "compiler-options/externs"
+                                 "compiler-options/language-out"
+                                 "repl-options/prompt"
+                                 "compiler-options/closure-generate-exports"
+                                 "repl-options/wrap"
+                                 "compiler-options/cache-analysis"
+                                 "compiler-options/warning-handlers"
+                                 "compiler-options/language-in"
+                                 "compiler-options/output-wrapper"
+                                 "compiler-options/elide-asserts"
+                                 "compiler-options/source-map-timestamp"
+                                 "compiler-options/compiler-stats"
+                                 "repl-options/source-map-inline"
+                                 "compiler-options/closure-extra-annotations"
+                                 "compiler-options/output-to"
+                                 "compiler-options/cache-analysis-format"
+                                 "compiler-options/ups-externs"
+                                 "repl-options/repl-verbose"},
+                 :namespace-names #{"repl-options" "compiler-options"}},
        :library {:changes {"0.0-2030" {},
                            "0.0-2067" {},
                            "0.0-2134" {:added #{"cljs.core/clone"
@@ -37796,56 +38063,49 @@
                             "0.0-2371" {},
                             "0.0-2307" {},
                             "0.0-3148" {:added #{"cljs.repl/err-out"
-                                                 "repl-options/bind-err"
                                                  "cljs.repl.browser/es"
                                                  "cljs.repl/canonicalize-specs"
-                                                 "repl-options/quit-prompt"
-                                                 "repl-options/compiler-env"
                                                  "cljs.repl/decorate-specs"
                                                  "cljs.repl/repl-quit-prompt"},
                                         :removed #{"cljs.repl/mapped-line-and-column"}},
                             "0.0-1886" {},
                             "0.0-2138" {},
-                            "0.0-2505" {:added #{"compiler-options/source-map-timestamp"}},
+                            "0.0-2505" {},
                             "0.0-2311" {},
                             "1.9.92" {},
                             "0.0-2740" {},
                             "0.0-2725" {},
                             "1.9.211" {},
-                            "0.0-2127" {:added #{"compiler-options/preamble"}},
+                            "0.0-2127" {},
                             "0.0-2843" {:added #{"cljs.repl/IPrintStacktrace"
                                                  "cljs.repl/IParseStacktrace"
                                                  "cljs.repl/mapped-stacktrace"}},
                             "0.0-2280" {},
                             "1.7.166" {:removed #{"cljs.build.api/cljs-ns-dependents"}},
                             "0.0-2199" {},
-                            "0.0-2120" {:added #{"compiler-options/closure-warnings"
-                                                 "compiler-options/closure-defines"}},
+                            "0.0-2120" {},
                             "1.9.93" {},
                             "1.9.495" {},
                             "0.0-1878" {},
                             "0.0-1236" {},
-                            "0.0-2060" {:added #{"compiler-options/source-map-path"}},
+                            "0.0-2060" {},
                             "0.0-3178" {},
                             "0.0-3126" {},
-                            "0.0-1424" {:added #{"compiler-options/static-fns"
-                                                 "cljs.repl.browser/preloaded-libs"}},
+                            "0.0-1424" {:added #{"cljs.repl.browser/preloaded-libs"}},
                             "0.0-2342" {},
                             "0.0-3169" {},
                             "1.8.34" {:added #{"cljs.repl/known-repl-opts"}},
                             "0.0-1885" {},
                             "1.9.227" {},
                             "0.0-1535" {},
-                            "1.9.90" {:added #{"compiler-options/source-map-asset-path"}},
+                            "1.9.90" {},
                             "0.0-1859" {},
                             "0.0-3308" {},
                             "1.8.51" {},
                             "0.0-3190" {},
                             "0.0-2755" {},
                             "0.0-1853" {},
-                            "0.0-2197" {:added #{"compiler-options/hashbang"
-                                                 "compiler-options/language-out"
-                                                 "compiler-options/language-in"}},
+                            "0.0-2197" {},
                             "1.9.225" {},
                             "0.0-3291" {:added #{"cljs.build.api/ns->source"
                                                  "cljs.build.api/output-unoptimized"
@@ -37863,19 +38123,18 @@
                             "1.9.89" {},
                             "0.0-2301" {},
                             "0.0-1909" {},
-                            "0.0-3115" {:added #{"repl-options/repl-requires"},
-                                        :removed #{"cljs.repl.browser/loaded-libs"
+                            "0.0-3115" {:removed #{"cljs.repl.browser/loaded-libs"
                                                    "cljs.repl.browser/preloaded-libs"}},
                             "0.0-3195" {},
                             "1.9.35" {},
                             "0.0-3153" {},
                             "1.9.226" {},
                             "0.0-3119" {},
-                            "1.9.85" {:added #{"compiler-options/preloads"}},
+                            "1.9.85" {},
                             "0.0-2723" {},
                             "1.9.75" {},
                             "1.9.229" {},
-                            "0.0-2727" {:added #{"compiler-options/asset-path"}},
+                            "0.0-2727" {},
                             "1.9.495+" {},
                             "0.0-3255" {:added #{"cljs.compiler.api/cljs-files-in"
                                                  "cljs.compiler.api/with-core-cljs"
@@ -37883,7 +38142,7 @@
                                                  "cljs.compiler.api/compile-file"
                                                  "cljs.compiler.api/requires-compilation?"
                                                  "cljs.compiler.api/compile-root"}},
-                            "0.0-1552" {:added #{"repl-options/analyze-path"}},
+                            "0.0-1552" {},
                             "0.0-2080" {},
                             "0.0-2234" {},
                             "0.0-2644" {},
@@ -37891,10 +38150,9 @@
                             "0.0-3191" {},
                             "0.0-2268" {},
                             "0.0-3269" {},
-                            "0.0-2511" {:added #{"compiler-options/cache-analysis"}},
+                            "0.0-2511" {},
                             "0.0-1806" {},
                             "0.0-3030" {:added #{"cljs.repl.browser/repl-env*"
-                                                 "compiler-options/watch-fn"
                                                  "cljs.repl/IParseError"
                                                  "cljs.repl.nashorn/repl-env*"
                                                  "cljs.repl.rhino/repl-env*"},
@@ -37921,7 +38179,6 @@
                                                  "cljs.analyzer.api/in-cljs-user"
                                                  "cljs.repl.node/setup"
                                                  "cljs.repl.node/node-eval"
-                                                 "compiler-options/compiler-stats"
                                                  "cljs.build.api/src-file->goog-require"
                                                  "cljs.repl.node/write"
                                                  "cljs.repl.node/repl-env*"},
@@ -37930,11 +38187,10 @@
                                                  "cljs.repl/IReplEnvOptions"
                                                  "cljs.repl/skip-whitespace"
                                                  "cljs.repl/repl-read"
-                                                 "cljs.repl/skip-if-eol"
-                                                 "repl-options/repl-verbose"}},
+                                                 "cljs.repl/skip-if-eol"}},
                             "0.0-2816" {},
                             "1.7.228" {},
-                            "0.0-2227" {:added #{"compiler-options/pseudo-names"}},
+                            "0.0-2227" {},
                             "0.0-1576" {:removed #{"cljs.repl.rhino/loaded-libs"}},
                             "0.0-3297" {:added #{"cljs.repl.browser/mime-type->encoding"}},
                             "0.0-1844" {},
@@ -37945,8 +38201,8 @@
                             "0.0-2498" {},
                             "1.7.48" {},
                             "0.0-3117" {},
-                            "0.0-2850" {:added #{"repl-options/watch"}},
-                            "0.0-1443" {:added #{"compiler-options/warnings"}},
+                            "0.0-2850" {},
+                            "0.0-1443" {},
                             "0.0-1006" {},
                             "1.9.494" {},
                             "0.0-1913" {},
@@ -37957,7 +38213,6 @@
                                                  "cljs.repl/print-mapped-stacktrace"
                                                  "cljs.repl.node/platform-path"
                                                  "cljs.repl.nashorn/eval-str"
-                                                 "compiler-options/recompile-dependents"
                                                  "cljs.repl.nashorn/create-engine"
                                                  "cljs.repl.nashorn/load-ns"
                                                  "cljs.repl.nashorn/load-js-file"
@@ -37967,15 +38222,14 @@
                                                  "cljs.repl.nashorn/repl-env"
                                                  "cljs.repl/mapped-line-and-column"
                                                  "cljs.repl/ns-info"
-                                                 "cljs.repl/read-source-map"
-                                                 "compiler-options/closure-extra-annotations"}},
+                                                 "cljs.repl/read-source-map"}},
                             "0.0-2655" {:removed #{"cljs.repl/update-require-spec"
                                                    "cljs.repl/merge-require"
                                                    "cljs.repl/merge-spec"
                                                    "cljs.repl/spec-sort"
                                                    "cljs.analyzer.api/ns-specs"}},
                             "1.7.145" {},
-                            "0.0-1513" {:added #{"compiler-options/output-wrapper"}},
+                            "0.0-1513" {},
                             "0.0-1503" {:added #{"cljs.repl.server/handlers"
                                                  "cljs.repl.server/dispatch-on"
                                                  "cljs.repl.server/start"
@@ -38012,18 +38266,7 @@
                             "0.0-1933" {},
                             "1.9.14" {},
                             "0.0-1895" {},
-                            "0.0-971" {:added #{"compiler-options/verbose"
-                                                "compiler-options/libs"
-                                                "compiler-options/optimizations"
-                                                "compiler-options/pretty-print"
-                                                "compiler-options/target"
-                                                "compiler-options/use-only-custom-externs"
-                                                "compiler-options/main"
-                                                "compiler-options/output-dir"
-                                                "compiler-options/print-input-delimiter"
-                                                "compiler-options/foreign-libs"
-                                                "compiler-options/externs"
-                                                "compiler-options/output-to"}},
+                            "0.0-971" {},
                             "0.0-2027" {},
                             "0.0-1978" {},
                             "0.0-1843" {},
@@ -38045,34 +38288,18 @@
                                                  "cljs.analyzer.api/empty-env"
                                                  "cljs.analyzer.api/analyze"}},
                             "0.0-3263" {},
-                            "1.9.473" {:added #{"compiler-options/closure-generate-exports"},
-                                       :removed #{"cljs.build.api/add-package-jsons"}},
+                            "1.9.473" {:removed #{"cljs.build.api/add-package-jsons"}},
                             "1.7.170" {},
-                            "0.0-1798" {:added #{"compiler-options/source-map"}},
-                            "0.0-1877" {:added #{"compiler-options/optimize-constants"}},
+                            "0.0-1798" {},
+                            "0.0-1877" {},
                             "0.0-1211" {:added #{"cljs.repl.browser/send-static"}},
                             "0.0-1449" {},
-                            "0.0-2911" {:added #{"repl-options/reader"
-                                                 "cljs.repl/self-require?"
-                                                 "repl-options/init"
+                            "0.0-2911" {:added #{"cljs.repl/self-require?"
                                                  "cljs.repl/repl-prompt"
-                                                 "repl-options/read"
-                                                 "repl-options/flush"
                                                  "cljs.repl/*repl-opts*"
-                                                 "repl-options/eval"
-                                                 "compiler-options/modules"
-                                                 "repl-options/caught"
-                                                 "repl-options/need-prompt"
-                                                 "repl-options/print-no-newline"
-                                                 "repl-options/print"
-                                                 "repl-options/prompt"
-                                                 "cljs.repl/repl-caught"
-                                                 "repl-options/source-map-inline"},
+                                                 "cljs.repl/repl-caught"},
                                         :removed #{"cljs.repl/with-read-known"}},
-                            "0.0-993" {:added #{"compiler-options/ups-foreign-libs"
-                                                "cljs.repl/default-special-fns"
-                                                "compiler-options/ups-libs"
-                                                "compiler-options/ups-externs"}},
+                            "0.0-993" {:added #{"cljs.repl/default-special-fns"}},
                             "0.0-1011" {},
                             "0.0-2356" {},
                             "1.7.122" {:added #{"cljs.analyzer.api/get-js-index"}},
@@ -38094,16 +38321,15 @@
                                                  "cljs.repl.rhino/load-file"
                                                  "cljs.repl/dir"
                                                  "cljs.repl/special-doc-map"
-                                                 "repl-options/wrap"
                                                  "cljs.repl/source-fn"
                                                  "cljs.repl/find-doc"},
                                         :removed #{"cljs.repl.rhino/goog-require"}},
-                            "1.9.183" {:added #{"compiler-options/browser-repl"}},
-                            "0.0-2156" {:added #{"compiler-options/elide-asserts"}},
+                            "1.9.183" {},
+                            "0.0-2156" {},
                             "0.0-1847" {},
                             "1.9.293" {:removed #{"cljs.repl/self-require?"
                                                   "cljs.repl/canonicalize-specs"}},
-                            "1.7.189" {:added #{"compiler-options/parallel-build"}},
+                            "1.7.189" {},
                             "0.0-2496" {:added #{"cljs.build.api/cljs-dependents-for-macro-namespaces"
                                                  "cljs.analyzer.api/find-ns"
                                                  "cljs.build.api/target-file-for-cljs-ns"
@@ -38167,22 +38393,16 @@
                                                  "cljs.repl.node/-main"}},
                             "0.0-2202" {},
                             "0.0-1820" {},
-                            "1.9.456" {:added #{"compiler-options/infer-externs"
-                                                "compiler-options/watch-error-fn"
-                                                "cljs.build.api/node-module-deps"
+                            "1.9.456" {:added #{"cljs.build.api/node-module-deps"
                                                 "cljs.build.api/node-inputs"
-                                                "cljs.build.api/add-package-jsons"
-                                                "compiler-options/cache-analysis-format"}},
+                                                "cljs.build.api/add-package-jsons"}},
                             "0.0-2261" {},
                             "0.0-2024" {},
                             "1.9.88" {},
-                            "1.7.10" {:added #{"compiler-options/dump-core"
-                                               "cljs.analyzer.api/get-options"
+                            "1.7.10" {:added #{"cljs.analyzer.api/get-options"
                                                "cljs.analyzer.api/warning-enabled?"
                                                "cljs.analyzer.api/default-warning-handler"
-                                               "repl-options/def-emits-var"
                                                "cljs.analyzer.api/empty-state"
-                                               "compiler-options/warning-handlers"
                                                "cljs.analyzer.api/with-state"},
                                       :removed #{"cljs.repl.browser/safari-st-el->frame"
                                                  "cljs.repl.browser/firefox-st-el->frame"
@@ -38194,22 +38414,17 @@
                             "0.0-1889" {},
                             "0.0-2657" {},
                             "0.0-1896" {},
-                            "0.0-2014" {:added #{"compiler-options/emit-constants"}},
-                            "0.0-2411" {:added #{"compiler-options/anon-fn-naming-policy"}},
+                            "0.0-2014" {},
+                            "0.0-2411" {},
                             "0.0-2665" {:added #{"cljs.repl.browser/setup"}},
                             "0.0-2760" {}},
-                  :symbol-names #{"compiler-options/preloads"
-                                  "cljs.repl.nashorn/repl-filename"
-                                  "repl-options/reader"
-                                  "compiler-options/infer-externs"
+                  :symbol-names #{"cljs.repl.nashorn/repl-filename"
                                   "cljs.repl.rhino/current-repl-env"
                                   "cljs.build.api/cljs-dependents-for-macro-namespaces"
-                                  "compiler-options/watch-error-fn"
                                   "cljs.build.api/build"
                                   "cljs.repl/self-require?"
                                   "cljs.build.api/ns->source"
                                   "cljs.repl/with-read-known"
-                                  "repl-options/init"
                                   "cljs.repl/evaluate-form"
                                   "cljs.build.api/parse-js-ns"
                                   "cljs.repl.browser/repl-env*"
@@ -38222,55 +38437,39 @@
                                   "cljs.repl.node/close-socket"
                                   "cljs.repl.browser/load-javascript"
                                   "cljs.repl/repl*"
-                                  "compiler-options/verbose"
                                   "cljs.build.api/output-unoptimized"
-                                  "compiler-options/browser-repl"
-                                  "compiler-options/libs"
-                                  "repl-options/read"
                                   "cljs.build.api/node-module-deps"
-                                  "compiler-options/pseudo-names"
                                   "cljs.repl.browser/add-in-order"
                                   "cljs.repl.nashorn/-main"
                                   "cljs.repl/err-out"
                                   "cljs.repl.server/handlers"
                                   "cljs.repl.node/load-javascript"
                                   "cljs.build.api/add-implicit-options"
-                                  "repl-options/bind-err"
                                   "cljs.compiler.api/cljs-files-in"
                                   "cljs.repl.browser/safari-st-el->frame"
                                   "cljs.repl.browser/mime-type->encoding"
                                   "cljs.repl/apropos"
-                                  "compiler-options/optimizations"
                                   "cljs.repl/load-namespace"
                                   "cljs.repl.rhino/wrap-fn"
                                   "cljs.repl/known-repl-opts"
-                                  "compiler-options/static-fns"
                                   "cljs.analyzer.api/find-ns"
-                                  "compiler-options/pretty-print"
-                                  "repl-options/flush"
-                                  "compiler-options/watch-fn"
                                   "cljs.repl.rhino/loaded-libs"
                                   "cljs.repl.server/dispatch-on"
                                   "cljs.repl.browser/firefox-st-el->frame"
-                                  "compiler-options/target"
                                   "cljs.repl.browser/run-in-order"
                                   "cljs.repl.browser/compile-client-js"
                                   "cljs.repl.server/start"
                                   "cljs.repl.browser/handle-get"
                                   "cljs.repl.nashorn/eval-resource"
                                   "cljs.repl.browser/ext->mime-type"
-                                  "repl-options/watch"
                                   "cljs.repl/js-src->cljs-src"
                                   "cljs.repl.reflect/parse-param"
                                   "cljs.repl/print-mapped-stacktrace"
                                   "cljs.repl/analyze-source"
                                   "cljs.repl.browser/stop-server"
-                                  "compiler-options/dump-core"
                                   "cljs.repl/*repl-opts*"
-                                  "compiler-options/parallel-build"
                                   "cljs.repl.browser/chrome-st-el->frame"
                                   "cljs.repl/IParseError"
-                                  "compiler-options/asset-path"
                                   "cljs.repl/pst"
                                   "cljs.analyzer.api/get-options"
                                   "cljs.repl.browser/read-request"
@@ -38279,52 +38478,38 @@
                                   "cljs.repl.server/state"
                                   "cljs.repl.reflect/macroexpand"
                                   "cljs.repl.browser/-main"
-                                  "repl-options/eval"
                                   "cljs.repl.node/platform-path"
                                   "cljs.repl.browser/es"
-                                  "compiler-options/preamble"
                                   "cljs.repl.server/read-request"
                                   "cljs.repl/load-file"
-                                  "compiler-options/closure-warnings"
                                   "cljs.repl/IParseErrorMessage"
                                   "cljs.repl.nashorn/eval-str"
                                   "cljs.repl.browser/browser-eval"
                                   "cljs.repl.browser/server-state"
-                                  "compiler-options/modules"
                                   "cljs.repl.browser/send-for-eval"
-                                  "compiler-options/ups-foreign-libs"
                                   "cljs.repl.browser/constrain-order"
                                   "cljs.repl/default-special-fns"
                                   "cljs.repl.rhino/rhino-eval"
-                                  "compiler-options/use-only-custom-externs"
                                   "cljs.repl.browser/read-headers"
                                   "cljs.analyzer.api/warning-enabled?"
                                   "cljs.repl/IReplEnvOptions"
                                   "cljs.repl.server/set-connection"
-                                  "compiler-options/recompile-dependents"
                                   "cljs.analyzer.api/ns-resolve"
                                   "cljs.repl/update-require-spec"
                                   "cljs.repl/repl"
-                                  "repl-options/caught"
                                   "cljs.repl.nashorn/create-engine"
                                   "cljs.build.api/src-file->target-file"
                                   "cljs.compiler.api/with-core-cljs"
                                   "cljs.repl/canonicalize-specs"
-                                  "compiler-options/emit-constants"
                                   "cljs.repl.rhino/load-javascript"
-                                  "repl-options/need-prompt"
                                   "cljs.repl/merge-require"
                                   "cljs.analyzer.api/ns-publics"
                                   "cljs.repl.nashorn/load-ns"
                                   "cljs.repl.browser/create-client-js-file"
                                   "cljs.repl/*cljs-verbose*"
-                                  "compiler-options/hashbang"
                                   "cljs.repl.server/read-post"
-                                  "compiler-options/warnings"
                                   "cljs.repl/IGetError"
                                   "cljs.repl.browser/loaded-libs"
-                                  "compiler-options/main"
-                                  "repl-options/print-no-newline"
                                   "cljs.analyzer.api/default-warning-handler"
                                   "cljs.repl.nashorn/load-js-file"
                                   "cljs.repl.browser/setup"
@@ -38332,39 +38517,27 @@
                                   "cljs.repl.browser/parse-file"
                                   "cljs.repl/IPrintStacktrace"
                                   "cljs.analyzer.api/parse-ns"
-                                  "compiler-options/output-dir"
                                   "cljs.repl.nashorn/init-engine"
                                   "cljs.build.api/goog-dep-string"
                                   "cljs.repl.server/parse-headers"
                                   "cljs.repl.node/read-response"
                                   "cljs.repl.browser/repl-client-js"
-                                  "compiler-options/source-map"
                                   "cljs.repl.browser/parse-headers"
-                                  "repl-options/repl-requires"
                                   "cljs.repl.reflect/handle-reflect-query"
-                                  "repl-options/quit-prompt"
                                   "cljs.build.api/node-inputs"
-                                  "compiler-options/anon-fn-naming-policy"
                                   "cljs.repl.browser/send-404"
                                   "cljs.repl.browser/repl-env"
                                   "cljs.repl.nashorn/bootstrap-repl"
-                                  "compiler-options/optimize-constants"
                                   "cljs.repl.rhino/load-file"
-                                  "repl-options/analyze-path"
                                   "cljs.repl/merge-spec"
                                   "cljs.repl.rhino/repl-env"
-                                  "compiler-options/source-map-path"
                                   "cljs.repl.node/seq->js-array"
                                   "cljs.repl.server/stop"
-                                  "compiler-options/print-input-delimiter"
                                   "cljs.repl/dir"
                                   "cljs.repl.rhino/goog-require"
                                   "cljs.repl/spec-sort"
                                   "cljs.analyzer.api/no-warn"
-                                  "repl-options/def-emits-var"
                                   "cljs.repl.server/read-get"
-                                  "compiler-options/closure-defines"
-                                  "compiler-options/ups-libs"
                                   "cljs.repl.browser/send-repl-client-page"
                                   "cljs.repl.reflect/read-url-string"
                                   "cljs.repl/repl-special-doc-map"
@@ -38372,29 +38545,21 @@
                                   "cljs.build.api/mark-cljs-ns-for-recompile!"
                                   "cljs.repl.browser/parse-stacktrace"
                                   "cljs.repl.browser/browser-state"
-                                  "repl-options/print"
                                   "cljs.repl.browser/send-static"
                                   "cljs.analyzer.api/forms-seq"
                                   "cljs.analyzer.api/get-js-index"
-                                  "compiler-options/foreign-libs"
                                   "cljs.build.api/cljs-ns-dependents"
                                   "cljs.analyzer.api/ns-specs"
                                   "cljs.repl.nashorn/repl-env"
-                                  "compiler-options/source-map-asset-path"
-                                  "repl-options/compiler-env"
-                                  "compiler-options/externs"
                                   "cljs.compiler.api/emit"
                                   "cljs.analyzer.api/analyze-file"
                                   "cljs.compiler.api/compile-file"
                                   "cljs.repl/mapped-line-and-column"
-                                  "compiler-options/language-out"
                                   "cljs.build.api/watch"
                                   "cljs.repl/special-doc-map"
                                   "cljs.compiler.api/requires-compilation?"
-                                  "repl-options/prompt"
                                   "cljs.repl.server/read-headers"
                                   "cljs.repl/decorate-specs"
-                                  "compiler-options/closure-generate-exports"
                                   "cljs.analyzer.api/all-ns"
                                   "cljs.repl/repl-read"
                                   "cljs.repl/repl-caught"
@@ -38403,37 +38568,29 @@
                                   "cljs.repl/ns-info"
                                   "cljs.repl.node/repl-env"
                                   "cljs.repl/skip-if-eol"
-                                  "repl-options/wrap"
                                   "cljs.analyzer.api/in-cljs-user"
                                   "cljs.analyzer.api/empty-state"
                                   "cljs.repl.rhino/bootjs"
-                                  "compiler-options/cache-analysis"
                                   "cljs.repl/IJavaScriptEnv"
                                   "cljs.repl.rhino/-main"
                                   "cljs.repl.nashorn/repl-env*"
-                                  "compiler-options/warning-handlers"
                                   "cljs.repl.node/-main"
                                   "cljs.build.api/add-dependencies"
-                                  "compiler-options/language-in"
                                   "cljs.repl/IParseStacktrace"
                                   "cljs.repl/repl-quit-prompt"
                                   "cljs.repl.browser/handle-connection"
                                   "cljs.build.api/inputs"
-                                  "compiler-options/output-wrapper"
                                   "cljs.build.api/source-on-disk"
                                   "cljs.repl.node/setup"
                                   "cljs.repl/doc"
-                                  "compiler-options/elide-asserts"
                                   "cljs.repl.node/node-eval"
                                   "cljs.analyzer.api/with-state"
                                   "cljs.build.api/ns->location"
-                                  "compiler-options/source-map-timestamp"
                                   "cljs.repl/mapped-stacktrace"
                                   "cljs.repl.rhino/IEval"
                                   "cljs.analyzer.api/resolve"
                                   "cljs.repl.browser/start-server"
                                   "cljs.repl.server/send-and-close"
-                                  "compiler-options/compiler-stats"
                                   "cljs.repl.rhino/repl-env*"
                                   "cljs.repl.browser/server-loop"
                                   "cljs.repl.server/send-404"
@@ -38449,18 +38606,12 @@
                                   "cljs.build.api/add-package-jsons"
                                   "cljs.repl.browser/handle-post"
                                   "cljs.repl/find-doc"
-                                  "repl-options/source-map-inline"
                                   "cljs.repl.node/repl-env*"
                                   "cljs.analyzer.api/analyze"
-                                  "compiler-options/closure-extra-annotations"
                                   "cljs.repl.rhino/stacktrace"
-                                  "compiler-options/output-to"
-                                  "compiler-options/cache-analysis-format"
-                                  "compiler-options/ups-externs"
                                   "cljs.compiler.api/compile-root"
                                   "cljs.analyzer.api/ns-interns"
                                   "cljs.repl.browser/firefox-clean-function"
-                                  "repl-options/repl-verbose"
                                   "cljs.repl.browser/ordering"},
                   :namespace-names #{"cljs.repl.server"
                                      "cljs.compiler.api"
@@ -38471,6 +38622,4 @@
                                      "cljs.repl.nashorn"
                                      "cljs.build.api"
                                      "cljs.repl"
-                                     "repl-options"
-                                     "cljs.analyzer.api"
-                                     "compiler-options"}}}}
+                                     "cljs.analyzer.api"}}}}
