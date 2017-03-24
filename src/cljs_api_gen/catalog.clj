@@ -14,14 +14,15 @@
     [cljs-api-gen.parse :refer [parse-all]]
     [cljs-api-gen.repo-cljs :refer [cljs-version->tag
                                     published-cljs-tags
-                                    with-checkout!
+                                    with-version!
+                                    checkout-repos!
                                     *cljs-tag*
                                     *cljs-date*
                                     *clj-tag*
                                     master?
                                     get-master-tag]]
-    [cljs-api-gen.result :refer [get-result
-                                 add-docfile-to-result]]
+    [cljs-api-gen.result :refer [cached-result
+                                 annotate-result]]
     [cljs-api-gen.state :refer [*result*]]))
 
 
@@ -44,6 +45,8 @@
   [parsed]
   (println " Syntax API:")
   (print-summary* (:syntax parsed))
+  (println " Options API:")
+  (print-summary* (:options parsed))
   (println " Library API:")
   (print-summary* (:library parsed))
   (println " Compiler API:")
@@ -112,7 +115,8 @@
             (reset! prev-result (delay (edn/read-string (slurp parsed-file)))))
 
           ;; parse
-          (with-checkout! tag
+          (with-version! tag
+            (checkout-repos!)
             (reset! skipped-previous? false)
 
             (println "\n\n=========================================================")
@@ -128,7 +132,7 @@
               (print-summary parsed)
 
               (println "\nWriting parsed data to" (style parsed-file :cyan))
-              (let [result (get-result parsed (get-prev-result))]
+              (let [result (cached-result parsed (get-prev-result))]
                 (spit parsed-file (with-out-str (pprint result)))
                 (reset! prev-result result)))
 
@@ -151,8 +155,8 @@
       (lint-docfiles!)
 
       ;; create final result
-      (println (style "\nMerging manual docs into final result...\n" :magenta))
-      (let [final-result (add-docfile-to-result *result*)
+      (println (style "\nMerging annotations into final result...\n" :magenta))
+      (let [final-result (with-version! last-tag (annotate-result *result*))
             final-file (edn-result-file last-tag)]
           (spit final-file (with-out-str (pprint final-result)))
           (println (style " Success! " :bg-green))

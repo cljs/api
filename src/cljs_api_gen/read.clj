@@ -96,7 +96,8 @@
 
   (require 'cljs-api-gen.read :reload)
 
-  (require '[cljs-api-gen.repo-cljs :refer [with-checkout!]])
+  (require '[cljs-api-gen.repo-cljs :refer [with-version! checkout-repos!]])
 
-  (with-checkout! "r927"
+  (with-version! "r927"
+    (checkout-repos!)
     (get-ns-files "cljs.core" :library)))

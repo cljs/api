@@ -408,7 +408,18 @@
   [repo tag]
   (sh "git" "checkout" tag :dir (str repos-dir "/" repo)))
 
-(defmacro with-checkout!
+(defmacro with-version!
+  [cljs-tag & body])
+
+
+(defn checkout-repos!
+  []
+  (checkout-repo! "clojurescript" *cljs-tag*)
+  (checkout-repo! "clojure" *clj-tag*)
+  (when *treader-tag*
+    (checkout-repo! "tools.reader" *treader-tag*)))
+
+(defmacro with-version!
   [cljs-tag & body]
   `(let [{clj-tag#          :clj-tag
           clj-version#      :clj-version
@@ -416,11 +427,6 @@
           treader-version#  :treader-version
           gclosure-lib#     :gclosure-lib
           gclosure-com#     :gclosure-com} (cljs-tag->dep-releases ~cljs-tag)]
-
-     (checkout-repo! "clojurescript" ~cljs-tag)
-     (checkout-repo! "clojure" clj-tag#)
-     (when treader-tag#
-       (checkout-repo! "tools.reader" treader-tag#))
 
      (binding [*cljs-tag*     ~cljs-tag
                *cljs-date*    (or (:date (@cljs-tag->pub ~cljs-tag))

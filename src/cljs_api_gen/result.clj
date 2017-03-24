@@ -29,6 +29,10 @@
        (remove (comp removable? second))
        (into {})))
 
+;;----------------------------------------------------------------------
+;; Cached item result
+;;----------------------------------------------------------------------
+
 (defn fix-source-lines*
   "Turn the line range into a single line if the end line is the same as the first."
   [source]
@@ -41,19 +45,6 @@
   (-> item
       (update :source fix-source-lines*)
       (update :extra-sources #(map fix-source-lines* %))))
-
-(defn add-github-link
-  [{:keys [lines repo tag filename] :as source}]
-  (when source
-    (let [url (str "https://github.com/clojure/" repo "/blob/" tag "/" filename
-                "#" (string/join "-" (map #(str "L" %) lines)))]
-      (assoc source :url url))))
-
-(defn add-github-links
-  [item]
-  (-> item
-      (update :source add-github-link)
-      (update :extra-sources #(map add-github-link %))))
 
 (defn handle-ns-item
   "a namespace item does not have a :name, only a :ns"
@@ -76,45 +67,8 @@
       :full-name-encode full-encoded
       :name-encode name-encoded)))
 
-(defn assign-display-name
-  [item]
-  (cond-> item
-    (= (:type item) "option")
-    (assoc :display-as (str ":" (:name item)))))
-
-(defn add-clj-equiv
-  [item]
-  (if-let [equiv (clj-equiv item)]
-    (assoc item :clj-equiv equiv)
-    item))
-
-(defn add-edit-url
-  [item]
-  (assoc item :edit-url (doclink-url (:full-name item))))
-
-(defn signature->usage
-  [sig item]
-  (let [name (:name item)
-        type? (= "type" (:type item))
-        cmd (cond-> name
-              type? (str "."))
-        args (second (re-find #"^\[(.*)\]$" sig))
-        all-args (if (string/blank? args)
-                   cmd
-                   (string/join " " [cmd args]))]
-    (str "(" all-args ")")))
-
-(defn add-usage
-  [{:keys [signature name] :as item}]
-  (if signature
-    (assoc item :usage
-      (mapv #(signature->usage % item) signature))
-    item))
-
-;; FIXME:
-;; Make this a pre-transform step when merging manual docs onto final result
-;; so we can update the way this is calculated without running a full re-parse.
-(defn transform-item
+(defn cached-item
+  "After parsing, we "
   [x]
   (-> x
       (select-keys [:ns
@@ -135,14 +89,14 @@
 
       (update-in [:signature] #(mapv str %))
       (update-in [:name] str)
-      (fix-source-lines)
-      (add-github-links)
-      (handle-ns-item)
       (assign-full-names)
-      (assign-display-name)
-      (add-edit-url)
-      (prune-map)
-      (add-clj-equiv)))
+      (handle-ns-item)
+      (fix-source-lines)
+      (prune-map)))
+
+;;----------------------------------------------------------------------
+;; Combining items
+;;----------------------------------------------------------------------
 
 (defn shadow-duplicates-by-order
   [items]
@@ -194,16 +148,20 @@
                              combine-namespaces
                              #(-> % shadow-duplicates-by-order :merged)]))))
 
-(defn transform-items
+(defn cached-items
   "transforms a sequence of parsed items to a processed map of full-name -> item"
   [items]
   (->> items
-       (map transform-item)
+       (map cached-item)
        (group-by :full-name)
        (mapmap resolve-duplicates)
 
        ;; dangling defmethods probably means its defmulti is private
        (filtermap #(not= "method" (:type %)))))
+
+;;----------------------------------------------------------------------
+;; Cached API result with history
+;;----------------------------------------------------------------------
 
 (def ignored-change
   "Fix symbol history noise if a symbol was accidentally removed or added in
@@ -236,7 +194,7 @@
       (-> (assoc curr-item :history (conj prev-hist ["+" *cljs-version*]))
           (dissoc :removed)))))
 
-(defn make-api-result
+(defn cached-api-result
   "Create API data for the given api-type.
 
   items       = map full-name -> item (symbol or namespace data)
@@ -308,23 +266,23 @@
      :namespaces new-nss
      :changes new-changes}))
 
-(defn get-result
-  ([parsed] (get-result parsed nil))
+(defn cached-result
+  ([parsed] (cached-result parsed nil))
   ([parsed prev-result]
    (let [
          ;;; We create the API information here.
          ;;; Each API is {:symbols {} :changes []}
-         syntax-items (transform-items (:syntax parsed))
-         syntax-api (make-api-result syntax-items :syntax prev-result)
+         syntax-items (cached-items (:syntax parsed))
+         syntax-api (cached-api-result syntax-items :syntax prev-result)
 
-         options-items (transform-items (:options parsed))
-         options-api (make-api-result options-items :options prev-result)
+         options-items (cached-items (:options parsed))
+         options-api (cached-api-result options-items :options prev-result)
 
-         lib-items (transform-items (:library parsed))
-         library-api (make-api-result lib-items :library prev-result)
+         lib-items (cached-items (:library parsed))
+         library-api (cached-api-result lib-items :library prev-result)
 
-         compiler-items (transform-items (:compiler parsed))
-         compiler-api (make-api-result compiler-items :compiler prev-result)
+         compiler-items (cached-items (:compiler parsed))
+         compiler-api (cached-api-result compiler-items :compiler prev-result)
 
          ;;; We want a global symbol map. So we strip out the symbol data from each
          ;;; API, leaving only the symbol names which can be used to lookup the data
@@ -377,6 +335,24 @@
             :library library-api
             :compiler compiler-api}})))
 
+;;----------------------------------------------------------------------
+;; Annotated result
+;;----------------------------------------------------------------------
+
+(defn add-github-link
+  [{:keys [lines repo tag filename] :as source}]
+  (when source
+    (let [url (str "https://github.com/clojure/" repo "/blob/" tag "/" filename
+                "#" (string/join "-" (map #(str "L" %) lines)))]
+      (assoc source :url url))))
+
+(defn add-github-links
+  [item]
+  (-> item
+      (update :source add-github-link)
+      (update :extra-sources #(map add-github-link %))))
+
+
 (defn add-syntax-equiv
   [{:keys [clj-doc edn-doc] :as item}]
   (cond-> item
@@ -385,34 +361,75 @@
     clj-doc (dissoc :clj-doc)
     edn-doc (dissoc :edn-doc)))
 
-(defn add-docfile
-  "Merge the given item with its compiled docfile, containing extra doc info."
+(defn assign-display-name
+  [item]
+  (cond-> item
+    (= (:type item) "option")
+    (assoc :display-as (str ":" (:name item)))))
+
+(defn add-clj-equiv
+  [item]
+  (if-let [equiv (clj-equiv item)]
+    (assoc item :clj-equiv equiv)
+    item))
+
+(defn add-edit-url
+  [item]
+  (assoc item :edit-url (doclink-url (:full-name item))))
+
+(defn signature->usage
+  [sig item]
+  (let [name (:name item)
+        type? (= "type" (:type item))
+        cmd (cond-> name
+              type? (str "."))
+        args (second (re-find #"^\[(.*)\]$" sig))
+        all-args (if (string/blank? args)
+                   cmd
+                   (string/join " " [cmd args]))]
+    (str "(" all-args ")")))
+
+(defn add-usage
+  [{:keys [signature name] :as item}]
+  (if signature
+    (assoc item :usage
+      (mapv #(signature->usage % item) signature))
+    item))
+
+(defn annotate-item
+  "Merge the given item with extra data (e.g. docfile, github links)
+  We do this only at the end instead of after each version parse, allowing us
+  to change extra details without parsing every version again."
   [item]
   (let [docfile (and docfile-map (@docfile-map (:full-name item)))
-        data (prune-map (select-keys docfile
-                         [:examples
-                          :known-as
-                          :display-as
-                          :summary
-                          :summary-compiler
-                          :details
-                          :details-compiler
-                          :signature
-                          :see-also
-                          :search-terms
-                          :moved
-                          :tags
-                          :md-biblio
-                          :clj-doc
-                          :edn-doc]))]
+        docfile-data (prune-map (select-keys docfile
+                                 [:examples
+                                  :known-as
+                                  :display-as
+                                  :summary
+                                  :summary-compiler
+                                  :details
+                                  :details-compiler
+                                  :signature
+                                  :see-also
+                                  :search-terms
+                                  :moved
+                                  :tags
+                                  :md-biblio
+                                  :clj-doc
+                                  :edn-doc]))]
      (-> item
-         (merge data)
+         (assign-display-name)
+         (merge docfile-data)
          (add-usage)
+         (add-github-links)
+         (add-edit-url)
+         (add-clj-equiv)
          (add-syntax-equiv))))
 
-(defn add-docfile-to-result
+(defn annotate-result
   [result]
-  (let [update #(mapmap add-docfile %)]
+  (let [update #(mapmap annotate-item %)]
     (-> result
         (update-in [:symbols] update)
         (update-in [:namespaces] update))))
