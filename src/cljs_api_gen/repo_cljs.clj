@@ -7,7 +7,7 @@
     [clojure.xml :as xml]
     [me.raynes.fs :refer [exists? mkdir base-name]]
     [clojure.string :refer [trim split split-lines ends-with?]]
-    [cljs-api-gen.config :refer [repos-dir]]
+    [cljs-api-gen.config :refer [repos-dir cache-dir clj-maven-file cljs-maven-file]]
     [clj-time.core :as time]
     [clj-time.coerce :as tc]
     [clj-time.format :as tf]))
@@ -271,14 +271,17 @@
   (str "http://search.maven.org/solrsearch/select?q=g:%22" group "%22+AND+a:%22" artifact "%22&core=gav&rows=1000&wt=json"))
 
 (defn maven-releases
-  [group artifact]
-  (-> (maven-release-url group artifact)
-      (slurp)
-      (json/read-str :key-fn keyword)
-      (:response)
-      (:docs)
-      (reverse))) ;; properly sorted by version
-
+  [group artifact cache-file]
+  (let [url (maven-release-url group artifact)
+        str (try (slurp url)
+              (catch java.net.UnknownHostException e
+                (slurp cache-file)))]
+    (spit cache-file str)
+    (-> str
+        (json/read-str :key-fn keyword)
+        (:response)
+        (:docs)
+        (reverse)))) ;; properly sorted by version
 
 (def new-maven-release
   "a maven release that is not yet visible from their API (slow to update sometimes)"
@@ -287,7 +290,7 @@
 (defn get-published-cljs-tags!
   []
   (println (style "\nRetrieving published ClojureScript versions from Maven...\n" :cyan))
-  (let [releases (cond-> (maven-releases "org.clojure" "clojurescript")
+  (let [releases (cond-> (maven-releases "org.clojure" "clojurescript" cljs-maven-file)
                    @new-maven-release (concat [{:v @new-maven-release :timestamp (epoch-now)}]))
         pub-versions (map :v releases)
         pub-dates (map (comp timestamp->date-str :timestamp) releases)
@@ -320,7 +323,7 @@
 (defn get-published-clj-versions!
   []
   (println (style "\nRetrieving published Clojure versions from Maven...\n" :cyan))
-  (let [versions (map :v (maven-releases "org.clojure" "clojure"))
+  (let [versions (map :v (maven-releases "org.clojure" "clojure" clj-maven-file))
         index-map (into {} (map-indexed (fn [i v] [v i]) versions))]
     (reset! published-clj-versions index-map)
     (println (style "published Clojure versions:" :green))
