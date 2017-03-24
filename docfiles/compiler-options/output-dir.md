@@ -5,6 +5,8 @@ see also:
 
 ## Summary
 
+Sets the output directory for temporary files used during compilation. Defaults to "out".
+
 ## Details
 
 ## Examples
