@@ -7,13 +7,12 @@ see also:
 
 ## Summary
 
-Specifies an entry point namespace. When used with [doc:compiler-options/optimizations]
-`:simple` or `:advanced`, only namespaces reachable from main are included in the
-build.
+Specifies an entry point namespace. Behavior depends on [doc:compiler-options/optimizations]:
 
-When used with `:none`, all namespaces are still built to separate files, but the
+- `:simple`,`:advanced` - only namespaces reachable from main are built
+- `:none` - all namespaces are built, but the
 [doc:compiler-options/output-to] file will be generated such that main is executed
-for the given [doc:compiler-options/target] (browser or Node).
+for the appropriate [doc:compiler-options/target] (browser or Node).
 
 ```clj
 :main "foo.bar"
