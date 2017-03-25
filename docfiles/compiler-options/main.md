@@ -22,3 +22,8 @@ for the given [doc:compiler-options/target] (browser or Node).
 ## Details
 
 ## Examples
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:compiler-options/optimizations]:https://github.com/cljs/api/blob/master/docfiles/compiler-options/optimizations.md
+[doc:compiler-options/target]:https://github.com/cljs/api/blob/master/docfiles/compiler-options/target.md
+[doc:compiler-options/output-to]:https://github.com/cljs/api/blob/master/docfiles/compiler-options/output-to.md
