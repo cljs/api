@@ -10,7 +10,7 @@ Use `:nodejs` for Node.js.  If no target is specified, the browser environment
 is assumed.
 
 ```clj
-:target :nodejs  ;; <-- use when targetting Node.js
+:target :nodejs  ;; <-- use when targeting Node.js
 ```
 
 ## Details
