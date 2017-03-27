@@ -5,7 +5,7 @@
     [me.raynes.fs :refer [mkdir
                           exists?]]
     [cljs-api-gen.config :refer [cache-dir]]
-    [cljs-api-gen.docfile :refer [build-docfiles! lint-docfiles!]]
+    [cljs-api-gen.docfile :refer [lint-docfiles!]]
     [cljs-api-gen.repo-cljs :refer [clone-or-fetch-repos!
                                     get-published-cljs-tags!
                                     get-published-clj-versions!
@@ -30,18 +30,12 @@
   (get-version-apis!)
   (println (style "\n DONE PREPPING " :bg-green)))
 
-(defn docfile-task []
-  (let [num-skipped (build-docfiles!)]
-    (when-not (zero? num-skipped)
-      (System/exit 1))))
-
 (defn main
   [{:keys [task new-release] :as options}]
   (when new-release
     (reset! new-maven-release new-release))
   (prep!)
   (cond
-    (= task :docfile) (docfile-task)
     (= task :lint) (lint-docfiles!)
     :else (create-catalog! options))
 

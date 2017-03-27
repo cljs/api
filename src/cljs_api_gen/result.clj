@@ -4,12 +4,13 @@
     [clojure.set :refer [rename-keys]]
     [clojure.data :refer [diff]]
     [cljs-api-gen.docfile.doclink :refer [doclink-url]]
+    [cljs-api-gen.docfile.transform :refer [add-doclink-names]]
     [cljs-api-gen.encode :refer [encode-fullname
                                  encode-name]]
     [cljs-api-gen.util :refer [mapmap filtermap]]
-    [cljs-api-gen.state :refer [docfile-map]]
     [cljs-api-gen.clojure-api :refer [get-clojure-symbols-not-in-items
                                       clj-equiv]]
+    [cljs-api-gen.state :refer [*result* *docfiles*]]
     [cljs-api-gen.repo-cljs :refer [*cljs-version*
                                     *cljs-tag*
                                     *cljs-date*
@@ -401,7 +402,7 @@
   We do this only at the end instead of after each version parse, allowing us
   to change extra details without parsing every version again."
   [item]
-  (let [docfile (and docfile-map (@docfile-map (:full-name item)))
+  (let [docfile (*docfiles* (:full-name item))
         docfile-data (prune-map (select-keys docfile
                                  [:examples
                                   :known-as
@@ -427,9 +428,20 @@
          (add-clj-equiv)
          (add-syntax-equiv))))
 
-(defn annotate-result
-  [result]
-  (let [update #(mapmap annotate-item %)]
+(defn post-process-item
+  "This is a second pass to allow us to use data populated from first pass"
+  [item]
+  (-> item
+      (add-doclink-names)))
+
+(defn update-result-items
+  "Update every symbol or namespace item with the given function."
+  [result update-item]
+  (let [update-all #(mapmap update-item %)]
     (-> result
-        (update-in [:symbols] update)
-        (update-in [:namespaces] update))))
+        (update-in [:symbols] update-all)
+        (update-in [:namespaces] update-all))))
+
+(defn annotate-result []
+  (binding [*result* (update-result-items *result* annotate-item)]
+    (update-result-items *result* post-process-item)))

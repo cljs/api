@@ -1,6 +1,6 @@
 (ns cljs-api-gen.docfile.doclink
   (:require
-    [cljs-api-gen.state :refer [*result* docfile-map]]
+    [cljs-api-gen.state :refer [*result*]]
     [cljs-api-gen.encode :refer [encode-name]]
     [cljs-api-gen.config :refer [docfile-dir docfile-ext]]
     [clojure.string :as string]))
@@ -45,12 +45,17 @@
       (nil? a)         {:ns b}
       :else            {:ns a, :name b})))
 
-(defn docname?
+(defn docname->item
   [docname]
   (let [{:keys [ns name compiler?]} (parse-docname docname)]
     (if name
       (get-in *result* [:symbols docname])
       (get-in *result* [:namespaces ns]))))
+
+(defn docname?
+  "Determine if the given docname is valid."
+  [docname]
+  (boolean (docname->item docname)))
 
 (defn doclink-url
   [docname]
@@ -93,9 +98,8 @@
 
 (defn get-short-display-name
   [docname]
-  (let [{:keys [ns name compiler?]} (parse-docname docname)
-        display (get-in @docfile-map [docname :display-as])]
-    (or display name ns)))
+  (let [{:keys [display-as name ns]} (docname->item docname)]
+    (or display-as name ns)))
 
 (defn insert-doclink-name
   [[whole-match docname]]

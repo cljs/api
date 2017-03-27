@@ -5,7 +5,7 @@
     [clansi.core :refer [style]]
     [clojure.string :refer [join]]
     [me.raynes.fs :refer [exists?]]
-    [cljs-api-gen.docfile :refer [build-docfiles!
+    [cljs-api-gen.docfile :refer [build-docfiles
                                   lint-docfiles!
                                   create-docfile-stubs!]]
     [cljs-api-gen.config :refer [cache-dir
@@ -23,7 +23,7 @@
                                     get-master-tag]]
     [cljs-api-gen.result :refer [cached-result
                                  annotate-result]]
-    [cljs-api-gen.state :refer [*result*]]))
+    [cljs-api-gen.state :refer [*result* *docfiles*]]))
 
 
 (defn print-summary*
@@ -147,17 +147,15 @@
       (create-docfile-stubs! (-> *result* :namespaces keys set))
 
       ;; compile docfile files (manual docs)
-      (let [num-skipped (build-docfiles!)]
-        (when-not (zero? num-skipped)
-          (System/exit 1)))
+      (binding [*docfiles* (build-docfiles)]
 
-      ;; lint the docfiles
-      (lint-docfiles!)
+        ;; lint the docfiles
+        (lint-docfiles!)
 
-      ;; create final result
-      (println (style "\nMerging annotations into final result...\n" :magenta))
-      (let [final-result (with-version! last-tag (annotate-result *result*))
-            final-file (edn-result-file last-tag)]
-          (spit final-file (with-out-str (pprint final-result)))
-          (println (style " Success! " :bg-green))
-          (println "Wrote to" final-file)))))
+        ;; create final result
+        (println (style "\nMerging annotations into final result...\n" :magenta))
+        (let [final-result (with-version! last-tag (annotate-result))
+              final-file (edn-result-file last-tag)]
+            (spit final-file (with-out-str (pprint final-result)))
+            (println (style " Success! " :bg-green))
+            (println "Wrote to" final-file))))))

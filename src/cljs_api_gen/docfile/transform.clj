@@ -62,7 +62,3 @@
       (transform-key "clojure doc" :clj-doc)
       (transform-key "edn doc" :edn-doc)
       add-doclink-biblio))
-
-(defn post-transform-doc [doc]
-  (-> doc
-      add-doclink-names))

@@ -4,9 +4,9 @@
     [cljs-api-gen.encode :as encode]
     [cljs-api-gen.docfile.validate :refer [valid-doc?]]
     [cljs-api-gen.docfile.parse :refer [parse-doc]]
-    [cljs-api-gen.docfile.transform :refer [transform-doc post-transform-doc]]
+    [cljs-api-gen.docfile.transform :refer [transform-doc]]
     [cljs-api-gen.docfile.lint :refer [normalize-doc]]
-    [cljs-api-gen.state :refer [*result* docfile-map]]
+    [cljs-api-gen.state :refer [*result*]]
     [cljs-api-gen.util :refer [mapmap]]
     [me.raynes.fs :refer [mkdir list-dir base-name exists? parent directory?]]
     [clansi.core :refer [style]]
@@ -51,7 +51,7 @@
         (println "Creating new docfile stub for" (style full-name :yellow) "at" (style filename :cyan))
         (spit filename (docfile-stub full-name))))))
 
-(defn build-docfiles! []
+(defn build-docfiles []
   (println (cond-> (style (str "\nCompiling " docfile-dir "/ files") :cyan)
              (nil? *result*) (str " (without parsed API info)"))
            "...")
@@ -63,16 +63,15 @@
         skipped (- (count files) (count mandocs))
         parsed (- (count files) skipped)]
 
-    (reset! docfile-map mandoc-map)
-    (when *result*
-      (reset! docfile-map (mapmap post-transform-doc @docfile-map)))
-
     (if (zero? skipped)
       (println (style "Done with no errors." :green))
       (println (style "\nDone with some errors." :red)))
     (println (format-status parsed skipped))
 
-    skipped))
+    (when-not (zero? skipped)
+      (System/exit 1))
+
+    mandoc-map))
 
 (defn lint-docfiles! []
   (println (style (str "\nLinting " docfile-dir "/ files") :cyan))
