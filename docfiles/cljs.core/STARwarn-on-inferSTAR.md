@@ -1,13 +1,14 @@
 ---
 name: cljs.core/*warn-on-infer*
 see also:
+  - compiler-options/infer-externs
 ---
 
 ## Summary
 
 For interop purposes, this is used in conjunction with the compiler option
-`:infer-externs true` to emit a warning whenever a symbol is in danger of being
-renamed in advanced optimizations mode (i.e. compiler cannot infer an extern).
+[doc:compiler-options/infer-externs] to emit a warning whenever a symbol is in danger of being
+renamed in advanced [doc:compiler-options/optimizations] (i.e. compiler cannot infer an extern).
 Defaults to false.  When set to true, warnings are activated for the rest of the file thereafter.
 
 ```clj
@@ -28,3 +29,7 @@ Somewhat analogous to [`*warn-on-reflection*`](https://clojure.github.io/clojure
 in Clojure.
 
 ## Examples
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:compiler-options/infer-externs]:https://github.com/cljs/api/blob/master/docfiles/compiler-options/infer-externs.md
+[doc:compiler-options/optimizations]:https://github.com/cljs/api/blob/master/docfiles/compiler-options/optimizations.md
