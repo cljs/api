@@ -10,7 +10,7 @@ Files declaring JavaScript symbols that should not be munged under advanced
 [doc:compiler-options/optimizations].
 
 - Check [cljsjs](http://cljsjs.github.io) for curated externs for popular libraries.
-- Avoid externs with [cljs-oops](https://github.com/binaryage/cljs-oops)
+- Avoid externs with [cljs-oops](https://github.com/binaryage/cljs-oops).
 - See [Creating Externs](https://github.com/cljsjs/packages/wiki/Creating-Externs)
 for how to write them.
 - Use [doc:compiler-options/infer-externs] to help generate them.
