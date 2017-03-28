@@ -23,4 +23,4 @@ what is currently in master.
 
 ## License
 
-MIT, Copyright © 2014-2016 Shaun LeBron
+MIT, Copyright © 2014-2017 Shaun LeBron
