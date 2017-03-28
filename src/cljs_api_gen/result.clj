@@ -69,7 +69,7 @@
       :name-encode name-encoded)))
 
 (defn cached-item
-  "After parsing, we "
+  "Data that we should cache from this parsed item."
   [x]
   (-> x
       (select-keys [:ns
@@ -403,22 +403,22 @@
   to change extra details without parsing every version again."
   [item]
   (let [docfile (*docfiles* (:full-name item))
-        docfile-data (prune-map (select-keys docfile
-                                 [:examples
-                                  :known-as
-                                  :display-as
-                                  :summary
-                                  :summary-compiler
-                                  :details
-                                  :details-compiler
-                                  :signature
-                                  :see-also
-                                  :search-terms
-                                  :moved
-                                  :tags
-                                  :md-biblio
-                                  :clj-doc
-                                  :edn-doc]))]
+        docfile-data (select-keys docfile
+                       [:examples
+                        :known-as
+                        :display-as
+                        :summary
+                        :summary-compiler
+                        :details
+                        :details-compiler
+                        :signature
+                        :see-also
+                        :search-terms
+                        :moved
+                        :tags
+                        :md-biblio
+                        :clj-doc
+                        :edn-doc])]
      (-> item
          (assign-display-name)
          (merge docfile-data)
@@ -437,7 +437,7 @@
 (defn update-result-items
   "Update every symbol or namespace item with the given function."
   [result update-item]
-  (let [update-all #(mapmap update-item %)]
+  (let [update-all #(mapmap (comp prune-map update-item) %)]
     (-> result
         (update-in [:symbols] update-all)
         (update-in [:namespaces] update-all))))
