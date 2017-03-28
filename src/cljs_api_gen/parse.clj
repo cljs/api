@@ -16,6 +16,7 @@
     [cljs-api-gen.repo-cljs :refer [*cljs-tag*
                                     *clj-tag*
                                     *clj-version*
+                                    master?
                                     *treader-version*
                                     *treader-tag*
                                     cljs-cmp
@@ -932,7 +933,8 @@
 
 (defn option-present?
   [[id {:keys [added]}]]
-  (ensure-cljs-published! added)
+  (when-not (master? *cljs-tag*)
+    (ensure-cljs-published! added))
   (cljs-cmp >= added))
 
 (defn option-items
