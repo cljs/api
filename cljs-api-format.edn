@@ -90,8 +90,9 @@
               :usage ["(my-func foo)"
                       "(my-func foo bar)"]
 
-              ;; for syntax namespace and symbols, we want to display an alias
+              ;; for pseudo-namespaces and their symbols
               :display-as "#queue [] literal" ;; (from syntax/queue-literal)
+              :display-as ":externs" ;; (from compiler-options/externs)
 
               ;; what it's usually called
               :known-as "thread first" ;; (from cljs.core/->)
@@ -108,7 +109,11 @@
            ...}
 
 
- :namespaces { ...}
+ :namespaces {
+              :ns "syntax"
+              :pseudo-ns? true      ;; true for syntax, compiler-options, repl-options
+              :display-as "Syntax"  ;; display title
+              ...}
 
  ;; API categories (i.e. syntax, library, compiler)
  :api {
@@ -132,13 +137,17 @@
                                :removed #{"cljs.core/load-file*"}}
                    ...}}
 
+       ;; Compiler API (same format)
+       :compiler {:symbol-names #{}
+                  :namespace-names #{}
+                  :changes []}
 
        ;; Syntax API (same format)
        :syntax {:symbol-names #{}
                 :namespace-names #{}
                 :changes []}
 
-       ;; Compiler API (same format)
-       :compiler {:symbol-names #{}
-                  :namespace-names #{}
-                  :changes []}}}
+       ;; Options API (same format)
+       :options {:symbol-names #{}
+                 :namespace-names #{"compiler-options" "repl-options"}
+                 :changes []}}}
