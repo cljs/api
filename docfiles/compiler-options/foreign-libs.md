@@ -9,7 +9,7 @@ see also:
 
 Allows you to include and convert JavaScript libraries that are not proper Google Closure
 namespaces—if they are, use [doc:compiler-options/libs] instead.
-For an easier way to include libraries from NPM, use
+For an easier way to include libraries from npm use
 [doc:compiler-options/npm-deps].
 
 ```clj
