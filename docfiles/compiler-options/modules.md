@@ -35,6 +35,8 @@ Only supported with simple and advanced [doc:compiler-options/optimizations].
 Set the top-level [doc:compiler-options/source-map] to `true` to build source
 maps for all modules.
 
+For dynamic module loading at runtime, see [conwip-modules](https://github.com/bendyworks/conwip-modules).
+
 ## Examples
 
 <!-- AUTO-GENERATED docfile links for github -->
