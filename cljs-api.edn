@@ -22549,7 +22549,7 @@
                                                           "0.0-2060"]],
                                                :type "option",
                                                :full-name-encode "compiler-options/source-map-path",
-                                               :summary "Source maps associate compiled JS lines to their original CLJS files. Use this\noption if you configured your web server to host these original CLJS files at a\ncustom path. If present, it is prepended to all `sources` inside the\n[`:source-map`][doc:compiler-options/source-map] file.\n\n```clj\n:source-map-path \"...\"  ;; <-- absolute or relative path\n```",
+                                               :summary "Source maps associate compiled JS lines to their original CLJS files. Use this\noption if you configured your web server to host these original CLJS files at a\ncustom path. If present, it is prepended to all `sources` inside the\n[`:source-map`][doc:compiler-options/source-map] file.\n\n```clj\n:source-map-path \"...\"  ;; <-- custom server path of original CLJS files\n```",
                                                :full-name "compiler-options/source-map-path",
                                                :see-also ["compiler-options/source-map"
                                                           "compiler-options/source-map-asset-path"]},
@@ -25082,6 +25082,7 @@
                                          :full-name "cljs.repl.nashorn/repl-env",
                                          :docstring "Create a Nashorn repl-env for use with the repl/repl* method in Clojurescript."},
            "compiler-options/source-map-asset-path" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/compiler-options/source-map-asset-path.md",
+                                                     :md-biblio #{"compiler-options/source-map"},
                                                      :display-as ":source-map-asset-path",
                                                      :ns "compiler-options",
                                                      :name "source-map-asset-path",
@@ -25090,7 +25091,10 @@
                                                                 "1.9.90"]],
                                                      :type "option",
                                                      :full-name-encode "compiler-options/source-map-asset-path",
-                                                     :full-name "compiler-options/source-map-asset-path"},
+                                                     :summary "A compiled JS file can contain a `sourceMappingURL` comment, which cljs uses\nto locate the [`:source-map`][doc:compiler-options/source-map] JSON file.\nYou can prepend this location with a custom path if required by\nyour web server configuration.\n\n```clj\n:source-map-asset-path \"...\"  ;; <-- custom server path of source map metadata\n```",
+                                                     :full-name "compiler-options/source-map-asset-path",
+                                                     :see-also ["compiler-options/source-map"
+                                                                "compiler-options/source-map-path"]},
            "repl-options/compiler-env" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/repl-options/compiler-env.md",
                                         :display-as ":compiler-env",
                                         :ns "repl-options",
