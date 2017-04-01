@@ -15216,6 +15216,7 @@
                                                                "0.0-2814"]],
                                                     :type "option",
                                                     :full-name-encode "compiler-options/recompile-dependents",
+                                                    :summary "For correctness, this defaults to `true` in order to recompile dependent\nnamespaces when a parent namespace changes. This prevents corrupted builds and\nswallowed warnings. However, this can impact compile times depending on the\nstructure of the application.\n\n```clj\n:recompile-dependents false\n```",
                                                     :full-name "compiler-options/recompile-dependents"},
            "syntax/cond-splicing" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/syntax/cond-splicing.md",
                                    :md-biblio #{"syntax/cond"},
