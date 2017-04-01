@@ -13,7 +13,7 @@ custom path. If present, it is prepended to all `sources` inside the
 [doc:compiler-options/source-map] file.
 
 ```clj
-:source-map-path "..."  ;; <-- absolute or relative path
+:source-map-path "..."  ;; <-- custom server path of original CLJS files
 ```
 
 ## Details

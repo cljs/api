@@ -9,10 +9,11 @@ see also:
 
 A compiled JS file can contain a `sourceMappingURL` comment, which cljs uses
 to locate the [doc:compiler-options/source-map] JSON file.
-You may customize this path if required by your web server configuration.
+You can prepend this location with a custom path if required by
+your web server configuration.
 
 ```clj
-:source-map-asset-path "..."  ;; <-- absolute or relative path
+:source-map-asset-path "..."  ;; <-- custom server path of source map metadata
 ```
 
 ## Details
