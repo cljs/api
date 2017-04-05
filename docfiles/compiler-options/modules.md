@@ -27,10 +27,20 @@ already be included on the page:
 
 ## Details
 
-Use this option to specify a module containing only the code that a certain page
-will need, saving on file size and thus load time.
+(Only supported with simple and advanced [doc:compiler-options/optimizations]).
 
-Only supported with simple and advanced [doc:compiler-options/optimizations].
+Including a module's `:output-to` file on a page will let you run anything
+inside the namespaces listed in `:entries`, granted you first include on the
+page any files in this module's `:depends-on` entry if present. `:cljs-base`
+is usually an implicit entry in `:depends-on`.
+
+`:cljs-base` is the default module output to
+[doc:compiler-options/output-dir]`/cljs_base.js`, with an implicit `:entries`
+containing all namespaces in the build not included by the other modules.
+
+A module's `:entries` must not intersect those of another (i.e. modules comprise
+a formal [partition](https://en.wikipedia.org/wiki/Partition_of_a_set) of
+the project's namespaces).
 
 Set the top-level [doc:compiler-options/source-map] to `true` to build source
 maps for all modules.
@@ -41,5 +51,6 @@ For dynamic module loading at runtime, see [conwip-modules](https://github.com/b
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:compiler-options/optimizations]:https://github.com/cljs/api/blob/master/docfiles/compiler-options/optimizations.md
+[doc:compiler-options/output-dir]:https://github.com/cljs/api/blob/master/docfiles/compiler-options/output-dir.md
 [doc:compiler-options/source-map]:https://github.com/cljs/api/blob/master/docfiles/compiler-options/source-map.md
 [doc:compiler-options/output-to]:https://github.com/cljs/api/blob/master/docfiles/compiler-options/output-to.md
