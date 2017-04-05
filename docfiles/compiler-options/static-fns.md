@@ -8,7 +8,7 @@ see also:
 Controls how multi-arity function calls are generated. A "static" call
 means the dispatch to the appropriate arity is handled at compile time (better
 performance), whereas a "dynamic" call means the dispatch is handled at run time
-(allows safer redefinition). Static is enabled by default in advanced
+(allows safer redefinition in REPL). Static is enabled by default in advanced
 [doc:compiler-options/optimizations].
 
 ```clj
