@@ -30914,6 +30914,7 @@
                                         "cljs.core/sorted-map"],
                              :docstring "Return true if x satisfies IMap"},
            "compiler-options/elide-asserts" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/compiler-options/elide-asserts.md",
+                                             :md-biblio #{"cljs.core/assert"},
                                              :display-as ":elide-asserts",
                                              :ns "compiler-options",
                                              :name "elide-asserts",
@@ -30922,7 +30923,11 @@
                                                         "0.0-2156"]],
                                              :type "option",
                                              :full-name-encode "compiler-options/elide-asserts",
-                                             :full-name "compiler-options/elide-asserts"},
+                                             :summary "Remove all [`assert`][doc:cljs.core/assert] calls during compilation, including `:pre` and\n`:post` condition checks for functions. Useful for production. Defaults to\nfalse, even in advanced mode.\n\n```clj\n:elide-asserts true\n```",
+                                             :details "Does NOT specify `goog.asserts.ENABLE_ASSERTS`, which is different and used by the Closure library.",
+                                             :full-name "compiler-options/elide-asserts",
+                                             :see-also ["cljs.core/assert"
+                                                        "cljs.core/*assert*"]},
            "syntax/predicate" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/syntax/predicate.md",
                                :md-biblio #{"cljs.core/empty?"
                                             "cljs.core/contains?"
@@ -31760,7 +31765,8 @@
                                                    :url "https://github.com/clojure/clojurescript/blob/r1.9.495-18-g296d0a6/src/main/cljs/cljs/spec.cljs#L21-L25"},
                                           :full-name "cljs.spec/*recursion-limit*"},
            "cljs.core/*assert*" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/STARassertSTAR.md",
-                                 :md-biblio #{"cljs.core/assert"},
+                                 :md-biblio #{"cljs.core/assert"
+                                              "compiler-options/elide-asserts"},
                                  :ns "cljs.core",
                                  :name "*assert*",
                                  :name-encode "STARassertSTAR",
@@ -31774,11 +31780,12 @@
                                           :filename "src/main/cljs/cljs/core.cljs",
                                           :lines [44 46],
                                           :url "https://github.com/clojure/clojurescript/blob/r1.9.495-18-g296d0a6/src/main/cljs/cljs/core.cljs#L44-L46"},
-                                 :summary "Internally used to remove all calls to [`assert`][doc:cljs.core/assert] when the\ncompiler option `:elide-asserts` is set to true.  Not to be used manually.",
+                                 :summary "Internally used to remove all calls to [`assert`][doc:cljs.core/assert] when the compiler\noption [`:elide-asserts`][doc:compiler-options/elide-asserts] is set to true.  Not to be used\nmanually.",
                                  :details "This variable cannot be set at runtime in JVM ClojureScript, but can be in\nself-hosted ClojureScript.",
                                  :examples "The following only works in self-hosted ClojureScript:\n\n```clj\n(assert (= 1 2))\n;; Error: Assert failed: false\n\n(set! *assert* false)\n(assert (= 1 2))\n;;=> nil\n```",
                                  :full-name "cljs.core/*assert*",
-                                 :see-also ["cljs.core/assert"]},
+                                 :see-also ["cljs.core/assert"
+                                            "compiler-options/elide-asserts"]},
            "cljs.core/seq-iter" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/seq-iter.md",
                                  :ns "cljs.core",
                                  :name "seq-iter",
