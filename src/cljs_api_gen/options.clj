@@ -50,7 +50,7 @@
    :parallel-build {:added "1.7.189"}
    :watch-fn {:added "0.0-3030"}
    :watch-error-fn {:added "1.9.456"}
-   :npm-deps {:added "r1.9.495-18-g296d0a6"}
+   :npm-deps {:added "r1.9.518"}
 
    ;; undocumented
    :dump-core {:added "1.7.10"}
