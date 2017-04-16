@@ -46,6 +46,10 @@
 (create-ns 's)
 (create-ns 'stc)
 
+;; HACK: We need to create this so 'tools.reader' doesn't crash on `::comp/compiled-cljs`
+;; which is used by cljs.closure. (the comp namespace has to exist)
+(create-ns 'comp)
+
 ;; current namespace and repo that we are parsing.
 (def ^:dynamic *cur-ns*)
 (def ^:dynamic *cur-repo*)
@@ -69,7 +73,9 @@
 
    :options
    {"compiler-options"      :custom ;; pseudo-namespaces for options
-    "repl-options"          :custom}
+    "repl-options"          :custom
+    "warnings"              :custom
+    "closure-warnings"      :custom}
 
    :library
    {"cljs.pprint"           :normal
@@ -944,6 +950,42 @@
        (map base-option-item)))
 
 ;;------------------------------------------------------------
+;; Compiler warnings
+;;------------------------------------------------------------
+
+(defn base-warning-item
+  [id]
+  {:name (name id)
+   :ns *cur-ns*
+   :type "warning"})
+
+(defn parse-warnings
+  "Parse the default warning map (maps to default enabled boolean)."
+  [form]
+  (when (and (list? form)
+             (= (take 2 form) '(def *cljs-warnings*)))
+    (let [warnings-map (nth form 2)]
+      warnings-map)))
+
+(defn warning-items []
+  (let [forms (read-all-ns-forms "cljs.analyzer" :compiler)
+        warnings (first (keep parse-warnings forms))]
+    (map base-warning-item (keys warnings))))
+
+(defn parse-closure-warnings
+  "Parse the default Closure warning map (maps keywords to Closure warning types)."
+  [form]
+  (when (and (list? form)
+             (= (take 2 form) '(def warning-types)))
+    (let [warnings-map (nth form 2)]
+      warnings-map)))
+
+(defn closure-warning-items []
+  (let [forms (read-all-ns-forms "cljs.closure" :compiler)
+        warnings (first (keep parse-closure-warnings forms))]
+    (map base-warning-item (keys warnings))))
+
+;;------------------------------------------------------------
 ;; Top-level namespace parsing
 ;; (with custom corrections)
 ;;------------------------------------------------------------
@@ -1035,6 +1077,14 @@
 (defmethod parse-ns ["repl-options" :options] [ns- api]
   (binding [*cur-ns* ns-]
     (doall (cons (pseudo-ns-item ns-) (option-items repl-options)))))
+
+(defmethod parse-ns ["warnings" :options] [ns- api]
+  (binding [*cur-ns* ns-]
+    (doall (warning-items))))
+
+(defmethod parse-ns ["closure-warnings" :options] [ns- api]
+  (binding [*cur-ns* ns-]
+    (doall (closure-warning-items))))
 
 (defmethod parse-ns [:default :library] [ns- api]
   (parse-ns* ns- "clojurescript" :library))
