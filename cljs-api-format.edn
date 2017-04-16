@@ -149,5 +149,5 @@
 
        ;; Options API (same format)
        :options {:symbol-names #{}
-                 :namespace-names #{"compiler-options" "repl-options"}
+                 :namespace-names #{"compiler-options" "repl-options" "warnings" "closure-warnings"}
                  :changes []}}}
