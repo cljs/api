@@ -35477,6 +35477,13 @@
                               :summary "a generic tree walker for Clojure data structures",
                               :full-name "clojure.walk",
                               :docstring "This file defines a generic tree walker for Clojure data\nstructures.  It takes any data structure (list, vector, map, set,\nseq), calls a function on every element, and uses the return value\nof the function in place of the original.  This makes it fairly\neasy to write recursive search-and-replace functions, as shown in\nthe examples.\n\nNote: \"walk\" supports all Clojure data structures EXCEPT maps\ncreated with sorted-map-by.  There is no (obvious) way to retrieve\nthe sorting function."},
+              "closure-warnings" {:pseudo-ns? true,
+                                  :edit-url "https://github.com/cljs/api/blob/master/docfiles/closure-warnings.md",
+                                  :ns "closure-warnings",
+                                  :history [["+" "1.9.521"]],
+                                  :type "namespace",
+                                  :full-name-encode "closure-warnings",
+                                  :full-name "closure-warnings"},
               "cljs.js" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.js.md",
                          :ns "cljs.js",
                          :name-encode "cljs.js",
@@ -35659,6 +35666,13 @@
                               :type "namespace",
                               :full-name-encode "repl-options",
                               :full-name "repl-options"},
+              "warnings" {:pseudo-ns? true,
+                          :edit-url "https://github.com/cljs/api/blob/master/docfiles/warnings.md",
+                          :ns "warnings",
+                          :history [["+" "1.9.521"]],
+                          :type "namespace",
+                          :full-name-encode "warnings",
+                          :full-name "warnings"},
               "cljs.core" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core.md",
                            :ns "cljs.core",
                            :name-encode "cljs.core",
@@ -36480,7 +36494,10 @@
                                  "compiler-options/cache-analysis-format"
                                  "compiler-options/ups-externs"
                                  "repl-options/repl-verbose"},
-                 :namespace-names #{"repl-options" "compiler-options"}},
+                 :namespace-names #{"closure-warnings"
+                                    "repl-options"
+                                    "warnings"
+                                    "compiler-options"}},
        :library {:changes {"0.0-2030" {},
                            "0.0-2067" {},
                            "1.9.521" {},
