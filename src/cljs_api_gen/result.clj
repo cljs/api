@@ -86,7 +86,8 @@
                     :return-type
                     :syntax-equiv
                     :source
-                    :extra-sources])
+                    :extra-sources
+                    :sub-options-ns])
 
       (update-in [:signature] #(mapv str %))
       (update-in [:name] str)

@@ -932,10 +932,11 @@
 ;;------------------------------------------------------------
 
 (defn base-option-item
-  [[id]]
+  [[id {:keys [sub-options-ns]}]]
   {:name (name id)
    :ns *cur-ns*
-   :type "option"})
+   :type "option"
+   :sub-options-ns sub-options-ns})
 
 (defn option-present?
   [[id {:keys [added]}]]

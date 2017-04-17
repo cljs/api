@@ -31,7 +31,7 @@
    :cache-analysis {:added "0.0-2511"}
    :recompile-dependents {:added "0.0-2814"}
    :static-fns {:added "0.0-1424"}
-   :warnings {:added "0.0-1443"}
+   :warnings {:added "0.0-1443" :sub-options-ns "warnings"}
    :elide-asserts {:added "0.0-2156"}
    :pseudo-names {:added "0.0-2227"}
    :print-input-delimiter {:added "0.0-971"}
@@ -42,7 +42,7 @@
    :compiler-stats {:added "0.0-2629"}
    :language-in {:added "0.0-2197"}
    :language-out {:added "0.0-2197"}
-   :closure-warnings {:added "0.0-2120"}
+   :closure-warnings {:added "0.0-2120" :sub-options-ns "closure-warnings"}
    :closure-defines {:added "0.0-2120"}
    :closure-extra-annotations {:added "0.0-2814"}
    :anon-fn-naming-policy {:added "0.0-2411"}

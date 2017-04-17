@@ -104,7 +104,11 @@
               :search-terms [":keys"
                              ":strs"
                              ":syms"
-                             ":as"]}
+                             ":as"]
+
+              ;; pseudo-namespace that contains sub-options
+              ;; (for example, compiler-options/warnings has sub-options under "warnings" pseudo-ns)
+              :sub-options-ns "warnings"}
 
            ...}
 
