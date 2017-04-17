@@ -951,10 +951,19 @@
        (map base-option-item)))
 
 ;;------------------------------------------------------------
+;; Sub-options
+;;------------------------------------------------------------
+
+(defn sub-option-ns-item
+  [ns-]
+  (assoc (pseudo-ns-item ns-)
+    :sub-option-ns? true))
+
+;;------------------------------------------------------------
 ;; Compiler warnings
 ;;------------------------------------------------------------
 
-(defn base-warning-item
+(defn warning-item
   [id]
   {:name (name id)
    :ns *cur-ns*
@@ -971,7 +980,7 @@
 (defn warning-items []
   (let [forms (read-all-ns-forms "cljs.analyzer" :compiler)
         warnings (first (keep parse-warnings forms))]
-    (map base-warning-item (keys warnings))))
+    (map warning-item (keys warnings))))
 
 (defn parse-closure-warnings
   "Parse the default Closure warning map (maps keywords to Closure warning types)."
@@ -984,7 +993,7 @@
 (defn closure-warning-items []
   (let [forms (read-all-ns-forms "cljs.closure" :compiler)
         warnings (first (keep parse-closure-warnings forms))]
-    (map base-warning-item (keys warnings))))
+    (map warning-item (keys warnings))))
 
 ;;------------------------------------------------------------
 ;; Top-level namespace parsing
@@ -1081,11 +1090,11 @@
 
 (defmethod parse-ns ["warnings" :options] [ns- api]
   (binding [*cur-ns* ns-]
-    (doall (warning-items))))
+    (doall (cons (sub-option-ns-item ns-) (warning-items)))))
 
 (defmethod parse-ns ["closure-warnings" :options] [ns- api]
   (binding [*cur-ns* ns-]
-    (doall (closure-warning-items))))
+    (doall (cons (sub-option-ns-item ns-) (closure-warning-items)))))
 
 (defmethod parse-ns [:default :library] [ns- api]
   (parse-ns* ns- "clojurescript" :library))

@@ -115,8 +115,10 @@
 
  :namespaces {
               :ns "syntax"
-              :pseudo-ns? true      ;; true for syntax, compiler-options, repl-options
+              :pseudo-ns? true      ;; true for pseudo namespaces (e.g. syntax, compiler-options, repl-options)
               :display-as "Syntax"  ;; display title
+
+              :sub-option-ns?       ;; true for pseudo namespaces that hold sub-options for some other option
               ...}
 
  ;; API categories (i.e. syntax, library, compiler)
