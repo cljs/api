@@ -954,10 +954,10 @@
 ;; Sub-options
 ;;------------------------------------------------------------
 
-(defn sub-option-ns-item
+(defn sub-options-ns-item
   [ns-]
   (assoc (pseudo-ns-item ns-)
-    :sub-option-ns? true))
+    :sub-options-ns? true))
 
 ;;------------------------------------------------------------
 ;; Compiler warnings
@@ -1090,11 +1090,11 @@
 
 (defmethod parse-ns ["warnings" :options] [ns- api]
   (binding [*cur-ns* ns-]
-    (doall (cons (sub-option-ns-item ns-) (warning-items)))))
+    (doall (cons (sub-options-ns-item ns-) (warning-items)))))
 
 (defmethod parse-ns ["closure-warnings" :options] [ns- api]
   (binding [*cur-ns* ns-]
-    (doall (cons (sub-option-ns-item ns-) (closure-warning-items)))))
+    (doall (cons (sub-options-ns-item ns-) (closure-warning-items)))))
 
 (defmethod parse-ns [:default :library] [ns- api]
   (parse-ns* ns- "clojurescript" :library))

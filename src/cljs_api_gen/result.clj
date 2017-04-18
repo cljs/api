@@ -74,6 +74,8 @@
   (-> x
       (select-keys [:ns
                     :pseudo-ns?
+                    :sub-options-ns
+                    :sub-options-ns?
                     :repl-only?
                     :name
                     :docstring
@@ -86,8 +88,7 @@
                     :return-type
                     :syntax-equiv
                     :source
-                    :extra-sources
-                    :sub-options-ns])
+                    :extra-sources])
 
       (update-in [:signature] #(mapv str %))
       (update-in [:name] str)
