@@ -938,7 +938,7 @@
   {:name (name id)
    :ns *cur-ns*
    :type "option"
-   :sub-options-ns (sub-options-ns (name id))})
+   :sub-options-ns (sub-options-ns (str *cur-ns* "/" (name id)))})
 
 (defn option-present?
   [[id {:keys [added]}]]
