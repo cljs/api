@@ -75,7 +75,7 @@
       (select-keys [:ns
                     :pseudo-ns?
                     :sub-options-ns
-                    :sub-options-ns?
+                    :sub-options-sym
                     :repl-only?
                     :name
                     :docstring

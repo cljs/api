@@ -27,7 +27,9 @@
                                  syntax-map
                                  clj-syntax]]
     [cljs-api-gen.options :refer [compiler-options
-                                  repl-options]]))
+                                  repl-options
+                                  sub-options-ns
+                                  sub-options-sym]]))
 
 ;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
 ;; which is used by cljs.core. (the ana namespace has to exist)
@@ -932,11 +934,11 @@
 ;;------------------------------------------------------------
 
 (defn base-option-item
-  [[id {:keys [sub-options-ns]}]]
+  [[id]]
   {:name (name id)
    :ns *cur-ns*
    :type "option"
-   :sub-options-ns sub-options-ns})
+   :sub-options-ns (sub-options-ns (name id))})
 
 (defn option-present?
   [[id {:keys [added]}]]
@@ -957,7 +959,7 @@
 (defn sub-options-ns-item
   [ns-]
   (assoc (pseudo-ns-item ns-)
-    :sub-options-ns? true))
+    :sub-options-sym (sub-options-sym ns-)))
 
 ;;------------------------------------------------------------
 ;; Compiler warnings
@@ -1082,19 +1084,31 @@
 
 (defmethod parse-ns ["compiler-options" :options] [ns- api]
   (binding [*cur-ns* ns-]
-    (doall (cons (pseudo-ns-item ns-) (option-items compiler-options)))))
+    (let [options (option-items compiler-options)
+          ns-item (pseudo-ns-item ns-)]
+      (when (seq options)
+        (doall (cons ns-item options))))))
 
 (defmethod parse-ns ["repl-options" :options] [ns- api]
   (binding [*cur-ns* ns-]
-    (doall (cons (pseudo-ns-item ns-) (option-items repl-options)))))
+    (let [options (option-items repl-options)
+          ns-item (pseudo-ns-item ns-)]
+      (when (seq options)
+        (doall (cons ns-item options))))))
 
 (defmethod parse-ns ["warnings" :options] [ns- api]
   (binding [*cur-ns* ns-]
-    (doall (cons (sub-options-ns-item ns-) (warning-items)))))
+    (let [options (warning-items)
+          ns-item (sub-options-ns-item ns-)]
+      (when (seq options)
+        (doall (cons ns-item options))))))
 
 (defmethod parse-ns ["closure-warnings" :options] [ns- api]
   (binding [*cur-ns* ns-]
-    (doall (cons (sub-options-ns-item ns-) (closure-warning-items)))))
+    (let [options (closure-warning-items)
+          ns-item (sub-options-ns-item ns-)]
+      (when (seq options)
+        (doall (cons ns-item options))))))
 
 (defmethod parse-ns [:default :library] [ns- api]
   (parse-ns* ns- "clojurescript" :library))

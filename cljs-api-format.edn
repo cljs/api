@@ -118,7 +118,10 @@
               :pseudo-ns? true      ;; true for pseudo namespaces (e.g. syntax, compiler-options, repl-options)
               :display-as "Syntax"  ;; display title
 
-              :sub-option-ns?       ;; true for pseudo namespaces that hold sub-options for some other option
+              ;; If this namespaces is a pseudo-namespace that contains sub-options
+              ;; we show the symbol that it belongs to.
+              ;; (for example, compiler-options/warnings has sub-options under "warnings" pseudo-ns)
+              :sub-options-sym "compiler-options/warnings"
               ...}
 
  ;; API categories (i.e. syntax, library, compiler)
