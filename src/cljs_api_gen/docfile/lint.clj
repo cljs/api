@@ -17,6 +17,7 @@
    :required?        #{:full-name :see-also}
    :syntax-required? #{:full-name :see-also :display-as}
    :ns-required?     #{:full-name}
+   :sub-option-required? #{:full-name}
    :list?            #{:tags :see-also :search-terms}
    :quotes?          #{:display-as :search-terms}})
 
@@ -32,6 +33,7 @@
          [:md-biblio biblio-line]]
    :required?    #{:summary :details :examples}
    :ns-required? #{:summary :details}
+   :sub-option-required? #{:summary}
    :list?        #{:usage}})
 
 (defn yaml-list [l quote?]
@@ -44,6 +46,11 @@
     (and (sequential? x) (zero? (count x))) true
     :else false))
 
+(defn sub-option? [m]
+  ;; FIXME: update when sub-options are added, or check *result*
+  (or (string/starts-with? (:full-name m) "warnings/")
+      (string/starts-with? (:full-name m) "closure-warnings/")))
+
 (defn frontmatter-item
   [[key title] m]
   (let [value (get m key)
@@ -51,6 +58,7 @@
         quotes? (:quotes? frontmatter-keys)
         required?
         (cond
+          (sub-option? m)                                (:sub-option-required? frontmatter-keys)
           (string/starts-with? (:full-name m) "syntax/") (:syntax-required? frontmatter-keys)
           (not (string/includes? (:full-name m) "/"))    (:ns-required? frontmatter-keys)
           :else                                          (:required? frontmatter-keys))]
@@ -75,9 +83,10 @@
   [[key title] m]
   (let [value (get m key)
         list? (:list? markdown-keys)
-        required? (if (string/includes? (:full-name m) "/")
-                    (:required? markdown-keys)
-                    (:ns-required? markdown-keys))]
+        required? (cond
+                    (sub-option? m)                       (:sub-option-required? markdown-keys)
+                    (string/includes? (:full-name m) "/") (:required? markdown-keys)
+                    :else                                 (:ns-required? markdown-keys))]
     (when (or (not (blank? value))
               (required? key))
       (cond
