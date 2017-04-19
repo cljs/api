@@ -367,7 +367,7 @@
 (defn assign-display-name
   [item]
   (cond-> item
-    (= (:type item) "option")
+    (#{"option" "warning"} (:type item))
     (assoc :display-as (str ":" (:name item)))))
 
 (defn add-clj-equiv
