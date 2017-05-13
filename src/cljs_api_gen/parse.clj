@@ -97,10 +97,13 @@
     "cljs.js"               :normal
     "cljs.spec"             :normal
     "cljs.spec.test"        :normal
+    "cljs.spec.alpha"       :normal
+    "cljs.spec.test.alpha"  :normal
     "cljs.core"             :custom
     "cljs.test"             :custom
     "cljs.repl"             :custom
-    "cljs.spec.impl.gen"    :custom}
+    "cljs.spec.impl.gen"    :custom
+    "cljs.spec.gen.alpha"   :custom}
 
    :compiler
    {"cljs.analyzer.api"     :normal
@@ -1072,6 +1075,17 @@
     (parse-ns* ns- "clojurescript" :compiler)))
 
 (defmethod parse-ns ["cljs.spec.impl.gen" :library] [ns- api]
+  (let [forms (read-all-ns-forms ns- :library)
+        [_ & combs :as combs-form] (first-call-to 'lazy-combinators forms)
+        [_ & prims :as prims-form] (first-call-to 'lazy-prims forms)]
+    (binding [*cur-ns* ns-
+              *cur-repo* "clojurescript"]
+      (concat
+        (parse-ns* ns- "clojurescript" :library)
+        (doall (map #(parse-lazy-combinator combs-form %) combs))
+        (doall (map #(parse-lazy-prim prims-form %) prims))))))
+
+(defmethod parse-ns ["cljs.spec.gen.alpha" :library] [ns- api]
   (let [forms (read-all-ns-forms ns- :library)
         [_ & combs :as combs-form] (first-call-to 'lazy-combinators forms)
         [_ & prims :as prims-form] (first-call-to 'lazy-prims forms)]
