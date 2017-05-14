@@ -110,10 +110,9 @@
    "cljs.pprint" "clojure.pprint"
    "cljs.test"   "clojure.test"
    "cljs.repl"   "clojure.repl"
-   "cljs.spec"   "clojure.spec"
-   "cljs.spec.test" "clojure.spec.test"
-   "cljs.spec.impl.gen" "clojure.spec.gen"})
-
+   "cljs.spec.alpha"      "clojure.spec.alpha"
+   "cljs.spec.test.alpha" "clojure.spec.test.alpha"
+   "cljs.spec.gen.alpha"  "clojure.spec.gen.alpha"})
 
 (def cljs-full-name->clj
   "cljs symbols that map to different clj names."
@@ -160,6 +159,9 @@
 
 (defn ns-url [ns-]
   (str "http://clojure.github.io/clojure/branch-master/" ns- "-api.html"))
+
+;; TODO: spec.alpha docs linked from https://clojure.org/api/api are not up yet:
+;; https://clojure.github.io/spec.alpha/ (<-- make ns-url link here when up)
 
 (defn clj-lookup-name
   "Map a parsed ClojureScript item to a related Clojure name to be looked up for resolution."
