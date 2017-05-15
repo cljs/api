@@ -11,6 +11,7 @@
     [cljs-api-gen.clojure-api :refer [get-clojure-symbols-not-in-items
                                       clj-equiv]]
     [cljs-api-gen.state :refer [*result* *docfiles*]]
+    [cljs-api-gen.moved :refer [moved-to moved-from]]
     [cljs-api-gen.repo-cljs :refer [*cljs-version*
                                     *cljs-tag*
                                     *cljs-date*
@@ -399,6 +400,14 @@
       (mapv #(signature->usage % item) signature))
     item))
 
+(defn add-moved-history
+  [{:keys [full-name] :as item}]
+  (let [from-name (moved-from full-name)
+        to-name (moved-to full-name)]
+    (cond-> item
+      to-name (assoc :moved-to to-name)
+      from-name (assoc :moved-from from-name))))
+
 (defn annotate-item
   "Merge the given item with extra data (e.g. docfile, github links)
   We do this only at the end instead of after each version parse, allowing us
@@ -416,7 +425,6 @@
                         :signature
                         :see-also
                         :search-terms
-                        :moved
                         :tags
                         :md-biblio
                         :clj-doc
@@ -428,7 +436,8 @@
          (add-github-links)
          (add-edit-url)
          (add-clj-equiv)
-         (add-syntax-equiv))))
+         (add-syntax-equiv)
+         (add-moved-history))))
 
 (defn post-process-item
   "This is a second pass to allow us to use data populated from first pass"

@@ -53,7 +53,6 @@
    "examples"
    "see also"
    "search terms"
-   "moved"
    "todo"
    "notes"
    "clojure doc"

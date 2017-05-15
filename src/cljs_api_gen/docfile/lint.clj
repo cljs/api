@@ -6,7 +6,6 @@
 
 (def frontmatter-keys
   {:all [[:full-name "name:"]
-         [:moved "moved:"]
          [:display-as "display as:"]
          [:known-as "known as:"]
          [:clj-doc "clojure doc:"]
