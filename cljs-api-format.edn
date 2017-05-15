@@ -81,8 +81,13 @@
               :summary-compiler "... summary in markdown ..."
               :details-compiler "... details in markdown ..."
 
-              ;; the full name where this symbol moved to
-              :moved "cljs.core/another-name"
+              ;; the full name where this symbol moved to or moved from
+              :moved-to "cljs.core/new-name"
+              :moved-from "cljs.core/old-name"
+
+              ;; details on time of removal
+              :removed {:in "1.9.592"
+                        :last-seen "1.9.581"}
 
               ;; (The :signature is auto-parsed, but can be overwritten manually in docfiles)
               ;; Given the :signature ["[foo]" "[foo bar]"], ;; and the :name
