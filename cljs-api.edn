@@ -26812,7 +26812,8 @@
                                            "cljs.core/max-key"],
                                 :docstring "Returns the x for which (k x), a number, is least."},
            "compiler-options/closure-defines" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/compiler-options/closure-defines.md",
-                                               :md-biblio #{"cljs.core/goog-define"},
+                                               :md-biblio #{"compiler-options/main"
+                                                            "cljs.core/goog-define"},
                                                :display-as ":closure-defines",
                                                :ns "compiler-options",
                                                :name "closure-defines",
@@ -26822,7 +26823,7 @@
                                                :type "option",
                                                :full-name-encode "compiler-options/closure-defines",
                                                :summary "Assign [`goog-define`][doc:cljs.core/goog-define] vars with compile-time constants. Vars must\nbe specified as a namespace-qualified symbol, and their values must be a string,\nnumber, or a boolean.\n\n```clj\n:closure-defines {my.core/foo \"new-value\"}\n```\n\nThis will result in the following var being replaced:\n\n```clj\n(ns my.core)\n\n(goog-define foo \"default-value\") ;; <-- replaced with \"new-value\"\n(println foo) ;; <-- prints \"new-value\"\n```",
-                                               :details "Be aware that a __symbol name__ is interpreted as the original name in\nClojureScript, whereas a __string name__ is interpreted as the munged name in\nJavaScript:\n\n```\n;; Symbol (original name)\n:closure-defines {my.core/foo! \"...\"}\n\n;; String (munged name)\n:closure-defines {\"my.core.foo_BANG_\" \"...\"}\n```",
+                                               :details "Be aware that a __symbol name__ is interpreted as the original name in\nClojureScript, whereas a __string name__ is interpreted as the munged name in\nJavaScript:\n\n```\n;; Symbol (original name)\n:closure-defines {my.core/foo! \"...\"}\n\n;; String (munged name)\n:closure-defines {\"my.core.foo_BANG_\" \"...\"}\n```\n\nAlso note that:\n\n- When `:optimizations :none`, closure-defines have no effect unless [`:main`][doc:compiler-options/main] is specified.\n- When `:optimizations :whitespace`, closure-defines have no effect.",
                                                :full-name "compiler-options/closure-defines",
                                                :see-also ["cljs.core/goog-define"]},
            "clojure.zip/root" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/clojure.zip/root.md",
