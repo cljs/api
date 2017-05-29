@@ -37,7 +37,13 @@ JavaScript:
 :closure-defines {"my.core.foo_BANG_" "..."}
 ```
 
+Also note that:
+
+- When `:optimizations :none`, closure-defines have no effect unless [doc:compiler-options/main] is specified.
+- When `:optimizations :whitespace`, closure-defines have no effect.
+
 ## Examples
 
 <!-- AUTO-GENERATED docfile links for github -->
+[doc:compiler-options/main]:https://github.com/cljs/api/blob/master/docfiles/compiler-options/main.md
 [doc:cljs.core/goog-define]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/goog-define.md
