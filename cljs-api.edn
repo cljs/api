@@ -35543,7 +35543,9 @@
                              :removed {:in "1.9.542",
                                        :last-seen "1.9.521"}},
            "cljs.core/goog-define" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/goog-define.md",
-                                    :md-biblio #{"compiler-options/closure-defines"
+                                    :md-biblio #{"cljs.core/identical?"
+                                                 "compiler-options/optimizations"
+                                                 "compiler-options/closure-defines"
                                                  "cljs.core/def"},
                                     :ns "cljs.core",
                                     :name "goog-define",
@@ -35561,6 +35563,7 @@
                                              :url "https://github.com/clojure/clojurescript/blob/r1.9.562/src/main/clojure/cljs/core.cljc#L730-L758"},
                                     :summary "Use instead of [`def`][doc:cljs.core/def] when you want to configure its value at\ncompile-time with the [`:closure-defines`][doc:compiler-options/closure-defines] compiler option.\nMust be a string, number, or boolean.",
                                     :usage ["(goog-define sym default)"],
+                                    :details "You can use compile-time constants to signal code to remove from your build,\nwith [`:optimizations`][doc:compiler-options/optimizations] `:advanced`.\n\nTo make this work for booleans, the compiler needs some explicit hinting:\n\n```clj\n(goog-define ^boolean DEBUG true)\n;;           ^^^^^^^^ mark as boolean to allow compiler to optimize\n\n(when DEBUG\n  (println \"Hello World\")) ;; <-- removed from build when DEBUG is false\n```\n\nTo make this work for strings, the compiler needs an explicit [`identical?`][doc:cljs.core/identical?] comparison:\n\n```clj\n(goog-define LOCALE \"en\")\n\n(def messages\n  (cond\n    (identical? LOCALE \"nl\") i18n.nl/messages  ;; <-- removed from build when unused\n    (identical? LOCALE \"fr\") i18n.fr/messages  ;; <-- removed from build when unused\n    :else i18n.en/messages))\n```",
                                     :full-name "cljs.core/goog-define",
                                     :see-also ["cljs.core/def"
                                                "compiler-options/closure-defines"],
