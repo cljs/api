@@ -9921,6 +9921,16 @@
                                       :see-also ["cljs.core/macroexpand"
                                                  "cljs.core/defmacro"],
                                       :docstring "If form represents a macro form, returns its expansion,\nelse returns form."},
+           "compiler-options/closure-module-roots" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/compiler-options/closure-module-roots.md",
+                                                    :display-as ":closure-module-roots",
+                                                    :ns "compiler-options",
+                                                    :name "closure-module-roots",
+                                                    :name-encode "closure-module-roots",
+                                                    :history [["+"
+                                                               "1.9.456"]],
+                                                    :type "option",
+                                                    :full-name-encode "compiler-options/closure-module-roots",
+                                                    :full-name "compiler-options/closure-module-roots"},
            "cljs.core/." {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/DOT.md",
                           :ns "cljs.core",
                           :name ".",
@@ -18000,6 +18010,16 @@
                                     :type "warning",
                                     :full-name-encode "warnings/ns-var-clash",
                                     :full-name "warnings/ns-var-clash"},
+           "compiler-options/rewrite-polyfills" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/compiler-options/rewrite-polyfills.md",
+                                                 :display-as ":rewrite-polyfills",
+                                                 :ns "compiler-options",
+                                                 :name "rewrite-polyfills",
+                                                 :name-encode "rewrite-polyfills",
+                                                 :history [["+"
+                                                            "1.9.562"]],
+                                                 :type "option",
+                                                 :full-name-encode "compiler-options/rewrite-polyfills",
+                                                 :full-name "compiler-options/rewrite-polyfills"},
            "cljs.build.api/src-file->target-file" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.build.api/src-file-GTtarget-file.md",
                                                    :return-type File,
                                                    :ns "cljs.build.api",
@@ -25205,6 +25225,16 @@
                                   :full-name "cljs.core/distinct?",
                                   :see-also ["cljs.core/distinct"],
                                   :docstring "Returns true if no two of the arguments are ="},
+           "compiler-options/source-map-inline" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/compiler-options/source-map-inline.md",
+                                                 :display-as ":source-map-inline",
+                                                 :ns "compiler-options",
+                                                 :name "source-map-inline",
+                                                 :name-encode "source-map-inline",
+                                                 :history [["+"
+                                                            "0.0-2911"]],
+                                                 :type "option",
+                                                 :full-name-encode "compiler-options/source-map-inline",
+                                                 :full-name "compiler-options/source-map-inline"},
            "cljs.pprint/pprint" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.pprint/pprint.md",
                                  :ns "cljs.pprint",
                                  :name "pprint",
@@ -39650,6 +39680,7 @@
                                                 "repl-options/caught"
                                                 "repl-options/need-prompt"
                                                 "repl-options/print-no-newline"
+                                                "compiler-options/source-map-inline"
                                                 "repl-options/print"
                                                 "repl-options/prompt"
                                                 "repl-options/source-map-inline"}},
@@ -39678,6 +39709,7 @@
                            "0.0-1820" {},
                            "1.9.456" {:added #{"compiler-options/infer-externs"
                                                "compiler-options/watch-error-fn"
+                                               "compiler-options/closure-module-roots"
                                                "warnings/infer-warning"
                                                "compiler-options/cache-analysis-format"}},
                            "0.0-2261" {},
@@ -39700,7 +39732,7 @@
                                                 "warnings/undeclared-ns"
                                                 "warnings/undeclared-protocol-symbol"},
                                        :removed #{"warnings/undeclared"}},
-                           "1.9.562" {},
+                           "1.9.562" {:added #{"compiler-options/rewrite-polyfills"}},
                            "0.0-2411" {:added #{"compiler-options/anon-fn-naming-policy"}},
                            "0.0-2665" {},
                            "0.0-2760" {}},
@@ -39745,6 +39777,7 @@
                                  "compiler-options/npm-deps"
                                  "compiler-options/target"
                                  "closure-warnings/access-controls"
+                                 "compiler-options/closure-module-roots"
                                  "warnings/undeclared-var"
                                  "closure-warnings/fileoverview-jsdoc"
                                  "warnings/extending-base-js-type"
@@ -39776,6 +39809,7 @@
                                  "closure-warnings/check-useless-code"
                                  "repl-options/caught"
                                  "warnings/ns-var-clash"
+                                 "compiler-options/rewrite-polyfills"
                                  "warnings/protocol-duped-method"
                                  "compiler-options/emit-constants"
                                  "repl-options/need-prompt"
@@ -39810,6 +39844,7 @@
                                  "compiler-options/optimize-constants"
                                  "closure-warnings/check-eventful-object-disposal"
                                  "repl-options/analyze-path"
+                                 "compiler-options/source-map-inline"
                                  "compiler-options/source-map-path"
                                  "compiler-options/print-input-delimiter"
                                  "repl-options/def-emits-var"
