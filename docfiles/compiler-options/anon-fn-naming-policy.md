@@ -25,7 +25,7 @@ names during debugging)
 
 ```clj
 (ns foo.core)
-(def f (fn [] ...))
+(def x (fn [] ...))
 ```
 
 Compiles to the following when `:off`:
