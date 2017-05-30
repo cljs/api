@@ -22,7 +22,7 @@
    :compiler-stats {:added "0.0-2629"}
    :dump-core {:added "1.7.10"}
    :elide-asserts {:added "0.0-2156"}
-   :emit-constants {:added "0.0-2014"}
+   ; :emit-constants {:added "0.0-2014"} ; this is implicitly computed from optimize-constants (user input ignored)
    :externs {:added "0.0-971"}
    :foreign-libs {:added "0.0-971"}
    :hashbang {:added "0.0-2197"}
