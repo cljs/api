@@ -13,7 +13,7 @@ assignments and declarations.  Defaults to `:off`.
 - `:mapped` - short unique name generated and mapped to left-hand of assignment
 
 ```clj
-:anon-fn-naming-policy :unmapped ;; <-- use to assign names to anon functions
+:anon-fn-naming-policy :unmapped ;; <-- assign names to anon functions
 ```
 
 ## Details
