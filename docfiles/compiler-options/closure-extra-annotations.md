@@ -5,8 +5,10 @@ see also:
 
 ## Summary
 
-Suppress Closure warnings related to non-standard JSDoc tags (like `@api`) that
+Suppress warnings about [JSDoc Tags] unrecognized by Closure (like `@api`) that
 your project or other dependent libraries may be using.
+
+[JSDoc tags]:https://github.com/google/closure-compiler/wiki/Annotating-JavaScript-for-the-Closure-Compiler
 
 ```clj
 :closure-extra-annotations #{"api" ...}
