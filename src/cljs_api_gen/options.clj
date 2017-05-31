@@ -53,9 +53,9 @@
    :source-map-timestamp {:added "0.0-2505"}
    :static-fns {:added "0.0-1424"}
    :target {:added "0.0-971"}
-   :ups-externs {:added "0.0-993"}
-   :ups-foreign-libs {:added "0.0-993"}
-   :ups-libs {:added "0.0-993"}
+   ; :ups-externs {:added "0.0-993"}      ; this is implicitly computed from upstream deps (user input ignored)
+   ; :ups-foreign-libs {:added "0.0-993"} ; this is implicitly computed from upstream deps (user input ignored)
+   ; :ups-libs {:added "0.0-993"}         ; this is implicitly computed from upstream deps (user input ignored)
    :use-only-custom-externs {:added "0.0-971"}
    :verbose {:added "0.0-971"}
    :warning-handlers {:added "1.7.10"}
