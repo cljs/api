@@ -48,7 +48,7 @@
    :rewrite-polyfills {:added "1.9.562"}
    :source-map {:added "0.0-1798"}
    :source-map-asset-path {:added "1.9.90"}
-   :source-map-inline {:added "0.0-2911"}
+   ; :source-map-inline {:added "0.0-2911"} ; this is listed in known-opts, but only applies to repl
    :source-map-path {:added "0.0-2060"}
    :source-map-timestamp {:added "0.0-2505"}
    :static-fns {:added "0.0-1424"}
