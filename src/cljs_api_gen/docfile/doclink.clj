@@ -96,14 +96,18 @@
   ;;    |   |                |
   #"(?<!])\[doc:([^\]]+)\](?![\(\[])")
 
-(defn get-short-display-name
+(defn get-display-name
   [docname]
-  (let [{:keys [display-as name ns]} (docname->item docname)]
-    (or display-as name ns)))
+  (let [{:keys [display-as full-name name ns type]} (docname->item docname)]
+    (cond
+      display-as display-as
+      (= type "namespace") ns
+      (= ns "cljs.core") name
+      :else full-name)))
 
 (defn insert-doclink-name
   [[whole-match docname]]
-  (let [name- (get-short-display-name docname)]
+  (let [name- (get-display-name docname)]
     (if (string/includes? name- "`")
       (str "[``" name- "``]" whole-match)
       (str "[`" name- "`]" whole-match))))
