@@ -1,6 +1,7 @@
 ---
 name: compiler-options/static-fns
 see also:
+  - compiler-options/fn-invoke-direct
 ---
 
 ## Summary
