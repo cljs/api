@@ -24,6 +24,7 @@
    :elide-asserts {:added "0.0-2156"}
    ; :emit-constants {:added "0.0-2014"} ; this is implicitly computed from optimize-constants (user input ignored)
    :externs {:added "0.0-971"}
+   :fn-invoke-direct {:added "1.9.660"}
    :foreign-libs {:added "0.0-971"}
    :hashbang {:added "0.0-2197"}
    :infer-externs {:added "1.9.456"}
