@@ -1,5 +1,5 @@
 ---
-name: cljs.core/unsafe-get
+name: cljs.core/unchecked-get
 see also:
 ---
 
