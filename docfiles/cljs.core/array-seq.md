@@ -1,13 +1,14 @@
 ---
 name: cljs.core/array-seq
 see also:
+  - cljs.core/prim-seq
 ---
 
 ## Summary
 
-## Details
+Creates a `seq` from a JavaScript array or array-like object, starting at index `i` if given.
 
-Creates a `seq` from a JavaScript array, starting at index `i` if given.
+## Details
 
 ## Examples
 
@@ -17,4 +18,11 @@ Creates a `seq` from a JavaScript array, starting at index `i` if given.
 
 (array-seq #js [1 2 3] 1)
 ;;=> (2 3)
+```
+
+Also works on Array-like objects, like NodeList.
+
+```clj
+(array-seq (js/document.querySelectorAll "div"))
+;;=> ...
 ```
