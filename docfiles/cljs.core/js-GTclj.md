@@ -17,7 +17,7 @@ keywords.
 Note that `js->clj` is not optimized for speed and the [transit.cljs] library is
 recommended for parsing large amounts of JSON data.
 
-[transit.cljs]:http://swannodette.github.io/2014/07/26/transit--clojurescript/
+[transit.cljs]:https://github.com/cognitect/transit-cljs
 
 ## Examples
 
