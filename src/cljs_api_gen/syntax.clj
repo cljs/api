@@ -56,12 +56,16 @@
    {:id "ns-map"             :dchar \:                        :clj-added "1.9.0-alpha10"}
    {:id "ns-map-alias"                    :parent "ns-map"    :clj-added "1.9.0-alpha10"}
 
+   ; symbolic values
+   ; (could have `:dchar \#`, but we don't include since we manually handle it)
+   {:id "NaN"  :type "symbolic value" :clj-added "1.9.0"}
+   {:id "Inf"  :type "symbolic value" :clj-added "1.9.0"}
+   {:id "-Inf" :type "symbolic value" :clj-added "1.9.0"}
+
    ;; special symbols
    {:id "true"     :type "special symbol"}
    {:id "false"    :type "special symbol"}
    {:id "nil"      :type "special symbol"}
-   {:id "NaN"      :type "special symbol"}
-   {:id "Infinity" :type "special symbol"}
 
    ;; available tagged literals
    {:id "uuid-literal"  :type "tagged literal"                :clj-added "1.4.0"}

@@ -619,12 +619,20 @@
         {:strs [macros
                 dispatch-macros
                 read-symbol
+                read-symbolic-value
                 read-number
                 read-tagged
                 wrapping-reader]
          :as items} (zipmap (map :name parsed) parsed)
 
-        make-items
+        ; read macros and dispatch-macros assuming following format
+        ;
+        ; (defn <name> [ch]
+        ;   (case ch
+        ;     \<char> read-<syntax>
+        ;
+        ; we map a <char> to a read-<syntax> function
+        make-macro-items
         (fn [map-def info-lookup]
           (let [[_defn- _macros _args [_case _ch & args]] (:form (meta map-def))
                 {:as reader-map} (drop-last args)] ;; (case ch :a 1 :b 2 :c 3 nil) => {:a 1 :b 2 :c 3}
@@ -632,26 +640,32 @@
             (for [[ch func] reader-map]
               (when-let [info (info-lookup ch)]
                 (let [base (base-syntax-item info)
-                      table-src (assoc (:source map-def)
-                                       :title "Reader table")
+                      table-src (assoc (:source map-def) :title "Reader table")
                       reader-src (when-let [f (get items (str func))]
-                                   (assoc (:source f)
-                                          :title "Reader code"))
+                                   (assoc (:source f) :title "Reader code"))
                       sources (keep identity [reader-src table-src])]
-                  (assoc (base-syntax-item info)
-                         :extra-sources sources))))))
+                  (assoc (base-syntax-item info) :extra-sources sources))))))
 
+        ; syntax form using a single reader function
         make-single
         (fn [info func]
-          (let [src (assoc (:source func)
-                           :title "Reader code")]
-            (assoc (base-syntax-item info)
-                   :extra-sources [src])))
+          (let [src (assoc (:source func) :title "Reader code")]
+            (assoc (base-syntax-item info) :extra-sources [src])))
+
+        ; Symbolic value has a revelant line in the dispatch-macros table
+        ; and a read-symbolic-value function.
+        make-symval
+        (fn [info]
+          (when read-symbolic-value
+            (let [table-src (assoc (:source dispatch-macros) :title "Reader table")
+                  reader-src (assoc (:source read-symbolic-value) :title "Reader code")
+                  sources (keep identity [reader-src table-src])]
+              (assoc (base-syntax-item info) :extra-sources sources))))
 
         ;; syntax forms identified by a leading character (e.g. "(", "[", "#{")
         ;; NOTE: presence determined by parsed char-map and dchar-map
-        macro-items    (make-items macros char-map)
-        dispatch-items (make-items dispatch-macros dchar-map)
+        macro-items    (make-macro-items macros char-map)
+        dispatch-items (make-macro-items dispatch-macros dchar-map)
 
         ;; syntax forms that can't be identified by a leading character
         ;; NOTE: always present
@@ -662,17 +676,21 @@
         ;; NOTE: always present (since before tools.reader)
         tag-item       (make-single (syntax-map "tagged-literal") read-tagged)
 
-        ;; special symbols (e.g. "NaN", "Infinity", "true", "false")
-        ;; NOTE: assuming NaN and Infinity were available at the time cljs started
-        ;;       using tools.reader.  they are not available in clojure.
+        ;; special symbols (e.g. "true", "false")
         ssym-items (->> syntax
                         (filter #(= (:type %) "special symbol"))
                         (map #(make-single % read-symbol)))
 
+        ;; symbols values (e.g. "##Inf", "##-Inf", "##NaN")
+        symval-items (->> syntax
+                          (filter #(= (:type %) "symbolic value"))
+                          (map make-symval))
+
         all-items (->> (concat macro-items
                                dispatch-items
                                [symbol-item number-item tag-item]
-                               ssym-items)
+                               ssym-items
+                               symval-items)
                        (keep identity))]
     all-items))
 

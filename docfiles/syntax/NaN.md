@@ -1,8 +1,10 @@
 ---
 name: syntax/NaN
-display as: "NaN"
+display as: "##NaN"
+known as: Not a Number
 see also:
-  - syntax/Infinity
+  - syntax/Inf
+  - syntax/number
   - syntax/nil
 ---
 
@@ -21,13 +23,16 @@ To test for NaN, use the native JavaScript [`js/isNaN`] or the safer [`js/Number
 ## Examples
 
 ```clj
-NaN
-;;=> NaN
+##NaN
+;;=> ##NaN
 ```
 
 Testing for NaN:
 
 ```clj
+(js/Number.isNaN ##NaN)
+;;=> true
+
 (js/Number.isNaN (/ 0 0))
 ;;=> true
 
@@ -39,5 +44,5 @@ Equivalent to the JavaScript symbol:
 
 ```clj
 js/NaN
-;;=> NaN
+;;=> ##NaN
 ```
