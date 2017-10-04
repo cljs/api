@@ -58,9 +58,9 @@
 
    ; symbolic values
    ; (could have `:dchar \#`, but we don't include since we manually handle it)
-   {:id "NaN"  :type "symbolic value" :clj-added "1.9.0"}
-   {:id "Inf"  :type "symbolic value" :clj-added "1.9.0"}
-   {:id "-Inf" :type "symbolic value" :clj-added "1.9.0"}
+   {:id "NaN"  :type "symbolic value" :clj-added "1.9.0-beta1"}
+   {:id "Inf"  :type "symbolic value" :clj-added "1.9.0-beta1"}
+   {:id "-Inf" :type "symbolic value" :clj-added "1.9.0-beta1"}
 
    ;; special symbols
    {:id "true"     :type "special symbol"}
