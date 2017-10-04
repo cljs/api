@@ -18,15 +18,19 @@ see also:
 As a general pattern, syntax forms prefixed with `#` are related to their
 standalone forms:
 
-| relation               | original                            | with `#` prefix                                      |
-|------------------------|-------------------------------------|------------------------------------------------------|
-| string-related         | [doc:syntax/string]                 | [doc:syntax/regex]                                   |
-| code-related           | [doc:syntax/list]                   | [doc:syntax/function]                                |
-| lookup-related         | [doc:syntax/map]                    | [doc:syntax/set]                                     |
-| quote-related          | [doc:syntax/quote]                  | [doc:syntax/var]                                     |
-| ignore-related         | [doc:syntax/unused]                 | [doc:syntax/ignore]                                  |
-| name-related           | [`foo (symbol)`][doc:syntax/symbol] | [`#foo (tagged literal)`][doc:syntax/tagged-literal] |
-| conditional-related    | [doc:syntax/predicate]              | [doc:syntax/cond]                                    |
+| relation            | original                            | with `#` prefix                                      |
+|:--------------------|:------------------------------------|:-----------------------------------------------------|
+| string-related      | [doc:syntax/string]                 | [doc:syntax/regex]                                   |
+| code-related        | [doc:syntax/list]                   | [doc:syntax/function]                                |
+| lookup-related      | [doc:syntax/map]                    | [doc:syntax/set]                                     |
+| quote-related       | [doc:syntax/quote]                  | [doc:syntax/var]                                     |
+| ignore-related      | [doc:syntax/unused]                 | [doc:syntax/ignore]                                  |
+| name-related        | [`foo (symbol)`][doc:syntax/symbol] | [`#foo (tagged literal)`][doc:syntax/tagged-literal] |
+| conditional-related | [doc:syntax/predicate]              | [doc:syntax/cond]                                    |
+
+The "symbolic values" [doc:syntax/Inf], [doc:syntax/-Inf], [doc:syntax/NaN] do
+not follow this pattern, but the additional number sign in `##` serves as a
+mnemonic for these special numerical values.
 
 ## Details
 
@@ -102,9 +106,11 @@ Reader Conditional:
 
 <!-- AUTO-GENERATED docfile links for github -->
 [doc:syntax/symbol]:https://github.com/cljs/api/blob/master/docfiles/syntax/symbol.md
+[doc:syntax/-Inf]:https://github.com/cljs/api/blob/master/docfiles/syntax/-Inf.md
 [doc:syntax/cond]:https://github.com/cljs/api/blob/master/docfiles/syntax/cond.md
 [doc:syntax/string]:https://github.com/cljs/api/blob/master/docfiles/syntax/string.md
 [doc:syntax/quote]:https://github.com/cljs/api/blob/master/docfiles/syntax/quote.md
+[doc:syntax/Inf]:https://github.com/cljs/api/blob/master/docfiles/syntax/Inf.md
 [doc:syntax/regex]:https://github.com/cljs/api/blob/master/docfiles/syntax/regex.md
 [doc:syntax/unused]:https://github.com/cljs/api/blob/master/docfiles/syntax/unused.md
 [doc:syntax/set]:https://github.com/cljs/api/blob/master/docfiles/syntax/set.md
@@ -112,6 +118,7 @@ Reader Conditional:
 [doc:syntax/function]:https://github.com/cljs/api/blob/master/docfiles/syntax/function.md
 [doc:syntax/map]:https://github.com/cljs/api/blob/master/docfiles/syntax/map.md
 [doc:syntax/list]:https://github.com/cljs/api/blob/master/docfiles/syntax/list.md
+[doc:syntax/NaN]:https://github.com/cljs/api/blob/master/docfiles/syntax/NaN.md
 [doc:syntax/predicate]:https://github.com/cljs/api/blob/master/docfiles/syntax/predicate.md
 [doc:syntax/ignore]:https://github.com/cljs/api/blob/master/docfiles/syntax/ignore.md
 [doc:syntax/var]:https://github.com/cljs/api/blob/master/docfiles/syntax/var.md
