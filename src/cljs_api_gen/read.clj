@@ -9,7 +9,6 @@
     [cljs-api-gen.config :refer [repos-dir]]
     [cljs-api-gen.repo-cljs :refer [cljs-cmp]]))
 
-
 ;;--------------------------------------------------------------------------------
 ;; Read forms
 ;;--------------------------------------------------------------------------------
@@ -17,7 +16,12 @@
 (defn read-forms
   [r]
   (loop [forms (transient [])]
-    (if-let [f (try (binding [reader/*data-readers* *cljs-data-readers*]
+    (if-let [f (try (binding [reader/*data-readers* *cljs-data-readers*
+                              reader/*alias-map* '{ana cljs.analyzer
+                                                   s cljs.spec.alpha
+                                                   stc cljs.test.check
+                                                   env cljs.env
+                                                   comp cljs.compiler}]
                       (reader/read {:read-cond :allow, :features #{:clj}} r))
                     (catch Exception e
                       (let [eof? (string/includes? (.getMessage e) "EOF")]

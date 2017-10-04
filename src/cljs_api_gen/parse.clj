@@ -31,27 +31,6 @@
                                   sub-options-ns
                                   sub-options-sym]]))
 
-;; HACK: We need to create this so 'tools.reader' doesn't crash on `::ana/numeric`
-;; which is used by cljs.core. (the ana namespace has to exist)
-(create-ns 'ana)
-
-;; HACK: We need to create this so 'tools.reader' doesn't crash on `::env/compiler`
-;; which is used by cljs.repl. (the env namespace has to exist)
-(create-ns 'env)
-
-;; HACK: We need to create this so 'tools.reader' doesn't crash on `::spec/...`
-;; which is used by cljs.repl. (the env namespace has to exist)
-(create-ns 'spec)
-
-;; HACK: We need to create this so 'tools.reader' doesn't crash on `::s/...`
-;; which is used by cljs.spec.test. (the env namespace has to exist)
-(create-ns 's)
-(create-ns 'stc)
-
-;; HACK: We need to create this so 'tools.reader' doesn't crash on `::comp/compiled-cljs`
-;; which is used by cljs.closure. (the comp namespace has to exist)
-(create-ns 'comp)
-
 ;; current namespace and repo that we are parsing.
 (def ^:dynamic *cur-ns*)
 (def ^:dynamic *cur-repo*)
