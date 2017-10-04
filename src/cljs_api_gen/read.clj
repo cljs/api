@@ -1,10 +1,9 @@
 (ns cljs-api-gen.read
-  (:refer-clojure :exclude [replace])
   (:require
     [clojure.java.io :as io]
     [clojure.tools.reader :as reader]
     [clojure.tools.reader.reader-types :as readers]
-    [clojure.string :refer [replace]]
+    [clojure.string :as string]
     [cljs.tagged-literals :refer [*cljs-data-readers*]]
     [me.raynes.fs :refer [exists?]]
     [cljs-api-gen.config :refer [repos-dir]]
@@ -21,7 +20,8 @@
     (if-let [f (try (binding [reader/*data-readers* *cljs-data-readers*]
                       (reader/read {:read-cond :allow, :features #{:clj}} r))
                     (catch Exception e
-                      (when-not (= (.getMessage e) "EOF") (throw e))))]
+                      (let [eof? (string/includes? (.getMessage e) "EOF")]
+                        (when-not eof? (throw e)))))]
       (recur (conj! forms f))
       (persistent! forms))))
 
@@ -61,7 +61,7 @@
 (defn get-ns-files
   [ns- src-type]
   (doall (filter exists?
-          (let [ns-path (-> ns- (replace "." "/") (replace "-" "_"))
+          (let [ns-path (-> ns- (string/replace "." "/") (string/replace "-" "_"))
                 src (src-path src-type)]
             (for [ext  ["clj" "cljs" "cljc"]]
               (str repos-dir "/clojurescript/" src "/" ns-path "." ext))))))
