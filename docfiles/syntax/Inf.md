@@ -27,9 +27,6 @@ Math with infinities:
 (/ 1 0)
 ;;=> ##Inf
 
-(Math/log 0)
-;;=> -Infinity
-
 (* 0 ##Inf)
 ;;=> ##NaN
 ```
