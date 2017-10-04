@@ -19,6 +19,7 @@
     (if-let [f (try (binding [reader/*data-readers* *cljs-data-readers*
                               reader/*alias-map* '{ana cljs.analyzer
                                                    s cljs.spec.alpha
+                                                   spec cljs.spec
                                                    stc cljs.test.check
                                                    env cljs.env
                                                    comp cljs.compiler}]
