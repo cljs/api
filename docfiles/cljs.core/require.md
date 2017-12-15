@@ -40,5 +40,5 @@ A flag is a keyword. Recognized flags:
 ## Examples
 
 ```clj
-(require '[clojure/string :as string])
+(require '[clojure.string :as string])
 ```
