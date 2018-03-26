@@ -114,7 +114,7 @@
 
 (defn clj-tag->api-key
   [tag]
-  (second (re-find #"clojure-(\d\.\d)" tag)))
+  (second (re-find #"clojure-(\d\.\d+)" tag)))
 
 (def published-clj-versions
   (atom {})) ;; map version -> index

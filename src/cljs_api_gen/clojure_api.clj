@@ -14,14 +14,14 @@
   we find them in the latest Clojure 1.9.0 release, not Clojure 1.8.0."
   []
   (if (cljs-cmp >= *cljs-tag* "r1.9.14")
-    "clojure-1.9.0-alpha14" ;; FIXME: replace with latest as it is updated
+    "clojure-1.10.0-alpha4" ;; FIXME: replace with latest as it is updated
     *clj-tag*))
 
 ;;--------------------------------------------------------------------------------
 ;; Official Clojure API
 ;;--------------------------------------------------------------------------------
 
-(def versions ["1.3" "1.4" "1.5" "1.6" "1.7" "1.8" "1.9"])
+(def versions ["1.3" "1.4" "1.5" "1.6" "1.7" "1.8" "1.9" "1.10"])
 (def api-namespaces (atom {}))
 (def api-symbols (atom {}))
 
