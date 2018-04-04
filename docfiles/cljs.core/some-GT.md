@@ -20,6 +20,6 @@ This is a [safe navigation operator](https://en.wikipedia.org/wiki/Safe_navigati
 
 Useful for interop chaining where nulls might appear ([seen here](https://github.com/oakes/Nightcode/blob/2.5.10/src/clj/nightcode/editors.clj#L62)):
 
-```
+```clj
 (some-> pane .getParent .getChildren (.remove pane)))
 ```
