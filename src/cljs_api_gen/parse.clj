@@ -131,11 +131,12 @@
         meta- (meta name-)
         args (drop 2 form)
         docstring (let [ds (first args)]
-                    (when (string? ds)
-                      ds))
+                     (when (string? ds)
+                       ds))
         args (if docstring (rest args) args)
         attr-map (let [m (first args)]
                    (when (map? m) m))
+        docstring (or docstring (:doc meta-) (:doc attr-map))
         args (if attr-map (rest args) args)
         macro? (:macro attr-map)
         private? (or (#{'core/defn- 'defn-} (first form))
@@ -143,6 +144,7 @@
                      (:private attr-map)
                      (:skip-wiki meta-)
                      (:skip-wiki attr-map))
+        dynamic? (:dynamic meta-)
         doc-forms (cond-> []
                     docstring (conj docstring)
                     attr-map (conj attr-map))
@@ -164,6 +166,7 @@
        :docstring (fix-docstring docstring)
        :signature (or arglists signatures)
        :type (cond
+               dynamic? "dynamic var" ;; e.g. *exec-tap-fn*
                constructor? "type"
                macro? "macro"
                :else type-)})))
