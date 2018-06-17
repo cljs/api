@@ -500,13 +500,13 @@
    (defmethod parse 'op ...)
    (defmethod emit* :op ...)"
   [name]
-  (get '{"js*"   :js
-         "."     :dot
-         "var"   :var-special
-         "fn*"   :fn
-         "lefn*" :letfn
-         "loop*" :loop
-         "let*"  :let}
+  (get '{"js*"    :js
+         "."      :dot
+         "var"    :var-special
+         "fn*"    :fn
+         "letfn*" :letfn
+         "loop*"  :loop
+         "let*"   :let}
     name
     (keyword name))) ;; <-- default just converts to a keyword
 
@@ -1191,7 +1191,7 @@
         make (fn [name-]
                (assoc
                  (select-keys try-form
-                              [:docstring :source])
+                              [:docstring :source :extra-sources])
                  :ns "cljs.core"
                  :type "special form"
                  :name name-
