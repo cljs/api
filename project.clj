@@ -1,5 +1,5 @@
 (defproject cljs-api-gen "0.1.0-SNAPSHOT"
-  :dependencies [[org.clojure/clojure "1.8.0"]
+  :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.clojure/clojurescript "0.0-2371"]
                  [org.clojure/tools.reader "1.1.0"]
                  [org.clojure/core.match "0.2.2"]

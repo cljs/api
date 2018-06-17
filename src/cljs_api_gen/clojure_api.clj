@@ -31,6 +31,8 @@
 (defn version-api-url [v]
   (str "https://raw.githubusercontent.com/clojure/clojure/gh-pages/index-v" v ".clj"))
 
+(declare add-spec-alpha-api!)
+
 (defn get-version-apis! []
   (println (style "\nRetrieving Clojure API files...\n" :cyan))
   (doseq [v versions]
@@ -46,7 +48,52 @@
                          (map #(str (:namespace %) "/" (:name %)))
                          set)]
         (swap! api-symbols assoc v symbols)
-        (swap! api-namespaces assoc v namespaces)))))
+        (swap! api-namespaces assoc v namespaces))))
+  (add-spec-alpha-api!))
+
+;;--------------------------------------------------------------------------------
+;; core.spec.alpha
+;;
+;; This is released as a separate library from clojure core, but is bundled with cljs.
+;; Thus, we have to retrieve clojure docs separately.
+;;
+;; Docs are not versioned yet.  first published at "0.1.144" I think
+;; - docs here: https://clojure.github.io/spec.alpha/
+;; - repo here: https://github.com/clojure/spec.alpha/tree/gh-pages
+;;--------------------------------------------------------------------------------
+
+(def spec-alpha-api-url
+  "https://raw.githubusercontent.com/clojure/spec.alpha/d4965878d7165c6bbc66c6ba06bf27f146994249/index-0.1.144-SNAPSHOT.clj")
+
+(def spec-alpha-cache
+  (str cache-dir "/clj-spec-alpha-api.clj"))
+
+;; versions of clojure that depend on clojure.spec.alpha
+;; clojure 1.9 through 1.10-alpha4 depend on clojure.spec.alpha 0.1.143
+;;  - see https://github.com/clojure/clojure/blob/clojure-1.9.0/pom.xml
+;;  - see https://github.com/clojure/clojure/blob/clojure-1.10.0-alpha4/pom.xml
+(def versions-with-spec-alpha
+  ["1.9", "1.10"])
+
+(def spec-alpha-namespaces (atom nil))
+
+(defn add-spec-alpha-api! []
+  (println " Adding clojure.spec.alpha...")
+  (let [filename spec-alpha-cache
+        url spec-alpha-api-url]
+    (when-not (exists? filename)
+      (spit filename (slurp url)))
+    (let [data (read-string (slurp filename))
+          namespaces (->> (:namespaces data)
+                          (map :name)
+                          set)
+          symbols (->> (:vars data)
+                        (map #(str (:namespace %) "/" (:name %)))
+                        set)]
+      (reset! spec-alpha-namespaces namespaces)
+      (doseq [v versions-with-spec-alpha]
+        (swap! api-symbols update v into symbols)
+        (swap! api-namespaces update v into namespaces)))))
 
 ;;--------------------------------------------------------------------------------
 ;; Clojure's Types and Protocols
@@ -158,7 +205,9 @@
    "clojure.spec.gen" "clojure.spec"})
 
 (defn ns-url [ns-]
-  (str "http://clojure.github.io/clojure/branch-master/" ns- "-api.html"))
+  (if (@spec-alpha-namespaces ns-)
+    (str "https://clojure.github.io/spec.alpha/" ns- "-api.html")
+    (str "http://clojure.github.io/clojure/branch-master/" ns- "-api.html")))
 
 ;; TODO: spec.alpha docs linked from https://clojure.org/api/api are not up yet:
 ;; https://clojure.github.io/spec.alpha/ (<-- make ns-url link here when up)
