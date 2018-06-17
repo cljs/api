@@ -495,6 +495,33 @@
     (let [[_quote doc-map] (nth form 2)]
       (transform-special-doc doc-map))))
 
+(defn special-parse->emit-op
+  "The names between the parse/emit methods are not always the same:
+   (defmethod parse 'op ...)
+   (defmethod emit* :op ...)"
+  [name]
+  (get '{"js*"   :js
+         "."     :dot
+         "var"   :var-special
+         "fn*"   :fn
+         "lefn*" :letfn
+         "loop*" :loop
+         "let*"  :let}
+    name
+    (keyword name))) ;; <-- default just converts to a keyword
+
+(defn parse-special-emit [form]
+  (when (and (list? form)
+             (= (take 2 form) '(defmethod emit*)))
+    (let [op (nth form 2)]
+      [op form])))
+
+(defn parse-special-emits
+  "Parse cljs special form emission code of the form:
+  (defmethod emit* :<op>)"
+  [forms]
+  (into {} (keep parse-special-emit forms)))
+
 (defn parse-special*
   "Parse cljs special forms of the form:
   (defmethod parse 'symbol ...)"
@@ -506,15 +533,21 @@
       {:name (str name-)})))
 
 (defn parse-special
-  [form doc-map]
+  [form doc-map emit-map]
   (when-let [special (parse-special* form)]
     (let [location (parse-location form)
           extras {:type "special form"}
           docs (get doc-map (symbol (:name special)))
+          emit (get emit-map (special-parse->emit-op (:name special)))
+          emit-src (when emit
+                     (-> (:source (parse-location emit))
+                         (assoc :title "Emitting code")))
           final (-> special
                     (merge location docs)
                     (assoc :type "special form")
-                    (assoc-in [:source :title] "Parser code"))]
+                    (assoc-in [:source :title] "Parser code"))
+          final (cond-> final
+                  emit-src (assoc :extra-sources [emit-src]))]
       final)))
 
 ;;--------------------------------------------------------------------------------
@@ -583,13 +616,15 @@
   (let [docs (->> (read-all-ns-forms "cljs.repl" :compiler)
                   (keep #(parse-special-docs %))
                   first)
+        emits (->> (read-all-ns-forms "cljs.compiler" :compiler)
+                   parse-special-emits)
         ns-with-specials (cond
                            (cljs-cmp >= "0.0-1424") "cljs.analyzer"
                            :else                    "cljs.compiler")
         specials (binding [*cur-ns* ns-
                            *cur-repo* "clojurescript"]
                    (->> (read-all-ns-forms ns-with-specials :compiler)
-                        (keep #(parse-special % docs))
+                        (keep #(parse-special % docs emits))
                         doall))]
     specials))
 
