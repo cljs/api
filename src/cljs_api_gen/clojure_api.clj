@@ -88,8 +88,8 @@
                           (map :name)
                           set)
           symbols (->> (:vars data)
-                        (map #(str (:namespace %) "/" (:name %)))
-                        set)]
+                       (map #(str (:namespace %) "/" (:name %)))
+                       set)]
       (reset! spec-alpha-namespaces namespaces)
       (doseq [v versions-with-spec-alpha]
         (swap! api-symbols update v into symbols)
