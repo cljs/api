@@ -42,31 +42,31 @@ and libraries into the current namespace.
             :refer-macros []
             :rename {}
             :include-macros true|false
-            :as alias
-            :reload
-            :reload-all])
+            :as alias]
+    :reload
+    :reload-all)
 
   (:use
     lib.ns
     [lib.ns :only []
-            :rename {}
-            :reload
-            :reload-all])
+            :rename {}]
+    :reload
+    :reload-all)
 
   (:require-macros
     lib.ns
     [lib.ns :refer []
             :rename {}
-            :as alias
-            :reload
-            :reload-all])
+            :as alias]
+    :reload
+    :reload-all)
 
   (:use-macros
     lib.ns
     [lib.ns :only []
-            :rename {}
-            :reload
-            :reload-all]))
+            :rename {}]
+    :reload
+    :reload-all))
 ```
 
 ## Examples
