@@ -2,6 +2,7 @@
   (:require
     [clansi.core :refer [style]]
     [clojure.string :refer [split-lines]]
+    [clojure.set :refer [difference]]
     [cljs-api-gen.read :refer [read-all-ns-forms]]
     [cljs-api-gen.repo-cljs :refer [with-version! published-cljs-tags]]))
 
@@ -27,7 +28,7 @@
    :compiler-stats {:added "0.0-2629"}
    :dump-core {:added "1.7.10"}
    :elide-asserts {:added "0.0-2156"}
-   ; :emit-constants {:added "0.0-2014"} ; this is implicitly computed from optimize-constants (user input ignored)
+   ; :emit-constants {:added "0.0-2014"} ; (see ignored below)
    :externs {:added "0.0-971"}
    :fn-invoke-direct {:added "1.9.660"}
    :foreign-libs {:added "0.0-971"}
@@ -54,14 +55,14 @@
    :rewrite-polyfills {:added "1.9.562"}
    :source-map {:added "0.0-1798"}
    :source-map-asset-path {:added "1.9.90"}
-   ; :source-map-inline {:added "0.0-2911"} ; this is listed in known-opts, but only applies to repl
+   ; :source-map-inline {:added "0.0-2911"} ; (see ignored below)
    :source-map-path {:added "0.0-2060"}
    :source-map-timestamp {:added "0.0-2505"}
    :static-fns {:added "0.0-1424"}
    :target {:added "0.0-971"}
-   ; :ups-externs {:added "0.0-993"}      ; this is implicitly computed from upstream deps (user input ignored)
-   ; :ups-foreign-libs {:added "0.0-993"} ; this is implicitly computed from upstream deps (user input ignored)
-   ; :ups-libs {:added "0.0-993"}         ; this is implicitly computed from upstream deps (user input ignored)
+   ; :ups-externs {:added "0.0-993"}      ; (see ignored below)
+   ; :ups-foreign-libs {:added "0.0-993"} ; (see ignored below)
+   ; :ups-libs {:added "0.0-993"}         ; (see ignored below)
    :use-only-custom-externs {:added "0.0-971"}
    :verbose {:added "0.0-971"}
    :warning-handlers {:added "1.7.10"}
@@ -131,6 +132,12 @@
   {:compiler (fetch-site-options* "compiler-options")
    :repl (fetch-site-options* "repl-options")})
 
+(def ignored-site-options
+  {:compiler
+   #{(keyword "language-in and :language-out")} ; we don't combine these
+   :repl
+   #{:watch-fn}}) ; already in compiler options
+
 (defn parse-known-opts [form]
   (when (and (list? form)
              (= (take 2 form) '(def known-opts)))
@@ -147,17 +154,29 @@
 (defn fetch-repo-repl-options []
   (first (keep parse-known-repl-opts (read-all-ns-forms "cljs.repl" :compiler))))
 
+(def ignored-repo-options
+  {:compiler
+   #{:ups-externs       ; this is implicitly computed from upstream deps (user input ignored)
+     :ups-foreign-libs  ; this is implicitly computed from upstream deps (user input ignored)
+     :ups-libs          ; this is implicitly computed from upstream deps (user input ignored)
+     :source-map-inline ; only applies to repl
+     :emit-constants}    ; this is implicitly computed from optimize-constants (user input ignored)
+   :repl
+   #{:watch-fn}}) ; already in compiler options
+
 (defn fetch-repo-options []
   (with-version! (last @published-cljs-tags)
     {:compiler (fetch-repo-compiler-options)
      :repl (fetch-repo-repl-options)}))
 
-;; TODO: track ignored compiler/repl options (for each source?)
-
 (defn notify-new-options-from-site []
   (let [{:keys [compiler repl]} (fetch-site-options)
-        new-compiler (apply disj compiler (keys compiler-options))
-        new-repl (apply disj repl (keys repl-options))]
+        new-compiler (difference compiler
+                       (set (keys compiler-options))
+                       (:compiler ignored-site-options))
+        new-repl (difference repl
+                   (set (keys repl-options))
+                   (:repl ignored-site-options))]
     (when (seq new-compiler)
       (println "\nNew Compiler Options (via site):\n")
       (doseq [opt (sort new-compiler)]
@@ -169,8 +188,12 @@
 
 (defn notify-new-options-from-repo []
   (let [{:keys [compiler repl]} (fetch-repo-options)
-        new-compiler (apply disj compiler (keys compiler-options))
-        new-repl (apply disj repl (keys repl-options))]
+        new-compiler (difference compiler
+                       (set (keys compiler-options))
+                       (:compiler ignored-repo-options))
+        new-repl (difference repl
+                   (set (keys repl-options))
+                   (:repl ignored-repo-options))]
     (when (seq new-compiler)
       (println "\nNew Compiler Options (via repo var):\n")
       (doseq [opt (sort new-compiler)]
