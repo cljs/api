@@ -98,8 +98,12 @@
    :def-emits-var {:added "1.7.10"}
    :eval {:added "0.0-2911"}
    :flush {:added "0.0-2911"}
+   :host {:added "1.10.63"} ; ae34de7c316461b3dbce49bbc4e5ab2ae4d9bde9
    :init {:added "0.0-2911"}
+   :inits {:added "1.10.63"} ; d9408cb07263252df5e752427bfdb78b90dd10cb
+   :launch-browser {:added "1.10.126"} ; 0d455574df757f0667b2821753e60dcceea7fdaf
    :need-prompt {:added "0.0-2911"}
+   :port {:added "1.10.63"} ; ae34de7c316461b3dbce49bbc4e5ab2ae4d9bde9
    :print {:added "0.0-2911"}
    :print-no-newline {:added "0.0-2911"}
    :prompt {:added "0.0-2911"}
@@ -109,7 +113,10 @@
    :repl-requires {:added "0.0-3115"}
    :repl-verbose {:added "0.0-2719"}
    :source-map-inline {:added "0.0-2911"}
+   :src {:added "0.0-1503"} ; b5b20fdc4fa5c9f8a12e527407a72a7e6957bcd6
+   :static-dir {:added "0.0-1211"} ; 267605f9ff06ce65212e3e3e29e94d760958e995
    :watch {:added "0.0-2850"} ; 606ccce775706b9f9f6f40ecdcc40d6947226824
+   :working-dir {:added "0.0-971"} ; 23d29f174c7a2d454019dca0cde8c1f025d1f21a
    :wrap {:added "0.0-2985"}})
 
 ;; Sub-options can complicate things. To keep it simple, we just assign a
