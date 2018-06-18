@@ -124,7 +124,8 @@
     (->> (slurp url)
          (split-lines)
          (filter #(.startsWith % hint))
-         (map #(subs % (count hint))))))
+         (map #(keyword (subs % (count hint))))
+         (set))))
 
 (defn fetch-site-options []
   {:compiler (fetch-site-options* "compiler-options")
@@ -153,8 +154,33 @@
 
 ;; TODO: track ignored compiler/repl options (for each source?)
 
+(defn notify-new-options-from-site []
+  (let [{:keys [compiler repl]} (fetch-site-options)
+        new-compiler (apply disj compiler (keys compiler-options))
+        new-repl (apply disj repl (keys repl-options))]
+    (when (seq new-compiler)
+      (println "\nNew Compiler Options (via site):\n")
+      (doseq [opt (sort new-compiler)]
+        (println opt "-" (str "https://clojurescript.org/reference/compiler-options#" (name opt)))))
+    (when (seq new-repl)
+      (println "\nNew REPL Options (via site):\n")
+      (doseq [opt (sort new-repl)]
+        (println opt "-" (str "https://clojurescript.org/reference/repl-options#" (name opt)))))))
+
+(defn notify-new-options-from-repo []
+  (let [{:keys [compiler repl]} (fetch-repo-options)
+        new-compiler (apply disj compiler (keys compiler-options))
+        new-repl (apply disj repl (keys repl-options))]
+    (when (seq new-compiler)
+      (println "\nNew Compiler Options (via repo var):\n")
+      (doseq [opt (sort new-compiler)]
+        (println opt)))
+    (when (seq new-repl)
+      (println "\nNew REPL Options (via repo var):\n")
+      (doseq [opt (sort new-repl)]
+        (println opt)))))
+
 (defn notify-new-options []
   (println (style "\nChecking for potentially new compiler options...\n" :cyan))
-  (println (fetch-site-options))
-  (println (fetch-repo-options)))
-  ; TODO: display options not found in our table
+  (notify-new-options-from-site)
+  (notify-new-options-from-repo))
