@@ -1,4 +1,9 @@
-(ns cljs-api-gen.options)
+(ns cljs-api-gen.options
+  (:require
+    [clansi.core :refer [style]]
+    [clojure.string :refer [split-lines]]
+    [cljs-api-gen.read :refer [read-all-ns-forms]]
+    [cljs-api-gen.repo-cljs :refer [with-version! published-cljs-tags]]))
 
 ;; Compiler Options are tracked in cljs.closure/known-opts >= 1.8.34
 ;; REPL Options are tracked in cljs.repl/known-repl-opts >= 1.8.34
@@ -104,3 +109,52 @@
   (zipmap
     (vals sub-options-ns)
     (keys sub-options-ns)))
+
+;;--------------------------------------------------------------------------------
+;; New option notifications
+;;
+;; No source is exact, but we use the following for hints:
+;; - site: use hints from clojurescript.org
+;; - repo: use hints from clojurescript repo
+;;--------------------------------------------------------------------------------
+
+(defn fetch-site-options* [title]
+  (let [hint "=== :" ; options start with "=== :"
+        url (str "https://raw.githubusercontent.com/clojure/clojurescript-site/master/content/reference/" title ".adoc")]
+    (->> (slurp url)
+         (split-lines)
+         (filter #(.startsWith % hint))
+         (map #(subs % (count hint))))))
+
+(defn fetch-site-options []
+  {:compiler (fetch-site-options* "compiler-options")
+   :repl (fetch-site-options* "repl-options")})
+
+(defn parse-known-opts [form]
+  (when (and (list? form)
+             (= (take 2 form) '(def known-opts)))
+    (nth form 3)))
+
+(defn parse-known-repl-opts [form]
+  (when (and (list? form)
+             (= (take 2 form) '(def known-repl-opts)))
+    (nth form 3)))
+
+(defn fetch-repo-compiler-options []
+  (first (keep parse-known-opts (read-all-ns-forms "cljs.closure" :compiler))))
+
+(defn fetch-repo-repl-options []
+  (first (keep parse-known-repl-opts (read-all-ns-forms "cljs.repl" :compiler))))
+
+(defn fetch-repo-options []
+  (with-version! (last @published-cljs-tags)
+    {:compiler (fetch-repo-compiler-options)
+     :repl (fetch-repo-repl-options)}))
+
+;; TODO: track ignored compiler/repl options (for each source?)
+
+(defn notify-new-options []
+  (println (style "\nChecking for potentially new compiler options...\n" :cyan))
+  (println (fetch-site-options))
+  (println (fetch-repo-options)))
+  ; TODO: display options not found in our table

@@ -11,7 +11,8 @@
                                     get-published-clj-versions!
                                     new-maven-release]]
     [cljs-api-gen.catalog :refer [create-catalog!]]
-    [cljs-api-gen.clojure-api :refer [get-version-apis!]]))
+    [cljs-api-gen.clojure-api :refer [get-version-apis!]]
+    [cljs-api-gen.options :refer [notify-new-options]]))
 
 
 ;;--------------------------------------------------------------------------------
@@ -28,6 +29,7 @@
   (get-published-cljs-tags!)
   (get-published-clj-versions!)
   (get-version-apis!)
+  (notify-new-options)
   (println (style "\n DONE PREPPING " :bg-green)))
 
 (defn main
