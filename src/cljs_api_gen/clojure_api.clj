@@ -78,7 +78,7 @@
 (def spec-alpha-namespaces (atom nil))
 
 (defn add-spec-alpha-api! []
-  (println " Adding clojure.spec.alpha...")
+  (println " clojure.spec.alpha API...")
   (let [filename spec-alpha-cache
         url spec-alpha-api-url]
     (when-not (exists? filename)
