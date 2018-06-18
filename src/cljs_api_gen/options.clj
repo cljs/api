@@ -11,29 +11,43 @@
 ;; After clojure.spec is finalized, david will accept a PR for adding a spec
 ;; for compiler options.
 
-;; found version added with git. for example:
+;; found relevant commits mentioning the option in git. for example:
+;; (use -G to use regex)
 ;; $ git log -S :emit-constants --source --all
 
+;; found first release tag containing the commit with:
+;; $ git tag --contains=<hash> --sort=committerdate
+
 (def compiler-options
-  {:anon-fn-naming-policy {:added "0.0-2411"}
+  {:aot-cache {:added "1.10.126"} ; 1969c36161b1000a36f28e5acb73d55916775d26
+   :anon-fn-naming-policy {:added "0.0-2411"}
    :asset-path {:added "0.0-2727"}
    :browser-repl {:added "1.9.183"}
    :cache-analysis {:added "0.0-2511"}
    :cache-analysis-format {:added "1.9.456"}
+   :checked-arrays {:added "1.9.854"} ; 84a2128dab9f52e67ee227a66be4f849d83de0a3
    :closure-defines {:added "0.0-2120"}
    :closure-extra-annotations {:added "0.0-2814"}
    :closure-generate-exports {:added "1.9.473"}
+   :closure-output-charset {:added "1.8.34"} ; 404d6444cb6419658a7dacb343a5fed5b9451e0c
    :closure-module-roots {:added "1.9.456"}
+   :closure-property-map-in {:added "1.10.63"} ; 072677dc0678c3f06acc612d438275d845881f9b
+   :closure-property-map-out {:added "1.10.63"} ; b48023595f90b8567d64e1d1e8162ad12e7d0d18
+   :closure-variable-map-in {:added "1.10.63"} ; 072677dc0678c3f06acc612d438275d845881f9b
+   :closure-variable-map-out {:added "1.10.63"} ; 072677dc0678c3f06acc612d438275d845881f9b
    :closure-warnings {:added "0.0-2120"}
    :compiler-stats {:added "0.0-2629"}
    :dump-core {:added "1.7.10"}
    :elide-asserts {:added "0.0-2156"}
+   :elide-strict {:added "1.10.312"} ; 03455b4ba4338ab05ffccefc9ddb41c8fd128cfa
    ; :emit-constants {:added "0.0-2014"} ; (see ignored below)
    :externs {:added "0.0-971"}
    :fn-invoke-direct {:added "1.9.660"}
    :foreign-libs {:added "0.0-971"}
    :hashbang {:added "0.0-2197"}
+   :ignore-js-module-exts {:added "1.10.63"} ; f7d611d87f6ea8a605eae7c0339f30b79a840b49
    :infer-externs {:added "1.9.456"}
+   :install-deps {:added "1.9.854"} ; fb8ce05143dac9e9feb602be2544b72c87b337a3
    :language-in {:added "0.0-2197"}
    :language-out {:added "0.0-2197"}
    :libs {:added "0.0-971"}
@@ -42,22 +56,28 @@
    :npm-deps {:added "r1.9.518"}
    :optimizations {:added "0.0-971"}
    :optimize-constants {:added "0.0-1877"}
+   :opts-cache {:added "1.10.126"} ; 542d3fad1ff499a5e3b00e7e08eff4037083a59d
    :output-dir {:added "0.0-971"}
    :output-to {:added "0.0-971"}
    :output-wrapper {:added "0.0-1513"}
+   :package-json-resolution {:added "1.10.191"} ; 233b42338c182e72391466eba2d00bae34271e58
    :parallel-build {:added "1.7.189"}
    :preamble {:added "0.0-2127"}
    :preloads {:added "1.9.85"}
    :pretty-print {:added "0.0-971"}
    :print-input-delimiter {:added "0.0-971"}
+   :process-shim {:added "1.9.854"} ; 537f60c975a29983c62647b4ea67b0bc08979366
    :pseudo-names {:added "0.0-2227"}
    :recompile-dependents {:added "0.0-2814"}
+   :rename-prefix {:added "1.9.946"} ; 7a8803ef70cb84c686341353e7ab29928487e388
+   :rename-prefix-namespace {:added "1.9.946"} ; 7a8803ef70cb84c686341353e7ab29928487e388
    :rewrite-polyfills {:added "1.9.562"}
    :source-map {:added "0.0-1798"}
    :source-map-asset-path {:added "1.9.90"}
    ; :source-map-inline {:added "0.0-2911"} ; (see ignored below)
    :source-map-path {:added "0.0-2060"}
    :source-map-timestamp {:added "0.0-2505"}
+   :stable-names {:added "1.10.63"} ; 072677dc0678c3f06acc612d438275d845881f9b
    :static-fns {:added "0.0-1424"}
    :target {:added "0.0-971"}
    ; :ups-externs {:added "0.0-993"}      ; (see ignored below)
@@ -89,7 +109,7 @@
    :repl-requires {:added "0.0-3115"}
    :repl-verbose {:added "0.0-2719"}
    :source-map-inline {:added "0.0-2911"}
-   :watch {:added "0.0-2850"}
+   :watch {:added "0.0-2850"} ; 606ccce775706b9f9f6f40ecdcc40d6947226824
    :wrap {:added "0.0-2985"}})
 
 ;; Sub-options can complicate things. To keep it simple, we just assign a
@@ -160,7 +180,8 @@
      :ups-foreign-libs  ; this is implicitly computed from upstream deps (user input ignored)
      :ups-libs          ; this is implicitly computed from upstream deps (user input ignored)
      :source-map-inline ; only applies to repl
-     :emit-constants}    ; this is implicitly computed from optimize-constants (user input ignored)
+     :emit-constants    ; this is implicitly computed from optimize-constants (user input ignored)
+     :watch}             ; only available via repl option (also as --watch from cli)
    :repl
    #{:watch-fn}}) ; already in compiler options
 
