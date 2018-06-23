@@ -502,11 +502,13 @@
   [name]
   (get '{"js*"    :js
          "."      :dot
-         "var"    :var-special
+         "var"    :the-var
          "fn*"    :fn
          "letfn*" :letfn
          "loop*"  :loop
-         "let*"   :let}
+         "let*"   :let
+         "defrecord*" :defrecord
+         "deftype*" :deftype}
     name
     (keyword name))) ;; <-- default just converts to a keyword
 
