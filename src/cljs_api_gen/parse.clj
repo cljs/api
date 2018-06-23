@@ -498,7 +498,10 @@
 (defn special-parse->emit-op
   "The names between the parse/emit methods are not always the same:
    (defmethod parse 'op ...)
-   (defmethod emit* :op ...)"
+   (defmethod emit* :op ...)
+
+   See https://dev.clojure.org/jira/browse/CLJS-1461 for the AST spec
+   "
   [name]
   (get '{"js*"    :js
          "."      :dot
