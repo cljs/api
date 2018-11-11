@@ -2,7 +2,7 @@
 
 Generates data for the __[API Documentation Site]__
 
-- Create with: `lein run`
+- Create with: `./run`
 - Download data: [`cljs-api.edn`]
 - Learn about data format: [`cljs-api-format.edn`]
 - Explore the data in a Planck REPL: `./explore`
