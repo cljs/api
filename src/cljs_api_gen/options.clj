@@ -42,6 +42,7 @@
    :elide-strict {:added "1.10.312"} ; 03455b4ba4338ab05ffccefc9ddb41c8fd128cfa
    ; :emit-constants {:added "0.0-2014"} ; (see ignored below)
    :externs {:added "0.0-971"}
+   :fingerprint {:added "1.10.439"} ; 5cc0e6c064132cb3e122177a1a110d5b0d98fceb
    :fn-invoke-direct {:added "1.9.660"}
    :foreign-libs {:added "0.0-971"}
    :hashbang {:added "0.0-2197"}
@@ -77,6 +78,7 @@
    ; :source-map-inline {:added "0.0-2911"} ; (see ignored below)
    :source-map-path {:added "0.0-2060"}
    :source-map-timestamp {:added "0.0-2505"}
+   :spec-skip-macros {:added "1.10.439"} ; 6b9a37a294746148d3f4f8c1b6839823fe6e23f3
    :stable-names {:added "1.10.63"} ; 072677dc0678c3f06acc612d438275d845881f9b
    :static-fns {:added "0.0-1424"}
    :target {:added "0.0-971"}
