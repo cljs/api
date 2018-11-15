@@ -7,4 +7,6 @@ see also:
 
 ## Details
 
+See <https://clojurescript.org/news/2017-07-14-checked-array-access>
+
 ## Examples
