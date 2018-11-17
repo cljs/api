@@ -131,7 +131,17 @@
    "PersistentQueue.EMPTY"    "PersistentQueue"
    "PersistentTreeMap.EMPTY"  "PersistentTreeMap"
    "PersistentTreeSet.EMPTY"  "PersistentTreeSet"
-   "PersistentVector.EMPTY"   "PersistentVector"})
+   "PersistentVector.EMPTY"   "PersistentVector"
+
+   "TransformerIterator.create"         "TransformerIterator"
+   "TransformerIterator.createMulti"    "TransformerIterator"
+   "PersistentHashSet.createWithCheck"  "PersistentHashSet"
+   "PersistentHashMap.createWithCheck"  "PersistentHashMap"
+   "PersistentArrayMap.createWithCheck" "PersistentArrayMap"
+
+   "NodeIterator"   "PersistentHashMap"
+   "MultiIterator"  "TransformerIterator"
+   "RangeIterator"  "Range"})
 
 
 (def lang-symbols (atom {}))
@@ -195,6 +205,7 @@
    ;; types
    "cljs.core/List"                     "clojure.lang/PersistentList"
    "cljs.core/SeqIter"                  "clojure.lang/SeqIterator"
+   "cljs.core/RecordIter"               "clojure.lang/RecordIterator"
 
    ;; member attributes
    "cljs.core/List.EMPTY"               "clojure.lang/PersistentList.EMPTY"})
