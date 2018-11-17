@@ -86,6 +86,7 @@
                     :signature
                     :methods
                     :protocols
+                    :implementations
                     :history
                     :return-type
                     :syntax-equiv
@@ -153,10 +154,49 @@
                              combine-namespaces
                              #(-> % shadow-duplicates-by-order :merged)]))))
 
+(defn crossref-core-protocols [items]
+  ;; TODO: return types with protocols added from :type-extension's (and add them to :extra-sources)
+  ;;  - ignore when :type is not found in core (native JS types)
+  ;; TODO: return protocols with types added from :type-extension's (for native JS types)
+  ;; TODO: toss out :type-extension's
+  (let [core? #(= "cljs.core" (:ns %))
+
+        type? #(= "type" (:type %))
+        protocol? #(= "protocol" (:type %))
+        other? #(not (or (type? %) (protocol? %)))
+
+        core-items (filter core? items)
+        items (remove core? items)
+
+        type-map (->> core-items
+                      (filter type?)
+                      (group-by :name)
+                      (mapmap first))
+
+        implementations (fn [protocol]
+                          (->> (vals type-map)
+                               (filter #(contains? (:protocols %) protocol))
+                               (map :name)
+                               (set)))
+
+        protocol-map (->> core-items
+                          (filter protocol?)
+                          (group-by :name)
+                          (mapmap first)
+                          (mapmap #(let [impls (implementations (:name %))]
+                                     (assoc % :implementations impls))))
+
+        others (filter other? core-items)]
+    (concat items
+      others
+      (vals type-map)
+      (vals protocol-map))))
+
 (defn cached-items
   "transforms a sequence of parsed items to a processed map of full-name -> item"
   [items]
   (->> items
+       (crossref-core-protocols)
        (map cached-item)
        (group-by :full-name)
        (mapmap resolve-duplicates)

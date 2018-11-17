@@ -249,13 +249,22 @@
           form (drop 2 form)
           signature (first form)
           protocols (->> (drop 1 form)
-                         (filterv symbol?)
-                         (mapv str))]
+                         (filter symbol?)
+                         (map str)
+                         (set))]
       (when (or *parse-private-defs?*
                 (not private?))
         {:signature (when signature [signature])
          :type "type"
          :protocols protocols}))))
+
+(defn parse-extend-protocol []
+  ;; TODO: return {:type-extension {:type type :protocol protocol}}
+  nil)
+
+(defn parse-extend-type []
+  ;; TODO: return {:type-extension {:type type :protocol protocol}}
+  nil)
 
 (defn parse-defmulti
   [form]

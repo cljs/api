@@ -42,7 +42,10 @@
               :parent-type "PersistentArrayMap"
 
               ;; if type, this shows the protocols it implements
-              :protocols ["IFoo" "IBar"]
+              :protocols #{"IFoo" "IBar"}
+
+              ;; if core protocol, this shows the known core types that implement it
+              :implementations #{"Foo" "Bar"}
 
               ;; if protocol, this shows the methods that must be implemented
               :methods [{:name "-clj->js",
