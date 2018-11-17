@@ -36,8 +36,22 @@
               :name              "->"
               :name-encode       "-GT"
 
+              ;; Type information
+
               ;; if this symbol is a member of a type (e.g. cljs.core/PersistentArrayMap.fromArrays)
               :parent-type "PersistentArrayMap"
+
+              ;; if type, this shows the protocols it implements
+              :protocols ["IFoo" "IBar"]
+
+              ;; if protocol, this shows the methods that must be implemented
+              :methods [{:name "-clj->js",
+                         :signature ["[x]"],
+                         :docstring "Recursively transforms clj values to JavaScript"}
+                        {:name "-key->js",
+                         :signature ["[x]"],
+                         :docstring "Transforms map keys to valid JavaScript keys. Arbitrary keys are\n  encoded to their string representation via (pr-str x)"}]
+
 
               ;; example data here taken from cljs.core/keys
               :type              "function"
@@ -50,6 +64,7 @@
                        :tag      "r3297"
                        :filename "src/main/cljs/cljs/core.cljs"
                        :lines    [7559 7563]}
+
 
               ;; Same structure as `:source` for extra sources.
               ;; (For example, some symbols have both function and macro

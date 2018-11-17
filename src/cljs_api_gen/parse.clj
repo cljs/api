@@ -247,11 +247,15 @@
           meta- (meta name-)
           private? (:private meta-)
           form (drop 2 form)
-          signature (first form)]
+          signature (first form)
+          protocols (->> (drop 1 form)
+                         (filterv symbol?)
+                         (mapv str))]
       (when (or *parse-private-defs?*
                 (not private?))
         {:signature (when signature [signature])
-         :type "type"}))))
+         :type "type"
+         :protocols protocols}))))
 
 (defn parse-defmulti
   [form]

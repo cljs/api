@@ -85,6 +85,7 @@
                     :parent-type
                     :signature
                     :methods
+                    :protocols
                     :history
                     :return-type
                     :syntax-equiv
