@@ -258,13 +258,19 @@
          :type "type"
          :protocols protocols}))))
 
-(defn parse-extend-protocol []
-  ;; TODO: return {:type-extension {:type type :protocol protocol}}
-  nil)
+(defn parse-extend-protocol [form]
+  (let [protocol (second form)
+        types (filter symbol? (drop 2 form))]
+    {:type-extension
+     {:protocols #{(str protocol)}
+      :types (set (map str types))}}))
 
-(defn parse-extend-type []
-  ;; TODO: return {:type-extension {:type type :protocol protocol}}
-  nil)
+(defn parse-extend-type [form]
+  (let [type (second form)
+        protocols (filter symbol? (drop 2 form))]
+    {:type-extension
+     {:types #{(str type)}
+      :protocols (set (map str protocols))}}))
 
 (defn parse-defmulti
   [form]
@@ -328,6 +334,8 @@
       defmulti      "defmulti"
       defmethod     "defmethod"
       goog-define   "var"
+      extend-protocol "extend-protocol"
+      extend-type     "extend-type"
 
       (def defonce) (if (and (list? (nth form 2 nil))
                              (= 'fn (first (nth form 2 nil)))
@@ -346,6 +354,8 @@
 (defmethod parse-form* "deftype"     [form] (parse-deftype form))
 (defmethod parse-form* "defmulti"    [form] (parse-defmulti form))
 (defmethod parse-form* "defmethod"   [form] (parse-defmethod form))
+(defmethod parse-form* "extend-protocol" [form] (parse-extend-protocol form))
+(defmethod parse-form* "extend-type"     [form] (parse-extend-type form))
 (defmethod parse-form* nil           [form] nil)
 
 ;;--------------------------------------------------------------------------------

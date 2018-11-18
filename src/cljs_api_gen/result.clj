@@ -155,38 +155,55 @@
                              #(-> % shadow-duplicates-by-order :merged)]))))
 
 (defn crossref-core-protocols [items]
-  ;; TODO: return types with protocols added from :type-extension's (and add them to :extra-sources)
-  ;;  - ignore when :type is not found in core (native JS types)
-  ;; TODO: return protocols with types added from :type-extension's (for native JS types)
-  ;; TODO: toss out :type-extension's
+  ;; TODO: add :extra-sources from :type-extension's
   (let [core? #(= "cljs.core" (:ns %))
 
         type? #(= "type" (:type %))
         protocol? #(= "protocol" (:type %))
-        other? #(not (or (type? %) (protocol? %)))
+        extension? :type-extension
+        other? (complement (some-fn type? protocol? extension?))
 
         core-items (filter core? items)
-        items (remove core? items)
+        items (remove (some-fn core? extension?) items)
+        others (filter other? core-items)
+
+        extensions (->> core-items
+                        (filter extension?)
+                        (map :type-extension))
+        get-extensions (fn [{:keys [type protocol]}]
+                         (let [lookup (or type protocol)
+                               [in out] (if type
+                                          [:types :protocols]
+                                          [:protocols :types])]
+                           (->> extensions
+                                (filter #(contains? (in %) lookup))
+                                (map out)
+                                (apply concat)
+                                (set))))
 
         type-map (->> core-items
                       (filter type?)
                       (group-by :name)
-                      (mapmap first))
+                      (mapmap first)
+                      (mapmap #(let [name (:name %)
+                                     impls (or (:protocols %) #{})
+                                     extns (get-extensions {:type name})]
+                                 (assoc % :protocols (into impls extns)))))
 
-        implementations (fn [protocol]
-                          (->> (vals type-map)
-                               (filter #(contains? (:protocols %) protocol))
-                               (map :name)
-                               (set)))
+        get-implementations (fn [protocol]
+                              (->> (vals type-map)
+                                   (filter #(contains? (:protocols %) protocol))
+                                   (map :name)
+                                   (set)))
 
         protocol-map (->> core-items
                           (filter protocol?)
                           (group-by :name)
                           (mapmap first)
-                          (mapmap #(let [impls (implementations (:name %))]
-                                     (assoc % :implementations impls))))
-
-        others (filter other? core-items)]
+                          (mapmap #(let [name (:name %)
+                                         impls (get-implementations name)
+                                         extns (get-extensions {:protocol name})]
+                                     (assoc % :implementations (into impls extns)))))]
     (concat items
       others
       (vals type-map)
