@@ -240,6 +240,9 @@
        :methods pmethods
        :type "protocol"})))
 
+(defn valid-protocol? [form]
+  (and (symbol? form) (not= form 'Object)))
+
 (defn parse-deftype
   [form]
   (when (not= *cur-ns* "cljs.pprint") ;; ignore custom deftypes here
@@ -249,7 +252,7 @@
           form (drop 2 form)
           signature (first form)
           protocols (->> (drop 1 form)
-                         (filter symbol?)
+                         (filter valid-protocol?)
                          (map str)
                          (set))]
       (when (or *parse-private-defs?*
@@ -263,13 +266,13 @@
         types (filter symbol? (drop 2 form))]
     {:type-extension
      {:protocols #{(str protocol)}
-      :types (set (map str types))}}))
+      :types (set (map pr-str types))}}))
 
 (defn parse-extend-type [form]
   (let [type (second form)
-        protocols (filter symbol? (drop 2 form))]
+        protocols (filter valid-protocol? (drop 2 form))]
     {:type-extension
-     {:types #{(str type)}
+     {:types #{(pr-str type)}
       :protocols (set (map str protocols))}}))
 
 (defn parse-defmulti
