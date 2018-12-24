@@ -9,10 +9,9 @@ see also:
 
 ## Details
 
-Returns a lazy sequence of the non-nil results of `(f item)`. Note, this means
-false return values will be included.
+Returns a lazy sequence of the items in coll for which `(pred item)` returns logical true.
 
-`f` must be free of side-effects.
+`pred` must be free of side-effects.
 
 Returns a transducer when no collection is provided.
 
