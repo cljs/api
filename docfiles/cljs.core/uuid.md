@@ -12,7 +12,7 @@ see also:
 Creates a universally unique identifier (UUID) from the given string, using the
 [doc:cljs.core/UUID] type.
 
-The string has an expected format `8-4-4-12` where the numbers represent the
+The string has an expected format `8-4-4-4-12` where the numbers represent the
 number of hex digits.  No validation is performed.
 
 To create a UUID literal (parsed and validated at compile time), use [doc:syntax/uuid-literal].
