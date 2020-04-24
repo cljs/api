@@ -22,7 +22,8 @@
                                                    spec cljs.spec
                                                    stc cljs.test.check
                                                    env cljs.env
-                                                   comp cljs.compiler}]
+                                                   comp cljs.compiler
+                                                   repl cljs.repl}]
                       (reader/read {:read-cond :allow, :features #{:clj}} r))
                     (catch Exception e
                       (let [eof? (string/includes? (.getMessage e) "EOF")]
