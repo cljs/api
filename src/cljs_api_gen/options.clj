@@ -23,6 +23,7 @@
    :anon-fn-naming-policy {:added "0.0-2411"}
    :asset-path {:added "0.0-2727"}
    :browser-repl {:added "1.9.183"}
+   :bundle-cmd {:added "1.10.738"} ; 66f6bc53b6a80a6cc6bb5049934f91fbd5148e8f
    :cache-analysis {:added "0.0-2511"}
    :cache-analysis-format {:added "1.9.456"}
    :checked-arrays {:added "1.9.854"} ; 84a2128dab9f52e67ee227a66be4f849d83de0a3
@@ -37,6 +38,7 @@
    :closure-variable-map-out {:added "1.10.63"} ; 072677dc0678c3f06acc612d438275d845881f9b
    :closure-warnings {:added "0.0-2120"}
    :compiler-stats {:added "0.0-2629"}
+   :deps-cmd {:added "1.10.738"} ; c20592150f01fffea95ce296483ccdbd57376cb7
    :dump-core {:added "1.7.10"}
    :elide-asserts {:added "0.0-2156"}
    :elide-strict {:added "1.10.312"} ; 03455b4ba4338ab05ffccefc9ddb41c8fd128cfa
@@ -54,6 +56,7 @@
    :libs {:added "0.0-971"}
    :main {:added "0.0-971"}
    :modules {:added "0.0-2911"}
+   :nodejs-rt {:added "1.10.738"} ; 3b83460581508ca4d17a942dfcd03fda8b06cf3c
    :npm-deps {:added "r1.9.518"}
    :optimizations {:added "0.0-971"}
    :optimize-constants {:added "0.0-1877"}
@@ -82,6 +85,7 @@
    :stable-names {:added "1.10.63"} ; 072677dc0678c3f06acc612d438275d845881f9b
    :static-fns {:added "0.0-1424"}
    :target {:added "0.0-971"}
+   :target-fn {:added "1.10.738"} ; 69c80bf4cec272a705a7dfeb4e0d676162d46ff6
    ; :ups-externs {:added "0.0-993"}      ; (see ignored below)
    ; :ups-foreign-libs {:added "0.0-993"} ; (see ignored below)
    ; :ups-libs {:added "0.0-993"}         ; (see ignored below)
@@ -117,6 +121,7 @@
    :source-map-inline {:added "0.0-2911"}
    :src {:added "0.0-1503"} ; b5b20fdc4fa5c9f8a12e527407a72a7e6957bcd6
    :static-dir {:added "0.0-1211"} ; 267605f9ff06ce65212e3e3e29e94d760958e995
+   :warn-on-undeclared {:added "0.0-971"}
    :watch {:added "0.0-2850"} ; 606ccce775706b9f9f6f40ecdcc40d6947226824
    :working-dir {:added "0.0-971"} ; 23d29f174c7a2d454019dca0cde8c1f025d1f21a
    :wrap {:added "0.0-2985"}})
