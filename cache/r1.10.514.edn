@@ -2758,10 +2758,6 @@
            "cljs.repl.rhino/current-repl-env" {:ns "cljs.repl.rhino",
                                                :name "current-repl-env",
                                                :name-encode "current-repl-env",
-                                               :history [["+"
-                                                          "0.0-927"]
-                                                         ["-"
-                                                          "0.0-2629"]],
                                                :type "var",
                                                :full-name-encode "cljs.repl.rhino/current-repl-env",
                                                :source {:code "(def current-repl-env (atom nil))",
@@ -2771,6 +2767,10 @@
                                                         :filename "src/clj/cljs/repl/rhino.clj",
                                                         :lines [18]},
                                                :full-name "cljs.repl.rhino/current-repl-env",
+                                               :history [["+"
+                                                          "0.0-927"]
+                                                         ["-"
+                                                          "0.0-2629"]],
                                                :removed {:in "0.0-2629",
                                                          :last-seen "0.0-2511"}},
            "cljs.core/int-rotate-left" {:return-type number,
@@ -3288,8 +3288,6 @@
            "cljs.spec/*fspec-iterations*" {:ns "cljs.spec",
                                            :name "*fspec-iterations*",
                                            :name-encode "STARfspec-iterationsSTAR",
-                                           :history [["+" "1.9.14"]
-                                                     ["-" "1.9.542"]],
                                            :type "dynamic var",
                                            :full-name-encode "cljs.spec/STARfspec-iterationsSTAR",
                                            :source {:code "(def ^:dynamic *fspec-iterations*\n  \"The number of times an anonymous fn specified by fspec will be (generatively) tested during conform\"\n  21)",
@@ -3299,6 +3297,8 @@
                                                     :filename "src/main/cljs/cljs/spec.cljs",
                                                     :lines [27 29]},
                                            :full-name "cljs.spec/*fspec-iterations*",
+                                           :history [["+" "1.9.14"]
+                                                     ["-" "1.9.542"]],
                                            :removed {:in "1.9.542",
                                                      :last-seen "1.9.521"}},
            "cljs.spec.impl.gen/tuple" {:ns "cljs.spec.impl.gen",
@@ -4496,8 +4496,6 @@
            "cljs.reader/read-comment" {:ns "cljs.reader",
                                        :name "read-comment",
                                        :name-encode "read-comment",
-                                       :history [["+" "0.0-927"]
-                                                 ["-" "1.9.854"]],
                                        :type "var",
                                        :full-name-encode "cljs.reader/read-comment",
                                        :source {:code "(def read-comment skip-line)",
@@ -4507,6 +4505,8 @@
                                                 :filename "src/main/cljs/cljs/reader.cljs",
                                                 :lines [277]},
                                        :full-name "cljs.reader/read-comment",
+                                       :history [["+" "0.0-927"]
+                                                 ["-" "1.9.854"]],
                                        :removed {:in "1.9.854",
                                                  :last-seen "1.9.671"}},
            "closure-warnings/use-of-goog-base" {:ns "closure-warnings",
@@ -5535,7 +5535,19 @@
                                                  :lines [271 272]},
                                         :full-name "cljs.test/get-current-env",
                                         :history [["+" "0.0-2496"]]},
-           "cljs.core/Set" {:ns "cljs.core",
+           "cljs.core/Set" {:protocols #{"IFn"
+                                         "ISeqable"
+                                         "IMeta"
+                                         "IWithMeta"
+                                         "IEmptyableCollection"
+                                         "ISet"
+                                         "ICounted"
+                                         "ILookup"
+                                         "ICollection"
+                                         "IHash"
+                                         "IPrintable"
+                                         "IEquiv"},
+                            :ns "cljs.core",
                             :name "Set",
                             :signature ["[meta hash-map]"],
                             :name-encode "Set",
@@ -6572,8 +6584,6 @@
            "cljs.spec/*coll-check-limit*" {:ns "cljs.spec",
                                            :name "*coll-check-limit*",
                                            :name-encode "STARcoll-check-limitSTAR",
-                                           :history [["+" "1.9.14"]
-                                                     ["-" "1.9.542"]],
                                            :type "dynamic var",
                                            :full-name-encode "cljs.spec/STARcoll-check-limitSTAR",
                                            :source {:code "(def ^:dynamic *coll-check-limit*\n  \"The number of items validated in a collection spec'ed with 'every'\"\n  101)",
@@ -6583,6 +6593,8 @@
                                                     :filename "src/main/cljs/cljs/spec.cljs",
                                                     :lines [31 33]},
                                            :full-name "cljs.spec/*coll-check-limit*",
+                                           :history [["+" "1.9.14"]
+                                                     ["-" "1.9.542"]],
                                            :removed {:in "1.9.542",
                                                      :last-seen "1.9.521"}},
            "cljs.core/identical?" {:return-type boolean,
@@ -7105,7 +7117,7 @@
                                 :type "option",
                                 :full-name-encode "repl-options/host",
                                 :full-name "repl-options/host",
-                                :history [["+" "1.10.329"]]},
+                                :history [["+" "1.10.63"]]},
            "cljs.spec/conform" {:ns "cljs.spec",
                                 :name "conform",
                                 :signature ["[spec x]"],
@@ -7342,6 +7354,14 @@
                                     :full-name-encode "syntax/Math-namespace",
                                     :full-name "syntax/Math-namespace",
                                     :history [["+" "0.0-927"]]},
+           "repl-options/warn-on-undeclared" {:ns "repl-options",
+                                              :name "warn-on-undeclared",
+                                              :name-encode "warn-on-undeclared",
+                                              :type "option",
+                                              :full-name-encode "repl-options/warn-on-undeclared",
+                                              :full-name "repl-options/warn-on-undeclared",
+                                              :history [["+"
+                                                         "0.0-971"]]},
            "cljs.repl/apropos" {:ns "cljs.repl",
                                 :name "apropos",
                                 :signature ["[str-or-pattern]"],
@@ -8129,8 +8149,6 @@
            "cljs.repl.rhino/loaded-libs" {:ns "cljs.repl.rhino",
                                           :name "loaded-libs",
                                           :name-encode "loaded-libs",
-                                          :history [["+" "0.0-927"]
-                                                    ["-" "0.0-1576"]],
                                           :type "var",
                                           :full-name-encode "cljs.repl.rhino/loaded-libs",
                                           :source {:code "(def loaded-libs (atom #{}))",
@@ -8140,6 +8158,8 @@
                                                    :filename "src/clj/cljs/repl/rhino.clj",
                                                    :lines [20]},
                                           :full-name "cljs.repl.rhino/loaded-libs",
+                                          :history [["+" "0.0-927"]
+                                                    ["-" "0.0-1576"]],
                                           :removed {:in "0.0-1576",
                                                     :last-seen "0.0-1552"}},
            "cljs.core/cloneable?" {:ns "cljs.core",
@@ -8338,8 +8358,6 @@
            "cljs.spec/registry-ref" {:ns "cljs.spec",
                                      :name "registry-ref",
                                      :name-encode "registry-ref",
-                                     :history [["+" "1.9.183"]
-                                               ["-" "1.9.542"]],
                                      :type "var",
                                      :full-name-encode "cljs.spec/registry-ref",
                                      :source {:code "(defonce registry-ref (atom {}))",
@@ -8349,6 +8367,8 @@
                                               :filename "src/main/cljs/cljs/spec.cljc",
                                               :lines [19]},
                                      :full-name "cljs.spec/registry-ref",
+                                     :history [["+" "1.9.183"]
+                                               ["-" "1.9.542"]],
                                      :removed {:in "1.9.542",
                                                :last-seen "1.9.521"}},
            "cljs.core/ns-unmap" {:ns "cljs.core",
@@ -9124,7 +9144,7 @@
                                :type "option",
                                :full-name-encode "repl-options/src",
                                :full-name "repl-options/src",
-                               :history [["+" "1.10.329"]]},
+                               :history [["+" "0.0-1503"]]},
            "cljs.core/PersistentArrayMap.createWithCheck" {:ns "cljs.core",
                                                            :name "PersistentArrayMap.createWithCheck",
                                                            :signature ["[arr]"],
@@ -9443,7 +9463,21 @@
                                                   :lines [74 76]},
                                          :full-name "cljs.spec.gen.alpha/double",
                                          :docstring "Fn returning clojure.test.check.generators/double"},
-           "cljs.core/HashMap" {:ns "cljs.core",
+           "cljs.core/HashMap" {:protocols #{"IFn"
+                                             "ISeqable"
+                                             "IMap"
+                                             "IMeta"
+                                             "IWithMeta"
+                                             "IEmptyableCollection"
+                                             "ICounted"
+                                             "ILookup"
+                                             "ICollection"
+                                             "IHash"
+                                             "IPrintWithWriter"
+                                             "IAssociative"
+                                             "IPrintable"
+                                             "IEquiv"},
+                                :ns "cljs.core",
                                 :name "HashMap",
                                 :signature ["[meta count hashobj __hash]"],
                                 :name-encode "HashMap",
@@ -9494,8 +9528,6 @@
            "cljs.reader/int-pattern" {:ns "cljs.reader",
                                       :name "int-pattern",
                                       :name-encode "int-pattern",
-                                      :history [["+" "0.0-927"]
-                                                ["-" "1.9.854"]],
                                       :type "var",
                                       :full-name-encode "cljs.reader/int-pattern",
                                       :source {:code "(def int-pattern (re-pattern \"^([-+]?)(?:(0)|([1-9][0-9]*)|0[xX]([0-9A-Fa-f]+)|0([0-7]+)|([1-9][0-9]?)[rR]([0-9A-Za-z]+))(N)?$\"))",
@@ -9505,6 +9537,8 @@
                                                :filename "src/main/cljs/cljs/reader.cljs",
                                                :lines [99]},
                                       :full-name "cljs.reader/int-pattern",
+                                      :history [["+" "0.0-927"]
+                                                ["-" "1.9.854"]],
                                       :removed {:in "1.9.854",
                                                 :last-seen "1.9.671"}},
            "cljs.core/swap!" {:ns "cljs.core",
@@ -11742,7 +11776,19 @@
                                           :full-name "cljs.reader/wrapping-reader",
                                           :removed {:in "1.9.854",
                                                     :last-seen "1.9.671"}},
-           "cljs.core/LazyTransformer" {:ns "cljs.core",
+           "cljs.core/LazyTransformer" {:protocols #{"ISeqable"
+                                                     "IMeta"
+                                                     "IWithMeta"
+                                                     "IEmptyableCollection"
+                                                     "IPending"
+                                                     "ISequential"
+                                                     "ISeq"
+                                                     "ICollection"
+                                                     "IHash"
+                                                     "IPrintWithWriter"
+                                                     "INext"
+                                                     "IEquiv"},
+                                        :ns "cljs.core",
                                         :name "LazyTransformer",
                                         :signature ["[stepper first rest meta]"],
                                         :name-encode "LazyTransformer",
@@ -11790,7 +11836,8 @@
                                          :lines [812 816]},
                                 :full-name "cljs.repl/demunge",
                                 :docstring "Given a string representation of a fn class,\nas in a stack trace element, returns a readable version."},
-           "cljs.spec.impl.gen/LazyVar" {:ns "cljs.spec.impl.gen",
+           "cljs.spec.impl.gen/LazyVar" {:protocols #{"IDeref"},
+                                         :ns "cljs.spec.impl.gen",
                                          :name "LazyVar",
                                          :signature ["[f cached]"],
                                          :name-encode "LazyVar",
@@ -12210,8 +12257,6 @@
            "cljs.reader/unicode-4-pattern" {:ns "cljs.reader",
                                             :name "unicode-4-pattern",
                                             :name-encode "unicode-4-pattern",
-                                            :history [["+" "0.0-1424"]
-                                                      ["-" "1.9.854"]],
                                             :type "var",
                                             :full-name-encode "cljs.reader/unicode-4-pattern",
                                             :source {:code "(def unicode-4-pattern (re-pattern \"^[0-9A-Fa-f]{4}$\"))",
@@ -12221,6 +12266,8 @@
                                                      :filename "src/main/cljs/cljs/reader.cljs",
                                                      :lines [183]},
                                             :full-name "cljs.reader/unicode-4-pattern",
+                                            :history [["+" "0.0-1424"]
+                                                      ["-" "1.9.854"]],
                                             :removed {:in "1.9.854",
                                                       :last-seen "1.9.671"}},
            "clojure.browser.repl/bootstrap" {:ns "clojure.browser.repl",
@@ -13466,7 +13513,7 @@
                                           :type "option",
                                           :full-name-encode "repl-options/launch-browser",
                                           :full-name "repl-options/launch-browser",
-                                          :history [["+" "1.10.329"]]},
+                                          :history [["+" "1.10.126"]]},
            "cljs.core/unchecked-subtract-int" {:return-type number,
                                                :ns "cljs.core",
                                                :name "unchecked-subtract-int",
@@ -13638,9 +13685,6 @@
            "cljs.repl.browser/server-state" {:ns "cljs.repl.browser",
                                              :name "server-state",
                                              :name-encode "server-state",
-                                             :history [["+" "0.0-927"]
-                                                       ["-"
-                                                        "0.0-1503"]],
                                              :type "var",
                                              :full-name-encode "cljs.repl.browser/server-state",
                                              :source {:code "(defonce server-state (atom {:socket nil\n                             :connection nil\n                             :promised-conn nil\n                             :return-value-fn nil\n                             :client-js nil}))",
@@ -13650,6 +13694,9 @@
                                                       :filename "src/clj/cljs/repl/browser.clj",
                                                       :lines [24 28]},
                                              :full-name "cljs.repl.browser/server-state",
+                                             :history [["+" "0.0-927"]
+                                                       ["-"
+                                                        "0.0-1503"]],
                                              :removed {:in "0.0-1503",
                                                        :last-seen "0.0-1450"}},
            "cljs.core/random-sample" {:ns "cljs.core",
@@ -14073,7 +14120,11 @@
                                             :docstring "If no ys are supplied, returns the negation of x, else subtracts\nthe ys from x and returns the result.",
                                             :removed {:in "0.0-2277",
                                                       :last-seen "0.0-2268"}},
-           "cljs.core/Iteration" {:ns "cljs.core",
+           "cljs.core/Iteration" {:protocols #{"ISeqable"
+                                               "IReduce"
+                                               "ISequential"
+                                               "IPrintWithWriter"},
+                                  :ns "cljs.core",
                                   :name "Iteration",
                                   :signature ["[xform coll]"],
                                   :name-encode "Iteration",
@@ -14659,7 +14710,7 @@
                                  :type "option",
                                  :full-name-encode "repl-options/inits",
                                  :full-name "repl-options/inits",
-                                 :history [["+" "1.10.329"]]},
+                                 :history [["+" "1.10.63"]]},
            "cljs.repl.browser/read-headers" {:ns "cljs.repl.browser",
                                              :name "read-headers",
                                              :signature ["[rdr]"],
@@ -15525,6 +15576,40 @@
            "cljs.core/IPrintable" {:ns "cljs.core",
                                    :name "IPrintable",
                                    :name-encode "IPrintable",
+                                   :implementations #{"Subvec"
+                                                      "boolean"
+                                                      "string"
+                                                      "PersistentQueue"
+                                                      "PersistentHashMap"
+                                                      "PersistentTreeSet"
+                                                      "js/Date"
+                                                      "RedNode"
+                                                      "EmptyList"
+                                                      "ObjMap"
+                                                      "BlackNode"
+                                                      "PersistentVector"
+                                                      "ChunkedCons"
+                                                      "Range"
+                                                      "ChunkedSeq"
+                                                      "ArrayNodeSeq"
+                                                      "IndexedSeq"
+                                                      "number"
+                                                      "PersistentTreeMap"
+                                                      "PersistentTreeMapSeq"
+                                                      "RSeq"
+                                                      "Vector"
+                                                      "function"
+                                                      "PersistentArrayMap"
+                                                      "PersistentHashSet"
+                                                      "HashMap"
+                                                      "NodeSeq"
+                                                      "List"
+                                                      "Atom"
+                                                      "nil"
+                                                      "Cons"
+                                                      "LazySeq"
+                                                      "array"
+                                                      "UUID"},
                                    :history [["+" "0.0-927"]
                                              ["-" "0.0-1798"]],
                                    :type "protocol",
@@ -16216,7 +16301,7 @@
                                 :type "option",
                                 :full-name-encode "repl-options/port",
                                 :full-name "repl-options/port",
-                                :history [["+" "1.10.329"]]},
+                                :history [["+" "1.10.63"]]},
            "cljs.repl.browser/create-client-js-file" {:ns "cljs.repl.browser",
                                                       :name "create-client-js-file",
                                                       :signature ["[opts file-path]"],
@@ -16560,8 +16645,6 @@
            "cljs.spec/*explain-out*" {:ns "cljs.spec",
                                       :name "*explain-out*",
                                       :name-encode "STARexplain-outSTAR",
-                                      :history [["+" "1.9.293"]
-                                                ["-" "1.9.542"]],
                                       :type "dynamic var",
                                       :full-name-encode "cljs.spec/STARexplain-outSTAR",
                                       :source {:code "(def ^:dynamic *explain-out* explain-printer)",
@@ -16571,6 +16654,8 @@
                                                :filename "src/main/cljs/cljs/spec.cljs",
                                                :lines [246]},
                                       :full-name "cljs.spec/*explain-out*",
+                                      :history [["+" "1.9.293"]
+                                                ["-" "1.9.542"]],
                                       :removed {:in "1.9.542",
                                                 :last-seen "1.9.521"}},
            "cljs.spec.gen.alpha/one-of" {:ns "cljs.spec.gen.alpha",
@@ -16591,8 +16676,6 @@
            "cljs.reader/unicode-2-pattern" {:ns "cljs.reader",
                                             :name "unicode-2-pattern",
                                             :name-encode "unicode-2-pattern",
-                                            :history [["+" "0.0-1424"]
-                                                      ["-" "1.9.854"]],
                                             :type "var",
                                             :full-name-encode "cljs.reader/unicode-2-pattern",
                                             :source {:code "(def unicode-2-pattern (re-pattern \"^[0-9A-Fa-f]{2}$\"))",
@@ -16602,6 +16685,8 @@
                                                      :filename "src/main/cljs/cljs/reader.cljs",
                                                      :lines [182]},
                                             :full-name "cljs.reader/unicode-2-pattern",
+                                            :history [["+" "0.0-1424"]
+                                                      ["-" "1.9.854"]],
                                             :removed {:in "1.9.854",
                                                       :last-seen "1.9.671"}},
            "cljs.repl/IGetError" {:ns "cljs.repl",
@@ -17067,8 +17152,6 @@
            "cljs.repl.browser/loaded-libs" {:ns "cljs.repl.browser",
                                             :name "loaded-libs",
                                             :name-encode "loaded-libs",
-                                            :history [["+" "0.0-927"]
-                                                      ["-" "0.0-3115"]],
                                             :type "var",
                                             :full-name-encode "cljs.repl.browser/loaded-libs",
                                             :source {:code "(def loaded-libs (atom #{}))",
@@ -17078,6 +17161,8 @@
                                                      :filename "src/clj/cljs/repl/browser.clj",
                                                      :lines [26]},
                                             :full-name "cljs.repl.browser/loaded-libs",
+                                            :history [["+" "0.0-927"]
+                                                      ["-" "0.0-3115"]],
                                             :removed {:in "0.0-3115",
                                                       :last-seen "0.0-3058"}},
            "cljs.core/areduce" {:ns "cljs.core",
@@ -17320,11 +17405,7 @@
                                     :docstring "Marker interface indicating a persistent collection of sequential items"},
            "cljs.core/try*" {:ns "cljs.core",
                              :name "try*",
-                             :name-encode "trySTAR",
-                             :history [["+" "0.0-927"]
-                                       ["-" "0.0-1933"]],
                              :type "special form",
-                             :full-name-encode "cljs.core/trySTAR",
                              :source {:code "(defmethod parse 'try*\n  [op env [_ & body :as form] name]\n  (let [body (vec body)\n        catchenv (update-in env [:context] #(if (= :expr %) :return %))\n        tail (peek body)\n        fblock (when (and (seq? tail) (= 'finally (first tail)))\n                  (rest tail))\n        finally (when fblock\n                  (analyze (assoc env :context :statement) `(do ~@fblock)))\n        body (if finally (pop body) body)\n        tail (peek body)\n        cblock (when (and (seq? tail)\n                          (= 'catch (first tail)))\n                 (rest tail))\n        name (first cblock)\n        locals (:locals catchenv)\n        locals (if name\n                 (assoc locals name\n                   {:name name\n                    :line (get-line name env)\n                    :column (get-col name env)})\n                 locals)\n        catch (when cblock\n                (analyze (assoc catchenv :locals locals) `(do ~@(rest cblock))))\n        body (if name (pop body) body)\n        try (analyze (if (or name finally) catchenv env) `(do ~@body))]\n    (when name (assert (not (namespace name)) \"Can't qualify symbol in catch\"))\n    {:env env :op :try* :form form\n     :try try\n     :finally finally\n     :name name\n     :catch catch\n     :children [try catch finally]}))",
                                       :title "Parser code",
                                       :repo "clojurescript",
@@ -17332,6 +17413,10 @@
                                       :filename "src/clj/cljs/analyzer.clj",
                                       :lines [280 312]},
                              :full-name "cljs.core/try*",
+                             :full-name-encode "cljs.core/trySTAR",
+                             :name-encode "trySTAR",
+                             :history [["+" "0.0-927"]
+                                       ["-" "0.0-1933"]],
                              :removed {:in "0.0-1933",
                                        :last-seen "0.0-1913"}},
            "cljs.spec.impl.gen/symbol-ns" {:ns "cljs.spec.impl.gen",
@@ -18232,8 +18317,6 @@
            "cljs.reader/ratio-pattern" {:ns "cljs.reader",
                                         :name "ratio-pattern",
                                         :name-encode "ratio-pattern",
-                                        :history [["+" "0.0-927"]
-                                                  ["-" "1.9.854"]],
                                         :type "var",
                                         :full-name-encode "cljs.reader/ratio-pattern",
                                         :source {:code "(def ratio-pattern (re-pattern \"^([-+]?[0-9]+)/([0-9]+)$\"))",
@@ -18243,6 +18326,8 @@
                                                  :filename "src/main/cljs/cljs/reader.cljs",
                                                  :lines [100]},
                                         :full-name "cljs.reader/ratio-pattern",
+                                        :history [["+" "0.0-927"]
+                                                  ["-" "1.9.854"]],
                                         :removed {:in "1.9.854",
                                                   :last-seen "1.9.671"}},
            "cljs.core/println-str" {:ns "cljs.core",
@@ -20062,8 +20147,6 @@
            "cljs.spec/*coll-error-limit*" {:ns "cljs.spec",
                                            :name "*coll-error-limit*",
                                            :name-encode "STARcoll-error-limitSTAR",
-                                           :history [["+" "1.9.85"]
-                                                     ["-" "1.9.542"]],
                                            :type "dynamic var",
                                            :full-name-encode "cljs.spec/STARcoll-error-limitSTAR",
                                            :source {:code "(def ^:dynamic *coll-error-limit*\n  \"The number of errors reported by explain in a collection spec'ed with 'every'\"\n  20)",
@@ -20073,6 +20156,8 @@
                                                     :filename "src/main/cljs/cljs/spec.cljs",
                                                     :lines [35 37]},
                                            :full-name "cljs.spec/*coll-error-limit*",
+                                           :history [["+" "1.9.85"]
+                                                     ["-" "1.9.542"]],
                                            :removed {:in "1.9.542",
                                                      :last-seen "1.9.521"}},
            "cljs.core/min" {:return-type number,
@@ -22550,8 +22635,6 @@
            "cljs.repl/spec-sort" {:ns "cljs.repl",
                                   :name "spec-sort",
                                   :name-encode "spec-sort",
-                                  :history [["+" "0.0-2629"]
-                                            ["-" "0.0-2655"]],
                                   :type "var",
                                   :full-name-encode "cljs.repl/spec-sort",
                                   :source {:code "(def spec-sort\n  {:as 0\n   :refer 1\n   :refer-macros 2\n   :include-macros 3})",
@@ -22561,6 +22644,8 @@
                                            :filename "src/clj/cljs/repl.clj",
                                            :lines [190 194]},
                                   :full-name "cljs.repl/spec-sort",
+                                  :history [["+" "0.0-2629"]
+                                            ["-" "0.0-2655"]],
                                   :removed {:in "0.0-2655",
                                             :last-seen "0.0-2644"}},
            "clojure.zip/next" {:ns "clojure.zip",
@@ -23266,10 +23351,6 @@
            "cljs.repl.browser/preloaded-libs" {:ns "cljs.repl.browser",
                                                :name "preloaded-libs",
                                                :name-encode "preloaded-libs",
-                                               :history [["+"
-                                                          "0.0-1424"]
-                                                         ["-"
-                                                          "0.0-3115"]],
                                                :type "var",
                                                :full-name-encode "cljs.repl.browser/preloaded-libs",
                                                :source {:code "(def preloaded-libs (atom #{}))",
@@ -23279,6 +23360,10 @@
                                                         :filename "src/clj/cljs/repl/browser.clj",
                                                         :lines [28]},
                                                :full-name "cljs.repl.browser/preloaded-libs",
+                                               :history [["+"
+                                                          "0.0-1424"]
+                                                         ["-"
+                                                          "0.0-3115"]],
                                                :removed {:in "0.0-3115",
                                                          :last-seen "0.0-3058"}},
            "cljs.core/IReduce" {:ns "cljs.core",
@@ -23327,8 +23412,6 @@
            "cljs.reader/symbol-pattern" {:ns "cljs.reader",
                                          :name "symbol-pattern",
                                          :name-encode "symbol-pattern",
-                                         :history [["+" "0.0-927"]
-                                                   ["-" "1.9.854"]],
                                          :type "var",
                                          :full-name-encode "cljs.reader/symbol-pattern",
                                          :source {:code "(def symbol-pattern (re-pattern \"^[:]?([^0-9/].*/)?([^0-9/][^/]*)$\"))",
@@ -23338,6 +23421,8 @@
                                                   :filename "src/main/cljs/cljs/reader.cljs",
                                                   :lines [102]},
                                          :full-name "cljs.reader/symbol-pattern",
+                                         :history [["+" "0.0-927"]
+                                                   ["-" "1.9.854"]],
                                          :removed {:in "1.9.854",
                                                    :last-seen "1.9.671"}},
            "cljs.core/PersistentHashSet.fromArray" {:ns "cljs.core",
@@ -24966,8 +25051,6 @@
            "cljs.spec/MAX_INT" {:ns "cljs.spec",
                                 :name "MAX_INT",
                                 :name-encode "MAX_INT",
-                                :history [["+" "1.9.85"]
-                                          ["-" "1.9.542"]],
                                 :type "var",
                                 :full-name-encode "cljs.spec/MAX_INT",
                                 :source {:code "(def ^:const MAX_INT 9007199254740991)",
@@ -24977,6 +25060,8 @@
                                          :filename "src/main/cljs/cljs/spec.cljs",
                                          :lines [19]},
                                 :full-name "cljs.spec/MAX_INT",
+                                :history [["+" "1.9.85"]
+                                          ["-" "1.9.542"]],
                                 :removed {:in "1.9.542",
                                           :last-seen "1.9.521"}},
            "compiler-options/language-out" {:ns "compiler-options",
@@ -27115,8 +27200,6 @@
            "cljs.reader/float-pattern" {:ns "cljs.reader",
                                         :name "float-pattern",
                                         :name-encode "float-pattern",
-                                        :history [["+" "0.0-927"]
-                                                  ["-" "1.9.854"]],
                                         :type "var",
                                         :full-name-encode "cljs.reader/float-pattern",
                                         :source {:code "(def float-pattern (re-pattern \"^([-+]?[0-9]+(\\\\.[0-9]*)?([eE][-+]?[0-9]+)?)(M)?$\"))",
@@ -27126,6 +27209,8 @@
                                                  :filename "src/main/cljs/cljs/reader.cljs",
                                                  :lines [101]},
                                         :full-name "cljs.reader/float-pattern",
+                                        :history [["+" "0.0-927"]
+                                                  ["-" "1.9.854"]],
                                         :removed {:in "1.9.854",
                                                   :last-seen "1.9.671"}},
            "cljs.core/find-ns-obj" {:ns "cljs.core",
@@ -28970,7 +29055,7 @@
                                       :type "option",
                                       :full-name-encode "repl-options/static-dir",
                                       :full-name "repl-options/static-dir",
-                                      :history [["+" "1.10.329"]]},
+                                      :history [["+" "0.0-1211"]]},
            "cljs.core/VectorNode" {:ns "cljs.core",
                                    :name "VectorNode",
                                    :signature ["[edit arr]"],
@@ -29458,7 +29543,8 @@
                                                     :name-encode "report-unknown-types",
                                                     :history [["+"
                                                                "1.9.473"]]},
-           "cljs.reader/StringPushbackReader" {:ns "cljs.reader",
+           "cljs.reader/StringPushbackReader" {:protocols #{"PushbackReader"},
+                                               :ns "cljs.reader",
                                                :name "StringPushbackReader",
                                                :signature ["[s buffer idx]"],
                                                :name-encode "StringPushbackReader",
@@ -29750,7 +29836,7 @@
                                        :type "option",
                                        :full-name-encode "repl-options/working-dir",
                                        :full-name "repl-options/working-dir",
-                                       :history [["+" "1.10.329"]]},
+                                       :history [["+" "0.0-971"]]},
            "cljs.core/require" {:ns "cljs.core",
                                 :name "require",
                                 :signature ["[& args]"],
@@ -30240,8 +30326,6 @@
            "cljs.spec/*recursion-limit*" {:ns "cljs.spec",
                                           :name "*recursion-limit*",
                                           :name-encode "STARrecursion-limitSTAR",
-                                          :history [["+" "1.9.14"]
-                                                    ["-" "1.9.542"]],
                                           :type "dynamic var",
                                           :full-name-encode "cljs.spec/STARrecursion-limitSTAR",
                                           :source {:code "(def ^:dynamic *recursion-limit*\n  \"A soft limit on how many times a branching spec (or/alt/*/opt-keys/multi-spec)\n  can be recursed through during generation. After this a\n  non-recursive branch will be chosen.\"\n  4)",
@@ -30251,6 +30335,8 @@
                                                    :filename "src/main/cljs/cljs/spec.cljs",
                                                    :lines [21 25]},
                                           :full-name "cljs.spec/*recursion-limit*",
+                                          :history [["+" "1.9.14"]
+                                                    ["-" "1.9.542"]],
                                           :removed {:in "1.9.542",
                                                     :last-seen "1.9.521"}},
            "cljs.core/*assert*" {:ns "cljs.core",
@@ -30819,7 +30905,25 @@
                                        :full-name "cljs.reader/read-keyword",
                                        :removed {:in "1.9.854",
                                                  :last-seen "1.9.671"}},
-           "cljs.core/Vector" {:ns "cljs.core",
+           "cljs.core/Vector" {:protocols #{"IFn"
+                                            "ISeqable"
+                                            "IMeta"
+                                            "IWithMeta"
+                                            "IStack"
+                                            "IEmptyableCollection"
+                                            "ICounted"
+                                            "IReduce"
+                                            "ILookup"
+                                            "ISequential"
+                                            "ICollection"
+                                            "IHash"
+                                            "IPrintWithWriter"
+                                            "IIndexed"
+                                            "IAssociative"
+                                            "IVector"
+                                            "IPrintable"
+                                            "IEquiv"},
+                               :ns "cljs.core",
                                :name "Vector",
                                :signature ["[meta array __hash]"],
                                :name-encode "Vector",
@@ -32601,8 +32705,6 @@
            "cljs.pprint/*out*" {:ns "cljs.pprint",
                                 :name "*out*",
                                 :name-encode "STARoutSTAR",
-                                :history [["+" "0.0-3255"]
-                                          ["-" "1.7.10"]],
                                 :type "dynamic var",
                                 :full-name-encode "cljs.pprint/STARoutSTAR",
                                 :source {:code "(def ^:dynamic *out* nil)",
@@ -32612,6 +32714,8 @@
                                          :filename "src/main/cljs/cljs/pprint.cljs",
                                          :lines [21]},
                                 :full-name "cljs.pprint/*out*",
+                                :history [["+" "0.0-3255"]
+                                          ["-" "1.7.10"]],
                                 :removed {:in "1.7.10",
                                           :last-seen "0.0-3308"}},
            "cljs.core/realized?" {:return-type boolean,
@@ -33015,7 +33119,7 @@
                               :type "namespace",
                               :full-name "repl-options",
                               :full-name-encode "repl-options",
-                              :history [["+" "0.0-1552"]]},
+                              :history [["+" "0.0-971"]]},
               "warnings" {:pseudo-ns? true,
                           :sub-options-sym "compiler-options/warnings",
                           :ns "warnings",
@@ -33493,7 +33597,10 @@
                            "1.9.89" {},
                            "0.0-2301" {},
                            "0.0-1909" {},
-                           "1.10.63" {:added #{"compiler-options/closure-property-map-out"
+                           "1.10.63" {:added #{"repl-options/host"
+                                               "compiler-options/closure-property-map-out"
+                                               "repl-options/inits"
+                                               "repl-options/port"
                                                "compiler-options/closure-variable-map-in"
                                                "compiler-options/closure-property-map-in"
                                                "compiler-options/stable-names"
@@ -33577,7 +33684,7 @@
                            "0.0-2655" {},
                            "1.7.145" {},
                            "0.0-1513" {:added #{"compiler-options/output-wrapper"}},
-                           "0.0-1503" {},
+                           "0.0-1503" {:added #{"repl-options/src"}},
                            "1.9.946" {:added #{"compiler-options/rename-prefix-namespace"
                                                "compiler-options/rename-prefix"}},
                            "0.0-1933" {},
@@ -33585,6 +33692,7 @@
                            "0.0-1895" {},
                            "0.0-971" {:added #{"compiler-options/verbose"
                                                "compiler-options/libs"
+                                               "repl-options/warn-on-undeclared"
                                                "compiler-options/optimizations"
                                                "compiler-options/pretty-print"
                                                "compiler-options/target"
@@ -33594,6 +33702,7 @@
                                                "compiler-options/print-input-delimiter"
                                                "compiler-options/foreign-libs"
                                                "compiler-options/externs"
+                                               "repl-options/working-dir"
                                                "compiler-options/output-to"}},
                            "0.0-2027" {},
                            "0.0-1978" {},
@@ -33650,7 +33759,7 @@
                            "1.7.170" {},
                            "0.0-1798" {:added #{"compiler-options/source-map"}},
                            "0.0-1877" {:added #{"compiler-options/optimize-constants"}},
-                           "0.0-1211" {},
+                           "0.0-1211" {:added #{"repl-options/static-dir"}},
                            "1.10.145" {},
                            "0.0-1449" {},
                            "0.0-2911" {:added #{"repl-options/reader"
@@ -33670,13 +33779,7 @@
                            "0.0-1011" {},
                            "0.0-2356" {},
                            "1.7.122" {},
-                           "1.10.329" {:added #{"repl-options/host"
-                                                "repl-options/src"
-                                                "repl-options/launch-browser"
-                                                "repl-options/inits"
-                                                "repl-options/port"
-                                                "repl-options/static-dir"
-                                                "repl-options/working-dir"}},
+                           "1.10.329" {},
                            "0.0-3211" {},
                            "0.0-3053" {},
                            "0.0-2985" {:added #{"repl-options/wrap"}},
@@ -33693,7 +33796,8 @@
                            "1.9.76" {},
                            "0.0-3165" {},
                            "0.0-2202" {},
-                           "1.10.126" {:added #{"compiler-options/opts-cache"
+                           "1.10.126" {:added #{"repl-options/launch-browser"
+                                                "compiler-options/opts-cache"
                                                 "compiler-options/aot-cache"}},
                            "0.0-1820" {},
                            "1.9.456" {:added #{"compiler-options/infer-externs"
@@ -33760,6 +33864,7 @@
                                  "repl-options/bind-err"
                                  "repl-options/host"
                                  "closure-warnings/type-invalidation"
+                                 "repl-options/warn-on-undeclared"
                                  "compiler-options/optimizations"
                                  "warnings/redef-in-file"
                                  "closure-warnings/jsdoc-missing-type"
