@@ -1245,4 +1245,12 @@
   :p "jar",
   :timestamp 1631649985000,
   :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
+  :tags ["clojure" "environment" "library" "runtime" "core"]}
+ {:id "org.clojure:clojure:1.11.0-alpha3",
+  :g "org.clojure",
+  :a "clojure",
+  :v "1.11.0-alpha3",
+  :p "jar",
+  :timestamp 1637695695000,
+  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
   :tags ["clojure" "environment" "library" "runtime" "core"]}]
