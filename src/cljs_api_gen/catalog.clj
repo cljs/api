@@ -81,9 +81,10 @@
         master-tag (get-master-tag "clojurescript")
 
         tags (case version
-               ;; (When latest, we also parse master)
-               :latest (cond-> @published-cljs-tags
-                         (not= last-tag master-tag) (concat [master-tag]))
+               :latest @published-cljs-tags
+                       ;; I used to parse unpublished commits on master when cljs was slower to publish recent changes, but I’m removing this now:
+                       ;;  (cond-> @published-cljs-tags
+                       ;;   (not= last-tag master-tag) (concat [master-tag]))
                (if-not ((set @published-cljs-tags) version)
                  (do
                    (println (style "Unrecognized version tag" :red) version)
