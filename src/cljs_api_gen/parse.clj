@@ -61,19 +61,21 @@
    :library
    {"cljs.pprint"           :normal
     "cljs.reader"           :normal
-    "clojure.edn"           :normal
-    "clojure.datafy"        :normal
     "clojure.set"           :normal
     "clojure.string"        :normal
     "clojure.walk"          :normal
     "clojure.zip"           :normal
     "clojure.data"          :normal
+    "clojure.datafy"        :normal
+    "clojure.edn"           :normal
     "clojure.browser.dom"   :normal
     "clojure.browser.event" :normal
     "clojure.browser.net"   :normal
     "clojure.browser.repl"  :normal
     "clojure.core.reducers" :normal
+    "clojure.core.protocols":normal
     "clojure.reflect"       :normal
+    "cljs.math"             :normal
     "cljs.nodejs"           :normal
     "cljs.js"               :normal
     "cljs.spec"             :normal
