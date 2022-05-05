@@ -235,11 +235,17 @@
         docstring (let [d (first form)]
                     (when (string? d) d))
         form (if docstring (drop 1 form) form)
+        [opts form] (loop [opts {}
+                           [a b & etc :as form] form]
+                      (if (keyword? a)
+                        (recur (assoc opts a b) etc)
+                        [opts form]))
         method-lists form
         pmethods (mapv parse-protocol-method method-lists)]
     (when (or *parse-private-defs?*
               (not private?))
       {:docstring docstring
+       :options opts
        :signature nil
        :methods pmethods
        :type "protocol"})))
