@@ -1989,7 +1989,6 @@
                  "clojure.reflect/Constructor"
                  "clojure.test/*stack-trace-depth*"
                  "clojure.reflect/resolve-class"
-                 "clojure.edn/read"
                  "clojure.java.io/as-file"
                  "clojure.core/ns-aliases"
                  "clojure.main/stack-element-str"
@@ -2000,7 +1999,6 @@
                  "clojure.core/send-via"
                  "clojure.core/set-agent-send-executor!"
                  "clojure.core/aset-int"
-                 "clojure.edn/read-string"
                  "clojure.stacktrace/print-throwable"
                  "clojure.reflect/map->Method"
                  "clojure.main/repl-prompt"
@@ -4697,10 +4695,10 @@
                                                  :last-seen "1.9.671"}},
            "closure-warnings/use-of-goog-base" {:ns "closure-warnings",
                                                 :name "use-of-goog-base",
-                                                :type "warning",
-                                                :full-name "closure-warnings/use-of-goog-base",
-                                                :full-name-encode "closure-warnings/use-of-goog-base",
                                                 :name-encode "use-of-goog-base",
+                                                :type "warning",
+                                                :full-name-encode "closure-warnings/use-of-goog-base",
+                                                :full-name "closure-warnings/use-of-goog-base",
                                                 :history [["+"
                                                            "1.9.473"]
                                                           ["-"
@@ -4781,6 +4779,21 @@
                                                             :lines [4226
                                                                     4228]},
                                                    :full-name "cljs.core/TransformerIterator.create"},
+           "clojure.datafy/nav" {:ns "clojure.datafy",
+                                 :name "nav",
+                                 :signature ["[coll k v]"],
+                                 :name-encode "nav",
+                                 :history [["+" "1.10.514"]],
+                                 :type "function",
+                                 :full-name-encode "clojure.datafy/nav",
+                                 :source {:code "(defn nav\n  [coll k v]\n  (p/nav coll k v))",
+                                          :title "Source code",
+                                          :repo "clojurescript",
+                                          :tag "r1.10.896",
+                                          :filename "src/main/cljs/clojure/datafy.cljs",
+                                          :lines [31 38]},
+                                 :full-name "clojure.datafy/nav",
+                                 :docstring "Returns (possibly transformed) v in the context of coll and k (a\nkey/index or nil). Callers should attempt to provide the key/index\ncontext k for Indexed/Associative/ILookup colls if possible, but not\nto fabricate one e.g. for sequences (pass nil). nav will return the\nvalue of clojure.core.protocols/nav."},
            "cljs.repl.node/socket" {:ns "cljs.repl.node",
                                     :name "socket",
                                     :signature ["[host port]"],
@@ -5750,10 +5763,10 @@
                                                           "1.9.473"]]},
            "closure-warnings/es3" {:ns "closure-warnings",
                                    :name "es3",
-                                   :type "warning",
-                                   :full-name "closure-warnings/es3",
-                                   :full-name-encode "closure-warnings/es3",
                                    :name-encode "es3",
+                                   :type "warning",
+                                   :full-name-encode "closure-warnings/es3",
+                                   :full-name "closure-warnings/es3",
                                    :history [["+" "1.9.473"]
                                              ["-" "1.10.738"]],
                                    :removed {:in "1.10.738",
@@ -6267,10 +6280,10 @@
                           :full-name "syntax/-Inf"},
            "closure-warnings/strict-missing-require" {:ns "closure-warnings",
                                                       :name "strict-missing-require",
-                                                      :type "warning",
-                                                      :full-name "closure-warnings/strict-missing-require",
-                                                      :full-name-encode "closure-warnings/strict-missing-require",
                                                       :name-encode "strict-missing-require",
+                                                      :type "warning",
+                                                      :full-name-encode "closure-warnings/strict-missing-require",
+                                                      :full-name "closure-warnings/strict-missing-require",
                                                       :history [["+"
                                                                  "1.9.473"]
                                                                 ["-"
@@ -6444,7 +6457,7 @@
                                                 ["-" "1.10.738"]],
                                       :type "function",
                                       :full-name-encode "cljs.repl.nashorn/-main",
-                                      :source {:code "    (defn -main [& args]\n      (apply cli/main repl-env args))",
+                                      :source {:code "(defn -main [& args]\n      (apply cli/main repl-env args))",
                                                :title "Source code",
                                                :repo "clojurescript",
                                                :tag "r1.10.597",
@@ -6985,7 +6998,9 @@
                                      :name "js-arguments",
                                      :signature ["[]"],
                                      :name-encode "js-arguments",
-                                     :history [["+" "1.9.494"]],
+                                     :history [["+" "0.0-1798"]
+                                               ["-" "1.9.493"]
+                                               ["+" "1.9.494"]],
                                      :type "macro",
                                      :full-name-encode "cljs.core/js-arguments",
                                      :source {:code "(core/defmacro js-arguments []\n  (core/list 'js* \"arguments\"))",
@@ -7775,7 +7790,7 @@
                                                 :filename "src/main/cljs/cljs/core.cljs",
                                                 :lines [10697 10699]},
                                        :full-name "cljs.core/gensym_counter",
-                                       :history [["+" "1.10.879"]]},
+                                       :history [["+" "0.0-927"]]},
            "warnings/redef-in-file" {:ns "warnings",
                                      :name "redef-in-file",
                                      :name-encode "redef-in-file",
@@ -8138,7 +8153,9 @@
                                          :name "coercive-boolean",
                                          :signature ["[x]"],
                                          :name-encode "coercive-boolean",
-                                         :history [["+" "1.9.494"]],
+                                         :history [["+" "0.0-1798"]
+                                                   ["-" "1.9.493"]
+                                                   ["+" "1.9.494"]],
                                          :type "macro",
                                          :full-name-encode "cljs.core/coercive-boolean",
                                          :source {:code "(core/defmacro coercive-boolean [x]\n  (with-meta (core/list 'js* \"~{}\" x)\n    {:tag 'boolean}))",
@@ -8714,7 +8731,9 @@
                                      :name "coercive-not",
                                      :signature ["[x]"],
                                      :name-encode "coercive-not",
-                                     :history [["+" "1.9.494"]],
+                                     :history [["+" "0.0-1211"]
+                                               ["-" "1.9.493"]
+                                               ["+" "1.9.494"]],
                                      :type "macro",
                                      :full-name-encode "cljs.core/coercive-not",
                                      :source {:code "(core/defmacro coercive-not [x]\n  (bool-expr (core/list 'js* \"(!~{})\" x)))",
@@ -8883,7 +8902,9 @@
                              :name "mask",
                              :signature ["[hash shift]"],
                              :name-encode "mask",
-                             :history [["+" "1.10.879"]],
+                             :history [["+" "0.0-1211"]
+                                       ["-" "1.9.493"]
+                                       ["+" "1.9.494"]],
                              :type "macro",
                              :full-name-encode "cljs.core/mask",
                              :source {:code "(core/defmacro mask [hash shift]\n  (core/list 'js* \"((~{} >>> ~{}) & 0x01f)\" hash shift))",
@@ -9846,10 +9867,10 @@
                                :docstring "When passed 2 rels, returns the rel corresponding to the natural\njoin. When passed an additional keymap, joins on the corresponding\nkeys."},
            "closure-warnings/fileoverview-jsdoc" {:ns "closure-warnings",
                                                   :name "fileoverview-jsdoc",
-                                                  :type "warning",
-                                                  :full-name "closure-warnings/fileoverview-jsdoc",
-                                                  :full-name-encode "closure-warnings/fileoverview-jsdoc",
                                                   :name-encode "fileoverview-jsdoc",
+                                                  :type "warning",
+                                                  :full-name-encode "closure-warnings/fileoverview-jsdoc",
+                                                  :full-name "closure-warnings/fileoverview-jsdoc",
                                                   :history [["+"
                                                              "0.0-2120"]
                                                             ["-"
@@ -11134,7 +11155,9 @@
                                :name "truth_",
                                :signature ["[x]"],
                                :name-encode "truth_",
-                               :history [["+" "1.10.879"]],
+                               :history [["+" "0.0-1798"]
+                                         ["-" "1.9.493"]
+                                         ["+" "1.9.494"]],
                                :type "macro",
                                :full-name-encode "cljs.core/truth_",
                                :source {:code "(core/defmacro truth_ [x]\n  (core/assert (core/symbol? x) \"x is substituted twice\")\n  (core/list 'js* \"(~{} != null && ~{} !== false)\" x x))",
@@ -12738,10 +12761,10 @@
                                           :last-seen "1.9.521"}},
            "closure-warnings/ambiguous-function-decl" {:ns "closure-warnings",
                                                        :name "ambiguous-function-decl",
-                                                       :type "warning",
-                                                       :full-name "closure-warnings/ambiguous-function-decl",
-                                                       :full-name-encode "closure-warnings/ambiguous-function-decl",
                                                        :name-encode "ambiguous-function-decl",
+                                                       :type "warning",
+                                                       :full-name-encode "closure-warnings/ambiguous-function-decl",
+                                                       :full-name "closure-warnings/ambiguous-function-decl",
                                                        :history [["+"
                                                                   "0.0-2120"]
                                                                  ["-"
@@ -13375,7 +13398,9 @@
                                       :name "coercive-not=",
                                       :signature ["[x y]"],
                                       :name-encode "coercive-notEQ",
-                                      :history [["+" "1.9.494"]],
+                                      :history [["+" "0.0-1211"]
+                                                ["-" "1.9.493"]
+                                                ["+" "1.9.494"]],
                                       :type "macro",
                                       :full-name-encode "cljs.core/coercive-notEQ",
                                       :source {:code "(core/defmacro coercive-not= [x y]\n  (bool-expr (core/list 'js* \"(~{} != ~{})\" x y)))",
@@ -13715,10 +13740,10 @@
                                                    :last-seen "1.10.597"}},
            "closure-warnings/missing-getcssname" {:ns "closure-warnings",
                                                   :name "missing-getcssname",
-                                                  :type "warning",
-                                                  :full-name "closure-warnings/missing-getcssname",
-                                                  :full-name-encode "closure-warnings/missing-getcssname",
                                                   :name-encode "missing-getcssname",
+                                                  :type "warning",
+                                                  :full-name-encode "closure-warnings/missing-getcssname",
+                                                  :full-name "closure-warnings/missing-getcssname",
                                                   :history [["+"
                                                              "1.9.473"]
                                                             ["-"
@@ -14729,7 +14754,9 @@
                                        :signature ["[x y]"
                                                    "[x y & more]"],
                                        :name-encode "unsafe-bit-and",
-                                       :history [["+" "1.10.879"]],
+                                       :history [["+" "0.0-1211"]
+                                                 ["-" "1.9.493"]
+                                                 ["+" "1.9.494"]],
                                        :type "macro",
                                        :full-name-encode "cljs.core/unsafe-bit-and",
                                        :source {:code "(core/defmacro ^::ana/numeric unsafe-bit-and\n  ([x y] (bool-expr (core/list 'js* \"(~{} & ~{})\" x y)))\n  ([x y & more] `(unsafe-bit-and (unsafe-bit-and ~x ~y) ~@more)))",
@@ -16016,7 +16043,7 @@
                                                          "1.10.738"]],
                                               :type "function",
                                               :full-name-encode "cljs.repl.nashorn/create-engine",
-                                              :source {:code "    (defn create-engine\n      ([] (create-engine nil))\n      ([{:keys [code-cache] :or {code-cache true}}]\n       (let [args (when code-cache [\"-pcc\"])\n             factories (.getEngineFactories (ScriptEngineManager.))\n             factory (get (zipmap (map #(.getEngineName %) factories) factories) \"Oracle Nashorn\")]\n         (if-let [engine (if-not (empty? args)\n                           (.getScriptEngine ^ScriptEngineFactory factory (into-array args))\n                           (.getScriptEngine ^ScriptEngineFactory factory))]\n           (let [context (.getContext engine)]\n             (.setWriter context *out*)\n             (.setErrorWriter context *err*)\n             engine)\n           (throw (IllegalArgumentException.\n                    \"Cannot find the Nashorn script engine, use a JDK version 8 or higher.\"))))))",
+                                              :source {:code "(defn create-engine\n      ([] (create-engine nil))\n      ([{:keys [code-cache] :or {code-cache true}}]\n       (let [args (when code-cache [\"-pcc\"])\n             factories (.getEngineFactories (ScriptEngineManager.))\n             factory (get (zipmap (map #(.getEngineName %) factories) factories) \"Oracle Nashorn\")]\n         (if-let [engine (if-not (empty? args)\n                           (.getScriptEngine ^ScriptEngineFactory factory (into-array args))\n                           (.getScriptEngine ^ScriptEngineFactory factory))]\n           (let [context (.getContext engine)]\n             (.setWriter context *out*)\n             (.setErrorWriter context *err*)\n             engine)\n           (throw (IllegalArgumentException.\n                    \"Cannot find the Nashorn script engine, use a JDK version 8 or higher.\"))))))",
                                                        :title "Source code",
                                                        :repo "clojurescript",
                                                        :tag "r1.10.597",
@@ -17551,12 +17578,27 @@
                                                             :lines [77
                                                                     79]},
                                                    :full-name "clojure.browser.event/dispatch-event"},
+           "clojure.datafy/datafy" {:ns "clojure.datafy",
+                                    :name "datafy",
+                                    :signature ["[x]"],
+                                    :name-encode "datafy",
+                                    :history [["+" "1.10.514"]],
+                                    :type "function",
+                                    :full-name-encode "clojure.datafy/datafy",
+                                    :source {:code "(defn datafy\n  [x]\n  (let [v (p/datafy x)]\n    (if (identical? v x)\n      v\n      (if (implements? IWithMeta v)\n        (vary-meta v assoc ::obj x\n                   ;; Circling back to this at a later date per @dnolen\n                   ;; ::class (-> x .-constructor .-name symbol)\n                   )\n        v))))",
+                                             :title "Source code",
+                                             :repo "clojurescript",
+                                             :tag "r1.10.896",
+                                             :filename "src/main/cljs/clojure/datafy.cljs",
+                                             :lines [14 29]},
+                                    :full-name "clojure.datafy/datafy",
+                                    :docstring "Attempts to return x as data.\ndatafy will return the value of clojure.protocols/datafy. If\nthe value has been transformed and the result supports\nmetadata, :clojure.datafy/obj will be set on the metadata to the\noriginal value of x."},
            "closure-warnings/common-js-module-load" {:ns "closure-warnings",
                                                      :name "common-js-module-load",
-                                                     :type "warning",
-                                                     :full-name "closure-warnings/common-js-module-load",
-                                                     :full-name-encode "closure-warnings/common-js-module-load",
                                                      :name-encode "common-js-module-load",
+                                                     :type "warning",
+                                                     :full-name-encode "closure-warnings/common-js-module-load",
+                                                     :full-name "closure-warnings/common-js-module-load",
                                                      :history [["+"
                                                                 "1.9.473"]
                                                                ["-"
@@ -18027,10 +18069,10 @@
                                                      :last-seen "1.9.521"}},
            "closure-warnings/inferred-const-checks" {:ns "closure-warnings",
                                                      :name "inferred-const-checks",
-                                                     :type "warning",
-                                                     :full-name "closure-warnings/inferred-const-checks",
-                                                     :full-name-encode "closure-warnings/inferred-const-checks",
                                                      :name-encode "inferred-const-checks",
+                                                     :type "warning",
+                                                     :full-name-encode "closure-warnings/inferred-const-checks",
+                                                     :full-name "closure-warnings/inferred-const-checks",
                                                      :history [["+"
                                                                 "1.9.473"]
                                                                ["-"
@@ -18413,6 +18455,23 @@
                                                          :full-name "closure-warnings/strict-missing-properties",
                                                          :history [["+"
                                                                     "1.10.217"]]},
+           "clojure.edn/read" {:ns "clojure.edn",
+                               :name "read",
+                               :signature ["[reader]"
+                                           "[opts reader]"
+                                           "[reader eof-error? eof opts]"],
+                               :name-encode "read",
+                               :history [["+" "1.10.514"]],
+                               :type "function",
+                               :full-name-encode "clojure.edn/read",
+                               :source {:code "(defn read\n  ([reader]\n   (reader/read reader))\n  ([opts reader]\n   (reader/read opts reader))\n  ([reader eof-error? eof opts]\n   (reader/read reader eof-error? eof opts)))",
+                                        :title "Source code",
+                                        :repo "clojurescript",
+                                        :tag "r1.10.896",
+                                        :filename "src/main/cljs/clojure/edn.cljs",
+                                        :lines [20 42]},
+                               :full-name "clojure.edn/read",
+                               :docstring "Reads the first object from an cljs.tools.reader.reader-types/IPushbackReader.\nReturns the object read. If EOF, throws if eof-error? is true otherwise returns eof.\nIf no reader is provided, *in* will be used.\n\nReads data in the edn format (subset of Clojure data):\nhttp://edn-format.org\n\ncljs.tools.reader.edn/read doesn't depend on dynamic Vars, all configuration\nis done by passing an opt map.\n\nopts is a map that can include the following keys:\n:eof - value to return on end-of-file. When not supplied, eof throws an exception.\n:readers  - a map of tag symbols to data-reader functions to be considered before default-data-readers.\n           When not supplied, only the default-data-readers will be used.\n:default - A function of two args, that will, if present and no reader is found for a tag,\n           be called with the tag and the value."},
            "cljs.spec.gen.alpha/gen-for-pred" {:ns "cljs.spec.gen.alpha",
                                                :name "gen-for-pred",
                                                :signature ["[pred]"],
@@ -19693,7 +19752,9 @@
                                :name "bitpos",
                                :signature ["[hash shift]"],
                                :name-encode "bitpos",
-                               :history [["+" "1.10.879"]],
+                               :history [["+" "0.0-1211"]
+                                         ["-" "1.9.493"]
+                                         ["+" "1.9.494"]],
                                :type "macro",
                                :full-name-encode "cljs.core/bitpos",
                                :source {:code "(core/defmacro bitpos [hash shift]\n  (core/list 'js* \"(1 << ~{})\" `(mask ~hash ~shift)))",
@@ -20046,6 +20107,21 @@
                                              :lines [943 947]},
                                     :full-name "cljs.core/unsafe-cast",
                                     :docstring "EXPERIMENTAL: Subject to change. Unsafely cast a value to a different type."},
+           "clojure.edn/read-string" {:ns "clojure.edn",
+                                      :name "read-string",
+                                      :signature ["[s]" "[opts s]"],
+                                      :name-encode "read-string",
+                                      :history [["+" "1.10.514"]],
+                                      :type "function",
+                                      :full-name-encode "clojure.edn/read-string",
+                                      :source {:code "(defn read-string\n  ([s]\n   (reader/read-string s))\n  ([opts s]\n   (reader/read-string opts s)))",
+                                               :title "Source code",
+                                               :repo "clojurescript",
+                                               :tag "r1.10.896",
+                                               :filename "src/main/cljs/clojure/edn.cljs",
+                                               :lines [44 55]},
+                                      :full-name "clojure.edn/read-string",
+                                      :docstring "Reads one object from the string s.\nReturns nil when s is nil or empty.\n\nReads data in the edn format (subset of Clojure data):\nhttp://edn-format.org\n\nopts is a map as per cljs.tools.reader.edn/read"},
            "warnings/protocol-with-variadic-method" {:ns "warnings",
                                                      :name "protocol-with-variadic-method",
                                                      :name-encode "protocol-with-variadic-method",
@@ -21895,7 +21971,7 @@
                                                           "1.10.738"]],
                                                :type "function",
                                                :full-name-encode "cljs.repl.nashorn/bootstrap-repl",
-                                               :source {:code "    (defn bootstrap-repl [engine output-dir opts]\n      (env/ensure\n        (let [deps-file \".nashorn_repl_deps.js\"\n              core (io/resource \"cljs/core.cljs\")\n              core-js (closure/compile core\n                        (assoc opts :output-file\n                          (closure/src-file->target-file\n                            core (dissoc opts :output-dir))))\n              deps (closure/add-dependencies opts core-js)]\n          ;; output unoptimized code and the deps file\n          ;; for all compiled namespaces\n          (apply closure/output-unoptimized\n            (assoc opts :output-to (.getPath (io/file output-dir deps-file)))\n            deps)\n          ;; load the deps file so we can goog.require cljs.core etc.\n          (load-js-file engine deps-file))))",
+                                               :source {:code "(defn bootstrap-repl [engine output-dir opts]\n      (env/ensure\n        (let [deps-file \".nashorn_repl_deps.js\"\n              core (io/resource \"cljs/core.cljs\")\n              core-js (closure/compile core\n                        (assoc opts :output-file\n                          (closure/src-file->target-file\n                            core (dissoc opts :output-dir))))\n              deps (closure/add-dependencies opts core-js)]\n          ;; output unoptimized code and the deps file\n          ;; for all compiled namespaces\n          (apply closure/output-unoptimized\n            (assoc opts :output-to (.getPath (io/file output-dir deps-file)))\n            deps)\n          ;; load the deps file so we can goog.require cljs.core etc.\n          (load-js-file engine deps-file))))",
                                                         :title "Source code",
                                                         :repo "clojurescript",
                                                         :tag "r1.10.597",
@@ -21980,10 +22056,10 @@
                                   :docstring "print to a string, returning it"},
            "closure-warnings/check-eventful-object-disposal" {:ns "closure-warnings",
                                                               :name "check-eventful-object-disposal",
-                                                              :type "warning",
-                                                              :full-name "closure-warnings/check-eventful-object-disposal",
-                                                              :full-name-encode "closure-warnings/check-eventful-object-disposal",
                                                               :name-encode "check-eventful-object-disposal",
+                                                              :type "warning",
+                                                              :full-name-encode "closure-warnings/check-eventful-object-disposal",
+                                                              :full-name "closure-warnings/check-eventful-object-disposal",
                                                               :history [["+"
                                                                          "1.9.473"]
                                                                         ["-"
@@ -22939,7 +23015,9 @@
                                    :name "coercive-=",
                                    :signature ["[x y]"],
                                    :name-encode "coercive-EQ",
-                                   :history [["+" "1.9.494"]],
+                                   :history [["+" "0.0-1211"]
+                                             ["-" "1.9.493"]
+                                             ["+" "1.9.494"]],
                                    :type "macro",
                                    :full-name-encode "cljs.core/coercive-EQ",
                                    :source {:code "(core/defmacro coercive-= [x y]\n  (bool-expr (core/list 'js* \"(~{} == ~{})\" x y)))",
@@ -23724,10 +23802,10 @@
                                                        :docstring "Process a single block of JavaScript received from the server"},
            "closure-warnings/visiblity" {:ns "closure-warnings",
                                          :name "visiblity",
-                                         :type "warning",
-                                         :full-name "closure-warnings/visiblity",
-                                         :full-name-encode "closure-warnings/visiblity",
                                          :name-encode "visiblity",
+                                         :type "warning",
+                                         :full-name-encode "closure-warnings/visiblity",
+                                         :full-name "closure-warnings/visiblity",
                                          :history [["+" "0.0-2120"]
                                                    ["-" "1.10.866"]],
                                          :removed {:in "1.10.866",
@@ -24002,10 +24080,10 @@
                                         :docstring "Makes a function which can directly run format-in. The function is\nfn [& args] ... and returns nil. This version of the formatter macro is\ndesigned to be used with *out* set to an appropriate Writer. In particular,\nthis is meant to be used as part of a pretty printer dispatch method.\n\nformat-in can be either a control string or a previously compiled format."},
            "closure-warnings/internet-explorer-checks" {:ns "closure-warnings",
                                                         :name "internet-explorer-checks",
-                                                        :type "warning",
-                                                        :full-name "closure-warnings/internet-explorer-checks",
-                                                        :full-name-encode "closure-warnings/internet-explorer-checks",
                                                         :name-encode "internet-explorer-checks",
+                                                        :type "warning",
+                                                        :full-name-encode "closure-warnings/internet-explorer-checks",
+                                                        :full-name "closure-warnings/internet-explorer-checks",
                                                         :history [["+"
                                                                    "0.0-2120"]
                                                                   ["-"
@@ -27286,7 +27364,9 @@
                                      :name "caching-hash",
                                      :signature ["[coll hash-fn hash-key]"],
                                      :name-encode "caching-hash",
-                                     :history [["+" "1.10.879"]],
+                                     :history [["+" "0.0-1211"]
+                                               ["-" "1.9.493"]
+                                               ["+" "1.9.494"]],
                                      :type "macro",
                                      :full-name-encode "cljs.core/caching-hash",
                                      :source {:code "(core/defmacro caching-hash [coll hash-fn hash-key]\n  (core/assert (clojure.core/symbol? hash-key) \"hash-key is substituted twice\")\n  `(let [h# ~hash-key]\n     (if-not (nil? h#)\n       h#\n       (let [h# (~hash-fn ~coll)]\n         (set! ~hash-key h#)\n         h#))))",
@@ -27780,8 +27860,8 @@
                                    :signature ["[f]"],
                                    :name-encode "load-fileSTAR",
                                    :history [["+" "0.0-2719"]
-                                             ["-" "0.0-3115"]
-                                             ["+" "1.10.879"]],
+                                             ["-" "1.9.493"]
+                                             ["+" "1.9.494"]],
                                    :type "macro",
                                    :full-name-encode "cljs.core/load-fileSTAR",
                                    :source {:code "(core/defmacro load-file* [f]\n  `(goog/nodeGlobalRequire ~f))",
@@ -27868,10 +27948,10 @@
                                 :docstring "Returns a memoized version of a referentially transparent function. The\nmemoized version of the function keeps a cache of the mapping from arguments\nto results and, when calls with the same arguments are repeated often, has\nhigher performance at the expense of higher memory use."},
            "warnings/undeclared" {:ns "warnings",
                                   :name "undeclared",
-                                  :type "warning",
-                                  :full-name "warnings/undeclared",
-                                  :full-name-encode "warnings/undeclared",
                                   :name-encode "undeclared",
+                                  :type "warning",
+                                  :full-name-encode "warnings/undeclared",
+                                  :full-name "warnings/undeclared",
                                   :history [["+" "0.0-1835"]
                                             ["-" "0.0-2014"]],
                                   :removed {:in "0.0-2014",
@@ -33734,6 +33814,19 @@
                              :author "Rich Hickey",
                              :full-name "clojure.set",
                              :docstring "Set operations such as union/intersection."},
+              "clojure.datafy" {:ns "clojure.datafy",
+                                :name-encode "clojure.datafy",
+                                :type "namespace",
+                                :full-name-encode "clojure.datafy",
+                                :source {:code "(ns\n  ^{:doc \"Functions to turn objects into data. Alpha, subject to change\"}\n    clojure.datafy\n  (:require [clojure.core.protocols :as p]))",
+                                         :title "Source code",
+                                         :repo "clojurescript",
+                                         :tag "r1.10.896",
+                                         :filename "src/main/cljs/clojure/datafy.cljs",
+                                         :lines [9 12]},
+                                :full-name "clojure.datafy",
+                                :docstring "Functions to turn objects into data. Alpha, subject to change",
+                                :history [["+" "1.10.514"]]},
               "cljs.repl.node" {:ns "cljs.repl.node",
                                 :name-encode "cljs.repl.node",
                                 :type "namespace",
@@ -33805,6 +33898,19 @@
                                   :full-name-encode "closure-warnings",
                                   :full-name "closure-warnings",
                                   :history [["+" "0.0-2120"]]},
+              "clojure.edn" {:ns "clojure.edn",
+                             :name-encode "clojure.edn",
+                             :type "namespace",
+                             :full-name-encode "clojure.edn",
+                             :source {:code "(ns clojure.edn\n  \"edn reading.\n\n  This namespace provides alias for cljs.reader/read and cljs.reader/read-string.\n  Thus Clojure and ClojureScript source can reference these functions in the same way.\n  In Clojure, read and read-string may cause evaluation,\n  but clojure.edn/read and clojure.edn/read-string will not.\n  In ClojureScript cljs.reader/read and cljs.reader/read-string will not cause evaluation,\n  they only read edn.\"\n  (:require [cljs.reader :as reader]))",
+                                      :title "Source code",
+                                      :repo "clojurescript",
+                                      :tag "r1.10.896",
+                                      :filename "src/main/cljs/clojure/edn.cljs",
+                                      :lines [9 18]},
+                             :full-name "clojure.edn",
+                             :docstring "edn reading.\n\n  This namespace provides alias for cljs.reader/read and cljs.reader/read-string.\n  Thus Clojure and ClojureScript source can reference these functions in the same way.\n  In Clojure, read and read-string may cause evaluation,\n  but clojure.edn/read and clojure.edn/read-string will not.\n  In ClojureScript cljs.reader/read and cljs.reader/read-string will not cause evaluation,\n  they only read edn.",
+                             :history [["+" "1.10.514"]]},
               "cljs.js" {:ns "cljs.js",
                          :name-encode "cljs.js",
                          :type "namespace",
@@ -35001,7 +35107,11 @@
                            "1.7.166" {},
                            "0.0-2199" {},
                            "1.10.514" {:added #{"cljs.spec.test.alpha/validate-check-opts"
+                                                "clojure.datafy/nav"
                                                 "cljs.repl/Error->map"
+                                                "clojure.datafy/datafy"
+                                                "clojure.edn/read"
+                                                "clojure.edn/read-string"
                                                 "cljs.repl/error->str"
                                                 "cljs.repl/ex-triage"
                                                 "cljs.repl/ex-str"
@@ -35182,8 +35292,7 @@
                                                "cljs.core/Cycle"
                                                "cljs.core/*exec-tap-fn*"}},
                            "0.0-3115" {:added #{"clojure.browser.repl/bootstrap"
-                                                "clojure.browser.repl/load-queue"},
-                                       :removed #{"cljs.core/load-file*"}},
+                                                "clojure.browser.repl/load-queue"}},
                            "0.0-3195" {},
                            "1.9.35" {},
                            "1.10.753" {},
@@ -35379,14 +35488,25 @@
                            "1.10.516" {},
                            "0.0-1844" {},
                            "1.9.493" {:removed #{"cljs.core/js-str"
+                                                 "cljs.core/js-arguments"
+                                                 "cljs.core/coercive-boolean"
+                                                 "cljs.core/coercive-not"
+                                                 "cljs.core/mask"
                                                  "cljs.core/es6-iterable"
+                                                 "cljs.core/truth_"
                                                  "cljs.core/js-in"
+                                                 "cljs.core/coercive-not="
+                                                 "cljs.core/unsafe-bit-and"
                                                  "cljs.core/js-debugger"
                                                  "cljs.core/js-comment"
                                                  "cljs.core/js-inline-comment"
                                                  "cljs.core/copy-arguments"
+                                                 "cljs.core/bitpos"
                                                  "cljs.core/unsafe-cast"
-                                                 "cljs.core/gen-apply-to"}},
+                                                 "cljs.core/coercive-="
+                                                 "cljs.core/gen-apply-to"
+                                                 "cljs.core/caching-hash"
+                                                 "cljs.core/load-file*"}},
                            "0.0-1586" {:added #{"cljs.core/comparator"}},
                            "1.9.671" {},
                            "0.0-3123" {},
@@ -35422,8 +35542,14 @@
                            "1.9.494" {:added #{"cljs.core/js-arguments"
                                                "cljs.core/coercive-boolean"
                                                "cljs.core/coercive-not"
+                                               "cljs.core/mask"
+                                               "cljs.core/truth_"
                                                "cljs.core/coercive-not="
-                                               "cljs.core/coercive-="}},
+                                               "cljs.core/unsafe-bit-and"
+                                               "cljs.core/bitpos"
+                                               "cljs.core/coercive-="
+                                               "cljs.core/caching-hash"
+                                               "cljs.core/load-file*"}},
                            "1.9.660" {},
                            "1.10.773" {},
                            "0.0-1913" {},
@@ -35600,13 +35726,16 @@
                                                 "cljs.core/unchecked-multiply-int"
                                                 "cljs.core/cond->"
                                                 "cljs.core/unchecked-add"
+                                                "cljs.core/js-arguments"
                                                 "cljs.core/Symbol"
                                                 "cljs.core/chars"
+                                                "cljs.core/coercive-boolean"
                                                 "cljs.core/short"
                                                 "cljs.core/longs"
                                                 "cljs.core/unchecked-multiply"
                                                 "cljs.core/some->"
                                                 "cljs.core/unchecked-negate-int"
+                                                "cljs.core/truth_"
                                                 "cljs.core/unchecked-substract-int"
                                                 "cljs.core/unchecked-double"
                                                 "cljs.core/set-print-fn!"
@@ -35677,6 +35806,8 @@
                                                 "cljs.core/vector-seq"
                                                 "cljs.core/conj!"
                                                 "cljs.core/PersistentHashMap"
+                                                "cljs.core/coercive-not"
+                                                "cljs.core/mask"
                                                 "cljs.core/IReversible"
                                                 "cljs.core/IKVReduce"
                                                 "cljs.core/BlackNode"
@@ -35687,10 +35818,12 @@
                                                 "cljs.core/ISorted"
                                                 "cljs.core/double-array"
                                                 "cljs.core/PersistentArrayMap.HASHMAP_THRESHOLD"
+                                                "cljs.core/coercive-not="
                                                 "cljs.core/PersistentArrayMap.EMPTY"
                                                 "cljs.core/reduced?"
                                                 "cljs.core/PersistentTreeMapSeq"
                                                 "cljs.core/persistent!"
+                                                "cljs.core/unsafe-bit-and"
                                                 "cljs.core/PersistentHashMap.fromArrays"
                                                 "cljs.core/sorted-set"
                                                 "cljs.core/PersistentTreeMap.EMPTY"
@@ -35702,12 +35835,14 @@
                                                 "cljs.core/ArrayNode"
                                                 "cljs.core/TransientHashMap"
                                                 "cljs.core/TransientArrayMap"
+                                                "cljs.core/bitpos"
                                                 "cljs.core/mapv"
                                                 "cljs.core/long"
                                                 "cljs.core/reversible?"
                                                 "cljs.core/HashCollisionNode"
                                                 "cljs.core/into-array"
                                                 "cljs.core/TransientVector"
+                                                "cljs.core/coercive-="
                                                 "cljs.core/PersistentTreeSet"
                                                 "cljs.core/Reduced"
                                                 "cljs.core/long-array"
@@ -35720,6 +35855,7 @@
                                                 "cljs.core/rsubseq"
                                                 "cljs.core/make-array"
                                                 "cljs.core/sorted-set-by"
+                                                "cljs.core/caching-hash"
                                                 "cljs.core/disj!"
                                                 "cljs.core/ifn?"
                                                 "cljs.core/case"
@@ -36125,13 +36261,7 @@
                                                 "cljs.test/empty-env"
                                                 "cljs.core/vreset!"}},
                            "0.0-3196" {},
-                           "1.10.879" {:added #{"cljs.core/gensym_counter"
-                                                "cljs.core/mask"
-                                                "cljs.core/truth_"
-                                                "cljs.core/unsafe-bit-and"
-                                                "cljs.core/bitpos"
-                                                "cljs.core/caching-hash"
-                                                "cljs.core/load-file*"}},
+                           "1.10.879" {},
                            "1.10.758" {},
                            "0.0-927" {:added #{"cljs.core/keys"
                                                "cljs.core/reset!"
@@ -36213,6 +36343,7 @@
                                                "cljs.core/subvec"
                                                "cljs.core/bit-clear"
                                                "cljs.core/gensym"
+                                               "cljs.core/gensym_counter"
                                                "cljs.core/in-ns"
                                                "cljs.core/+"
                                                "cljs.core/comp"
@@ -36902,6 +37033,7 @@
                                  "cljs.reader/read-comment"
                                  "cljs.spec.alpha/fdef"
                                  "cljs.core/TransformerIterator.create"
+                                 "clojure.datafy/nav"
                                  "cljs.core/ITransientMap"
                                  "cljs.core/pos-int?"
                                  "cljs.core/*loaded-libs*"
@@ -37495,6 +37627,7 @@
                                  "cljs.spec.test.alpha/check-1"
                                  "cljs.spec.test.alpha/check-fn"
                                  "clojure.browser.event/dispatch-event"
+                                 "clojure.datafy/datafy"
                                  "cljs.core/print-prefix-map"
                                  "cljs.core/ns-interns"
                                  "clojure.string/split-lines"
@@ -37537,6 +37670,7 @@
                                  "cljs.core/take-last"
                                  "cljs.core/js-symbol?"
                                  "cljs.spec.gen.alpha/list"
+                                 "clojure.edn/read"
                                  "cljs.spec.gen.alpha/gen-for-pred"
                                  "cljs.core/key->js"
                                  "cljs.spec/explain-printer"
@@ -37623,6 +37757,7 @@
                                  "cljs.core/IRecord"
                                  "cljs.spec.alpha/conform"
                                  "cljs.core/unsafe-cast"
+                                 "clojure.edn/read-string"
                                  "cljs.core/RangedIterator"
                                  "cljs.core/volatile!"
                                  "cljs.core/constantly"
@@ -38243,9 +38378,11 @@
                                     "clojure.browser.dom"
                                     "cljs.spec.gen.alpha"
                                     "clojure.set"
+                                    "clojure.datafy"
                                     "cljs.nodejs"
                                     "cljs.spec"
                                     "clojure.walk"
+                                    "clojure.edn"
                                     "cljs.js"
                                     "clojure.browser.event"
                                     "cljs.reader"

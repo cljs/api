@@ -61,6 +61,8 @@
    :library
    {"cljs.pprint"           :normal
     "cljs.reader"           :normal
+    "clojure.edn"           :normal
+    "clojure.datafy"        :normal
     "clojure.set"           :normal
     "clojure.string"        :normal
     "clojure.walk"          :normal

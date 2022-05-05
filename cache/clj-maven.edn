@@ -1277,4 +1277,28 @@
   :p "jar",
   :timestamp 1645028709000,
   :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}]
+  :tags ["clojure" "environment" "library" "runtime" "core"]}
+ {:id "org.clojure:clojure:1.11.0",
+  :g "org.clojure",
+  :a "clojure",
+  :v "1.11.0",
+  :p "jar",
+  :timestamp 1647962320000,
+  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
+  :tags ["core" "environment" "library" "clojure" "runtime"]}
+ {:id "org.clojure:clojure:1.11.1-rc1",
+  :g "org.clojure",
+  :a "clojure",
+  :v "1.11.1-rc1",
+  :p "jar",
+  :timestamp 1648835697000,
+  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
+  :tags ["core" "environment" "library" "clojure" "runtime"]}
+ {:id "org.clojure:clojure:1.11.1",
+  :g "org.clojure",
+  :a "clojure",
+  :v "1.11.1",
+  :p "jar",
+  :timestamp 1649169382000,
+  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
+  :tags ["core" "environment" "library" "clojure" "runtime"]}]
