@@ -13676,6 +13676,24 @@
                                                                     1104]}],
                                            :full-name "cljs.core/unchecked-subtract",
                                            :docstring "If no ys are supplied, returns the negation of x, else subtracts\nthe ys from x and returns the result."},
+           "clojure.core.protocols/Datafiable" {:ns "clojure.core.protocols",
+                                                :name "Datafiable",
+                                                :name-encode "Datafiable",
+                                                :history [["+"
+                                                           "1.10.514"]],
+                                                :type "protocol",
+                                                :full-name-encode "clojure.core.protocols/Datafiable",
+                                                :source {:code "(defprotocol Datafiable\n  :extend-via-metadata true\n  (datafy [o] \"return a representation of o as data (default identity)\"))",
+                                                         :title "Source code",
+                                                         :repo "clojurescript",
+                                                         :tag "r1.10.893",
+                                                         :filename "src/main/cljs/clojure/core/protocols.cljs",
+                                                         :lines [11
+                                                                 13]},
+                                                :methods [{:name "datafy",
+                                                           :signature ["[o]"],
+                                                           :docstring "return a representation of o as data (default identity)"}],
+                                                :full-name "clojure.core.protocols/Datafiable"},
            "cljs.repl/IParseErrorMessage" {:ns "cljs.repl",
                                            :name "IParseErrorMessage",
                                            :name-encode "IParseErrorMessage",
@@ -14757,6 +14775,23 @@
                                                 :filename "src/main/clojure/cljs/core.cljc",
                                                 :lines [1193 1195]},
                                        :full-name "cljs.core/unsafe-bit-and"},
+           "clojure.core.protocols/Navigable" {:ns "clojure.core.protocols",
+                                               :name "Navigable",
+                                               :name-encode "Navigable",
+                                               :history [["+"
+                                                          "1.10.514"]],
+                                               :type "protocol",
+                                               :full-name-encode "clojure.core.protocols/Navigable",
+                                               :source {:code "(defprotocol Navigable\n  :extend-via-metadata true\n  (nav [coll k v] \"return (possibly transformed) v in the context of coll and k (a key/index or nil),\ndefaults to returning v.\"))",
+                                                        :title "Source code",
+                                                        :repo "clojurescript",
+                                                        :tag "r1.10.893",
+                                                        :filename "src/main/cljs/clojure/core/protocols.cljs",
+                                                        :lines [22 25]},
+                                               :methods [{:name "nav",
+                                                          :signature ["[coll k v]"],
+                                                          :docstring "return (possibly transformed) v in the context of coll and k (a key/index or nil),\ndefaults to returning v."}],
+                                               :full-name "clojure.core.protocols/Navigable"},
            "cljs.test/is" {:ns "cljs.test",
                            :name "is",
                            :signature ["[form]" "[form msg]"],
@@ -33842,6 +33877,18 @@
                                       :lines [12 13]},
                              :full-name "cljs.nodejs",
                              :history [["+" "0.0-927"]]},
+              "clojure.core.protocols" {:ns "clojure.core.protocols",
+                                        :name-encode "clojure.core.protocols",
+                                        :type "namespace",
+                                        :full-name-encode "clojure.core.protocols",
+                                        :source {:code "(ns clojure.core.protocols)",
+                                                 :title "Source code",
+                                                 :repo "clojurescript",
+                                                 :tag "r1.10.893",
+                                                 :filename "src/main/cljs/clojure/core/protocols.cljs",
+                                                 :lines [9]},
+                                        :full-name "clojure.core.protocols",
+                                        :history [["+" "1.10.514"]]},
               "cljs.repl.reflect" {:ns "cljs.repl.reflect",
                                    :name-encode "cljs.repl.reflect",
                                    :type "namespace",
@@ -35098,6 +35145,8 @@
                            "1.10.514" {:added #{"cljs.spec.test.alpha/validate-check-opts"
                                                 "clojure.datafy/nav"
                                                 "cljs.repl/Error->map"
+                                                "clojure.core.protocols/Datafiable"
+                                                "clojure.core.protocols/Navigable"
                                                 "clojure.datafy/datafy"
                                                 "clojure.edn/read"
                                                 "clojure.edn/read-string"
@@ -37443,6 +37492,7 @@
                                  "cljs.core/uuid?"
                                  "cljs.test/compose-fixtures"
                                  "cljs.core/unchecked-subtract"
+                                 "clojure.core.protocols/Datafiable"
                                  "cljs.js/load-macros"
                                  "cljs.core/->"
                                  "cljs.core/remove-all-methods"
@@ -37489,6 +37539,7 @@
                                  "cljs.pprint/setf"
                                  "clojure.browser.event/unlisten"
                                  "cljs.core/unsafe-bit-and"
+                                 "clojure.core.protocols/Navigable"
                                  "cljs.test/is"
                                  "cljs.core/MapEntry"
                                  "cljs.spec.alpha/*explain-out*"
@@ -38368,6 +38419,7 @@
                                     "clojure.set"
                                     "clojure.datafy"
                                     "cljs.nodejs"
+                                    "clojure.core.protocols"
                                     "cljs.spec"
                                     "clojure.walk"
                                     "clojure.edn"
