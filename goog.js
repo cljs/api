@@ -1,3 +1,5 @@
+// NOTE: THIS IS AN OUTDATED FORMAT NOW, but I’ll keep it here for record.
+//
 // Source: https://google.github.io/closure-library/api/types.js
 // (used by search box in Google Closure Library API site)
 //
