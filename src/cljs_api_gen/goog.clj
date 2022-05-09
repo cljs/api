@@ -3,9 +3,10 @@
     [clojure.pprint :refer [pprint]]
     [clojure.java.shell :refer [sh]]
     [clojure.java.io :as io]
-    [clojure.string :as str]))
+    [clojure.string :as str]
+    [cljs-api-gen.config :refer [repos-dir]]))
 
-(def goog-dir "repos/closure-library")
+(def goog-dir (str repos-dir "/closure-library"))
 
 (defn goog-ns-class? [n]
   (not= n (str/lower-case n)))
