@@ -1,7 +1,6 @@
 (ns cljs-api-gen.core
   (:require
     [clansi.core :refer [style]]
-    [clojure.edn :as edn]
     [me.raynes.fs :refer [mkdir
                           exists?]]
     [cljs-api-gen.config :refer [cache-dir]]
@@ -12,7 +11,8 @@
                                     new-maven-release]]
     [cljs-api-gen.catalog :refer [create-catalog!]]
     [cljs-api-gen.clojure-api :refer [get-version-apis!]]
-    [cljs-api-gen.options :refer [notify-new-options]]))
+    [cljs-api-gen.options :refer [notify-new-options]]
+    [cljs-api-gen.goog :refer [print-goog-table]]))
 
 
 ;;--------------------------------------------------------------------------------
@@ -39,6 +39,7 @@
   (prep!)
   (cond
     (= task :lint) (lint-docfiles!)
+    (= task :goog) (print-goog-table)
     :else (create-catalog! options))
 
   ;; have to do this because `sh` leaves futures hanging,
@@ -52,4 +53,4 @@
 
 (defn -main
   [& args]
-  (main (edn/read-string (first args))))
+  (main (first args)))

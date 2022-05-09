@@ -57,7 +57,9 @@
   (println "syncing clojure...")
   (clone-or-pull! "https://github.com/clojure/clojure")
   (println "syncing tools.reader...")
-  (clone-or-pull! "https://github.com/clojure/tools.reader"))
+  (clone-or-pull! "https://github.com/clojure/tools.reader")
+  (println "syncing google closure library...")
+  (clone-or-pull! "https://github.com/google/closure-library"))
 
 (defn ls-files
   [repo tag dir]
