@@ -1,1 +1,0 @@
-clj -X cljs-api-gen.core/-main "$@"
