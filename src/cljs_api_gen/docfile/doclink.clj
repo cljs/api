@@ -7,7 +7,7 @@
 
 ;;; ================ MARKDOWN SYNTAX ==================
 ;;;
-;;; We use the doclink namenclature as a markdown biblio alias with the `doc:` prefix:
+;;; We use the doclink nomenclature as a markdown biblio alias with the `doc:` prefix:
 ;;;
 ;;; 1. unnamed:              [doc:cljs.core/foo]      --> name inserted and resolved to biblio link
 ;;; 2. named:     [some name][doc:cljs.core/foo]      --> resolved to biblio link
