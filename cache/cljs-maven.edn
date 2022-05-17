@@ -1669,4 +1669,12 @@
   :p "jar",
   :timestamp 1652456177000,
   :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
+  :tags ["core" "library" "clojurescript" "runtime" "compiler"]}
+ {:id "org.clojure:clojurescript:1.11.54",
+  :g "org.clojure",
+  :a "clojurescript",
+  :v "1.11.54",
+  :p "jar",
+  :timestamp 1652718955000,
+  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
   :tags ["core" "library" "clojurescript" "runtime" "compiler"]}]
