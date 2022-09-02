@@ -32,6 +32,13 @@ automatically assigned `%` argument names.
 
 ## Examples
 
+Quote the form to see how the reader expands it:
+
+```clj
+'#(+ %1 %2)
+;;=> (fn* [p1__11# p2__12#] (+ p1__11# p2__12#))
+```
+
 ```clj
 (map #(* 2 %) [1 2 3])
 ;;=> (2 4 6)

@@ -23,6 +23,13 @@ Mainly used in conjunction with [doc:cljs.core/meta].
 
 ## Examples
 
+Quote the form to see how the reader expands it:
+
+```clj
+'#'foo
+;;=> (var foo)
+```
+
 Access the metadata of a var:
 
 ```clj

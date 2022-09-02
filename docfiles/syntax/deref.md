@@ -13,13 +13,20 @@ see also:
 Get the value that a reference is currently referring to.  A "reference" can
 be a [doc:cljs.core/atom], [doc:cljs.core/delay], or [doc:cljs.core/var].
 
-- `@foo` - returns value at reference `foo`
+- `@foo` - `(deref foo)`
 
 ## Details
 
 `@foo` is sugar for [`(deref foo)`][doc:cljs.core/deref].
 
 ## Examples
+
+Quote the form to see how the reader expands it:
+
+```clj
+'@foo
+;;=> (clojure.core/deref foo)
+```
 
 An [doc:cljs.core/atom] is a mutable reference to an immutable value.
 
