@@ -3,6 +3,7 @@ name: syntax/meta
 display as: "^ meta"
 clojure doc: http://clojure.org/reference/reader#_metadata
 see also:
+  - syntax/js-tag
   - cljs.core/meta
   - cljs.core/with-meta
   - cljs.core/vary-meta

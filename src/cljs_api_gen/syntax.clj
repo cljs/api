@@ -78,6 +78,9 @@
    {:id "destructure-vector" :type "binding"}
    {:id "destructure-map"    :type "binding"}
 
+   ;; special tags
+   {:id "js-tag" :type "special tag"}
+
    ;; special namespaces
    {:id "js-namespace"   :type "special namespace"}
    {:id "Math-namespace" :type "special namespace"}

@@ -873,6 +873,7 @@
 (defn parse-misc-syntax
   []
   (let [match? #{"special namespace"
+                 "special tag"
                  "convention"
                  "special character"}]
     (->> syntax

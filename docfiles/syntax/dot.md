@@ -5,6 +5,7 @@ clojure doc: http://clojure.org/reference/reader#_symbols
 see also:
   - syntax/symbol
   - syntax/namespace
+  - syntax/js-tag
 ---
 
 ## Summary
