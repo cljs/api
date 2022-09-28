@@ -15348,6 +15348,14 @@
                                      :docstring "Fn returning clojure.test.check.generators/any",
                                      :removed {:in "1.9.542",
                                                :last-seen "1.9.521"}},
+           "syntax/js-tag" {:syntax-equiv {:edn-url nil, :clj-url nil},
+                            :ns "syntax",
+                            :name "js-tag",
+                            :name-encode "js-tag",
+                            :type "special tag",
+                            :full-name-encode "syntax/js-tag",
+                            :full-name "syntax/js-tag",
+                            :history [["+" "1.10.238"]]},
            "clojure.zip/end?" {:ns "clojure.zip",
                                :name "end?",
                                :signature ["[loc]"],
@@ -33543,7 +33551,7 @@
                           "0.0-2197" {},
                           "1.9.225" {},
                           "0.0-3291" {},
-                          "1.10.238" {},
+                          "1.10.238" {:added #{"syntax/js-tag"}},
                           "0.0-2075" {},
                           "1.7.28" {},
                           "0.0-2277" {},
@@ -33715,6 +33723,7 @@
                                 "syntax/unquote-splicing"
                                 "syntax/cond-splicing"
                                 "syntax/true"
+                                "syntax/js-tag"
                                 "syntax/rest"
                                 "syntax/keyword"
                                 "syntax/character"

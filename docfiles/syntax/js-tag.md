@@ -48,3 +48,6 @@ Foo.Bar = function() {};
 Foo.Bar.prototype.baz = function() {};
 ```
 
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:compiler-options/infer-externs]:https://github.com/cljs/api/blob/master/docfiles/compiler-options/infer-externs.md
+[doc:syntax/dot]:https://github.com/cljs/api/blob/master/docfiles/syntax/dot.md
