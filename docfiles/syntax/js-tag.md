@@ -24,11 +24,12 @@ Closure plays it safe by refusing to mangle recognized property names (belonging
 
 Thus, the extra type info can be used for documentation, but has no real effect on your program.
 
-Internally, externs are generated as follows:
+Externs are generated as follows— but this really doesn't matter for CLJS, only in fully typed code:
 
 * `^js` externs are added to `Object.*`
 * `^js/Foo.Bar` externs are added to `Foo.Bar.prototype.*`
-* (in shadow-cljs all externs are added to `ShadowJS.prototype.*`)
+
+See https://code.thheller.com/blog/shadow-cljs/2017/11/06/improved-externs-inference.html.
 
 ## Examples
 
