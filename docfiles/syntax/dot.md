@@ -16,11 +16,6 @@ Dots can be used inside symbols for JS interop.
 - `(.-foo bar)` => `bar.foo`
 - `(foo.)` => `new foo()`
 
-The following are also supported (though not valid in Clojure)
-
-- `foo.bar.baz` => `foo.bar.baz`
-- `(foo.bar.baz)` => `foo.bar.baz()`
-
 ## Details
 
 A dot's meaning depends on its position in the symbol:
@@ -29,6 +24,13 @@ A dot's meaning depends on its position in the symbol:
 - `foo.` is constructor sugar, meaning [`(new foo)`][doc:cljs.core/new].
 - `(ns foo.bar)` and `foo.bar/baz` means that `foo.bar` is a nested namespace.
 - `foo/bar.baz` or `bar.baz` means `bar.baz` is nested JS property access (__not allowed in clojure__).
+
+Dots inside symbols *accidentally* work as a technical shortcut in ClojureScript, but this is not valid in Clojure.
+
+- `foo.bar.baz` => `foo.bar.baz` (not recommended)
+- `(foo.bar.baz)` => `foo.bar.baz()` (not recommended)
+
+The compiler will not [doc:compiler-options/infer-externs] on the above forms, even if [`^js foo`][doc:syntax/js-tag] is annotated.
 
 ## Examples
 
@@ -92,5 +94,7 @@ cljs.core/PersistentQueue.EMPTY
 ```
 
 <!-- AUTO-GENERATED docfile links for github -->
+[doc:compiler-options/infer-externs]:https://github.com/cljs/api/blob/master/docfiles/compiler-options/infer-externs.md
 [doc:cljs.core/.]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/DOT.md
+[doc:syntax/js-tag]:https://github.com/cljs/api/blob/master/docfiles/syntax/js-tag.md
 [doc:cljs.core/new]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/new.md
