@@ -30,7 +30,9 @@ Dots inside symbols *accidentally* work as a technical shortcut in ClojureScript
 - `foo.bar.baz` => `foo.bar.baz` (not recommended)
 - `(foo.bar.baz)` => `foo.bar.baz()` (not recommended)
 
-The compiler will not [doc:compiler-options/infer-externs] on the above forms, even if [`^js foo`][doc:syntax/js-tag] is annotated.
+Dots inside symbols are not recommended, as they are not detected by
+[doc:compiler-options/infer-externs]. For example, no externs are generated for
+`(foo.bar)` if [`^js foo`][doc:syntax/js-tag] is annotated.
 
 ## Examples
 
