@@ -17,7 +17,7 @@ the metadata, or use shorthand:
 
 - `^:foo` => `^{:foo true}`
 - `^"foo"` => `^{:tag "foo"}`
-- `^foo` => `^{:tag <value of foo>}`
+- `^foo` => `^{:tag foo}`
 
 ## Details
 
@@ -52,4 +52,19 @@ Chain metadata:
 ```clj
 (meta ^:foo ^"foo" [1 2 3])
 ;;=> {:foo true, :tag "foo"}
+```
+
+Generally, metadata maps used purely by the compiler are not evaluated and should be read literally:
+
+```clj
+(defn foo [^js x]   ;; ^js => ^{:tag js}   (literal map not evaluated)
+  ^js (.-bar x))    ;; ^js => ^{:tag js}   (literal map not evaluated)
+```
+
+But here’s one exception— metadata maps are evaluated when placed behind literal collections created at runtime:
+
+```clj
+(def foo (+ 1 2 3))
+(meta ^foo {})                ;;=> {:tag 6}   not {:tag foo}
+(meta ^{:foo (+ 1 2 3)} [])   ;;=> {:foo 6}   not {:foo (+ 1 2 3)}
 ```
