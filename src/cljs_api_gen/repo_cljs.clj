@@ -33,6 +33,27 @@
 (def ^:dynamic *treader-tag*     "tools.reader git tag           (e.g. \"tools.reader-0.9.2\"" nil)
 
 ;;--------------------------------------------------------------------------------
+;; SemVer utils
+;;--------------------------------------------------------------------------------
+
+(defn semver
+  "Get a (major minor patch) tuple from a semver string"
+  [v]
+  (some->> v
+           (re-matches #"^(\d+)\.(\d+)\.(\d+)")
+           next
+           (map read-string)))
+
+(defn semver-cmp
+  "Compare semver strings."
+  [cmp a b]
+  (cond
+    (#{=} cmp)     (= a b)
+    (#{>= <=} cmp) (or (= a b) (semver-cmp ({>= >, <= <} cmp) a b))
+    (#{> <} cmp)   (some cmp (semver a) (semver b))
+    :else          (throw (Exception. "unsupported cmp function"))))
+
+;;--------------------------------------------------------------------------------
 ;; Git Repo utils
 ;;--------------------------------------------------------------------------------
 
@@ -263,7 +284,9 @@
 (defn treader-version->tag
   [version]
   (when version
-    (str "tools.reader-" version)))
+    (if (semver-cmp >= version "1.3.6")
+      (str "v" version)
+      (str "tools.reader-" version))))
 
 ;;--------------------------------------------------------------------------------
 ;; Maven release retrieval
