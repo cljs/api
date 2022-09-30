@@ -8,6 +8,7 @@
   {:all [[:full-name "name:"]
          [:display-as "display as:"]
          [:known-as "known as:"]
+         [:since "since:"]
          [:clj-doc "clojure doc:"]
          [:edn-doc "edn doc:"]
          [:tags "tags:"]

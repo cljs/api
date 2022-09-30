@@ -60,4 +60,5 @@
       (transform-key "tags" :tags section-as-list)
       (transform-key "clojure doc" :clj-doc)
       (transform-key "edn doc" :edn-doc)
+      (transform-key "since" :since)
       add-doclink-biblio))

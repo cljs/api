@@ -466,6 +466,12 @@
       to-name (assoc :moved-to to-name)
       from-name (assoc :moved-from from-name))))
 
+(defn rewrite-history-with-since
+  "Mainly for syntax entries because we cannot auto-detect when they were added."
+  [{:keys [since] :as item}]
+  (cond-> item
+    since (assoc :history [["+" since]])))
+
 (defn annotate-item
   "Merge the given item with extra data (e.g. docfile, github links)
   We do this only at the end instead of after each version parse, allowing us
@@ -486,7 +492,8 @@
                         :tags
                         :md-biblio
                         :clj-doc
-                        :edn-doc])]
+                        :edn-doc
+                        :since])]
      (-> item
          (assign-display-name)
          (merge docfile-data)
@@ -495,7 +502,8 @@
          (add-edit-url)
          (add-clj-equiv)
          (add-syntax-equiv)
-         (add-moved-history))))
+         (add-moved-history)
+         (rewrite-history-with-since))))
 
 (defn post-process-item
   "This is a second pass to allow us to use data populated from first pass"

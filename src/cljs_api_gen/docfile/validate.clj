@@ -56,7 +56,8 @@
    "todo"
    "notes"
    "clojure doc"
-   "edn doc"])
+   "edn doc"
+   "since"])
 
 (defn section-match?
   [name- known]
@@ -182,6 +183,16 @@
         (join "\n" msgs)))))
 
 ;;--------------------------------------------------------------------------------
+;; Validate Since Version
+;;--------------------------------------------------------------------------------
+
+(defn since-version-error-msg
+  [{:keys [since] :as doc}]
+  (when since
+    (when-not (@published-cljs-tag? (cljs-version->tag since))
+      (str "The version " since " does not seem valid as it does not correspond to a published tag."))))
+
+;;--------------------------------------------------------------------------------
 ;; Validate All
 ;;--------------------------------------------------------------------------------
 
@@ -193,7 +204,8 @@
    see-also-missing-error-msg
    doclink-missing-error-msg
    filename-error-msg
-   syntax-equiv-error-msg])
+   syntax-equiv-error-msg
+   since-version-error-msg])
 
 (defn valid-doc? [doc]
   (let [errors (seq (keep #(% doc) error-detectors))
