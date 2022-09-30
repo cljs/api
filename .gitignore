@@ -7,5 +7,6 @@
 .lein-failures
 
 .DS_Store
+.nrepl-port
 
 /.cpcache
