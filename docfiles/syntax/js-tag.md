@@ -1,6 +1,7 @@
 ---
 name: syntax/js-tag
 display as: "^js"
+since: 1.10.238
 see also:
   - syntax/meta
   - syntax/js-namespace
