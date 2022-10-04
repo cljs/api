@@ -140,6 +140,11 @@
         args (if docstring (rest args) args)
         attr-map (let [m (first args)]
                    (when (map? m) m))
+        docstring-location (cond
+                             docstring       :in-string
+                             (:doc meta-)    :in-name-meta
+                             (:doc attr-map) :in-attr-map
+                             :else           nil)
         docstring (or docstring (:doc meta-) (:doc attr-map))
         args (if attr-map (rest args) args)
         macro? (:macro attr-map)
@@ -158,16 +163,12 @@
         signatures (if (vector? (first args))
                      (take 1 args)
                      (map first args))
-        expected-docs (try-locate-docs
-                        {:whole form
-                         :head (take 2 form)
-                         :doc doc-forms
-                         :sig-body args})
         constructor? (some #{"@constructor"} (:jsdoc meta-))]
     (when (or *parse-private-defs?*
               (not private?))
       {:expected-docs expected-docs
        :docstring (fix-docstring docstring)
+       :docstring-location docstring-location
        :signature (or arglists signatures)
        :type (cond
                dynamic? "dynamic var" ;; e.g. *exec-tap-fn*
@@ -454,7 +455,7 @@
        (let [common (parse-common-def (or virtual-form form))
              location (parse-location form)
              merged (merge specific location common)
-             final (update-in merged [:source :code] try-remove-docs (:expected-docs specific))
+             final (update-in merged [:source :code] try-remove-docs (:docstring-location specific))
              internal? (internal-def-only? final)]
          (when-not internal?
            (with-meta final {:form form})))))))

@@ -35,37 +35,26 @@
 
 (defn try-remove-docs
   "Try to remove docstring/attr-map from source if they are on their expected lines."
-  [source {:keys [start-line end-line forms] :as expected-docs}]
-  (if (nil? expected-docs)
-    source
-    (let [i-lines (map-indexed vector (split-lines source))
-          to-str #(join "\n" (map second %))
-          doc-line? #(<= start-line (first %) end-line)
-          doc-str (to-str (filter doc-line? i-lines))
-          actual-forms (read-forms-from-str doc-str)]
-      (if (= actual-forms forms)
-        (to-str (remove doc-line? i-lines))
-        (do
-          (binding [*out* *err*]
-            (println "=====================================")
-            (println "Warning: couldn't remove docstring:")
-            (println "expected:" (pr-str forms))
-            (println "actual:" (pr-str actual-forms))
-            (println "source:" (pr-str source))
-            (println "====================================="))
-          source)))))
+  [source docstring-location]
+  (case docstring-location
+    :in-string source
+    :in-name-meta source
+    :in-attr-map source
+    nil source))
 
-(defn try-locate-docs
-  "Try to guess which lines the given docs are on (for defn/defmacro)."
-  [{:keys [whole head doc sig-body] :as forms}]
-  (when (seq doc)
-    (let [get-line #(:line (meta %))
-          first-line (get-line whole)
-          before-line (or (get-line (second head))
-                          (get-line (first head)))
-          after-line (get-line (first sig-body))]
-      (when (and before-line after-line
-              (< before-line after-line))
-        {:start-line (-> before-line inc (- first-line))
-         :end-line (-> after-line dec (- first-line))
-         :forms doc}))))
+
+(comment
+  (require '[rewrite-clj.zip :as z])
+  (require '[rewrite-clj.parser :as p])
+  (def src "(defn ^number sinh\n  {:doc \"Returns the hyperbolic sine of x, (e^x - e^-x)/2.\n  If x is ##NaN => ##NaN\n  If x is ##Inf or ##-Inf or zero => x\n  See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sinh\"\n   :added \"1.11.10\"}\n  [x] (Math/sinh x))")
+  (println src)
+  ;  (defn ^number sinh
+  ;    {:doc "Returns the hyperbolic sine of x, (e^x - e^-x)/2.
+  ;    If x is ##NaN => ##NaN
+  ;    If x is ##Inf or ##-Inf or zero => x
+  ;    See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sinh"
+  ;     :added "1.11.10"}
+  ;    [x] (Math/sinh x))
+  (def zloc (z/of-string src))
+  (println (-> zloc z/down z/right z/tag))
+  (println (z/root-string zloc)))
