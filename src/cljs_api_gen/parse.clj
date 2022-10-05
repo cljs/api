@@ -10,8 +10,7 @@
                                read-clj-core-forms
                                read-treader-forms]]
     [cljs-api-gen.config :refer [repos-dir]]
-    [cljs-api-gen.docstring :refer [try-locate-docs
-                                    fix-docstring
+    [cljs-api-gen.docstring :refer [fix-docstring
                                     try-remove-docs]]
     [cljs-api-gen.repo-cljs :refer [*cljs-tag*
                                     *clj-tag*
@@ -140,11 +139,6 @@
         args (if docstring (rest args) args)
         attr-map (let [m (first args)]
                    (when (map? m) m))
-        docstring-location (cond
-                             docstring       :in-string
-                             (:doc meta-)    :in-name-meta
-                             (:doc attr-map) :in-attr-map
-                             :else           nil)
         docstring (or docstring (:doc meta-) (:doc attr-map))
         args (if attr-map (rest args) args)
         macro? (:macro attr-map)
@@ -166,9 +160,7 @@
         constructor? (some #{"@constructor"} (:jsdoc meta-))]
     (when (or *parse-private-defs?*
               (not private?))
-      {:expected-docs expected-docs
-       :docstring (fix-docstring docstring)
-       :docstring-location docstring-location
+      {:docstring (fix-docstring docstring)
        :signature (or arglists signatures)
        :type (cond
                dynamic? "dynamic var" ;; e.g. *exec-tap-fn*
@@ -455,7 +447,7 @@
        (let [common (parse-common-def (or virtual-form form))
              location (parse-location form)
              merged (merge specific location common)
-             final (update-in merged [:source :code] try-remove-docs (:docstring-location specific))
+             final (update-in merged [:source :code] try-remove-docs)
              internal? (internal-def-only? final)]
          (when-not internal?
            (with-meta final {:form form})))))))
