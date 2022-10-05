@@ -49,8 +49,10 @@
         ;; rewrite utils
         z-sexpr #(when (z/sexpr-able? %) (z/sexpr %))
         z-dissoc (fn [zm k] ;; zloc of map
-                   (let [zk (-> zm z/down (z/find #(= k (z-sexpr %))))];; get key
-                     (-> zk z/right z/remove z/remove))) ;; remove key and following value
+                   (let [zk (-> zm z/down (z/find #(= k (z-sexpr %))));; get key
+                         result (-> zk z/right z/remove z/remove)] ;; remove key and following value
+                     (cond-> result
+                       (not (z/leftmost? zk)) z/up))) ;; return map zloc
 
         ;; in name meta?
         zloc (z/right zloc) ;; skip def, defn, or defmacro
@@ -74,10 +76,14 @@
 
     (or (z/root-string
           (cond
-            a-name (let [zm (-> zloc z/down)]
-                     (if (z/map? zm)
-                       (z-dissoc zm :doc)
-                       (z/replace za a-name))) ;; just replace
+            a-name (or
+                     (let [zm (-> za z/down)]
+                       (when (z/map? zm)
+                         (let [zm (z-dissoc zm :doc)]
+                           (when (seq (z-sexpr zm))
+                             zm))))
+                     ;; fallback to plain-printed meta
+                     (z/replace za a-name))
             b-str (z/remove zb)
             c-map (if (seq c-map)
                     (z-dissoc zc :doc)
