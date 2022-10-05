@@ -32,7 +32,7 @@
                (str/join "\n")))))))
 
 (defn try-remove-docs*
-  "Try to remove docstring/attr-map from source."
+  "Try to remove docstring from source."
   [src]
   (let [src (str/trimr src)
         zloc (try
@@ -72,17 +72,18 @@
                      (when (and (map? m) (:doc m))
                        [zloc (dissoc m :doc)]))]
 
-    (z/root-string
-      (cond
-        a-name (let [zm (-> zloc z/down)]
-                 (if (z/map? zm)
-                   (z-dissoc zm :doc)
-                   (z/replace za a-name))) ;; just replace
-        b-str (z/remove zb)
-        c-map (if (seq c-map)
-                (z-dissoc zc :doc)
-                (z/remove zc))
-        :else zloc))))
+    (or (z/root-string
+          (cond
+            a-name (let [zm (-> zloc z/down)]
+                     (if (z/map? zm)
+                       (z-dissoc zm :doc)
+                       (z/replace za a-name))) ;; just replace
+            b-str (z/remove zb)
+            c-map (if (seq c-map)
+                    (z-dissoc zc :doc)
+                    (z/remove zc))
+            :else zloc))
+        src)))
 
 (defn try-remove-docs [src]
   (try
