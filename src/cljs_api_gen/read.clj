@@ -38,6 +38,12 @@
     (let [is (io/input-stream path)
           r1 (readers/input-stream-push-back-reader is)
           r  (readers/source-logging-push-back-reader r1 1 path)]
+      ;; TODO: For starters, if the file is cljc, run read-forms twice with :clj and :cljs,
+      ;; and maybe add a metadata tag {:reader-feature :cljs},
+      ;;
+      ;; I believe we only need the :cljs forms to add the extra source entry to the primary :clj form.
+      ;;
+      ;; Not sure where to perform that merge.  Maybe in parse-ns*
       (read-forms r))))
 
 (defn read-forms-from-str
