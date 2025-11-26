@@ -53,4 +53,4 @@
 
 (defn -main
   [& args]
-  (main (first args)))
+  (main (some-> args first read-string)))
