@@ -1,5 +1,5 @@
 (ns cljs-api-gen.parse
-  (:refer-clojure :exclude [replace])
+  (:refer-clojure :exclude [replace subs])
   (:require
     [clojure.core.match :refer [match]]
     [clojure.set :refer [rename-keys]]
@@ -29,6 +29,15 @@
                                   repl-options
                                   sub-options-ns
                                   sub-options-sym]]))
+
+(defn subs
+  "a version of subs that avoids 'index out of bounds' exceptions"
+  [s start & [stop]]
+  (let [n (count s)
+        stop (or stop n)]
+    (clojure.core/subs s
+      (min n start)
+      (min n stop))))
 
 ;; current namespace and repo that we are parsing.
 (def ^:dynamic *cur-ns*)
