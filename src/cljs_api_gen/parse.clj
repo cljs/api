@@ -85,6 +85,7 @@
     "clojure.reflect"       :normal
     "cljs.math"             :normal
     "cljs.nodejs"           :normal
+    "cljs.proxy"            :normal
     "cljs.js"               :normal
     "cljs.spec"             :normal
     "cljs.spec.test"        :normal
