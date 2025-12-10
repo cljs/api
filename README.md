@@ -3,7 +3,6 @@
 Generates data for the __[API Documentation Site]__
 
 - Create with: `clj -Mrun`
-    - if new release is missing you have to add it manually with: `clj -Mrun '{:new-release "1.12.116"}'`
 - Download data: [`cljs-api.edn`]
 - Learn about data format: [`cljs-api-format.edn`]
 - Contribute extra documentation in [`docfiles/`]

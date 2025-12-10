@@ -9,17 +9,8 @@
     [clojure.xml :as xml]
     [me.raynes.fs :refer [exists? mkdir base-name]]
     [clojure.string :as string :refer [trim split split-lines ends-with?]]
-    [cljs-api-gen.config :refer [repos-dir cache-dir clj-maven-file cljs-maven-file]]
-    [clj-time.core :as time]
-    [clj-time.coerce :as tc]
-    [clj-time.format :as tf]))
+    [cljs-api-gen.config :refer [repos-dir cache-dir clj-maven-file cljs-maven-file]]))
 
-
-(defn epoch-now []
-  (tc/to-long (time/now)))
-
-(defn timestamp->date-str [t]
-  (tf/unparse (tf/formatters :date) (tc/from-long t)))
 
 (def ^:dynamic *cljs-version*    "ClojureScript version string   (e.g. \"0.0-3211\")" nil)
 (def ^:dynamic *cljs-tag*        "ClojureScript version git tag  (e.g. \"r3211\")" nil)
@@ -292,41 +283,21 @@
 ;; Maven release retrieval
 ;;--------------------------------------------------------------------------------
 
-(defn maven-release-url
-  "See: https://search.maven.org/solrsearch/select?q=g:%22org.clojure%22+AND+a:%22clojurescript%22&core=gav&rows=1000&wt=json"
-  [group artifact]
-  (str "https://search.maven.org/solrsearch/select?q=g:%22" group "%22+AND+a:%22" artifact "%22&core=gav&rows=1000&wt=json"))
-
 (defn maven-releases
-  "NOTE: The official maven API [1] now limits the number of query results to ~20,
-  meaning this function MAY BE MISSING VERSIONS if I haven’t run it in a while.
-  So now, our cache file is our source of truth on historical versions no longer
-  published by their endpoint.
-
-  We can alternatively scrape Maven’s public directory [2] for the publish date
-  for each artifact (which at the time of this writing is in UTC).
-  I’m wary of doing this since it might change, but will be necessary if we’re
-  pulling in a new artifact which we have no previous results to rely on.
-
-  [1]: https://search.maven.org/classic/#api
-  [2]: https://repo1.maven.org/maven2/org/clojure/clojurescript/
-  "
+  "Scrape what appears to be a stable html page of maven releases:
+  https://repo1.maven.org/maven2/org/clojure/clojurescript/"
   [group artifact cache-file]
-  (let [url (maven-release-url group artifact)
-        latest (try
-                 (-> (slurp url)
-                     (json/read-str :key-fn keyword)
-                     (:response)
-                     (:docs)
-                     (reverse)) ;; properly sorted by version
-                 (catch java.net.UnknownHostException e
-                   []))
-        result (atom (edn/read-string (slurp cache-file)))]
-    (doseq [e latest
-            :when (not (some #{e} @result))]
-      (swap! result conj e))
-    (spit cache-file (with-out-str (pprint @result)))
-    @result))
+  (let [url (format "https://repo1.maven.org/maven2/%s/%s/" (string/replace group "." "/") artifact)
+        versions (try
+                   (->> (slurp url)
+                        (re-seq #"<a href=\"(.*?)/\".*(\d\d\d\d-\d\d-\d\d \d\d:\d\d)")
+                        (map (fn [[_ v date]]
+                               {:v v :date date}))
+                        (sort-by :date))
+                   (catch java.net.UnknownHostException e
+                     []))]
+    (spit cache-file (with-out-str (pprint versions)))
+    versions))
 
 (def new-maven-release
   "a maven release that is not yet visible from their API (slow to update sometimes)"
@@ -335,10 +306,9 @@
 (defn get-published-cljs-tags!
   []
   (println (style "\nRetrieving published ClojureScript versions from Maven...\n" :cyan))
-  (let [releases (cond-> (maven-releases "org.clojure" "clojurescript" cljs-maven-file)
-                   @new-maven-release (concat [{:v @new-maven-release :timestamp (epoch-now)}]))
+  (let [releases (maven-releases "org.clojure" "clojurescript" cljs-maven-file)
         pub-versions (map :v releases)
-        pub-dates (map (comp timestamp->date-str :timestamp) releases)
+        pub-dates (map :date releases)
         pub-tags (map cljs-version->tag pub-versions)
         local-tags (get-local-cljs-tags)
         [not-local not-published valid-tags] (diff (set pub-tags) (set local-tags))]

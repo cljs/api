@@ -1,1736 +1,219 @@
-[{:id "org.clojure:clojurescript:0.0-927",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-927",
-  :p "jar",
-  :timestamp 1327083998000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-971",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-971",
-  :p "jar",
-  :timestamp 1327697920000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-993",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-993",
-  :p "jar",
-  :timestamp 1330365754000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1006",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1006",
-  :p "jar",
-  :timestamp 1333129256000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1011",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1011",
-  :p "jar",
-  :timestamp 1333372998000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1211",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1211",
-  :p "jar",
-  :timestamp 1336599255000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1236",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1236",
-  :p "jar",
-  :timestamp 1337201121000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1424",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1424",
-  :p "jar",
-  :timestamp 1339887332000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1443",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1443",
-  :p "jar",
-  :timestamp 1341577001000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1449",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1449",
-  :p "jar",
-  :timestamp 1343154600000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1450",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1450",
-  :p "jar",
-  :timestamp 1343177134000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1503",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1503",
-  :p "jar",
-  :timestamp 1350067092000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1513",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1513",
-  :p "jar",
-  :timestamp 1350673193000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1535",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1535",
-  :p "jar",
-  :timestamp 1352393405000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1552",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1552",
-  :p "jar",
-  :timestamp 1354563384000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1576",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1576",
-  :p "jar",
-  :timestamp 1359326353000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1586",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1586",
-  :p "jar",
-  :timestamp 1361048172000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1798",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1798",
-  :p "jar",
-  :timestamp 1367591338000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1803",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1803",
-  :p "jar",
-  :timestamp 1367844348000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1806",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1806",
-  :p "jar",
-  :timestamp 1368165922000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1820",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1820",
-  :p "jar",
-  :timestamp 1370620415000,
-  :ec [".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1835",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1835",
-  :p "jar",
-  :timestamp 1371842918000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1843",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1843",
-  :p "jar",
-  :timestamp 1373989512000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1844",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1844",
-  :p "jar",
-  :timestamp 1374258863000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1847",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1847",
-  :p "jar",
-  :timestamp 1374596962000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1853",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1853",
-  :p "jar",
-  :timestamp 1375711618000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1859",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1859",
-  :p "jar",
-  :timestamp 1376935881000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1877",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1877",
-  :p "jar",
-  :timestamp 1378683115000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1878",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1878",
-  :p "jar",
-  :timestamp 1378930379000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1885",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1885",
-  :p "jar",
-  :timestamp 1379270418000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1886",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1886",
-  :p "jar",
-  :timestamp 1379272976000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1889",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1889",
-  :p "jar",
-  :timestamp 1379280654000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1895",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1895",
-  :p "jar",
-  :timestamp 1380037732000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1896",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1896",
-  :p "jar",
-  :timestamp 1380042190000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1909",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1909",
-  :p "jar",
-  :timestamp 1380300849000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1913",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1913",
-  :p "jar",
-  :timestamp 1380937467000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1933",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1933",
-  :p "jar",
-  :timestamp 1381493809000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1934",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1934",
-  :p "jar",
-  :timestamp 1381495809000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-1978",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-1978",
-  :p "jar",
-  :timestamp 1382922740000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2014",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2014",
-  :p "jar",
-  :timestamp 1383767274000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2024",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2024",
-  :p "jar",
-  :timestamp 1383928687000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2027",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2027",
-  :p "jar",
-  :timestamp 1383950821000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2030",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2030",
-  :p "jar",
-  :timestamp 1383951999000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2060",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2060",
-  :p "jar",
-  :timestamp 1385044670000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2067",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2067",
-  :p "jar",
-  :timestamp 1385132899000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2069",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2069",
-  :p "jar",
-  :timestamp 1385140056000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2075",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2075",
-  :p "jar",
-  :timestamp 1385165111000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2080",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2080",
-  :p "jar",
-  :timestamp 1385218778000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2120",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2120",
-  :p "jar",
-  :timestamp 1386946856000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2127",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2127",
-  :p "jar",
-  :timestamp 1387551099000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2134",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2134",
-  :p "jar",
-  :timestamp 1388429991000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2138",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2138",
-  :p "jar",
-  :timestamp 1388462643000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2156",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2156",
-  :p "jar",
-  :timestamp 1390971730000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2173",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2173",
-  :p "jar",
-  :timestamp 1393032689000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2197",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2197",
-  :p "jar",
-  :timestamp 1395866087000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2199",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2199",
-  :p "jar",
-  :timestamp 1396377351000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2202",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2202",
-  :p "jar",
-  :timestamp 1396465204000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2227",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2227",
-  :p "jar",
-  :timestamp 1400771472000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2234",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2234",
-  :p "jar",
-  :timestamp 1402692526000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2261",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2261",
-  :p "jar",
-  :timestamp 1404268606000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2268",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2268",
-  :p "jar",
-  :timestamp 1404675687000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2277",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2277",
-  :p "jar",
-  :timestamp 1406312986000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2280",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2280",
-  :p "jar",
-  :timestamp 1406928465000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2301",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2301",
-  :p "jar",
-  :timestamp 1407444717000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2307",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2307",
-  :p "jar",
-  :timestamp 1407451986000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2311",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2311",
-  :p "jar",
-  :timestamp 1407626914000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2322",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2322",
-  :p "jar",
-  :timestamp 1409149663000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2341",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2341",
-  :p "jar",
-  :timestamp 1411042662000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2342",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2342",
-  :p "jar",
-  :timestamp 1411067180000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2356",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2356",
-  :p "jar",
-  :timestamp 1411717921000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2371",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2371",
-  :p "jar",
-  :timestamp 1412941630000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2411",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2411",
-  :p "jar",
-  :timestamp 1417809166000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2496",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2496",
-  :p "jar",
-  :timestamp 1418851224000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2498",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2498",
-  :p "jar",
-  :timestamp 1419029028000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2505",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2505",
-  :p "jar",
-  :timestamp 1419185048000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2511",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2511",
-  :p "jar",
-  :timestamp 1419291753000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2629",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2629",
-  :p "jar",
-  :timestamp 1420149450000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2644",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2644",
-  :p "jar",
-  :timestamp 1420239803000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2655",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2655",
-  :p "jar",
-  :timestamp 1420313177000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2657",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2657",
-  :p "jar",
-  :timestamp 1420323971000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2665",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2665",
-  :p "jar",
-  :timestamp 1420394308000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2719",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2719",
-  :p "jar",
-  :timestamp 1422059031000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2723",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2723",
-  :p "jar",
-  :timestamp 1422132359000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2725",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2725",
-  :p "jar",
-  :timestamp 1422134287000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2727",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2727",
-  :p "jar",
-  :timestamp 1422149526000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2740",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2740",
-  :p "jar",
-  :timestamp 1422452811000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2755",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2755",
-  :p "jar",
-  :timestamp 1422829543000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2758",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2758",
-  :p "jar",
-  :timestamp 1422886729000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2760",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2760",
-  :p "jar",
-  :timestamp 1422891084000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2814",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2814",
-  :p "jar",
-  :timestamp 1423528361000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2816",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2816",
-  :p "jar",
-  :timestamp 1423571401000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2843",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2843",
-  :p "jar",
-  :timestamp 1423760117000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2850",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2850",
-  :p "jar",
-  :timestamp 1423865903000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2911",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2911",
-  :p "jar",
-  :timestamp 1424537895000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2913",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2913",
-  :p "jar",
-  :timestamp 1424540858000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-2985",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-2985",
-  :p "jar",
-  :timestamp 1425486076000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3030",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3030",
-  :p "jar",
-  :timestamp 1425757364000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3053",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3053",
-  :p "jar",
-  :timestamp 1425917453000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3058",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3058",
-  :p "jar",
-  :timestamp 1425942527000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3115",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3115",
-  :p "jar",
-  :timestamp 1426445010000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3117",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3117",
-  :p "jar",
-  :timestamp 1426511842000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3119",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3119",
-  :p "jar",
-  :timestamp 1426528267000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3123",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3123",
-  :p "jar",
-  :timestamp 1426546140000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3126",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3126",
-  :p "jar",
-  :timestamp 1426704627000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3148",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3148",
-  :p "jar",
-  :timestamp 1427131580000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3149",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3149",
-  :p "jar",
-  :timestamp 1427146130000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3153",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3153",
-  :p "jar",
-  :timestamp 1427315045000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3165",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3165",
-  :p "jar",
-  :timestamp 1427461874000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3169",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3169",
-  :p "jar",
-  :timestamp 1427805334000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3178",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3178",
-  :p "jar",
-  :timestamp 1428362172000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3190",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3190",
-  :p "jar",
-  :timestamp 1428592866000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3191",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3191",
-  :p "jar",
-  :timestamp 1428615317000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3195",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3195",
-  :p "jar",
-  :timestamp 1428695566000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3196",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3196",
-  :p "jar",
-  :timestamp 1428710204000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3208",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3208",
-  :p "jar",
-  :timestamp 1429186310000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3211",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3211",
-  :p "jar",
-  :timestamp 1429767684000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3255",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3255",
-  :p "jar",
-  :timestamp 1431111702000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3263",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3263",
-  :p "jar",
-  :timestamp 1431197428000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3264",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3264",
-  :p "jar",
-  :timestamp 1431199298000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3269",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3269",
-  :p "jar",
-  :timestamp 1431266944000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3291",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3291",
-  :p "jar",
-  :timestamp 1431981661000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3297",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3297",
-  :p "jar",
-  :timestamp 1432408323000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:0.0-3308",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "0.0-3308",
-  :p "jar",
-  :timestamp 1433183114000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.7.10",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.7.10",
-  :p "jar",
-  :timestamp 1438185483000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.7.28",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.7.28",
-  :p "jar",
-  :timestamp 1438363743000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.7.48",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.7.48",
-  :p "jar",
-  :timestamp 1438812467000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.7.58",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.7.58",
-  :p "jar",
-  :timestamp 1438860520000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.7.107",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.7.107",
-  :p "jar",
-  :timestamp 1439315028000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.7.122",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.7.122",
-  :p "jar",
-  :timestamp 1440850787000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.7.145",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.7.145",
-  :p "jar",
-  :timestamp 1444745436000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.7.166",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.7.166",
-  :p "jar",
-  :timestamp 1446602076000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.7.170",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.7.170",
-  :p "jar",
-  :timestamp 1446808754000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.7.189",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.7.189",
-  :p "jar",
-  :timestamp 1449009517000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.7.228",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.7.228",
-  :p "jar",
-  :timestamp 1452277963000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.8.34",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.8.34",
-  :p "jar",
-  :timestamp 1458323404000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.8.40",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.8.40",
-  :p "jar",
-  :timestamp 1459166365000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.8.51",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.8.51",
-  :p "jar",
-  :timestamp 1461583401000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.14",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.14",
-  :p "jar",
-  :timestamp 1464803397000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.35",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.35",
-  :p "jar",
-  :timestamp 1464983716000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.36",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.36",
-  :p "jar",
-  :timestamp 1464984365000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.75",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.75",
-  :p "jar",
-  :timestamp 1466194800000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.76",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.76",
-  :p "jar",
-  :timestamp 1466195125000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.85",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.85",
-  :p "jar",
-  :timestamp 1466527127000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.88",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.88",
-  :p "jar",
-  :timestamp 1466542079000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.89",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.89",
-  :p "jar",
-  :timestamp 1466601149000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.90",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.90",
-  :p "jar",
-  :timestamp 1466628935000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.92",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.92",
-  :p "jar",
-  :timestamp 1466638241000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.93",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.93",
-  :p "jar",
-  :timestamp 1466707379000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.183",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.183",
-  :p "jar",
-  :timestamp 1470865746000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.198",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.198",
-  :p "jar",
-  :timestamp 1471030702000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.211",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.211",
-  :p "jar",
-  :timestamp 1471265373000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.216",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.216",
-  :p "jar",
-  :timestamp 1471283797000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.225",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.225",
-  :p "jar",
-  :timestamp 1471628136000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.226",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.226",
-  :p "jar",
-  :timestamp 1472248192000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.227",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.227",
-  :p "jar",
-  :timestamp 1472248639000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.229",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.229",
-  :p "jar",
-  :timestamp 1473179844000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.293",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.293",
-  :p "jar",
-  :timestamp 1476900576000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.456",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.456",
-  :p "jar",
-  :timestamp 1485555187000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.473",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.473",
-  :p "jar",
-  :timestamp 1486756200000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.493",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.493",
-  :p "jar",
-  :timestamp 1487972080000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.494",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.494",
-  :p "jar",
-  :timestamp 1487981637000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.495",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.495",
-  :p "jar",
-  :timestamp 1488397362000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.518",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.518",
-  :p "jar",
-  :timestamp 1492029784000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.521",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.521",
-  :p "jar",
-  :timestamp 1492187130000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.542",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.542",
-  :p "jar",
-  :timestamp 1494620368000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.562",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.562",
-  :p "jar",
-  :timestamp 1495835396000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.655",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.655",
-  :p "jar",
-  :timestamp 1498529405000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.660",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.660",
-  :p "jar",
-  :timestamp 1498575957000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.671",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.671",
-  :p "jar",
-  :timestamp 1498830146000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.854",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.854",
-  :p "jar",
-  :timestamp 1501276492000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.908",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.908",
-  :p "jar",
-  :timestamp 1502919631000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.9.946",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.9.946",
-  :p "jar",
-  :timestamp 1506991207000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.63",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.63",
-  :p "jar",
-  :timestamp 1519703715000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.64",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.64",
-  :p "jar",
-  :timestamp 1519709403000,
-  :ec ["-sources.jar" ".jar" "-aot.jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.126",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.126",
-  :p "jar",
-  :timestamp 1520176979000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.145",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.145",
-  :p "jar",
-  :timestamp 1520482924000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.191",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.191",
-  :p "jar",
-  :timestamp 1521282712000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.217",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.217",
-  :p "jar",
-  :timestamp 1521557683000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.238",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.238",
-  :p "jar",
-  :timestamp 1521986989000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.312",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.312",
-  :p "jar",
-  :timestamp 1529066976000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.329",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.329",
-  :p "jar",
-  :timestamp 1529705463000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.335",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.335",
-  :p "jar",
-  :timestamp 1529887859000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.339",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.339",
-  :p "jar",
-  :timestamp 1529938177000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.439",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.439",
-  :p "jar",
-  :timestamp 1541194783000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.514",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.514",
-  :p "jar",
-  :timestamp 1548939466000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.516",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.516",
-  :p "jar",
-  :timestamp 1548947578000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.520",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.520",
-  :p "jar",
-  :timestamp 1550087214000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.597",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.597",
-  :p "jar",
-  :timestamp 1574124567000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.738",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.738",
-  :p "jar",
-  :timestamp 1587734736000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.739",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.739",
-  :p "jar",
-  :timestamp 1587736032000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.740",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.740",
-  :p "jar",
-  :timestamp 1587744443000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.741",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.741",
-  :p "jar",
-  :timestamp 1587745386000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.742",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.742",
-  :p "jar",
-  :timestamp 1587827329000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.748",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.748",
-  :p "jar",
-  :timestamp 1587930745000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.753",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.753",
-  :p "jar",
-  :timestamp 1588360009000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.756",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.756",
-  :p "jar",
-  :timestamp 1588591027000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.758",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.758",
-  :p "jar",
-  :timestamp 1588599503000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.764",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.764",
-  :p "jar",
-  :timestamp 1589412015000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.773",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.773",
-  :p "jar",
-  :timestamp 1590516908000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.844",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.844",
-  :p "jar",
-  :timestamp 1617122555000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.866",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.866",
-  :p "jar",
-  :timestamp 1621615327000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.879",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.879",
-  :p "jar",
-  :timestamp 1626701633000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.891",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.891",
-  :p "jar",
-  :timestamp 1636039457000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.893",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.893",
-  :p "jar",
-  :timestamp 1636391684000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.896",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.896",
-  :p "jar",
-  :timestamp 1638372319000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.10.914",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.10.914",
-  :p "jar",
-  :timestamp 1640012851000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.11.4",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.11.4",
-  :p "jar",
-  :timestamp 1640686204000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojurescript" "library" "compiler" "runtime" "core"]}
- {:id "org.clojure:clojurescript:1.11.50",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.11.50",
-  :p "jar",
-  :timestamp 1652376177000,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "library" "clojurescript" "runtime" "compiler"]}
- {:id "org.clojure:clojurescript:1.11.51",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.11.51",
-  :p "jar",
-  :timestamp 1652456177000,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "library" "clojurescript" "runtime" "compiler"]}
- {:id "org.clojure:clojurescript:1.11.54",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.11.54",
-  :p "jar",
-  :timestamp 1652718955000,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "library" "clojurescript" "runtime" "compiler"]}
- {:id "org.clojure:clojurescript:1.11.57",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.11.57",
-  :p "jar",
-  :timestamp 1654952118000,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "library" "clojurescript" "runtime" "compiler"]}
- {:id "org.clojure:clojurescript:1.11.60",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.11.60",
-  :p "jar",
-  :timestamp 1656011098000,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "library" "clojurescript" "runtime" "compiler"]}
- {:id "org.clojure:clojurescript:1.11.121",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.11.121",
-  :p "jar",
-  :timestamp 1693593367000,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "library" "clojurescript" "runtime" "compiler"]}
- {:id "org.clojure:clojurescript:1.11.132",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.11.132",
-  :p "jar",
-  :timestamp 1706041101540,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "library" "clojurescript" "runtime" "compiler"]}
- {:id "org.clojure:clojurescript:1.12.35",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.12.35",
-  :p "jar",
-  :timestamp 1745434560814,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "library" "clojurescript" "runtime" "compiler"]}
- {:id "org.clojure:clojurescript:1.12.38",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.12.38",
-  :p "jar",
-  :timestamp 1746043218824,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "library" "clojurescript" "runtime" "compiler"]}
- {:id "org.clojure:clojurescript:1.12.42",
-  :g "org.clojure",
-  :a "clojurescript",
-  :v "1.12.42",
-  :p "jar",
-  :timestamp 1747367287726,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "library" "clojurescript" "runtime" "compiler"]}]
+({:v "0.0-927", :date "2012-01-20 18:26"}
+ {:v "0.0-971", :date "2012-01-27 20:58"}
+ {:v "0.0-993", :date "2012-02-27 18:02"}
+ {:v "0.0-1006", :date "2012-03-30 17:40"}
+ {:v "0.0-1011", :date "2012-04-02 13:23"}
+ {:v "0.0-1211", :date "2012-05-09 21:34"}
+ {:v "0.0-1236", :date "2012-05-16 20:45"}
+ {:v "0.0-1424", :date "2012-06-16 22:55"}
+ {:v "0.0-1443", :date "2012-07-06 12:16"}
+ {:v "0.0-1449", :date "2012-07-24 18:30"}
+ {:v "0.0-1450", :date "2012-07-25 00:45"}
+ {:v "0.0-1503", :date "2012-10-12 18:38"}
+ {:v "0.0-1513", :date "2012-10-19 18:59"}
+ {:v "0.0-1535", :date "2012-11-08 16:50"}
+ {:v "0.0-1552", :date "2012-12-03 19:36"}
+ {:v "0.0-1576", :date "2013-01-27 22:39"}
+ {:v "0.0-1586", :date "2013-02-16 20:56"}
+ {:v "0.0-1798", :date "2013-05-03 14:28"}
+ {:v "0.0-1803", :date "2013-05-06 12:45"}
+ {:v "0.0-1806", :date "2013-05-10 06:05"}
+ {:v "0.0-1820", :date "2013-06-07 15:53"}
+ {:v "0.0-1835", :date "2013-06-21 19:28"}
+ {:v "0.0-1843", :date "2013-07-16 15:45"}
+ {:v "0.0-1844", :date "2013-07-19 18:34"}
+ {:v "0.0-1847", :date "2013-07-23 16:29"}
+ {:v "0.0-1853", :date "2013-08-05 14:06"}
+ {:v "0.0-1859", :date "2013-08-19 18:11"}
+ {:v "0.0-1877", :date "2013-09-08 23:31"}
+ {:v "0.0-1878", :date "2013-09-11 20:12"}
+ {:v "0.0-1885", :date "2013-09-15 18:40"}
+ {:v "0.0-1886", :date "2013-09-15 19:22"}
+ {:v "0.0-1889", :date "2013-09-15 21:30"}
+ {:v "0.0-1895", :date "2013-09-24 15:48"}
+ {:v "0.0-1896", :date "2013-09-24 17:03"}
+ {:v "0.0-1909", :date "2013-09-27 16:54"}
+ {:v "0.0-1913", :date "2013-10-05 01:44"}
+ {:v "0.0-1933", :date "2013-10-11 12:16"}
+ {:v "0.0-1934", :date "2013-10-11 12:50"}
+ {:v "0.0-1978", :date "2013-10-28 01:12"}
+ {:v "0.0-2014", :date "2013-11-06 19:47"}
+ {:v "0.0-2024", :date "2013-11-08 16:38"}
+ {:v "0.0-2027", :date "2013-11-08 22:47"}
+ {:v "0.0-2030", :date "2013-11-08 23:06"}
+ {:v "0.0-2060", :date "2013-11-21 14:37"}
+ {:v "0.0-2067", :date "2013-11-22 15:08"}
+ {:v "0.0-2069", :date "2013-11-22 17:07"}
+ {:v "0.0-2075", :date "2013-11-23 00:05"}
+ {:v "0.0-2080", :date "2013-11-23 14:59"}
+ {:v "0.0-2120", :date "2013-12-13 15:00"}
+ {:v "0.0-2127", :date "2013-12-20 14:51"}
+ {:v "0.0-2134", :date "2013-12-30 18:59"}
+ {:v "0.0-2138", :date "2013-12-31 04:04"}
+ {:v "0.0-2156", :date "2014-01-29 05:02"}
+ {:v "0.0-2173", :date "2014-02-22 01:31"}
+ {:v "0.0-2197", :date "2014-03-26 20:34"}
+ {:v "0.0-2199", :date "2014-04-01 18:35"}
+ {:v "0.0-2202", :date "2014-04-02 19:00"}
+ {:v "0.0-2227", :date "2014-05-22 15:11"}
+ {:v "0.0-2234", :date "2014-06-13 20:48"}
+ {:v "0.0-2261", :date "2014-07-02 02:36"}
+ {:v "0.0-2268", :date "2014-07-06 19:41"}
+ {:v "0.0-2277", :date "2014-07-25 18:29"}
+ {:v "0.0-2280", :date "2014-08-01 21:27"}
+ {:v "0.0-2301", :date "2014-08-07 20:51"}
+ {:v "0.0-2307", :date "2014-08-07 22:53"}
+ {:v "0.0-2311", :date "2014-08-09 23:28"}
+ {:v "0.0-2322", :date "2014-08-27 14:27"}
+ {:v "0.0-2341", :date "2014-09-18 12:17"}
+ {:v "0.0-2342", :date "2014-09-18 19:06"}
+ {:v "0.0-2356", :date "2014-09-26 07:52"}
+ {:v "0.0-2371", :date "2014-10-10 11:47"}
+ {:v "0.0-2411", :date "2014-12-05 19:52"}
+ {:v "0.0-2496", :date "2014-12-17 21:20"}
+ {:v "0.0-2498", :date "2014-12-19 22:43"}
+ {:v "0.0-2505", :date "2014-12-21 18:04"}
+ {:v "0.0-2511", :date "2014-12-22 23:42"}
+ {:v "0.0-2629", :date "2015-01-01 21:57"}
+ {:v "0.0-2644", :date "2015-01-02 23:03"}
+ {:v "0.0-2655", :date "2015-01-03 19:26"}
+ {:v "0.0-2657", :date "2015-01-03 22:26"}
+ {:v "0.0-2665", :date "2015-01-04 17:58"}
+ {:v "0.0-2719", :date "2015-01-24 00:23"}
+ {:v "0.0-2723", :date "2015-01-24 20:45"}
+ {:v "0.0-2725", :date "2015-01-24 21:18"}
+ {:v "0.0-2727", :date "2015-01-25 01:32"}
+ {:v "0.0-2740", :date "2015-01-28 13:46"}
+ {:v "0.0-2755", :date "2015-02-01 22:25"}
+ {:v "0.0-2758", :date "2015-02-02 14:18"}
+ {:v "0.0-2760", :date "2015-02-02 15:31"}
+ {:v "0.0-2814", :date "2015-02-10 00:32"}
+ {:v "0.0-2816", :date "2015-02-10 12:30"}
+ {:v "0.0-2843", :date "2015-02-12 16:55"}
+ {:v "0.0-2850", :date "2015-02-13 22:18"}
+ {:v "0.0-2911", :date "2015-02-21 16:58"}
+ {:v "0.0-2913", :date "2015-02-21 17:47"}
+ {:v "0.0-2985", :date "2015-03-04 16:21"}
+ {:v "0.0-3030", :date "2015-03-07 19:42"}
+ {:v "0.0-3053", :date "2015-03-09 16:10"}
+ {:v "0.0-3058", :date "2015-03-09 23:08"}
+ {:v "0.0-3115", :date "2015-03-15 18:43"}
+ {:v "0.0-3117", :date "2015-03-16 13:17"}
+ {:v "0.0-3119", :date "2015-03-16 17:51"}
+ {:v "0.0-3123", :date "2015-03-16 22:49"}
+ {:v "0.0-3126", :date "2015-03-18 18:50"}
+ {:v "0.0-3148", :date "2015-03-23 17:26"}
+ {:v "0.0-3149", :date "2015-03-23 21:28"}
+ {:v "0.0-3153", :date "2015-03-25 20:24"}
+ {:v "0.0-3165", :date "2015-03-27 13:11"}
+ {:v "0.0-3169", :date "2015-03-31 12:35"}
+ {:v "0.0-3178", :date "2015-04-06 23:16"}
+ {:v "0.0-3190", :date "2015-04-09 15:21"}
+ {:v "0.0-3191", :date "2015-04-09 21:35"}
+ {:v "0.0-3195", :date "2015-04-10 19:52"}
+ {:v "0.0-3196", :date "2015-04-10 23:56"}
+ {:v "0.0-3208", :date "2015-04-16 12:11"}
+ {:v "0.0-3211", :date "2015-04-23 05:41"}
+ {:v "0.0-3255", :date "2015-05-08 19:01"}
+ {:v "0.0-3263", :date "2015-05-09 18:50"}
+ {:v "0.0-3264", :date "2015-05-09 19:21"}
+ {:v "0.0-3269", :date "2015-05-10 14:09"}
+ {:v "0.0-3291", :date "2015-05-18 20:41"}
+ {:v "0.0-3297", :date "2015-05-23 19:12"}
+ {:v "0.0-3308", :date "2015-06-01 18:25"}
+ {:v "1.7.10", :date "2015-07-29 15:58"}
+ {:v "1.7.28", :date "2015-07-31 17:29"}
+ {:v "1.7.48", :date "2015-08-05 22:07"}
+ {:v "1.7.58", :date "2015-08-06 11:28"}
+ {:v "1.7.107", :date "2015-08-11 17:43"}
+ {:v "1.7.122", :date "2015-08-29 12:19"}
+ {:v "1.7.145", :date "2015-10-13 14:10"}
+ {:v "1.7.166", :date "2015-11-04 01:54"}
+ {:v "1.7.170", :date "2015-11-06 11:19"}
+ {:v "1.7.189", :date "2015-12-01 22:38"}
+ {:v "1.7.228", :date "2016-01-08 18:32"}
+ {:v "1.8.34", :date "2016-03-18 17:50"}
+ {:v "1.8.40", :date "2016-03-28 11:59"}
+ {:v "1.8.51", :date "2016-04-25 11:23"}
+ {:v "1.9.14", :date "2016-06-01 17:49"}
+ {:v "1.9.35", :date "2016-06-03 19:55"}
+ {:v "1.9.36", :date "2016-06-03 20:06"}
+ {:v "1.9.75", :date "2016-06-17 20:20"}
+ {:v "1.9.76", :date "2016-06-17 20:25"}
+ {:v "1.9.85", :date "2016-06-21 16:38"}
+ {:v "1.9.88", :date "2016-06-21 20:47"}
+ {:v "1.9.89", :date "2016-06-22 13:12"}
+ {:v "1.9.90", :date "2016-06-22 20:55"}
+ {:v "1.9.92", :date "2016-06-22 23:30"}
+ {:v "1.9.93", :date "2016-06-23 18:42"}
+ {:v "1.9.183", :date "2016-08-10 21:49"}
+ {:v "1.9.198", :date "2016-08-12 19:38"}
+ {:v "1.9.211", :date "2016-08-15 12:49"}
+ {:v "1.9.216", :date "2016-08-15 17:56"}
+ {:v "1.9.225", :date "2016-08-19 17:35"}
+ {:v "1.9.226", :date "2016-08-26 21:49"}
+ {:v "1.9.227", :date "2016-08-26 21:57"}
+ {:v "1.9.229", :date "2016-09-06 16:37"}
+ {:v "1.9.293", :date "2016-10-19 18:09"}
+ {:v "1.9.456", :date "2017-01-27 22:13"}
+ {:v "1.9.473", :date "2017-02-10 19:50"}
+ {:v "1.9.493", :date "2017-02-24 21:34"}
+ {:v "1.9.494", :date "2017-02-25 00:13"}
+ {:v "1.9.495", :date "2017-03-01 19:42"}
+ {:v "1.9.518", :date "2017-04-12 20:43"}
+ {:v "1.9.521", :date "2017-04-14 16:25"}
+ {:v "1.9.542", :date "2017-05-12 20:19"}
+ {:v "1.9.562", :date "2017-05-26 21:49"}
+ {:v "1.9.655", :date "2017-06-27 02:10"}
+ {:v "1.9.660", :date "2017-06-27 15:05"}
+ {:v "1.9.671", :date "2017-06-30 13:42"}
+ {:v "1.9.854", :date "2017-07-28 21:14"}
+ {:v "1.9.908", :date "2017-08-16 21:40"}
+ {:v "1.9.946", :date "2017-10-03 00:40"}
+ {:v "1.10.63", :date "2018-02-27 03:55"}
+ {:v "1.10.64", :date "2018-02-27 05:30"}
+ {:v "1.10.126", :date "2018-03-04 15:22"}
+ {:v "1.10.145", :date "2018-03-08 04:22"}
+ {:v "1.10.191", :date "2018-03-17 10:31"}
+ {:v "1.10.217", :date "2018-03-20 14:54"}
+ {:v "1.10.238", :date "2018-03-25 14:09"}
+ {:v "1.10.312", :date "2018-06-15 12:49"}
+ {:v "1.10.329", :date "2018-06-22 22:11"}
+ {:v "1.10.335", :date "2018-06-25 00:50"}
+ {:v "1.10.339", :date "2018-06-25 14:49"}
+ {:v "1.10.439", :date "2018-11-02 21:39"}
+ {:v "1.10.514", :date "2019-01-31 12:57"}
+ {:v "1.10.516", :date "2019-01-31 15:12"}
+ {:v "1.10.520", :date "2019-02-13 19:46"}
+ {:v "1.10.597", :date "2019-11-19 00:49"}
+ {:v "1.10.738", :date "2020-04-24 13:25"}
+ {:v "1.10.739", :date "2020-04-24 13:47"}
+ {:v "1.10.740", :date "2020-04-24 16:07"}
+ {:v "1.10.741", :date "2020-04-24 16:23"}
+ {:v "1.10.742", :date "2020-04-25 15:08"}
+ {:v "1.10.748", :date "2020-04-26 19:52"}
+ {:v "1.10.753", :date "2020-05-01 19:06"}
+ {:v "1.10.756", :date "2020-05-04 11:17"}
+ {:v "1.10.758", :date "2020-05-04 13:38"}
+ {:v "1.10.764", :date "2020-05-13 23:20"}
+ {:v "1.10.773", :date "2020-05-26 18:15"}
+ {:v "1.10.844", :date "2021-03-30 16:42"}
+ {:v "1.10.866", :date "2021-05-21 16:42"}
+ {:v "1.10.879", :date "2021-07-19 13:33"}
+ {:v "1.10.891", :date "2021-11-04 15:24"}
+ {:v "1.10.893", :date "2021-11-08 17:14"}
+ {:v "1.10.896", :date "2021-12-01 15:25"}
+ {:v "1.10.914", :date "2021-12-20 15:07"}
+ {:v "1.11.4", :date "2021-12-28 10:10"}
+ {:v "1.11.50", :date "2022-05-12 17:22"}
+ {:v "1.11.51", :date "2022-05-13 15:36"}
+ {:v "1.11.54", :date "2022-05-16 16:35"}
+ {:v "1.11.57", :date "2022-06-11 12:55"}
+ {:v "1.11.60", :date "2022-06-23 19:04"}
+ {:v "1.11.121", :date "2023-09-01 18:36"}
+ {:v "1.11.132", :date "2024-01-23 20:18"}
+ {:v "1.12.35", :date "2025-04-23 18:56"}
+ {:v "1.12.38", :date "2025-04-30 20:00"}
+ {:v "1.12.42", :date "2025-05-16 03:48"}
+ {:v "1.12.116", :date "2025-11-24 17:25"}
+ {:v "1.12.134", :date "2025-12-09 00:21"})

@@ -1,1456 +1,186 @@
-[{:id "org.clojure:clojure:1.0.0",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.0.0",
-  :p "jar",
-  :timestamp 1247084744000,
-  :ec ["-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.1.0",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.1.0",
-  :p "jar",
-  :timestamp 1262410936000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.2.0",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.2.0",
-  :p "jar",
-  :timestamp 1284452576000,
-  :ec ["-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.3.0-alpha5",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.3.0-alpha5",
-  :p "jar",
-  :timestamp 1295039084000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.3.0-alpha6",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.3.0-alpha6",
-  :p "jar",
-  :timestamp 1299868734000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.2.1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.2.1",
-  :p "jar",
-  :timestamp 1301080994000,
-  :ec ["-slim.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.3.0-alpha7",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.3.0-alpha7",
-  :p "jar",
-  :timestamp 1305311250000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.3.0-alpha8",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.3.0-alpha8",
-  :p "jar",
-  :timestamp 1306525856000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.3.0-beta1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.3.0-beta1",
-  :p "jar",
-  :timestamp 1308698050000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.3.0-beta2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.3.0-beta2",
-  :p "jar",
-  :timestamp 1314391721000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.3.0-beta3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.3.0-beta3",
-  :p "jar",
-  :timestamp 1314991318000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.3.0-RC0",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.3.0-RC0",
-  :p "jar",
-  :timestamp 1315872440000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.3.0",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.3.0",
-  :p "jar",
-  :timestamp 1316803795000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.4.0-alpha1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.4.0-alpha1",
-  :p "jar",
-  :timestamp 1318021681000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.4.0-alpha2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.4.0-alpha2",
-  :p "jar",
-  :timestamp 1319582311000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.4.0-alpha3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.4.0-alpha3",
-  :p "jar",
-  :timestamp 1323816442000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.4.0-alpha4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.4.0-alpha4",
-  :p "jar",
-  :timestamp 1326468407000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.4.0-alpha5",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.4.0-alpha5",
-  :p "jar",
-  :timestamp 1327698373000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.4.0-beta1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.4.0-beta1",
-  :p "jar",
-  :timestamp 1328278744000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.4.0-beta2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.4.0-beta2",
-  :p "jar",
-  :timestamp 1330551367000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.4.0-beta3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.4.0-beta3",
-  :p "jar",
-  :timestamp 1330612942000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.4.0-beta4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.4.0-beta4",
-  :p "jar",
-  :timestamp 1331333728000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.4.0-beta5",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.4.0-beta5",
-  :p "jar",
-  :timestamp 1331663255000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.4.0-beta6",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.4.0-beta6",
-  :p "jar",
-  :timestamp 1333118732000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.4.0-beta7",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.4.0-beta7",
-  :p "jar",
-  :timestamp 1334055484000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.4.0",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.4.0",
-  :p "jar",
-  :timestamp 1334496823000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-alpha1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-alpha1",
-  :p "jar",
-  :timestamp 1337392466000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-alpha2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-alpha2",
-  :p "jar",
-  :timestamp 1339848289000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-alpha3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-alpha3",
-  :p "jar",
-  :timestamp 1342896274000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-alpha4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-alpha4",
-  :p "jar",
-  :timestamp 1345299895000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-alpha5",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-alpha5",
-  :p "jar",
-  :timestamp 1349364028000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-alpha6",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-alpha6",
-  :p "jar",
-  :timestamp 1349631803000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-alpha7",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-alpha7",
-  :p "jar",
-  :timestamp 1350396840000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-beta1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-beta1",
-  :p "jar",
-  :timestamp 1350953546000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-beta2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-beta2",
-  :p "jar",
-  :timestamp 1355273166000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-RC1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-RC1",
-  :p "jar",
-  :timestamp 1356192077000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-RC2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-RC2",
-  :p "jar",
-  :timestamp 1357999147000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-RC3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-RC3",
-  :p "jar",
-  :timestamp 1359127631000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-RC4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-RC4",
-  :p "jar",
-  :timestamp 1359470750000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-RC5",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-RC5",
-  :p "jar",
-  :timestamp 1360031092000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-RC6",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-RC6",
-  :p "jar",
-  :timestamp 1360033792000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-beta7",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-beta7",
-  :p "jar",
-  :timestamp 1360067807000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-beta8",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-beta8",
-  :p "jar",
-  :timestamp 1360078387000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-beta9",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-beta9",
-  :p "jar",
-  :timestamp 1360106505000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-beta10",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-beta10",
-  :p "jar",
-  :timestamp 1360118397000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-beta11",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-beta11",
-  :p "jar",
-  :timestamp 1360278320000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-beta12",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-beta12",
-  :p "jar",
-  :timestamp 1360352992000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-beta13",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-beta13",
-  :p "jar",
-  :timestamp 1360422795000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-RC14",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-RC14",
-  :p "jar",
-  :timestamp 1360440799000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-RC15",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-RC15",
-  :p "jar",
-  :timestamp 1360527257000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-RC16",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-RC16",
-  :p "jar",
-  :timestamp 1360812866000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0-RC17",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0-RC17",
-  :p "jar",
-  :timestamp 1361564286000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.0",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.0",
-  :p "jar",
-  :timestamp 1362152390000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.5.1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.5.1",
-  :p "jar",
-  :timestamp 1362940083000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.6.0-alpha1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.6.0-alpha1",
-  :p "jar",
-  :timestamp 1382739002000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.6.0-alpha2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.6.0-alpha2",
-  :p "jar",
-  :timestamp 1383843853000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.6.0-alpha3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.6.0-alpha3",
-  :p "jar",
-  :timestamp 1385165816000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.6.0-beta1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.6.0-beta1",
-  :p "jar",
-  :timestamp 1392397919000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.6.0-beta2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.6.0-beta2",
-  :p "jar",
-  :timestamp 1393539166000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.6.0-RC1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.6.0-RC1",
-  :p "jar",
-  :timestamp 1394553524000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.6.0-RC2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.6.0-RC2",
-  :p "jar",
-  :timestamp 1395445425000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.6.0-RC3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.6.0-RC3",
-  :p "jar",
-  :timestamp 1395608854000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.6.0-RC4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.6.0-RC4",
-  :p "jar",
-  :timestamp 1395681182000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.6.0",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.6.0",
-  :p "jar",
-  :timestamp 1400873209000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.7.0-alpha1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.7.0-alpha1",
-  :p "jar",
-  :timestamp 1407348981000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.7.0-alpha2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.7.0-alpha2",
-  :p "jar",
-  :timestamp 1409924081000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.7.0-alpha3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.7.0-alpha3",
-  :p "jar",
-  :timestamp 1414342289000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.7.0-alpha4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.7.0-alpha4",
-  :p "jar",
-  :timestamp 1415987945000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.7.0-alpha5",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.7.0-alpha5",
-  :p "jar",
-  :timestamp 1420900922000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.7.0-alpha6",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.7.0-alpha6",
-  :p "jar",
-  :timestamp 1427818025000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.7.0-beta1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.7.0-beta1",
-  :p "jar",
-  :timestamp 1428692726000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.7.0-beta2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.7.0-beta2",
-  :p "jar",
-  :timestamp 1429898742000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.7.0-beta3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.7.0-beta3",
-  :p "jar",
-  :timestamp 1431522023000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.7.0-RC1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.7.0-RC1",
-  :p "jar",
-  :timestamp 1432224626000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.7.0-RC2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.7.0-RC2",
-  :p "jar",
-  :timestamp 1434562539000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.7.0",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.7.0",
-  :p "jar",
-  :timestamp 1435674369000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.8.0-alpha1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.8.0-alpha1",
-  :p "jar",
-  :timestamp 1437176118000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.8.0-alpha2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.8.0-alpha2",
-  :p "jar",
-  :timestamp 1437179403000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.8.0-alpha3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.8.0-alpha3",
-  :p "jar",
-  :timestamp 1438203225000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.8.0-alpha4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.8.0-alpha4",
-  :p "jar",
-  :timestamp 1438600551000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.8.0-alpha5",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.8.0-alpha5",
-  :p "jar",
-  :timestamp 1441977639000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.8.0-beta1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.8.0-beta1",
-  :p "jar",
-  :timestamp 1444744369000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.8.0-beta2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.8.0-beta2",
-  :p "jar",
-  :timestamp 1445977134000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.8.0-RC1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.8.0-RC1",
-  :p "jar",
-  :timestamp 1447175970000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.8.0-RC2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.8.0-RC2",
-  :p "jar",
-  :timestamp 1447683277000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.8.0-RC3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.8.0-RC3",
-  :p "jar",
-  :timestamp 1449071154000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.8.0-RC4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.8.0-RC4",
-  :p "jar",
-  :timestamp 1450301036000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.8.0-RC5",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.8.0-RC5",
-  :p "jar",
-  :timestamp 1452522963000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.8.0",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.8.0",
-  :p "jar",
-  :timestamp 1453231914000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha1",
-  :p "jar",
-  :timestamp 1464108550000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha2",
-  :p "jar",
-  :timestamp 1464193109000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha3",
-  :p "jar",
-  :timestamp 1464271111000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha4",
-  :p "jar",
-  :timestamp 1464706619000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha5",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha5",
-  :p "jar",
-  :timestamp 1465319478000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha6",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha6",
-  :p "jar",
-  :timestamp 1465922854000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha7",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha7",
-  :p "jar",
-  :timestamp 1466015928000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha8",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha8",
-  :p "jar",
-  :timestamp 1467148303000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha9",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha9",
-  :p "jar",
-  :timestamp 1467746622000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha10",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha10",
-  :p "jar",
-  :timestamp 1468245513000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha11",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha11",
-  :p "jar",
-  :timestamp 1471629706000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha12",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha12",
-  :p "jar",
-  :timestamp 1473281491000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha13",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha13",
-  :p "jar",
-  :timestamp 1474914389000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha14",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha14",
-  :p "jar",
-  :timestamp 1477682850000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha15",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha15",
-  :p "jar",
-  :timestamp 1489506899000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha16",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha16",
-  :p "jar",
-  :timestamp 1493304338000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha17",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha17",
-  :p "jar",
-  :timestamp 1495829176000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha18",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha18",
-  :p "jar",
-  :timestamp 1503496259000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha19",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha19",
-  :p "jar",
-  :timestamp 1503582065000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-alpha20",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-alpha20",
-  :p "jar",
-  :timestamp 1504819767000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-beta1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-beta1",
-  :p "jar",
-  :timestamp 1505754969000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-beta2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-beta2",
-  :p "jar",
-  :timestamp 1507323097000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-beta3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-beta3",
-  :p "jar",
-  :timestamp 1508961256000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-beta4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-beta4",
-  :p "jar",
-  :timestamp 1509458864000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-RC1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-RC1",
-  :p "jar",
-  :timestamp 1510065537000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".zip" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0-RC2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0-RC2",
-  :p "jar",
-  :timestamp 1511817888000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.9.0",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.9.0",
-  :p "jar",
-  :timestamp 1512741753000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-alpha1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-alpha1",
-  :p "jar",
-  :timestamp 1516313860000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-alpha2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-alpha2",
-  :p "jar",
-  :timestamp 1516372522000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-alpha3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-alpha3",
-  :p "jar",
-  :timestamp 1518125327000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-alpha4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-alpha4",
-  :p "jar",
-  :timestamp 1518193727000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-alpha5",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-alpha5",
-  :p "jar",
-  :timestamp 1530114850000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-alpha6",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-alpha6",
-  :p "jar",
-  :timestamp 1530716353000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-alpha7",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-alpha7",
-  :p "jar",
-  :timestamp 1536151035000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-alpha8",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-alpha8",
-  :p "jar",
-  :timestamp 1536960563000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-alpha9",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-alpha9",
-  :p "jar",
-  :timestamp 1538695814000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-beta1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-beta1",
-  :p "jar",
-  :timestamp 1538797103000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-beta2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-beta2",
-  :p "jar",
-  :timestamp 1539118400000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-RC1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-RC1",
-  :p "jar",
-  :timestamp 1539268015000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-beta3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-beta3",
-  :p "jar",
-  :timestamp 1539377310000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-beta4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-beta4",
-  :p "jar",
-  :timestamp 1540237737000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-beta5",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-beta5",
-  :p "jar",
-  :timestamp 1541509286000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-beta6",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-beta6",
-  :p "jar",
-  :timestamp 1542396792000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-beta7",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-beta7",
-  :p "jar",
-  :timestamp 1542661617000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-beta8",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-beta8",
-  :p "jar",
-  :timestamp 1542810455000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-RC2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-RC2",
-  :p "jar",
-  :timestamp 1543274328000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-RC3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-RC3",
-  :p "jar",
-  :timestamp 1543852396000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-RC4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-RC4",
-  :p "jar",
-  :timestamp 1544191764000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0-RC5",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0-RC5",
-  :p "jar",
-  :timestamp 1544562072000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.0",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.0",
-  :p "jar",
-  :timestamp 1545065497000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.1-beta1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.1-beta1",
-  :p "jar",
-  :timestamp 1553226133000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.1-beta2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.1-beta2",
-  :p "jar",
-  :timestamp 1554994539000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.1-beta3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.1-beta3",
-  :p "jar",
-  :timestamp 1558014548000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.1-RC1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.1-RC1",
-  :p "jar",
-  :timestamp 1558464203000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.1",
-  :p "jar",
-  :timestamp 1559828718000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.2-alpha1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.2-alpha1",
-  :p "jar",
-  :timestamp 1583433876000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.2-alpha2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.2-alpha2",
-  :p "jar",
-  :timestamp 1601060657000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.2-alpha3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.2-alpha3",
-  :p "jar",
-  :timestamp 1604331718000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.2-alpha4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.2-alpha4",
-  :p "jar",
-  :timestamp 1604598269000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.2-rc1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.2-rc1",
-  :p "jar",
-  :timestamp 1607714204000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.2-rc2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.2-rc2",
-  :p "jar",
-  :timestamp 1609955934000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.2-rc3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.2-rc3",
-  :p "jar",
-  :timestamp 1610736848000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.2",
-  :p "jar",
-  :timestamp 1611687438000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.3-rc1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.3-rc1",
-  :p "jar",
-  :timestamp 1613487625000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.10.3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.10.3",
-  :p "jar",
-  :timestamp 1614872639000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.11.0-alpha1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.11.0-alpha1",
-  :p "jar",
-  :timestamp 1616094195000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.11.0-alpha2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.11.0-alpha2",
-  :p "jar",
-  :timestamp 1631649985000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.11.0-alpha3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.11.0-alpha3",
-  :p "jar",
-  :timestamp 1637695695000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.11.0-alpha4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.11.0-alpha4",
-  :p "jar",
-  :timestamp 1642107033000,
-  :ec ["-slim.jar" "-sources.jar" "-javadoc.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.11.0-beta1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.11.0-beta1",
-  :p "jar",
-  :timestamp 1643836207000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.11.0-rc1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.11.0-rc1",
-  :p "jar",
-  :timestamp 1645028709000,
-  :ec ["-slim.jar" "-javadoc.jar" "-sources.jar" ".jar" ".pom"],
-  :tags ["clojure" "environment" "library" "runtime" "core"]}
- {:id "org.clojure:clojure:1.11.0",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.11.0",
-  :p "jar",
-  :timestamp 1647962320000,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.11.1-rc1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.11.1-rc1",
-  :p "jar",
-  :timestamp 1648835697000,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.11.1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.11.1",
-  :p "jar",
-  :timestamp 1649169382000,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0-alpha2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0-alpha2",
-  :p "jar",
-  :timestamp 1681476036000,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0-alpha3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0-alpha3",
-  :p "jar",
-  :timestamp 1681913992000,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0-alpha4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0-alpha4",
-  :p "jar",
-  :timestamp 1687989943000,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0-alpha5",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0-alpha5",
-  :p "jar",
-  :timestamp 1697837826908,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0-alpha6",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0-alpha6",
-  :p "jar",
-  :timestamp 1707429348449,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0-alpha7",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0-alpha7",
-  :p "jar",
-  :timestamp 1707443314782,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0-alpha8",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0-alpha8",
-  :p "jar",
-  :timestamp 1708552187993,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.11.2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.11.2",
-  :p "jar",
-  :timestamp 1709909324567,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0-alpha9",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0-alpha9",
-  :p "jar",
-  :timestamp 1709909943846,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.11.3",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.11.3",
-  :p "jar",
-  :timestamp 1713983816162,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0-alpha10",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0-alpha10",
-  :p "jar",
-  :timestamp 1714315709704,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0-alpha11",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0-alpha11",
-  :p "jar",
-  :timestamp 1714512211934,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0-alpha12",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0-alpha12",
-  :p "jar",
-  :timestamp 1716470495582,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0-beta1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0-beta1",
-  :p "jar",
-  :timestamp 1718463119007,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0-beta2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0-beta2",
-  :p "jar",
-  :timestamp 1722279121372,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0-rc1",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0-rc1",
-  :p "jar",
-  :timestamp 1722705101594,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.11.4",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.11.4",
-  :p "jar",
-  :timestamp 1722706703039,
-  :ec ["-sources.jar" "-slim.jar" ".pom" "-javadoc.jar" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0-rc2",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0-rc2",
-  :p "jar",
-  :timestamp 1724869204448,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}
- {:id "org.clojure:clojure:1.12.0",
-  :g "org.clojure",
-  :a "clojure",
-  :v "1.12.0",
-  :p "jar",
-  :timestamp 1725563123346,
-  :ec ["-sources.jar" "-slim.jar" ".pom" ".jar"],
-  :tags ["core" "environment" "library" "clojure" "runtime"]}]
+({:v "1.0.0", :date "2009-07-08 20:25"}
+ {:v "1.1.0", :date "2010-01-02 05:42"}
+ {:v "1.2.0", :date "2010-09-14 08:22"}
+ {:v "1.3.0-alpha5", :date "2011-01-14 21:04"}
+ {:v "1.3.0-alpha6", :date "2011-03-11 18:38"}
+ {:v "1.2.1", :date "2011-03-25 19:23"}
+ {:v "1.3.0-alpha7", :date "2011-05-13 18:27"}
+ {:v "1.3.0-alpha8", :date "2011-05-27 19:50"}
+ {:v "1.3.0-beta1", :date "2011-06-21 23:14"}
+ {:v "1.3.0-beta2", :date "2011-08-26 20:48"}
+ {:v "1.3.0-beta3", :date "2011-09-02 19:21"}
+ {:v "1.3.0-RC0", :date "2011-09-13 00:07"}
+ {:v "1.3.0", :date "2011-09-23 18:49"}
+ {:v "1.4.0-alpha1", :date "2011-10-07 21:08"}
+ {:v "1.4.0-alpha2", :date "2011-10-25 22:38"}
+ {:v "1.4.0-alpha3", :date "2011-12-13 22:47"}
+ {:v "1.4.0-alpha4", :date "2012-01-13 15:26"}
+ {:v "1.4.0-alpha5", :date "2012-01-27 21:06"}
+ {:v "1.4.0-beta1", :date "2012-02-03 14:19"}
+ {:v "1.4.0-beta2", :date "2012-02-29 21:36"}
+ {:v "1.4.0-beta3", :date "2012-03-01 14:42"}
+ {:v "1.4.0-beta4", :date "2012-03-09 22:55"}
+ {:v "1.4.0-beta5", :date "2012-03-13 18:27"}
+ {:v "1.4.0-beta6", :date "2012-03-30 14:45"}
+ {:v "1.4.0-beta7", :date "2012-04-10 10:58"}
+ {:v "1.4.0", :date "2012-04-15 13:33"}
+ {:v "1.5.0-alpha1", :date "2012-05-19 01:54"}
+ {:v "1.5.0-alpha2", :date "2012-06-16 12:04"}
+ {:v "1.5.0-alpha3", :date "2012-07-21 18:44"}
+ {:v "1.5.0-alpha4", :date "2012-08-18 14:24"}
+ {:v "1.5.0-alpha5", :date "2012-10-04 15:20"}
+ {:v "1.5.0-alpha6", :date "2012-10-07 17:43"}
+ {:v "1.5.0-alpha7", :date "2012-10-16 14:14"}
+ {:v "1.5.0-beta1", :date "2012-10-23 00:52"}
+ {:v "1.5.0-beta2", :date "2012-12-12 00:46"}
+ {:v "1.5.0-RC1", :date "2012-12-22 16:01"}
+ {:v "1.5.0-RC2", :date "2013-01-12 13:59"}
+ {:v "1.5.0-RC3", :date "2013-01-25 15:27"}
+ {:v "1.5.0-RC4", :date "2013-01-29 14:45"}
+ {:v "1.5.0-RC5", :date "2013-02-05 02:24"}
+ {:v "1.5.0-RC6", :date "2013-02-05 03:09"}
+ {:v "1.5.0-beta7", :date "2013-02-05 12:36"}
+ {:v "1.5.0-beta8", :date "2013-02-05 15:33"}
+ {:v "1.5.0-beta9", :date "2013-02-05 23:21"}
+ {:v "1.5.0-beta10", :date "2013-02-06 02:39"}
+ {:v "1.5.0-beta11", :date "2013-02-07 23:05"}
+ {:v "1.5.0-beta12", :date "2013-02-08 19:49"}
+ {:v "1.5.0-beta13", :date "2013-02-09 15:13"}
+ {:v "1.5.0-RC14", :date "2013-02-09 20:13"}
+ {:v "1.5.0-RC15", :date "2013-02-10 20:14"}
+ {:v "1.5.0-RC16", :date "2013-02-14 03:34"}
+ {:v "1.5.0-RC17", :date "2013-02-22 20:18"}
+ {:v "1.5.0", :date "2013-03-01 15:39"}
+ {:v "1.5.1", :date "2013-03-10 18:28"}
+ {:v "1.6.0-alpha1", :date "2013-10-25 22:10"}
+ {:v "1.6.0-alpha2", :date "2013-11-07 17:04"}
+ {:v "1.6.0-alpha3", :date "2013-11-23 00:16"}
+ {:v "1.6.0-beta1", :date "2014-02-14 17:11"}
+ {:v "1.6.0-beta2", :date "2014-02-27 22:12"}
+ {:v "1.6.0-RC1", :date "2014-03-11 15:58"}
+ {:v "1.6.0-RC2", :date "2014-03-21 23:43"}
+ {:v "1.6.0-RC3", :date "2014-03-23 21:07"}
+ {:v "1.6.0-RC4", :date "2014-03-24 17:13"}
+ {:v "1.6.0", :date "2014-05-23 19:26"}
+ {:v "1.7.0-alpha1", :date "2014-08-06 18:16"}
+ {:v "1.7.0-alpha2", :date "2014-09-05 13:34"}
+ {:v "1.7.0-alpha3", :date "2014-10-26 16:51"}
+ {:v "1.7.0-alpha4", :date "2014-11-14 17:59"}
+ {:v "1.7.0-alpha5", :date "2015-01-10 14:42"}
+ {:v "1.7.0-alpha6", :date "2015-03-31 16:07"}
+ {:v "1.7.0-beta1", :date "2015-04-10 19:05"}
+ {:v "1.7.0-beta2", :date "2015-04-24 18:05"}
+ {:v "1.7.0-beta3", :date "2015-05-13 13:00"}
+ {:v "1.7.0-RC1", :date "2015-05-21 16:10"}
+ {:v "1.7.0-RC2", :date "2015-06-17 17:35"}
+ {:v "1.7.0", :date "2015-06-30 14:26"}
+ {:v "1.8.0-alpha1", :date "2015-07-17 23:35"}
+ {:v "1.8.0-alpha2", :date "2015-07-18 00:30"}
+ {:v "1.8.0-alpha3", :date "2015-07-29 20:53"}
+ {:v "1.8.0-alpha4", :date "2015-08-03 11:15"}
+ {:v "1.8.0-alpha5", :date "2015-09-11 13:20"}
+ {:v "1.8.0-beta1", :date "2015-10-13 13:52"}
+ {:v "1.8.0-beta2", :date "2015-10-27 20:18"}
+ {:v "1.8.0-RC1", :date "2015-11-10 17:19"}
+ {:v "1.8.0-RC2", :date "2015-11-16 14:14"}
+ {:v "1.8.0-RC3", :date "2015-12-02 15:45"}
+ {:v "1.8.0-RC4", :date "2015-12-16 21:23"}
+ {:v "1.8.0-RC5", :date "2016-01-11 14:36"}
+ {:v "1.8.0", :date "2016-01-19 19:31"}
+ {:v "1.9.0-alpha1", :date "2016-05-24 16:49"}
+ {:v "1.9.0-alpha2", :date "2016-05-25 16:18"}
+ {:v "1.9.0-alpha3", :date "2016-05-26 13:58"}
+ {:v "1.9.0-alpha4", :date "2016-05-31 14:56"}
+ {:v "1.9.0-alpha5", :date "2016-06-07 17:11"}
+ {:v "1.9.0-alpha6", :date "2016-06-14 16:47"}
+ {:v "1.9.0-alpha7", :date "2016-06-15 18:38"}
+ {:v "1.9.0-alpha8", :date "2016-06-28 21:11"}
+ {:v "1.9.0-alpha9", :date "2016-07-05 19:23"}
+ {:v "1.9.0-alpha10", :date "2016-07-11 13:58"}
+ {:v "1.9.0-alpha11", :date "2016-08-19 18:01"}
+ {:v "1.9.0-alpha12", :date "2016-09-07 20:51"}
+ {:v "1.9.0-alpha13", :date "2016-09-26 18:26"}
+ {:v "1.9.0-alpha14", :date "2016-10-28 19:27"}
+ {:v "1.9.0-alpha15", :date "2017-03-14 15:54"}
+ {:v "1.9.0-alpha16", :date "2017-04-27 14:45"}
+ {:v "1.9.0-alpha17", :date "2017-05-26 20:06"}
+ {:v "1.9.0-alpha18", :date "2017-08-23 13:50"}
+ {:v "1.9.0-alpha19", :date "2017-08-24 13:41"}
+ {:v "1.9.0-alpha20", :date "2017-09-07 21:29"}
+ {:v "1.9.0-beta1", :date "2017-09-18 17:16"}
+ {:v "1.9.0-beta2", :date "2017-10-06 20:51"}
+ {:v "1.9.0-beta3", :date "2017-10-25 19:54"}
+ {:v "1.9.0-beta4", :date "2017-10-31 14:07"}
+ {:v "1.9.0-RC1", :date "2017-11-07 14:38"}
+ {:v "1.9.0-RC2", :date "2017-11-27 21:24"}
+ {:v "1.9.0", :date "2017-12-08 14:02"}
+ {:v "1.10.0-alpha1", :date "2018-01-18 22:17"}
+ {:v "1.10.0-alpha2", :date "2018-01-19 14:35"}
+ {:v "1.10.0-alpha3", :date "2018-02-08 21:28"}
+ {:v "1.10.0-alpha4", :date "2018-02-09 16:28"}
+ {:v "1.10.0-alpha5", :date "2018-06-27 15:54"}
+ {:v "1.10.0-alpha6", :date "2018-07-04 14:59"}
+ {:v "1.10.0-alpha7", :date "2018-09-05 12:37"}
+ {:v "1.10.0-alpha8", :date "2018-09-14 21:29"}
+ {:v "1.10.0-alpha9", :date "2018-10-04 23:30"}
+ {:v "1.10.0-beta1", :date "2018-10-06 03:38"}
+ {:v "1.10.0-beta2", :date "2018-10-09 20:53"}
+ {:v "1.10.0-RC1", :date "2018-10-11 14:26"}
+ {:v "1.10.0-beta3", :date "2018-10-12 20:48"}
+ {:v "1.10.0-beta4", :date "2018-10-22 19:48"}
+ {:v "1.10.0-beta5", :date "2018-11-06 13:01"}
+ {:v "1.10.0-beta6", :date "2018-11-16 19:33"}
+ {:v "1.10.0-beta7", :date "2018-11-19 21:06"}
+ {:v "1.10.0-beta8", :date "2018-11-21 14:27"}
+ {:v "1.10.0-RC2", :date "2018-11-26 23:18"}
+ {:v "1.10.0-RC3", :date "2018-12-03 15:53"}
+ {:v "1.10.0-RC4", :date "2018-12-07 14:09"}
+ {:v "1.10.0-RC5", :date "2018-12-11 21:01"}
+ {:v "1.10.0", :date "2018-12-17 16:51"}
+ {:v "1.10.1-beta1", :date "2019-03-22 03:42"}
+ {:v "1.10.1-beta2", :date "2019-04-11 14:55"}
+ {:v "1.10.1-beta3", :date "2019-05-16 13:49"}
+ {:v "1.10.1-RC1", :date "2019-05-21 18:43"}
+ {:v "1.10.1", :date "2019-06-06 13:45"}
+ {:v "1.10.2-alpha1", :date "2020-03-05 18:44"}
+ {:v "1.10.2-alpha2", :date "2020-09-25 19:04"}
+ {:v "1.10.2-alpha3", :date "2020-11-02 15:41"}
+ {:v "1.10.2-alpha4", :date "2020-11-05 17:44"}
+ {:v "1.10.2-rc1", :date "2020-12-11 19:16"}
+ {:v "1.10.2-rc2", :date "2021-01-06 17:58"}
+ {:v "1.10.2-rc3", :date "2021-01-15 18:54"}
+ {:v "1.10.2", :date "2021-01-26 18:57"}
+ {:v "1.10.3-rc1", :date "2021-02-16 15:00"}
+ {:v "1.10.3", :date "2021-03-04 15:43"}
+ {:v "1.11.0-alpha1", :date "2021-03-18 19:03"}
+ {:v "1.11.0-alpha2", :date "2021-09-14 20:06"}
+ {:v "1.11.0-alpha3", :date "2021-11-23 19:28"}
+ {:v "1.11.0-alpha4", :date "2022-01-13 20:50"}
+ {:v "1.11.0-beta1", :date "2022-02-02 21:10"}
+ {:v "1.11.0-rc1", :date "2022-02-16 16:25"}
+ {:v "1.11.0", :date "2022-03-22 15:18"}
+ {:v "1.11.1-rc1", :date "2022-04-01 17:54"}
+ {:v "1.11.1", :date "2022-04-05 14:36"}
+ {:v "1.12.0-alpha1", :date "2022-06-30 21:10"}
+ {:v "1.12.0-alpha2", :date "2023-04-14 12:40"}
+ {:v "1.12.0-alpha3", :date "2023-04-19 14:19"}
+ {:v "1.12.0-alpha4", :date "2023-06-28 22:05"}
+ {:v "1.12.0-alpha5", :date "2023-10-20 21:37"}
+ {:v "1.12.0-alpha6", :date "2024-02-08 21:55"}
+ {:v "1.12.0-alpha7", :date "2024-02-09 01:48"}
+ {:v "1.12.0-alpha8", :date "2024-02-21 21:49"}
+ {:v "1.11.2", :date "2024-03-08 14:48"}
+ {:v "1.12.0-alpha9", :date "2024-03-08 14:59"}
+ {:v "1.11.3", :date "2024-04-24 18:36"}
+ {:v "1.12.0-alpha10", :date "2024-04-28 14:48"}
+ {:v "1.12.0-alpha11", :date "2024-04-30 21:23"}
+ {:v "1.12.0-alpha12", :date "2024-05-23 13:21"}
+ {:v "1.12.0-beta1", :date "2024-06-15 14:51"}
+ {:v "1.12.0-beta2", :date "2024-07-29 18:52"}
+ {:v "1.12.0-rc1", :date "2024-08-03 17:11"}
+ {:v "1.11.4", :date "2024-08-03 17:38"}
+ {:v "1.12.0-rc2", :date "2024-08-28 18:20"}
+ {:v "1.12.0", :date "2024-09-05 19:05"}
+ {:v "1.12.1", :date "2025-06-02 14:12"}
+ {:v "1.12.2", :date "2025-08-25 21:38"}
+ {:v "1.12.3", :date "2025-09-25 17:17"})

@@ -7,7 +7,6 @@
         narkisr/clansi {:mvn/version "1.2.0"}
         fipp/fipp {:mvn/version "0.6.24"}
         ccfontes/fuzzy-matcher {:mvn/version "0.0.1"}
-        clj-time/clj-time {:mvn/version "0.15.2"}
         frontmatter/frontmatter {:mvn/version "0.0.1"}
         rewrite-clj/rewrite-clj {:mvn/version "1.1.45"}}
 
