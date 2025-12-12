@@ -21,12 +21,13 @@ Returns coll.
 ## Examples
 
 ```clj
-(def tcoll (transient! {}))
-(assoc! tcoll :a 1)
-(assoc! tcoll :b 2)
+(def tcoll
+  (-> (transient {})
+      (assoc! :a 1)
+      (assoc! :b 2)))
 
 tcoll
-;;=> #<[object Object]> 
+;;=> #object [cljs.core.TransientArrayMap]
 
 (:a tcoll)
 ;;=> 1
@@ -34,6 +35,6 @@ tcoll
 (:b tcoll)
 ;;=> 2
 
-(def a (persistent! tcoll))
+(persistent! tcoll)
 ;;=> {:a 1 :b 2}
 ```
