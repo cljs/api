@@ -98,7 +98,7 @@
 
 (defn get-display-name
   [docname]
-  (let [{:keys [display-as full-name name ns type]} (docname->item docname)]
+  (when-let [{:keys [display-as full-name name ns type]} (docname->item docname)]
     (cond
       display-as display-as
       (= type "namespace") ns
@@ -107,10 +107,11 @@
 
 (defn insert-doclink-name
   [[whole-match docname]]
-  (let [name- (get-display-name docname)]
+  (if-let [name- (get-display-name docname)]
     (if (string/includes? name- "`")
       (str "[``" name- "``]" whole-match)
-      (str "[`" name- "`]" whole-match))))
+      (str "[`" name- "`]" whole-match))
+    (throw (ex-info (str "unknown docname in " whole-match) {}))))
 
 (defn resolve-unnamed-doclinks
   "Process doclinks in given markdown body."
