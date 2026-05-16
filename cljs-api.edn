@@ -34732,6 +34732,18 @@
                                           :type "warning",
                                           :full-name-encode "closure-warnings/deprecated",
                                           :full-name "closure-warnings/deprecated"},
+           "syntax/async-tag" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/syntax/async-tag.md",
+                               :since "1.12.145",
+                               :syntax-equiv {:edn-url nil,
+                                              :clj-url nil},
+                               :display-as "^:async",
+                               :ns "syntax",
+                               :name "async-tag",
+                               :name-encode "async-tag",
+                               :history [["+" "1.12.145"]],
+                               :type "special tag",
+                               :full-name-encode "syntax/async-tag",
+                               :full-name "syntax/async-tag"},
            "cljs.core/group-by" {:edit-url "https://github.com/cljs/api/blob/master/docfiles/cljs.core/group-by.md",
                                  :ns "cljs.core",
                                  :name "group-by",
@@ -46136,7 +46148,7 @@
                           "1.12.134" {},
                           "0.0-2120" {:added #{"syntax/js-literal"}},
                           "1.9.93" {},
-                          "1.12.145" {},
+                          "1.12.145" {:added #{"syntax/async-tag"}},
                           "1.9.495" {},
                           "1.10.748" {},
                           "0.0-1878" {},
@@ -46412,6 +46424,7 @@
                                 "syntax/map"
                                 "syntax/number"
                                 "syntax/ns-map-alias"
+                                "syntax/async-tag"
                                 "syntax/js-literal"
                                 "syntax/list"
                                 "syntax/uuid-literal"

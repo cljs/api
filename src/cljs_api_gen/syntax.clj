@@ -80,6 +80,7 @@
 
    ;; special tags
    {:id "js-tag" :type "special tag"}
+   {:id "async-tag" :type "special tag"}
 
    ;; special namespaces
    {:id "js-namespace"   :type "special namespace"}
