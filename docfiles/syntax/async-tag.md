@@ -8,7 +8,7 @@ see also:
 
 ## Summary
 
-Create a [JavaScript async function](js-async).
+Create a [JavaScript async function][js-async], wherein [doc:cljs.core/await] may be used.
 
 - `(defn ^:async foo [] … (await …))`
 - `(^:async fn [] … (await …))`
@@ -19,3 +19,6 @@ Create a [JavaScript async function](js-async).
 ## Details
 
 ## Examples
+
+<!-- AUTO-GENERATED docfile links for github -->
+[doc:cljs.core/await]:https://github.com/cljs/api/blob/master/docfiles/cljs.core/await.md
